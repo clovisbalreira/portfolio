@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+body{
+    background-color: gray;
+}
+
+h1 , p {
+    text-align:center;
+}
+
+.folder{
+    width:33%;
+}
+
+.largura_1{
+    height:300px;
+}
+
+.largura_2{
+    height:450px;
+}
+
+.logo{
+    width:20%;
+}
+
+.cartao{
+    width:39%;
+}
+
+.pagina{
+    width:33%;
+}
+
+.cartaz{
+    width:43%;
+}

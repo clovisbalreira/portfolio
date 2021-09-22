@@ -1,0 +1,154 @@
+@charset "utf-8";
+body{
+    background-image:url("../img/fundo/fundo.png");
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+header{
+    margin-left: 20%;
+}
+
+.header-imagem{
+    width: 228px; 
+    height: 150px;
+}
+
+.header-logo{
+    width: 400px; 
+    height: 150px;
+}
+
+nav ul{
+    padding:0;
+    list-style-type: none;
+}
+
+nav ul li{
+    display: inline-block;
+    text-align:left;
+}
+
+.img-section{
+    margin: 1.1% 5%;
+}
+
+.img-nav{
+    width: 120px; 
+    height: 60px;
+}
+
+main{
+    background-color:rgba(255, 255, 255, 0.925);
+    margin-left: 20%;
+    width:61%;
+    padding: .5% 2%;
+}
+
+main h1{
+    text-align: center;
+    font-size:3em;
+    color:red;
+}
+
+main p{
+    font-size:1.1em;
+}
+
+main table{
+    border: 1px;
+    border-color: black;
+    margin-left:-3%;
+}
+
+.img-objeto , .img-foto{
+    width:210px; 
+    height:160px; 
+}
+
+.tbl_cardapio{
+    width:106%;
+}
+
+.tbl_cardapio tr th{
+    color: red;
+    text-align: left;
+    padding-left:2%;
+}
+
+.tbl_cardapio tr th img{
+    width: 100px;
+    height: 110px;
+    padding:5%;
+}
+
+.tbl_cardapio tr td{
+    padding-left:1%;
+}
+
+label{
+    font-size:1.2em;
+}
+
+.nome , .email , .assunto , .receita , .mensagem ,
+.origem , .outras{
+    font-size:1em;
+    margin:.5%;
+    padding:.1em;
+}
+
+.nome , .email{
+    width:40%;
+}
+
+.assunto{
+    width:87%;
+}
+
+.receita{
+    width:79.3%;
+}
+
+.mensagem{
+    width:96%;
+}
+
+.outras{
+    width:37.9%;
+}
+
+.enviar{
+    width:90%;
+    margin-left:3%;
+    height:2em;
+}
+
+.img_mapa{
+    margin:0 10%;
+}
+
+footer{
+    background-color:rgba(255, 255, 255, 0.925);
+    margin-left: 20%;
+    width:63.8%;
+    padding-left: 1em;
+    text-align: center;
+}
+
+@media(max-width: 1024px){
+    header{
+        margin-left:7.5%;
+    }
+
+    main , footer{
+        margin-left:9%;
+    }
+
+    main{
+        width:80%
+    }
+
+    footer{
+        width:84.7%;
+    }
+}

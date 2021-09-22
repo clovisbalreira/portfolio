@@ -1,15 +1,62 @@
 @charset "UTF-8";
+*{
+   margin: 0;
+   padding: 0;
+}
 
-h1 , p{
-   width:20%;
-   margin-left:38%;
-   padding:1em;
-   text-align:center;
+header{
+   background: rgba(0, 0, 255, 0.801);
+   display: inline-block;
+   width: 100%;
+}
+
+header h1{
+   position: relative;
+   padding: 1% 35%;
+   text-align: left;
+   color: white;
+   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.637);
+}
+
+header img {
+   position: absolute;
+   width: 50px;
+   margin: .5% 10%;
+   border-radius: 50%;
+}
+
+header a img{
+   width: 80px;
+   margin-top: -4.2%;
+   margin-left: 80%;
+}
+
+main{
+   background: blue;
+}
+
+div.linguagem{
+   width: inherit;
+   height: inherit;
+   margin: 2% 3%;
+   padding: 15px;
+   background: white;
+   display: inline-flex;
+   vertical-align: bottom;
+   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.521);
+}
+
+.sombra{
+   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.521);
+}
+
+div img{
+   width: 280px;
+   height: 200px;
 }
 
 nav{
-   margin-left:35%;
-   width:30%;
+   width:280px;
 }
 
 nav ul{
@@ -18,9 +65,11 @@ nav ul{
 }
 
 nav ul li{
-   background:grey;
-   margin:.5em;
+   background:blue;
+   text-align: center;
+   margin:.2em;
    padding:.5em;
+   box-shadow: 2.5px 2.5px 2.5px rgba(0, 0, 0, 0.521);
 }
 
 nav ul li a{
@@ -30,18 +79,80 @@ nav ul li a{
 
 nav ul li a:hover{
     color:white;
+    background: rgba(0, 0, 255, 0.377);
 }
 
-@media(max-width: 500px){
-    h1 , p{
-       background-color:red;
-       width:100%;
-       margin-left:38%;
-       padding:1em;
-       text-align:center;
-    }
+footer{
+   text-align: center;
+   background: blue;
+   padding: 15px;
+}
 
-    nav{
-        width:98%;
-    }     
+footer img{
+   width: 100px;
+}
+
+@media(max-width: 1500px){
+   header h1{
+      font-size: 40px;
+      position: relative;
+      padding: 1% 30%;
+      text-align: left;
+      color: white;
+      text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.637);
+   }
+
+   header a img{
+      width: 80px;
+      margin-top: -5.1%;
+      margin-left: 80%;
+   }
+
+   div.linguagem{
+      width: 45%;
+      height: inherit;
+      margin: 2% 1%;
+      padding: 10px;
+      vertical-align: bottom;
+   }      
+
+   div img{
+      width: 240px;
+      height: 160px;
+   }
+   
+}
+
+@media(max-width: 600px){
+   header{
+      height: 65px;
+   }
+
+   header h1{
+      font-size: 20px;
+      position: relative;
+      padding: 3% 30%;
+      text-align: left;
+      color: white;
+      text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.637);
+   }
+
+   header a img{
+      width: 80px;
+      margin-top: -8.9%;
+      margin-left: 80%;
+   }
+
+   div.linguagem{
+      width: 90%;
+      height: inherit;
+      margin: 2% 3%;
+      padding: 10px;
+   }      
+
+   div img{
+      width: 270px;
+      height: 130px;
+   }
+   
 }
