@@ -10,7 +10,7 @@ var cartas1 = {
 var cartas2 = {
     nome:"Darth Vader",
     imagem:'https://disneyplusbrasil.com.br/wp-content/uploads/2021/06/Darth-Vader-serie-Disney-Plus-1024x576.jpg',
-    vatributos: {
+    atributos: {
         Ataque: 9,
         defesa: 8,
         magia: 2
@@ -46,18 +46,10 @@ function sortearCarta(){
     document.getElementById("btnJogar").disabled = false;
 
     console.log(cartaJogador);
+    console.log(cartaMaquina);
     exibirCartaJogador();
+    apagarCartaMaquina()
 };
-
-function exibirOpcoes(){
-    var opcoes = document.getElementById("opcoes")
-    var opcoesTexto = ""
-
-    for ( var atributo in cartaJogador.atributos){
-        opcoesTexto += "<input type='radio' name='atributo' value='"+atributo+"'>" + atributo
-    }
-    opcoes.innerHTML = opcoesTexto
-}
 
 function obtemAtributoSelecionado(){
     var radioAtributos = document.getElementsByName("atributo")
@@ -71,17 +63,25 @@ function obtemAtributoSelecionado(){
 
 function jogar(){
     var atributoSelecionado = obtemAtributoSelecionado()
-    elementoResultado = document.getElementById("resultado")
-    var valorCartJogador = cartaJogador.atributos[atributoSelecionado]
-    var valorCartaMaquina = cartaMaquina.atributos[atributoSelecionado]
-    if (valorCartJogador > valorCartaMaquina){
-        elementoResultado.innerHTML = "Você venceu"
-    }else if(valorCartJogador < valorCartaMaquina){
-        elementoResultado.innerHTML = "Você perdeu"
+    var divResultado = document.getElementById("resultado") 
+    if (cartaJogador.atributos[atributoSelecionado] > cartaMaquina.atributos[atributoSelecionado] || cartaJogador.atributos[atributoSelecionado] < cartaMaquina.atributos[atributoSelecionado]){
+        exibirCartaMaquina()
+        reiniciar()
+        if(cartaJogador.atributos[atributoSelecionado] > cartaMaquina.atributos[atributoSelecionado]){
+            htmlResultado = "<p class='resultado-final'>Venceu</p>"
+        }else{
+            htmlResultado = "<p class='resultado-final'>Perdeu</p>"
+        }
     }else{
-        elementoResultado.innerHTML = "empatou"
+        htmlResultado = "<p class='resultado-final'>Empatou</p>"
     }
-    console.log(valorCartaMaquina)
+
+    divResultado.innerHTML = htmlResultado
+}
+
+function reiniciar(){
+    document.getElementById("btnJogar").disabled = true
+    document.getElementById("btnSortear").disabled = false
 }
 
 function exibirCartaJogador(){
@@ -89,15 +89,58 @@ function exibirCartaJogador(){
     divCartaJogador.style.backgroundImage = `url(${cartaJogador.imagem})`
     //divCartaJogador.style.backgroundImage = "url("+"cartaJogador.imagem"+")"
     var moldura = '<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent.png" style=" width: inherit; height: inherit; position: absolute;">';
+    
     var tagHtml = "<div id='opcoes' class='carta-status'>"
     
     var opcoesTexto = ""
     for ( var atributo in cartaJogador.atributos){
-        opcoesTexto += "<input type='radio' name='atributo' value='"+atributo+"'>" + atributo + " " + cartaJogador.atributos[atributo] + "<br>"
+        opcoesTexto += "<input type='radio' name='atributo' value='" + atributo +"'>" + atributo + " " + cartaJogador.atributos[atributo] + "<br>";
     }
+    
     var nome = `<p class="carta-subtitle">${cartaJogador.nome}</p>`
 
-    divCartaJogador.innerHTML = moldura + nome + tagHtml +
-    + opcoesTexto + "</div>"
+    divCartaJogador.innerHTML = moldura + nome + tagHtml 
+    + opcoesTexto + '</div>'
+}
 
+function exibirCartaMaquina(){
+    var divCartaMaquina = document.getElementById("carta-maquina")
+    divCartaMaquina.style.backgroundImage = `url(${cartaMaquina.imagem})`
+    //divCartaMaquina.style.backgroundImage = "url("+"cartaMaquina.imagem"+")"
+    var moldura = '<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent.png" style=" width: inherit; height: inherit; position: absolute;">';
+    
+    var tagHtml = "<div id='opcoes' class='carta-status'>"
+    
+    var opcoesTexto = ""
+    for ( var atributo in cartaMaquina.atributos){
+        opcoesTexto += "<p type='text' name='atributo' value='" + atributo +"'>" + atributo + " " + cartaMaquina.atributos[atributo] + "<br>";
+    }
+    
+    var nome = `<p class="carta-subtitle">${cartaMaquina.nome}</p>`
+
+    divCartaMaquina.innerHTML = moldura + nome + tagHtml 
+    + opcoesTexto + '</div>'
+}
+
+function apagarCartaMaquina(){
+    var divCartaMaquina = document.getElementById("carta-maquina")
+    divCartaMaquina.style.backgroundImage = `url('')`
+    //divCartaMaquina.style.backgroundImage = "url("+"cartaMaquina.imagem"+")"
+    var moldura = '<img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/card-super-trunfo-transparent.png" style=" width: inherit; height: inherit; position: absolute;">';
+    
+    var tagHtml = "<div id='opcoes' class='carta-status'>"
+    
+    var opcoesTexto = "<p type='text' name='atributo' value=''>";
+    
+    var nome = `<p class="carta-subtitle"></p>`
+
+    divCartaMaquina.innerHTML = moldura + nome + tagHtml 
+    + opcoesTexto + '</div>'
+
+    var divResultado = document.getElementById("resultado") 
+
+    htmlResultado = "<p></p>"
+
+    divResultado.innerHTML = htmlResultado
+    
 }

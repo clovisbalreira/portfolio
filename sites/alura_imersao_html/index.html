@@ -3,25 +3,35 @@
 <head>
     <meta charset="UTF-8">  
     <title>Portfolio</title>
-    <link rel="stylesheet" href="css/portifolio.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <div class="container">
-        <header class="perfil">
-            <img class="perfil-foto" src="https://github.com/clovisbalreira.png">
-            <div class="titulo">
-                <h1>Clóvis Balreira Rodrigues</h1>
-                <h3>programador e deselvolvedor front-end #imersaodev</h3>
+        <header class="cabecalho">
+            <div class="perfil">
+                <img class="perfil-foto" src="https://github.com/clovisbalreira.png">
+                <div class="titulo">
+                    <h1>Clóvis Balreira Rodrigues</h1>
+                    <h3>programador e deselvolvedor front-end #imersaodev</h3>
+                </div>
+            </div>
+            <div class="tema">
+                <button onclick="mudaTema()">Alterar Tema</button>
             </div>
         </header>
         <main class="projetos">
-            <ul>Projetos<ul>
-            <li><a href="conversor_de_Moedas.html">🔢Conversor de moeda</a></li>
-            <li><a href="alura_flix.html"></a>Alura Flix</li>
-            <li><a href="tabela_classificacao.html"></a>Tabela de Classificação</li>
-            <li><a href="super_trunfo.html"></a>SuperTrunfo</li>
-            <li><a href="variaveis_operacoes_e_media.html">Media</a></li>
+            <ul class="projetos-titulo">Projetos<ul>
+            <li class="projetos-item"><p>Conversor de moeda</p>
+            <p class="codepen" data-height="300" data-theme-id="dark" data-defaut-tab="html,result" data-slug-hash="poPZGov" data-user="guilhermeonrails" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+            <span>See the Pen <a href="conversor_de_Moedas.html/pen/poPZGov">Conversor de Moedas - ID3</a>by Guilherme(<a href="conversor_de_Moedas.html">@guiilherm</a>) on <a href="https://codepen;io">CodePen</a>.</span></p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+            </li>
+            <li class="projetos-item"><a href="alura_flix.html">Alura Flix</a></li>
+            <li class="projetos-item"><a href="tabela_classificacao.html">Tabela de Classificação</a></li>
+            <li class="projetos-item"><a href="super_trunfo.html">SuperTrunfo</a></li>
+            <li class="projetos-item"><a href="variaveis_operacoes_e_media.html">Media</a></li>
         </main>
     </div>
 </body>
+<script src="js/index.js"></script>
 </html>
