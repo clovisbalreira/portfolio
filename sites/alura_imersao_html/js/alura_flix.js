@@ -3,7 +3,7 @@ var listaFilmes = ["https://br.web.img2.acsta.net/pictures/19/07/23/20/57/490789
 listaFilmes.push("https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/95/59/60/20417256.jpg")
 
 for(var indice = 0; indice < listaFilmes.length;indice++){
-    document.write("<img src="+listaFilmes[indice]+">")
+    document.write("<img src="+listaFilmes[indice]+ " class='img_capa'>")
 }
 
 function adicionarFilme(){

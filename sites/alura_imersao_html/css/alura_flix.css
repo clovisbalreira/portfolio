@@ -24,7 +24,8 @@ body {
   }
   
   .page-logo {
-    width: 200px;
+    width: 100px;
+    height: 20px;
   }
   
   .alura-logo {
@@ -64,5 +65,11 @@ body {
   
   .form-wrapper button:hover {
     opacity: 0.8;
+  }
+
+  .img_capa{
+    width: 300px;
+    height: 400px;
+    margin: 5px;
   }
   
