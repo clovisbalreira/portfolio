@@ -62,7 +62,7 @@ nav ul{
 }
 
 nav ul li{
-   background:blue;
+   background:rgba(2, 2, 250, 0.932);
    text-align: center;
    margin:.2em;
    padding:.5em;
