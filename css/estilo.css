@@ -5,12 +5,12 @@
 }
 
 header.perfil{
-   background: rgba(0, 0, 255, 0.801);
+   background: rgb(0, 0, 0);
    display: flex;
    justify-content: space-between;
    align-items: center;
    padding: 1% 0% 1% 5%;
-   
+   border-bottom: 1px solid white;   
 }
 
 header img {
@@ -29,14 +29,14 @@ header a {
 }
 
 main{
-   background: blue;
+   background: rgb(0, 0, 0);
 }
 
 div.linguagem{
    width: inherit;
    height: inherit;
-   margin: 2% 3%;
-   padding: 15px;
+   margin: 2% 1%;
+   padding: 10px;
    background: white;
    display: inline-flex;
    vertical-align: top;
@@ -48,12 +48,12 @@ div.linguagem{
 }
 
 div img{
-   width: 280px;
-   height: 200px;
+   width: 150px;
+   height: 100px;
 }
 
 nav{
-   width:280px;
+   width:250px;
 }
 
 nav ul{
@@ -72,6 +72,7 @@ nav ul li{
 nav ul li a{
    text-decoration:none;
    color:black;
+   font-size: 1em;
 }
 
 nav ul li a:hover{
@@ -81,8 +82,9 @@ nav ul li a:hover{
 
 footer{
    text-align: center;
-   background: blue;
+   background: rgb(0, 0, 0);
    padding: 15px;
+   border-top: 1px solid white;   
 }
 
 footer img{
