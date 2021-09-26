@@ -18,7 +18,7 @@ function adicionarFilme(){
 }
 
 function listarFilmesTela(filme){
-    var elementoFilmeFavorito = "<img src=" + filme +">"
+    var elementoFilmeFavorito = "<img src=" + filme +" class='img_capa'>"
     var elementolistaFilmes = document.getElementById("listaFilmes")
     elementolistaFilmes.innerHTML += elementoFilmeFavorito    
 }
