@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Testando JavaScript</h1>
-    <img id="luz" src="_imagens/lampada-apagada.jpg" onmousemove="MudarLampada('lampada-acesa')" onmouseout="MudarLampada('lampada-apagada')" onclick="MudarLampada('lampada-quebrada')">
+    <img id="luz" src="imagens/lampada-apagada.jpg" onmousemove="MudarLampada('lampada-acesa')" onmouseout="MudarLampada('lampada-apagada')" onclick="MudarLampada('lampada-quebrada')">
     <script>
         //alert('Olá mundo');
         document.write('Olá mundo!!');
@@ -16,7 +16,7 @@
         var quebrada = false
         function MudarLampada(tipo){
             if(!quebrada){
-                document.getElementById('luz').src = '_imagens/'+tipo+'.jpg'
+                document.getElementById('luz').src = 'imagens/'+tipo+'.jpg'
                 if(tipo == 'lambada-quebrada'){
                     quebrada = true
                 }
