@@ -13,6 +13,11 @@ header.perfil{
    border-bottom: 1px solid white;   
 }
 
+.header-linkendin{
+   border-radius: 20%;
+   margin-left: 200px;
+}
+
 header img {
    max-height: 100px;
    border-radius: 50%;
@@ -53,7 +58,7 @@ div img{
 }
 
 nav{
-   width:250px;
+   width:220px;
 }
 
 nav ul{
@@ -89,6 +94,11 @@ footer{
 
 footer img{
    width: 100px;
+}
+
+.linkedin{
+   width: 57px;
+   margin-right: 10px;
 }
 
 
