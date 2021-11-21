@@ -2,8 +2,10 @@
 body{
     background-image:url("../img/fundo/fundo.png");
     background-repeat:no-repeat;
+    background-size: 100%;
     background-attachment:fixed;
 }
+
 
 header{
     margin-left: 20%;
