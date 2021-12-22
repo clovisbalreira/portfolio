@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src='js/variaveis.js'></script>
+    <script src='js/somaContas.js'></script>
+    <script src='js/variaveisTotal.js'></script>
+    <script src='js/criaTabela.js'></script>
+    <script src='js/mostraTabela.js'></script>
+    <script src='js/salvar.js'></script>
+    <script src="js/atualizar.js"></script>
+    <title>Contas do Mes</title>
+</head>
+<body>
+    <header>
+        <h1>Contas do Mes</h1>
+    </header>
+    <main>
+        <h2>Credito</h2><h2>Debito</h2>
+        <table id="tabelaCredito">
+            <tr>
+                <th>Conta</th>
+                <th>Valor</th>
+            </tr>
+        </table>
+        <table id="tabelaDebito">
+            <tr>
+                <th>Conta</th>
+                <th>Valor</th>
+            </tr>
+        </table>
+        <table id="tabelaCreditoDebito">
+            <tr>
+                <th>Credito Total:</th>
+                <th>R$ <script>document.write(receber);</script></th>
+            </tr>
+            <tr>
+                <th>Debito Total :</th>
+                <th>R$ <script>document.write(pagar);</script></th>
+            </tr>
+        </table>
+        <table id="tabelaSaldo">
+            <tr>
+                <th>Saldo Total :</th>
+                <th>R$ <script>document.write(saldo);
+                </script></th>
+            </tr>
+            <tr>
+                <th>Patrimonio Liquido :</th>
+                <th>R$ <script>document.write(0);
+                </script></th>
+            </tr>
+        </table>
+    </main>
+    <footer>
+        <form id="formulario">
+            <input type="text" name="nome" id="nome" placeholder="Nome da Conta"/>
+            <input type="number" name="valor" id="valor" placeholder="Valor da Conta"/>
+            <input type="submit" name="credito" id="credito" value="Credito" onclick="atualizar()"/>
+            <input type="submit" name="debito" id="debito" value="Debito" onclick="acrescentar()"/>
+        </form>
+    </footer>
+</body>
+<script>atualizar();</script>
+</html>

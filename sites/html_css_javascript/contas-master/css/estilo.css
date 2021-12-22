@@ -1,0 +1,84 @@
+body{
+    background-color: aliceblue;
+}
+
+header{
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+    width: 76%;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+}
+
+#nome , #valor{
+    padding: .2em;
+    margin: 2%;
+    width: 100%;
+}
+
+#credito , #debito{
+    margin: 2%;
+    padding: .1em;
+    width: 45%;
+}
+
+#credito , #tabelaCredito th{
+    background-color: rgb(116, 243, 116);
+}
+
+#debito , #tabelaDebito th{
+    background-color: rgb(253, 114, 114);
+}
+
+main{
+    background-color: yellow;
+    width: 100%;
+}
+
+h2{
+    text-align: center;
+    width : 50%;
+}
+
+main > h2 , main #tabelaCredito , main #tabelaDebito ,main #tabelaCreditoDebito , main #tabelaSaldo{
+    float: left;
+}
+#tabelaCredito , #tabelaDebito , #tabelaCreditoDebito , #tabelaSaldo{
+    border-collapse: separate;
+    border-spacing: .25em;
+    margin: 1em 0;
+    width: 50%;
+}
+
+#tabelaCredito th , #tabelaDebito th{
+    font-size: 1.2em;
+}
+
+#tabelaCredito td { 
+    background-color: rgb(43, 241, 43);
+}
+
+#tabelaDebito td{ 
+    background-color: rgb(250, 66, 66);
+}
+
+#tabelaCreditoDebito th, #tabelaSaldo th{
+    background-color: rgb(175, 175, 175);
+}
+
+#tabelaCredito td ,#tabelaDebito td, #tabelaCreditoDebito th, #tabelaSaldo th{
+    padding: .2em;
+    text-align: left;   
+}
+
+#tabelaCredito td:nth-child(2) ,#tabelaDebito td:nth-child(2), #tabelaCreditoDebito th:nth-child(2), #tabelaSaldo th:nth-child(2){
+    width: 5em;
+    padding: .2em;
+    text-align: right;   
+}
