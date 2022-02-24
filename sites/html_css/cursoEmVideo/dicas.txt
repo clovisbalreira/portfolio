@@ -1,0 +1,63 @@
+Referencia online
+
+referencia MDN
+W3C Standars 
+WHATIWG Living Stardard
+W3Schools
+
+livros recomentados
+o'Rally - HTML5
+o'Rally - CSS
+o'Rally - Flexbox CSS
+o'Rally - Grid Layout in CSS
+alta Books - Elizabeth castro e bruce hyslop
+alta Books - Jon Duckett
+Use a cabeça Html5
+Crie seu propio site
+Mauricio Samy Silva
+
+mapa da internet
+https://www.submarinecablemap.com/
+
+saber o ip 
+https://www.iplocation.net/
+
+Hospedagem
+nome unico
+pago anualmente
+varios TLDs ( .com, .net, .net, .gov)
+
+Hospedagem
+Espaço para armazenar arquivos
+pago mensalmente
+
+extenção
+Google chrome - web developer ( ver o funcionamento das linguagens )
+vscode - Portuguese (Brazil) Language Pack for Visual Studio Code
+configuração - word wrap salvar automaticamente
+
+site emoji - https://emojipedia.org/
+pegar o codigo do emoji e trocar o U+ por &#x 
+
+imagem pro fundo    ideal 1200 largura
+           conteudo ideal  600 largura        
+
+download icon favicon https://iconarchive.com/
+
+produzir icon favicon https://www.favicon.cc/
+
+converter imagem para icon favicon https://favicon.io/
+
+semantica significado
+
+arquivo de audio wav é o mais pesado
+
+programa de conversão de videos - HandBrake
+
+video tamanho X acesso pessoas por dia = download / 1024 ( bytes ) = consumo de banda
+
+estilo css inline é colocado na tag do elemento
+
+estilo css locais e internas é colocado no cabeçalho do arquivo
+
+estilo css externo é colocado em outro arquivo 

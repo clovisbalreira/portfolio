@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens dinamicas e audios</title>
+</head>
+<body>
+    <h1>Imagens Dinamica</h1>
+    <picture>
+        <source media="(max-width: 750px)" srcset="img/celular.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="img/tablet.png" type="image/png">
+        <img src="img/computador.png" alt="Imagem">
+    </picture>
+    <h2>Reproduzir Radio</h2>
+    <audio src="midia/happy-mistake.mp3" autoplay controls></audio>
+    <audio preload="auto" autoplay controls loop>
+        <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midia/guanacast-33.ogg" type="audio/ogg">
+        <source src="midia/guanacast-33.wav" type="audio/wav">
+        <p>Audio não encontrado</p>
+    </audio>
+</body>
+</html>

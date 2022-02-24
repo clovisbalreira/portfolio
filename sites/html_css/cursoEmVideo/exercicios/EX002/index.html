@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragrafos</title>
+</head>
+<body>
+    <h1>Paragrafos e quebras de linha</h1>
+    <p>Você pode escrever o paragrafo de qualquer jeito.
+    <br> Basta colocar tudo em entre as tags p</p>
+    <p>&lt;!-- Comentarios-- &gt; </p>
+    <p>Simbolos &copy; &reg; &trade; &euro; &pound; &yen; &cent; &delta; &Delta; &uparrow; &uarr;</p>
+    <p>Emojis &#x1F648 &#x1F440</p>
+    <script>
+        for (let index = 0; index < 1000; index++) {
+            if(index < 10){
+                document.write(`${index} - &#x1F00${index}<br>`);
+            }else if(index < 99){
+                document.write(`${index} - &#x1F0${index}<br>`);
+            }else{
+                document.write(`${index} - &#x1F${index}<br>`);
+            }
+        }
+    </script>
+</body>
+</html>
