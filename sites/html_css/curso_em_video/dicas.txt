@@ -33,6 +33,9 @@ pago mensalmente
 
 extenção
 Google chrome - web developer ( ver o funcionamento das linguagens )
+Google chrome - fonts ninja ( ver fontes do site ) 
+Google chrome - colorzila ( ver as cores do site )
+Google chrome - window resizer 
 vscode - Portuguese (Brazil) Language Pack for Visual Studio Code
 configuração - word wrap salvar automaticamente
 
@@ -61,3 +64,23 @@ estilo css inline é colocado na tag do elemento
 estilo css locais e internas é colocado no cabeçalho do arquivo
 
 estilo css externo é colocado em outro arquivo 
+
+site de fontes https://www.dafont.com/pt/
+
+tipos de formato de fontes cada navegador tem o seu formado
+opentype - ( otf )
+truetype - ( ttf )
+ebendded-truetype
+truetypeadd - ( Apple Advange Typography)
+svg
+
+detectar fontes em imagens 
+https://www.whatfontis.com/
+https://www.fontsquirrel.com/
+https://www.myfonts.com/WhatTheFont/
+
+simbolos e cores
+https://erikasarti.com/html
+
+criar layout de sites
+https://mockflow.com/
