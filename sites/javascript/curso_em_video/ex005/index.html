@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <section>
+        <h1>Formatando Números</h1>
+        <script>
+            /*
+            converter numeros
+            Number.parseInt(variavel)
+            Number.parseFloat(variavel)
+            string(variavel)
+            variavel.toString
+            variavel.length
+            variavel.toUpperCase
+            variavel.toLowerCase
+            */
+            var numero = window.prompt('Digite o valor: ')
+            document.write(numero.toFixed(2).replace('.',','))
+            document.write(numero.toLocaleString('pt-br', {style:'currency', currency: 'BRL'}))
+        </script>
+        <br><a href="../index.html">Voltar</a>
+    </section>
+</body>
+</html>

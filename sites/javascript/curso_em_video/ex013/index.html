@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <section>
+        <h1>Repetições</h1>
+        <h2>Repetição com controle no inicio</h2>
+        <div id="while"></div>
+        <h2>Repetição com controle no final</h2>
+        <div id="dowhile"></div>
+        <h2>Repetição com variavel de controle</h2>
+        <div id="for"></div>
+        <script>
+            var divWhile = document.getElementById('while')
+            var divDoWhile = document.getElementById('dowhile')
+            var divFor = document.getElementById('for')
+            var c = 1
+            while(c < 6){
+                divWhile.innerHTML += `<p>Passo ${c}</p>`
+                c++
+            }
+            c = 1
+            do{
+                divDoWhile.innerHTML += `<p>Passo ${c}</p>`
+                c++
+            }while(c > 6)
+        
+            for(var c = 1; c < 10; c++){
+                divFor.innerHTML += `<p>Passo ${c}</p>`
+            }
+         </script>
+        <br><a href="../index.html">Voltar</a>
+    </section>
+</body>
+</html>

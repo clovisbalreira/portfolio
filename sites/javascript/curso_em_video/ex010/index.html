@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <section>
+        <h1>Condições</h1>
+        <h2>Condição simples ( uma condição )</h2>
+        <p>Velocidade do carro
+        <input type="number" placeholder="Digite a velocidade" name="txtvel" id="txtvel"> Km/h <input type="button" value="Verificar" onclick="calcular()"></p>
+        <div id="resvel"></div>
+        <h2>Condição composta ( duas condição )</h2>
+        <p>Que Pais você nasceu
+        <input type="text" placeholder="Digite seu pais" name="txtpais" id="txtpais"> <input type="button" value="Verificar" onclick="nascionalidade()"></p>
+        <div id="resnas"></div>
+        
+        <h2>Condição alinhadas ( varias condição )</h2>
+        <p>
+        Qual idade <input type="number" placeholder="Digite sua idade" name="txtidade" id="txtidade"> <input type="button" value="Verificar" onclick="idade()"></p>
+        <div id="residade"></div>
+        
+        <h2>Condição alinhadas ( varias condição )</h2>
+        <div id="hora"></div>
+        <div id="reshora"></div>
+        
+        <h2>Condição multiplas ( condições fixos )</h2>
+        <div id="ressem"></div>
+        
+        <script>
+            function calcular(){
+                var txtvel = document.getElementById('txtvel')
+                var res = document.getElementById('resvel')
+                var vel = Number(txtvel.value)
+                res.innerHTML = `<p>Sua velocidade é de <strong>${vel} Km/h<Strong>.</p>`
+                    if(vel > 60){
+                        res.innerHTML += '<p>Você ultrapassou a velocidade permitida. MULTADO!<p>'
+                        }
+                        res.innerHTML += '<p>Dirija sempre com o cinto de segurança.</p>'
+                    }
+            function nascionalidade(){
+                var txtp = document.getElementById('txtpais').value.toLowerCase()
+                var res = document.getElementById('resnas')
+                res.innerHTML = `<p>Você nasceu no <strong>${txtp}</strong>. No territorio do brasil.</p>`
+                if(txtp == 'brasil'){
+                    res.innerHTML += "Você é um cidadão Brasileiro"
+                }else{
+                    res.innerHTML += "Você é um cidadão estrangeiro"
+                }
+            }
+        
+            function idade(){
+                var txti = document.getElementById('txtidade')
+                var res = document.getElementById('residade')
+                var i = Number(txti.value)
+                res.innerHTML = `<p>Sua idade é <strong>${i}</strong>. No territorio do brasil.</p>`
+                if(i < 16){
+                    res.innerHTML += "<p>Você não vota</p>"
+                }else if(i <= 18 || i > 65){
+                    res.innerHTML += "<p>Voto opcional</p>"
+                }else{
+                    res.innerHTML += "<p>Voto obrigatorio</p>"
+                }
+            }
+        
+            var horas = document.getElementById('hora')
+            var agora = new Date()
+            var hora = agora.getHours()
+            var minuto = agora.getMinutes()
+            if(minuto < 10){
+                minuto = '0' + minuto
+            }
+            horas.innerHTML = `Agora é ${hora} : ${minuto}`
+            if(hora < 12){
+                horas.innerHTML += ' Bom Dia!'
+            }else if( hora <= 18){
+                horas.innerHTML += ' Bom Tarde!'
+            }else{
+                horas.innerHTML += ' Bom Noite!'
+            }
+        
+            var diaSemana = agora.getDay()
+            var resdia = document.getElementById('ressem')
+        
+            switch(diaSemana){
+                case 0:
+                    resdia.innerHTML = "Hoje é domingo"
+                    break
+                case 1:
+                    resdia.innerHTML = "Hoje é Segunda-Feira"
+                    break
+                case 2:
+                    resdia.innerHTML = "Hoje é Terça-feira"
+                    break
+                case 3:
+                    resdia.innerHTML = "Hoje é Quarta-feira"
+                    break
+                case 4:
+                    resdia.innerHTML = "Hoje é Quinta-feira"
+                    break
+                case 5:
+                    resdia.innerHTML = "Hoje é Sexta-feira"
+                    break
+                case 6:
+                    resdia.innerHTML = "Hoje é Sábado"
+                    break
+                default:
+                    resdia.innerHTML = "Valor invalito" + diaSemana
+                    break
+            }
+        
+        
+            </script>
+        <br><a href="../index.html">Voltar</a>
+    </section>
+</body>
+</html>
