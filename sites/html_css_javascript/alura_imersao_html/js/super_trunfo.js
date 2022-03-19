@@ -1,6 +1,6 @@
 var cartas1 = {
     nome:"Bulbassauro",
-    imagem:'https://static.wikia.nocookie.net/pocketmonster/images/a/ab/Bulbassauro.png/revision/latest?cb=20160908232122&path-prefix=pt-br',
+    imagem:'https://i.pinimg.com/736x/0f/2c/0f/0f2c0fdae0640d8b40a45f3e8a940507--job.jpg',
     atributos: {
         Ataque: 7,
         defesa: 8,
@@ -9,7 +9,7 @@ var cartas1 = {
 };
 var cartas2 = {
     nome:"Darth Vader",
-    imagem:'https://disneyplusbrasil.com.br/wp-content/uploads/2021/06/Darth-Vader-serie-Disney-Plus-1024x576.jpg',
+    imagem:'https://tse3.mm.bing.net/th?id=OIP.LYZk7hxSzMR1VA8116oVPQHaEo&pid=Api&P=0&w=288&h=180',
     atributos: {
         Ataque: 9,
         defesa: 8,
@@ -18,7 +18,7 @@ var cartas2 = {
 };
 var cartas3 = {
     nome:"Shiryu do dragão",
-    imagem:'https://static.wikia.nocookie.net/saintseya/images/9/9e/Shiryu_3_255.png/revision/latest?cb=20151229134313&path-prefix=pt',
+    imagem:'https://pm1.narvii.com/6333/c0725560b194bfe12f0ceab130b95eaa3c506be2_hq.jpg',
     atributos: {
         Ataque: 5,
         defesa: 9,
@@ -36,17 +36,16 @@ function sortearCarta(){
     
     var numeroCartaJogador = parseInt(Math.random() * cartas.length);
 
+    
     while(numeroCartaJogador == numeroCartaMaquina){
         var numeroCartaJogador = parseInt(Math.random() * cartas.length);
     };
 
     cartaJogador = cartas[numeroCartaJogador];
-
+    
     document.getElementById("btnSortear").disabled = true;
     document.getElementById("btnJogar").disabled = false;
-
-    console.log(cartaJogador);
-    console.log(cartaMaquina);
+    
     exibirCartaJogador();
     apagarCartaMaquina()
 };
@@ -72,8 +71,10 @@ function jogar(){
         }else{
             htmlResultado = "<p class='resultado-final'>Perdeu</p>"
         }
-    }else{
+    }else if(cartaJogador.atributos[atributoSelecionado] ==  'undefined'){
         htmlResultado = "<p class='resultado-final'>Empatou</p>"
+    }else{
+        htmlResultado = "<p class='resultado-final'>Você precisa selecionar um atributo</p>"
     }
 
     divResultado.innerHTML = htmlResultado
@@ -98,7 +99,7 @@ function exibirCartaJogador(){
     }
     
     var nome = `<p class="carta-subtitle">${cartaJogador.nome}</p>`
-
+    
     divCartaJogador.innerHTML = moldura + nome + tagHtml 
     + opcoesTexto + '</div>'
 }
@@ -117,7 +118,7 @@ function exibirCartaMaquina(){
     }
     
     var nome = `<p class="carta-subtitle">${cartaMaquina.nome}</p>`
-
+    
     divCartaMaquina.innerHTML = moldura + nome + tagHtml 
     + opcoesTexto + '</div>'
 }
@@ -133,14 +134,21 @@ function apagarCartaMaquina(){
     var opcoesTexto = "<p type='text' name='atributo' value=''>";
     
     var nome = `<p class="carta-subtitle"></p>`
-
+    
     divCartaMaquina.innerHTML = moldura + nome + tagHtml 
     + opcoesTexto + '</div>'
-
+    
     var divResultado = document.getElementById("resultado") 
-
+    
     htmlResultado = "<p></p>"
-
+    
     divResultado.innerHTML = htmlResultado
     
 }
+
+//tambem pode embaralhar ou retirar a carta do baralho para não repetir a carta
+//atributo não selecionado ao jogar
+//adicionar um baralho
+//ganhar a carta de outro jogador
+//funcao mostrarcarta com parametro 
+//Animações nas cartas

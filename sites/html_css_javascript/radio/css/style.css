@@ -1,4 +1,414 @@
 @charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
 *{
     color: white;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    height: 100vh;
+    background: white url('../img/fundo-cns.jpg') no-repeat fixed center center;
+    background-size: cover;
+}
+
+h1{
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+h2{
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+h3{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+}
+h4{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+h5{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+h6{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+input[type="button"]{
+    background-color: #3a3a3a;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+input[type="text"] , textarea , select{
+    width: 100%;
+    height: 30px;
+    margin: 15px 0;
+    margin-right: 0px;
+    padding-left: 10px;
+    border-radius: 10px;
+    color: black;
+}
+
+textarea{
+    height: 100px;
+    padding-top: 10px;
+}
+
+header{
+    background-color: black;
+    height: 370px;
+    text-align: center;
+}
+
+header nav{
+    background-color: black;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    padding: 30px 0;
+}
+
+header nav ul{
+    list-style: none;
+    columns: 6;
+    width: 100%;
+}
+
+header nav ul li{
+    width: 80%;
+}
+
+header nav ul li a{
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+}    
+
+header nav ul li a:hover{
+    color: #3a3a3a;
+}
+
+header div.deezer{
+    padding-top: 80px;
+    padding-left: 70%;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+header div.playlistDeezer{
+    padding-left: 83.5%;
+    vertical-align: middle;    
+    position: relative;
+}
+
+header div.deezer a, header div.playlistDeezer a{
+    position: absolute;
+    padding-left: 1%;
+    bottom: 8px;
+    text-decoration: none;
+}
+
+header img{
+    width: 22%;
+}
+
+section{
+    margin-left: 10%;
+    padding: 40px 0;
+    background-color: rgba(0, 0, 0, .80);
+    width: 80%;
+}
+
+div.espacador{
+    padding: 50px;
+}
+
+section#home img{
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 40px;
+}
+
+section#home ul.ul-links{
+    list-style: none;
+    columns: 5;
+    width: 100%;
+}
+
+section#home ul.ul-links li{
+    text-align: center;
+    padding: 10% 1%;
+}
+
+section#home ul.ul-links li div{
+    width: 100%;
+    height: 180px;
+    vertical-align: top;
+}
+
+section#home ul.ul-links li div p{
+    padding: 10px 0;
+}
+
+section#home ul.ul-links li div img{
+    width: 20%;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+section#home ul.ul-redes{
+    columns: 3;
+    list-style: none;
+    width: 100%;
+}
+
+section#home ul.ul-redes li div#arb-widget{
+    background-color: white;
+}
+
+section#home ul.ul-redes li div#arb-widget div.arb-tab-content div.arb-media img{
+    margin-left: 0px;
+}
+
+section#cns-news{
+    text-align: center;
+}
+
+section#cns-news p{
+    padding: 1%;
+}
+
+section#cns-news table{
+    width: 100%;
+    margin-top: 20px;
+}
+
+section#cns-news table tr td{
+    width: 33%;
+    padding: 20px;
+    vertical-align: top;
+}
+
+section#anuncie img{
+    width: 80%;
+    margin-left: 10%;
+}
+
+section#anuncie h3, section#anuncie p{
+    padding: 1% 10%;
+}
+
+section#anuncie form{
+    padding: 1% 10%;
+}
+
+section#fale-conosco{
+    width: 80%;
+    margin-left: 10%;
+}
+
+section article{
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+}
+
+section#fale-conosco h2, section#fale-conosco p{
+    padding: 1% 0%;
+}
+
+section#fale-conosco form{
+    padding: 1% 10%;
+}
+
+section#sobre-nos{
+    text-align: center;
+}
+
+section#sobre-nos h2{
+    padding: 40px 0;
+}
+
+section#redes-sociais{
+    text-align: center;
+    background-color: none;
+    margin-bottom: 40px;
+}
+
+section#redes-sociais img{
+    width: 80%;
+}
+
+section#redes-sociais h3{
+    padding: 10px 0;
+}
+
+section#redes-sociais a img{
+    width: 4%;
+    padding-left: 20px;
+}
+
+footer{
+    background-color: black;
+    text-align: center;
+    padding: 1% 0;
+    position: relative;
+}
+
+footer ul {
+    columns: 2;
+    list-style: none;
+}
+
+footer ul li p{
+    margin-top: 3%;
+}
+
+footer ul li a img{
+    width: 5%;
+    padding: 1% 1%;
+}
+
+#div-playlist{
+    background-color: rgba(0, 0, 0, 0.705);
+    width: 90%;
+    height: 300px;
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    display: none;
+    z-index: 2;
+}
+
+#div-playlist:target{
+    display: block;
+}
+
+#div-playlist ~ .box-playlist{
+    top: 10px;
+    transition: all.3s;
+    transition-delay: .2s;
+}
+
+.box-playlist{
+    background-color: black;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: -2000px;
+    top: 440px;
+    border-radius: 15px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.404) ;
+}
+
+#close{
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    position: absolute;
+    background-color: #000;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    right: 0;
+    border-top-right-radius: 40%;
+}
+
+#close:hover{
+    opacity: .8;
+}
+
+@media(max-width: 1232px){
+    header{
+        height: 450px;
+    }
+
+    header nav ul{
+        columns: 2;
+    }
+    header nav ul li{
+        padding: 3%;
+    }
+
+    header div.deezer{
+        padding-top: 240px;
+        padding-left: 60%;
+    }
+
+    header div.playlistDeezer{
+        padding-left: 74%;
+    }
+    
+    section#home ul.ul-links, section#home ul.ul-redes{
+        columns: 1;
+    }
+
+    section#home ul.ul-redes{
+        padding: 5% 25%;
+    }
+
+    section#home ul.ul-redes li{
+        margin-top: 5%;
+    }
+    
+    section#home ul.ul-links li div img{
+        width: 7%;
+    }    
+
+    section#redes-sociais a img{
+        width: 7%;
+    }    
+}
+
+@media(max-width: 1050px){
+    header{
+        height: 435px;
+    }
+
+    header div.deezer{
+        padding-left: 40%;
+    }
+    
+    header div.playlistDeezer{
+        padding-left: 62%;
+    }    
+    
+    footer ul{
+        columns: 1;
+    }
+}
+@media(max-width: 500px){
+    header img{
+        width: 40%;
+    }
+
+    header div.deezer{
+        padding-left: 24%;
+    }
+
+    header div.playlistDeezer{
+        padding-left: 62%;
+    }    
+
 }

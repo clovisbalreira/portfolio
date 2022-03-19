@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .netflix-logo{
+            height: 15vw;
+            width: 100%;
+            text-align: center;
+        }
+        .netflix-logo img{
+            height: 100%;
+        }
+        .carrossel{
+            height: 250px;
+            width: 80%;
+            position: relative;
+        }
+        .carrossel .switchLeft, .carrossel .switchRight{
+            color: white;
+            font-weight: bold;
+            height: 100%;
+            width: 45px;
+            line-height: 250px;
+            font-size: 25px;
+            text-align: center;
+            background-color: lightgreen;
+            font-family: sans-serif;
+            top: 0;
+            z-index: 3;
+        }
+        .carrossel .switchLeft{
+            position: absolute;
+            left: -50px;
+        }
+        .carrossel .switchRight{
+            position: absolute;
+            right: -50px;
+        }
+        .carrosselbox{
+            height: 250px;
+            width: auto;
+            overflow: scroll;
+            white-space: nowrap;
+            display: inline-block;
+            text-align: center;
+            padding-bottom: 10px !important;
+            display: flex;
+            align-items: center;
+        }
+        .carrosselbox img{
+            min-width: 147px;
+            max-width: 147px;
+            height: 200px;
+            background-size: cover;
+            background-color: lightgreen;
+            margin: 5px 10px;
+            cursor: pointer;
+            transition: 0.5s ease;
+            z-index: 2;
+        }
+        .carrosselbox img:hover{
+            transform: scale(1.4);
+            z-index: 5;
+        }
+    </style>
+</head>
+<body>
+    <div class="netflix-logo">
+        <img src="img/logo_cns.png" alt="">
+    </div>
+
+    <div class="carrossel">
+        <div class="carrosselbox"></div>
+        <a class="switchLeft sliderButton" onclick="sliderScrolLeft()"><</a>
+        <a class="switchRight sliderButton" onclick="sliderScrolRight()">></a>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.js"></script>
+<script>
+    const sliders = document.querySelector('.carrosselbox')
+    var scrollPerClick;
+    var ImagePadding = 20;
+
+    showMovieData();
+
+    var scrollAmount = 0 ;
+
+    function sliderScrolLeft(){
+        sliders.scrollTo({
+            top: 0,
+            left: (scrollAmount -= scrollPerClick),
+            behavior: 'smooth'
+        });
+        if(scrollAmount < 0){
+            scrollAmount = 0
+        }
+    }
+
+    function sliderScrolRight(){
+        if(scrollAmount <= sliders.scrollWidth - sliders.clientWidth){
+            sliders.scrollTo({
+                top: 0,
+                left: (scrollAmount += scrollPerClick),
+                behavior: 'smooth'
+            });
+        }
+    }
+
+    async function showMovieData(){
+        const api_key = "9060ab229ccc5a6f7f2d222d85cbe339";
+        var result = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${api_key}&sort_by=popularity.desc"`);
+
+        result = result.data.results;
+
+        result.map(function (cur, index){
+            sliders.insertAdjacentHTML(
+                "beforeend",
+                `<img class="img-${index} slider-img" src="https://image.tmdb.org/t/p/w185/${cur.poster_path}"/>`
+            )
+        });
+        scrollPerClick = document.querySelector(".img-1").clientWidth + ImagePadding;
+        //scrollPerClick = 400;
+        console.log(result);
+    };
+    
+</script>
+</html>
