@@ -176,4 +176,5 @@ footer button[type=button]{
     padding-bottom: 1%;
     font-size: 1.1em;
     color: black;
+    background-color: var(--corFundoPrincipal);
 }
