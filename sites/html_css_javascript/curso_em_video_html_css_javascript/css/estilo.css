@@ -240,3 +240,53 @@ footer#rodape{
 footer#rodape p{
     text-align: center;
 }
+@media(max-width: 950px){
+    div#interface{
+        width: 90%;
+    }
+    header#cabecalho{
+        margin-top: 40px;
+    }
+    header#cabecalho img#icone{
+        left: 660px;
+    }
+    nav#menu ul {
+        left: 250px;
+    }
+    section#corpo{
+        width: 100%;
+        border-right: none;
+    }
+    aside#lateral{
+        width: 96%;
+    }
+    video#filme{
+        margin-left: 20%;
+    }
+    aside#lateral video#filme{
+        margin-left: 25%;
+    }
+}
+
+@media(max-width: 450px){
+    header#cabecalho img#icone{
+        left: 270px;
+        top: 120px;
+        width: 25%;
+    }
+    nav#menu ul {
+        left: -20px;
+        margin-top: 15px;
+        font-size: .58em;
+    }
+    video#filme{
+        margin-left: 0%;
+        width: 99%;
+    }
+    aside#lateral video#filme{
+        margin-left: 0% ;
+    }
+    aside#lateral{
+        width: 91%;
+    }
+}

@@ -18,7 +18,15 @@ section{
     box-shadow: 3px 3px 10px black;
     color:  black;
 }
-footer{
+section ul{
+    list-style: none;
+}
+    footer{
     text-align: center;
     font-style: italic;
+}
+@media(max-width: 450px){
+    section{
+        width: 350px;   
+    }
 }

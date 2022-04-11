@@ -2,13 +2,12 @@
 body{
     background-image:url("../img/fundo/fundo.png");
     background-repeat:no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-attachment:fixed;
 }
 
-
 header{
-    margin-left: 20%;
+    margin-left: 18%;
 }
 
 .header-imagem{
@@ -42,7 +41,7 @@ nav ul li{
 
 main{
     background-color:rgba(255, 255, 255, 0.925);
-    margin-left: 20%;
+    margin-left: 18%;
     width:61%;
     padding: .5% 2%;
 }
@@ -57,19 +56,24 @@ main p{
     font-size:1.1em;
 }
 
-main table{
-    border: 1px;
-    border-color: black;
-    margin-left:-3%;
-}
-
 .img-objeto , .img-foto{
     width:210px; 
     height:160px; 
 }
+main ul{
+    list-style: none;
+    columns: 4;
+    margin-left: -60px;
+}
 
-.tbl_cardapio{
+main table.tbl_cardapio{
     width:106%;
+    border: 1px;
+    border-color: black;
+    margin-left:-3%;
+}
+main table.tbl_cardapio th:nth-child(1){
+    width: 83%;
 }
 
 .tbl_cardapio tr th{
@@ -99,34 +103,36 @@ label{
     padding:.1em;
 }
 
-.nome , .email{
-    width:40%;
+.nome {
+    width:35%;
+    margin-left: 2.5%;
 }
 
+.email{
+    width:43%;
+}
 .assunto{
     width:87%;
 }
-
 .receita{
     width:79.3%;
 }
-
 .mensagem{
     width:96%;
 }
 
 .outras{
-    width:37.9%;
+    width:38.6%;
 }
 
 .enviar{
-    width:90%;
-    margin-left:3%;
+    width:96.5%;
+    margin-left:0%;
     height:2em;
 }
 
 .img_mapa{
-    margin:0 10%;
+    margin: 10%;
 }
 
 footer{
@@ -137,20 +143,83 @@ footer{
     text-align: center;
 }
 
-@media(max-width: 1024px){
-    header{
-        margin-left:7.5%;
+@media(max-width: 950px){
+    header, main, footer{
+        margin-left: 3%;
     }
-
-    main , footer{
-        margin-left:9%;
-    }
-
     main{
-        width:80%
+        width: 90%;
     }
-
+    .outras{
+        width:39.5%;
+    }
     footer{
-        width:84.7%;
+        width: 92%;
+    }
+}
+@media(max-width: 450px){
+    body{
+        background-size: cover;
+    }
+    .header-imagem,  
+    .header-logo{
+        width: 95%; 
+        height: 150px;
+        margin-bottom: 20px;
+    }  
+    .img-nav{
+        width: 128px; 
+        height: 60px;
+    }
+    nav ul li:nth-child(5){
+        display: none;
+    }
+    main ul{
+        columns: 1;
+        margin-left: 10%;
+    }
+    .tbl_cardapio tr td{
+        padding-left:3%;
+    }
+    main table th:nth-child(1){
+        width: 68%;
+    }
+    .img_mapa{
+        width: 77%;
+    }
+    .nome {
+        margin-top:2%;
+        width:80%;
+        margin-left: 4%;
+    }
+    
+    .email{
+        margin-top:2%;
+        width:80%;
+        margin-left: 2.5%;
+    }
+    .assunto{
+        margin-top:2%;
+        width:79%;
+    }
+    .receita{
+        margin-top:2%;
+        width:62%;
+    }
+    .mensagem{
+        margin-top:2%;
+        width:98%;
+    }
+    .origem{
+        margin-top:2%;
+        width: 40%;
+    }
+    .outras{
+        margin-top:2%;
+        width: 83%;
+    }
+    .enviar{
+        width:98%;
+        margin-top:2%;
     }
 }

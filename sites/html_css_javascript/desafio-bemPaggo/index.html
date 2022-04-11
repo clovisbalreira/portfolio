@@ -32,34 +32,12 @@
                             <th scope="col">Valor Total</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <th>linha</th>
-                            <th>linha</th>
-                            <th>linha</th>
-                            <th>linha</th>
-                        </tr>
-                        <tr>
-                            <th>linha</th>
-                            <th>linha</th>
-                            <th>linha</th>
-                            <th>linha</th>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th>footer</th>
-                            <th>footer</th>
-                            <th colspan="2">footer</th>
-                        </tr>
-                        <tr>
-                            <th colspan="4">footer</th>
-                        </tr>
-                    </tfoot>
+                    <tbody></tbody>
+                    <tfoot></tfoot>
                 </table>
                 <div id="button"></div>
-                <button id="btn-recusar" type="button" onclick="recusarCompra()">Recusar Compra</button>
-                <button id="btn-compra" type="button" onclick="confirmarCompra()">Confirmar Compra</button>
+                <button id="btn-recusar" onclick="recusarCompra()">Recusar Compra</button>
+                <button id="btn-compra" onclick="confirmarCompra()">Confirmar Compra</button>
             </section>
             <section class="form">
                 <legend>Quais adesivos:</legend>
@@ -76,16 +54,18 @@
                     <label for="adesivo-angular">Angular - R$: <input type="text" class="preco" value="1.75" disabled></label>
                 </p>
                 <legend>Quantos adesivos de cada?</legend>
-                <button type="button" id="subtrair" onclick="subtrairNumero()">-</button>
-                <input type="number" name="numero" id="numero">
-                <button type="button" id="soma" onclick="somaNumero()">+</button>
+                <div class="divAdesivos">
+                    <button id="subtrair" onclick="subtrairNumero()">-</button>
+                    <input type="number" name="numero" id="numero">
+                    <button id="soma" onclick="somaNumero()">+</button>
+                </div>
                 <label class="obs" for="observacao">Observações:</label>
                 <textarea name="observacao" id="observacao" cols="21" rows="5" placeholder="Algum duvida? Recado?"></textarea>
             </section> 
             </main>    
             <footer>
                 <span id="mostrar-nota-fiscal"></span>
-                <button type="button" onclick="mostrarNotaFiscal()">ENVIAR</button>
+                <button onclick="mostrarNotaFiscal()">ENVIAR</button>
             </footer>
         </div>
     </body>

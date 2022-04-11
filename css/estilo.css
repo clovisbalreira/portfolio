@@ -4,133 +4,197 @@
    padding: 0;
 }
 
-header.perfil{
-   background: rgb(0, 0, 0);
+body{
+   color: white;
+   background-color: black;
+}
+
+header{
    display: flex;
    justify-content: space-between;
    align-items: center;
    padding: 1% 0% 1% 5%;
    border-bottom: 1px solid white;   
 }
-
-.header-linkendin{
-   border-radius: 20%;
-   margin-left: 180px;
-}
-
 header img {
    max-height: 100px;
    border-radius: 50%;
 }
-
+header .perfil{
+   display: flex;
+   justify-content: space-around;
+   width: 90%;
+}   
 header h1{
    color: white;
    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.637);
 }
-
-header a {
-   padding-right: 17%;
-   max-width: 10px;
+header .perfil div{
+   display: flex;
+   width: 100px;
 }
-
-main{
-   background: rgb(0, 0, 0);
+header .perfil div a{
+   margin-left: 50px;
 }
-
-div.linguagem{
-   width: inherit;
-   height: inherit;
-   margin: 2% 1%;
-   padding: 10px;
-   background: white;
-   display: inline-flex;
-   vertical-align: top;
-   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.521);
+header .options{
+   width: 550px;
+   margin-left: 70px;
+   padding: 20px;
 }
-
-.sombra{
-   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.521);
+header .options ul{
+   list-style: none;
+   columns: 2;
 }
-
-div img{
-   width: 150px;
-   height: 100px;
+header .options ul h3{
+   margin-bottom: 5px;
 }
-
-nav{
-   width:220px;
+header .options ul li{
+   padding: 5px 0;
 }
-
-nav ul{
-   padding-left:1em;
-   list-style-type: none;
+header .options ul li input[type='radio']{
+   padding-left: 50px;
 }
-
-nav ul li{
-   background:rgba(58, 175, 252, 0.99);
-   text-align: center;
-   margin:.2em;
-   padding:.5em;
-   box-shadow: 2.5px 2.5px 2.5px rgba(0, 0, 0, 0.521);
+header .options ul li label{
+   margin-left: 10px;
 }
-
-nav ul li a{
-   text-decoration:none;
-   color:black;
+header #button{
+   border: none;
+   margin: 10px;
+   padding: 5px;
+   width: 20%;
+   height: 7vh;
    font-size: 1em;
+   border-radius: 50px;
+}
+main nav{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-around;
+   margin: 10px 0px;
+}
+main nav a{
+   color: white;
+   text-decoration: none;
+   font-size: 1.3em;
+   padding: 10px 0px;
+   border-radius: 50px;
+}
+main #mostrarSites .sites{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: flex-start;
+   padding: 0 2%;
+   justify-content: space-around
 }
 
-nav ul li a:hover{
-    color:white;
+main #mostrarSites .sites .siteFlex{
+   margin: 10px;
 }
-
-footer{
+main #mostrarSites .sites .siteFlex a, main #mostrarSites .sites .siteFlex div embed{
+   color: white;
+   font-size: 1.5em;
+   text-decoration: none;
+   margin: 0px;
+}
+main #mostrarSites .sites .siteFlex p{
+   margin: 7px 0;
+}
+main .img{
+   background-color: white;
+   width: 100%;
+   height: 20%;
    text-align: center;
-   background: rgb(0, 0, 0);
+   margin: 10px 0;
+}
+main #mostrarSites .titulo{
+   margin-left: 3%;
+   margin-bottom: 1%;
+}
+main #mostrarSites .titulo .titulo-h2{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+main #mostrarSites .titulo .titulo-h2 h2{
+   text-align: center;
+   margin: 50px;
+   font-size: 3.5em;
+}
+footer{
+   display: flex;
+   justify-content: center;
+   text-align: center;
    padding: 15px;
    border-top: 1px solid white;   
 }
 
 footer img{
-   width: 100px;
+   width: 50px;
+   margin-left: 50px;
 }
 
-.linkedin{
-   width: 57px;
-   margin-right: 10px;
-}
-
-
-@media(max-width: 600px){
+@media(max-width: 950px){
    header{
-      height: 65px;
+      flex-wrap: wrap;
    }
-
-   header h1{
-      font-size: 20px;
-      position: relative;
-      padding: 3% 30%;
-      text-align: left;
-      color: white;
-      text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.637);
+   header img {
+      max-height: 70px;
    }
-
-   header a img{
-      width: 80px;
-      margin-top: -8.9%;
-      margin-left: 80%;
+   header .options{
+      width: 350px;
+      margin-left: 170px;
    }
-
-   div.linguagem{
+   header .perfil{
       width: 90%;
-      height: inherit;
-      margin: 2% 3%;
-      padding: 10px;
-   }      
-
-   div img{
-      width: 270px;
-      height: 130px;
+      padding-top: 10px;
+   }   
+   header .perfil div a{
+      margin-right: 40px;
    }
-   
+   header .perfil div a img:nth-child(1){
+      margin-left: -50px;
+   }
+   header #button{
+      padding: 3px;
+      width: 20%;
+      height: 7vh;
+      margin-right: 30px;
+      font-size: 1.2em;
+   }
+   main nav{
+      font-size: .8em;
+   }
+}
+@media(max-width: 450px){
+   header img {
+      max-height: 50px;
+   }
+   header .perfil{
+      width: 88%;
+   }
+   header .perfil h1{
+      margin-left: -30px;
+      font-size: 1.2em;
+      padding-top: 10px;
+   }
+   header .perfil div a{
+      margin-right: 15px;
+   }
+   header .perfil div a img:nth-child(1){
+      margin-left: -80px;
+   }
+   header .options{
+      width: 280px;
+      margin-left: 60px;
+   }
+   header #button, main nav, main #mostrarSites .titulo .titulo-h2 a{
+      display: none;
+   }
+   main nav{
+      font-size: .8em;
+   }
+   main #mostrarSites .titulo .titulo-h2{
+      font-size: .5em;
+   }
 }

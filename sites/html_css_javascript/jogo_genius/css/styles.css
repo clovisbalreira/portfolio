@@ -49,3 +49,14 @@ body{
 .selected{
     opacity: 0.4;
 }
+@media(max-width: 950px){
+    .genius{
+        width: 300px;
+        height: 300px;
+    }
+}
+@media(max-width: 450px){
+    .genius{
+        margin-left: 20%;
+    }
+}

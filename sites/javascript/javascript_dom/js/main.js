@@ -40,7 +40,7 @@ function voltar(elemento){
 }
 
 function load(){
-    alert("Página carregada")
+    //alert("Página carregada")
 }
 
 function funcaoChange(elemento){

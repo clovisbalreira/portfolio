@@ -11,6 +11,7 @@ h1{
 
 body{
     background-image: url(../imgs/fundo.jpg);
+	background-size: cover;
 }
 
 #container{
@@ -258,4 +259,13 @@ h3 {
 	text-align:center;
 	padding:10px;
 
+}
+@media(max-width: 950px){
+	#container{
+		width: 98%;
+	}
+	#fundoGame{
+		width:98%;
+		margin-left: 0px;
+	}
 }

@@ -15,6 +15,10 @@ input:hover, textarea:hover{
     background-color: #dddddd;
 }
 
+#mensagem p label{
+    margin-left: -50px;
+}
+
 legend{
     color: #888888;
     font-weight: bold;
@@ -45,6 +49,18 @@ fieldset#mensagem{
 
 fieldset#pedido{
     background: url("../_imagens/icone-pagamento.png") no-repeat 95% 95%;
+}
+@media(max-width: 450px){
+    form{
+        width: 380px;
+    }
+
+    #mensagem p label{
+        margin-left: -50px;
+    }
+    #cMsg{
+        width: 300px;
+    }
 }
 
 

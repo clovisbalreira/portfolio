@@ -89,7 +89,7 @@ let gameOver = () => {
 
 //funcao de inicio do jogo
 let playGame = () => {
-    alert(`Bem vindo ao genius! Iniciando novo jogo.`)
+    //alert(`Bem vindo ao genius! Iniciando novo jogo.`)
     score = 0
     nextLevel()
 }

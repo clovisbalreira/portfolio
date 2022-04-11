@@ -3,313 +3,115 @@
     margin: 0;
     padding: 0;
 }
-
 body{
     background-image: linear-gradient(90deg,rgba(0, 0, 0, 0.575),white);
 }
-
+main{
+    display: flex;
+}
 .logo{
     width: 100%;
 }
-
-article{
-    padding:1em;
-    float:right;
-    width:80%;
-}
-
-nav .logo{
-    float: left;
-    color: white;
-    font-size: 27px;
-    font-weight: 600;
-    line-height: 70px;
-    padding-left: 60px;
-    display: none;
-}
-
-nav::after{
-    content: '';
-    clear: both;
-    display: table;
-}
-
 nav ul{
     background-color: #808080d9;
     padding-top:1px;
 }
-
 nav ul li {
     padding-bottom: 7px;
     margin: 5px;
     list-style-type: none;
     font-size: 1em;
 }
-
 nav ul li a {
     color: white;
     text-decoration: none;
     padding: 5px 8px
 }
-
 nav ul li a:hover {
     color: black;
-    text-decoration: none
 }
-
-p , b{
+article{
+    padding:1em;
+}
+p{
     padding:.2em;
     text-align:center;
     font-size:1.1em;    
 }
-
+aside{ 
+    width: 98%;
+}
+.imagem{
+    display: flex;
+    width: 90%;
+    margin-top: 40px
+}
 .img-footer{
     width:210px;
     height:150px;
     margin-left: 22%;
 }
-
-.imagem{
-    float:right;    
-    width:90%;
-}
-
-nav , .home , .como_usar , .historia , .possibilidade , .livro_jogos , .fontes{
-    width:10%;
-}
-
 p a{
     text-decoration:none;
     font-size:6em;
     text-shadow: 2px 2px black;
 }
 
-.show, input , .icon{
-    display: none;
-}
-
-.icon{
-    height:50px;
-    margin-top:1%;
-    background-color:#8080808f;
-}
-
-.home{
-    margin-top:-280px;
-    float:left;
-}
-
-.como_usar{
-    margin-top:-210px;
-    float:left;
-}
-
-.historia {
-    margin-top:-217px;
-    float:left;
-}
-
-.possibilidade{
-    margin-top:-252px;
-    float:left;
-}
-
-.livro_jogos {
-    margin-top:-231px;
-    float:left;
-} 
-
-.fontes{
-    margin-top:-209px;
-    float:left;
-}
-
 footer{
-    clear:both;
+    background: linear-gradient(236.85deg, white 27.26%, gray 96.03%);
     padding-top:.3em;
 }
-
-@media(max-width: 1024px){
-    nav , .home , .como_usar , .fontes , .historia , .livro_jogos , .possibilidade{
-        width:12%;
+.home, .como_usar , .historia , .possibilidade , .livro_jogos , .fontes{
+    width: 100%;
+    height: 50vh;
+}
+#fonte{
+    height: 68vh;
+    padding-top: 5%;
+}
+#usar{
+    padding: 3%;
+}
+@media(max-width: 950px){
+    .home, .como_usar , .historia , .possibilidade , .livro_jogos , .fontes{
+        height: 100vh;
+    }    
+    #fonte{
+        padding-top: 15%;
     }
-
-    .home{
-        margin-top:-340px;
-    }
-
-    .como_usar {
-        margin-top:-285px;
-    }
-    
-    .historia {
-        margin-top:-298px;
-    }
-    
-    .possibilidade{
-        margin-top:-333px;
-    }
-
-    .livro_jogos {
-        margin-top:-291px;
-    } 
-
-    .fontes{
-        margin-top:-230px;
-    }
-    
-    .imagem{
-        width:87%;
+    #usar{
+        padding-left: 5%;
     }
 }
-
-@media (max-width: 768px){
-    nav{
-        background-color:rgba(0, 0, 0, 0.315);
-        position:absolute;
-        margin-top:-73px;
-        width:100%
+@media(max-width: 450px){
+    body{
+        background-image: linear-gradient(90deg,rgb(63, 60, 60),white);
     }
-    
-    nav ul{
-        margin-right: 0px;
-        float:left;
-        width:100%;
+    main{
+        flex-direction: column;
     }
-
-    nav .logo{
-        padding-left: 30px;
-        width: 100%;
+    nav ul li {
+        font-size: 1.5em;
     }
-
-    nav ul li, nav ul ul li{
-        display: block;
-        width: 100%;
+    main div{
+        display: flex;
+        justify-content: center;
     }
-
-    nav ul ul li{
-        margin-left:1em;
+    .home, .como_usar , .historia , .possibilidade , .livro_jogos , .fontes{
+        height: 58vh;
+        margin-left: 35%;
     }
-
-    nav ul ul{
-        top: 70px;
-        position: static;
-        border-top: none;
-        float: none;
-        display: none;
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .show{
-        display: block;
-        font-size: 18px;
-        padding: 0 20px;
-        line-height: 20px;
-        cursor: pointer;
-        font: bold 1em ariel;
-    }
-
-    .show:hover{
-        color: white;
-    }
-
-    .icon{
-        display: block;
-        color: white;
-        position: absolute;
-        right: 40px;
-        line-height: 70px;
-        font-size: 25px;
-        margin-right:-5.2%;
-        margin-top:-0%;
-        cursor: pointer;
-    }
-
-    nav ul li a{
-        display: block;
-        padding: .1em 0 .1em 1.2em;
-        text-align: left;
-        border: none;
-        width: 125px;
-        background-image: none;
-        color: #ffffff;
-        text-decoration: none;
-        color: #000000;
-        font: bold 1em ariel;
-    }
-    
-    nav ul li a:hover{
-        box-shadow: none;
-    }
-
-    .show + a, ul{
-        display: none;
-    }
-
-    [id^=btn]:checked + ul{
-        display: block;
-    }
-
-    .home , .como_usar , .fontes , .historia , .livro_jogos , .possibilidade{
-        display:none;
-    }
-
     .imagem{
-        width:100%;
-        padding-right:10%;
+        flex-direction: column;
+        margin-left: 5%;
     }
-
-    article{
-        width:90%       
+    .imagem img{
+        padding-bottom: 10%;
     }
-}
-
-@media(max-width: 425px){
     p a{
-        font-size:5em;
+        font-size: 5em;
     }
-
-    .icon{
-        margin-right:-9.5%;
-        margin-top:-.5%
-   }
-
-    nav{
-        margin-top:-42px;
-    }
-
-    .imagem{
-        padding-right:0%;
-    }
-}
-
-@media(max-width: 375px){
-   .icon{
-        margin-right:-10.7%;
-        margin-top:-.5%
-   }
-
-   p a{
-        font-size:4em;
-    }
-
-    nav{
-        margin-top:-38px;
-    }
-}
-
-@media(max-width: 320px){
-   .icon{
-        margin-right:-12.5%;
-        margin-top:-.5%
-   }
-
-    p a{
-        font-size:3em;
-    }
-
-    nav{
-        margin-top:-35px;
+    .ultimo{
+        margin-top: 40px;
     }
 }

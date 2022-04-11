@@ -15,16 +15,25 @@ var listaNomes = ["Yestarday","Arrival","Estrela de Rock"]
 var listaFilmes = ["https://br.web.img2.acsta.net/pictures/19/07/23/20/57/4907896.jpg","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsn9D7UR9oJ7ZpmX2KbK8HDF8r1Rryq1F14g&usqp=CAU", "https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/91/90/98/20169244.jpg"]
 
 listaFilmes.push("https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/95/59/60/20417256.jpg")
-
-//listaFilmes.pop('')
+ 
+listaNomes.push('Harry Potter')
 
 var imagem = document.getElementById("listaFilmes")
 
 function mostrar(){
+    var divFilmes = document.createElement("div")
+
     for(var indice = 0; indice < listaFilmes.length;indice++){
-        imagem.innerHTML += "<a href=''><img src="+listaFilmes[indice]+ " class='img_capa'></a>";
-        //imagem.innerHTML += "<p style='color:white'>"+listaNomes[indice]+"</p>"
+        imagem.innerHTML += "<div><img src="+listaFilmes[indice]+ " class='img_capa'><p style='color:white'>"+listaNomes[indice]+"</p><button class='form-wrappe' onclick='deletar("+indice+")'>Deletar</button></div>"
     }
+    imagem.appendChild(divFilmes)
+}
+
+function deletar(indice){
+    listaFilmes.splice(indice,1)
+    listaNomes.splice(indice,1)
+    imagem.innerHTML = ''
+    mostrar()
 }
 
 mostrar()
@@ -48,6 +57,3 @@ function listarFilmesTela(filme){
     var elementolistaFilmes = document.getElementById("listaFilmes")
     elementolistaFilmes.innerHTML += elementoFilmeFavorito    
 }
-
-//remover filme
-//nome

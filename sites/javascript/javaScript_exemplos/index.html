@@ -14,6 +14,11 @@
         }
     </script>
     <title>JavaScript Exemplos</title>
+    <style>
+        body{
+            background-color: white;
+        }
+    </style>
 </head>
 <body onload="fazPreload()">
     <input type="button" value="Função alerta JavaScript" onclick="alerta()">
@@ -30,7 +35,7 @@
     <hr>
     <input type="button" value="Função criar cookie JavaScript" onclick="criarCookie()">
     <hr>
-    <input type="button" value="Função popup JavaScript" onclick="janelaPopup('https://www.google.com')">
+    <input type="button" value="Função popup JavaScript" onclick="janelaPopup(`https://www.google.com`)">
     <hr>
     <a href="javascript: window.history.back()">Voltar</a>
     <a href="javascript: window.history.forward()">Avançar</a>
@@ -40,7 +45,7 @@
     <a href="#" onmouseover="javascript:imagem.src='../../../img/html_css_javascript.png'">Html Css e javascript</a><br>
     <a href="#" onmouseover="javascript:imagem.src='../../../img/php.png'">Php</a><br>
     <a href="#" onmouseover="javascript:imagem.src='../../../img/react.png'">React</a>
-    <form name="meuFormulario" action="confirmacao.html" onsubmit="return validacao()">
+    <form name="meuFormulario" action="confirmacao.html" onsubmit="validacao()">
         <p>Digite seu email</p>
         <input type="text" name="email">
         <input type="submit" value="Enviar">

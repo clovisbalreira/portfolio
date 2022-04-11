@@ -57,7 +57,7 @@ div.principal main section.form{
 div.principal main  section.form p,div.principal main  section.form label,div.principal main  section.form legend{
     padding: 1%;
 }
-div.principal main section.form button[type=button]{
+div.principal main section.form button{
     background-color: var(--corBotao);
     color: white;
     font-size: 3em;
@@ -66,12 +66,17 @@ div.principal main section.form button[type=button]{
     margin: 0% 1%;
     display: inline-block;
 }
-div.principal main section.form button[type=button]#soma{
-    margin-left: 65px;
+
+div.principal main section.form input[type=number]{
+    background-color: var(--corFundoInput);
+    width: 50px;
+    height: 15px;
+    border-radius: 5px;
+    padding: 2px;
+    margin-top: 20px;
 }
-div.principal main section.form div:hover{
-    background-color: white;
-    color: var(--corBotao);
+.divAdesivos{
+    display: flex;
 }
 .obs{
     display: block;
@@ -131,14 +136,6 @@ div.principal main section#nota-fiscal table tbody tr:nth-child(even){
     border-radius: 5px;
     color: white;
 }
-div.principal main section.form input[type=number]{
-    background-color: var(--corFundoInput);
-    width: 50px;
-    border-radius: 5px;
-    padding: 2px;
-    position: absolute;
-    top:375px
-}
 div.principal main section.form textarea{
     background-color: var(--corFundoInput);
     display: block;
@@ -161,7 +158,7 @@ footer span{
     width: 430px;
     word-wrap: break-word;
 }
-footer button[type=button]{
+footer button{
     background-color: var(--corBotao);
     border: none;
     padding: 5px 10px;
@@ -177,4 +174,20 @@ footer button[type=button]{
     font-size: 1.1em;
     color: black;
     background-color: var(--corFundoPrincipal);
+}
+@media(max-width: 950px){
+    div.principal main section#nota-fiscal{
+        height: 112vh;
+    }
+}
+@media(max-width: 450px){
+    div.principal{
+        width: 420px;
+    }
+    div.principal main section#nota-fiscal{
+        width: 420px;
+    }
+    footer span{
+        width: 280px;
+    }
 }

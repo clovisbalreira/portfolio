@@ -34,7 +34,12 @@ body {
     top: 10px;
     right: 10px;
   }
-  
+  #listaFilmes{
+    display: block;
+  }
+  #listaFilmes div{
+    display: inline-block;
+  }
   #listaFilmes img {
     margin: 10px;
     max-height: 250px;
@@ -50,7 +55,7 @@ body {
     padding: 10px 15px;
   }
   
-  .form-wrapper button {
+  button {
     border: 0;
     color: #ffffff;
     background: #da1e26;
@@ -63,7 +68,7 @@ body {
     transition: 0.3s;
   }
   
-  .form-wrapper button:hover {
+  button:hover {
     opacity: 0.8;
   }
 
@@ -72,4 +77,3 @@ body {
     height: 150px;
     margin: 5px;
   }
-  

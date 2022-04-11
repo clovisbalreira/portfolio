@@ -4,132 +4,45 @@
         <meta charset="UTF-8">
         <title>Portfólio Clóvis Balreira Rodrigues</title>
         <link rel="stylesheet" href="css/estilo.css">
+
     </head>
     <body>
-        <header class="perfil">
+        <header id="perfil">
             <img src="https://github.com/clovisbalreira.png">
-            <h1>Clóvis Balreira Rodrigues</h1>
-            <a href="https://linkedin.com/in/clóvis-balreira-rodrigues-67387039" target="_blank">
-                <img class="header-linkendin" src="img/linkedin.png" alt="Linkedin"></a>
-            <a href="https://github.com/clovisbalreira" target="_blank">
-                <img src="img/github.png" alt="Git Hub"></a>
-            </header> 
+            <div class="perfil">
+                <h1>Clóvis Balreira Rodrigues</h1>
+                <div class="redes">
+                    <a href="https://linkedin.com/in/clóvis-balreira-rodrigues-67387039" target="_blank">
+                        <img class="header-linkendin" src="img/linkedin.png" alt="Linkedin">
+                    </a>
+                    <a href="https://github.com/clovisbalreira" target="_blank">
+                        <img src="img/github.png" alt="Git Hub">
+                    </a>
+                </div>
+            </div>
+            <div class="options">
+                <h3>Escolha a Forma de visualização :</h3>
+                <ul>
+                    <li>
+                        <input id="linguagens" class="escolha" name="escolha" type="radio" value="linguagens" onclick="atualizarVisual()"
+                        checked/><label for="linguagens">Linguagem</label>
+                    </li>
+                    <li>
+                        <input id="tipos" class="escolha" name="escolha" type="radio" value="tipos" onclick="atualizarVisual()"/><label for="tipos">Tipo</label>
+                    </li>
+                    <li>
+                        <input id="modelos" class="escolha" name="escolha" type="radio" value="modelos" onclick="atualizarVisual()"/><label for="modelos">Modelo</label>
+                    </li>
+                    <li>
+                        <input id="projetos" class="escolha" name="escolha" type="radio" value="projetos" onclick="atualizarVisual()"/><label for="projetos">Projeto</label>
+                    </li>
+                </ul>
+            </div>
+            <button id="button" onclick="atualizarEmbed()"></button>
+        </header> 
         <main>
-            <div class="linguagem">
-                <img class="sombra foto" src="img/html_css_javascript.png" alt="Html Css JavaScript">
-                <nav>
-                    <ul>
-                        <li><a href="sites/html_css_javascript/alura_imersao_html/index.html" target="_blank">Imersão Dev - Alura</a></li>
-                        <li><a href="sites/html_css_javascript/recriando_interface_netflix/index.html" target="_blank">Interface Netflix</a></li>
-                        <li><a href="sites/html_css_javascript/desafio-bemPaggo/index.html" target="_blank">Desafio BemPaggo</a></li>
-                        <li><a href="sites/html_css_javascript/curso_em_video_html_css_javascript/index.html" target="_blank">Modelo do curso em video </a></li>
-                        <li><a href="sites/html_css_javascript/realidade_aumentada/index.html" target="_blank">Realidade Aumentada</a></li>
-                        <li><a href="sites/html_css_javascript/restaurante/index.html" target="_blank">Restaurante</a></li>
-                        <li><a href="sites/html_css_javascript/jogo_cobra/index.html" target="_blank">Jogo Cobrinha</a></li>
-                        <li><a href="sites/html_css_javascript/jogo_naves/index.html" target="_blank">Jogo naves</a></li>
-                        <li><a href="sites/html_css_javascript/jogo_genius/index.html" target="_blank">Jogo Genius</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="linguagem">
-                <img class="sombra foto" src="img/html_css.png" alt="Html Css">
-                <nav>
-                    <ul>
-                        <li><a href="sites/html_css/apresentacao/index.html" target="_blank">Apresentação</a></li>
-                        <li><a href="sites/html_css/bootstrap/" target="_blank">Bootstrap</a></li>
-                        <li><a href="sites/html_css/projeto_dio/index.html" target="_blank">Projeto Dio</a></li>
-                        <li><a href="sites/html_css/pagina_capa_instagram/index.html" target="_blank">Projeto capa instagram</a></li>
-                        <li><a href="sites/html_css/seguranca_de_ti/index.html" target="_blank">Segurança de T.I.</a></li>
-                        <li><a href="sites/html_css/tag/index.html" target="_blank">Tags basicas</a></li>
-                        <li><a href="sites/html_css/curso_em_video/index.html" target="_blank">Modelo curso em video</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="linguagem">
-                <img class="sombra foto" src="img/javascript.png" alt="JavaScript Html Css">
-                <nav>
-                    <ul>
-                        <li><a href="sites/javascript/array_javascript/index.html" target="_blank">Array JavaScript</a></li>
-                        <li><a href="sites/javascript/javascript_dom/" target="_blank">JavaScript Dom</a></li>
-                        <li><a href="sites/javascript/curso_em_video/index.html" target="_blank">Modelo do curso em video</a></li>
-                        <li><a href="sites/javascript/map_filter_reduce/index.html" target="_blank">Map filter reduce</a></li>
-                        <li><a href="sites/javascript/javaScript_exemplos/index.html" target="_blank">JavaScript Exemplos</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="linguagem">
-                <img class="sombra" src="img/php.png" alt="Php">
-                <nav>
-                    <ul>
-                        <li><a href="http://lucfm.000webhostapp.com/" target="_blank">Clube</a></li>
-                        <li><a href="https://clovis-estudonauta.000webhostapp.com/" target="_blank">Modelo Estudonauta</a></li>
-                        <!--<li><a href="https://php-clovis.000webhostapp.com/php-carrinho-neri/" target="_blank">Modelo Informaticon</a></li>-->
-                    </ul>
-                </nav>
-            </div>
-            <div class="linguagem">
-                <img class="sombra" src="img/react.png" alt="React">
-                <nav>
-                    <ul>
-                        <li><a href="https://aluracord-matrixchat.vercel.app/" target="_blank">Imersão React Alura - AluraCord - Matrix Cord</a></li>
-                        <li><a href="https://lista-tarefas-flame.vercel.app/" target="_blank">Lista de Tarefas</a></li>
-                        <li><a href="https://sistema-financeiro-gold.vercel.app/" target="_blank">Sistema Financeiro</a></li>
-                        <!--<li><a href="https://galeria-three.vercel.app/" target="_blank">Galeria</a></li>-->
-                    </ul>
-                </nav>
-            </div>
-            <div class="linguagem">
-                <img class="sombra" src="img/wordpress.jpg" alt="Imagem">
-                <nav>
-                    <ul>
-                        <li><a href="https://github.com/clovisbalreira/wordpress/tree/main/CursoEmVideo" target="_blank">Modelo curso em video - pizzaria fresco</a></li>
-                        <li><a href="https://github.com/clovisbalreira/wordpress/tree/main/Cns" target="_blank">Rádio modelo 001</a></li>
-                        <li><a href="https://github.com/clovisbalreira/wordpress/tree/main/Cns%20v2.0" target="_blank">Rádio modelo 002</a></li>
-                        <li><a href="https://github.com/clovisbalreira/wordpress/tree/main/Cns%20v3.0" target="_blank">Rádio modelo 003</a></li>
-                        <li><a href="https://github.com/clovisbalreira/wordpress/tree/main/malura" target="_blank">Tema Malura - ( Alura )</a></li>
-                        <li><a href="https://github.com/clovisbalreira/wordpress/tree/main/alura-intercambios" target="_blank">Tema Intercambios - ( Alura )</a></li>
-                        <li><a href="https://github.com/clovisbalreira/wordpress/tree/main/desafio-wp" target="_blank">Desafio wp</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="linguagem">
-                <img class="sombra" src="img/java.png" alt="Java">
-                <nav>
-                    <ul>
-                        <!--<li><a href="https://github.com/clovisbalreira/curso_em_video_java_basico" target="_blank">Curso em video java</a></li>-->
-                        <li><a href="https://github.com/clovisbalreira/java/tree/main/curso_em_video_java_poo" target="_blank">Curso em video java poo</a></li>
-                        <li><a href="https://github.com/clovisbalreira/java/tree/main/locadora" target="_blank">Locadora</a></li>
-                        <li><a href="https://github.com/clovisbalreira/java/tree/main/locadora" target="_blank">Digital Innovation</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="linguagem">
-                <img class="sombra" src="img/flutter.png" alt="Flutter">
-                <nav>
-                    <ul>
-                        <li><a href="https://github.com/clovisbalreira/flutter/tree/main/cartaoFlutter" target="_blank">Cartao Flutter</a></li>
-                        <li><a href="https://github.com/clovisbalreira/flutter/tree/main/Pokemon" target="_blank">Pokemon</a></li>
-                        <li><a href="https://github.com/clovisbalreira/flutter/tree/main/app_filmes" target="_blank">App Filmes</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="linguagem">
-                <img class="sombra" src="img/python.png" alt="Python">
-                <nav>
-                    <ul>
-                        <li><a href="https://github.com/clovisbalreira/python/tree/main/cursos-python-web" target="_blank">Exemplo Site</a></li>
-                        <li><a href="https://github.com/clovisbalreira/python/tree/main/curso_dio_python" target="_blank">Digital Innovation</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="linguagem">
-                <img class="sombra" src="img/arquivo.jpg" alt="Imagem">
-                <nav>
-                    <ul>
-                        <li><a href="sites/imagens/index.html" target="_blank">Exemplo de folhetos</a></li>
-                    </ul>
-                </nav>
-            </div>
+            <nav></nav>
+            <section id="mostrarSites"></section>
         </main>
         <footer>
             <a href="https://linkedin.com/in/clóvis-balreira-rodrigues-67387039" target="_blank">
@@ -140,4 +53,5 @@
             </a>
         </footer>
     </body>
+    <script src="js/js.js"></script>
 </html>

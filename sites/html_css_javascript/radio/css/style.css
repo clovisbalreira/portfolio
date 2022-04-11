@@ -306,7 +306,7 @@ footer ul li a img{
 
 #div-playlist ~ .box-playlist{
     top: 10px;
-    transition: all.3s;
+    transition: all .3s;
     transition-delay: .2s;
 }
 
@@ -339,76 +339,76 @@ footer ul li a img{
     opacity: .8;
 }
 
-@media(max-width: 1232px){
-    header{
-        height: 450px;
+@media(max-width: 950px){
+    header nav{
+        width: 100%;
     }
-
     header nav ul{
-        columns: 2;
+        columns: 3;
     }
     header nav ul li{
-        padding: 3%;
+        padding-bottom: 20px;
     }
-
+    header div.deezer, header div.playlistDeezer{
+        bottom: 0px;
+    }
     header div.deezer{
-        padding-top: 240px;
+        padding-top: 160px;
         padding-left: 60%;
     }
-
-    header div.playlistDeezer{
-        padding-left: 74%;
-    }
     
-    section#home ul.ul-links, section#home ul.ul-redes{
-        columns: 1;
-    }
-
+    header div.playlistDeezer{
+        padding-left: 80%;
+    }   
     section#home ul.ul-redes{
-        padding: 5% 25%;
-    }
-
-    section#home ul.ul-redes li{
-        margin-top: 5%;
-    }
-    
-    section#home ul.ul-links li div img{
-        width: 7%;
-    }    
-
-    section#redes-sociais a img{
-        width: 7%;
-    }    
-}
-
-@media(max-width: 1050px){
-    header{
-        height: 435px;
-    }
-
-    header div.deezer{
-        padding-left: 40%;
-    }
-    
-    header div.playlistDeezer{
-        padding-left: 62%;
-    }    
-    
-    footer ul{
         columns: 1;
+        margin-left: 25%;
+        width: 80%;
+    }
+    section#home ul.ul-redes li{
+        padding-bottom: 20px;
+        margin-top: 20px;
     }
 }
-@media(max-width: 500px){
-    header img{
-        width: 40%;
+@media(max-width: 450px){
+    header{
+        height: 40vh;
     }
-
+    header nav{
+        display: none
+    }
+    header div.deezer, header div.playlistDeezer{
+        bottom: 0px;
+    }
     header div.deezer{
-        padding-left: 24%;
+        padding-top: 10px;
+        padding-left: 20%;
     }
-
     header div.playlistDeezer{
-        padding-left: 62%;
-    }    
-
+        padding-left: 60%;
+    }   
+    section{
+        width: 90%;
+        margin-left: 5%;
+    }
+    section#home ul.ul-links{
+        columns: 1;
+        text-align: center;
+    }
+    section#home ul.ul-redes{
+        columns: 1;
+        margin-left: 5%;
+    }
+    section#home ul.ul-redes li:nth-child(1),section#home ul.ul-redes li:nth-child(3){
+        padding-left: 10%;
+    }
+    section#fale-conosco{
+        width: 90%;
+        margin-left: 5%;
+    }
+    section#cns-news table{
+        margin-left: -10px;
+        width: 50%;
+    }
 }
+

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>#7DaysOfCode - 3º Dia</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    label{
+
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+      <h1>#7DaysOfCode - 3º Dia</h1>
+      <p>Eu quero que você trabalhe com estruturas de controle de fluxo. Esse jeito complicado de falar só quer dizer que, assim como nos jogos, a história que você montar precisa se adaptar às respostas dadas por quem está jogando.</p>
+      <p>Para isso, você vai precisar de algumas estruturas capazes de alterar o fluxo da aplicação, como for, while, if e else. Todas essas conseguem cumprir esse objetivo, dada uma certa condição.</p>
+      <p>O if e o else, que eu já te mostrei nos últimos dias, são capazes de criar ramificações dentro da aplicação para que seja tomada uma ou outra ação, dependendo da condição fornecida.</p>
+      <p>Os loops (como for e while) são capazes de fazer uma tarefa repetitiva se transformar em poucas linhas de código, independente de quantas vezes você precisar repetir aquela tarefa.</p>
+      <p>Seu desafio de hoje é criar os destinos possíveis de um jogo, em que o usuário consiga escolher:</p>
+      <ul>
+        <li>1. Se quer seguir para área de Front-End ou seguir para a área de Back-End.</li>
+        <li>2. Caso esteja na área de Front-End, se quer aprender React ou aprender Vue. Caso esteja na área de Back-End, poderá aprender C# ou aprender Java.</li>
+        <li>3. Depois, independente das escolhas anteriores, o usuário poderá escolher entre seguir se especializando na área escolhida ou seguir se desenvolvendo para se tornar Fullstack. Você deve exibir na tela uma mensagem específica para cada escolha.</li>
+        <li>4. Por fim, pergunte quais são as tecnologias nas quais a pessoa gostaria de se especializar ou de conhecer. Aqui, a pessoa pode responder N tecnologias, uma de cada vez. Então, enquanto ela continuar respondendo ok para a pergunta: "Tem mais alguma tecnologia que você gostaria de aprender?", continue apresentando para ela o Prompt, para que ela complete o nome da tecnologia em questão. E, logo depois, apresente uma mensagem comentando algo sobre a linguagem inserida.</li>
+      </ul>
+      <p>O importante é que a pessoa que estiver jogando possa sempre escolher qual decisão tomar para conseguir aprender e se desenvolver na área de programação.</p>
+      <p>Além disso, também é essencial que, ao final do jogo, ela possa inserir quantas tecnologias quiser na lista de aprendizado.</p>
+      <h2>DICA</h2>
+      <p>Já deu pra ter uma ideia de como fazer toda essa historinha acontecer, né? Principalmente lembrando como utilizar as estruturas condicionais e loops em Javascript!</p>
+      <p>Caso você ainda não saiba como imprimir e receber valores nas páginas web com HTML e CSS, você poderá usar console.log, prompt e alert para desenvolver o seu jogo, como você já viu nos últimos dias.</p>
+      <p>Lembre-se que você pode sempre personalizar o jogo da forma que quiser.</p>
+      <h2>EXTRA</h2>
+      <p>Você já viu estruturas condicionais em Javascript anteriormente, mas vou recapitular. O if é usado para verificar se uma determinada condição é verdadeira.</p>
+      <p>Exemplo:</p>
+      <p>if (cidade === "Roma"){</p>
+          <p>// mostre a foto do "Coliseu"</p>
+      <p>}</p>
+      <p>Além disso, ele também pode ser usado com um ou vários else if, que irá saber que a condição anterior era falsa e vai verificar se a atual é verdadeira.</p>
+      <p>Por fim, existe o else sozinho, sem nenhuma condição, e o código dentro dele será executado sempre que todas as condições encadeadas anteriormente forem falsas.</p>
+      <p>if (cidade === "Roma"){</p>
+          <p>// mostre a foto do "Coliseu"</p>
+      <p>}</p>
+      <p>else if (cidade === "Paris"){</p>
+          <p>// mostre a foto do "Torre Eiffel"</p>
+      <p>}</p>
+      <p>else {</p>
+          <p>// dê a resposta "Você não digitou nenhuma cidade válida"</p>
+      <p>}</p>
+      <p>Além disso, para a parte 4, você precisará de uma estrutura de repetição (loop) como o while. Para usá-lo, é bem fácil:</p>
+      <p>let idade = 0;</p>
+      <p>while (idade < 8) {</p>
+          <p>// algum comando para imprimir a idade</p>
+          <p>idade = idade + 1;</p>
+      <p>}</p>
+      <p>Esse código começará com a idade em zero e, ao entrar no while, esse valor será impresso e, logo depois, incrementado em 1.</p>
+      <p>Ou seja, depois da primeira vez que ele passar, o valor da idade será igual a 1, que é menor que 8, e por isso, a condição do while terá um resultado verdadeiro e ele continuará a ser executado.</p>
+      <p>Ele só vai parar quando o valor da variável idade chegar a 8, que não é menor que 8, e por isso a condição do while terá um resultado falso.</p>
+      </section>
+    <article>
+      <h1>Escolha qual área você quer se especializar?</h1>
+      <input type="radio" name="linguagem" id="frontend" value="Front-End" class="inputRadio" onclick="escolhaLinguagem()">
+      <label for="frontend">Front-End</label>
+      <input type="radio" name="linguagem" id="backend" class="inputRadio" value="Back-End" onclick="escolhaLinguagem() ">
+      <label for="backend">Back-End</label>
+      <div id="especializar"></div>
+    </article>
+  </main>
+</body>
+<script>
+  var especializar = document.getElementById('especializar')
+  var linguagemFrontEnd = ['React','Vue']
+  var linguagemBackEnd = ['C#','Java']
+  function escolhaLinguagem(){
+    var radio = document.querySelectorAll('.inputRadio')
+    for(var i = 0; i < radio.length;i++){
+      if(radio[i].checked){
+        var valor = radio[i].value
+        if(valor == 'Front-End'){
+          especializacao(valor)
+        }else if(valor == 'Back-End'){
+          especializacao(valor)
+        }  
+      }
+    }  
+  }
+  function especializacao(resposta){
+    var p = document.createElement('p')
+    p.textContent = `Você quer se especializar na area ${resposta}`
+    especializar.appendChild(p)
+
+    var h2 = document.createElement('h2')
+    h2.textContent = 'Qual linguagem você quer apreender?'
+    especializar.appendChild(h2)
+    if(resposta == 'Front-End'){
+        listaInput(linguagemFrontEnd,'radio', 'frontend', 'rfrontend', 'rfrontend', 'frontend()')
+    }else{
+      listaInput(linguagemBackEnd,'radio', 'backend', 'rbackend', 'rbackend', 'backend()')
+    }
+  }
+  function listaInput(array, tipo, nome, id, classe, clicar, funcao){
+    for(var i = 0; i < array.length;i++){
+        criarInput(tipo, nome, id, array[i], classe, clicar, array[i])
+      }
+  }
+  function criarInput(tipo, nome, id, valor, classe, clicar, labelValor){
+    var input = document.createElement('input')
+    input.setAttribute('type',tipo)
+    input.setAttribute('name',nome)
+    input.setAttribute('id',id)
+    input.setAttribute('value',valor)
+    input.setAttribute('class',classe)
+    input.setAttribute('onclick',clicar)
+    var label = document.createElement('label')
+    label.innerHTML = labelValor
+    label.setAttribute('for',id)
+    especializar.appendChild(input)
+    especializar.appendChild(label)
+  }
+</script>
+</html>

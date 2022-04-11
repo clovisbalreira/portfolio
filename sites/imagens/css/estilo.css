@@ -4,10 +4,13 @@ body{
     background-color: gray;
 }
 
-h1 , p {
+h1 , h2 {
     text-align:center;
 }
-
+main{
+    display: flex;
+    flex-direction: column;
+}
 .folder{
     width:33%;
 }

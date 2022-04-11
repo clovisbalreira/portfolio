@@ -41,10 +41,10 @@ h2 {
     display: flex;
     align-items: flex-end;
     position: relative;
-    background-size: 350px 300px;
+    background-size: 250px 200px;
     background-repeat: no-repeat;
-    background-position-x: 5px;
-    background-position-y: 10px;
+    background-position-x: 55px;
+    background-position-y: 67px;
     border-radius: 33px;
 }
 
@@ -116,4 +116,19 @@ form {
 
 .carta-status p {
     margin-bottom: 2rem;
+}
+
+#opcoes{
+    width: 250%;
+    padding-bottom: 5px;
+}
+
+@media(max-width: 450px){
+    .wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .page-logo{
+        width: 50%;
+    }
 }
