@@ -7,8 +7,18 @@
   <title>#7DaysOfCode - 3º Dia</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
-    label{
-
+    h2,h3{
+      margin: 10px 0;
+    }
+    div{
+      padding: 5px 0 ;
+    }
+    button{
+      margin-right: 30px;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      background-color: rgba(128, 128, 128, 0.61);
     }
   </style>
 </head>
@@ -61,11 +71,15 @@
       <p>Ele só vai parar quando o valor da variável idade chegar a 8, que não é menor que 8, e por isso a condição do while terá um resultado falso.</p>
       </section>
     <article>
-      <h1>Escolha qual área você quer se especializar?</h1>
-      <input type="radio" name="linguagem" id="frontend" value="Front-End" class="inputRadio" onclick="escolhaLinguagem()">
-      <label for="frontend">Front-End</label>
-      <input type="radio" name="linguagem" id="backend" class="inputRadio" value="Back-End" onclick="escolhaLinguagem() ">
-      <label for="backend">Back-End</label>
+      <h2>Escolha qual área você quer se especializar?</h2>
+      <div>
+        <input type="radio" name="linguagem" id="frontend" value="Front-End" class="inputRadio" onclick="escolhaLinguagem()">
+        <label for="frontend">Front-End</label>
+      </div>
+      <div>
+        <input type="radio" name="linguagem" id="backend" class="inputRadio" value="Back-End" onclick="escolhaLinguagem()">
+        <label for="backend">Back-End</label>
+      </div>
       <div id="especializar"></div>
     </article>
   </main>
@@ -74,39 +88,46 @@
   var especializar = document.getElementById('especializar')
   var linguagemFrontEnd = ['React','Vue']
   var linguagemBackEnd = ['C#','Java']
+  var especializacaoResposta = ''
+  var linguagemResposta = ''
+  var resposta = ''
   function escolhaLinguagem(){
     var radio = document.querySelectorAll('.inputRadio')
     for(var i = 0; i < radio.length;i++){
       if(radio[i].checked){
-        var valor = radio[i].value
-        if(valor == 'Front-End'){
-          especializacao(valor)
-        }else if(valor == 'Back-End'){
-          especializacao(valor)
+        especializacaoResposta = radio[i].value
+        if(especializacaoResposta == 'Front-End'){
+          especializacao()
+        }else if(especializacaoResposta == 'Back-End'){
+          especializacao()
         }  
       }
     }  
   }
-  function especializacao(resposta){
+  function especializacao(){
     var p = document.createElement('p')
-    p.textContent = `Você quer se especializar na area ${resposta}`
+    p.setAttribute('id','especializar')
+    var apagar = document.getElementById('especializar')
+    apagar.innerHTML = ''
+    p.textContent = `Você quer se especializar na area ${especializacaoResposta}`
     especializar.appendChild(p)
-
     var h2 = document.createElement('h2')
     h2.textContent = 'Qual linguagem você quer apreender?'
     especializar.appendChild(h2)
-    if(resposta == 'Front-End'){
-        listaInput(linguagemFrontEnd,'radio', 'frontend', 'rfrontend', 'rfrontend', 'frontend()')
-    }else{
-      listaInput(linguagemBackEnd,'radio', 'backend', 'rbackend', 'rbackend', 'backend()')
-    }
+    if(especializacaoResposta == 'Front-End'){
+        listaInput(linguagemFrontEnd,'radio', 'apreender', 'apreender', 'apreender', 'apreender()')
+    }else if(especializacaoResposta == 'Back-End'){
+       listaInput(linguagemBackEnd,'radio', 'apreender', 'apreender', 'apreender', 'apreender()')
+    }    
   }
+
   function listaInput(array, tipo, nome, id, classe, clicar, funcao){
     for(var i = 0; i < array.length;i++){
-        criarInput(tipo, nome, id, array[i], classe, clicar, array[i])
+        criarInputRadio(tipo, nome, id, array[i], classe, clicar, array[i])
       }
   }
-  function criarInput(tipo, nome, id, valor, classe, clicar, labelValor){
+  function criarInputRadio(tipo, nome, id, valor, classe, clicar, labelValor){
+    var div = document.createElement('div')
     var input = document.createElement('input')
     input.setAttribute('type',tipo)
     input.setAttribute('name',nome)
@@ -117,8 +138,124 @@
     var label = document.createElement('label')
     label.innerHTML = labelValor
     label.setAttribute('for',id)
-    especializar.appendChild(input)
-    especializar.appendChild(label)
+    div.appendChild(input)
+    div.appendChild(label)
+    especializar.appendChild(div)
+  }
+
+  function apreender(){
+    var p = document.createElement('p')
+    p.setAttribute('id','apreender')
+    var apagar = document.getElementById('apreender')
+    apagar.innerHTML = ''
+    var radio = document.querySelectorAll('.apreender')
+    for(var i = 0; i < radio.length;i++){
+      if(radio[i].checked){
+        linguagemResposta = radio[i].value
+      }
+      radio[i].setAttribute('disabled','true')
+    }
+    p.textContent = `Você quer apreender a linguagem ${linguagemResposta}`
+    especializar.appendChild(p)
+    respostaEspecializacao()
+  }
+
+  function respostaEspecializacao(){
+    var h2 = document.createElement('h2')
+    h2.innerHTML = `Você quer se aperfeiçoar em ${especializacaoResposta} ou ser especialista em fullStack?`
+    especializar.appendChild(h2)
+    criarInputRadio('radio', 'resposta', 'resposta', 'Sim', 'resposta', 'respostaFinal()', 'Sim')
+    criarInputRadio('radio', 'resposta', 'resposta', 'Não', 'resposta', 'respostaFinal()', 'Não')
+  }
+  function respostaFinal(){
+    var p = document.createElement('p')
+    p.textContent = `Você quer apreender ${especializacaoResposta} na linguagem ${linguagemResposta} e depois se especializar `
+    var input = document.querySelectorAll('.resposta')
+    for( var i = 0;i < input.length;i++){
+      if(input[i].checked){
+        resposta = input[i].value
+      }
+      input[i].setAttribute('disabled','true')
+    }
+    if(resposta == 'Sim'){
+      p.textContent += `Fullstack`
+    }else{
+      p.textContent += `mais em ${especializacaoResposta}`
+    }
+    especializar.appendChild(p)
+
+    adicionarLinguagem()
+  }
+  function adicionarLinguagem(){
+    var h2 = document.createElement('h2')
+    h2.textContent = 'Tem mais alguma tecnologia que você gostaria de aprender?'
+    especializar.appendChild(h2)
+    adicionarSelect()
+    adicionarInputText()
+    criarBotao('Adicionar')
+    criarBotao('Resetar')
+  }
+  function adicionarInputText(){
+    var div = document.createElement('div')
+    var label = document.createElement('label')
+    label.innerHTML = 'Nome da linguagem : '
+    label.setAttribute('for','addlinguagem')
+    var input = document.createElement('input')
+    input.setAttribute('type','text')
+    input.setAttribute('name','addlinguagem')
+    input.setAttribute('id','addlinguagem')
+    input.setAttribute('placeholder','Adicionar a linguagem')
+    input.setAttribute('class','addlinguagem')
+    div.appendChild(label)
+    div.appendChild(input)
+    especializar.appendChild(div)
+  }
+  function adicionarSelect(){
+    var div = document.createElement('div')
+    var label = document.createElement('label')
+    label.setAttribute('for','especializacao')
+    label.textContent = 'Selecione a especialização : '
+    div.appendChild(label)
+    var select = document.createElement('select')
+    select.setAttribute('id','especializacao')
+    select.setAttribute('name','especializacao')
+    var option = document.createElement('option')
+    option.setAttribute('value','frontend')
+    option.textContent = 'Front-End'
+    select.appendChild(option)
+    var option1 = document.createElement('option')
+    option1.setAttribute('value','backend')
+    option1.textContent = 'Back-End'
+    select.appendChild(option1)
+    div.appendChild(select)
+    especializar.appendChild(div)
+  }
+  function criarBotao(nome){
+    var botao = document.createElement('button')
+    botao.textContent = nome
+    if(nome == 'Resetar'){
+      botao.setAttribute('onclick', 'botaoResetar()')
+    }else if(nome == 'Adicionar'){
+      botao.setAttribute('onclick', 'botaoAdicionar()')
+    } 
+    especializar.appendChild(botao)
+  }
+  function botaoAdicionar(){
+    var nomeespecializacao = ''
+    var select = document.getElementById('especializacao')
+    var valor = select.value
+    var linguagem = document.getElementById('addlinguagem')
+    if(linguagem.value != ''){
+      if(valor == 'frontend'){
+        linguagemFrontEnd.push(linguagem.value)
+      }else(
+        linguagemBackEnd.push(linguagem.value)
+      )
+      linguagem.value = ''
+    }
+  }
+  function botaoResetar(){
+    especializar.innerHTML = ''
   }
 </script>
 </html>

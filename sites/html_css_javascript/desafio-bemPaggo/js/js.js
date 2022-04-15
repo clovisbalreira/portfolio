@@ -120,6 +120,7 @@ function mensagemInvalida() {
 }
 
 function recusarCompra(){
+    resetarCampos()
     nota.style.display = 'none'
     mensagemFinal = '<strong>Compra Recusada.</strong>'
     mensagemFinal += '<p>Obrigado pela preferência.</p>'
@@ -128,6 +129,7 @@ function recusarCompra(){
 }
 
 function confirmarCompra(){
+    resetarCampos()
     nota.style.display = 'none'
     mensagemFinal = '<strong>Compra confirma com sucesso.</strong>'
     mensagemFinal += '<p>Obrigado pela preferência.</p>'
@@ -136,8 +138,9 @@ function confirmarCompra(){
 }
 
 function resetarCampos(){
-    for(var i = 0; i < nomeAdesivo.length; i++){
-        nomesAdesivo[1].checked = false
+    console.log('ola')
+    for(var i = 0; i < nomesAdesivo.length; i++){
+        nomesAdesivo[i].checked = false
     }
     quantidade.value = 0
     observacao.value = ''

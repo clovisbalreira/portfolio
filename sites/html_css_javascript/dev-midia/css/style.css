@@ -268,6 +268,12 @@ footer div{
     }
 }
 @media(max-width: 450px){
+    header section.logo span:nth-child(1){
+        width: 20%;
+    }
+    header section.logo span input{
+        width: 90%;
+    }
     header section.principal div.sectionPrincipal{
         padding-top: 20%;
     }
