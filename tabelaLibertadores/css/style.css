@@ -1,0 +1,63 @@
+:root{
+    --degrade: linear-gradient(90deg, #000000 5%,  #FAD163 33% 66% , #000000 95%) 1;
+}
+
+body{
+    background-image: url('../img/libertadores.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    color: white;
+}
+table{
+    width: 30%;
+    border-collapse: collapse;
+    background-color: rgba(0, 0, 0, 0.712);
+    margin: 10px;
+}
+caption{
+    background-color: rgba(0, 0, 0, 0.712);
+    font-size: 1.5em;
+    padding: .5em 0;
+}
+table thead tr th{
+    padding: .5em;
+    font-size: .8em;
+}
+table tbody tr td:nth-child(2){
+    width: 20px;
+}
+table tbody tr td:nth-child(3){
+    text-align: left;
+}
+caption ,table thead tr th, table tbody tr td{
+    border-bottom: 3px solid #FAD163;     
+    border-image: var(--degrade);
+    text-align: center;
+}
+.c-1{
+    width: 5%;
+}
+.foto{
+    margin: 0px;
+    width: 30px;
+}
+.grupos{
+    display: flex;
+    justify-content: space-around;
+}
+#jogos table{
+    width: 100%;
+}
+#jogos table caption {
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: .05em;
+}
+#jogos table tr td {
+    width: 35px;
+    text-align: center;
+}
+#jogos table input {
+    width: 30px;
+}
