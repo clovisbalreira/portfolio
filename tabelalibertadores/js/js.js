@@ -99,7 +99,7 @@ function mostrarRodadas(){
             elemento += `<tr>`
             elemento += `<td>${jogos[i].mesa}</td>`
             elemento += `<td>${jogos[i].hora}</td>`
-            elemento += `<td><img src='${jogos[i].fotoCasa}'></td>`
+            elemento += `<td><img style='width:30px' src='${jogos[i].fotoCasa}'></td>`
             elemento += `<td>${jogos[i].timeCasa}</td>`
             elemento += `<td><input style='display:none' id='gc${jogos[i].rodada}${jogos[i].jogo}' type='number' min='0' onkeyup='resultadoJogos(this)' onclick='resultadoJogos(this)'></td>`
             elemento += `<td>${jogos[i].golsCasa}</td>`
@@ -107,7 +107,7 @@ function mostrarRodadas(){
             elemento += `<td>${jogos[i].golsFora}</td>`
             elemento += `<td><input style='display:none'id='gf${jogos[i].rodada}${jogos[i].jogo}' type='number' min='0' onkeyup='resultadoJogos(this)' onclick='resultadoJogos(this)'></td>`
             elemento += `<td>${jogos[i].timeFora}</td>`
-            elemento += `<td><img src='${jogos[i].fotoFora}'></td>`
+            elemento += `<td><img style='width:30px' src='${jogos[i].fotoFora}'></td>`
             ultimo = jogos[i].rodada
             if(ultimo != jogos[i].rodada){
                 elemento += `</table>`

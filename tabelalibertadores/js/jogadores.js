@@ -1,8 +1,8 @@
 var jogadores = [
-    {grupo : "A",tecnico: "Cesar Motta",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
-    {grupo : "A",tecnico: "Rodrigo",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
-    {grupo : "A",tecnico: "Fábio Fontes",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
-    {grupo : "A",tecnico: "Dirceu",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "A",tecnico: "Cesar Motta",foto: "https://logodetimes.com/times/sao-paulo/logo-sao-paulo-256.png",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "A",tecnico: "Rodrigo",foto: "https://logodetimes.com/times/estudiantes-de-la-plata/estudiantes-de-la-plata-256.png",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "A",tecnico: "Fábio Fontes",foto: "https://logodetimes.com/times/cruzeiro/logo-cruzeiro-256.png",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "A",tecnico: "Dirceu",foto: "https://logodetimes.com/times/talleres/logo-talleres-256.png",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
     {grupo : "B",tecnico: "Claúdio",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
     {grupo : "B",tecnico: "André Schimidt",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
     {grupo : "B",tecnico: "Régis",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
