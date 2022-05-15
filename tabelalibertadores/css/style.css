@@ -175,10 +175,29 @@ footer{
     #sulAmericana, #libertadores{
         flex-direction: column;
     }
+    #quartasSulAmericanaEsquerda, #quartasSulAmericanaDireita,     #semiSulAmericanaDireita, #semiLibertadoresDireita,#quartasLibertadoresEsquerda, #quartasLibertadoresDireita,
+    #semiSulAmericanaEsquerda, #semiLibertadoresEsquerda, #semiSulAmericanaDireita, #semiLibertadoresDireita{
+        width: 100%;
+    }
+    #finalSulAmericana, #finalLibertadores{
+        width: 110%;
+    }
+    #quartasSulAmericanaEsquerda div, #quartasSulAmericanaDireita div, #semiSulAmericanaDireita div, #semiLibertadoresDireita div,#quartasLibertadoresEsquerda div, #quartasLibertadoresDireita div,#semiSulAmericanaEsquerda div, #semiLibertadoresEsquerda div, 
+    #finalSulAmericana div div, #finalLibertadores div div{
+        background-color: rgba(255, 255, 255, 0.103);
+        padding: 15px;
+    }
+    #quartasSulAmericanaEsquerda div, #quartasSulAmericanaDireita div, #semiSulAmericanaDireita div, #semiLibertadoresDireita div,#quartasLibertadoresEsquerda div, #quartasLibertadoresDireita div{
+        width: 50%;
+    }
+    #semiSulAmericanaEsquerda div, #semiLibertadoresEsquerda div{
+        width: 100%;
+    }
     #semiSulAmericanaEsquerda div, #semiLibertadoresEsquerda div, #semiSulAmericanaDireita div, #semiLibertadoresDireita div{
         margin-bottom: 20px;
     }
     #finalSulAmericana div, #finalLibertadores div{
+        width: 93%;
         flex-direction: column;
         margin-top: 5px;
     }
@@ -217,7 +236,7 @@ footer{
         width: 100%;
     }
     .gruposCelular{
-        margin-left: 0;
+        margin-left: -3%;
     }
     .gruposCelular table thead tr th:nth-child(6), .gruposCelular table tbody tr td:nth-child(6), .gruposCelular table tr th:nth-child(7),
     .gruposCelular table tr td:nth-child(7){
@@ -226,24 +245,7 @@ footer{
     caption{
         width: 90%;
     }
-    #quartasSulAmericanaEsquerda div, #quartasSulAmericanaDireita div,     #semiSulAmericanaDireita div, #semiLibertadoresDireita div,#quartasLibertadoresEsquerda div, #quartasLibertadoresDireita div,#semiSulAmericanaEsquerda div, #semiLibertadoresEsquerda div, 
-    #finalSulAmericana div div, 
-    #finalLibertadores div div{
-        background-color: rgba(255, 255, 255, 0.103);
-        padding: 15px;
-    }
 
-    #quartasSulAmericanaEsquerda div, #quartasSulAmericanaDireita div,     #semiSulAmericanaDireita div, #semiLibertadoresDireita div,#quartasLibertadoresEsquerda div, #quartasLibertadoresDireita div{
-        width: 50%;
-    }
-    #semiSulAmericanaEsquerda div, #semiLibertadoresEsquerda div{
-        width: 140%;
-    }
-    #finalSulAmericana div, 
-    #finalLibertadores div{
-        width: 105%;
-        margin-right: 35px;
-    }
     #jogos table{
         width: 90%;
         margin-left: 5%;

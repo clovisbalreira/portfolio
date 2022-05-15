@@ -157,7 +157,6 @@ function mostrarFinal(){
 function eliminatorias(id, jogo){
     div = document.getElementById(id)
     largura = window.innerWidth
-    console.log(largura)
     if((jogo.rodada == 1 && (jogo.fase == 'Quartas de Final' || jogo.fase == 'Final')) || 
         (jogo.rodada == 5 && (jogo.fase == 'Final' || jogo.fase == 'Quartas de Final')) || 
         (jogo.rodada == 5 && jogo.fase == 'Semi Final' && largura > 700) || 
