@@ -151,8 +151,12 @@ label{
         flex-direction: column;
         align-items: center;
     }
+    .grupos div{
+        width: 100%;
+    }
     .grupos div table{
         width: 100%;
+        margin-left: 40px;        
     }
     #celular{
         align-items: center;
@@ -199,7 +203,29 @@ label{
         align-items: center;
     }
     .divisoria1, .divisoria3{
-        width: 100%;
         flex-direction: column-reverse;
+        width: 100%;
+    }
+    .divisoria3 div{
+        width: 100%;
+    }
+    .gruposCelular table thead tr th:nth-child(6), .gruposCelular table tbody tr td:nth-child(6), .gruposCelular table tr th:nth-child(7),
+    .gruposCelular table tr td:nth-child(7){
+        display: none;
+    }
+    caption{
+        width: 90%;
+    }
+    #quartasSulAmericanaEsquerda div, #quartasSulAmericanaDireita div,     #semiSulAmericanaDireita div, #semiLibertadoresDireita div,#quartasLibertadoresEsquerda div, #quartasLibertadoresDireita div{
+        width: 30%;
+    }
+    #semiSulAmericanaEsquerda div, #semiLibertadoresEsquerda div, 
+    #finalSulAmericana div, 
+    #finalLibertadores div{
+        width: 100%;
+    }
+    #jogos table{
+        background-color: red;
+        width: 90%;
     }
 }
