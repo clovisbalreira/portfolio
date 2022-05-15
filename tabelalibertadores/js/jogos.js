@@ -45,7 +45,7 @@ var jogos = [
     {fase:'grupo', rodada:3,jogo:42,hora:"13:00",mesa: 4,fotoCasa:jogadores[18].foto, timeCasa: jogadores[18].tecnico, golsCasa: 0,timeFora: jogadores[17].tecnico, fotoFora:jogadores[17].foto, golsFora: 0},
     {fase:'grupo', rodada:3,jogo:43,hora:"13:00",mesa: 7,fotoCasa:jogadores[22].foto, timeCasa: jogadores[22].tecnico, golsCasa: 0,timeFora: jogadores[21].tecnico, fotoFora:jogadores[21].foto, golsFora: 0},
     {fase:'grupo', rodada:3,jogo:44,hora:"13:00",mesa: 8,fotoCasa:jogadores[23].foto, timeCasa: jogadores[23].tecnico, golsCasa: 0,timeFora: jogadores[20].tecnico, fotoFora:jogadores[20].foto, golsFora: 0},
-    {fase:'grupo', rodada:3,jogo:45,hora:"13:00",mesa: 1,fotoCasa:jogadores[24].foto, timeCasa: jogadores[24].tecnico, golsCasa: 0,timeFora: jogadores[25].tecnico, fotoFora:jogadores[25].foto, golsFora: 0},
+    {fase:'grupo', rodada:3,jogo:45,hora:"13:00",mesa: 1,fotoCasa:jogadores[24].foto, timeCasa: jogadores[24].tecnico, golsCasa: 0,timeFora: jogadores[27].tecnico, fotoFora:jogadores[27].foto, golsFora: 0},
     {fase:'grupo', rodada:3,jogo:46,hora:"13:00",mesa: 2,fotoCasa:jogadores[26].foto, timeCasa: jogadores[26].tecnico, golsCasa: 0,timeFora: jogadores[25].tecnico, fotoFora:jogadores[25].foto, golsFora: 0},
     {fase:'grupo', rodada:3,jogo:47,hora:"13:00",mesa: 5,fotoCasa:jogadores[30].foto, timeCasa: jogadores[30].tecnico, golsCasa: 0,timeFora: jogadores[29].tecnico, fotoFora:jogadores[29].foto, golsFora: 0},
     {fase:'grupo', rodada:3,jogo:48,hora:"13:00",mesa: 6,fotoCasa:jogadores[31].foto, timeCasa: jogadores[31].tecnico, golsCasa: 0,timeFora: jogadores[28].tecnico, fotoFora:jogadores[28].foto, golsFora: 0},

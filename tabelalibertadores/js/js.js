@@ -404,6 +404,8 @@ function somarTabela(jogador,gp,gc){
         jogador.derrotas = parseInt(jogador.derrotas) + 1
     }else if(parseInt(gp) != '' && parseInt(gc) != ''){
         jogador.empates = parseInt(jogador.empates) + 1
+    }else if(parseInt(gp) ==  0 && parseInt(gc) == 0 ){
+        jogador.empates = parseInt(jogador.empates) + 1
     }
     jogador.jogos = parseInt(jogador.vitorias) + parseInt(jogador.empates) + parseInt(jogador.derrotas)
     jogador.pontos = parseInt(jogador.vitorias) * 3 + parseInt(jogador.empates)
