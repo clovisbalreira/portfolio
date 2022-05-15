@@ -1,32 +1,36 @@
-var A1 = {tecnico: "A1",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var A2 = {tecnico: "A2",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var A3 = {tecnico: "A3",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var A4 = {tecnico: "A4",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var B1 = {tecnico: "B1",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var B2 = {tecnico: "B2",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var B3 = {tecnico: "B3",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var B4 = {tecnico: "B4",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var C1 = {tecnico: "C1",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var C2 = {tecnico: "C2",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var C3 = {tecnico: "C3",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var C4 = {tecnico: "C4",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var D1 = {tecnico: "D1",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var D2 = {tecnico: "D2",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var D3 = {tecnico: "D3",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var D4 = {tecnico: "D4",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var E1 = {tecnico: "E1",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var E2 = {tecnico: "E2",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var E3 = {tecnico: "E3",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var E4 = {tecnico: "E4",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var F1 = {tecnico: "F1",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var F2 = {tecnico: "F2",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var F3 = {tecnico: "F3",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var F4 = {tecnico: "F4",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var G1 = {tecnico: "G1",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var G2 = {tecnico: "G2",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var G3 = {tecnico: "G3",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var G4 = {tecnico: "G4",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var H1 = {tecnico: "H1",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var H2 = {tecnico: "H2",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var H3 = {tecnico: "H3",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
-var H4 = {tecnico: "H4",foto: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
+var jogadores = [
+    {grupo : "A",tecnico: "Cesar Motta",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "A",tecnico: "Rodrigo",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "A",tecnico: "Fábio Fontes",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "A",tecnico: "Dirceu",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "B",tecnico: "Claúdio",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "B",tecnico: "André Schimidt",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "B",tecnico: "Régis",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "B",tecnico: "Polegar",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "C",tecnico: "Rafael Botões",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "C",tecnico: "Felipe Rosa",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "C",tecnico: "Feliciano Macedo",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "C",tecnico: "M. Ocho",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "D",tecnico: "Motta",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "D",tecnico: "Mauricio Rosa",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "D",tecnico: "Sandro Coelho",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "D",tecnico: "Marcelo Ribeiro",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "E",tecnico: "Renato",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "E",tecnico: "William Kinka",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "E",tecnico: "Soligo",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "E",tecnico: "Zezinho",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "F",tecnico: "Ricardo",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "F",tecnico: "Itálo Bigliardi",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "F",tecnico: "Jamis",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "F",tecnico: "Cristaldo",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "G",tecnico: "Fernando",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "G",tecnico: "Diego Luz",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "G",tecnico: "Daniel",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "G",tecnico: "Carlos Padilha",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "H",tecnico: "Paulo Marcos",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "H",tecnico: "Jean Soares",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "H",tecnico: "Diego Fonseca",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0},
+    {grupo : "H",tecnico: "Alex Luz",foto: "",associacao: "",imagem: "",pontos:0,jogos:0,vitorias:0,empates:0,derrotas:0,golspro:0,golscontra:0,saldogols:0,aproveitamento:0,desempate:0}
+]
+
+var grupo = ['A','B','C','D','E','F','G','H']

@@ -1,7 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 :root{
     --degrade: linear-gradient(90deg, #000000 5%,  #FAD163 33% 66% , #000000 95%) 1;
 }
-
 body{
     background-image: url('../img/libertadores.jpg');
     background-size: cover;
@@ -9,14 +12,23 @@ body{
     background-position: center center;
     color: white;
 }
+h1, h2, h3{
+    text-align: center;
+    padding-bottom: 10px;
+    text-shadow: 1px 2px 2px rgba(255, 255, 255, 0.308);
+}
+span{
+    color: white;
+}
+main{
+    background-color: rgba(0, 0, 0, 0.89);
+}
 table{
     width: 30%;
     border-collapse: collapse;
-    background-color: rgba(0, 0, 0, 0.712);
     margin: 10px;
 }
 caption{
-    background-color: rgba(0, 0, 0, 0.712);
     font-size: 1.5em;
     padding: .5em 0;
 }
@@ -44,7 +56,14 @@ caption ,table thead tr th, table tbody tr td{
 }
 .grupos{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+#celular{
+    display: flex;
+    align-items: center;
+}
+#jogos{
+    display: flex;
 }
 #jogos table{
     width: 100%;
@@ -58,6 +77,129 @@ caption ,table thead tr th, table tbody tr td{
     width: 35px;
     text-align: center;
 }
-#jogos table input {
+input {
     width: 30px;
+}
+#jogosGrupos{
+    display: flex;
+    justify-content: start;
+}
+#sulAmericana, #libertadores{
+    display: flex; 
+    justify-content: space-around;
+}
+label{
+    padding: 0 15px;
+}
+#quartasSulAmericanaEsquerda, #quartasSulAmericanaDireita, #semiSulAmericanaEsquerda, #quartasLibertadoresEsquerda, #semiLibertadoresEsquerda, #quartasLibertadoresDireita, #semiSulAmericanaDireita, #semiLibertadoresDireita, #finalSulAmericana, #finalLibertadores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#quartasSulAmericanaEsquerda div, #quartasSulAmericanaDireita div, #quartasLibertadoresEsquerda div, #quartasLibertadoresDireita div{
+    margin-bottom: 20px;
+}
+#semiSulAmericanaEsquerda div, #semiLibertadoresEsquerda div, #semiSulAmericanaDireita div, #semiLibertadoresDireita div{
+    margin-bottom: 90px;
+}
+#finalSulAmericana div, #finalLibertadores div{
+    display: flex;
+    margin-top: 3px;
+}
+#semiSulAmericanaEsquerda h3, #semiLibertadoresEsquerda h3, #semiSulAmericanaDireita h3, #semiLibertadoresDireita h3{
+    padding-bottom: 30px;
+}
+#finalSulAmericana h3, #finalLibertadores h3{
+    padding-top: 10px;
+}
+#finalSulAmericana input, #finalLibertadores input{
+    margin: 0 10px;
+}
+.perdedorSemi{
+    margin-top: -60px;
+    padding-bottom: 0px;
+}
+.Final1{
+    margin-top: -7px;
+    padding-bottom: 20px;
+}
+.Final2{
+    margin-top: 45px;
+}
+.Final3{
+    margin-top: 10px;
+    padding-bottom: 30px;
+}
+.Final4{
+    margin-top: 45px;
+}
+.divisoria1, .divisoria2, .divisoria3{
+    display: flex;
+    justify-content: space-between;
+}
+.divisoria1{
+    width: 75%;
+}
+.divisoria2{
+    width: 51%;
+}
+.divisoria3{
+    width: 40%;    
+}
+@media(max-width: 700px){
+    .grupos{
+        flex-direction: column;
+        align-items: center;
+    }
+    .grupos div table{
+        width: 100%;
+    }
+    #celular{
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    #jogos{
+        flex-direction: column;
+    }
+    #sulAmericana, #libertadores{
+        flex-direction: column;
+    }
+    #semiSulAmericanaEsquerda div, #semiLibertadoresEsquerda div, #semiSulAmericanaDireita div, #semiLibertadoresDireita div{
+        margin-bottom: 20px;
+    }
+    #finalSulAmericana div, #finalLibertadores div{
+        flex-direction: column;
+        margin-top: 5px;
+    }
+    #finalSulAmericana h2, #finalLibertadores h2{
+        padding-bottom: 5px;
+    }
+    .perdedorSemi{
+        margin-top: 0px;
+        padding-bottom: 0px;
+    }
+    .Final1{
+        margin-top: 0px;
+        padding-bottom: 0px;
+    }
+    .Final2{
+        margin-top: 0px;
+    }
+    .Final3{
+        margin-top: 0px;
+        padding-bottom: 0px;
+    }
+    .Final4{
+        margin-top: 0px;
+    }
+    .divisoria1, .divisoria2, .divisoria3{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+    .divisoria1, .divisoria3{
+        width: 100%;
+        flex-direction: column-reverse;
+    }
 }
