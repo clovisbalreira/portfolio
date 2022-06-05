@@ -91,7 +91,6 @@ const totalWeigth = pets.reduce((total, pet) => {
 document.write("O total é " + totalWeigth)
 
 document.write("<br>Soma de age e weight.<br>")
-
 const totalWeigthAge = pets.reduce((total, pet) => {
     return {
         totalAge: total.totalAge + pet.age,

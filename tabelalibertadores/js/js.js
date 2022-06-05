@@ -10,6 +10,11 @@ function comeco(){
     mostrarSemi()
     //final()
     mostrarFinal()
+    classificacaoTotal()
+    classificacaoAssociacao()
+    classificacaoEstatisticas('Estatisticas por Tecnico','cabecalhoIndividualTecnicos','corpoIndividualTecnicos','TabelaIndividualTecnico',jogadoresTotal)
+    classificacaoEstatisticas('Estatisticas por Associações','cabecalhoIndividualAssociacao','corpoIndividualAssociacao','TabelaIndividualAssociacao',associacoes)
+    estatisticas()
 }
 
 function mostrarGrupos(){
@@ -159,7 +164,7 @@ function eliminatorias(id, jogo){
     largura = window.innerWidth
     if((jogo.rodada == 1 && (jogo.fase == 'Quartas de Final' || jogo.fase == 'Final')) || 
         (jogo.rodada == 5 && (jogo.fase == 'Final' || jogo.fase == 'Quartas de Final')) || 
-        (jogo.rodada == 5 && jogo.fase == 'Semi Final' && largura > 700) || 
+        ((jogo.rodada == 1 || jogo.rodada == 5) && jogo.fase == 'Semi Final' && largura > 700) || 
         (jogo.rodada == 5 && jogo.fase == 'Quartas de Final') || 
         (jogo.rodada == 2 && jogo.fase == 'Semi Final') || 
         (jogo.rodada == 6 && jogo.fase == 'Semi Final') || 
@@ -350,7 +355,6 @@ function final(){
     for(var i = 57; i < 65;i++){
         classificacaoSemi(i,clas)
     }
-    //console.log(clas)
     jogos[64].timeCasa = clas[0] 
     jogos[64].timeFora = clas[2] 
     jogos[65].timeCasa = clas[1] 
@@ -404,7 +408,7 @@ function somarTabela(jogador,gp,gc){
         jogador.derrotas = parseInt(jogador.derrotas) + 1
     }else if(parseInt(gp) != '' && parseInt(gc) != ''){
         jogador.empates = parseInt(jogador.empates) + 1
-    }else if(parseInt(gp) ==  0 && parseInt(gc) == 0 ){
+    }else if(parseInt(gp) ==  0 && parseInt(gc) == 0){
         jogador.empates = parseInt(jogador.empates) + 1
     }
     jogador.jogos = parseInt(jogador.vitorias) + parseInt(jogador.empates) + parseInt(jogador.derrotas)
@@ -456,3 +460,300 @@ function criterios(a, b) {
         }    
     }
 }
+
+function tituloEstatisticas(nome,cabecalhos,corpo,tabela){
+    var elemento = ""
+    elemento += `<colgroup>`
+    elemento += `<col class="c-1">`
+    elemento += `<col class="c-2" span="2">`
+    elemento += `<col class="c-1">`
+    elemento += `<col class="c-1">`
+    elemento += `<col class="c-1">`
+    elemento += `<col class="c-1">`
+    elemento += `<col class="c-1">`
+    elemento += `<col class="c-1">`
+    elemento += `<col class="c-1">` 
+    elemento += `<col class="c-1">`
+    elemento += `<col class="c-1">`
+    elemento += `</colgroup>`
+    elemento += `<caption>${nome}</caption>`
+    elemento += `<thead id="${cabecalhos}">`
+    elemento += `</thead>`
+    elemento += `<tbody id="${corpo}">`
+    elemento += `</tbody>`
+    var titulo = document.getElementById(`${tabela}`);
+    titulo.innerHTML = elemento
+}
+function cabecalhoEstatisticas(id){
+    var elemento = ""
+    elemento += "<tr><th scope='col'>Pos</th>"
+    if(id == 'cabecalhoClassificacaoTecnico'){
+        elemento += `<th scope='col' colspan='2'>Participante</th>`
+    }
+    elemento += `<th scope='col' colspan='2'>Associação</th>`
+    elemento += "<th scope='col'>Pg</th>"
+    elemento += "<th scope='col'>J</th>"
+    elemento += "<th scope='col'>V</th>"
+    elemento += "<th scope='col'>E</th>"
+    elemento += "<th scope='col'>D</th>"
+    elemento += "<th scope='col'>GP</th>"
+    elemento += "<th scope='col'>GC</th>"
+    elemento += "<th scope='col'>SG</th>"
+    elemento += "<th scope='col'>%</th>"
+    elemento += "<th scope='col' hidden>D</th></tr>"
+    var cabecalho = document.getElementById(id);
+    cabecalho.innerHTML = elemento
+}
+
+function tabelaEstatisticas(array,id){
+    var elemento = ""
+    var n = 0;
+    array.forEach(dado => {
+        elemento += "<tr><td>"+(++n)+"º</td>"
+        if(id == 'corpoClassificacaoTecnico'){
+            elemento += "<td><img src='"+ dado.foto+"' class='foto'></td>"
+            elemento += "<td>"+dado.tecnico+"</td>"
+            elemento += "<td><img src='"+ dado.imagem+"' class='foto'></td>"
+            elemento += "<td>"+dado.associacao+"</td>"
+        }else if(id == 'corpoclassificaçãoAssociacao'){
+            elemento += "<td><img src='"+ dado.foto+"' class='foto'></td>"
+            elemento += "<td>"+dado.nome+"</td>"
+        }
+        elemento += "<td>"+dado.pontos+"</td>"
+        elemento += "<td>"+dado.jogos+"</td>"
+        elemento += "<td>"+dado.vitorias+"</td>"
+        elemento += "<td>"+dado.empates+"</td>"
+        elemento += "<td>"+dado.derrotas+"</td>"
+        elemento += "<td>"+dado.golspro+"</td>"
+        elemento += "<td>"+dado.golscontra+"</td>"
+        elemento += "<td>"+dado.saldogols+"</td>"
+        elemento += "<td>"+dado.aproveitamento+"</td>"
+        elemento += "</tr>"
+    });    
+    var corpoGrupo = document.getElementById(id);
+    corpoGrupo.innerHTML = elemento;
+}
+function classificacaoTotal(){
+    tituloEstatisticas('Classificação Geral','cabecalhoClassificacaoTecnico','corpoClassificacaoTecnico','TabelaClassificacaoTecnico')
+    cabecalhoEstatisticas(`cabecalhoClassificacaoTecnico`)
+    tabelaEstatisticas(jogadores,`corpoClassificacaoTecnico`)   
+}
+
+function classificacaoAssociacao(){
+    tituloEstatisticas('Classificação Associação','cabecalhoclassificaçãoAssociacao','corpoclassificaçãoAssociacao','TabelaclassificaçãoAssociacao')
+    cabecalhoEstatisticas(`cabecalhoclassificaçãoAssociacao`)  
+    associacoes.forEach(associado =>{
+        jogadoresTotal.forEach(jogador => {
+            if(associado.nome == jogador.associacao){
+                associado.vitorias += jogador.vitorias
+                associado.empates += jogador.empates
+                associado.derrotas += jogador.derrotas
+                associado.golspro += jogador.golspro
+                associado.golscontra += jogador.golscontra
+            }
+        })
+        associado.jogos = associado.vitorias + associado.empates + associado.derrotas
+        associado.saldogols = associado.golspro - associado.golscontra
+        associado.pontos = associado.vitorias * 3 + associado.empates
+        associado.aproveitamento = (associado.pontos / ( associado.jogos * 3) * 100).toFixed(2)
+    })
+    associacoes.sort(criterios)
+    tabelaEstatisticas(associacoes,`corpoclassificaçãoAssociacao`)   
+}
+function cabecalhoEstatisticasIndividual(id){
+    var elemento = ""
+    elemento += "<tr><th scope='col'>Melhor</th>"
+    if( id == 'cabecalhoIndividualTecnicos'){
+        elemento += "<th colspan='2' scope='col'>Tecnico</th>"
+    }
+    elemento += "<th colspan='2' scope='col'>Associação</th>"
+    elemento += "<th scope='col'>Quantidade</th>"
+    var cabecalho = document.getElementById(id);
+    cabecalho.innerHTML = elemento
+}
+function melhorAtaque(a,b){
+    return (a.golspro < b.golspro) ? 1 : ((b.golspro < a.golspro) ? -1 : 0)
+}
+function melhorDefesa(a,b){
+    return (a.golscontra > b.golscontra) ? 1 : ((b.golscontra > a.golscontra) ? -1 : 0)
+}
+function melhorPontos(a,b){
+    return (a.pontos < b.pontos) ? 1 : ((b.pontos < a.pontos) ? -1 : 0)
+}
+function melhorVitorias(a,b){
+    return (a.vitorias < b.vitorias) ? 1 : ((b.vitorias < a.vitorias) ? -1 : 0)
+}
+function melhorEmpates(a,b){
+    return (a.empates < b.empates) ? 1 : ((b.empates < a.empates) ? -1 : 0)
+}
+function melhorDerrotas(a,b){
+    return (a.derrotas > b.derrotas) ? 1 : ((b.derrotas > a.derrotas) ? -1 : 0)
+}
+function melhorAproveitamento(a,b){
+    return (a.aproveitamento > b.aproveitamento) ? 1 : ((b.aproveitamento > a.aproveitamento) ? -1 : 0)
+}
+function corpoEstatisticasIndividual(id, array){
+    var elemento = ""
+    var ataque = array.sort(melhorAtaque)
+    elemento += mostrarIndividual('Ataque', id, ataque)
+    var defesa = array.sort(melhorDefesa)
+    elemento += mostrarIndividual('Defesa', id, defesa)
+    var pontos = array.sort(melhorPontos)
+    elemento += mostrarIndividual('Pontos', id, pontos)
+    var vitorias = array.sort(melhorVitorias)
+    elemento += mostrarIndividual('Vitorias', id, vitorias)
+    var empates = array.sort(melhorEmpates)
+    elemento += mostrarIndividual('Empates', id, empates)
+    var derrotas = array.sort(melhorDerrotas)
+    elemento += mostrarIndividual('Derrotas', id, derrotas)
+    var aproveitamento = array.sort(melhorAproveitamento)
+    elemento += mostrarIndividual('Aproveitamento', id, aproveitamento)
+    var corpoGrupo = document.getElementById(id);
+    corpoGrupo.innerHTML = elemento;
+}
+function mostrarIndividual(melhor, id, array){
+    var tag = ''
+    var total = 0
+    var titulo = melhor
+    if(melhor == 'Ataque'){
+        total = array[0].golspro
+    }else if(melhor == 'Defesa'){
+        total = array[0].golscontra
+    }else if(melhor == 'Pontos'){
+        total = array[0].pontos
+    }else if(melhor == 'Vitorias'){
+        total = array[0].vitorias
+    }else if(melhor == 'Empates'){
+        total = array[0].empates
+    }else if(melhor == 'Derrotas'){
+        total = array[0].derrotas
+    }else if(melhor == 'Aproveitamento'){
+        if(array[1].aproveitamento == 100.00){
+            total = 100.00
+        }else{
+            var c = array.length - 1
+            total = array[c].aproveitamento
+        }
+    }
+    array.forEach( elemento => {
+        if((melhor == 'Ataque' && total == elemento.golspro) || (melhor == 'Defesa' && total == elemento.golscontra) || (melhor == 'Pontos' && total == elemento.pontos) || (melhor == 'Vitorias' && total == elemento.vitorias) || (melhor == 'Empates' && total == elemento.empates) || (melhor == 'Derrotas' && total == elemento.derrotas) || (melhor == 'Aproveitamento' && total == elemento.aproveitamento)){
+            tag += `<tr>`
+            tag += `<td>${titulo}</td>`
+            if(id == 'corpoIndividualTecnicos'){
+                tag += `<td><img class='foto' src='${elemento.foto}'</td>`
+                tag += `<td>${elemento.tecnico}</td>`
+                tag += `<td><img class='foto' src='${elemento.imagem}'</td>`
+                tag += `<td>${elemento.associacao}</td>`
+            }else if(id == 'corpoIndividualAssociacao'){
+                tag += `<td><img class='foto' src='${elemento.foto}'</td>`
+                tag += `<td>${elemento.nome}</td>`
+            }
+            if(melhor == 'Ataque'){
+                tag += `<td>${elemento.golspro} ${elemento.golspro == 0 ? 'Gol' : 'Gols'}</td>`
+            }else if(melhor == 'Defesa'){
+                tag += `<td>${elemento.golscontra} ${elemento.golscontra == 0 ? 'Gol' : 'Gols'}</td>`
+            }else if(melhor == 'Pontos'){
+                tag += `<td>${elemento.pontos} P</td>`
+            }else if(melhor == 'Vitorias'){
+                tag += `<td>${elemento.vitorias} V</td>`
+            }else if(melhor == 'Empates'){
+                tag += `<td>${elemento.empates} E</td>`
+            }else if(melhor == 'Derrotas'){
+                tag += `<td>${elemento.derrotas} D</td>`
+            }else if(melhor == 'Aproveitamento'){
+                tag += `<td>${elemento.aproveitamento} %</td>`
+            }
+            tag += `</tr>`
+            titulo = ''
+        }
+    })
+    return tag
+}
+function classificacaoEstatisticas(titulo,cabecalho,corpo,tabela,array){
+    tituloEstatisticas(titulo,cabecalho,corpo,tabela)
+    cabecalhoEstatisticasIndividual(cabecalho)
+    corpoEstatisticasIndividual(corpo,array)
+}
+
+function estatisticas(){
+    tituloEstatisticas('Estatisticas do Torneio','cabecalhoIndividualEstatisticas','corpoIndividualEstatisticas','TabelaIndividualEstatisticas')
+    var elemento = ""
+    elemento += "<tr><th colspan='7' scope='col'>Estatisticas</th>"
+    var cabecalho = document.getElementById('cabecalhoIndividualEstatisticas');
+    cabecalho.innerHTML = elemento
+    var total = jogadores.reduce((total, jogador) => {
+        return {
+            empates: total.empates + jogador.empates,
+            gols: total.gols + jogador.golspro,
+            jogos: total.jogos + jogador.jogos / 2,
+            media :  total.gols / total.jogos
+        }
+    }, { empates: 0, gols: 0, jogos: 0, media : 0})
+    var tag = ''
+    tag += `<tr>`
+    tag += `<td colspan='5'>Total de Gols</td>`
+    tag += `<td colspan='2'>${total.gols}</td>`
+    tag += `<tr>`
+    tag += `<td colspan='5'>Total de Jogos</td>`
+    tag += `<td colspan='2'>${total.jogos}</td>`
+    tag += `<tr>`
+    tag += `<td colspan='5'>Média de Gols</td>`
+    tag += `<td colspan='2'>${total.media.toFixed(2)}</td>`
+    tag += `<tr>`
+    tag += `<td colspan='5'>Total de empates</td>`
+    tag += `<td colspan='2'>${total.empates}</td>`
+    var diferenca = jogos.sort(diferencaGols)
+    tag += estatisticasJogos('Jogo Com Mais Diferença de Gols',diferenca)
+    var maisGol = jogos.sort(maisGols)
+    tag += estatisticasJogos('Jogo Com Mais Gols',maisGol)
+    var cabecalho = document.getElementById('corpoIndividualEstatisticas');
+    cabecalho.innerHTML = tag           
+}
+
+function maisGols(a,b){
+    var totalA = a.golsCasa + a.golsFora
+    var totalB = b.golsCasa + b.golsFora
+    return (totalA < totalB  ? 1 : (totalB < totalA) ? -1 : 0)
+}
+
+function diferencaGols(a,b){
+    var totalA = Math.abs(a.golsCasa - a.golsFora)
+    var totalB = Math.abs(b.golsFora - b.golsCasa)
+    return (totalA < totalB) ? 1 : ((totalB < totalA) ? -1 : 0)
+}
+
+function estatisticasJogos(titulo,jogos){
+    tag = ''
+    total = 0 
+    if(titulo == 'Jogo Com Mais Gols'){
+        total = jogos[0].golsCasa + jogos[0].golsFora
+    }else if(titulo == 'Jogo Com Mais Diferença de Gols'){
+        total = Math.abs(jogos[0].golsCasa - jogos[0].golsFora)
+    }
+    tag += `<tr>`
+    tag += `<td class='tituloEstatistica' colspan='7'>${titulo}</td>`
+    jogos.forEach( jogo => {
+        if((titulo == 'Jogo Com Mais Gols' && (jogo.golsCasa + jogo.golsFora) == total) || (titulo == 'Jogo Com Mais Diferença de Gols' && (jogo.golsCasa - jogo.golsFora) == total)){
+            tag += `<tr>`
+            tag += `<td><img class='foto' src='${jogo.fotoCasa}'></td>`
+            tag += `<td>${jogo.timeCasa}</td>`
+            tag += `<td>${jogo.golsCasa}</td>`
+            tag += `<td>X</td>`
+            tag += `<td>${jogo.golsFora}</td>`
+            tag += `<td>${jogo.timeFora}</td>`
+            tag += `<td><img class='foto' src='${jogo.fotoFora}'></td>`
+            }
+        }
+    )
+    return tag
+}
+
+document.querySelector('#jogos').addEventListener('wheel' , event => {
+    if(event.deltaY > 0){
+        console.log('up')
+        event.target.scrollBy(300,0)
+    }else{
+        console.log('down')
+        event.target.scrollBy(-300,0)
+    }
+})
