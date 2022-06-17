@@ -161,7 +161,7 @@ section#home ul.ul-links{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 section#home ul.ul-links li{
@@ -223,7 +223,7 @@ section#cns-news .class_noticia{
     width: 350px;
 }
 
-section#anuncie img{
+/*section#anuncie img{
     width: 80%;
     margin-left: 10%;
 }
@@ -234,9 +234,9 @@ section#anuncie h3, section#anuncie p{
 
 section#anuncie form{
     padding: 1% 10%;
-}
+}*/
 
-section#fale-conosco{
+/*section#fale-conosco{
     width: 80%;
     margin-left: 10%;
 }
@@ -253,7 +253,7 @@ section#fale-conosco h2, section#fale-conosco p{
 
 section#fale-conosco form{
     padding: 1% 10%;
-}
+}*/
 
 section#sobre-nos{
     text-align: center;
@@ -263,7 +263,7 @@ section#sobre-nos h2{
     padding: 40px 0;
 }
 
-section#redes-sociais{
+/*section#redes-sociais{
     text-align: center;
     background-color: none;
     margin-bottom: 40px;
@@ -280,7 +280,7 @@ section#redes-sociais h3{
 section#redes-sociais a img{
     width: 40px;
     padding-left: 20px;
-}
+}*/
 
 footer{
     background-color: black;
@@ -354,11 +354,11 @@ footer .footer_link div a img{
 
 @media(max-width: 1215px){
     header{
-        height: 420px;
+        height: 320px;
     }
 
     header div.deezer{
-        padding-top:180px;
+        /*padding-top:180px;*/
         padding-left: 30%;
         position: relative;
     }
@@ -371,7 +371,7 @@ footer .footer_link div a img{
 
 @media(max-width: 615px){
     header div.deezer{
-        padding-top:230px;
+        padding-top:180px;
         padding-left: 10%;
         position: relative;
     }
