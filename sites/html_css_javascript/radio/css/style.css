@@ -116,22 +116,28 @@ header nav ul li a:hover{
 
 header div.deezer{
     padding-top: 110px;
-    padding-left: 70%;
-    position: relative;
-    margin-bottom: 10px;
+    display: flex;
+    height: 30px;
+    justify-content: right;
+    align-items: center;
+    padding-right: 2%;
 }
 
 header div.playlistDeezer{
-    padding-left: 83.5%;
-    vertical-align: middle;    
-    position: relative;
+    height: 35px;
+    display: flex;
+    padding-right: 2%;
+    align-items: center;
+    justify-content: right;
 }
 
 header div.deezer a, header div.playlistDeezer a{
-    position: absolute;
-    padding-left: 1%;
-    bottom: 8px;
+    margin-left: 10px;
     text-decoration: none;
+}
+
+header div.playlistDeezer a{
+    font-size: 1.2em;
 }
 
 header img{
@@ -324,7 +330,7 @@ footer .footer_link div a img{
 
 .box-playlist{
     background-color: black;
-    width: 100%;
+    width: 90%;
     height: auto;
     position: absolute;
     left: -2000px;
@@ -351,31 +357,15 @@ footer .footer_link div a img{
     opacity: .8;
 }
 
-
 @media(max-width: 1215px){
     header{
         height: 320px;
-    }
-
-    header div.deezer{
-        /*padding-top:180px;*/
-        padding-left: 30%;
-        position: relative;
-    }
-
-    header div.playlistDeezer{
-        padding-left: 53.5%;
     }
 }
 
 
 @media(max-width: 615px){
     header div.deezer{
-        padding-top:180px;
-        padding-left: 10%;
-        position: relative;
-    }
-    header div.playlistDeezer{
-        padding-left: 43.5%;
+        padding-top:165px;
     }
 }
