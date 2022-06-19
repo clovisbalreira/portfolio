@@ -79,16 +79,18 @@ textarea{
 
 header{
     background-color: black;
-    height: 370px;
+    height: 350px;
     text-align: center;
 }
 
 header nav{
     background-color: black;
+    height: 100px;
     position: fixed;
     z-index: 1;
     width: 100%;
     padding: 30px 0;
+    z-index: 2;
 }
 
 header nav ul{
@@ -129,15 +131,22 @@ header div.playlistDeezer{
     padding-right: 2%;
     align-items: center;
     justify-content: right;
+    margin-top: 10px;
 }
 
-header div.deezer a, header div.playlistDeezer a{
+header div.deezer div, header div.playlistDeezer div{
+    display: flex;
+}
+
+header div.playlistDeezer div{
+    align-items: center;
+}
+
+header div.deezer div a, header div.playlistDeezer div a{
     margin-left: 10px;
-    text-decoration: none;
-}
-
-header div.playlistDeezer a{
+    color: red;
     font-size: 1.2em;
+    text-decoration: none;
 }
 
 header img{
@@ -310,7 +319,7 @@ footer .footer_link div a img{
 #div-playlist{
     background-color: rgba(0, 0, 0, 0.705);
     width: 90%;
-    height: 300px;
+    height: 900px;
     position: fixed;
     top: 5%;
     left: 5%;
@@ -357,12 +366,51 @@ footer .footer_link div a img{
     opacity: .8;
 }
 
+.noticias_pagina{
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.705)
+}
+
+.noticias_pagina h1{
+    text-align: center;
+    font-size: 4em;
+}
+
+.noticias_pagina h2{
+    text-align: center;
+    font-size: 4em;
+}
+
+.noticias_pagina div{
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.noticias_pagina p{
+    padding: 10px 0px;
+    text-align: justify;
+}
+
+.noticias_pagina img{
+    width: 100%;
+}
+
+.d-block{
+    height: 250px;
+}
+
+#carouselExampleIndicators{
+    margin-bottom: 50px;
+}
+
 @media(max-width: 1215px){
     header{
         height: 320px;
     }
 }
-
 
 @media(max-width: 615px){
     header div.deezer{
