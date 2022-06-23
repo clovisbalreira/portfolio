@@ -145,8 +145,9 @@ header div.playlistDeezer div{
 header div.deezer div a, header div.playlistDeezer div a{
     margin-left: 10px;
     color: red;
-    font-size: 1.2em;
+    font-size: 1em;
     text-decoration: none;
+    padding-top: 5px;
 }
 
 header img{

@@ -5,20 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <style>
+        body{
+            background-image: linear-gradient(to right, green , yellow);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        iframe{
+            width: 100vh;
+            height: 400px;
+        }
+    </style>
 </head>
 <body>
     <h1>Meu primeiro formulario</h1>
-    <form action="#" method="dialog" autocomplete="off">
+    <form action="indexcadastro.html" method="dialog" autocomplete="off">
         <p>
             <label for="nome">Nome:</label>
             <input type="text" name="Nome" id="nome">
-        </p>
-        <p>
             <label for="sobrenome">Sobrenome:</label>
             <input type="text" name="sobrenome" id="sobrenome">
-        </p>
-        <p>
             <input type="submit" value="Enviar">
+        </p>
+    </form>
+    <h1>Meu segundo formulario</h1>
+    <form action="indexcadastro.html" method="get">    
+        <p>
+            <label for="iusu">Usuario: </label>
+            <input type="text" name="usu" id="iusu" minlength="5" maxlength="15" size="10" placeholder="Nome do usuario" autocomplete="username" required>
+            <label for="isen">Senha: </label>
+            <input type="password" name="sen" id="isem" minlength="5" size="15" placeholder="Digite sua senha" autocomplete="current-password" required>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    <h1>Meu terceiro formulario</h1>
+    <form action="indexcadastro.html" method="get">
+        <p>
+            <label for="iusu">Usuario: </label>
+            <input type="text" name="usu" id="iusu" minlength="5" maxlength="15" size="10" placeholder="Nome do usuario" autocomplete="username" required>
+            <label for="imedia">Média</label>
+            <input type="number" name="media" id="imedia" min="0" max="10" step="0.01" placeholder="0 a 10">
+            <label for="imes">Mes: </label>
+            <input type="month" name="mes" id="imes" value="2020-07">
+            <label for="idia">Dia da prova</label>
+            <input type="date" name="dia" id="idia">
+            <label for="ihora">Horario</label>
+            <input type="time" name="hora" id="ihora">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    <h1>Meu quarto formulario</h1>
+    <form action="index.html" method="get">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <p>
+                <label for="iemail">E-mail</label>
+                <input type="email" name="mail" id="iemail">
+                <label for="ifone">Telefone</label>
+                <input type="tel" name="fone" id="ifone" pattern="^\(\d{2}\)\d{4,5}-\d{4}$">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Reset">
+        </fieldset>
         </p>
     </form>
 </body>
