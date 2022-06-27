@@ -4,19 +4,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
 
-*{
-    color: white;
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 400;
-    margin: 0px;
-    padding: 0px;
-}
-
 body{
     height: 100vh;
-    background: white url('../img/fundo-cns.jpg') no-repeat fixed center center;
-    background-size: cover;
+    background-color: black;
+    /*background: white url('../img/fundo-cns.jpg') no-repeat fixed center center;
+    background-size: cover;*/
 }
 
 h1{
@@ -51,294 +43,278 @@ h6{
     font-size: 15px;
     font-weight: 400;
 }
-.p_button{
-    margin-bottom: 10px;
-}
-.buttonStyle{
-    background-color: #3a3a3a;
+
+.acordeao{
+    background-color: black;
+    color: white;
     border: none;
-    padding: 10px;
-    border-radius: 20px;
-    text-decoration: none;
+    font-size: .6em;
+    padding-top: 23px;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
-input[type="text"] , textarea , select{
-    width: 100%;
-    height: 30px;
-    margin: 15px 0;
-    margin-right: 0px;
-    padding-left: 10px;
+.acordeaoButton{
     border-radius: 10px;
-    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: .55em;
+    height: 36px;
+    padding: 0px 10px;
+    padding-top: 5px;
+    font-weight: 400;
+    background-color: #3A3A3A;
+    color: white;
+    border: none;
+    
 }
 
-textarea{
-    height: 100px;
-    padding-top: 10px;
+.p_button{
+    margin-bottom: 8px;
+}
+
+iframe#player{
+    width: 98vw;
+    height: 40px;
+}
+
+iframe#menu{
+    width: 100vw;
+    height: 40px;
 }
 
 header{
     background-color: black;
-    height: 350px;
-    text-align: center;
 }
 
 header nav{
-    background-color: black;
-    height: 100px;
-    position: fixed;
-    z-index: 1;
-    width: 100%;
-    padding: 30px 0;
-    z-index: 2;
-}
-
-header nav ul{
-    list-style: none;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
-header nav ul li{
-    width: 200px;
-    margin-bottom: 20px;
+.post{
+    background-color: red;
 }
 
-header nav ul li a{
+header nav a{
     color: white;
-    font-size: 2rem;
     text-decoration: none;
-}    
-
-header nav ul li a:hover{
-    color: #3a3a3a;
+    padding: 20px;
 }
 
-header div.deezer{
-    padding-top: 110px;
+header div.linksPlaylist{
     display: flex;
-    height: 30px;
-    justify-content: right;
-    align-items: center;
-    padding-right: 2%;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 30px;
 }
 
-header div.playlistDeezer{
-    height: 35px;
+header div.linksPlaylist div.deezer,
+header div.linksPlaylist div.playlistDeezer{
     display: flex;
-    padding-right: 2%;
     align-items: center;
-    justify-content: right;
-    margin-top: 10px;
+    gap: 10px;
 }
 
-header div.deezer div, header div.playlistDeezer div{
-    display: flex;
-}
-
-header div.playlistDeezer div{
-    align-items: center;
-}
-
-header div.deezer div a, header div.playlistDeezer div a{
-    margin-left: 10px;
+header div.linksPlaylist div.deezer a,
+header div.linksPlaylist div.playlistDeezer a{
     color: red;
     font-size: 1em;
     text-decoration: none;
-    padding-top: 5px;
 }
 
-header img{
-    width: 22%;
-}
-
-section{
-    margin-left: 10%;
-    padding: 40px 0;
-    background-color: rgba(0, 0, 0, .80);
-    width: 80%;
-}
-
-div.espacador{
-    padding: 50px;
-}
-
-section#home img{
-    width: 80%;
-    margin-left: 10%;
-    margin-bottom: 40px;
-}
-
-section#home ul.ul-links{
-    list-style: none;
-    width: 100%;
+header figure{
+    width: 80vw;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
-section#home ul.ul-links li{
-    text-align: center;
-    padding: 10% 1%;
+header figure img{
+    width: 30%;
+    margin-left: 20%;
 }
 
-section#home ul.ul-links li div{
-    width: 100%;
-    height: 180px;
-    vertical-align: top;
+iframe#principal{
+    width: 100vw;
+    height: 1000px;
 }
 
-section#home ul.ul-links li div p{
-    padding: 10px 0;
-}
-
-section#home ul.ul-links li div img{
-    width: 40px;
-    margin-bottom: 0;
-    margin-left: 0;
-}
-
-section#home ul.ul-redes{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
-}
-
-section#home ul.ul-redes li div#arb-widget{
-    background-color: white;
-}
-
-section#home ul.ul-redes li div#arb-widget div.arb-tab-content div.arb-media img{
+.buttonStyle{
+    background-color: #3A3A3A;
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    margin: 20px;
     margin-left: 0px;
 }
 
-section#cns-news{
-    text-align: center;
-}
-
-section#cns-news p{
-    padding: 1%;
-}
-
-section#cns-news .class_noticias{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    margin-top: 20px;
-    flex-wrap: wrap;
-}
-
-section#cns-news .class_noticia{
-    width: 350px;
-}
-
-/*section#anuncie img{
-    width: 80%;
-    margin-left: 10%;
-}
-
-section#anuncie h3, section#anuncie p{
-    padding: 1% 10%;
-}
-
-section#anuncie form{
-    padding: 1% 10%;
-}*/
-
-/*section#fale-conosco{
-    width: 80%;
-    margin-left: 10%;
+section{
+    background: white url('../img/fundo-cns.jpg') no-repeat fixed center center;
+    background-size: cover;
 }
 
 section article{
-    width: 80%;
-    margin-left: 10%;
+    padding: 50px 0px;
+    background-color: rgba(0, 0, 0, .80);
+    width: 95vw;
+    margin: auto;
+}
+
+section article#home div#carouselExampleIndicators{
+    width: 90vw;
+    margin: auto;
+}
+
+.tamanho{
+    height: 250px;
+}
+
+section article#home div.links{
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: white;
+}
+
+section article#home div.links div{
     text-align: center;
 }
 
-section#fale-conosco h2, section#fale-conosco p{
-    padding: 1% 0%;
+section article#home div.links div svg{
+    margin: 5px 0;
 }
 
-section#fale-conosco form{
-    padding: 1% 10%;
-}*/
-
-section#sobre-nos{
-    text-align: center;
+section article#home div.links div img{
+    width: 50px;
+    margin: 0px;
 }
 
-section#sobre-nos h2{
+section article#home div.links div a{
+    background-color: #3A3A3A;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+section article#home div.redes{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
     padding: 40px 0;
 }
 
-/*section#redes-sociais{
-    text-align: center;
-    background-color: none;
-    margin-bottom: 40px;
+div#arb-widget{
+    background-color: white;
 }
 
-section#redes-sociais img{
-    width: 80%;
+section article.news{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px auto;
+    color: white;
 }
 
-section#redes-sociais h3{
-    padding: 10px 0;
+section article.news img{
+    width: 90vw;
 }
 
-section#redes-sociais a img{
-    width: 40px;
-    padding-left: 20px;
-}*/
+section article#anuncie,
+section article#fale_conosco,
+section article#sobre_nos,
+section article#redes_sociais{
+    padding: 20px;
+    color: white;
+}
 
-footer{
-    background-color: black;
-    padding: 1% 0;
+section article#fale_conosco article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 90vw;
+}
+
+section article#sobre_nos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+section article#redes_sociais{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+section article#anuncie img,
+section article#redes_sociais img{
+    width: 90vw;
+}
+
+section article#redes_sociais div{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    align-items: center;
-    padding: 10px 0px;
+    gap: 15px;
 }
-.footer_texto{
-    width: 50%;
+
+section article#redes_sociais div a img{
+    width: 5vw;
+}
+
+footer{
+    color: white;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+footer div.footer_texto{
     text-align: center;
 }
+
 footer .footer_link div a img{
     width: 40px;
     margin-right: 15px;
 }
-
-#div-playlist{
+#div-playlist, #div-news{
     background-color: rgba(0, 0, 0, 0.705);
-    width: 90%;
-    height: 900px;
     position: fixed;
     top: 5%;
-    left: 5%;
     display: none;
     z-index: 2;
 }
 
-#div-playlist:target{
+#div-playlist{
+    width: 90%;
+    height: 900px;
+    left: 5%;
+}
+
+#div-news{
+    height: 900px;
+    width: 90%;
+    left: 1%;}
+
+#div-playlist:target,#div-news:target{
     display: block;
 }
 
-#div-playlist ~ .box-playlist{
+#div-playlist ~ .box-playlist, #div.news ~ .box-news{
     top: 10px;
     transition: all .3s;
     transition-delay: .2s;
 }
 
-.box-playlist{
+.box-playlist, .box-news{
     background-color: black;
     width: 90%;
     height: auto;
@@ -349,7 +325,7 @@ footer .footer_link div a img{
     box-shadow: 5px 5px rgba(0, 0, 0, 0.404) ;
 }
 
-#close{
+#close, #closenews{
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
@@ -363,58 +339,6 @@ footer .footer_link div a img{
     border-top-right-radius: 40%;
 }
 
-#close:hover{
+#close:hover,#closenews:hover{
     opacity: .8;
-}
-
-.noticias_pagina{
-    margin-top: 50px;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.705)
-}
-
-.noticias_pagina h1{
-    text-align: center;
-    font-size: 4em;
-}
-
-.noticias_pagina h2{
-    text-align: center;
-    font-size: 4em;
-}
-
-.noticias_pagina div{
-    padding: 10px 0px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.noticias_pagina p{
-    padding: 10px 0px;
-    text-align: justify;
-}
-
-.noticias_pagina img{
-    width: 100%;
-}
-
-.d-block{
-    height: 250px;
-}
-
-#carouselExampleIndicators{
-    margin-bottom: 50px;
-}
-
-@media(max-width: 1215px){
-    header{
-        height: 320px;
-    }
-}
-
-@media(max-width: 615px){
-    header div.deezer{
-        padding-top:165px;
-    }
 }
