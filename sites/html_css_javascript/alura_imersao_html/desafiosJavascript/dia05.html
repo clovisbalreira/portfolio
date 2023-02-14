@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>#7DaysOfCode - 5º Dia</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    h2,h3{
+      margin: 10px 0;
+    }
+    label{
+      padding-left: 5px;
+    }
+    input, button{
+      margin: 10px 0;
+    }
+    button{
+      padding: 10px 20px;
+    }
+    table{
+      width: 80%;
+      margin: 10%;
+    }
+    table caption{
+      background-color: gray;
+    }
+    table thead{
+      background-color: rgba(128, 128, 128, 0.527);
+    }
+    table tbody tr{
+      background-color: rgba(255, 0, 0, 0.411);
+    }
+    table tbody tr:nth-child(even){
+      background-color: rgba(0, 0, 255, 0.411);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+      <h1>#7DaysOfCode - 5º Dia</h1>
+      <p>Você já foi alguma vez no supermercado e levou uma lista de compras, <p>porém como escreveu tudo na ordem que foi lembrando,</p> teve que buscar uma maçã na área de frutas, depois um leite na área de laticínios e depois uma pêra novamente na área de frutas e ficou nesse vai e volta pelo lugar inteiro pra completar a lista?</p>
+      <p>Depois que você resolver o desafio de hoje com certeza não fará mais isso!</p>
+      <h1>O que você deverá fazer então:</h1>
+      <p>Para facilitar a sua ida ao supermercado, você irá criar um programa em Javascript, onde ele perguntará se você deseja adicionar uma comida na lista de compras para você responder com sim ou nao.</p>
+      <p> Em seguida perguntará qual comida você deseja inserir e você digitará o nome dela, como por exemplo batata.</p>
+      <p> Em seguida, ele deverá perguntar em qual categoria essa comida se encaixa, com opções já pré definidas, como laticínios, congelados, doces e o que mais achar interessante, assim poderá separar tudo no seu devido grupo.</p><p>Por fim, caso você não queira mais adicionar nada na lista de compras e responder nao na primeira pergunta, ele irá imprimir uma lista com todos os itens agrupados, da seguinte forma:</p>
+      <p>Caso você adicione na sua lista: banana, leite em pó, tomate, leite vegetal, chiclete, bala de ursinho, maçã, uva, abacate e leite de vaca</p>
+      <h1>O programa deverá imprimir, por exemplo:</h1>
+      <p>Lista de compras: banana, tomate, maçã, uva, abacate, leite em pó, leite vegetal, leite de vaca, chiclete e bala de ursinho</p>
+      <h1>Dica</h1>
+      <p>Temos um objeto dentro da linguagem javascript que é usado justamente para criar listas de elementos, chamado array. Use e abuse dele!</p>
+      <p>
+        Lembre-se que você sempre pode estilizar da maneira que quiser o seu programinha, inclusive utilizando outras tecnologias para isso, como HTML e CSS.</p>
+      <p>Porém isso não é obrigatório na nossa lista de lógica de programação com Javascript, então como já mencionei nos dias anteriores, você pode usar recursos como console.log, alert e prompt para desenvolver seu programa
+      </p>
+    </section>
+    <article>
+    </article>
+  </main>
+</body>
+<script>
+  var article = document.querySelector('article')
+  var categoria = ['Laticínios','Congelados','Doces']
+  var listaCompras = []
+  function comeco(){
+    var h2 = document.createElement('h2')
+    h2.textContent = 'Lista de compras'
+    article.appendChild(h2)
+    var p = document.createElement('p')
+    p.textContent = 'Deseja adicionar uma Produto:'
+    article.appendChild(p)
+    criarInputRadio('radio', 'resposta', 'respostaSim', 'Sim', 'resposta', 'criarInputText()', 'Sim')
+    criarInputRadio('radio', 'resposta', 'respostaNao', 'Não', 'resposta', 'mostrarLista()', 'Não')   
+  }
+
+  function criarInputRadio(tipo, nome, id, valor, classe, clicar, labelValor){
+    var div = document.createElement('div')
+    var input = document.createElement('input')
+    input.setAttribute('type',tipo)
+    input.setAttribute('name',nome)
+    input.setAttribute('id',id)
+    input.setAttribute('value',valor)
+    input.setAttribute('class',classe)
+    input.setAttribute('onclick',clicar)
+    if(valor ==  'Não' && listaCompras == 0){
+      input.setAttribute('disabled','true')
+    }else if(valor ==  'Não' && listaCompras > 0){
+      input.setAttribute('disabled','false')
+    }
+    var label = document.createElement('label')
+    label.innerHTML = labelValor
+    label.setAttribute('for',id)
+    div.appendChild(input)
+    div.appendChild(label)
+    article.appendChild(div)
+  }
+  function criarInputText(){
+    var divProduto = document.createElement('div')
+    divProduto.setAttribute('id','divProduto')
+    var label = document.createElement('label')
+    label.textContent = `Produto: `
+    divProduto.appendChild(label)
+    var input = document.createElement('input')
+    input.setAttribute('id',`produto`)
+    input.setAttribute('type','text')
+    divProduto.appendChild(input)
+    article.appendChild(divProduto)
+    botao('Adicionar Produto','botaoProduto','mostrarSelectCategoria')
+    var inputRadioSim = document.getElementById('respostaSim')
+    inputRadioSim.setAttribute('disabled','true')
+    var inputRadioNao = document.getElementById('respostaNao')
+    inputRadioNao.setAttribute('disabled','true')
+    }
+  function mostrarSelectCategoria(){
+    var nome = document.getElementById('produto')
+    if(nome.value != ''){
+      criarSelect()
+      adicionarCategoria()
+      botao('Adicionar categoria','buttonCategoria','adicionarLista')
+      var produtoInputText = document.getElementById('produto')
+      produtoInputText.setAttribute('disabled','true')
+      var botaoProduto = document.getElementById('botaoProduto')
+      botaoProduto.setAttribute('disabled','true')  
+    }
+  }
+  function criarSelect(){
+    var divCategoria = document.createElement('div')
+    divCategoria.setAttribute('id','divCategoria')
+    var label = document.createElement('label')
+    label.textContent = `Categoria: `
+    divCategoria.appendChild(label)
+    var select = document.createElement('select')
+    select.setAttribute('id','categoria')
+    select.setAttribute('name','categoria')
+    for(var i = 0; i < categoria.length;i++){
+      var option = document.createElement('option')
+      option.setAttribute('value',`${categoria[i]}`)
+      option.textContent = categoria[i]
+      select.appendChild(option)
+    }
+    divCategoria.appendChild(select)
+    article.appendChild(divCategoria)
+  }
+  function adicionarCategoria(){
+    var divProduto = document.createElement('div')
+    var label = document.createElement('label')
+    label.textContent = `Outra categoria: `
+    divProduto.appendChild(label)
+    var input = document.createElement('input')
+    input.setAttribute('id',`novaCategoria`)
+    input.setAttribute('type','text')
+    divProduto.appendChild(input)
+    article.appendChild(divProduto)    
+  }
+  function botao(texto,id,funcao){    
+    var divBotao = document.createElement('div')
+    var button = document.createElement('button')
+    button.setAttribute('onclick',`${funcao}()`)
+    button.setAttribute('id',id)
+    button.textContent = texto
+    divBotao.appendChild(button)
+    article.appendChild(divBotao)
+  }
+  function adicionarLista(){
+    var produto = document.getElementById('produto')
+    var valorCategoria = document.getElementById('categoria')
+    var novaCategoria = document.getElementById('novaCategoria')
+    if(produto.value != ''){
+      if(novaCategoria.value == ''){
+        listaCompras.push(
+          {
+            produto:produto.value,
+            categoria:valorCategoria.value
+          }
+          )
+        }else{
+          categoria.push(novaCategoria.value)
+          listaCompras.push(
+            {
+              produto:produto.value,
+              categoria:novaCategoria.value
+            }
+          )
+        }
+      article.textContent = ''
+      comeco()
+    }
+  }
+  function mostrarLista(){
+    var table = document.createElement('table')
+    var caption = document.createElement('caption')
+    caption.textContent = 'Lista de compras'
+    table.appendChild(caption)
+    var thead = document.createElement('thead')
+    var trhead = document.createElement('tr')
+    var thProduto = document.createElement('th')
+    thProduto.setAttribute('scope','col')
+    thProduto.textContent = 'Produto'
+    trhead.appendChild(thProduto)
+    var thCategoria = document.createElement('th')
+    thCategoria.setAttribute('scope','col')
+    thCategoria.textContent = 'Categoria'
+    trhead.appendChild(thCategoria)
+    thead.appendChild(trhead)
+    table.appendChild(thead)
+    var tbody = document.createElement('tbody')
+    for(var i = 0;i < listaCompras.length;i++){
+      var tr = document.createElement('tr')
+      var tdProduto = document.createElement('td')
+      tdProduto.textContent = listaCompras[i].produto
+      tr.appendChild(tdProduto)
+      var tdCategoria = document.createElement('td')
+      tdCategoria.textContent = listaCompras[i].categoria
+      tr.appendChild(tdCategoria)
+      tbody.appendChild(tr)
+      table.appendChild(tbody)
+    }
+    article.appendChild(table)
+  }
+comeco()
+</script>
+</html>

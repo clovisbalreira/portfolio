@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/alerta.js"></script>
+    <script>
+        function fazPreload(){
+            var minhaImagem = new Image();
+            minhaImagem.src = '../../img/html_css_javascript.png';
+            minhaImagem.src = '../../img/php.png';
+            minhaImagem.src = '../../img/react.png';
+        }
+    </script>
+    <title>JavaScript Exemplos</title>
+    <style>
+        body{
+            background-color: white;
+        }
+    </style>
+</head>
+<body onload="fazPreload()">
+    <input type="button" value="Função alerta JavaScript" onclick="alerta()">
+    <hr>
+    <input type="button" value="Função opções JavaScript" onclick="confirmacao()">
+    <hr>
+    <input type="button" value="Função Digitar JavaScript" onclick="digitar()">
+    <hr>
+    <input type="button" value="Função ir para o google JavaScript" onclick="mudarPagina()">
+    <hr>
+    <input type="button" value="Função ir para o google na mesma janela JavaScript" onclick="mudarPaginaAtual()">
+    <hr>
+    <input type="button" value="Função imprimir pagina JavaScript" onclick="print()">
+    <hr>
+    <input type="button" value="Função criar cookie JavaScript" onclick="criarCookie()">
+    <hr>
+    <input type="button" value="Função popup JavaScript" onclick="janelaPopup(`https://www.google.com`)">
+    <hr>
+    <a href="javascript: window.history.back()">Voltar</a>
+    <a href="javascript: window.history.forward()">Avançar</a>
+    <hr>
+    <img src="../../../img/arquivo.jpg" alt="" name="imagem" width="300" height="300">
+    <p>Passe o mouse na lingugem</p>
+    <a href="#" onmouseover="javascript:imagem.src='../../../img/html_css_javascript.png'">Html Css e javascript</a><br>
+    <a href="#" onmouseover="javascript:imagem.src='../../../img/php.png'">Php</a><br>
+    <a href="#" onmouseover="javascript:imagem.src='../../../img/react.png'">React</a>
+    <form name="meuFormulario" action="confirmacao.html" onsubmit="validacao()">
+        <p>Digite seu email</p>
+        <input type="text" name="email">
+        <input type="submit" value="Enviar">
+    </form>
+    <script>
+        linha()
+        texto = "texto"; 
+        document.write("O tamanho da palavra " + texto +  " é " + texto.length) 
+        linha()  
+        document.write("cor do texto em vermelho " + texto.fontcolor('red'))
+        document.write("<br>cor do texto em Azul " + texto.fontcolor('blue'))
+        document.write("<br>cor do texto em verde " + texto.fontcolor('green'))
+        linha()
+        frase = "O javaScript todas as paginas web mais interativas"
+        pos = frase.indexOf('web')
+        document.write("Na frase '" + frase + "' a palavra web esta na posição "  + pos)
+        linha()
+        document.write("Na frase '" + frase + "' pegaremos só o pedaço '" + frase.substr(22,11) + "'")
+        linha()
+        document.write("Covertendo todo texto em minusculo : " + frase.toLowerCase())
+        document.write("<br>Covertendo todo texto em maiusculo : " + frase.toUpperCase())
+        linha()
+        clubes = new Array(4);
+        clubes[0] = "Caxias";
+        clubes[1] = "Grêmio";
+        clubes[2] = "Inter";
+        clubes[3] = "Juventude";
+        document.write("Separando o array com ' , '  " + clubes.join(' , '))
+        linha()
+        pi = Math.PI;
+        document.write("O valor do pi é : " + pi)
+        linha()
+        valor1 = 8
+        valor2 = 5
+        document.write("Os numeros " + valor1 + " e " + valor2 + ", o maior numero é " + Math.max(valor1,valor2) + " o menor é " + Math.min(valor1,valor2))
+        linha()
+        document.write("Você esta usando o navegador: " + navigator.appName)
+        document.write("<br>Na versão " + navigator.appVersion) 
+        document.write( "<br>O codigo " + navigator.appCodeName)
+        document.write("<br>Na plataforma " + navigator.platform)
+        linha()
+        document.write("Largura da tela: " + screen.width)
+        document.write("<br>Altura da tela: " + screen.height)
+        linha()
+        document.write("Cores " + screen.colorDepth + " bits")
+        linha()
+        data = new Date();
+        document.write("Hoje é o dia " + data)
+        dia = data.getDate();
+        mes = data.getMonth();
+        meses = new Array(12);
+        meses[0] = "Janeiro";
+        meses[1] = "Fevereiro";
+        meses[2] = "Março";
+        meses[3] = "Abril";
+        meses[4] = "Maio";
+        meses[5] = "Junho";
+        meses[6] = "Julho";
+        meses[7] = "Agosto";
+        meses[8] = "Setembro";
+        meses[9] = "Outubro";
+        meses[10] = "Novembro";
+        meses[11] = "Dezembro";
+        ano = data.getFullYear();
+        document.write("<br>Hoje é o dia " + dia)
+        document.write("<br>Hoje é o mes " + meses[mes])
+        document.write("<br>Hoje é o ano " + ano)
+
+    </script>
+    
+
+</body>
+</html>

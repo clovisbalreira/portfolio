@@ -1,0 +1,164 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image:url("../img/fundo.png");
+}
+header , main , footer{
+    margin: .5% 10%;
+}
+header{
+    width:83%;
+}
+.img-logo{
+    width:58%;    
+}
+.img-header{
+    width:19%;
+}
+nav ul{
+    background-color: #ffffff8f;
+    padding-top:1px;
+}
+nav ul li {
+    padding-bottom: 7px;
+    margin: 5px;
+    list-style-type: none;
+    font-size: 1em;
+}
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    padding: 5px 8px
+}
+nav ul li a:hover {
+    color: rgba(0, 0, 0, 0.616);
+    text-decoration: none
+}
+.img-section , .img-section-2{
+    margin-top:1px;
+}
+.img-section{
+    margin-left:10px;
+}
+.img-section-2{
+    margin-left:110px;
+}
+main{
+    background-color:#ffffff8f;
+    width:80.3%;
+    display: flex;
+}
+section , article{
+    display:inline-block;
+}
+section{
+    width:20%;
+}
+article{
+    width:80%;
+}
+.normal{
+    height: auto;
+}
+article p{
+    padding: .5em 1em;
+}
+.img-article , div{
+    display:inline-block
+}
+.img-article{
+    margin:1em;
+}
+div{
+    width:58%;
+    margin:3em .5em;
+}
+div h1 , div p{
+    margin:1em;
+    text-align:center;
+}
+footer{
+    background-color:#ffffff8f;
+    text-align:center;
+    padding:.5em;
+    clear:both;
+}
+.titulo_principal{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@media(max-width: 950px){
+    .img-section , .img-section-2{
+        width: 70px;
+    }
+    .img-section-2{
+        margin-left: 5em;
+    }
+    nav ul li{
+        font-size: 0.8em;
+    }
+}
+
+@media(max-width: 450px){
+    header{
+        width: 98%;
+        margin-left: 2%;
+    }
+    main{
+        flex-direction: column;
+        width: 98%;
+        margin-left: 1%;
+    }
+    section div{
+        display: flex;
+    }
+    section div div{
+        display: flex;
+        flex-direction: column;
+    }
+    nav ul li{
+        font-size: 1em;
+        width: 170px;
+    }
+    .img-section , .img-section-2{
+        width: 120px;
+    }
+    .img-section{
+        margin-top: -47px;
+    }
+    .img-section-2{
+        margin-left: 6em;
+    }
+    .titulo_principal{
+        width: 125%;
+        margin-top: -90px;
+        margin-left: -10px;
+    }
+    .titulo_principal img{
+        width: 30%;
+        height: 30vh;
+    }
+    .titulo_principal div{
+        margin-left: -180px;
+    }
+    .normal > p{
+        margin-top: -110px;
+        margin-left: 5%;
+        width: 110%;
+    }
+    article article{
+        margin-top: -110px;
+        margin-left: 5%;
+        width: 110%;
+    }
+    footer{
+        width: 94%;
+        margin-left: 1%;
+    }
+}

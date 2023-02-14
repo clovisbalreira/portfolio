@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BemPaggo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="principal">
+        <header>
+            <p>Formulário </p>
+            <p>para compra de</p>
+            <p><strong>Pacote de adesivos</strong></p>
+            <img src="img/bempaggo.png" alt="bemPaggo">
+        </header>
+        <main>
+            <section id="nota-fiscal">
+                <table>
+                    <colgroup>
+                        <col class="colgroupProduto">
+                        <col class="colgroupQuantidade">
+                        <col class="colgroupValor" span="2">
+                    </colgroup>
+                    <caption>Nota Fiscal</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Produto</th>
+                            <th scope="col">Quantidade</th>
+                            <th scope="col">Valor Unitário</th>
+                            <th scope="col">Valor Total</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                    <tfoot></tfoot>
+                </table>
+                <div id="button"></div>
+                <button id="btn-recusar" onclick="recusarCompra()">Recusar Compra</button>
+                <button id="btn-compra" onclick="confirmarCompra()">Confirmar Compra</button>
+            </section>
+            <section class="form">
+                <legend>Quais adesivos:</legend>
+                <p>
+                    <input type="checkbox" name="adesivo-react" id="adesivo-react" class="adesivo" value="React"/>
+                    <label for="adesivo-react">React - R$: <input type="text" class="preco" value="1.00" disabled></label>
+                </p>
+                <p>
+                    <input type="checkbox" name="adesivo-vue" id="adesivo-vue" class="adesivo" value="Vue"/>
+                    <label for="adesivo-vue">Vue - R$: <input type="text" class="preco" value="1.50" disabled></label>
+                </p>
+                <p>
+                    <input type="checkbox" name="adesivo-angular" id="adesivo-angular" class="adesivo" value="Angular"/>
+                    <label for="adesivo-angular">Angular - R$: <input type="text" class="preco" value="1.75" disabled></label>
+                </p>
+                <legend>Quantos adesivos de cada?</legend>
+                <div class="divAdesivos">
+                    <button id="subtrair" onclick="subtrairNumero()">-</button>
+                    <input type="number" name="numero" id="numero">
+                    <button id="soma" onclick="somaNumero()">+</button>
+                </div>
+                <label class="obs" for="observacao">Observações:</label>
+                <textarea name="observacao" id="observacao" cols="21" rows="5" placeholder="Algum duvida? Recado?"></textarea>
+            </section> 
+            </main>    
+            <footer>
+                <span id="mostrar-nota-fiscal"></span>
+                <button onclick="mostrarNotaFiscal()">ENVIAR</button>
+            </footer>
+        </div>
+    </body>
+<script src="js/js.js"></script>
+</html>

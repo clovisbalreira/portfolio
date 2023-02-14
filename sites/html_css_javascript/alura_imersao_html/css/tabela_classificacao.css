@@ -1,0 +1,142 @@
+* {
+    text-align: center;
+  }
+  
+  body {
+    font-family: "Roboto Mono", monospace;
+    min-height: 400px;
+    background-image: url("https://www.alura.com.br/assets/img/imersoes/dev-2021/tabela-classificacao-bg.png");
+    background-color: #111;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+  }
+  
+  .page-title {
+    color: #ffffff;
+    margin: 0 0 5px;
+  }
+  
+  .page-subtitle {
+    color: #ffffff;
+    margin-top: 5px;
+  }
+  
+  .page-logo {
+    width: 200px;
+  }
+  
+  .alura-logo {
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  table {
+    border: 2px solid white;
+    border-collapse: collapse;
+  }
+  
+  h1 {
+    color: white;
+  }
+  
+  th,
+  tr,
+  td {
+    border: solid 1px white;
+    color: white;
+  }
+
+  td:nth-child(1){
+    width: 5%;
+  }
+
+  .foto{
+    width: 100%;
+  }
+
+  .rodada, .jogoExtra{
+    border: none;
+  }
+  .rodada img, .jogoExtra img{
+    width: 100%;
+  }
+
+  .rodada tr{
+    border: none;
+    background-color: rgba(0, 0, 0, 0.356);
+  }
+  .jogoExtra tr{
+    border: none;
+  }
+  .tituloRodada{
+    padding: 20px;
+    border: none;
+  }
+  .rodada input[type='number'], .jogoExtra input[type='number']{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.356);
+    border: none;
+    color: white;
+    height: 10vh;
+    font-size: 1em;
+  }
+  .rodada td:nth-child(3),.rodada td:nth-child(5),
+  .jogoExtra td:nth-child(3),.jogoExtra td:nth-child(5){
+    width: 7%;
+  }
+  .rodada td:nth-child(4),.jogoExtra td:nth-child(4){
+    width: 5%;
+  }
+  .rodada td:nth-child(1),.rodada td:nth-child(7),
+  .jogoExtra td:nth-child(1),.jogoExtra td:nth-child(7){
+    width: 5%;
+  }
+  .rodada td:nth-child(2),.rodada td:nth-child(6),.jogoExtra td:nth-child(2),.jogoExtra td:nth-child(6){
+    width: 25%;
+  }
+  .penalti{
+    visibility: hidden;
+  }
+  .penalti td{
+    border: none;
+  }
+  .penalti td:nth-child(2){
+    width: 15px;
+  }
+  .vazio{
+    visibility: hidden;
+  }
+  .vazio td{
+    border: none;
+  }
+  #erro{
+    display: none;
+    padding: 10px;
+    color: red;
+  }
+  button{
+    margin-bottom: 10px;
+  }
+  #botoes{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+  }
+@media(max-width: 450px){
+  input{
+    margin-bottom: 5px;
+    width: 80%;
+  }
+}
+

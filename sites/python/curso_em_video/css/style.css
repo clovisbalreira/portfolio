@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(105, 105, 173);
+    font: normal 15pt Arial
+}
+header{
+    text-align: center;
+}
+section{
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 90%;
+    margin: auto;
+    box-shadow: 3px 3px 10px black;
+    color:  black;
+}
+footer{
+    text-align: center;
+    font-style: italic;
+}
+section div{
+    display: flex;
+}
+ol.exemplos{
+    columns: 1;
+    padding: 0 13px;
+}
+a{
+    text-decoration: none;
+    background-color: rgb(211, 211, 211);
+}
+@media(max-width: 450px){
+    section{
+        width: 350px;   
+        padding-left: 50px;     
+    }
+    section div{
+        flex-direction: column;
+        align-items: center;
+    }
+}

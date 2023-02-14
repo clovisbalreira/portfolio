@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        body{
+            background-image: linear-gradient(to right, green , yellow);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        iframe{
+            width: 100vh;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu primeiro formulario</h1>
+    <form action="index.html" method="dialog" autocomplete="off">
+        <p>
+            <label for="nome">Nome:</label>
+            <input type="text" name="Nome" id="nome">
+            <label for="sobrenome">Sobrenome:</label>
+            <input type="text" name="sobrenome" id="sobrenome">
+            <input type="submit" value="Enviar">
+        </p>
+    </form>
+    <h1>Password</h1>
+    <form action="index.html" method="get">    
+        <p>
+            <label for="iusu">Usuario: </label>
+            <input type="text" name="usu" id="iusu" minlength="5" maxlength="15" size="10" placeholder="Nome do usuario" autocomplete="username" required>
+            <label for="isen">Senha: </label>
+            <input type="password" name="sen" id="isem" minlength="5" size="15" placeholder="Digite sua senha" autocomplete="current-password" required>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    <h1>Número, Mês, Data, Hora, Reset</h1>
+    <form action="index.html" method="get">
+        <p>
+            <label for="iusu">Usuario: </label>
+            <input type="text" name="usu" id="iusu" minlength="5" maxlength="15" size="10" placeholder="Nome do usuario" autocomplete="username" required>
+            <label for="imedia">Média</label>
+            <input type="number" name="media" id="imedia" min="0" max="10" step="0.01" placeholder="0 a 10">
+            <label for="imes">Mes: </label>
+            <input type="month" name="mes" id="imes" value="2020-07">
+            <label for="idia">Dia da prova</label>
+            <input type="date" name="dia" id="idia">
+            <label for="ihora">Horario</label>
+            <input type="time" name="hora" id="ihora">
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+    <h1>Telefone</h1>
+    <form action="index.html" method="get">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <p>
+                <label for="iemail">E-mail</label>
+                <input type="email" name="mail" id="iemail">
+                <label for="ifone">Telefone</label>
+                <input type="tel" name="fone" id="ifone" pattern="^\(\d{2}\)\d{4,5}-\d{4}$">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Reset">
+        </fieldset>
+        </p>
+    </form>
+    <h1>Checkbox, radio</h1>
+    <form action="index.html" method="get">
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="ismas" value="M"><label for="ismas">Masculino</label>
+            <input type="radio" name="sexo" id="isfem" value="F" checked><label for="isfem">Feminino</label>
+        </fieldset>
+        <fieldset>
+            <legend>Esporte Favoritos</legend>
+            <input type="checkbox" name="esbas" id="iebas" checked><label for="iebas">Basquete</label>
+            <input type="checkbox" name="esfut" id="iefut" checked><label for="iefut">Futebol</label>
+            <input type="checkbox" name="esnat" id="ienat"><label for="ienat">Natação</label>
+            <input type="checkbox" name="esten" id="ieten"><label for="ieten">Tênis</label>
+        </fieldset>
+        <br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Reset">
+    </form>
+    <h1>Color, range e file</h1>
+    <form action="index.html" method="get">
+        <fieldset>
+            <legend>Color</legend>
+            <label for="color">Color</label>
+            <input type="color" name="color" id="color" value="#ffff00">
+        </fieldset>
+        <fieldset>
+            <legend>Range</legend>
+            <label for="range">Range</label>
+            <input type="range" name="range" id="range" min="1" max="5" value="1">
+        </fieldset>
+        <fieldset>
+            <legend>File</legend>
+            <label for="file">File</label>
+            <input type="file" name="file" id="file">
+        </fieldset>
+        <br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Reset">
+    </form>
+    <h1>Select, datalist, textarea</h1>
+    <form action="index.html" method="get">
+        <fieldset>
+            <legend>Select</legend>
+            <label for="select">Select</label>
+            <select name="select" id="select">
+                <optgroup label="Região Sudeste">
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP" selected>São Paulo</option>
+                </optgroup>
+                <optgroup label="Região Nordeste">
+                    <option value="MA">Maranhão</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="RN">Rio Grande do Norte</option>            
+                </optgroup>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Datalist</legend>
+            <label for="datalist">DataList</label>
+            <input type="text" name="prof" id="prof" list="lstprof">
+            <datalist id="lstprof">
+                <option value="ADM">Administração</option>
+                <option value="CONT">Contabilidade</option>
+                <option value="DEV">Desenvovedor</option>
+                <option value="PRO">Professor</option>
+            </datalist>            
+        </fieldset>
+        <fieldset>
+            <legend>textarea</legend>
+            <label for="textarea">Testarea</label>
+            <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+        </fieldset>
+        <br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Reset">
+    </form>
+    <h1>OutPut</h1>
+    <form action="index.html" method="get">
+        <fieldset>
+            <legend>OutPut</legend>
+            <div>
+                <label for="in1">Numero 1</label>
+                <input type="number" name="n1" id="in1" min="0" max="10" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+                <label for="in2">Numero 2</label>
+                <input type="number" name="n2" id="in2" min="0" max="10" required oninput="isoma.innerHTML = Number(in1.value) + Number(in2.value)">
+                <label for="isoma">Soma</label>
+                <output name="soma" id="isoma">0</output>
+            </div>
+            <div>
+                <label for="inum">Numero</label>
+                <input type="range" name="num" id="inum" min="0" max="5" oninput="ival.innerHTML = Number(inum.value)">
+                <output id="ival">5</output>
+            </div>
+            <div>
+                <label for="isano">Em que ano você nasceu</label>
+                <input type="number" name="ano" id="isano" min="1900" max="2022" oninput="calcIdade()">
+                <label for="iidade">Sua idade é</label>
+                <output id="iidade">0</output>
+            </div>
+        </fieldset>
+        <br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Reset">
+    </form>
+    <script>
+        function calcIdade(){
+            let atual = new Date().getFullYear()
+            iidade.innerHTML = Number(atual) - Number(isano.value)
+        }
+    </script>
+</body>
+</html>

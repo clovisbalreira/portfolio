@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+body{
+    background: linear-gradient(236.85deg, #041832 27.26%, #3468A7 96.03%);
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    background: #ECF4FF;
+    margin: 64px;
+    border-radius: 20px;
+    box-shadow: 6px 6px 6px #0E1D2F;
+    color: #1C1C1C;
+    padding: 64px;
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+}
+
+.perfil{
+    display: flex;
+}
+
+.perfil-foto{
+    border-radius: 460px;
+    max-height: 160px;
+    box-shadow: 0px 4px 4px rgba(0,0,0, 0,25);
+}
+
+.titulo{
+    margin-left: 16px;
+}
+
+.titulo h1{
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.titulo h3{
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.tema button{
+    align-self: flex-end;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 8px 16px;
+    background: #ecf4ff;
+    border-radius: 100px;
+}
+
+main{
+    display: flex;
+}
+
+.projetos, .desafios{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(230.65deg, #999CFE 27.49%, #9CC8FC 83.19%);
+    margin-top: 32px;
+    padding: 32px;
+    box-shadow: 2px 2px 4px rgb(16, 16,16, 0.42);
+    border-radius: 20px;
+}
+
+.projetos{
+    width: 70%;
+    margin-right: 20px;
+} 
+.desafios{
+    width: 20%;
+}
+.projetos-titulo, .desafios-titulo{
+    list-style: none;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.projetos-item, .desafios-item{
+    list-style-type: none;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 48px;
+}
+
+.projetos-item a, .desafios-item a{
+    color: #1C1C1C;
+    text-decoration: none;
+}
+
+.dark{
+    background: linear-gradient(236.85deg, #6B87A9 27.26%, #375B86 96.03%);
+}
+
+.dark .container{
+    background: #333439;
+    color: #F6F6F6;
+}
+
+.dark .projetos{
+    color: #1C1C1C;
+}
+
+.dark .tema button{
+    background: #1C1C1C;
+    color: #ffffff;
+    border: 2px solid #F7F7F7;
+}
+embed{
+    width: 100%;
+}
+@media(max-width: 450px){
+    .container{
+        width: 60%;
+        margin: 5%;
+    }
+    
+    .cabecalho{
+        flex-direction: column-reverse;
+    }
+    
+    .perfil{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .perfil-foto{
+        max-width: 100px;
+        max-height: 100px;
+        margin: auto;
+    }
+    
+    .titulo h1{
+        font-size: 20px;
+    }
+    
+    .titulo h3{
+        font-size: 18px;
+    }
+    
+    .tema button{
+        margin-bottom: 10px;
+    }
+    
+    main{
+        flex-direction: column;
+    }
+    
+    .projetos, .desafios{
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(230.65deg, #999CFE 27.49%, #9CC8FC 83.19%);
+        margin-top: 32px;
+        padding: 32px;
+        box-shadow: 2px 2px 4px rgb(16, 16,16, 0.42);
+        border-radius: 20px;
+    }
+    
+    .projetos{
+        width: 113%;
+        margin-left: -50px;
+    } 
+    .desafios{
+        width: 113%;
+        margin-left: -50px;
+    }
+   embed{
+        width: 140%;
+        margin-left: -65px;
+        overflow: hidden;
+    } 
+}

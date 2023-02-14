@@ -1,0 +1,15 @@
+body{
+    height: 95vh;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    columns: black;
+    background-color: white;
+}
+@media(max-width: 450px){
+    #snake{
+        width: 70%;
+    }
+}

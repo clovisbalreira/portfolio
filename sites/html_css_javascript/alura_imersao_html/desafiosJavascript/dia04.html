@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>#7DaysOfCode - 4º Dia</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    main{
+      height: 100vh;
+    }
+    h2, div{
+      margin:10px 0;
+    }
+    input{
+      margin-right: 10px;
+    }
+    @media(max-width: 950px){
+      main{
+        height: 130vh;
+      }
+    }
+    @media(max-width: 450px){
+      main{
+        height: 260vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+      <h1>#7DaysOfCode - 4º Dia</h1>
+      <p>Você já brincou de tentar adivinhar o número que seu amigo ou amiga estava pensando?</p>
+      <p>Pois hoje você irá jogar esse joga contra o próprio computador!</p>
+      <p>Aqui está tudo o que você precisa fazer para o desafio de hoje:</p>
+      <p>Você deve criar um programinha que já inicialize com um valor específico entre 0-10 para o número que você irá adivinhar Em seguida, ele perguntará para você qual o valor que você deseja chutar e, caso você acerte, ele irá te parabenizar ou, caso erre, ele irá te dar mais 2 tentativas No fim, caso você não acerte nenhuma vez, ele irá imprimir qual era o número inicial</p>
+      <h2>Dica</h2>
+      <p>Pense muito bem em qual estrutura de repetição você irá utilizar para fazer o seu programa ser executado até o momento que as 3 tentativas acabarem ou a pessoa acertar o número</p>
+      <p>Lembre-se que você pode sempre personalizar o seu programinha da forma que quiser!</p>
+      <h2>Extra</h2>
+      <p>Você pode até incrementar o seu programa e fazer a própria máquina escolher sozinha o número a ser adivinhado, utilizando algo chamado Math.random(), que você pode conferir nesse site</p>
+    </section>
+    <article>
+    </article>
+  </main>
+</body>
+<script>
+  var article = document.querySelector('article')
+  var adivinhou = 1
+  var sorteio = ''
+  function sortearNumero(){
+    return parseInt(Math.random(10)*10)
+  }
+  function mostrarJogo(){
+    sorteio = sortearNumero()
+    var h2 = document.createElement('h2')
+    h2.textContent = `Tente adivinhar um número de 1 a 10`
+    article.appendChild(h2)
+    criarInput()
+  }
+  function criarInput(){
+    var div = document.createElement('div')
+    var label = document.createElement('label')
+    label.textContent = `Essa é sua ${adivinhou}º tentativa: `
+    div.appendChild(label)
+    var input = document.createElement('input')
+    input.setAttribute('id',`div${adivinhou}`)
+    input.setAttribute('type','number')
+    input.setAttribute('min','0')
+    input.setAttribute('max','10')
+    div.appendChild(input)
+    var button = document.createElement('button')
+    button.setAttribute('id',`button${adivinhou}`)
+    button.setAttribute('onclick','tentativas()')
+    button.textContent = 'Adivinhar'
+    div.appendChild(button)
+    article.appendChild(div)
+  }
+  function tentativas(){
+    var resposta = document.createElement('h2')
+    var valor = document.getElementById(`div${adivinhou}`)
+    var button = document.getElementById(`button${adivinhou}`)
+    if(valor.value != ''){
+      if(valor.value == sorteio){
+        resposta.textContent = `Você acertou na ${adivinhou}º tentativa Parabéns!!`
+        resposta.style.color = 'blue'
+        botaoReiniciar()
+      }else{
+        adivinhou++
+        if(adivinhou > 3){
+        resposta.textContent += `Você não acertou nas três tentativas o número era ${sorteio} !!`
+        resposta.style.color = 'red'
+        botaoReiniciar()
+      }else{
+        criarInput()
+      }
+      valor.disabled = true
+      button.disabled = true
+    }
+    article.appendChild(resposta)      
+  }
+  }
+  function botaoReiniciar(){
+    var button = document.createElement('button')
+    button.setAttribute('onclick','reiniciar()')
+    button.textContent = 'Reiniciar'
+    article.appendChild(button)
+  }
+  function reiniciar(){
+    var article = document.querySelector('article')
+    article.textContent = ''
+    adivinhou = 1
+    mostrarJogo()
+  }
+  mostrarJogo()
+</script>
+</html>

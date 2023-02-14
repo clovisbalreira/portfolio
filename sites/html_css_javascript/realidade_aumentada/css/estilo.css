@@ -1,0 +1,117 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: linear-gradient(90deg,rgba(0, 0, 0, 0.575),white);
+}
+main{
+    display: flex;
+}
+.logo{
+    width: 100%;
+}
+nav ul{
+    background-color: #808080d9;
+    padding-top:1px;
+}
+nav ul li {
+    padding-bottom: 7px;
+    margin: 5px;
+    list-style-type: none;
+    font-size: 1em;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 8px
+}
+nav ul li a:hover {
+    color: black;
+}
+article{
+    padding:1em;
+}
+p{
+    padding:.2em;
+    text-align:center;
+    font-size:1.1em;    
+}
+aside{ 
+    width: 98%;
+}
+.imagem{
+    display: flex;
+    width: 90%;
+    margin-top: 40px
+}
+.img-footer{
+    width:210px;
+    height:150px;
+    margin-left: 22%;
+}
+p a{
+    text-decoration:none;
+    font-size:6em;
+    text-shadow: 2px 2px black;
+}
+
+footer{
+    background: linear-gradient(236.85deg, white 27.26%, gray 96.03%);
+    padding-top:.3em;
+}
+.home, .como_usar , .historia , .possibilidade , .livro_jogos , .fontes{
+    width: 100%;
+    height: 50vh;
+}
+#fonte{
+    height: 68vh;
+    padding-top: 5%;
+}
+#usar{
+    padding: 3%;
+}
+@media(max-width: 950px){
+    .home, .como_usar , .historia , .possibilidade , .livro_jogos , .fontes{
+        height: 100vh;
+    }    
+    #fonte{
+        padding-top: 15%;
+    }
+    #usar{
+        padding-left: 5%;
+    }
+}
+@media(max-width: 450px){
+    body{
+        background-image: linear-gradient(90deg,rgb(63, 60, 60),white);
+    }
+    main{
+        flex-direction: column;
+    }
+    nav ul li {
+        font-size: 1.5em;
+    }
+    main div{
+        display: flex;
+        justify-content: center;
+    }
+    .home, .como_usar , .historia , .possibilidade , .livro_jogos , .fontes{
+        height: 58vh;
+        margin-left: 35%;
+    }
+    .imagem{
+        flex-direction: column;
+        margin-left: 5%;
+    }
+    .imagem img{
+        padding-bottom: 10%;
+    }
+    p a{
+        font-size: 5em;
+    }
+    .ultimo{
+        margin-top: 40px;
+    }
+}

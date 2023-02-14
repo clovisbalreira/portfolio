@@ -1,0 +1,347 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --degrade: linear-gradient(90deg, #000000 5%,  #FAD163 33% 66% , #000000 95%) 1;
+}
+body{
+    background-image: url('../img/libertadores.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    color: white;
+}
+h1{
+    margin-top: 30px;
+}
+h1, h2, h3{
+    text-align: center;
+    padding-bottom: 10px;
+    text-shadow: 1px 2px 2px rgba(255, 255, 255, 0.308);
+}
+span{
+    color: white;
+    position: absolute;
+    left: 200px;
+}
+main{
+    background-color: rgba(0, 0, 0, 0.89);
+}
+table{
+    width: 30%;
+    border-collapse: collapse;
+    margin: 10px;
+}
+caption{
+    font-size: 1.5em;
+    padding: .5em 0;
+}
+table thead tr th{
+    padding: .5em;
+    font-size: .8em;
+}
+table tbody tr td:nth-child(2){
+    width: 20px;
+    padding: 5px;
+}
+table tbody tr td:nth-child(3){
+    text-align: left;
+}
+caption ,table thead tr th, table tbody tr td{
+    border-bottom: 3px solid #FAD163;     
+    border-image: var(--degrade);
+    text-align: center;
+}
+.c-1{
+    width: 5%;
+}
+.foto{
+    margin: 2px 10px;
+    width: 30px;
+}
+.grupos{
+    display: flex;
+    justify-content: space-between;
+}
+#celular{
+    display: flex;
+    align-items: center;
+}
+#titulo{
+    padding: 10px;
+    margin: 0px;
+}
+#item-wrapper{
+    width: 87vh;
+}
+#jogos{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    width: 95%;
+    margin-left: 3.5%;
+}
+#jogos table{
+    flex: none;
+    width: 100%;
+    scroll-snap-align: start;
+}
+.gruposCelular{
+    width: 29.7%;
+}
+#jogos table tr td{
+    padding: 15px 0;
+}
+#jogos table caption {
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: .05em;
+}
+#jogos table tr td {
+    width: 35px;
+    text-align: center;
+}
+input{
+    width: 30px;
+}
+#jogosGrupos{
+    display: flex;
+    justify-content: start;
+}
+#sulAmericana, #libertadores{
+    display: flex; 
+    justify-content: space-between;
+    margin-left: 2%;
+}
+label{
+    padding: 0 15px;
+}
+#quartasSulAmericanaEsquerda, #quartasSulAmericanaDireita, #quartasLibertadoresEsquerda, #quartasLibertadoresDireita, #semiSulAmericanaDireita, #semiSulAmericanaEsquerda, #semiLibertadoresDireita, #semiLibertadoresEsquerda, #finalSulAmericana, #finalLibertadores{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#quartasSulAmericanaEsquerda, #quartasLibertadoresEsquerda{
+    width: 15%;
+}
+#quartasSulAmericanaEsquerda div, #quartasSulAmericanaDireita div, #semiSulAmericanaDireita div, #semiLibertadoresDireita div,#quartasLibertadoresEsquerda div, #quartasLibertadoresDireita div,#semiSulAmericanaEsquerda div, #semiLibertadoresEsquerda div, 
+#finalSulAmericana div div, #finalLibertadores div div{
+    background-color: rgba(255, 255, 255, 0.103);
+    padding: 15px;
+    width: 100%;
+}
+#quartasSulAmericanaEsquerda div, #quartasSulAmericanaDireita div, #quartasLibertadoresEsquerda div, #quartasLibertadoresDireita div{
+    margin-bottom: 20px;
+}
+#semiSulAmericanaEsquerda div, #semiLibertadoresEsquerda div, #semiSulAmericanaDireita div, #semiLibertadoresDireita div{
+    margin-bottom: 150px;
+}
+#finalSulAmericana div, #finalLibertadores div{
+    display: flex;
+    margin-top: 18px;
+    width: 100%;
+}
+#semiSulAmericanaEsquerda h3, #semiLibertadoresEsquerda h3, #semiSulAmericanaDireita h3, #semiLibertadoresDireita h3{
+    padding-bottom: 30px;
+}
+#finalSulAmericana h3, #finalLibertadores h3{
+    padding-top: 10px;
+}
+#finalSulAmericana input, #finalLibertadores input{
+    margin: 0 10px;
+}
+.perdedorSemi{
+    margin-top: -60px;
+    padding-bottom: 0px;
+}
+.Final1{
+    margin-top: -27px;
+    padding-bottom: 20px;
+}
+.Final2{
+    margin-top: 30px;
+}
+.Final3{
+    margin-top: 56px;
+    padding-bottom: 30px;
+}
+.Final4{
+    margin-top: 30px;
+}
+.divisoria1, .divisoria2{
+    display: flex;
+    justify-content: space-around;
+}
+.divisoria3{
+    display: flex;
+    justify-content: space-between;
+}
+.divisoria1{
+    width: 87%;
+}
+.divisoria2{
+    width: 54%;
+}
+.divisoria3{
+    width: 37%;    
+}
+footer{
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.89);
+}
+#estatisticasGrupo, #individual{
+    display: flex;
+    justify-content: space-around;
+}
+#TabelaIndividualTecnico thead tr td:nth-child(5){
+    text-align: right;
+    width: 400px;
+}
+#classificaçãoTecnico,
+aside{
+    width: 100%;
+}    
+#TabelaClassificacaoTecnico{
+    width: 95%;
+} 
+#TabelaclassificaçãoAssociacao{
+    width: 88%;
+    margin-left: 5%;
+}
+#TabelaIndividualTecnico, #TabelaIndividualAssociacao, #TabelaIndividualEstatisticas{
+    width: 88%;
+    margin-left: 5%;
+}
+#TabelaClassificacaoTecnico tbody tr td:nth-child(3),#TabelaClassificacaoTecnico tbody tr td:nth-child(5){
+    width: 500px;
+    text-align: center;
+}
+
+#TabelaIndividualTecnico tbody tr td:nth-child(3),#TabelaIndividualTecnico tbody tr td:nth-child(5) {
+    width: 40%;
+    text-align: center;
+} 
+#TabelaIndividualAssociacao tbody tr td:nth-child(3){
+    width: 90%;
+    text-align: center;        
+}
+#TabelaIndividualEstatisticas tbody tr td:nth-child(2),#TabelaIndividualEstatisticas  tbody tr td:nth-child(6){
+    width: 45%;
+}
+#TabelaIndividualEstatisticas tbody tr td:nth-child(3){
+    width: 3%;
+}
+.tituloEstatistica{
+    padding: 10px;
+}
+@media(max-width: 700px){
+    .grupos{
+        flex-direction: column;
+        align-items: left;
+    }
+    .gruposCelular{
+        width: 95%;
+    }
+    .grupos div table{
+        width: 100%;
+        margin-left: 5%;        
+    }
+    #jogosGrupos{
+        width: 100%;
+    }
+    #celular{
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    #jogos{
+        flex-direction: column;
+        width: 100%;
+    }
+    #sulAmericana, #libertadores{
+        flex-direction: column;
+    }
+    #quartasSulAmericanaEsquerda, #quartasSulAmericanaDireita,     #semiSulAmericanaDireita, #semiLibertadoresDireita,#quartasLibertadoresEsquerda, #quartasLibertadoresDireita,
+    #semiSulAmericanaEsquerda, #semiLibertadoresEsquerda, #semiSulAmericanaDireita, #semiLibertadoresDireita{
+        width: 100%;
+    }
+    #finalSulAmericana, #finalLibertadores{
+        width: 110%;
+    }
+    #quartasSulAmericanaEsquerda div, #quartasSulAmericanaDireita div, #semiSulAmericanaDireita div, #semiLibertadoresDireita div,#quartasLibertadoresEsquerda div, #quartasLibertadoresDireita div{
+        width: 50%;
+    }
+    #semiSulAmericanaEsquerda div, #semiLibertadoresEsquerda div{
+        width: 100%;
+    }
+    #semiSulAmericanaEsquerda div, #semiLibertadoresEsquerda div, #semiSulAmericanaDireita div, #semiLibertadoresDireita div{
+        margin-bottom: 20px;
+    }
+    #finalSulAmericana div, #finalLibertadores div{
+        width: 95%;
+        flex-direction: column;
+        margin-top: 5px;
+        margin-left: -5px;
+    }
+    #finalSulAmericana h2, #finalLibertadores h2{
+        padding-bottom: 5px;
+    }
+    .perdedorSemi{
+        margin-top: 0px;
+        padding-bottom: 0px;
+    }
+    .Final1{
+        margin-top: 0px;
+        padding-bottom: 0px;
+    }
+    .Final2{
+        margin-top: 0px;
+    }
+    .Final3{
+        margin-top: 0px;
+        padding-bottom: 0px;
+    }
+    .Final4{
+        margin-top: 0px;
+    }
+    .divisoria1, .divisoria2, .divisoria3{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+    .divisoria1, .divisoria3{
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    .divisoria3 div{
+        width: 100%;
+    }
+    .gruposCelular{
+        margin-left: -3%;
+    }    
+    caption{
+        width: 90%;
+    }
+    #jogos table{
+        width: 90%;
+        margin-left: 5%;
+    }
+    #estatisticasGrupo{
+        width: 100%;
+        flex-direction: column;
+        margin-top: 50px;
+        align-items: center;
+    }
+    span{
+        position: absolute;
+        left: 70%;
+    }
+}
+@media(max-width: 500px){
+    .gruposCelular table thead tr th:nth-child(6), .gruposCelular table tbody tr td:nth-child(6), .gruposCelular table tr th:nth-child(7),
+    .gruposCelular table tr td:nth-child(7){
+        display: none;
+    }
+}

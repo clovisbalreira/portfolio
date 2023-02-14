@@ -1,0 +1,7 @@
+@charset "UTF-8";
+/* aparelho deitado (portrait)*/
+body{
+    background-color: orange;
+    background-image: url('');
+    background-position: left bottom;
+}

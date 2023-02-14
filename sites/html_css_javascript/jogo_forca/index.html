@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da forca</title>
+    <style>
+        @font-face {
+            font-family: Starjedi;
+            src: url("img/Starjedi.ttf");
+        }
+        body{
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            margin-top: 30px;
+        }
+
+        h1{
+            color: yellow;
+            font-family: Starjedi;
+        }
+
+        img.dartvader{
+            width: 300px;
+        }
+
+        .palavra{
+            color: yellow;
+            font-size: 42px;
+        }
+        .letra{
+            border: 1px solid yellow;
+        }
+
+        button{
+            background-color: blue;
+            color: white;
+            border: 0;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>Jogo da forca</h1>
+    <img src="img/darth-vader.png" alt="" class="dartvader">
+    <p class="palavra"><span class="letra">u</span>ma frase</p>
+    <button>CHUTAR LETRA</button>
+    <img src="img/driven.png" alt="" class="driver">
+</body>
+</html>
