@@ -9,39 +9,24 @@ function toogleMode(){
     }
 }
 
-var lista = document.querySelector('ul')
-console.log(lista)
-lista.addEventListener('mouseover' , function(event){
-    event.target.childNodes[1].classList.remove('desaparecer')
-    event.target.childNodes[1].classList.add('especificacoes')
-})
-lista.addEventListener('mouseout' , function(event){
-    event.target.childNodes[1].classList.add('desaparecer')
-    event.target.childNodes[1].classList.remove('especificacoes')
-})
 const ulHtmlCssJavascript = document.getElementById('site-html-css-javascript')
-const li = document.createElement('li')
-const a = document.createElement('a')
-a.setAttribute('href', 'index.html')
-a.innerHTML = "Home"
-li.appendChild(a)
-ulHtmlCssJavascript.appendChild(li)
+
 sites.forEach( site => {
     if(site.linguagem.nome == 'HTML, CSS e JavaScript'){
         const li = document.createElement('li')
         const a = document.createElement('a')
-        a.setAttribute('class', 'linkSite')
+        a.classList.add('linkSite')
         a.setAttribute('href', site.url)
         a.setAttribute('target', '_blank' )
         a.innerHTML = site.titulo
         const div = document.createElement('div')
-        div.setAttribute('class', 'especificacoes')
-        div.setAttribute('class', 'desaparecer')
+        div.classList.add('desaparecer')
         const pDescricao = document.createElement('p')
         pDescricao.innerHTML = 'Descrição: ' + site.descricao
         div.appendChild(pDescricao)
         const pLinguagem = document.createElement('p')
         pLinguagem.innerHTML = 'Linguagem: ' + site.linguagem.nome
+        pLinguagem.classList.add('especificacoes')
         div.appendChild(pLinguagem)
         const pLinguagemDescricao = document.createElement('p')
         pLinguagemDescricao.setAttribute('class', 'descricoes')
@@ -51,21 +36,21 @@ sites.forEach( site => {
         pTipo.innerHTML = 'Tipo: ' + site.tipo.nome
         div.appendChild(pTipo)
         const pTipoDescricao = document.createElement('p')
-        pTipoDescricao.setAttribute('class', 'descricoes')
+        pTipoDescricao.classList.add('descricoes')
         pTipoDescricao.innerHTML = 'Descrição: ' + site.tipo.descricao
         div.appendChild(pTipoDescricao)
         const pProjeto = document.createElement('p')
         pProjeto.innerHTML = 'Projeto: ' + site.projeto.nome
         div.appendChild(pProjeto)
         const pProjetoDescricao = document.createElement('p')
-        pProjetoDescricao.setAttribute('class', 'descricoes')
+        pProjetoDescricao.classList.add('descricoes')
         pProjetoDescricao.innerHTML = 'Descrição: ' + site.projeto.descricao
         div.appendChild(pProjetoDescricao)
         const pModelo = document.createElement('p')
         pModelo.innerHTML = 'Modelo: ' + site.modelo.nome
         div.appendChild(pModelo)
         const pModelooDescricao = document.createElement('p')
-        pModelooDescricao.setAttribute('class', 'descricoes')
+        pModelooDescricao.classList.add('descricoes')
         pModelooDescricao.innerHTML = 'Descrição: ' + site.modelo.descricao
         div.appendChild(pModelooDescricao)
         const pTag = document.createElement('p')
@@ -76,4 +61,18 @@ sites.forEach( site => {
         ulHtmlCssJavascript.appendChild(li)
     }
 });
-console.log()
+
+var listas = document.querySelectorAll('li')
+listas.forEach(lista => {
+    lista.addEventListener('mouseover' , function(event){
+        event.target.childNodes[1].classList.remove('desaparecer')
+        event.target.childNodes[1].classList.add('especificacoes')
+    })
+    lista.addEventListener('mouseout' , function(event){
+        event.target.childNodes[1].classList.add('desaparecer')
+        event.target.childNodes[1].classList.remove('especificacoes')
+    })
+})
+
+
+
