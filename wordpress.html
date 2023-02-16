@@ -7,21 +7,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio</title>
+    <title>Portfólio - HTML, CSS, JAVASCRIPT</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div id="container">
         <div id="profile">
-            <img src="https://github.com/clovisbalreira.png" alt="Clóvis Balreira Rodrigues">
-            <p>@clovisbalreira</p>
+            <a href="./index.html">
+                <img src="https://github.com/clovisbalreira.png" alt="Clóvis Balreira Rodrigues">
+                <p>@clovisbalreira</p>
+            </a>
         </div>
         <div id="switch" onclick="toogleMode()">
             <button></button>
             <span></span>
         </div>
-        <ul id="ul_inicio">
-            <li><a href="index-antigo.html" target="_blank">Portfólio Antigo</a></li>
+        <ul id="site-wordpress">
         </ul>
         <div id="social-links">
             <a href="https://github.com/clovisbalreira" target="_blank">
@@ -36,10 +37,10 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="./js/js.js"></script>
+    <script src="./js/script.js"></script>
     <script src="./js/toogleMode.js"></script>
-    <script src="./js//script.js"></script>
     <script>
-        mostrarLinguagem()
+        mostrarSites('site-wordpress','WordPress')
     </script>
 </body>
 </html>

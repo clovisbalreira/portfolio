@@ -1,6 +1,6 @@
 @charset "utf-8";
 body{
-    background-image:url("../img/fundo/fundo.png");
+    background:url("../img/fundo/fundo.png");
     background-repeat:no-repeat;
     background-size: cover;
     background-attachment:fixed;

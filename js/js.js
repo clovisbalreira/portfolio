@@ -1,13 +1,13 @@
-var linguagens = [{ nome: 'HTML, CSS e JavaScript', descricao: 'Projetos criado em HTML, CSS e JavaScript.', imagem: 'img/html_css_javascript.png' },
-{ nome: 'HTML e CSS', descricao: 'Projetos com prioridade HTML e CSS.', imagem: 'img/html_css.png' },
-{ nome: 'Javascript', descricao: 'Projetos com prioridade em HTML e JavaScript.', imagem: 'img/javascript.png' },
-{ nome: 'P.H.P.', descricao: 'Projetos criado em P.H.P.', imagem: 'img/php.png' },
-{ nome: 'React', descricao: 'Projetos criado em React.', imagem: 'img/react.png' },
-{ nome: 'WordPress', descricao: 'Projetos criado em WordPress.', imagem: 'img/wordpress.jpg' },
-{ nome: 'Java', descricao: 'Projetos criado em Java.', imagem: 'img/java.png' },
-{ nome: 'Flutter', descricao: 'Projetos criado em Flutter.', imagem: 'img/flutter.png' },
-{ nome: 'Python', descricao: 'Projetos criado em Python.', imagem: 'img/python.png' },
-{ nome: 'Designer gráfico', descricao: 'Projetos de designer gráfico.', imagem: 'img/arquivo.jpg' }
+var linguagens = [{ nome: 'HTML, CSS e JavaScript', descricao: 'Projetos criado em HTML, CSS e JavaScript.', imagem: 'img/html_css_javascript.png', url: 'html-css-javascript.html' },
+{ nome: 'HTML e CSS', descricao: 'Projetos com prioridade HTML e CSS.', imagem: 'img/html_css.png', url: 'html-css.html' },
+{ nome: 'Javascript', descricao: 'Projetos com prioridade em HTML e JavaScript.', imagem: 'img/javascript.png', url: 'javascript.html' },
+{ nome: 'P.H.P.', descricao: 'Projetos criado em P.H.P.', imagem: 'img/php.png', url: 'php.html' },
+{ nome: 'React', descricao: 'Projetos criado em React.', imagem: 'img/react.png', url: 'react.html' },
+{ nome: 'WordPress', descricao: 'Projetos criado em WordPress.', imagem: 'img/wordpress.jpg', url: 'wordpress.html' },
+{ nome: 'Java', descricao: 'Projetos criado em Java.', imagem: 'img/java.png', url: 'java.html' },
+{ nome: 'Flutter', descricao: 'Projetos criado em Flutter.', imagem: 'img/flutter.png', url: 'flutter.html' },
+{ nome: 'Python', descricao: 'Projetos criado em Python.', imagem: 'img/python.png', url: 'python.html' },
+{ nome: 'Designer gráfico', descricao: 'Projetos de designer gráfico.', imagem: 'img/arquivo.jpg', url: './imagens/index.html' }
 ]
 
 var tipos = [
@@ -35,7 +35,7 @@ var tags = '#github #desenvolvimentoweb #desenvolvedores #frontend #desenvolvedo
 var tagsLinguagem = ["#HTML #CSS #JAVASCRIPT","#HTML #CSS","#HTML #JAVASCRIPT","#php","#react #reactjs","#wordpress","#java","#flutter","#python","#designergráfico"]
 
 var sites = [
-    {titulo: 'Curso em vídeo', descricao: 'Projeto criado no modelo do curso em vídeo. Com mentoria de Gustavo Guanabara.', linguagem: linguagens[0], url: 'sites/html_css_javascript/curso_em_video_html_css_javascript/index.html', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tagsLinguagem[0]} ${tags} #cursoemvideo #gustavoguanabara`},
+    {titulo: 'Curso em vídeo', descricao: 'Projeto criado no modelo do curso em vídeo. Com mentoria de Gustavo Guanabara.', linguagem: linguagens[0], url: 'https://clovisbalreira.github.io/curso-em-video-html-css-javascript/', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tagsLinguagem[0]} ${tags} #cursoemvideo #gustavoguanabara`, repositorio: "https://github.com/clovisbalreira/curso-em-video-html-css-javascript"},
     {titulo: 'Restaurante', descricao: 'Projeto criado no modelo para um restaurante.', linguagem: linguagens[0], url: 'sites/html_css_javascript/restaurante/index.html', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[0], tag: `${tagsLinguagem[0]} ${tags} #restaurante`},
     {titulo: 'Realidade Aumentada', descricao: 'Projeto pessoal criado com passe para mostrar a realidade aumentada.', linguagem: linguagens[0], url: 'sites/html_css_javascript/realidade_aumentada/index.html', tipo: tipos[0], modelo: modelos[2], status: 'Sim', projeto: projetos[0], tag: `${tagsLinguagem[0]} ${tags} #realidadeaumentada`},
     {titulo: 'Interface Netflix', descricao: 'Projeto criado no modelo da interface da netflix.', linguagem: linguagens[0], url: 'sites/html_css_javascript/recriando_interface_netflix/index.html', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tagsLinguagem[0]} ${tags} #netflix`},
@@ -80,7 +80,7 @@ var sites = [
     { titulo: 'MySql ( Básico curso em vídeo )', descricao: 'Projeto criado no modelo do MySql ( Básico curso em vídeo ). Com mentoria de Gustavo Guanabara.', tipo: tipos[0], linguagem: linguagens[3], url: 'https://clovis-estudonauta.000webhostapp.com/mysql/index.php', modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[3]} #cursoemvideo #gustavoguanabara #estudonauta`},
     { titulo: 'Estudonauta', descricao: 'Projeto criado no modelo do estudonauta. Com mentoria de Gustavo Guanabara.', tipo: tipos[0], linguagem: linguagens[3], url: 'https://clovis-estudonauta.000webhostapp.com/estudonauta/index.php', modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[3]} #estudonauta`},
     { titulo: 'Gestão de Super Mercado', descricao: 'Projeto criado para gestão de supermercado.', tipo: tipos[0], linguagem: linguagens[3], url: 'https://clovis-estudonauta.000webhostapp.com/supermercado/index.php', modelo: modelos[0], status: 'Sim', projeto: projetos[0], tag: `${tags} ${tagsLinguagem[3]}`},
-    { titulo: 'Informaticon', descricao: 'Projeto criado no modelo da informaticon. Com mentoria de Neri Neitzke.', linguagem: linguagens[3], url: 'https://php-clovis.000webhostapp.com/php-carrinho-neri/', tipo: tipos[0], modelo: modelos[0], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[3]}`},    
+    /*{ titulo: 'Informaticon', descricao: 'Projeto criado no modelo da informaticon. Com mentoria de Neri Neitzke.', linguagem: linguagens[3], url: 'https://php-clovis.000webhostapp.com/php-carrinho-neri/', tipo: tipos[0], modelo: modelos[0], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[3]}`},*/    
     { titulo: 'Imersão React Alura - AluraCord - Matrix Cord', descricao: 'Projeto criado no modelo da imersão alura react. criando uma chat.', linguagem: linguagens[4],  url: 'https://aluracord-matrixchat.vercel.app/', tipo: tipos[0], modelo: modelos[0], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[4]} #alura #ImersãoDev`},    
     { titulo: 'Lista de Tarefas', descricao: 'Projeto criando um modelo de lista de tarefas.', linguagem: linguagens[4], url: 'https://lista-tarefas-flame.vercel.app/', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[4]}`},    
     { titulo: 'Sistema Financeiro', descricao: 'Projeto criando um modelo de lista de financeiro.', linguagem: linguagens[4], url: 'https://sistema-financeiro-gold.vercel.app/', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[4]}`},    
