@@ -20,13 +20,12 @@ sites.forEach( site => {
         a.setAttribute('target', '_blank' )
         a.innerHTML = site.titulo
         const div = document.createElement('div')
-        div.classList.add('desaparecer')
         const pDescricao = document.createElement('p')
         pDescricao.innerHTML = 'Descrição: ' + site.descricao
         div.appendChild(pDescricao)
+        div.classList.add('especificacoes')
         const pLinguagem = document.createElement('p')
         pLinguagem.innerHTML = 'Linguagem: ' + site.linguagem.nome
-        pLinguagem.classList.add('especificacoes')
         div.appendChild(pLinguagem)
         const pLinguagemDescricao = document.createElement('p')
         pLinguagemDescricao.setAttribute('class', 'descricoes')
@@ -62,7 +61,7 @@ sites.forEach( site => {
     }
 });
 
-var listas = document.querySelectorAll('li')
+/*var listas = document.querySelectorAll('li')
 listas.forEach(lista => {
     lista.addEventListener('mouseover' , function(event){
         event.target.childNodes[1].classList.remove('desaparecer')
@@ -72,7 +71,7 @@ listas.forEach(lista => {
         event.target.childNodes[1].classList.add('desaparecer')
         event.target.childNodes[1].classList.remove('especificacoes')
     })
-})
+})*/
 
 
 

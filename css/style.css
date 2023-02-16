@@ -28,6 +28,12 @@
     margin: 1rem 0;
     border-radius: 20px;
 }
+.linkSite > div{
+    display: none;
+}
+.linkSite:hover > div{
+    display: block;
+}
 .especificacoes p{
     margin-top: 1rem;
 }
