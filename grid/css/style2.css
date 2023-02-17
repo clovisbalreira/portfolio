@@ -1,0 +1,12 @@
+@import url('config.css');
+.grid-container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 40px 120px 80px 160px;
+    grid-template-rows: 50px 70px 90px;
+}
+
+.cx-6{
+    z-index: 1;
+}
+.cx-
