@@ -83,7 +83,7 @@ var sites = [
        /*    
        { titulo: 'Exemplo Site', descricao: 'Projeto de modelo de um site', linguagem: linguagens[9], url: 'https://github.com/clovisbalreira/python/tree/main/cursos-python-web', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[8]}`, repositorio: ' '},    
        */
-       { titulo: 'Designer', descricao: 'Projetos gráficos.', linguagem: linguagens[10], url: 'sites/imagens/index.html', tipo: tipos[0], modelo: modelos[2], status: 'Sim', projeto: projetos[0], tag: `${tags}`, repositorio: 'sites/imagens/index.html'},
+       { titulo: 'Designer', descricao: 'Projetos gráficos.', linguagem: linguagens[10], url: 'sites/imagens/index.html', tipo: tipos[0], modelo: modelos[2], status: 'Sim', projeto: projetos[0], tag: `${tags}`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/imagens'},
           
     //Curso em video
     { titulo: 'Curso em video', descricao: 'Projeto criado no modelo do curso em vídeo. Com mentoria de Gustavo Guanabara.', linguagem: linguagens[0], url: './sites/curso-em-video-html-css/', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[1], tag: `${tags} ${tagsLinguagem[1]} #cursoemvideo #gustavoguanabara  #estudonauta`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/curso-em-video-html-css'},
@@ -99,7 +99,7 @@ var sites = [
     { titulo: 'Curso em video', descricao: 'Exercicios de java básico', linguagem: linguagens[6], url: 'https://github.com/clovisbalreira/curso_em_video_java_basico', tipo: tipos[1], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[6]}`, repositorio: ' '},    
     { titulo: 'Curso em video java poo', descricao: 'Exercicios de java POO', linguagem: linguagens[6], url: 'https://github.com/clovisbalreira/java/tree/main/curso_em_video_java_poo', tipo: tipos[1], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[6]}`, repositorio: ' '},    
     { titulo: 'Modelo curso em video - pizzaria fresco', descricao: 'Projeto criado no modelo do curso em vídeo - usando plugins. Com mentoria de Gustavo Guanabara Ramiro Lobo.', linguagem: linguagens[7], url: 'https://github.com/clovisbalreira/wordpress/tree/main/CursoEmVideo', tipo: tipos[2], modelo: modelos[3], status: 'Sim', projeto: projetos
-    [2], tag: `${tags} ${tagsLinguagem[5]} #cursoemvideo #gustavoguanabara  #estudonauta`, repositorio: ' '},    
+    [2], tag: `${tags} ${tagsLinguagem[5]} #cursoemvideo #gustavoguanabara  #estudonauta`, repositorio: 'https://github.com/clovisbalreira/wordpress/tree/main/CursoEmVideo'},    
      
     //Bora Codar
     {titulo: 'BoraCodar', descricao: 'Projeto criado no modelo do boracodar. Com mentoria de Mayk Brito.', linguagem: linguagens[1], url: './sites/boracodar/', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tagsLinguagem[0]} ${tags} #boracodar #maykbrito`, repositorio: ''},
@@ -132,8 +132,8 @@ var sites = [
     { titulo: 'Conversor de moedas', descricao: 'Projeto criado no modelo da imersão da alura. Com mentoria de paulo Silveira, Rafaella Ballerini e Guilherme Lima.', linguagem: linguagens[0], url: 'sites/html_css_javascript/alura_imersao_html/conversor_de_Moedas.html', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[1], tag: `${tags} ${tagsLinguagem[0]} #alura #ImersãoDev #rafaellaballerini #paulosilveira #guilhermelima #comunidaderafaellaballerini`, repositorio: ' '},
     { titulo: 'Imersão React Alura - AluraCord - Matrix Cord', descricao: 'Projeto criado no modelo da imersão alura react. criando uma chat.', linguagem: linguagens[5],  url: 'https://aluracord-matrixchat.vercel.app/', tipo: tipos[0], modelo: modelos[0], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[4]} #alura #ImersãoDev`, repositorio: ' '},    
     */
-    { titulo: 'Tema Malura', descricao: 'Projeto criado no modelo da alura - criação de tema', linguagem: linguagens[7], url: 'https://github.com/clovisbalreira/wordpress/tree/main/malura', tipo: tipos[2], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[5]} #alura`, repositorio: ' '},    
-    { titulo: 'Tema Intercambios', descricao: 'Projeto criado no modelo da alura - criação de tema', linguagem: linguagens[7], url: 'https://github.com/clovisbalreira/wordpress/tree/main/alura-intercambios', tipo: tipos[2], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[5]} #alura`, repositorio: ' '},    
+    { titulo: 'Tema Malura', descricao: 'Projeto criado no modelo da alura - criação de tema', linguagem: linguagens[7], url: 'https://github.com/clovisbalreira/wordpress/tree/main/malura', tipo: tipos[2], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[5]} #alura`, repositorio: 'https://github.com/clovisbalreira/wordpress/tree/main/malura'},    
+    { titulo: 'Tema Intercambios', descricao: 'Projeto criado no modelo da alura - criação de tema', linguagem: linguagens[7], url: 'https://github.com/clovisbalreira/wordpress/tree/main/alura-intercambios', tipo: tipos[2], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[5]} #alura`, repositorio: 'https://github.com/clovisbalreira/wordpress/tree/main/alura-intercambios'},    
    
    //Neri Netzke
    /*
