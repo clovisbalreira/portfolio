@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <section>
+        <h1>Operadores</h1>
+        <script>
+            /*
+                Aritiméticos =
+                    + = soma
+                    - = subtração
+                    * = multiplicação
+                    / = divisão
+                    % = resto da divisão
+                    ** = potenciação
+                        ordem da precedência
+                        ()
+                        **
+                        * , / , %
+                        + , _
+                        !
+                        &&
+                        ||
+                Atribuição
+                    =
+                    variavel operador valor
+                    n=n+4      n+=4
+                    n=n-4      n-=4
+                    n=n*4      n*=4
+                    n=n/4      n/=4
+                    n=n%4      n%=4
+                    n=n**4     n**=4
+                    incremento
+                    n++
+                    n--
+                    pre incremento
+                    ++n
+                    --N
+                relacionais
+                    >   maior que
+                    <   menor que
+                    >=  igual maior que
+                    <=  igual menor que
+                    ==  igual
+                    !=  diferente
+        
+                lógicos
+                    !  negação      inverte o resultado
+                    && conjunção    dois valores iguais
+                    || disjunção    um valor igual
+                ternários
+                    teste logico
+                    teste ? true : false
+            */
+            do{
+                n1 = window.prompt('Digite nota 1:')
+            }while(isNaN(n1))
+            do{
+                n2 = window.prompt('Digite  nota 2:')
+            }while(isNaN(n2))
+            var soma = n1 + n2
+            var subtracao = n1 - n2
+            var multiplicacao = n1 * n2
+            var divisao = n1 / n2
+            var restoDivisao = n1 % n2
+            var potenciacao = n1 ** n2
+            var maior = n1 > n2
+            var menor = n1 < n2
+            var maiorQue = n1 >= n2
+            var menorQue = n1 <= n2
+            var igual = n1 == n2
+            var diferente = n1 != n2
+            var negacaoE = !(n1 && n2)
+            var negacaoOu = !(n1 || n2)
+            var e = n1 && n2
+            var ou = n1 || n2
+            document.write(`Resultado da soma: ${soma}<br>`)
+            document.write(`Resultado da subtração: ${subtracao}<br>`)
+            document.write(`Resultado da multiplicação: ${multiplicacao}<br>`)
+            document.write(`Resultado da divisão: ${divisao}<br>`)
+            document.write(`Resultado da resto da divisão: ${restoDivisao}<br>`)
+            document.write(`Resultado da potenciação: ${potenciacao}<br>`)
+            document.write(`A nota 1 é maior que a nota 2: ${maior}<br>`)
+            document.write(`A nota 1 é menor que a nota 2: ${menor}<br>`)
+            document.write(`A nota 1 é maior ou igual que a nota 2: ${maiorQue}<br>`)
+            document.write(`A nota 1 é menor ou igual que a nota 2: ${menorQue}<br>`)
+            document.write(`A nota 1 é igual que a nota 2: ${igual}<br>`)
+            document.write(`A nota 1 é diferente que a nota 2: ${diferente}<br>`)
+            document.write(`A nota 1 é diferente que a nota 2: ${negacaoE}<br>`)
+            document.write(`A nota 1 é diferente que a nota 2: ${negacaoOu}<br>`)
+            document.write(`A nota 1 é diferente que a nota 2: ${e}<br>`)
+            document.write(`A nota 1 é diferente que a nota 2: ${ou}<br>`)
+            document.write(soma == 5 ? 'Maior que 5' : 'menor que 5')
+        </script>
+        <br><a href="../index.html">Voltar</a>
+    </section>
+</body>
+</html>

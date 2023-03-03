@@ -1,0 +1,45 @@
+body{
+    background-color: rgb(105, 105, 173);
+    font: normal 15pt Arial
+}
+header{
+    text-align: center;
+}
+section{
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: 
+    space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 3px 3px 10px black;
+    color:  black;
+}
+#principal{
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+footer{
+    text-align: center;
+    font-style: italic;
+}
+section div{
+    display: flex;
+    gap: 10px;
+}
+ol.exemplos{
+    columns: 1;
+    padding: 0 13px;
+}
+a{
+    text-decoration: none;
+    background-color: rgb(211, 211, 211);
+    margin-top: 1rem;
+}

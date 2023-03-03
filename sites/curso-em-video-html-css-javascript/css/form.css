@@ -1,0 +1,113 @@
+@charset "UTF-8";
+form{
+    width: 50%;
+    margin: auto;
+}
+
+input , select, textarea{
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 13pt;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+input:hover, textarea:hover{
+    background-color: #dddddd;
+}
+legend{
+    color: #888888;
+    font-weight: bold;
+    font-size: 13pt;
+    font-family: sans-serif;
+}
+
+fieldset{
+    border-color: #cecece;
+    margin: 2.0rem;
+}
+
+fieldset#usuario{
+    background: url("../imagens/icone-contato.png") no-repeat 95% 95%;
+}
+
+fieldset#endereco{
+    background: url("../imagens/icone-endereco.png") no-repeat 95% 95%;
+}
+
+fieldset#mensagem{
+    background: url("../imagens/icone-mensagem.png") no-repeat 95% 95%;
+}
+
+fieldset#pedido{
+    background: url("../imagens/icone-pagamento.png") no-repeat 95% 95%;
+}
+fieldset#usuario, fieldset#endereco, fieldset#mensagem, fieldset#pedido{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+fieldset#usuario div, fieldset#endereco div, fieldset#mensagem div, fieldset#pedido div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+select{
+    width: 74%;
+}
+fieldset#usuario div input, fieldset#endereco div input, fieldset#mensagem div input, fieldset#pedido div input{
+    width: 70%;
+    padding-left: 1rem;
+}
+fieldset#endereco div:nth-child(4){
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+fieldset#mensagem div:nth-child(2){
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+fieldset#mensagem div:nth-child(2) div{
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+}
+fieldset#mensagem div:nth-child(2) div p{
+    text-indent: 0;
+}
+fieldset#mensagem div:nth-child(3){
+    display: grid;
+    margin: auto;
+}
+fieldset#pedido div:nth-child(2){
+    display: inline;
+}
+fieldset#pedido div:nth-child(2) input{
+    width: 2rem;
+    margin: 0;
+}
+#button{
+    margin-left: 1.5rem;
+}
+@media(max-width: 1700px){
+    form{
+        width: 100%;
+    }
+}
+
+@media(max-width: 600px){
+    fieldset#endereco div:nth-child(4){
+        flex-wrap: wrap;
+    }    
+    fieldset#endereco div:nth-child(4) div{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    fieldset#endereco div:nth-child(4) div input{
+        width: 70%;
+    }
+}
