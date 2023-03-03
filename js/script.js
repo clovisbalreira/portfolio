@@ -56,6 +56,15 @@ function mostrarSites(id, linguagem){
             const pTag = document.createElement('p')
             pTag.innerHTML = 'Tag: ' + site.tag
             div.appendChild(pTag)
+            if(site.repositorio != ' '){
+                const repositorio = document.createElement('a')
+                repositorio.innerHTML = 'Repositório GitHub'
+                repositorio.classList.add('linkRepositorio')
+                repositorio.setAttribute('href',site.repositorio)
+                repositorio.setAttribute('target','_black')
+                repositorio.setAttribute('alt',site.nome)
+                div.appendChild(repositorio)
+            }
             a.appendChild(div)
             li.appendChild(a)
             ul.appendChild(li)
