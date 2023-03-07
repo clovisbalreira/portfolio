@@ -173,7 +173,7 @@ svg circle:nth-child(2){
 }
 .bars{
     display: flex;
-    gap: calc(3vw 1rem);
+    gap: calc(3vw + 1rem);
     align-items: flex-end;
     position: relative;
 }
