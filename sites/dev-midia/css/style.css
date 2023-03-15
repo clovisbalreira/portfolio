@@ -1,0 +1,248 @@
+@charset "UTF-8";
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #f1f1f1;
+}
+.icon{
+    width: 15px;
+    margin-right: 5px;
+}
+h2{
+    font-weight: 100;
+}
+header section.logo{
+    background-color: #ffffff;
+    height: 55px;
+    padding-left: 25px;
+    padding-right: 25px;
+    vertical-align: middle;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header section.logo span:nth-child(1){
+    font-size: 18px;
+    color: red;
+}
+header section.logo span:nth-child(2) input[type="search"]{
+    font-size: 1rem;
+}
+header section.logo span{
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+}
+header section.principal {
+    height: 100vh;
+    background-size: cover;
+    background: black url('../imagens/london.jpg') no-repeat scroll center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header section.principal div.sectionPrincipal{
+    width: 60rem;
+}
+header section.principal div.sectionPrincipal nav{
+    background-color: black;
+    display: flex;
+}
+header section.principal div.sectionPrincipal nav ul{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
+header section.principal div.sectionPrincipal nav ul li{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: .5rem;
+}
+header section.principal div.sectionPrincipal nav ul li:nth-child(1) {
+    background-color: red;
+}
+header section.principal div.sectionPrincipal nav ul li:hover {
+    background-color: red;
+}
+header section.principal div.sectionPrincipal nav ul li:not(:hover){
+    background-color: black;
+}
+header section.principal div.sectionPrincipal nav ul li p{
+    color: white;
+}
+header section.principal div.sectionPrincipal form{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+}
+header section.principal div.sectionPrincipal form h2{
+    font-size: 1.5em;
+}
+header section.principal div.sectionPrincipal form div.from{
+    display: flex;
+    gap: 1rem;
+}
+header section.principal div.sectionPrincipal form div.from div.from-to{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    width: 100%;
+}
+body section.principal div.sectionPrincipal form div.from div.from-to input[type='text']{
+    border: 1px solid #cccccc; 
+    color: #cccccc;
+    padding: 1%;
+    width: 97%;
+}
+header section.principal div.sectionPrincipal form button{
+    padding: 1%;
+    color: white;
+    background-color: #616161;
+    border: none;
+    width: 20%;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 85%;
+}
+main h2{
+    margin: 1% 0;
+}
+main section.cidades{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    margin-top: 1%;
+    gap: 1rem;
+}
+.item1{
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+main section.cidades div{
+    position: relative;
+}
+main section.cidades div img{
+    width: 100%;
+}
+main section.cidades div.item1 img{
+    height: 99%;
+}
+main section.cidades div p{
+    position: absolute;
+    color: white;
+    bottom: 1rem;
+    left: 1rem
+}
+main section.cidades div.item1 p{
+    bottom: 30px;
+}
+main section.estacoes{
+    display: flex;
+    gap: 1rem;
+    margin-top: 10px;
+}
+main section.estacoes section img{
+    width: 100%;
+}
+main section.estacoes section div{
+    background-color: white;
+    margin-top: -10px;
+}
+main section.estacoes section div h2,main section.estacoes section div p{
+    padding: 20px;
+}
+main section.estacoes section div p.roundtrip{
+    color: #616161;
+}
+main section.estacoes section div p.tickets{
+    padding-left: 30px;
+}
+main section.newsletter{
+    background-color: #616161;
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    margin-top: 20px;
+    color: white;
+}
+main section.newsletter p{
+    padding-bottom: 10px;
+}
+main section.newsletter input[type='email']{
+    padding: 5px;
+    margin-bottom: 10px;
+}
+main section.newsletter button{
+    background-color: #f38981;
+    border: none;
+    width: 90px;
+    color: white;
+    padding: 10px;
+}
+main section.contact{
+    display: flex;
+    flex-direction: column;
+}
+main section.contact p{
+    margin-bottom: 20px;
+}
+main section.contact span{
+    padding-bottom: 10px;
+}
+main section.contact input{
+    margin-bottom: 15px;
+    padding: 10px;
+}
+main section.contact button{
+    padding: 15px;
+    border: none;
+    background-color: black;
+    color: white;
+    width: 150px;
+}
+footer{
+    text-align: center;
+    margin: 20px;
+}
+footer div{
+    margin: 20px;
+}
+.dark{
+    background-color: red;
+}
+@media(max-width: 768px){
+    header section.principal div.sectionPrincipal{
+        width: max-content;
+    }
+    header section.principal div.sectionPrincipal form button{
+        width: 40%;
+    }
+    main{
+        width: 95%;
+    }
+}
+@media(max-width: 500px){
+    header section.principal div.sectionPrincipal form div.from{
+        flex-direction: column;
+    }    
+    header section.principal div.sectionPrincipal form button{
+        width: 60%;
+    }
+    main section.cidades{
+        display: flex;
+        flex-direction: column;
+    }
+    main section.estacoes{
+        flex-direction: column;
+    }        
+}
