@@ -8,6 +8,7 @@ let desafios = [
     {titulo: 'Encontre seu bloco de carnaval', caminho: 'desafio07'},
     {titulo: 'Dashboard', caminho: 'desafio08'},
     {titulo: 'Conversor de moeda', caminho: 'desafio09'},
+    {titulo: 'Clima', caminho: 'desafio10'},
 ]
 let main = document.querySelector('main')
 let ul = document.createElement('ul')

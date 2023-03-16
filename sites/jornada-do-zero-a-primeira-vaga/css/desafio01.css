@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+body{
+    background: url('../img/background-desafio01.jpg') no-repeat center/cover;
+    height: 100vh;
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+h1{
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 86px;
+    color: #151718;
+}
+h1 span{
+    color: #DB2777;;
+}
+p{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(44, 46, 47, 0.9);
+    margin-bottom: 72px;
+}
+a{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #151718;
+    padding: 16px 32px;
+}
+a:hover, .btn-primary{
+    background: #DB2777;
+    border-radius: 80px;
+    text-decoration: none;
+    color: white;
+}
+.btn-voltar{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}

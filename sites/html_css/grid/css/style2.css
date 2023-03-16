@@ -1,0 +1,66 @@
+@import url('config.css');
+.grid-container{
+    /*height: 50vh;*/
+    display: grid;
+    /*grid-template-columns: auto auto auto auto;*/
+    /*grid-template-columns: 1fr 1fr 2fr 1fr;*/
+    /*grid-template-columns: 10px repeat(4, 1fr 10px);*/
+    /*grid-gap: 10px;*/
+    grid-template-columns: 
+        [inicio-sidebar-esq] 1fr 10px 1fr
+        [fim-sidebar-esq] 10px 
+        [inicio-principal] ifr repeat(7, 10px 1fr)
+        [fim-principal] 10px 
+        [inicio-sidebar-dir] 1fr 10px 1fr
+        [fim-sidebar-dir]
+        /*
+        */
+    ;
+    grid-template-rows: 
+    [cabecalho] 1fr
+    [principal] 1fr
+    [rodape] 1fr
+    ;
+    /*
+    */
+}
+.cx-1{
+    grid-column: inicio-sidebar-esq / fim-sidebar-dir ; 
+    grid-row: cabecalho ;
+}
+.cx-2{
+    grid-column: inicio-sidebar-esq / fim-sidebar-esq ;
+    grid-row: principal ;
+}
+.cx-3{
+    grid-column: incio-principal / fim-principal ; 
+    grid-row: principal ;
+}
+.cx-4{
+    grid-column: inicio-sidebar-dir / fim-sidebar-dir ; 
+    grid-row: principal ;
+}
+.cx-5{
+    grid-column: inicio-sidebar-esq / fim-sidebar-dir ; 
+    grid-row: rodape ;
+}
+/*
+*/
+.cx-6{
+    /*z-index: 1;
+    width: 100px;
+    height: 100px;
+    */
+}
+.cx-15{
+    /*grid-column: 1/2;
+    grid-row: 1/2;*/
+}
+.cx-10{
+    /*grid-column: 2/3;
+    grid-row: 4/6;*/
+}
+.cx-1{
+    /*grid-column: 1/span 2;
+    grid-row: 1/span 4;*/
+}

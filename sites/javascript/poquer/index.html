@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baralho</title>
+    <style>
+        img{
+            width: 10%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <img>
+        <img>
+        <img>
+        <img>
+        <img>
+    </main>
+    <script>
+        let quantidadeBaralho = 1
+        function baralho(){
+            fetch('https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1').then(response => response.json()).then(data => {
+                carta(data.deck_id)
+                }
+            ).catch(error => console.log(error))
+        }
+
+        function carta(baralho){
+            fetch(`https://deckofcardsapi.com/api/deck/${baralho}/draw/?count=5`).then(response => response.json())
+            .then(data => {
+                mostrarCarta(data)
+                }
+            ).catch(error => console.log(error))
+        }
+
+        function mostrarCarta(carta){
+            let img = document.querySelectorAll('img')
+            let naipes = []
+            let numbers = []
+            let maos = []
+            for(let i = 0; i < img.length; i++){
+                img[i].setAttribute('src', carta.cards[i].image)
+                naipes.push(carta.cards[i].suit)
+                let converterNumero = Number(carta.cards[i].value)
+                if(carta.cards[i].value == 'ACE'){
+                    converterNumero = 1
+                }else if(carta.cards[i].value == 'JACK'){
+                    converterNumero = 11
+                }else if(carta.cards[i].value == 'QUEEN'){
+                    converterNumero = 12   
+                }else if(carta.cards[i].value == 'KING'){
+                    converterNumero = 13
+                }
+                //numbers.push(converterNumero)
+            }
+            let clubs = naipes.filter(n => {return n === 'CLUBS'}).reduce((total , n) => {return total = total + 1}, 0)
+            let spades = naipes.filter(n => {return n === 'SPADES'}).reduce((total , n) => {return total = total + 1}, 0)
+            let hearts = naipes.filter(n => {return n === 'HEARTS'}).reduce((total , n) => {return total = total + 1}, 0)
+            let diamonds = naipes.filter(n => {return n === 'DIAMONDS'}).reduce((total , n) => {return total = total + 1}, 0)
+            nameNaipes = [
+                {name : 'clubs',number : clubs},
+                {name : 'spades',number : spades},
+                {name : 'hearts',number : hearts},
+                {name : 'diamonds',number : diamonds},
+            ]
+
+            /* 
+                Straight Flush: Cinco cartas consecutivas do mesmo naipe.
+                Four of a Kind: Quatro cartas do mesmo valor e uma carta aleatória.
+                Full House: Três cartas do mesmo valor e outras duas cartas do mesmo valor.
+                Flush: Cinco cartas do mesmo naipe, não necessariamente consecutivas.
+                Straight: Cinco cartas consecutivas de naipes diferentes.
+                Three of a Kind: Três cartas do mesmo valor e duas cartas aleatórias.
+                Two Pair: Duas cartas do mesmo valor, duas outras cartas do mesmo valor e uma carta aleatória.
+                One Pair: Duas cartas do mesmo valor e três cartas aleatórias.
+                High Card: Nenhuma das combinações acima. A mão é definida pela carta mais alta.
+                 */
+
+            jogosNaipe = ['Flush']
+            nameNaipes.forEach( naipe => {
+                nc = 5
+                jogosNaipe.forEach( j => {
+                    if(naipe.number == nc){
+                        maos.push(`${j} of ${naipe.name}`)
+                    }
+                })
+            });
+
+            jogosNumber = ['pair', 'three', 'four', 'five']
+            numeroCarta = 1
+            numbers.forEach( n => {
+                let jogos = numbers.filter(num => {
+                    return num == numeroCarta
+                }).reduce((total , num) => {
+                    return total = total + 1
+                }, 0)
+                numeroJogo = 2
+                jogosNumber.forEach( j => {
+                    if( numeroJogo == jogos){
+                        maos.push(j)
+                    }
+                    numeroJogo++
+                })         
+                numeroCarta++
+            })
+            ordenando = numbers.sort()
+            if(ordenando[4] - ordenando[0] == 4 || ( ordenando[0] == '10' &&  ordenando[1] == '11' && ordenando[2] == '12' && ordenando[3] == '13' && ordenando[4] == '9') ){
+                maos.push('straight')
+            }
+            console.log(maos)
+        }
+        baralho()
+       </script>
+</body>
+</html>
