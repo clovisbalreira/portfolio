@@ -3,10 +3,9 @@ var sectionProduto = document.getElementById('sectionProdutos')
 var destaques = []
 produtos.forEach( produto => {
     if(produto.destaque > 0){
-        console.log(produto)
         destaques[produto.destaque-1] = produto
     }
-    })
+})
 
 var h2ProdutoDestaque = document.createElement('h2')
 h2ProdutoDestaque.innerHTML = "DESTAQUES"
@@ -70,27 +69,4 @@ categorias.forEach( categoria => {
     })
     sectionProduto.appendChild(divSectionProduto)
 })
-    /*produtos.forEach( produto => {
-    var div = document.createElement('div')
-    var imagem = document.createElement('img')
-    imagem.setAttribute('src', './assets/imagens/produto/' + produto.imagem)
-    imagem.setAttribute('alt', produto.nome)
-    div.appendChild(imagem)
-    var button = document.createElement('button')
-    button.classList.add('fale-conosco')
-    button.innerHTML = 'Faça seu pedido'
-    var a = document.createElement('a')
-    a.setAttribute('href', `https://wa.me/${telefone}?text=Olá%20Tudo%20Bem%20gostaria%20de%20mais%20informações%20sobre%20${produto.nome}`)
-    a.setAttribute('target','_black')
-    a.appendChild(button)
-    div.appendChild(a)
-    var nome = document.createElement('p')
-    nome.innerHTML = produto.nome
-    nome.classList.add('nome')
-    div.appendChild(nome)
-    var preco = document.createElement('p')
-    preco.innerHTML = 'R$: ' + produto.preco
-    div.appendChild(preco)
-    sectionProduto.appendChild(div)
-})
-*/
+

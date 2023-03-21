@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
     <title>Multiverso | Spiderman</title>
 </head>
-<body>
+<body class="s-spiderman-01-01">
   <div class="s-wrapper"> 
-    <video autoplay loop muted>
-      <source src="../../assets/videos/spiderman-2002-trailer.mp4" type="video/mp4">
+    <video autoplay loop muted class="invisivel">
+      #03   <source src="../../assets/videos/spiderman-2002-trailer.mp4" type="video/mp4">
     </video>
     <div class="s-left-column">
       <nav class="navigator">
@@ -21,9 +21,9 @@
           </a>
         </div>
         <ul>
-          <li><a href="#01">01</a></li>
-          <li><a href="#02">02</a></li>
-          <li><a href="#03">03</a></li>
+          <li><a href="./spiderman1.html">01</a></li>
+          <li><a href="./spiderman2.html">02</a></li>
+          <li><a href="./spiderman3.html">03</a></li>
         </ul>
       </nav>
     </div>
@@ -58,20 +58,24 @@
                 <span class="label">Assistir trailer</span>
               </a>
             </li>
+            <li>
+              <button onclick="mudar('s-spiderman-01-01','s-spiders-01')">Mudar Fundo</button>
+            </li>
           </ul>
         </div>
       </div>
       <div class="s-main-content-bottom">
         <div class="gallery">
           <ul>
-            <li><a data-fancybox href="../../assets/imagens/spiderman-tobey/gallery/movie-01/image-01-full.jpg"><img src="../../assets/imagens/spiderman-tobey/movie-01/gallery/image-01.png" alt=""></a></li>
-            <li><a data-fancybox href="../../assets/imagens/spiderman-tobey/gallery/movie-01/image-02-full.jpg"><img src="../../assets/imagens/spiderman-tobey/movie-01/gallery/image-02.png" alt=""></a></li>
-            <li><a data-fancybox href="../../assets/imagens/spiderman-tobey/gallery/movie-01/image-03-full.jpg"><img src="../../assets/imagens/spiderman-tobey/movie-01/gallery/image-03.png" alt=""></a></li>
+            <li><a data-fancybox href="../../assets/imagens/spiderman-tobey/gallery/movie-01/image-01-full.jpg"><img src="../../assets/imagens/spiderman-tobey/movie-01/gallery/image-01.png"></a></li>
+            <li><a data-fancybox href="../../assets/imagens/spiderman-tobey/gallery/movie-01/image-02-full.jpg"><img src="../../assets/imagens/spiderman-tobey/movie-01/gallery/image-02.png"></a></li>
+            <li><a data-fancybox href="../../assets/imagens/spiderman-tobey/gallery/movie-01/image-03-full.jpg"><img src="../../assets/imagens/spiderman-tobey/movie-01/gallery/image-03.png"></a></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
+  <script src="../../assets/scripts/mostrarTrailler.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   <script>
     //  JavaScript will go here

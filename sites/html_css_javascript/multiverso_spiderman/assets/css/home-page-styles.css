@@ -96,7 +96,7 @@ body::before{
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
-    bottom: 1.5rem;
+    bottom: .2rem;
     width: 100%;
 }
 
