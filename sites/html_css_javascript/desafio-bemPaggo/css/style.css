@@ -19,11 +19,19 @@ body{
     background-color: var(--corFundo);
     font-family: var(--fonte-destaque);
 }
+.aparecer{ 
+    display: block;
+}
+.desaparecer{
+    display: none;
+}
+
 div.principal{
     width: 600px;
     background-color: var(--corFundoPrincipal);
     margin: auto;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     margin-top: 1%;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.541);
 }
@@ -32,19 +40,14 @@ div.principal header{
     background-color: var(--corCabecalho);
     width: 100%;
     height: 150px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
     border-bottom-left-radius: 60%;
     border-bottom-right-radius: 150%;
 }
-div.principal header p:nth-child(1){
-    padding-top: 6%;
-}
-
-div.principal header p{
+div.principal header div{
+    padding: 6%;
+    display: grid;
     color: white;
     font-size: 1.2em;
-    margin-left:7%;
 }
 div.principal header img{
     position: absolute;
@@ -54,13 +57,26 @@ div.principal header img{
 div.principal main section.form{
     margin: 5%;
 }
-div.principal main  section.form p,div.principal main  section.form label,div.principal main  section.form legend{
+div.principal main section.form div{
+    display: flex;
+    align-items: center;
+}
+div.principal main section.form div  div.produtos{
+    width: 10rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+div.principal main section.form div,div.principal main section.form div div.produtos label,div.principal main section.form div.produtos legend{
     padding: 1%;
+}
+legend, .obs{
+    padding-top: .5rem;
 }
 div.principal main section.form button{
     background-color: var(--corBotao);
     color: white;
-    font-size: 3em;
+    font-size: 1em;
     width: 40px;
     text-align: center;
     margin: 0% 1%;
@@ -69,32 +85,29 @@ div.principal main section.form button{
 
 div.principal main section.form input[type=number]{
     background-color: var(--corFundoInput);
-    width: 50px;
+    width: 3rem;
     height: 15px;
     border-radius: 5px;
     padding: 2px;
-    margin-top: 20px;
 }
 .divAdesivos{
     display: flex;
 }
 .obs{
     display: block;
+    padding-bottom: .5rem;
 }
 div.principal main section#nota-fiscal{
     background-color: white;
     width: 600px;
-    height: 75.3vh;
-    z-index: 1;
-    display: none;
     position: absolute;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-}
-div.principal main section#nota-fiscal{
     text-align: center;
     padding: 2% 0;
     font-weight: bolder;
+    padding-bottom: 2rem;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.541);
 }
 
 .colgroupProduto{
@@ -129,9 +142,12 @@ div.principal main section#nota-fiscal table tbody tr:nth-child(odd){
 div.principal main section#nota-fiscal table tbody tr:nth-child(even){
     background-color: rgba(128, 128, 128, 0.37);    
 }
+div.principal main section#nota-fiscal p{
+    font-size: 1.5rem;
+    padding-top: 1rem;
+}
 #btn-compra,#btn-recusar{
     background-color: var(--corBotao);
-    border: none;
     padding: 5px 10px;
     border-radius: 5px;
     color: white;
@@ -160,7 +176,6 @@ footer span{
 }
 footer button{
     background-color: var(--corBotao);
-    border: none;
     padding: 5px 10px;
     border-radius: 5px;
     color: white;
@@ -169,25 +184,53 @@ footer button{
     right: 5%;
 }
 .preco{
-    border: none;
     padding-bottom: 1%;
     font-size: 1.1em;
     color: black;
     background-color: var(--corFundoPrincipal);
 }
-@media(max-width: 950px){
-    div.principal main section#nota-fiscal{
-        height: 112vh;
+
+@media(max-width: 620px){
+    div.principal header{
+        height: 140px;
+    }
+    div.principal, div.principal main section#nota-fiscal{
+        width: 80%;
+    }
+    div.principal, div.principal main section#nota-fiscal table thead tr, div.principal main section#nota-fiscal table tbody tr{
+        font-size: .9rem;
+    }
+    div.principal main section#nota-fiscal table thead tr th, div.principal main section#nota-fiscal table tbody tr td{
+        padding-inline: .4rem;
     }
 }
-@media(max-width: 450px){
-    div.principal{
-        width: 420px;
+
+@media(max-width: 362px){
+    div.principal header{
+        height: 100px;
     }
-    div.principal main section#nota-fiscal{
-        width: 420px;
+    div.principal main section#nota-fiscal table thead tr th:nth-child(3), div.principal main section#nota-fiscal table tbody tr td:nth-child(3){
+        display: none;
     }
-    footer span{
-        width: 280px;
+    #button{
+        display: grid;
+        gap: 1rem;
+        place-content: center;
+    }
+    #button button{
+        width: 100%;
+    }
+    div.principal header img{
+        display: none;
+    }
+}
+@media(max-width: 284px){
+    div.principal main section#nota-fiscal table thead tr th:nth-child(2), div.principal main section#nota-fiscal table tbody tr td:nth-child(2){
+        display: none;
+    }
+}
+@media(max-width: 284px){
+    div.principal main section#nota-fiscal table thead tr th:nth-child(1), div.principal main section#nota-fiscal table tbody tr td:nth-child(1){
+        display: none;
     }
 }

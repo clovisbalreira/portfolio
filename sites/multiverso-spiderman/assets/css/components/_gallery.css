@@ -1,0 +1,35 @@
+.gallery{
+    padding-left: 0;
+}
+.gallery ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.gallery ul li{
+    margin-left: 25px;
+    width: 95%;
+}
+.gallery ul li:first-child{
+    margin-left: 0px;
+}
+.gallery ul li a img{
+    border: solid 6px white;
+    border-radius: 15px;
+    width: 90%;
+    height: 12rem;
+}
+@media (max-width: 1250px) {
+    .gallery ul{
+        flex-wrap: wrap;
+    }
+        .gallery ul li{
+        margin-left: 0px;
+    }
+    .gallery ul li a img{
+        border: solid 6px white;
+        border-radius: 15px;
+        width: 100%;
+    }
+        
+}

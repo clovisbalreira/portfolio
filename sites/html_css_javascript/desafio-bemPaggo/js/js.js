@@ -1,4 +1,99 @@
-var nomesAdesivo = document.querySelectorAll('.adesivo')
+let sectionForm = document.querySelector('.form')
+let sectionNotaFiscal = document.querySelector('#nota-fiscal')
+let quantidade = document.querySelector('.divAdesivos input')
+let footer = document.querySelector('footer')
+
+let subtrair = document.getElementById('subtrair')
+subtrair.addEventListener('click', () => {
+    console.log(quantidade.value)
+    if (quantidade.value > 1) {
+        quantidade.value -- 
+    }
+})
+
+let somar = document.getElementById('somar')
+somar.addEventListener('click', () => {
+    quantidade.value ++ 
+})
+mostrarNotaFiscal()
+function mostrarNotaFiscal(){
+    let inputs = document.querySelectorAll('.adesivo')
+    let nomes = document.querySelectorAll('.nome')
+    let precos = document.querySelectorAll('.preco')
+    let tabelaAdesivos = []
+    let total = 0
+    inputs.forEach( (i, index) => {
+        tabelaAdesivos.push({input: i.checked, nome: nomes[index].innerHTML, valor: precos[index].innerHTML.replace(',','.')})
+    })
+    sectionNotaFiscal.classList.remove('desaparecer')
+    sectionForm.classList.add('desaparecer')
+    footer.classList.add('desaparecer')
+    let tabelaNotaFiscalTbody = document.querySelector('#table-nota-fiscal tbody')
+    let tabelaNotaFiscalTfoot = document.querySelector('#table-nota-fiscal tfoot')
+    tabelaAdesivos.forEach( tabelaAdesivo => {
+        if(tabelaAdesivo.input){
+            let tr = document.createElement('tr')        
+            let tdProduto = document.createElement('td')
+            tdProduto.innerHTML = tabelaAdesivo.nome
+            tr.appendChild(tdProduto)
+            let tdQuantidade = document.createElement('td')
+            tdQuantidade.innerHTML = quantidade.value
+            tr.appendChild(tdQuantidade)
+            let tdValor = document.createElement('td')
+            tdValor.innerHTML = tabelaAdesivo.valor
+            tr.appendChild(tdValor)
+            let tdValorTotal = document.createElement('td')
+            tdValorTotal.innerHTML = (tabelaAdesivo.valor * quantidade.value).toFixed(2)
+            tr.appendChild(tdValorTotal)
+            tabelaNotaFiscalTbody.appendChild(tr)
+            total += Number(tabelaAdesivo.valor) * Number(quantidade.value)
+        }
+    });
+    let tr = document.createElement('tr')        
+    let thTexto = document.createElement('th')
+    thTexto.innerHTML = 'TOTAL'
+    thTexto.setAttribute('colspan', '3')
+    tr.appendChild(thTexto)
+    let thTotal = document.createElement('th')
+    thTotal.innerHTML = `R$ ${total.toFixed(2)}`
+    tr.appendChild(thTotal)
+    tabelaNotaFiscalTfoot.appendChild(tr)
+    let observacao = document.querySelector('#observacao').value
+    let p = document.querySelector('p')
+    p.innerHTML = observacao
+    sectionNotaFiscal.appendChild(p)
+}
+
+function recusarCompra(){
+    //resetarCampos()
+    sectionNotaFiscal.classList.add('desaparecer')
+    sectionForm.classList.remove('desaparecer')
+    footer.classList.remove('desaparecer')
+    /* nota.style.display = 'none'
+    mensagemFinal = '<strong>Compra Recusada.</strong>'
+    mensagemFinal += '<p>Obrigado pela preferência.</p>'
+    mostrarFooter.innerHTML = mensagemFinal
+    mostrarFooter.style.backgroundColor = 'red' */
+}
+
+function confirmarCompra(){
+    resetarCampos()
+    nota.style.display = 'none'
+    mensagemFinal = '<strong>Compra confirma com sucesso.</strong>'
+    mensagemFinal += '<p>Obrigado pela preferência.</p>'
+    mostrarFooter.innerHTML = mensagemFinal
+    mostrarFooter.style.backgroundColor = 'green'
+}
+
+function resetarCampos(){
+    console.log('ola')
+    for(var i = 0; i < nomesAdesivo.length; i++){
+        nomesAdesivo[i].checked = false
+    }
+    quantidade.value = 0
+    observacao.value = ''
+} 
+/* var nomesAdesivo = document.querySelectorAll('.adesivo')
 var valoresAdesivo = document.querySelectorAll('.preco')
 var quantidade = document.getElementById('numero')
 var observacao = document.getElementById('observacao')
@@ -9,17 +104,6 @@ var nota = document.getElementById('nota-fiscal')
 var numero = 0
 quantidade.value = numero
 
-function subtrairNumero() {
-    if (numero > 0) {
-        numero--
-        quantidade.value = numero
-    }
-}
-
-function somaNumero() {
-    numero++
-    quantidade.value = numero
-}
 
 function nomeAdesivo() {
     nome = []
@@ -119,29 +203,5 @@ function mensagemInvalida() {
     mostrarFooter.style.backgroundColor = 'red'
 }
 
-function recusarCompra(){
-    resetarCampos()
-    nota.style.display = 'none'
-    mensagemFinal = '<strong>Compra Recusada.</strong>'
-    mensagemFinal += '<p>Obrigado pela preferência.</p>'
-    mostrarFooter.innerHTML = mensagemFinal
-    mostrarFooter.style.backgroundColor = 'red'
-}
 
-function confirmarCompra(){
-    resetarCampos()
-    nota.style.display = 'none'
-    mensagemFinal = '<strong>Compra confirma com sucesso.</strong>'
-    mensagemFinal += '<p>Obrigado pela preferência.</p>'
-    mostrarFooter.innerHTML = mensagemFinal
-    mostrarFooter.style.backgroundColor = 'green'
-}
-
-function resetarCampos(){
-    console.log('ola')
-    for(var i = 0; i < nomesAdesivo.length; i++){
-        nomesAdesivo[i].checked = false
-    }
-    quantidade.value = 0
-    observacao.value = ''
-}
+*/
