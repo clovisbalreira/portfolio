@@ -70,13 +70,14 @@
                     <tfoot></tfoot>
                 </table>
                 <div id="button">
-                    <button id="btn-recusar" onclick="recusarCompra()">Recusar Compra</button>
-                    <button id="btn-compra" onclick="confirmarCompra()">Confirmar Compra</button>
+                    <p id="pObservacoes"></p>
+                    <button id="btn-recusar" onclick="mensagem('Compra Recusada.', 'Obrigado pela preferência.', 'red')">Recusar Compra</button>
+                    <button id="btn-compra" onclick="mensagem('Compra confirma com sucesso.', 'Obrigado pela preferência.', 'green')">Confirmar Compra</button>
                 </div>
             </section>
             </main>    
             <footer>
-                <span id="mostrar-nota-fiscal"></span>
+                <span id="mostrar-nota-fiscal"  class="desaparecer"></span>
                 <button onclick="mostrarNotaFiscal()">ENVIAR</button>
             </footer>
         </div>

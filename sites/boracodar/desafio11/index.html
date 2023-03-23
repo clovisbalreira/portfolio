@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,27 +11,40 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div id="page">
-        <header>Login</header>
-        <main>
-            <div class="headline">
-                <h2>Acesse a plataforma</h2>
-                <p>Faça login ou registre- para começar a controlar seus projetos ainda hoje</p>
-            </div>
-            <form action="">
-                <div class="input-wrapper">
-                    <label for="email">E-mail</label>
-                    <input id="email" name='email' type="email" required>
+    <!--Validação de forms customizada com HTML e JavaScript | Code/Drops #32  -->
+    <div id="page" class="flex">
+        <div>
+            <header>
+                <img src="./assets/logo.png" alt="">
+            </header>
+            <main>
+                <div class="headline">
+                    <h1>Acesse a plataforma</h1>
+                    <p>Faça login ou registre- para começar a controlar seus projetos ainda hoje</p>
                 </div>
-                <div class="input-wrapper">
-                    <div class="label-wrapper">
-                        <label for="senha">Senha</label>
-                        <a href="#">Esqueceu a senha?</a>
+                <form action="">
+                    <div class="input-wrapper">
+                        <label for="email">E-mail</label>
+                        <input id="email" name='email' type="email" required placeholder="Digite seu e-mail">
                     </div>
+                    <div class="input-wrapper">
+                        <div class="label-wrapper flex">
+                            <label for="senha">Senha</label>
+                            <a href="#">Esqueceu a senha?</a>
+                        </div>
+                        <input type="password" id="senha" placeholder="Digite sua senha" required>
+                        <img onclick="tooglePassword()" src="./assets/eye-off.png" alt="" class="eye">
+                        <img onclick="tooglePassword()" src="./assets/eye.png" alt="" class="eye hide">
+                    </div>
+                    <button type="submit">Entrar</button>
+                </form>
+                <div class="create-account">Ainda não tem conta?
+                    <a href="">Inscreva-se</a>
                 </div>
-                <input type="password" id="senha"/>
-            </form>
-        </main>
+            </main>
+        </div>
+        <img src="./assets/img.png" alt="">
     </div>
+    <script src="./js/js.js"></script>
 </body>
 </html>
