@@ -44,21 +44,19 @@ var sites = [
     {titulo: 'Restaurante japonês', descricao: 'Projeto criado no modelo para um restaurante.', linguagem: linguagens[1], url: './sites/restaurante-japones/', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[0], tag: `${tagsLinguagem[1]} ${tags} #restaurante`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/restaurante-japones'},
     {titulo: 'Poquer', descricao: 'Projeto criado no modelo um jogo de poquer.', linguagem: linguagens[1], url: './sites/poquer/', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[0], tag: `${tagsLinguagem[1]} ${tags} #poquer`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/poquer'},
     {titulo: 'Loja', descricao: 'Projeto criado no modelo de uma loja.', linguagem: linguagens[1], url: './sites/loja/', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[0], tag: `${tagsLinguagem[1]} ${tags} #poquer`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/loja'},
+    {titulo: 'Loja - 02', descricao: 'Projeto criado para vendas.', linguagem: linguagens[1], url: 'sites/loja-2/index.html', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[0], tag: `${tagsLinguagem[0]} ${tags} `, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/loja-2'},
     { titulo: 'Dev midia', descricao: 'Projeto criado no modelo do desafio Dev midia.', linguagem: linguagens[0], url: 'sites/dev-midia/', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[3], tag: `${tags} ${tagsLinguagem[0]}`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/dev-midia'},      
-    {titulo: 'Desafio BemPaggo', descricao: 'Projeto criado no modelo do desafio BemPago.', linguagem: linguagens[0], url: 'sites/desafio-bemPaggo/index.html', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[3], tag: `${tagsLinguagem[0]} ${tags}`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/desafio-bemPaggo'},
+    {titulo: 'Desafio BemPaggo', descricao: 'Projeto criado no modelo do desafio BemPago.', linguagem: linguagens[1], url: 'sites/desafio-bemPaggo/index.html', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[3], tag: `${tagsLinguagem[0]} ${tags}`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/desafio-bemPaggo'},
+    {titulo: 'Netflix', descricao: 'Projeto criado no modelo da interface da netflix.', linguagem: linguagens[1], url: 'sites/netflix/index.html', tipo: tipos[1], modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tagsLinguagem[0]} ${tags} #netflix`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/netflix'},
+    { titulo: 'Apresentação', descricao: 'Projeto criado no modelo de apresentação', linguagem: linguagens[0], url: 'sites/apresentacao/index.html', tipo: tipos[0], modelo: modelos[2], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[1]}`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/apresentacao'},  
     /*
     {titulo: 'Realidade Aumentada', descricao: 'Projeto pessoal criado com passe para mostrar a realidade aumentada.', linguagem: linguagens[0], url: 'sites/html_css_javascript/realidade_aumentada/index.html', tipo: tipos[0], modelo: modelos[2], status: 'Sim', projeto: projetos[0], tag: `${tagsLinguagem[0]} ${tags} #realidadeaumentada`, repositorio: ' '},
-    {titulo: 'Interface Netflix', descricao: 'Projeto criado no modelo da interface da netflix.', linguagem: linguagens[0], url: 'sites/html_css_javascript/recriando_interface_netflix/index.html', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tagsLinguagem[0]} ${tags} #netflix`, repositorio: ' '},
-    {titulo: 'Imagem Sul', descricao: 'Projeto criado para vendas.', linguagem: linguagens[0], url: 'sites/html_css_javascript/imagemsul/index.html', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[0], tag: `${tagsLinguagem[0]} ${tags} `, repositorio: ' '},
     {titulo: 'Snake Game', descricao: 'Projeto criado no modelo do jogo Snake Game do celular.', linguagem: linguagens[0], url: 'sites/html_css_javascript/jogo_snake_game/index.html', tipo: tipos[0], modelo: modelos[1], status: 'Sim', projeto: projetos[2], tag: `${tagsLinguagem[0]} ${tags} #games #jogos`, repositorio: ' '},
     {titulo: 'Jogo naves', descricao: 'Projeto criado no modelo do jogo de naves.', linguagem: linguagens[0], url: 'sites/html_css_javascript/jogo_naves/index.html', tipo: tipos[0], modelo: modelos[1], status: 'Sim', projeto: projetos[2], tag: `${tagsLinguagem[0]} ${tags} #games #jogos`, repositorio: ' '},
     {titulo: 'Jogo Genius', descricao: 'Projeto criado no modelo do jogo de genius.', linguagem: linguagens[0], url: 'sites/html_css_javascript/jogo_genius/index.html', tipo: tipos[0], modelo: modelos[1], status: 'Sim', projeto: projetos[2], tag: `${tagsLinguagem[0]} ${tags} #games #jogos`, repositorio: ' '},
     {titulo: 'Jogo Memoria', descricao: 'Projeto criado no modelo do jogo da memoria.', linguagem: linguagens[0], url: 'sites/html_css_javascript/jogo_memoria/index.html', tipo: tipos[0], modelo: modelos[1], status: 'não', projeto: projetos[2], tag: `${tagsLinguagem[0]} ${tags} #games #jogos`, repositorio: ' '},
     {titulo: 'Jogo Scratch', descricao: 'Projeto criado no modelo do jogo da scratch.', linguagem: linguagens[0], url: 'sites/html_css_javascript/jogo_scratch/index.html', tipo: tipos[0], modelo: modelos[1], status: 'Sim', projeto: projetos[2], tag: `${tagsLinguagem[0]} ${tags} #games #jogos`, repositorio: ' '},
-    {titulo: 'Curiosidades de Tecnologia', descricao: 'Projeto criado no modelo do curso em vídeo. Com mentoria de Gustavo Guanabara.', linguagem: linguagens[0], url: 'sites/html_css/curso_em_video/desafios/d010/android.html', tipo: tipos[0], modelo: modelos[2], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[0]} #cursoemvideo #gustavoguanabara  #estudonauta`, repositorio: ' '},
     { titulo: 'Rádio', descricao: 'Projeto pessoal de um modelo para a rádio.', linguagem: linguagens[0], url: 'sites/html_css_javascript/radio/index.html', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[0], tag: `${tags} ${tagsLinguagem[0]} #cns`, repositorio: ' '},
-    { titulo: 'Apresentação', descricao: 'Projeto criado no modelo de apresentação', linguagem: linguagens[1], url: 'sites/html_css/apresentacao/index.html', tipo: tipos[0], modelo: modelos[2], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[1]}`, repositorio: ' '},  
-    { titulo: 'Projeto capa instagram', descricao: 'Projeto criado no modelo da interface do login do instagram', linguagem: linguagens[1], url: 'sites/html_css/pagina_capa_instagram/index.html', tipo: tipos[0], modelo: modelos[2], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[1]}`, repositorio: ' '},  
     { titulo: 'Segurança de T.I.', descricao: 'Projeto criado para informar a segurança de T.I.', linguagem: linguagens[1], url: 'sites/html_css/seguranca_de_ti/index.html', tipo: tipos[0], modelo: modelos[2], status: 'Sim', projeto: projetos[0], tag: `${tags} ${tagsLinguagem[1]}`, repositorio: ' '},  
     { titulo: 'Tags basicas', descricao: 'Demostração de uma tags HTML.', linguagem: linguagens[1], url: 'sites/html_css/tag/index.html', tipo: tipos[0], modelo: modelos[2], status: 'Sim', projeto: projetos[0], tag: `${tags} ${tagsLinguagem[1]}`, repositorio: ' '},  
     { titulo: 'Array JavaScript', descricao: 'Demostração de arrays do javascript.', linguagem: linguagens[2], url: 'sites/javascript/array_javascript/index.html', tipo: tipos[0], modelo: modelos[2], status: 'Sim', projeto: projetos[0], tag: `${tags} ${tagsLinguagem[2]}`, repositorio: ' '},    
@@ -67,55 +65,63 @@ var sites = [
     { titulo: 'JavaScript Exemplos', descricao: 'Demostração de exemplos do javascript.', linguagem: linguagens[2], url: 'sites/javascript/javaScript_exemplos/index.html', tipo: tipos[0], modelo: modelos[2], status: 'Sim', projeto: projetos[0], tag: `${tags} ${tagsLinguagem[2]}`, repositorio: ' '},    
     { titulo: 'Clube', descricao: 'Projeto pessoal para uma associação de futebol de mesa.', tipo: tipos[0], linguagem: linguagens[3], url: 'http://lucfm.000webhostapp.com/', modelo: modelos[2], status: 'Sim', projeto: projetos[0], tag: `${tags} ${tagsLinguagem[3]}`, repositorio: ' '},
     */
-       { titulo: 'Projetos do P.H.P.', descricao: 'Projeto criado na linguagem P.H.P..', tipo: tipos[0], linguagem: linguagens[3], url: 'https://php-projetos-clovis.000webhostapp.com/', modelo: modelos[0], status: 'Sim', projeto: projetos[0], tag: `${tags} ${tagsLinguagem[3]}`, repositorio: 'https://github.com/clovisbalreira/php'},
+   { titulo: 'Projetos do P.H.P.', descricao: 'Projeto criado na linguagem P.H.P..', tipo: tipos[0], linguagem: linguagens[3], url: 'https://php-projetos-clovis.000webhostapp.com/', modelo: modelos[0], status: 'Sim', projeto: projetos[0], tag: `${tags} ${tagsLinguagem[3]}`, repositorio: 'https://github.com/clovisbalreira/php'},
    /* { titulo: 'Gestão de Super Mercado', descricao: 'Projeto criado para gestão de supermercado.', tipo: tipos[0], linguagem: linguagens[3], url: 'https://php-projetos-clovis.000webhostapp.com/sites/supermercado/bancodedados/view/', modelo: modelos[0], status: 'Sim', projeto: projetos[0], tag: `${tags} ${tagsLinguagem[3]}`, repositorio: 'https://github.com/clovisbalreira/php/tree/main/sites/supermercado'}, */
-       { titulo: 'Lista de Tarefas', descricao: 'Projeto criando um modelo de lista de tarefas.', linguagem: linguagens[5], url: 'https://lista-tarefas-flame.vercel.app/', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[5]}`, repositorio: 'https://github.com/clovisbalreira/react_js/tree/main/lista_tarefas'},    
-       { titulo: 'Sistema Financeiro', descricao: 'Projeto criando um modelo de lista de financeiro.', linguagem: linguagens[5], url: 'https://sistema-financeiro-gold.vercel.app/', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[5]}`, repositorio: 'https://github.com/clovisbalreira/react_js/tree/main/sistema_financeiro'},    
-       { titulo: 'Galeria', descricao: 'Projeto criando um modelo de galeria de fotos', linguagem: linguagens[5], url: 'https://galeria-three.vercel.app/', tipo: tipos[0], modelo: modelos[0], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[5]}`, repositorio: 'https://github.com/clovisbalreira/react_js/tree/main/galeria'},
-       { titulo: 'Pesquisar e avaliar', descricao: 'Projeto pessoal para pesquisar e avaliar o que os deputados estão fazendo no congresso. Com api externa.', linguagem: linguagens[5], url: 'https://private-neon.vercel.app/', tipo: tipos[0], modelo:  modelos[0], status: 'Sim', projeto: projetos[0], tag: `${tags} ${tagsLinguagem[5]}`, repositorio: 'https://private-neon.vercel.app/'},    
-       { titulo: 'Estruturado', descricao: 'Projeto java.', linguagem: linguagens[6], url: 'https://github.com/clovisbalreira/java/tree/main/Estruturado', tipo: tipos[1], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[6]}`, repositorio: 'https://github.com/clovisbalreira/java/tree/main/Estruturado'},    
-       { titulo: 'Funcionario privado', descricao: 'Projeto java.', linguagem: linguagens[6], url: 'https://github.com/clovisbalreira/java/tree/main/FuncionarioPrivate', tipo: tipos[1], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[6]}`, repositorio: 'https://github.com/clovisbalreira/java/tree/main/FuncionarioPrivate'},    
-       { titulo: 'Pessoa', descricao: 'Projeto java.', linguagem: linguagens[6], url: 'https://github.com/clovisbalreira/java/tree/main/Pessoa', tipo: tipos[1], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[6]}`, repositorio: 'https://github.com/clovisbalreira/java/tree/main/Pessoa'},    
-       { titulo: 'Exercicio', descricao: 'Projeto java.', linguagem: linguagens[6], url: 'https://github.com/clovisbalreira/java/tree/main/exercicios', tipo: tipos[1], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[6]}`, repositorio: 'https://github.com/clovisbalreira/java/tree/main/exercicios'},    
-       { titulo: 'Funcionario', descricao: 'Projeto java.', linguagem: linguagens[6], url: 'https://github.com/clovisbalreira/java/tree/main/funcionario', tipo: tipos[1], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[6]}`, repositorio: 'https://github.com/clovisbalreira/java/tree/main/funcionario'},    
-       { titulo: 'Locadora', descricao: 'Projeto java.', linguagem: linguagens[6], url: 'https://github.com/clovisbalreira/java/tree/main/locadora', tipo: tipos[1], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[6]}`, repositorio: 'https://github.com/clovisbalreira/java/tree/main/locadora'},    
-       { titulo: 'Projeto', descricao: 'Projeto java.', linguagem: linguagens[6], url: 'https://github.com/clovisbalreira/java/tree/main/projeto', tipo: tipos[1], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[6]}`, repositorio: 'https://github.com/clovisbalreira/java/tree/main/projeto'},    
-       { titulo: 'Desafio wp', descricao: 'Projeto criado no modelo do desafio desafio wp. Criação de tema', linguagem: linguagens[7], url: 'https://github.com/clovisbalreira/wordpress/tree/main/desafio-wp', tipo: tipos[2], modelo: modelos[3], status: 'Sim', projeto: projetos[3], tag: `${tags} ${tagsLinguagem[7]}`, repositorio: 'https://github.com/clovisbalreira/wordpress/tree/main/desafio-wp'},
-       { titulo: 'Rádio C.N.S.', descricao: 'Radio C.N.S. - Canoas', linguagem: linguagens[7], url: 'https://radiocns.com/', tipo: tipos[2], modelo: modelos[3], status: 'Sim', projeto: projetos[0], tag: `${tags} ${tagsLinguagem[7]}`, repositorio: 'https://radiocns.com/'},    
-       { titulo: 'Rádio modelo 001', descricao: 'Projeto pessoal para rádio - usando plugins ( v . 1 ).', linguagem: linguagens[7], url: 'https://github.com/clovisbalreira/wordpress/tree/main/Cns', tipo: tipos[2], modelo: modelos[3], status: 'Sim', projeto: projetos[0], tag: `${tags} ${tagsLinguagem[7]}`, repositorio: 'https://github.com/clovisbalreira/wordpress/tree/main/Cns'},    
-       { titulo: 'Rádio modelo 002', descricao: 'Projeto pessoal para rádio - usando plugins ( v . 2 ).', linguagem: linguagens[7], url: 'https://github.com/clovisbalreira/wordpress/tree/main/Cns%20v2.0', tipo: tipos[2], modelo: modelos[3], status: 'Sim', projeto: projetos[0], tag: `${tags} ${tagsLinguagem[7]}`, repositorio: 'https://github.com/clovisbalreira/wordpress/tree/main/Cns%20v2.0'},    
-       { titulo: 'Rádio modelo 003', descricao: 'Projeto pessoal para rádio - usando plugins ( v . 3 ).', linguagem: linguagens[7], url: 'https://github.com/clovisbalreira/wordpress/tree/main/Cns%20v3.0', tipo: tipos[2], modelo: modelos[3], status: 'Sim', projeto: projetos[0], tag: `${tags} ${tagsLinguagem[7]}`, repositorio: 'https://github.com/clovisbalreira/wordpress/tree/main/Cns%20v3.0'},
-       { titulo: 'Cartao Flutter', descricao: 'Projeto de cartões. Com api externa.', linguagem: linguagens[8], url: 'https://github.com/clovisbalreira/flutter/tree/main/cartaoFlutter', tipo: tipos[1], modelo: modelos[3], status: 'Sim', projeto: projetos[0], tag: `${tags} ${tagsLinguagem[8]}`, repositorio: 'https://github.com/clovisbalreira/flutter/tree/main/cartaoFlutter'},   
-       { titulo: 'Pokemon', descricao: 'Projeto de cartões. Com api externa.', linguagem: linguagens[8], url: 'https://github.com/clovisbalreira/flutter/tree/main/Pokemon', tipo: tipos[1], modelo: modelos[3], status: 'Sim', projeto: projetos[0], tag: `${tags} ${tagsLinguagem[8]}`, repositorio: 'https://github.com/clovisbalreira/flutter/tree/main/Pokemon'},    
-       { titulo: 'App Filmes', descricao: 'Projeto de cartões. Com api externa.', linguagem: linguagens[8], url: 'https://github.com/clovisbalreira/flutter/tree/main/app_filmes', tipo: tipos[1], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[8]}`, repositorio: 'https://github.com/clovisbalreira/flutter/tree/main/app_filmes'},    
-       { titulo: 'Exemplo Site python', descricao: 'Projeto de modelo de um site', linguagem: linguagens[9], url: 'https://github.com/clovisbalreira/python/tree/main/cursos-python-web', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[9]}`, repositorio: 'https://github.com/clovisbalreira/python/tree/main/cursos-python-web'},    
-       { titulo: 'Aluno', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Aluno', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Aluno'},    
-       { titulo: 'Aluno Conceito', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/AlunoConceito', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/AlunoConceito'},    
-       { titulo: 'Associação', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Associacao', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Associacao'},    
-       { titulo: 'Banco dados', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/BancoDados', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/BancoDados'},    
-       { titulo: 'Comissão', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Comissao', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Comissao'},    
-       { titulo: 'Data', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Data', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Data'},    
-       { titulo: 'Nadador', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Nadador', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Nadador'},    
-       { titulo: 'Pessoa peso', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/PessoaPeso', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/PessoaPeso'},    
-       { titulo: 'Projeto soma', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/ProjASoma', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/ProjASoma'},    
-       { titulo: 'Renda familia', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/RendaFamilia', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/RendaFamilia'},    
-       { titulo: 'Saque', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Saque', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Saque'},    
-       { titulo: 'Signos', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Signos', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Signos'},    
-       { titulo: 'Triangulo', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Triangulo', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Triangulo'},    
-       { titulo: 'Projeto Operações', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/projAOperacoes', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/projAOperacoes'},    
-       { titulo: 'Aluno', descricao: 'Projeto Kotlin', linguagem: linguagens[12], url: 'https://github.com/clovisbalreira/kotlin/tree/main/pessoal/Aluno', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[12]}`, repositorio: 'https://github.com/clovisbalreira/kotlin/tree/main/pessoal/Aluno'},    
-       { titulo: 'Funcionario', descricao: 'Projeto Kotlin', linguagem: linguagens[12], url: 'https://github.com/clovisbalreira/kotlin/tree/main/pessoal/Funcionario', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[12]}`, repositorio: 'https://github.com/clovisbalreira/kotlin/tree/main/pessoal/Funcionario'},    
-       { titulo: 'Produto', descricao: 'Projeto Kotlin', linguagem: linguagens[12], url: 'https://github.com/clovisbalreira/kotlin/tree/main/pessoal/Produto', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[12]}`, repositorio: 'https://github.com/clovisbalreira/kotlin/tree/main/pessoal/Produto'},    
-       { titulo: 'Soma', descricao: 'Projeto Kotlin', linguagem: linguagens[12], url: 'https://github.com/clovisbalreira/kotlin/tree/main/pessoal/soma', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[12]}`, repositorio: 'https://github.com/clovisbalreira/kotlin/tree/main/pessoal/soma'},    
-       { titulo: 'Designer', descricao: 'Projetos gráficos.', linguagem: linguagens[linguagens.length - 1], url: 'sites/imagens/index.html', tipo: tipos[0], modelo: modelos[2], status: 'Sim', projeto: projetos[0], tag: `${tags}`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/imagens'},
-          
+   { titulo: 'Lista de Tarefas', descricao: 'Projeto criando um modelo de lista de tarefas.', linguagem: linguagens[5], url: 'https://lista-tarefas-flame.vercel.app/', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[5]}`, repositorio: 'https://github.com/clovisbalreira/react_js/tree/main/lista_tarefas'},    
+   { titulo: 'Sistema Financeiro', descricao: 'Projeto criando um modelo de lista de financeiro.', linguagem: linguagens[5], url: 'https://sistema-financeiro-gold.vercel.app/', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[5]}`, repositorio: 'https://github.com/clovisbalreira/react_js/tree/main/sistema_financeiro'},    
+   { titulo: 'Galeria', descricao: 'Projeto criando um modelo de galeria de fotos', linguagem: linguagens[5], url: 'https://galeria-three.vercel.app/', tipo: tipos[0], modelo: modelos[0], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[5]}`, repositorio: 'https://github.com/clovisbalreira/react_js/tree/main/galeria'},
+   { titulo: 'Pesquisar e avaliar', descricao: 'Projeto pessoal para pesquisar e avaliar o que os deputados estão fazendo no congresso. Com api externa.', linguagem: linguagens[5], url: 'https://private-neon.vercel.app/', tipo: tipos[0], modelo:  modelos[0], status: 'Sim', projeto: projetos[0], tag: `${tags} ${tagsLinguagem[5]}`, repositorio: 'https://private-neon.vercel.app/'},    
+   { titulo: 'Estruturado', descricao: 'Projeto java.', linguagem: linguagens[6], url: 'https://github.com/clovisbalreira/java/tree/main/Estruturado', tipo: tipos[1], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[6]}`, repositorio: 'https://github.com/clovisbalreira/java/tree/main/Estruturado'},    
+   { titulo: 'Funcionario privado', descricao: 'Projeto java.', linguagem: linguagens[6], url: 'https://github.com/clovisbalreira/java/tree/main/FuncionarioPrivate', tipo: tipos[1], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[6]}`, repositorio: 'https://github.com/clovisbalreira/java/tree/main/FuncionarioPrivate'},    
+   { titulo: 'Pessoa', descricao: 'Projeto java.', linguagem: linguagens[6], url: 'https://github.com/clovisbalreira/java/tree/main/Pessoa', tipo: tipos[1], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[6]}`, repositorio: 'https://github.com/clovisbalreira/java/tree/main/Pessoa'},    
+   { titulo: 'Exercicio', descricao: 'Projeto java.', linguagem: linguagens[6], url: 'https://github.com/clovisbalreira/java/tree/main/exercicios', tipo: tipos[1], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[6]}`, repositorio: 'https://github.com/clovisbalreira/java/tree/main/exercicios'},    
+   { titulo: 'Funcionario', descricao: 'Projeto java.', linguagem: linguagens[6], url: 'https://github.com/clovisbalreira/java/tree/main/funcionario', tipo: tipos[1], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[6]}`, repositorio: 'https://github.com/clovisbalreira/java/tree/main/funcionario'},    
+   { titulo: 'Locadora', descricao: 'Projeto java.', linguagem: linguagens[6], url: 'https://github.com/clovisbalreira/java/tree/main/locadora', tipo: tipos[1], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[6]}`, repositorio: 'https://github.com/clovisbalreira/java/tree/main/locadora'},    
+   { titulo: 'Projeto', descricao: 'Projeto java.', linguagem: linguagens[6], url: 'https://github.com/clovisbalreira/java/tree/main/projeto', tipo: tipos[1], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[6]}`, repositorio: 'https://github.com/clovisbalreira/java/tree/main/projeto'},    
+   { titulo: 'Desafio wp', descricao: 'Projeto criado no modelo do desafio desafio wp. Criação de tema', linguagem: linguagens[7], url: 'https://github.com/clovisbalreira/wordpress/tree/main/desafio-wp', tipo: tipos[2], modelo: modelos[3], status: 'Sim', projeto: projetos[3], tag: `${tags} ${tagsLinguagem[7]}`, repositorio: 'https://github.com/clovisbalreira/wordpress/tree/main/desafio-wp'},
+   { titulo: 'Rádio C.N.S.', descricao: 'Radio C.N.S. - Canoas', linguagem: linguagens[7], url: 'https://radiocns.com/', tipo: tipos[2], modelo: modelos[3], status: 'Sim', projeto: projetos[0], tag: `${tags} ${tagsLinguagem[7]}`, repositorio: 'https://radiocns.com/'},    
+   { titulo: 'Rádio modelo 001', descricao: 'Projeto pessoal para rádio - usando plugins ( v . 1 ).', linguagem: linguagens[7], url: 'https://github.com/clovisbalreira/wordpress/tree/main/Cns', tipo: tipos[2], modelo: modelos[3], status: 'Sim', projeto: projetos[0], tag: `${tags} ${tagsLinguagem[7]}`, repositorio: 'https://github.com/clovisbalreira/wordpress/tree/main/Cns'},    
+   { titulo: 'Rádio modelo 002', descricao: 'Projeto pessoal para rádio - usando plugins ( v . 2 ).', linguagem: linguagens[7], url: 'https://github.com/clovisbalreira/wordpress/tree/main/Cns%20v2.0', tipo: tipos[2], modelo: modelos[3], status: 'Sim', projeto: projetos[0], tag: `${tags} ${tagsLinguagem[7]}`, repositorio: 'https://github.com/clovisbalreira/wordpress/tree/main/Cns%20v2.0'},    
+   { titulo: 'Rádio modelo 003', descricao: 'Projeto pessoal para rádio - usando plugins ( v . 3 ).', linguagem: linguagens[7], url: 'https://github.com/clovisbalreira/wordpress/tree/main/Cns%20v3.0', tipo: tipos[2], modelo: modelos[3], status: 'Sim', projeto: projetos[0], tag: `${tags} ${tagsLinguagem[7]}`, repositorio: 'https://github.com/clovisbalreira/wordpress/tree/main/Cns%20v3.0'},
+    { titulo: 'Cartao Flutter', descricao: 'Projeto de cartões. Com api externa.', linguagem: linguagens[8], url: 'https://github.com/clovisbalreira/flutter/tree/main/cartaoFlutter', tipo: tipos[1], modelo: modelos[3], status: 'Sim', projeto: projetos[0], tag: `${tags} ${tagsLinguagem[8]}`, repositorio: 'https://github.com/clovisbalreira/flutter/tree/main/cartaoFlutter'},   
+    { titulo: 'Pokemon', descricao: 'Projeto de cartões. Com api externa.', linguagem: linguagens[8], url: 'https://github.com/clovisbalreira/flutter/tree/main/Pokemon', tipo: tipos[1], modelo: modelos[3], status: 'Sim', projeto: projetos[0], tag: `${tags} ${tagsLinguagem[8]}`, repositorio: 'https://github.com/clovisbalreira/flutter/tree/main/Pokemon'},    
+    { titulo: 'App Filmes', descricao: 'Projeto de cartões. Com api externa.', linguagem: linguagens[8], url: 'https://github.com/clovisbalreira/flutter/tree/main/app_filmes', tipo: tipos[1], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[8]}`, repositorio: 'https://github.com/clovisbalreira/flutter/tree/main/app_filmes'},    
+    { titulo: 'Exemplo Site python', descricao: 'Projeto de modelo de um site', linguagem: linguagens[9], url: 'https://github.com/clovisbalreira/python/tree/main/cursos-python-web', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[9]}`, repositorio: 'https://github.com/clovisbalreira/python/tree/main/cursos-python-web'},    
+    { titulo: 'Aluno', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Aluno', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Aluno'},    
+    { titulo: 'Aluno Conceito', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/AlunoConceito', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/AlunoConceito'},    
+    { titulo: 'Associação', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Associacao', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Associacao'},    
+    { titulo: 'Banco dados', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/BancoDados', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/BancoDados'},    
+    { titulo: 'Comissão', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Comissao', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Comissao'},    
+    { titulo: 'Data', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Data', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Data'},    
+    { titulo: 'Nadador', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Nadador', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Nadador'},    
+    { titulo: 'Pessoa peso', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/PessoaPeso', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/PessoaPeso'},    
+    { titulo: 'Projeto soma', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/ProjASoma', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/ProjASoma'},    
+    { titulo: 'Renda familia', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/RendaFamilia', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/RendaFamilia'},    
+    { titulo: 'Saque', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Saque', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Saque'},    
+    { titulo: 'Signos', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Signos', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Signos'},    
+    { titulo: 'Triangulo', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Triangulo', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/Triangulo'},    
+    { titulo: 'Projeto Operações', descricao: 'Projeto Android', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/pessoal/projAOperacoes', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/pessoal/projAOperacoes'},    
+    { titulo: 'Aluno', descricao: 'Projeto Kotlin', linguagem: linguagens[12], url: 'https://github.com/clovisbalreira/kotlin/tree/main/pessoal/Aluno', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[12]}`, repositorio: 'https://github.com/clovisbalreira/kotlin/tree/main/pessoal/Aluno'},    
+    { titulo: 'Funcionario', descricao: 'Projeto Kotlin', linguagem: linguagens[12], url: 'https://github.com/clovisbalreira/kotlin/tree/main/pessoal/Funcionario', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[12]}`, repositorio: 'https://github.com/clovisbalreira/kotlin/tree/main/pessoal/Funcionario'},    
+    { titulo: 'Produto', descricao: 'Projeto Kotlin', linguagem: linguagens[12], url: 'https://github.com/clovisbalreira/kotlin/tree/main/pessoal/Produto', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[12]}`, repositorio: 'https://github.com/clovisbalreira/kotlin/tree/main/pessoal/Produto'},    
+    { titulo: 'Soma', descricao: 'Projeto Kotlin', linguagem: linguagens[12], url: 'https://github.com/clovisbalreira/kotlin/tree/main/pessoal/soma', tipo: tipos[1], modelo: modelos[3], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[12]}`, repositorio: 'https://github.com/clovisbalreira/kotlin/tree/main/pessoal/soma'},    
+    { titulo: 'Designer', descricao: 'Projetos gráficos.', linguagem: linguagens[linguagens.length - 1], url: 'sites/imagens/index.html', tipo: tipos[0], modelo: modelos[2], status: 'Sim', projeto: projetos[0], tag: `${tags}`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/imagens'},
+    
     //Curso em video
     { titulo: 'Curso em video', descricao: 'Projeto criado no modelo do curso em vídeo. Com mentoria de Gustavo Guanabara.', linguagem: linguagens[0], url: './sites/curso-em-video-html-css/', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[1], tag: `${tags} ${tagsLinguagem[0]} #cursoemvideo #gustavoguanabara  #estudonauta`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/curso-em-video-html-css'},
     {titulo: 'Android', descricao: 'Projeto criado no modelo do curso em vídeo. Com mentoria de Gustavo Guanabara.', linguagem: linguagens[0], url: './sites/curso-em-video-html-css/desafios/d010/', tipo: tipos[0], modelo: modelos[2], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[0]} #cursoemvideo #gustavoguanabara  #estudonauta`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/curso-em-video-html-css/desafios/d010'},
+    {titulo: 'Curiosidades de Tecnologia', descricao: 'Projeto criado no modelo do curso em vídeo. Com mentoria de Gustavo Guanabara.', linguagem: linguagens[0], url: 'sites/curso-em-video-html-css/desafios/d010/', tipo: tipos[0], modelo: modelos[2], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[0]} #cursoemvideo #gustavoguanabara  #estudonauta`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/curso-em-video-html-css/desafios/d010'},
     {titulo: 'Cordel Moderno', descricao: 'Projeto criado no modelo do curso em vídeo. Com mentoria de Gustavo Guanabara.', linguagem: linguagens[0], url: './sites/curso-em-video-html-css/desafios/d012/', tipo: tipos[0], modelo: modelos[2], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[0]} #cursoemvideo #gustavoguanabara  #estudonauta`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/curso-em-video-html-css/desafios/d012'},
+    {titulo: 'Projeto Redes Socias', descricao: 'Projeto criado no modelo do curso em vídeo. Com mentoria de Gustavo Guanabara.', linguagem: linguagens[0], url: './sites/curso-em-video-html-css/desafios/d015/', tipo: tipos[0], modelo: modelos[2], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[0]} #cursoemvideo #gustavoguanabara  #estudonauta`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/curso-em-video-html-css/desafios/d015'},
+    {titulo: 'Login', descricao: 'Projeto criado no modelo do curso em vídeo. Com mentoria de Gustavo Guanabara.', linguagem: linguagens[0], url: './sites/curso-em-video-html-css/desafios/d016/', tipo: tipos[0], modelo: modelos[2], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[0]} #cursoemvideo #gustavoguanabara  #estudonauta`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/curso-em-video-html-css/desafios/d016'},
     {titulo: 'Curso em vídeo', descricao: 'Projeto criado no modelo do curso em vídeo. Com mentoria de Gustavo Guanabara.', linguagem: linguagens[1], url: './sites/curso-em-video-html-css-javascript/', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tagsLinguagem[1]} ${tags} #cursoemvideo #gustavoguanabara`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/curso-em-video-html-css-javascript'},
     { titulo: 'Acender Lambada', descricao: 'Projeto criado no modelo do curso em vídeo. Com mentoria de Gustavo Guanabara.', linguagem: linguagens[2], url: './sites/curso-em-video-html-css-javascript/lambada/', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[1], tag: `${tags} ${tagsLinguagem[2]} #cursoemvideo #gustavoguanabara  #estudonauta`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/curso-em-video-html-css-javascript/lambada'},
-    { titulo: 'Curso em video', descricao: 'Projeto criado no modelo do curso em vídeo. Com mentoria de Gustavo Guanabara.', linguagem: linguagens[2], url: './sites/javascript/curso-em-video-javascript/', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[1], tag: `${tags} ${tagsLinguagem[2]} #cursoemvideo #gustavoguanabara  #estudonauta`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/curso-em-video-javascript'},    
+    { titulo: 'Curso em video - JavaScript', descricao: 'Projeto criado no modelo do curso em vídeo. Com mentoria de Gustavo Guanabara.', linguagem: linguagens[2], url: './sites/curso-em-video-javascript', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[1], tag: `${tags} ${tagsLinguagem[2]} #cursoemvideo #gustavoguanabara  #estudonauta`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/curso-em-video-javascript'},    
+    { titulo: 'Muda a imagem na dependendo a hora', descricao: 'Projeto criado no modelo do curso em vídeo. Com mentoria de Gustavo Guanabara.', linguagem: linguagens[2], url: './sites/curso-em-video-javascript/ex011', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[1], tag: `${tags} ${tagsLinguagem[2]} #cursoemvideo #gustavoguanabara  #estudonauta`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/curso-em-video-javascript/ex011'},    
+    { titulo: 'Mostra uma imagem dependendo do ano e genero', descricao: 'Projeto criado no modelo do curso em vídeo. Com mentoria de Gustavo Guanabara.', linguagem: linguagens[2], url: './sites/curso-em-video-javascript/ex012', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[1], tag: `${tags} ${tagsLinguagem[2]} #cursoemvideo #gustavoguanabara  #estudonauta`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/curso-em-video-javascript/ex012'},    
+    { titulo: 'Vamos contar', descricao: 'Projeto criado no modelo do curso em vídeo. Com mentoria de Gustavo Guanabara.', linguagem: linguagens[2], url: './sites/curso-em-video-javascript/ex014', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[1], tag: `${tags} ${tagsLinguagem[2]} #cursoemvideo #gustavoguanabara  #estudonauta`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/curso-em-video-javascript/ex014'},    
+    { titulo: 'Tabuada', descricao: 'Projeto criado no modelo do curso em vídeo. Com mentoria de Gustavo Guanabara.', linguagem: linguagens[2], url: './sites/curso-em-video-javascript/ex015', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[1], tag: `${tags} ${tagsLinguagem[2]} #cursoemvideo #gustavoguanabara  #estudonauta`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/curso-em-video-javascript/ex015'},    
+    { titulo: 'Analisador de numeros', descricao: 'Projeto criado no modelo do curso em vídeo. Com mentoria de Gustavo Guanabara.', linguagem: linguagens[2], url: './sites/curso-em-video-javascript/ex018', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[1], tag: `${tags} ${tagsLinguagem[2]} #cursoemvideo #gustavoguanabara  #estudonauta`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/curso-em-video-javascript/ex018'},    
     { titulo: 'P.H.P. ( Básico curso em vídeo )', descricao: 'Projeto criado no modelo do P.H.P. ( Básico curso em vídeo ). Com mentoria de Gustavo Guanabara.', tipo: tipos[0], linguagem: linguagens[3], url: 'https://php-projetos-clovis.000webhostapp.com/sites/basico/', modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[3]} #cursoemvideo #gustavoguanabara #estudonauta`, repositorio: 'https://github.com/clovisbalreira/php/tree/main/sites/basico'},
     { titulo: 'P.H.P. ( P.O.O. curso em vídeo )', descricao: 'Projeto criado no modelo do P.H.P. ( P.O.O. curso em vídeo ). Com mentoria de Gustavo Guanabara.', tipo: tipos[0], linguagem: linguagens[3], url: 'https://php-projetos-clovis.000webhostapp.com/sites/poo/index.php', modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[3]} #cursoemvideo #gustavoguanabara #estudonauta`, repositorio: 'https://github.com/clovisbalreira/php/tree/main/sites/poo'},
     { titulo: 'Estudonauta', descricao: 'Projeto criado no modelo do estudonauta. Com mentoria de Gustavo Guanabara.', tipo: tipos[0], linguagem: linguagens[3], url: 'https://php-projetos-clovis.000webhostapp.com/sites/estudonauta/index.php', modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[3]} #estudonauta`, repositorio: 'https://github.com/clovisbalreira/php/tree/main/sites/estudonauta'},
@@ -125,12 +131,12 @@ var sites = [
     { titulo: 'Modelo curso em video - pizzaria fresco', descricao: 'Projeto criado no modelo do curso em vídeo - usando plugins. Com mentoria de Gustavo Guanabara Ramiro Lobo.', linguagem: linguagens[7], url: 'https://github.com/clovisbalreira/wordpress/tree/main/CursoEmVideo', tipo: tipos[2], modelo: modelos[3], status: 'Sim', projeto: projetos
     [2], tag: `${tags} ${tagsLinguagem[7]} #cursoemvideo #gustavoguanabara  #estudonauta`, repositorio: 'https://github.com/clovisbalreira/wordpress/tree/main/CursoEmVideo'},
     { titulo: 'Escola  ( Estudonauta )', descricao: 'Projeto criado no modelo do Android ( Estudonauta ). Com mentoria de Gustavo Guanabara.', tipo: tipos[0], linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/estudonauta/Escola', modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]} #cursoemvideo #gustavoguanabara #estudonauta`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/estudonauta/Escola'},
-    { titulo: 'Meu Nome ( Estudonauta )', descricao: 'Projeto criado no modelo do Android ( Estudonauta ). Com mentoria de Gustavo Guanabara.', tipo: tipos[0], linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/estudonauta/MeuNome', modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]} #cursoemvideo #gustavoguanabara #estudonauta`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/estudonauta/MeuNome'},
     { titulo: 'Olá mundo 20 ( Estudonauta )', descricao: 'Projeto criado no modelo do Android ( Estudonauta ). Com mentoria de Gustavo Guanabara.', tipo: tipos[0], linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/estudonauta/OlaMundo20', modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]} #cursoemvideo #gustavoguanabara #estudonauta`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/estudonauta/OlaMundo20'},
     { titulo: 'Estudonauta ( Estudonauta )', descricao: 'Projeto criado no modelo do Android ( Estudonauta ). Com mentoria de Gustavo Guanabara.', tipo: tipos[0], linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/estudonauta/estudonauta', modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]} #cursoemvideo #gustavoguanabara #estudonauta`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/estudonauta/estudonauta'},
     { titulo: 'Olá mundo ( Estudonauta )', descricao: 'Projeto criado no modelo do Android ( Estudonauta ). Com mentoria de Gustavo Guanabara.', tipo: tipos[0], linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/estudonauta/olamundo', modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]} #cursoemvideo #gustavoguanabara #estudonauta`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/estudonauta/olamundo'},
     { titulo: 'Olá Mundo ( Estudonauta )', descricao: 'Projeto criado no modelo do Kotlin ( Estudonauta ). Com mentoria de Gustavo Guanabara.', tipo: tipos[0], linguagem: linguagens[12], url: 'https://github.com/clovisbalreira/kotlin/tree/main/estudonauta/000_Ola_Mundo', modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[12]} #cursoemvideo #gustavoguanabara #estudonauta`, repositorio: 'https://github.com/clovisbalreira/kotlin/tree/main/estudonauta/000_Ola_Mundo'},
     { titulo: 'Mostrar Cisas na tela( Estudonauta )', descricao: 'Projeto criado no modelo do Kotlin ( Estudonauta ). Com mentoria de Gustavo Guanabara.', tipo: tipos[0], linguagem: linguagens[12], url: 'https://github.com/clovisbalreira/kotlin/tree/main/estudonauta/001_Mostrar_Coisas_Tela', modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[12]} #cursoemvideo #gustavoguanabara #estudonauta`, repositorio: 'https://github.com/clovisbalreira/kotlin/tree/main/estudonauta/001_Mostrar_Coisas_Tela'},
+    { titulo: 'Meu Nome ( Estudonauta )', descricao: 'Projeto criado no modelo do Android ( Estudonauta ). Com mentoria de Gustavo Guanabara.', tipo: tipos[0], linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/estudonauta/MeuNome', modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]} #cursoemvideo #gustavoguanabara #estudonauta`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/estudonauta/MeuNome'},
     { titulo: 'Comentarios ( Estudonauta )', descricao: 'Projeto criado no modelo do Kotlin ( Estudonauta ). Com mentoria de Gustavo Guanabara.', tipo: tipos[0], linguagem: linguagens[12], url: 'https://github.com/clovisbalreira/kotlin/tree/main/estudonauta/002_Comentarios', modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[12]} #cursoemvideo #gustavoguanabara #estudonauta`, repositorio: 'https://github.com/clovisbalreira/kotlin/tree/main/estudonauta/002_Comentarios'},
     { titulo: 'Tipos primitivos ( Estudonauta )', descricao: 'Projeto criado no modelo do Kotlin ( Estudonauta ). Com mentoria de Gustavo Guanabara.', tipo: tipos[0], linguagem: linguagens[12], url: 'https://github.com/clovisbalreira/kotlin/tree/main/estudonauta/003_Tipos_Primitivos', modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[12]} #cursoemvideo #gustavoguanabara #estudonauta`, repositorio: 'https://github.com/clovisbalreira/kotlin/tree/main/estudonauta/003_Tipos_Primitivos'},
     { titulo: 'Variaveis ( Estudonauta )', descricao: 'Projeto criado no modelo do Kotlin ( Estudonauta ). Com mentoria de Gustavo Guanabara.', tipo: tipos[0], linguagem: linguagens[12], url: 'https://github.com/clovisbalreira/kotlin/tree/main/estudonauta/004_Variaveis', modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[12]} #cursoemvideo #gustavoguanabara #estudonauta`, repositorio: 'https://github.com/clovisbalreira/kotlin/tree/main/estudonauta/004_Variaveis'},
@@ -193,11 +199,9 @@ var sites = [
    { titulo: 'Alura', descricao: 'Projeto criado java da alura - criação de tema', linguagem: linguagens[6], url: 'https://github.com/clovisbalreira/java/tree/main/alura', tipo: tipos[2], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[6]} #alura`, repositorio: 'https://github.com/clovisbalreira/java/tree/main/alura'},    
    
    //Neri Netzke
-   /*
-   {titulo: 'Neri Netzke', descricao: 'Projeto criado no modelo da informaticon com exemplos de tags. Com mentoria de Neri Netzke.', linguagem: linguagens[0], url: 'sites/html_css_javascript/neri_neitzke/index.html', tipo: tipos[0], modelo: modelos[0], status: 'Nao', projeto: projetos[2], tag: `${tagsLinguagem[0]} ${tags} #informaticon #nerineitzke`, repositorio: ' '},
+   {titulo: 'Neri Netzke', descricao: 'Projeto criado no modelo da informaticon com exemplos de tags. Com mentoria de Neri Netzke.', linguagem: linguagens[1], url: 'sites/neri-neitzke/index.html', tipo: tipos[0], modelo: modelos[0], status: 'Nao', projeto: projetos[2], tag: `${tagsLinguagem[0]} ${tags} #informaticon #nerineitzke`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/neri-neitzke'},
    { titulo: 'Informaticon', descricao: 'Projeto criado no modelo da informaticon. Com mentoria de Neri Neitzke.', linguagem: linguagens[3], url: 'https://php-projetos-clovis.000webhostapp.com/sites/carrinho/index.php', tipo: tipos[0], modelo: modelos[0], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[3]}`, repositorio: 'https://github.com/clovisbalreira/php/tree/main/sites/carrinho'},    
-   */
-  { titulo: 'Acender Led ( Informaticon )', descricao: 'Projeto da informaticon. Com mentoria de Neri Neitzke.', linguagem: linguagens[10], url: 'https://github.com/clovisbalreira/arduino/tree/main/neriArduino', tipo: tipos[0], modelo: modelos[0], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[10]}`, repositorio: 'https://github.com/clovisbalreira/arduino/tree/main/neriArduino'},    
+    { titulo: 'Acender Led ( Informaticon )', descricao: 'Projeto da informaticon. Com mentoria de Neri Neitzke.', linguagem: linguagens[10], url: 'https://github.com/clovisbalreira/arduino/tree/main/neriArduino', tipo: tipos[0], modelo: modelos[0], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[10]}`, repositorio: 'https://github.com/clovisbalreira/arduino/tree/main/neriArduino'},    
   
   // Deitel
   { titulo: 'Gorjeta ( Deitel )', descricao: 'Projeto do livro deitel.', linguagem: linguagens[11], url: 'https://github.com/clovisbalreira/android/tree/main/deitel/Gorjeta', tipo: tipos[0], modelo: modelos[0], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[11]}`, repositorio: 'https://github.com/clovisbalreira/android/tree/main/deitel/Gorjeta'},    
@@ -215,199 +219,3 @@ var sites = [
   { titulo: 'Java banco de dados ( Digital Innovation )', descricao: 'Exercicios de java com banco de dados', linguagem: linguagens[6], url: 'https://github.com/clovisbalreira/java/tree/main/curso_dio_java_banco_de_dados', tipo: tipos[1], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[6]}`, repositorio: 'https://github.com/clovisbalreira/java/tree/main/curso_dio_java_banco_de_dadoscurso_dio_java'},    
   { titulo: 'Python ( Digital Innovation )', descricao: 'Exercicios de python básico', linguagem: linguagens[9], url: 'https://github.com/clovisbalreira/python/tree/main/curso_dio_python', tipo: tipos[1], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[8]}`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/imagens'},    
 ]
-
-/* var numero = 0
-var mostrar = ['imagem', 'celular', 'tablet']
-var tabela = []
-var dado = ''
-var tamanho = window.innerWidth
-        
-function mostrarSites(dado, procura) {
-    var mostrarSites = document.getElementById('mostrarSites')
-    var div = document.createElement('div')
-    div.setAttribute('class', 'sites')
-    for (var i = 0; i < sites.length; i++) {
-        var valor = procurarValor(dado, i)
-        if (valor == procura && sites[i].status == 'Sim') {
-            var divFlex = document.createElement('div')
-            divFlex.setAttribute('class', 'siteFlex')
-            var largura = 0
-            var a = document.createElement('a')
-            a.innerHTML = sites[i].titulo
-            a.setAttribute('href', sites[i].url)
-            a.setAttribute('target', '_blank',)
-            divFlex.appendChild(a)
-
-            paragrafos(divFlex,div,mostrarSites,'Linguagem',sites[i].linguagem.nome)
-            paragrafos(divFlex,div,mostrarSites,'Tipo',sites[i].tipo.nome)
-            paragrafos(divFlex,div,mostrarSites,'Modelo',sites[i].modelo.nome)
-            paragrafos(divFlex,div,mostrarSites,'Projeto',sites[i].projeto.nome)
-            var divMostrarEmbed = document.createElement('div')
-            divMostrarEmbed.setAttribute('id', `div${i}`)
-            if (numero == 1) {
-                if (sites[i].tipo.nome == 'Site') {
-                    mostrarEmbed(divFlex, divMostrarEmbed, sites[i].url, '450px')
-                } else {
-                    mostrarImagem(divFlex, divMostrarEmbed, sites[i].linguagem.imagem)
-                }
-                largura = 450
-            } else if (numero == 0 || tamanho <= 950) {
-                mostrarImagem(divFlex, divMostrarEmbed, sites[i].linguagem.imagem)
-                largura = 300
-            } else {
-                if (sites[i].tipo.nome == 'Site') {
-                    mostrarEmbed(divFlex, divMostrarEmbed, sites[i].url, '950px')
-                } else {
-                    mostrarImagem(divFlex, divMostrarEmbed, sites[i].linguagem.imagem)
-                }
-                largura = 950
-            }
-            paragrafos(divFlex,div,mostrarSites,'Descrição',sites[i].descricao)
-            paragrafos(divFlex,div,mostrarSites,'Tag',sites[i].tag)
-            divFlex.style.width = `${largura}px`
-        }
-    }
-}
-function paragrafos(divFlex,div,mostrarSites,tipo,valor){
-    var p = document.createElement('p')
-    p.innerHTML = `<strong>${tipo}<//strong> : ${valor}`
-    divFlex.appendChild(p)
-    div.appendChild(divFlex)
-    mostrarSites.appendChild(div)
-}
-function procurarValor(dados, n) {
-    var valor = ''
-    if (dados == 'linguagem') {
-        valor = sites[n].linguagem
-    } else if (dados == 'tipo') {
-        valor = sites[n].tipo
-    } else if (dados == 'modelo') {
-        valor = sites[n].modelo
-    } else if (dados == 'projeto') {
-        valor = sites[n].projeto
-    }
-    return valor
-}
-function mostrarImagem(divFlex, divMostrarEmbed, imagem) {
-    var img = document.createElement('img')
-    img.setAttribute('src', imagem)
-    img.setAttribute('class', 'img')
-    divMostrarEmbed.appendChild(img)
-    divFlex.appendChild(divMostrarEmbed)
-}
-function mostrarEmbed(divFlex, divMostrarEmbed, url, tamanho) {
-    var embed = document.createElement('embed')
-    embed.setAttribute('type', 'video/webm')
-    embed.setAttribute('src', url)
-    embed.setAttribute('width', tamanho)
-    embed.setAttribute('height', '400px')
-    divMostrarEmbed.appendChild(embed)
-    divFlex.appendChild(divMostrarEmbed)
-}
-function atualizarEmbed() {
-    var mostrarSites = document.getElementById('mostrarSites')
-    mostrarSites.innerHTML = ''
-    var lista = mostrar.length - 1
-    if (numero == 0) {
-        if(tamanho <= 950){
-            numero = 1
-            console.log('celular')
-        }else{
-            numero = lista
-        }
-    } else {
-        if(numero == 1 && tamanho <= 950){
-            numero = 0
-        }else{
-            numero--
-        }
-    }
-    mostrarDadosSites(dado, tabela)
-    mudarBotao()
-}
-function mostrarDadosSites(dado, tabela) {
-    var mostrar = document.getElementById('mostrarSites')
-    mostrar.innerHTML = ''
-    for (var i = 0; i < tabela.length; i++) {
-        var prncipal = document.createElement('div')
-        prncipal.setAttribute('class','titulo')
-        var div = document.createElement('div')
-        div.setAttribute('class', 'titulo-h2')
-        var h2 = document.createElement('h2')
-        h2.innerHTML = tabela[i].nome
-        h2.setAttribute('id', `quadro-${i}`)
-        div.appendChild(h2)
-        var a = document.createElement('a')
-        a.setAttribute('href', '#perfil')
-        var img = document.createElement('img')
-        img.setAttribute('src', 'img/seta.png')
-        a.appendChild(img)
-        div.appendChild(a)
-        prncipal.appendChild(div)
-        var h3 = document.createElement('h3')
-        h3.innerHTML = tabela[i].descricao
-        prncipal.appendChild(h3)
-        mostrar.appendChild(prncipal)
-        mostrarSites(dado, tabela[i])
-    }
-}
-function mudarBotao() {
-    if (numero == 2  || (numero == 0 && tamanho <= 950)) {
-        variaveisBotao('red', 'white', 'Celular')
-    } else if (numero == 1) {
-        variaveisBotao('green', 'white', 'Linguagem')
-    } else {
-        variaveisBotao('blue', 'white', 'Tablet')
-    }
-}
-function variaveisBotao(corFundo, corLetra, texto) {
-    var button = document.getElementById('button')
-    button.style.backgroundColor = corFundo
-    button.style.color = corLetra
-    button.innerHTML = texto
-}
-function criarNavegacao(tabela) {
-    var nav = document.querySelector('nav')
-    nav.innerHTML = ''
-    for (var i = 0; i < tabela.length; i++) {
-        var a = document.createElement('a')
-        a.textContent = tabela[i].nome
-        a.setAttribute('href', `#quadro-${i}`)
-        nav.appendChild(a)
-        if(i < tabela.length-1){
-            var p = document.createElement('p')
-            p.textContent = ` | `
-            nav.appendChild(p)
-        }
-    }
-}
-function atualizarVisual() {
-    var tamanho = window.innerWidth
-    if(tamanho <= 950){
-        numero = 2
-    }
-    var input = document.querySelectorAll('.escolha')
-    for (var i = 0; i < input.length; i++) {
-        if (input[i].checked) {
-            var valor = input[i].value
-            if (valor == 'linguagens') {
-                tabela = linguagens
-                dado = 'linguagem'
-            } else if (valor == 'tipos') {
-                tabela = tipos
-                dado = 'tipo'
-            } else if (valor == 'modelos') {
-                tabela = modelos
-                dado = 'modelo'
-            } else if (valor == 'projetos') {
-                tabela = projetos
-                dado = 'projeto'
-            }
-            mostrarDadosSites(dado, tabela)
-            mudarBotao()
-            criarNavegacao(tabela)
-        }
-    }
-}
-atualizarVisual()
- */

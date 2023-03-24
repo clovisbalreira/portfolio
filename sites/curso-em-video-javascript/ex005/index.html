@@ -21,12 +21,15 @@
             variavel.toUpperCase
             variavel.toLowerCase
             */
-           do{
-               var numero = window.prompt('Digite o valor: ')
-           }while(isNaN(numero))
-
-            numero = Number(numero)
-            document.write(`Você digitou ${numero.toLocaleString('pt-br', {style:'currency', currency: 'BRL'})}`)
+            var numero = window.prompt('Digite o valor: ')
+            var numeroFormatado = Number(numero).toFixed(2)
+            var numeroValorReal = Number(numero).toLocaleString('pt-br', {style:'currency', currency: 'BRL'}) 
+            var numeroValorDolar = Number(numero).toLocaleString('pt-br', {style:'currency', currency: 'USD'}) 
+            var numeroValorEuro = Number(numero).toLocaleString('pt-br', {style:'currency', currency: 'EUR'}) 
+            document.write(numeroFormatado+'<br>')
+            document.write(numeroValorReal+'<br>')
+            document.write(numeroValorDolar+'<br>')
+            document.write(numeroValorEuro+'<br>')
         </script>
         <br><a href="../index.html">Voltar</a>
     </section>

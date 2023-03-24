@@ -10,6 +10,7 @@
 <body>
     <section>
         <h1>Variaveis</h1>
+        <p>O tipo da variavel é</p>
         <script>
             //Comentario em um linha
             /*
@@ -27,14 +28,9 @@
             function
             * para saber o tipo usa a função typeof(variavel)
             */
-           var digito = window.prompt('')
-           alert(`Você digitou ${digito}`)
-            if(isNaN(digito)){
-                digito = digito
-            }else{
-                digito = Number(digito)
-            }
-           document.write(`Você digitou ${digito} e seu tipo é ` + typeof(digito))
+           var nome = window.prompt('Qual seu nome ?')
+           var p = document.querySelector('p')
+           p.innerHTML += ` ${typeof(nome)}`
            </script>
         <br><a href="../index.html">Voltar</a>
     </section>

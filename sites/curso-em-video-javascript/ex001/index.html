@@ -10,13 +10,15 @@
 <body>
     <section>
         <h1>Meu Primeiro Programa</h1>
+        <p>Prazer em conhecer</p>
+        <a href="../index.html">Voltar</a>
         <script>
             window.alert('Olá Mundo')
             window.confirm('Está gostando do javaScript')
-            nome = window.prompt('Qual seu nome?')
-            document.write(`<p>Bem vindo ao mundo JavaScript ${nome}!!!</p>`)
+            var nome = window.prompt('Qual seu nome')
+            var p = document.querySelector('p')
+            p.innerHTML += ` ${nome}`
         </script>
-        <a href="../index.html">Voltar</a>
     </section>
 </body>
 </html>

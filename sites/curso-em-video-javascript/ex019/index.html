@@ -14,13 +14,15 @@
 </head>
 <body>
     <h1>Objetos</h1>
-    <div></div>
+    <div>
+
+    </div>
     <script>
         let div = document.getElementsByTagName('div')[0]
         let amigo ={nome:'José', sexo: 'M', peso: 85.5,engordar(p=0){ this.peso += p} }
-        div.innerHTML = `<p>${amigo.nome} do sexo ${amigo.sexo} pesa ${amigo.peso}Kg</p>`
+        div.innerHTML = `<p>${amigo.nome} pesa ${amigo.peso}</p>`
         amigo.engordar(2)
-        div.innerHTML += `<p>Somando dois quilos ele vai pesar ${amigo.peso}Kg</p>`
+        div.innerHTML += `<p>${amigo.nome} pesa ${amigo.peso}</p>`
     </script>
     <br><a href="../index.html">Voltar</a>
 </body>

@@ -1,0 +1,105 @@
+body{
+    background: linear-gradient(to left, blue 0%, rgb(124, 124, 224) 100%);
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+}
+
+.star{
+    display: block;
+}
+
+.star > div{
+    position: relative;
+    width: max-content;
+    margin: auto;
+}
+.star > div > a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.writeLinks{
+    transform: translate(-130%, -10%);
+}
+.links{
+    width: 75%;
+}
+.writeCurriculo{
+    transform: translate(15%, 300%);
+    font-size: 1.5rem;
+}
+.curriculo{
+    margin-top: 10rem;
+    width: 150%;
+}
+.writeImagens{
+    transform: translate(-50%, 120%);
+    font-size: 1.2rem;
+}
+.imagens{
+    margin-top: 4em;
+    width: 100%;
+}
+
+.img{
+    width: 200px;
+    margin: 2px;
+}
+
+h1{
+    text-align: center;
+}
+
+.div_area{
+    background-color: rgba(128, 128, 128, 0.671);
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.btn{
+    width: 10%;
+    margin-left: 70%;
+}
+footer{
+    text-align: 1rem;
+    text-align: center;
+}
+@media(max-width: 950px){
+    .div_area{
+        width: 90%;
+    }
+    .writeCurriculo{
+        transform: translate(15%, 120%);
+        font-size: 1.5rem;
+    }
+    .curriculo{
+        margin-top: 4rem;
+  }
+}
+
+@media(max-width: 720px){
+    main{
+        grid-template-columns: max-content max-content;
+    }    
+
+}
+@media(max-width: 600px){
+    main{
+        grid-template-columns: max-content;
+        place-content: center;
+    }    
+}
+@media(max-width: 475px){
+    main{
+        place-content: initial;
+    }    
+}

@@ -1,9 +1,8 @@
-var num = document.getElementById('numero')
-var tab = document.getElementById('tabuada')
-
 function tabuada(){
+    var num = document.getElementById('numero')
+    var tab = document.getElementById('tabuada')
     if(num.value.length == 0){
-        alert('Número Invalido')
+        alert('ola')
     }else{
         var n = Number(num.value)
         let c = 0

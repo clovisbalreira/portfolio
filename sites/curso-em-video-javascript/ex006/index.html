@@ -58,12 +58,8 @@
                     teste logico
                     teste ? true : false
             */
-            do{
-                n1 = window.prompt('Digite nota 1:')
-            }while(isNaN(n1))
-            do{
-                n2 = window.prompt('Digite  nota 2:')
-            }while(isNaN(n2))
+            n1 = Number.parseFloat(window.prompt('Digite nota 1:'))
+            n2 = Number.parseFloat(window.prompt('Digite  nota 2:'))
             var soma = n1 + n2
             var subtracao = n1 - n2
             var multiplicacao = n1 * n2

@@ -7,6 +7,15 @@
     <title>JavaScript</title>
     <link rel="stylesheet" href="../css/style.css">
     <style>
+        div > div{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 50%;
+        }
+        input[type='number']{
+            height: 1rem;
+        }
     </style>
 </head>
 <body>
@@ -15,9 +24,18 @@
     </header>
     <section>
         <div>
-            <p>Inicio: <input type="number" name="inicio" id="inicio"></p>
-            <p>Fim: <input type="number" name="fim" id="fim"></p>
-            <p>Passo: <input type="number" name="passo" id="passo"></p>
+            <div>
+                <p>Inicio:</p>
+                <input type="number" name="inicio" id="inicio">
+            </div>
+            <div>
+                <p>Fim:</p> 
+                <input type="number" name="fim" id="fim">
+            </div>
+            <div>
+                <p>Passo:</p> 
+                <input type="number" name="passo" id="passo">
+            </div>
             <p><input type="button" value="Contar" onclick="contar()"></p>
         </div>
         <div id="res">
