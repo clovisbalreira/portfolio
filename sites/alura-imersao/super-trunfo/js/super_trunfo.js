@@ -3,7 +3,6 @@ var baralhoMaquina = []
 function sortear(){
     procurar()
     let interval = setInterval(() => {
-        console.log('funcionou')
         if(cartasTotal <= superHeroi.length || superHeroi.length == cartasTipo){
             document.getElementById('resultado').innerHTML = ''
             sortearCarta()
