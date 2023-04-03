@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>
+      Imersão Dev Alura - Tabela
+    </title>
+    <link rel="stylesheet" href="css/tabela_classificacao.css">
+  </head>
+  <body>
+    <label for="jogador">Nome: </label>
+    <input type="text" name="jogador" id="jogador">
+    <label for="foto">Foto: </label>
+    <input type="text" name="foto" id="foto">
+    <div id="botoes">
+      <button onclick="adicionarJogador()">Adicionar Jogador</button>
+      <button onclick="criarNovaTabela()">Criar Tabela</button>
+      <button onclick="zerarTabela()">Zerar Tabela</button>
+      <button onclick="excluirParticipantes()">Excluir Participantes</button>
+      <button id="returno" onclick="campeonatoReturno()">Turno e Returno</button>
+    </div>
+    <div id="erro"></div>
+    <h1 id="t">Tabela de classificação</h1>
+    <table style="width:100%">
+      <thead>
+        <tr>
+          <th scope="col" colspan="2">Participante</th>
+          <th scope="col">Pg</th>
+          <th scope="col">J</th>
+          <th scope="col">V</th>
+          <th scope="col">E</th>
+          <th scope="col">D</th>
+          <th scope="col">GP</th>
+          <th scope="col">GC</th>
+          <th scope="col">SG</th>
+          <th scope="col">%</th>
+        </tr>
+      </thead>
+      <tbody id="tabelaJogadores">
+      </tbody>
+    </table>
+    <table id="rodadas" class="rodada"></table>
+    <table id="jogoExtra" class="jogoExtra"></table>
+  </body>
+  <script src="js/tabela_classificacao.js"></script>
+</html>

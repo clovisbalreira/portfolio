@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array JavaScript</title>
+    <style>
+        body {
+            background: linear-gradient(to left, rgba(0, 0, 0, 0.445) 0%, blue 100%);
+        }
+    </style>
+    <script>
+        function mostrar(texto, dado) {
+            document.write(texto + " : ")
+            dado.forEach((item) => document.write(item + " "))
+        }
+    </script>
+</head>
+
+<body>
+    <script>
+        const numbers = [10, 20, 30]
+        mostrar("Exemplos de Map Array ", numbers)
+        document.write('<br><br>')
+        const doubleNumbers = numbers.map(item => item * 2)
+        mostrar("Cada valor do array multipicado por 2 ", doubleNumbers)
+
+        document.write('<hr>')
+        document.write("Os produtos são: ")
+        const products = [
+            { name: 'Mouse Sem Fio', price: 30 },
+            { name: 'Pen Drive', price: 25 },
+            { name: 'Cartucho de Tinta', price: 50 },
+            { name: 'Suporte Ergomico', price: 23 },
+            { name: 'Repetidor de Sinal Wi-Fi', price: 44 }
+        ]
+        products.forEach((item, indice, array) => document.write("<br>Nome: " + item.name + " R$ : " + item.price))
+        document.write('<br><br>')
+        document.write("Os produtos com valor maior de 30 pela metade do preço")
+        const saleProducts = products.map(products => {
+            if (products.price >= 30) {
+                return { name: products.name, price: products.price / 2 }
+            }
+            return products
+        })
+        saleProducts.forEach((item, indice, array) => document.write("<br>Nome: " + item.name + " R$ : " + item.price))
+
+        document.write('<hr>')
+        const randomNumbers = [36, 99, 37, 63]
+        mostrar('Exemplo de filtro ', randomNumbers)
+        document.write('<br><br>')
+        const numbersGreterThan37 = randomNumbers.filter(item => item > 37)
+        mostrar('Os números maiores que 37 são: ', numbersGreterThan37)
+
+        document.write('<hr>')
+        const users = [
+            { name: 'Batman', premium: true },
+            { name: 'Robin', premium: false },
+            { name: 'Pinguim', premium: true },
+            { name: 'Charada', premium: false },
+            { name: 'Coringa', premium: true }
+        ]
+        document.write("Os usuarios são: ")
+        users.forEach((item) => document.write('<br>Nome : ' + item.name + ' , Cliente Premiun : ' + (item.premium ? 'Sim' : 'Não')))
+        document.write('<br><br>')
+        const premiunUser = users.filter(user => user.premium)
+        document.write("Os usuarios premiun são: ")
+        premiunUser.forEach((item) => document.write('<br>Nome : '
+            + item.name)
+        )
+
+        document.write('<hr>')
+        const numbersreduce = [1, 2, 3]
+        mostrar('Exemplo de reduce ', numbersreduce)
+        document.write('<br><br>')
+        const sumResult = numbersreduce.reduce((accumulator, item) => accumulator + item, 0)
+        document.write("A soma de todos os números são: ")
+        document.write(sumResult)
+
+        document.write('<hr>')
+        const phaseScores = [
+            { name: 'Homem de Ferro', score: 337 },
+            { name: 'Capitão América', score: 43 },
+            { name: 'Thor', score: 234 },
+            { name: 'Viúva Negra', score: 261 },
+            { name: 'Gavião Arqueiro', score: 491 },
+            { name: 'Homem de Ferro', score: 167 },
+            { name: 'Capitão América', score: 137 },
+            { name: 'Thor', score: 135 },
+            { name: 'Viúva Negra', score: 359 },
+            { name: 'Gavião Arqueiro', score: 133 }
+        ]
+        document.write('Os jogadores e seus pontos ')
+        phaseScores.forEach((item) => document.write('<br>Nome: ' + item.name + ' , score: ' + item.score))
+        document.write('<br><br>')
+        const capitaoScore = phaseScores.reduce((accumulator, phaseScores) => {
+            if (phaseScores.name === 'Capitão América') {
+                accumulator += phaseScores.score
+            }
+            return accumulator
+        }, 0)
+        document.write('Os pontos total de Capitão América são: ')
+        document.write(capitaoScore)
+
+        document.write('<hr>')
+        const randomNumbers1 = [10, 30, 15, 25, 50, 40, 5]
+        mostrar("Os numeros são: ", randomNumbers1)
+        document.write('<br><br>')
+        const getOddNumbers = randomNumbers1 => randomNumbers1 % 2 === 1
+        const oddNumbers = randomNumbers1.filter(getOddNumbers)
+        mostrar("Os números Impares são: ", oddNumbers)
+        document.write('<br><br>')
+        const getPairsNumbers = randomNumbers1 => randomNumbers1 % 2 === 0
+        const pairsNumbers = randomNumbers1.filter(getPairsNumbers)
+        mostrar("Os números Pares são: ", pairsNumbers)
+
+        document.write('<hr>')
+        const crazyNumbers = [937, 5, 395, 402, 501, 333, 502, 781, 3, 691]
+        mostrar('Os números são: ', crazyNumbers)
+        document.write('<br><br>')
+        const countNumbersLessThan501 = (accumulator, crazyNumbers) => crazyNumbers < 501 ? ++accumulator : accumulator
+        const numbersLessThan501 = crazyNumbers.reduce(countNumbersLessThan501, 0)
+        document.write("Os números total de números menor que 501 é : ")
+        document.write(numbersLessThan501)
+
+        document.write('<hr>')
+        const numbers1 = [5, 7, 3]
+        mostrar('Os números são: ', numbers1)
+        document.write('<br><br>')
+        const squareNumbers = numbers1.map(numbers1 => numbers1 ** 2)
+        mostrar('Os valores do array ao quadrado são: ', squareNumbers)
+
+        document.write('<hr>')
+        const tarantinoMovies = [
+            { name: 'Bastardos inglórios', release: 2009 },
+            { name: 'Pulp Fiction', release: 1994 },
+            { name: 'Kill Bill: Volume 2', release: 2004 },
+            { name: 'Quatro Quartos', release: 1995 },
+            { name: 'Sin City', release: 2005 },
+            { name: 'Era uma Vez em... Hollywood', release: 2019 },
+            { name: 'Django Livre', release: 2012 },
+            { name: 'Cães de Aluguel', release: 1992 },
+            { name: 'À Prova de Morte', release: 2007 },
+            { name: 'Kill Bill: Volume 1', release: 2003 }
+        ]
+        document.write('Os filmes são: ')
+        tarantinoMovies.forEach((item) => document.write('<br>Nome: ' + item.name + ' , Ano: ' + item.release))
+        document.write('<br><br>')
+        const moviesBefore2000 = tarantinoMovies.filter(({ release }) => release < 2000)
+        document.write("Os filmes antes do ano 2000 são : ")
+        moviesBefore2000.forEach((item) => document.write('<br>Nome: ' + item.name + ' , Ano: ' + item.release))
+
+        document.write('<hr>')
+        const tvShows = [
+            { name: 'Breaking Bad', releaseYear: 2008 },
+            { name: 'Mr. Robot', releaseYear: 2015 },
+            { name: 'True Detective', releaseYear: 2014 },
+            { name: 'Hannibal', releaseYear: 2013 },
+            { name: 'The Handmaid\'s Tale', releaseYear: 2017 },
+            { name: 'House M.D.', releaseYear: 2004 },
+            { name: 'Watchmen', releaseYear: 2019 }
+        ]
+        document.write('Os filmes são: ')
+        tvShows.forEach((item) => document.write('<br>Nome: ' + item.name + ' , Ano : ' + item.releaseYear))
+        document.write('<br><br>')
+        const showNames = tvShows.map(({ name }) => name)
+        mostrar('Só nome dos filmes: ', showNames)
+
+        document.write('<hr>')
+        const carts = [
+            { name: 'Dark Souls III', price: 95.03 },
+            { name: 'Shadow of the Tomb Raider', price: 101.19 },
+            { name: 'Sekiro: Shadows Die Twice', price: 179.99 },
+            { name: 'Resident Evil 2', price: 119.90 },
+            { name: 'Death Stranding', price: 149.99 }
+        ]
+        document.write('Os filmes são: ')
+        carts.forEach((item) => document.write('<br>Nome: ' + item.name + ' , Preço : R$ ' + item.price))
+        document.write('<br><br>')
+        document.write('Os filmes são: <br>')
+        carts.forEach((cart, index) => {
+            document.write(cart.name)
+            if(index != carts.length - 1){
+                document.write(' - ')
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso em video</title>
+    <!--<link rel="stylesheet" href="path/to/pyscript.css" />
+    <script defer src="path/to/pyscript.js"></script>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />-->
+    <link rel="stylesheet" href="../../css/style.css">
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script> 
+</head>
+<body>
+    <section>
+        <h2>Desafio 04 - Faça um programa que leia algo pelo teclado e mostre na tela o seu tipo primitivo as informações possiveis sobre ela.</h2>
+        <hr>
+        <p>
+            <py-script>
+                texto = input('Digite algo: ')
+                print('O tipo primitivo desse valor é ', type(texto))
+                print('Só tem espaços ',texto.isspace())
+                print('È um número ',texto.isnumeric())
+                print('È alfabético ',texto.isalpha())
+                print('È alfanúmerico ',texto.isalnum())
+                print('Está em maiusculas? ',texto.isupper())
+                print('Está em Minusculas? ',texto.islower())
+                print('Está capitalizada? ',texto.istitle())
+            </py-script>
+        </p>
+        <a href="../index.html">Voltar</a>
+    </section>
+</body>
+</html>
+        <!--
+
+        
+        
+
+
+        
+        
+
+
+
+
+        <div>
+            <h2></h2>
+        </div>-->
