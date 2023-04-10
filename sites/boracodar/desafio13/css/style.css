@@ -1,0 +1,203 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+:root{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    background-color: #1f2937;
+}
+
+body, input, button{
+    font-size: 1.4rem;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+form{
+    padding: 2.4rem;
+    max-width: 40rem;
+    margin: auto;
+}
+#credit-card{
+    width: 32.8rem;
+    height: 21.2rem;
+    perspective: 60rem;
+}
+
+#credit-card > div{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all .5s cubic-bezier(0.175, 0.885, 0.37, 1.175);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    width: 280px;
+    height: 160px;
+}
+.card{
+    margin-top: 2rem;
+    margin-left: 3rem;
+    border-radius: 20px;
+    background: linear-gradient(49deg, #1E7170 0%, #2C234D 90%);
+}
+.front{
+    transform: rotateY(0deg);
+}
+.front div.imagem{
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 10rem;
+}
+.front div.imagem img{
+    width: 5rem;
+}
+.front div.imagem div{
+    border: .2rem solid white;
+    border-radius: 99px;
+    width: 2.7rem;
+    padding: .5rem .2rem .2rem .5rem;
+}
+.front div.imagem div img{
+    width: 1.2rem;
+    rotate: 90deg;
+}
+.front > p{
+    margin-top: 3.5rem;
+    display: flex;
+    justify-content: center;
+    font-size: 1.8rem;
+    letter-spacing: .5rem;
+    color: white;
+}
+.front div.paragrafo{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    color: white;
+    margin-top: 2rem;
+    margin-inline: 2rem;
+}
+.front div.paragrafo p:nth-child(2){
+    letter-spacing: .5rem;
+}
+.back{
+    transform: rotateY(180deg);
+}
+.back div.tarja-preta{
+    width: 100%;
+    height: 35px;
+    margin-top: 2rem;
+    background-color: black;
+}
+.back div#texto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 40px;
+}
+.back div#texto p.numero{
+    width: 75%;
+    background-color: #D1D5DB;
+    text-align: right;
+    border-radius: 10px;
+    padding: .7rem 1rem;
+    letter-spacing: .5rem;
+}
+.back div#texto p.cvv{
+    color: white;
+}
+#credit-card:active .front,
+#credit-card:hover .front{
+    transform: rotateY(180deg);
+}
+
+#credit-card:active .back,
+#credit-card:hover .back{
+    transform: rotateY(0deg);
+}
+.flex{
+    display: flex;
+}
+
+.inputs{
+    margin-top: 4.8rem;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+label{
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: #E5E7E8;
+    gap: .4rem;
+    align-items: center;
+}
+input, select{
+    margin-top: .4rem;
+    width: 100%;
+    padding: 1.2rem;
+    border: .2rem solid #374151;
+    background-color: #111827;
+    border-radius: .4rem;
+    color: #F3F4F6;
+}
+input:focus{
+    border: 0.15rem solid #9133EA;
+}
+input:invalid:focus{
+    border: .45rem solid #F87185;
+}
+input + .warning{
+    display: none;
+}
+input:invalid:focus + .warning{
+    font-size: 1.4rem;
+    margin-top: .8rem;
+    color: #F87185;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+.col-2{
+    gap: 2.4rem;
+    align-items: center;
+}
+.col-2 .input-wrapper:nth-child(3){
+    flex-basis: 100%;
+}
+.help img{
+    width: 1.4rem;
+    height: 1.6rem;
+}
+.info-security{
+    margin-top: 4.8rem;
+    justify-content: center;
+    gap: .8rem;
+    font-size: 1.4rem;
+    color: #E5E7E8;
+}
+button{
+    margin-top: 10rem;
+    border: 0;
+    padding: 1.6rem;
+    width: 100%;
+    background: #9333EA;
+    box-shadow: .0rem .4rem 1.6rem rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: #F9FAFB;
+    cursor: pointer;
+    transition: background .2s;
+}
+button:hover{
+    background: #AB55F7;
+}

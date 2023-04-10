@@ -3,162 +3,129 @@
     margin: 0;
     padding: 0;
 }
-
+:root{
+    font-size: 62.5%;
+}   
 body{
+    font-size: 1.6rem;
     background-image:url("../img/fundo.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: 2rem auto;
 }
-header , main , footer{
-    margin: .5% 10%;
+body header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
-header{
-    width:83%;
+body header img.img-header{
+    width: 30rem;
 }
-.img-logo{
-    width:58%;    
+body main{
+    background-color:#ffffff8f;
+    display: flex;
+    margin-top: 2rem;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.664);
+    width: 100%;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
 }
-.img-header{
-    width:19%;
+body main section div{
+    width: 20rem;
+    padding: 2rem;
 }
-nav ul{
+body main section div nav{
     background-color: #ffffff8f;
-    padding-top:1px;
+    padding: 1rem;
 }
-nav ul li {
-    padding-bottom: 7px;
-    margin: 5px;
-    list-style-type: none;
-    font-size: 1em;
+body main section div nav ul{
+    list-style: none;
 }
-nav ul li a {
+body main section div nav ul li a{
     color: black;
     text-decoration: none;
-    padding: 5px 8px
 }
-nav ul li a:hover {
-    color: rgba(0, 0, 0, 0.616);
-    text-decoration: none
+body main section div nav ul li a:hover{
+    color: #00000085;
 }
-.img-section , .img-section-2{
-    margin-top:1px;
+body main section div div{
+    padding: 0;
+    margin-top: 2rem;
+    height: 20rem;
+    position: relative;
 }
-.img-section{
-    margin-left:10px;
+body main section div div img:nth-child(2){
+    position: absolute;
+    bottom: 0;
+    right: 1;
 }
-.img-section-2{
-    margin-left:110px;
+body main article{
+    padding-top: 2rem;
+    padding-right: 2rem;
 }
-main{
-    background-color:#ffffff8f;
-    width:80.3%;
+body main article div{
     display: flex;
+    gap: 1rem;
 }
-section , article{
-    display:inline-block;
+body main article div div{
+    display: grid;
 }
-section{
-    width:20%;
+body main article > p{
+    margin-top: 2rem;
+    text-indent: 5rem;
 }
-article{
-    width:80%;
-}
-.normal{
-    height: auto;
-}
-article p{
-    padding: .5em 1em;
-}
-.img-article , div{
-    display:inline-block
-}
-.img-article{
-    margin:1em;
-}
-div{
-    width:58%;
-    margin:3em .5em;
-}
-div h1 , div p{
-    margin:1em;
-    text-align:center;
+h2{
+    padding: 2rem;
 }
 footer{
     background-color:#ffffff8f;
-    text-align:center;
-    padding:.5em;
-    clear:both;
-}
-.titulo_principal{
-    display: flex;
-    justify-content: space-between;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
     width: 100%;
+    text-align: center;
+    padding-block: 1rem;
+    margin-bottom: 2rem;
 }
-
-@media(max-width: 950px){
-    .img-section , .img-section-2{
-        width: 70px;
-    }
-    .img-section-2{
-        margin-left: 5em;
-    }
-    nav ul li{
-        font-size: 0.8em;
-    }
+@media (max-width:1110px) {
+    body{
+        width: 90%;
+    }    
 }
-
-@media(max-width: 450px){
-    header{
-        width: 98%;
-        margin-left: 2%;
-    }
-    main{
+@media (max-width:750px) {
+    body header{
+        position: relative;
         flex-direction: column;
-        width: 98%;
-        margin-left: 1%;
     }
-    section div{
-        display: flex;
+    body header img.img-header{
+        display: none;
     }
-    section div div{
+    body main{
         display: flex;
         flex-direction: column;
     }
-    nav ul li{
-        font-size: 1em;
-        width: 170px;
+    body main section div{
+        width: 93%;
+        display: flex;
+        flex-direction: row;
+        padding: 2rem;
     }
-    .img-section , .img-section-2{
-        width: 120px;
+    body main section div nav{
+        width: 250%;
+    }        
+    body main section div div img:nth-child(1){
+        width: 10rem;
+        height: 10rem;
+        position: absolute;
+        margin-top: -2rem;
     }
-    .img-section{
-        margin-top: -47px;
+    body main article div{
+        flex-direction: column;
+        padding-left: 2rem;
     }
-    .img-section-2{
-        margin-left: 6em;
-    }
-    .titulo_principal{
-        width: 125%;
-        margin-top: -90px;
-        margin-left: -10px;
-    }
-    .titulo_principal img{
-        width: 30%;
-        height: 30vh;
-    }
-    .titulo_principal div{
-        margin-left: -180px;
-    }
-    .normal > p{
-        margin-top: -110px;
-        margin-left: 5%;
-        width: 110%;
-    }
-    article article{
-        margin-top: -110px;
-        margin-left: 5%;
-        width: 110%;
-    }
-    footer{
-        width: 94%;
-        margin-left: 1%;
+    body main article > p{
+        padding-left: 2rem;
     }
 }

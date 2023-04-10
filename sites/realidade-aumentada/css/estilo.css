@@ -1,0 +1,141 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: linear-gradient(90deg,rgba(0, 0, 0, 0.575),white);
+}
+.logo{
+    width: 100%;
+}
+main{
+    display: flex;
+}
+main .navegacao{
+    background: linear-gradient(45deg, white 0%, black 70%);
+}
+nav ul{
+    background-color: #808080d9;
+    padding-top:1px;
+}
+nav ul li {
+    padding-bottom: 7px;
+    margin: 5px;
+    list-style-type: none;
+    font-size: 1em;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 8px
+}
+nav ul li a:hover {
+    color: black;
+}
+#letreiro{
+    display: flex;
+    color: red;
+    font-family: 'Pacifico', cursive;
+    justify-content: center;
+    align-items: center;
+}
+#letreiro div{
+    display: flex;
+    flex-direction: column;
+}
+.column{
+    flex-direction: column;
+}
+.row{
+    flex-direction: row;
+    gap: 1rem;
+}
+.home{
+    font-size: 2rem;
+    padding: 50% 0;
+}
+.como-usar{
+    font-size: 2rem;
+    padding: 80% 0;
+}
+.historia{
+    font-size: 2rem;
+    padding: 0 0;
+}
+.Possibilidades{
+    font-size: 1rem;
+    padding: 0 0;
+}
+.livros{
+    font-size: 2rem;
+    padding: 0 0;
+}
+.fontes{
+    font-size: 1.71rem;
+    padding: 30% 0;
+}
+aside{
+    padding: 1rem 2rem;
+    margin: auto;
+}
+article > p{
+    padding:.2rem;
+    text-align:center;
+    font-size:1.1rem;    
+}
+.imagem{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10rem;
+    margin-top: 2rem;
+}
+.imagem > img{
+    width: 20rem;
+}
+#fonte{
+    display: grid;
+    justify-items: center;
+}
+#fonte a{
+    font-size: 4rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+#fonte p a:hover{
+    color: rgba(0, 0, 0, 0.425);
+}
+footer{
+    background: linear-gradient(236.85deg, white 27.26%, gray 96.03%);
+    padding-top:.3em;
+    text-align: center;
+}
+@media(max-width: 600px){
+    main{
+        display: grid;
+    }
+    nav ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .imagem{
+        gap: 2rem;
+    }
+    #letreiro, #letreiro div{
+        flex-direction: row;
+    }
+    .home, .como-usar, .historia, .Possibilidades, .livros, .fontes{
+        font-size: 2rem;
+        padding: 0 0;
+    }
+    .divFontes{
+        margin-top: 0;
+    }
+    #footerFontes{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+}
