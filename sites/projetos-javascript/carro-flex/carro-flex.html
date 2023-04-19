@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Flex</title>
+</head>
+<body>
+    <h1>Calculadora Combustível</h1>
+    <img src="./img/neutro.png" alt="Imagem neutro" id="status">
+    <form name="frmFlex">
+        <input type="number" placeholder="Etanol" name="txtEtanol" size="8" step=".01">
+        <input type="number" placeholder="Gasolina" name="txtGasolina" size="8" step=".01">
+        <input type="submit" value="Vantagem" onclick="calcular()">
+        <input type="reset" value="Limpar" onclick="resetar()">
+    </form>
+    <script src="./js/js.js"></script>
+</body>
+</html>

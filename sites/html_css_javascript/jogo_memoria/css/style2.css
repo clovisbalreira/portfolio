@@ -1,41 +1,45 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+
 }
+
 body{
     height: 100vh;
+    background: black;
     display: flex;
-    background-color: #E4C515;
 }
-#cardboard{
+
+#tabuleiro{
     width: 640px;
     height: 640px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
 }
+
 .memory-card{
-    width: calc(25% - 10px);
-    height: 33%;
-    margin: 5px;
-    transform-style: preserve-3d;
-    transition: 0.3s;
+    width: 25%;
+    height: 25%;
     position: relative;
+    margin: 2px;
+    transform-style: preserve-3d;
+    transition: 0.5s;
 }
+
 .memory-card:active{
     transform: scale(0.97);
 }
-.memory-card.flip{
+
+.memory-card.virar{
     transform: rotateY(180deg);
 }
-.front-face, .back-face{
+
+.frente-carta,.fundo-carta{
     width: 100%;
     height: 100%;
-    padding: 20px;
-    background-color: #675A10;
     position: absolute;
 }
-.front-face{
+.frente-carta{
     transform: rotateY(180deg);
 }

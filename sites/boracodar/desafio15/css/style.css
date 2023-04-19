@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+:root {
+    --color-gray-50: #f8fafc;
+    --color-gray-100: #f1f5f9;
+    --color-gray-200: #e2e8f0;
+    --color-gray-300: #cbd5e1;
+    --color-gray-400: #94a3b8;
+    --color-gray-500: #64748b;
+    --color-gray-600: #475569;
+    --color-gray-700: #334155;
+    --color-gray-800: #1e293b;
+    --color-gray-900: #0f172a;
+    --color-green-100: #04d361;
+    --color-green-200: #1b873f;
+    --color-purple-100: #996dff;
+    --color-purple-200: #7c3aed;
+    --color-white: #ffffff;
+    --color-orange: #fba94c;
+}
+
+html, body{
+    font-family: 'Titillium Web', sans-serif;
+    background-color: var(--color-gray-50);
+}
+
+.price-table{
+    display: grid;
+    gap: 24px;
+    padding: 24px;
+}
+
+section{
+    width: 320px;
+    margin: auto;
+}
+
+section .inner{
+    padding: 24px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray-200);
+    border-radius: 10px;
+}
+
+.inner p{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-purple-200);
+}
+
+.title-price{
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 37px;
+    color: var(--color-gray-800);
+}
+
+.price{
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--color-gray-800);
+}
+
+.price strong{
+    font-size: 20px;
+    line-height: 30px;
+}
+
+button.primary{
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 24px;
+    width: 100%;
+    border: 1px solid var(--color-gray-800);
+    border-radius: 4px;
+    margin-top: 16px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-gray-800);
+    cursor: pointer;
+}
+
+button.primary:hover{
+    background-color: var(--color-gray-800);
+    color: var(--color-white);
+}
+
+ul{
+    border-top: 1px solid var(--color-gray-200);
+    padding-top: 16px;
+    margin-top: 16px;
+    list-style: none;
+    display: grid;
+    gap: 16px;
+}
+
+li{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+li span{
+    flex: 1;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.6px;
+    color: var(--color-gray-600);
+}
+
+li i.ph-check{
+    font-size: 20px;
+    color: var(--color-green-200);
+}
+
+li i.ph-info{
+    font-size: 16px;
+    color: var(--color-green-900);
+}
+
+.enterprise .title{
+    font-size: 32px;
+    line-height: 49px;
+}
+
+.enterprise button{
+    margin-top: 32px;
+}
+
+.enterprise ul{
+    padding-top: 32px;
+}
+
+section.best{
+    margin-top: 16px;
+    position: relative;
+}
+
+section.best::before{
+    content: "MAIS VANTAJOSO";
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-gray-900);
+    display: inline-block;
+    background-color: var(--color-orange);
+    padding: 8px 16px;
+    border-radius: 6px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -17px;
+}
+
+.best .inner{
+    padding-top: 40px;
+    background-color: var(--color-gray-900);
+}
+
+.best .title, .best .price{
+    color: var(--color-gray-50);
+}
+
+.best .inner p{
+    color: var(--color-purple-100);
+}
+
+.best .primary{
+    background-color: var(--color-purple-100);
+    color: var(--color-white);
+}
+
+.best .primary:hover{
+    background-color: var(--color-purple-200);
+}
+
+.best ul{
+    border-color: var(--color-gray-700);
+}
+
+.best li span{
+    color: var(--color-gray-300);
+}
+
+.best li .ph-info{
+    color: var(--color-gray-500);
+}
+
+section .inner:hover{
+    border-color: var(--color-purple-100);
+}
+
+section .inner{
+    transition: border 3s;
+}
+
+section:hover{
+    transform: scale(1.05);
+}
+
+section{
+    transition: transform 300ms;
+    animation: apper 400ms backwards var(--delay);
+}
+
+@keyframes apper {
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+}
+
+@media (min-width: 1200px) {
+    body{
+        height: 100vh;
+    }
+    .price-table{
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        place-content: center;
+    }
+    section:not(.best){
+        margin-top: 17px;
+    }
+    
+    section .inner{
+        height: 60vh;
+    }
+
+}
