@@ -18,12 +18,15 @@ body{
 header div{
     display: grid;
     grid-template-columns: auto 1fr auto;
+    column-gap: 10px;
 }
+
 .header-imagem{
     height: 25vh;
 }
 .header-logo{
     margin: auto;
+    width: 100%;
     height: 25vh;
 }
 nav ul{
