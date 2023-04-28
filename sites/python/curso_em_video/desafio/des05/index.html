@@ -13,15 +13,34 @@
 </head>
 <body>
     <section>
-        <h2>Desafio 02 - Faça um programa que leia o nome de uma pessoa e de a mensagem de boas vindas.</h2>
+        <h2>Desafio 05 - Crie um script python que leia o dia, o mes e o ano de nascimento de uma pessoa e mostre uma mensagem com a data formatada.</h2>
         <hr>
-        <p>
-            <py-script>
-                nome = input("Qual é o seu Nome?")
-                print('E um prazer de conhecer, {}!'.format(nome))
-            </py-script>
-        </p>
-        <a href="../index.html">Voltar</a>
+        <py-script>
+            def dados(*arg, **kags):
+                input_dia = Element('dia')
+                input_mes = Element('mes')
+                input_ano = Element('ano')
+                dia = input_dia.element.value
+                mes = input_mes.element.value
+                ano = input_ano.element.value
+                resultado = Element('resultado')
+                resultado.element.innerText = "Você nasceu em {} / {} / {}".format(dia,mes,ano)
+        </py-script>
+        <div class="input">
+            <label for="dia">Dia</label>
+            <input type="number" id="dia" placeholder="Digite seu dia de aniversário">
+        </div>
+        <div class="input">
+            <label for="mes">Mês</label>
+            <input type="number" id="mes" placeholder="Digite seu mês de aniversário">
+        </div>
+        <div class="input">
+            <label for="ano">Ano</label>
+            <input type="number" id="ano" placeholder="Digite seu ano de aniversário">
+        </div>
+        <p id="resultado"></p>
+        <button id="btn" type="submit" pys-onClick="dados">Enviar</button>        
+        <a href="../../index.html">Voltar</a>
     </section>
 </body>
 </html>

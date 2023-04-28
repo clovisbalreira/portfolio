@@ -13,17 +13,51 @@
 </head>
 <body>
     <section>
-        <h2>Tipos primitivos</h2>
+        <h2>Desafio 04 - Faça um programa que leia algo pelo teclado e mostre na tela o seu tipo primitivo as informações possiveis sobre ela.</h2>
         <hr>
-        <p>
-            <py-script>
-                print('int 2 9 ')
-                print('float 2.4 4.3')
-                print('boll True False ') 
-                print('str Ola ')
-            </py-script>
-        </p>
-        <a href="../index.html">Voltar</a>
+        <py-script>
+            def dados(*arg, **kags):
+                input_palavra = Element('palavra')
+                palavra = input_palavra.element.value
+                tipo = Element('tipo')
+                tipo.element.innerText = 'O tipo primitivo desse valor é ', type(palavra)
+                espaco = Element('espaco')
+                espaco.element.innerText = 'Só tem espaços ', palavra.isspace()
+                numero = Element('numero')
+                numero.element.innerText = 'È um número ', palavra.isnumeric()
+                alfabetico = Element('alfabetico')
+                alfabetico.element.innerText = 'È alfabético ', palavra.isalpha()
+                alfanumerico = Element('alfanumerico')
+                alfanumerico.element.innerText = 'È alfanúmerico ', palavra.isalnum()
+                maiuscula = Element('maiuscula')
+                maiuscula.element.innerText = "Só tem espaços ", palavra.isupper()
+                minuscula = Element('minuscula')
+                minuscula.element.innerText = 'Está em maiusculas? ', palavra.islower()
+                capitalizada = Element('capitalizada')
+                capitalizada.element.innerText = 'Está capitalizada? ', palavra.istitle()
+                <!-- texto = input('Digite algo: ')
+                print('O tipo primitivo desse valor é ', type(texto))
+                print('Só tem espaços ',texto.isspace())
+                print('È um número ',texto.isnumeric())
+                print('È alfabético ',texto.isalpha())
+                print('È alfanúmerico ',texto.isalnum())
+                print('Está em maiusculas? ',texto.isupper())
+                print('Está em Minusculas? ',texto.islower())
+                print('Está capitalizada? ',texto.istitle()) -->
+        </py-script>
+        <div class="input">
+            <label for="palavra">Digite alguma coisa</label>
+            <input type="rext" id="palavra" placeholder="Digite algo">
+        </div>
+        <p id="espaco"></p>
+        <p id="numero"></p>
+        <p id="alfabetico"></p>
+        <p id="alfanumerico"></p>
+        <p id="maiuscula"></p>
+        <p id="minuscula"></p>
+        <p id="capitalizada"></p>
+        <button id="btn" type="submit" pys-onClick="dados">Enviar</button>        
+        <a href="../../index.html">Voltar</a>       
     </section>
 </body>
 </html>

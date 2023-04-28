@@ -12,18 +12,35 @@
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script> 
 </head>
 <body>
+    <py-script>
+        def dados(*arg, **kags):
+            input_nome = Element('nome')
+            input_idade = Element('idade')
+            input_peso = Element('peso')
+            nome = input_nome.element.value
+            idade = input_idade.element.value
+            peso = input_peso.element.value
+            resultado = Element('resultado')
+            resultado.element.innerText = "Nome: " + nome + "\nIdade: " + idade + "\nPeso: " + peso
+    </py-script>
     <section>
         <h2>Interatividade</h2>
         <hr>
-        <p>
-            <py-script>
-                nome =  input('Qual é seu nome?')
-                idade =  input('Qual é sua idade ?')
-                peso =  input('Qual é seu peso?')
-                print(nome, idade, peso)
-            </py-script>
-        </p>
-        <a href="../index.html">Voltar</a>
+        <div class="input">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" placeholder="Digite seu nome">
+        </div>
+        <div class="input">
+            <label for="idade">Idade</label>
+            <input type="number" min="0" id="idade" placeholder="Digite seu idade">
+        </div>
+        <div class="input">
+            <label for="peso">Peso</label>
+            <input type="number" step=".01" min="0" id="peso" placeholder="Digite seu peso">
+        </div>
+        <p id="resultado"></p>
+        <button id="btn" type="submit" pys-onClick="dados">Enviar</button>
+        <a href="../../index.html">Voltar</a>
     </section>
 </body>
 </html>

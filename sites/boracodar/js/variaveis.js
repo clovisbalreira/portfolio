@@ -14,6 +14,7 @@ let desafios = [
     {titulo: 'Formulário de cartão de crédito', caminho: 'desafio13'},
     {titulo: 'Upload', caminho: 'desafio14'},
     {titulo: 'Tabela de Preços', caminho: 'desafio15'},
+    {titulo: 'Scrollbar', caminho: 'desafio16'},
 ]
 let main = document.querySelector('main')
 let ul = document.createElement('ul')
