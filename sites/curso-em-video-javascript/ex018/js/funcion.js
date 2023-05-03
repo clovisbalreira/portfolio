@@ -23,7 +23,7 @@ function adicionar(){
     if(isnumero(num.value) && !inlista(num.value,valores) ){
         valores.push(Number(num.value))
         var item = document.createElement('option');
-        item.text = `Valor ${num.value} adcicionado`
+        item.text = `Valor ${num.value} adicionado`
         lista.appendChild(item)
         res.innerHTML = ''
     }else{

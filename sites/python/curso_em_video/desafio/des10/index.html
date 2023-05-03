@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso em video</title>
+    <!--<link rel="stylesheet" href="path/to/pyscript.css" />
+    <script defer src="path/to/pyscript.js"></script>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />-->
+    <link rel="stylesheet" href="../../css/style.css">
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script> 
+</head>
+<body>
+    <section>
+        <h2>Desafio 10 - Escreva um programa que leia um valor em metros e o exiba convertido em centimetros e milimetros.</h2>
+        <hr>
+        <py-script>
+            def dados(*arg, **kags):
+                input_metro = Element('metro')
+                metro = input_metro.element.value
+                resultado = Element('resultado')
+                resultado.element.innerText = '{} metros equivale a {} centimetro e {} milimetros'.format(metro,metro,metro)
+        </py-script>
+        <div class="input">
+            <label for="metro">Digite o metro</label>
+            <input type="number" id="metro" placeholder="Digite o metro">
+        </div>
+        <p id="resultado"></p>
+        <button id="btn" type="submit" pys-onClick="dados">Enviar</button>        
+        <a href="../../index.html">Voltar</a>       
+    </section>
+</body>
+</html>
