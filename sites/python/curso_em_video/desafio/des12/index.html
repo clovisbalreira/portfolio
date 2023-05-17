@@ -20,7 +20,7 @@
                 input_valor = Element('valor')
                 valor = input_valor.element.value
                 resultado = Element('resultado')
-                resultado.element.innerText = 'Com o R$ {} você compra US$ {}'.format(int(valor),int(valor)/3.27)
+                resultado.element.innerText = 'Com o R$ {} você compra US$ {:.2f}'.format(float(valor),float(valor)/3.27)
         </py-script>
         <div class="input">
             <label for="valor">Digite o valor</label>

@@ -20,11 +20,11 @@
                 input_valor = Element('valor')
                 valor = input_valor.element.value
                 resultado = Element('resultado')
-                resultado.element.innerText = 'O salário é R$:{} com aumento de 15% - R$:{} o preço atual será R$:{}'.format(valor,int(valor) * 0.15, int(valor) + (int(valor) * 0.15))
+                resultado.element.innerText = 'O salário é R$:{:.2f} com aumento de 15% - R$:{:.2f} o preço atual será R$:{:.2f}'.format(float(valor),float(valor) * 0.15, float(valor) + (float(valor) * 0.15))
         </py-script>
         <div class="input">
             <label for="valor">Digite o valor</label>
-            <input type="number" id="valor" placeholder="Digite o valor">
+            <input type="number" id="valor" placeholder="Digite o valor" step=".01">
         </div>
         <p id="resultado"></p>
         <button id="btn" type="submit" pys-onClick="dados">Enviar</button>        

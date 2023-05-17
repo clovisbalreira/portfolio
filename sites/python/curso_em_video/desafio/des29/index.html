@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso em video</title>
+    <!--<link rel="stylesheet" href="path/to/pyscript.css" />
+    <script defer src="path/to/pyscript.js"></script>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />-->
+    <link rel="stylesheet" href="../../css/style.css">
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script> 
+</head>
+<body>
+    <section>
+        <h2>Desafio 29 - Faça um programa  que leia o nome completo de um pessoa, mostrando em seguida o primeiro e o último nome separadamente.</h2>
+        <hr>
+        <py-script>
+            def dados(*arg, **kags):
+                input_nome = Element('nome')
+                nome = input_nome.element.value.strip()
+                nomeCompleto = nome.split()
+                resultado = Element('resultado')
+                resultado.element.innerText = 'Você digitou a nome {}\nO primeiro nome : {}\nO ultimo nome : {}'.format(nome, nomeCompleto[0], nomeCompleto[len(nomeCompleto)-1] )
+        </py-script>
+        <div class="input">
+            <label for="nome">Digite o nome completo</label>
+            <input type="text" id="nome" placeholder="Digite  o nome completo">
+        </div>
+        <p id="resultado"></p>
+        <button id="btn" type="submit" pys-onClick="dados">Enviar</button>        
+        <a href="../../index.html">Voltar</a>       
+    </section>
+</body>
+</html>

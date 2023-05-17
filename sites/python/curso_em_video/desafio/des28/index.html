@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso em video</title>
+    <!--<link rel="stylesheet" href="path/to/pyscript.css" />
+    <script defer src="path/to/pyscript.js"></script>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />-->
+    <link rel="stylesheet" href="../../css/style.css">
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script> 
+</head>
+<body>
+    <section>
+        <h2>Desafio 28 - Faça um programa que leia uma frase pelo teclado e mostre - Quantas vezes aparece a letra "A" - Em que posição ela aparece primeira vez - em que posição ela aparece a ultima vez.</h2>
+        <hr>
+        <py-script>
+            def dados(*arg, **kags):
+                input_frase = Element('frase')
+                frase = input_frase.element.value.strip()
+                resultado = Element('resultado')
+                resultado.element.innerText = 'Você digitou a frase {}\nA letra a aparece {} vezes\nA primeira vez que o a aparece é na posição {}\nA primeira vez que o a aparece é na posição {}'.format(frase,frase.upper().count('A'),frase.upper().find('A')+1,frase.upper().rfind('A'))
+        </py-script>
+        <div class="input">
+            <label for="frase">Digite uma frase</label>
+            <input type="text" id="frase" placeholder="Digite a frase">
+        </div>
+        <p id="resultado"></p>
+        <button id="btn" type="submit" pys-onClick="dados">Enviar</button>        
+        <a href="../../index.html">Voltar</a>       
+    </section>
+</body>
+</html>

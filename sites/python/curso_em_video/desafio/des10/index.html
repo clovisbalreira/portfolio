@@ -20,7 +20,7 @@
                 input_metro = Element('metro')
                 metro = input_metro.element.value
                 resultado = Element('resultado')
-                resultado.element.innerText = '{} metros equivale a {} centimetro e {} milimetros'.format(metro,metro,metro)
+                resultado.element.innerText = 'A medida de {:.2f}m corresponde a \n {:.3f}Km \n {:.2f}hm \n {:.1f}dam \n {}dm \n {}cm \n {}mm'.format(int(metro), int(metro) / 1000, int(metro) / 100, int(metro) / 10, int(metro) * 10, int(metro) * 100, int(metro) * 1000)
         </py-script>
         <div class="input">
             <label for="metro">Digite o metro</label>

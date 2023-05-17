@@ -19,8 +19,32 @@
             def dados(*arg, **kags):
                 input_numero = Element('numero')
                 numero = input_numero.element.value
+                traco = '-' * 22
                 resultado = Element('resultado')
-                resultado.element.innerText = 'A Tabuada do {} \n {} X {} = {}\n {} X {} = {}\n {} X {} = {}\n {} X {} = {}\n {} X {} = {}\n {} X {} = {}\n {} X {} = {}\n {} X {} = {}\n {} X {} = {}\n {} X {} = {}\n {} X {} = {}'.format(numero,0,numero,int(numero)*0,1,numero,int(numero)*1,2,numero,int(numero)*2,3,numero,int(numero)*3,4,numero,int(numero)*4,5,numero,int(numero)*5,6,numero,int(numero)*6,7,numero,int(numero)*7,8,numero,int(numero)*8,9,numero,int(numero)*9,10,numero,int(numero)*10)
+                <!-- resultado.element.innerText = '{}\n A Tabuada do {} \n {} X {} = {}\n {} X {} = {}\n {} X {} = {}\n {} X {} = {}\n {} X {} = {}\n {} X {} = {}\n {} X {} = {}\n {} X {} = {}\n {} X {} = {}\n {} X {} = {}\n {}'.format(traco,numero,numero,int(numero)*1,2,numero,int(numero)*2,3,numero,int(numero)*3,4,numero,int(numero)*4,5,numero,int(numero)*5,6,numero,int(numero)*6,7,numero,int(numero)*7,8,numero,int(numero)*8,9,numero,int(numero)*9,10,numero,int(numero)*10, traco) -->
+                resultado.element.innerText = traco
+                resultado.element.innerText += '\n'
+                resultado.element.innerText += 'A Tabuada do {} '.format(numero)
+                resultado.element.innerText += '\n'
+                resultado.element.innerText += '{} X {:2} = {}'.format(numero, 1, int(numero) * 1)                
+                resultado.element.innerText += '\n'
+                resultado.element.innerText += '{} X {:2} = {}'.format(numero, 2, int(numero) * 2)
+                resultado.element.innerText += '\n'
+                resultado.element.innerText += '{} X {:2} = {}'.format(numero, 3, int(numero) * 3)
+                resultado.element.innerText += '\n'
+                resultado.element.innerText += '{} X {:2} = {}'.format(numero, 4, int(numero) * 4)
+                resultado.element.innerText += '\n'
+                resultado.element.innerText += '{} X {:2} = {}'.format(numero, 5, int(numero) * 5)
+                resultado.element.innerText += '\n'
+                resultado.element.innerText += '{} X {:2} = {}'.format(numero, 6, int(numero) * 6)
+                resultado.element.innerText += '\n'
+                resultado.element.innerText += '{} X {:2} = {}'.format(numero, 7, int(numero) * 7)
+                resultado.element.innerText += '\n'
+                resultado.element.innerText += '{} X {:2} = {}'.format(numero, 8, int(numero) * 8)
+                resultado.element.innerText += '\n'
+                resultado.element.innerText += '{} X {:2} = {}'.format(numero, 9, int(numero) * 9)
+                resultado.element.innerText += '\n'
+                resultado.element.innerText += '{} X {:2} = {}'.format(numero, 10, int(numero) * 10)
         </py-script>
         <div class="input">
             <label for="numero">Digite um número</label>

@@ -24,7 +24,7 @@
                 triplo = Element('triplo')
                 triplo.element.innerText = 'O triplo de {} é {}'.format(numero,int(numero)*3)
                 raiz = Element('raiz')
-                raiz.element.innerText = 'A raiz quadrada de {} é {}'.format(numero,int(numero) ** (1/2))
+                raiz.element.innerText = 'A raiz quadrada de {} é {:.2f}'.format(numero,int(numero) ** (1/2))
         </py-script>
         <div class="input">
             <label for="numero">Digite um número</label>
