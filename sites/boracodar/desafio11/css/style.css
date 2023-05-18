@@ -45,7 +45,7 @@ header img{
     padding: 4rem 11.2rem;
 }
 main{
-    margin-top: 11.4rem;
+    margin-top: 1.4rem;
     max-width: 38.4rem;
 }
 .headline{
@@ -150,7 +150,8 @@ form button:hover{
         display: none;
     }
     #page > div{
-        padding: 11rem;
+        padding: 3rem 11rem;
+        width: 100%;
     }
     main{
         max-width: 100%;

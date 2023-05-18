@@ -38,10 +38,9 @@ inputNumero.addEventListener('input', () => {
 inputNome = document.getElementById('cc-holder')
 inputNome.addEventListener('input', () => {
     cartaoNome = document.getElementById('cartaoNome')
-    if(inputNome.value.length < 17){
+    if(inputNome.value.length < 26){
         cartaoNome.innerHTML = inputNome.value.toUpperCase()
     }
-    console.log(inputNome.value.length)
 })
 
 inputData = document.getElementById('cc-validity')
@@ -87,6 +86,4 @@ select.addEventListener('click', () => {
             img.setAttribute('src', './assets/visa.svg')
             break;
     }  
-
-    console.log(img)
 })

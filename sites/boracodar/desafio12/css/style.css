@@ -125,6 +125,7 @@ section.filter{
 }
 section.kanban{
     display: flex;
+    flex-wrap: wrap;
     gap: 4.8rem;
     padding-top: 3.2rem ;
 }
@@ -141,6 +142,8 @@ section.kanban h2{
     display: flex;
     flex-direction: column;
     gap: 2.4rem;
+    min-height: 100px;
+    min-width: 100px;
 }
 .card{
     padding: 2.4rem;
@@ -154,10 +157,10 @@ section.kanban h2{
     color: #403937;
 }
 .card p{
-    /* width: 122px;
+    width: 122px;
     overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis; */
+    text-overflow: ellipsis;
     font-weight: 500;
     font-size: 1.4rem;
     color: #756966;
