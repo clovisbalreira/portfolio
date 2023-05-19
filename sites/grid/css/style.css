@@ -70,7 +70,7 @@ h1{
     align-items: center;
 }
 .grid-1 > div.anuncio{
-    grid-column: 1;
+    grid-column: 1 ;
     grid-row: 2 / 5;
     display: block;
 }
