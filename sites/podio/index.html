@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Podio</title>
+    
 </head>
 <body style="background-color: rgba(128, 128, 128, 0.425);">
     <script>
@@ -14,26 +15,38 @@
     </script>
     <div>
         <p style="text-align: center; text-shadow: 0px 0px 15px white; font-size: 3rem;">Top 5º CNS</p>
-        <section style="display: grid; grid-template-columns: 1fr 1fr; align-content: center; gap: 10px;">
+        <!-- <section style="display: grid; grid-template-columns: 1fr 1fr; align-content: center; gap: 10px;"> -->
+        <section>
         </section>
     </div>
     <script>
         function tabelaTop5(){
             let section = document.querySelector('section')
+            section.style.gap = '10px'
+            if(window.innerWidth < 760){
+                section.style.display = 'flex'
+                section.style.flexDirection = 'column'
+            }else{
+                section.style.display = 'grid'
+                section.style.gridTemplateColumns = '1fr 1fr'
+            }
             for( let i = 0; i < top5.length ; i++){
                 let div = document.createElement('div')
                 div.style.display = 'flex'
                 div.style.gap = '10px' 
                 div.style.backgroundColor = 'white'
-                div.style.borderRadius = '10px'
-                div.style.paddingBlock = '20px'
+                div.style.paddingBlock = '5px'
                 if(i == 4){
-                    div.style.gridColumn = '1/3' 
-                    div.style.marginInline = '20%' 
+                    div.style.gridColumn = '1/3'
+                    if(window.innerWidth >= 760){
+                        div.style.marginInline = '20%' 
+                    }
                 }               
                 let posicao = document.createElement('div')
                 posicao.innerHTML = `${top5[i].posicao} º`
                 posicao.style.padding = '30px'
+                posicao.style.fontWeight =  'bold'
+                posicao.style.fontSize = '2rem'
                 posicao.style.display = 'grid'
                 posicao.style.placeContent = 'center'
                 let divArtista = document.createElement('div')
