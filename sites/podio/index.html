@@ -23,13 +23,13 @@
         function tabelaTop5(){
             let section = document.querySelector('section')
             section.style.gap = '10px'
-            if(window.innerWidth < 760){
+            /* if(window.innerWidth < 760){
                 section.style.display = 'flex'
                 section.style.flexDirection = 'column'
-            }else{
+            }else{ */
                 section.style.display = 'grid'
                 section.style.gridTemplateColumns = '1fr 1fr'
-            }
+            //}
             for( let i = 0; i < top5.length ; i++){
                 let div = document.createElement('div')
                 div.style.display = 'flex'
@@ -38,9 +38,9 @@
                 div.style.paddingBlock = '5px'
                 if(i == 4){
                     div.style.gridColumn = '1/3'
-                    if(window.innerWidth >= 760){
+                    //if(window.innerWidth >= 760){
                         div.style.marginInline = '20%' 
-                    }
+                    //}
                 }               
                 let posicao = document.createElement('div')
                 posicao.innerHTML = `${top5[i].posicao} º`
@@ -50,7 +50,8 @@
                 posicao.style.display = 'grid'
                 posicao.style.placeContent = 'center'
                 let divArtista = document.createElement('div')
-                divArtista.style.paddingInline = '20px'
+                divArtista.style.textAlign = 'center'
+                divArtista.style.paddingRight = '10px'
                 divArtista.style.flex = '1'
                 let artista = document.createElement('p')
                 artista.innerHTML = top5[i].artista
