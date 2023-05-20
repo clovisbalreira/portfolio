@@ -36,8 +36,7 @@ const showWeatherData = async(city) => {
     countryElement.setAttribute('src',`https://flagsapi.com/${data.sys.country}/shiny/64.png`)
     humidityElement.innerHTML = data.main.humidity
     windElement.innerHTML = data.wind.speed
-    const weatherContainer = document.querySelector("#weather-data")
-    console.log(data) 
+    const weatherContainer = document.querySelector("#weather-data") 
     weatherContainer.classList.remove('hide')
 }
 

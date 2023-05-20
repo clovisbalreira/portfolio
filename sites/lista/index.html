@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Podio</title>
-    
 </head>
 <body style="background-color: rgba(128, 128, 128, 0.425);">
     <script>
@@ -14,8 +13,7 @@
         ]
     </script>
     <div>
-        <p style="text-align: center; text-shadow: 0px 0px 15px white; font-size: 3rem;">Top 5º CNS</p>
-        <!-- <section style="display: grid; grid-template-columns: 1fr 1fr; align-content: center; gap: 10px;"> -->
+        <p style="text-align: center; text-shadow: 0px 0px 15px white; font-size: 3rem;">As 5+ CNS</p>
         <section>
         </section>
     </div>
@@ -56,6 +54,7 @@
                 let artista = document.createElement('p')
                 artista.innerHTML = top5[i].artista
                 artista.style.fontWeight = 'bolder'
+                artista.style.textDecoration = 'underline'
                 let musica = document.createElement('p')
                 musica.innerHTML = top5[i].musica
                 musica.style.textDecoration = 'underline'
@@ -64,6 +63,15 @@
                 divArtista.appendChild(musica)
                 div.appendChild(divArtista)
                 section.appendChild(div)
+                /* 
+                Mude isso aqui: fonte maior e o nome do Artista/banda em negrito com fonte diferente do nome da música. 
+                O nome do artista/banda além de ir em negrito quero que tu faça a gentileza de colocar sublinhado.
+
+                ...
+
+                O título de Top 5º CNS não ficou legal.
+                Muda para As 5+ CNS 
+                */
             }
         }
         tabelaTop5()        

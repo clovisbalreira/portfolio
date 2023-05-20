@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: grid;
+            justify-content: center;
+            gap: 20px;
+            margin-block: 20px;
+            background: linear-gradient(45deg, white 0%, black 100%);
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        fieldset{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            padding: 20px;
+        }
+        #palavra, #tamanho, button{
+            padding: 5px 10px;
+            border-radius: 20px;
+            border: none;
+        }
+        #cor{
+            border-radius: 20px;
+            padding: 1px 4px;
+        }
+        button{
+            background-color: rgba(128, 128, 128, 0.637);
+        }
+        tbody tr:nth-child(even){
+            background-color: rgba(255, 255, 255, 0.452);
+        }
+        tbody tr:nth-child(odd){
+            background-color: rgba(0, 0, 0, 0.26);
+        }
+        td{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <fieldset>
+            <legend>Palavra</legend>
+            <label for="palavra">Palavra</label>
+            <input type="text" id="palavra" placeholder="Digite a palavra">
+        </fieldset>
+        <fieldset>
+            <legend>Tamanho</legend>
+            <label for="tamanho">Tamanho</label>
+            <input type="number" id="tamanho" placeholder="Digite o tamanho da fonte" min="1">
+        </fieldset>
+        <fieldset>
+            <legend>Cor</legend>
+            <label for="cor">Cor</label>
+            <input type="color" id="cor">
+        </fieldset>
+        <button onclick="escolherFonte()">Escolha</button>
+    </div>
+    <table>
+        <caption>Fontes</caption>
+        <thead>
+            <tr>
+                <th>Palavra</th>
+                <th>Fonte</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        let fontes = ['-apple-system','Arial','Arial Narrow','Arial Narrow Bold','BlinkMacSystemFont','Calibri','Cantarell','Cambria','Cochin','Courier','Courier New','cursive','fantasy','Franklin Gothic Medium','Georgia','Geneva','Gill Sans','Gill Sans MT','Helvetica','Haettenschweiler','Helvetica Neue','Impact','Lucida Grande','Lucida Sans','Lucida Sans Regular','Lucida Sans Unicode','monospace','Open Sans','Oxygen','Roboto','sans-serif','Segoe UI','serif','system-ui', 'Tahoma','Tahoma','Times','Times New Roman','Trebuchet MS','Times','Ubuntu','Verdana']
+        function escolherFonte(e){
+            
+            let inputPalavra = document.getElementById('palavra').value
+            let inputTamanho = document.getElementById('tamanho').value
+            let inputCor = document.getElementById('cor').value
+            let tbody = document.querySelector('tbody')
+            tbody.innerHTML = ''
+            fontes.forEach( fonte => {
+                let tr = document.createElement('tr')
+                let tdPalavra = document.createElement('td')
+                tdPalavra.innerHTML = inputPalavra == '' ? 'Teste' : inputPalavra
+                tdPalavra.style.fontFamily = fonte
+                tdPalavra.style.fontSize = inputPalavra == '' ? 1 + 'rem' : inputTamanho + 'rem' 
+                tdPalavra.style.color = inputCor
+                let tdFonte = document.createElement('td')
+                tdFonte.innerHTML = fonte
+                tdFonte.style.fontFamily = fonte
+                tdFonte.style.fontSize = inputPalavra == '' ? 1 + 'rem' : inputTamanho + 'rem'
+                tdFonte.style.color = inputCor
+                tr.appendChild(tdPalavra)
+                tr.appendChild(tdFonte)
+                tbody.appendChild(tr)
+            })
+        }
+        escolherFonte()
+    </script>
+</body>
+</html>
