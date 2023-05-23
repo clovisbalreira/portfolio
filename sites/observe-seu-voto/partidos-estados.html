@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estados - Observe seu voto</title>
+    <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
+    <!-- estilo global -->
+    <link rel="stylesheet" href="./css/style.css">    <!-- estilo pagina -->
+    <link rel="stylesheet" href="./css/deputado.css">
+    <link rel="stylesheet" href="./css/partidos.css">
+    <link rel="stylesheet" href="./css/estados.css">
+</head>
+<body>
+    <header>
+        <!-- link da home e logo -->
+        <a href="./index.html"><img src="./img/logo.png" alt="Logo"></a>
+        <!-- navegação principal -->
+        <nav>
+            <ul>
+                <li>
+                    <a href="./deputados.html">DEPUTADOS</a>
+                </li>
+                <li>
+                    <a href="./partidos.html">PARTIDOS</a>
+                </li>
+                <li>
+                    <a href="./estados.html">ESTADOS</a>
+                </li>
+                <li>
+                    <a href="./partidos-estados.html">PARTIDOS - ESTADOS</a>
+                </li>
+                <li>
+                    <a href="./estados-partidos.html">ESTADOS - PARTIDOS</a>
+                </li>
+                <li>
+                    <a href="./leis.html">LEIS</a>
+                </li>
+                <li>
+                    <a href="./como-funciona.html">COMO FUNCIONA</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <img src="./img/logo.png" alt="Observe seu voto">
+            <h1>Observe seu Partido</h1>
+        </section>
+        <section class="estados"></section>
+    </main>
+    <footer>
+        <!-- <div>
+            <p>Observe seu voto</p>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="" target="_blank">
+                            <img src="./img/facebook.png" alt="Facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank">
+                            <img src="./img/instagram.png" alt="Instagram">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" target="_blank">
+                            <img src="./img/twitter.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div> -->
+        <div>
+            <p>Criado por CLÓVIS BALREIRA RODRIGUES</p>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="https://www.linkedin.com/in/clovis-balreira-rodrigues/" target="_blank">
+                            <img src="./img/linkedin.png" alt="Linkedin">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/clovisbalreira" target="_blank">
+                            <img src="./img/github.png" alt="GitHub">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://clovisbalreira.github.io/portfolio/" target="_blank">
+                            <img src="./img/site.png" alt="Portfolio">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <script src="./utils/apis.js"></script>
+    <script src="./functions/funcao.js"></script>
+    <script src="./mvc/model/variaveis.js"></script>
+    <script src="./mvc/view/partidos.js"></script>
+    <!-- <script src="./mvc/view/estados.js"></script> -->
+    <script src="./mvc/view/deputados.js"></script>
+    <script src="./mvc/controller/partidos-estados.js"></script>
+    <script>
+        partidosEstados()
+    </script>
+</body>
+</html>

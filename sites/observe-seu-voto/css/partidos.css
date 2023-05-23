@@ -1,0 +1,25 @@
+.partidos{
+    display: grid;
+}
+
+.partidos > div{
+    background-color: rgb(0, 195, 255);
+    border-radius: 10px;
+    padding-bottom: 20px;
+    width: 95vw;
+    display: grid;
+    gap: 20px;
+}
+
+.partidos > div > div{ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-inline: 20px;
+    padding-top: 20px;
+}
+
+.apagar{
+    display: none;
+}

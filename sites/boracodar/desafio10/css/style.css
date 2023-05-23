@@ -27,6 +27,7 @@ section{
 }
 .temperature-now{
     background: url('../assets/TemperatureNow.jpg');
+    background-size: cover;
     position: relative;
     display: grid;
     grid-template-rows: max-content 1fr max-content;
@@ -119,7 +120,7 @@ h2.title{
     margin-top: 3.2rem;
 }
 .air-qualify .good{
-    margin-top: 3.2rem;
+    margin-top: 1rem;
     font-size: 1.8rem;
     color: #87EBCD;
 }
@@ -131,7 +132,7 @@ h2.title{
 .air-qualify .info{
     display: flex;
     align-items: center;
-    margin-top: 3.2rem;
+    margin-top: 1.7rem;
     padding: 0 1.6rem 1.6rem;
 }
 .air-qualify .info .number{

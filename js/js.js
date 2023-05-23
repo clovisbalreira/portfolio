@@ -214,7 +214,7 @@ var sites = [
    
    //Neri Netzke
    {titulo: 'Neri Netzke', descricao: 'Projeto criado no modelo da informaticon com exemplos de tags. Com mentoria de Neri Netzke.', linguagem: linguagens[1], url: 'sites/neri-neitzke/index.html', tipo: tipos[0], modelo: modelos[0], status: 'Nao', projeto: projetos[2], tag: `${tagsLinguagem[0]} ${tags} #informaticon #nerineitzke`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/neri-neitzke'},
-   { titulo: 'Informaticon', descricao: 'Projeto criado no modelo da informaticon. Com mentoria de Neri Neitzke.', linguagem: linguagens[3], url: 'https://php-projetos-clovis.000webhostapp.com/sites/carrinho/index.php', tipo: tipos[0], modelo: modelos[0], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[3]}`, repositorio: 'https://github.com/clovisbalreira/php/tree/main/sites/carrinho'},    
+   /* { titulo: 'Informaticon', descricao: 'Projeto criado no modelo da informaticon. Com mentoria de Neri Neitzke.', linguagem: linguagens[3], url: 'https://php-projetos-clovis.000webhostapp.com/sites/carrinho/index.php', tipo: tipos[0], modelo: modelos[0], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[3]}`, repositorio: 'https://github.com/clovisbalreira/php/tree/main/sites/carrinho'}, */    
     { titulo: 'Acender Led ( Informaticon )', descricao: 'Projeto da informaticon. Com mentoria de Neri Neitzke.', linguagem: linguagens[10], url: 'https://github.com/clovisbalreira/arduino/tree/main/neriArduino', tipo: tipos[0], modelo: modelos[0], status: 'Não', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[10]}`, repositorio: 'https://github.com/clovisbalreira/arduino/tree/main/neriArduino'},    
   
   // Deitel

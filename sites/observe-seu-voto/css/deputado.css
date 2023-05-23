@@ -1,0 +1,48 @@
+/* section deputado */
+.deputados{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 0 2%;
+}
+.deputados > div{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    height: 150px;
+}
+
+.deputados > div > div:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+    height: 100px;
+}
+
+.deputados > div > div:nth-child(2){
+    display: grid;
+    gap: 10px;
+}
+
+.deputados > div > div:nth-child(2) div{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+
+.deputados > div > div:nth-child(2) div:nth-child(1) p{
+    width: 52px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+} 
+
+.deputados > div > p{
+    grid-column: 1 / 3;
+} 

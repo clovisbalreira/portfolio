@@ -1,0 +1,109 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* corpo do site */
+body{
+    background: linear-gradient(45deg, white 0%, rgba(255, 255, 255, 0.678) 100%);
+}
+
+/* cabeçalho */
+header{
+    background: linear-gradient(45deg, blue 0%, rgba(0, 0, 255, 0.432) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 1rem;
+}
+
+/* imagem do cabeçalho */
+header img{
+    width: 50px;
+}
+
+/* navegador cabecalho */
+header nav{
+    padding: 5px;
+}
+
+header ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+header ul li{
+    list-style: none;
+}
+
+header ul li a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* corpo */
+main{
+    padding: 20px 50px;
+    background: linear-gradient(45deg, yellow 0%, green 100%);
+}
+
+/* seção do corpo */
+main section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 20px;
+}
+
+main section img{
+    width: 50px;
+}
+
+main section h1{
+    font-size: 3rem;
+    text-shadow: .1rem .1rem .1rem rgba(0, 0, 0, 0.63);
+}
+
+/* rotape */
+footer{
+    background: linear-gradient(45deg, white 0%, rgba(255, 255, 255, 0.678) 100%);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-block: 20px;
+}
+
+/* rodape div */
+footer div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-inline: 10px;
+}
+
+/* rodape paragrafo */
+footer div p{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* rodape navegação */
+footer div nav ul{
+    display: flex;
+    gap:10px
+}
+
+footer div nav ul li{
+    list-style: none;
+}
+footer div nav ul li a img{
+    width: 20px;
+}
+ 
