@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=Titillium+Web:wght@700&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <main id="app">
+        <dialog>
+            <div>
+                
+            </div>
+            <button class="btn primary">PEDIDO CONFIRMADO</button>
+        </dialog>       
+        <form>
+            <div class="step-progress">
+                <strong class="active" data-step>Contato</strong>
+                <img src="./img/Vector.svg" alt="Seta">
+                <strong data-step>Empresa</strong>
+                <img src="./img/Vector.svg" alt="Seta">
+                <strong data-step>Projeto</strong>>
+            </div>
+            <div class="form-step active">
+                <div class="content">
+                    <div class="input-wrapper">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" placeholder="Como prefere ser chamado" required>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="input-wrapper">
+                        <label for="telefone">Telefone</label>
+                        <input type="text" id="telefone" name="telefone" placeholder="Digite seu número de WhatsApp" onkeypress="return /\d/.test(event.key)">
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="input-wrapper">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+                     </div>
+                </div>
+                <div class="button-wrapper justify-end">
+                    <button type="button" class="btn primary" data-action="next">CONTINUAR</button>
+                </div>
+            </div>
+            <div class="form-step hide">
+                <div class="content">
+                    <div class="input-wrapper">
+                        <label for="empresa">Nome da empresa</label>
+                        <input type="text" id="empresa" name="empresa" placeholder="Qual é o nome da empresa">
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="input-wrapper">
+                        <label for="funcionario">Número de funcionários</label>
+                        <input type="text" id="funcionario" name="funcionario" placeholder="Digite seu número de colaboradores" onkeypress="return /\d/.test(event.key)">
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="input-wrapper">
+                        <label for="negocio">Sobre seu negócio</label>
+                        <textarea id="negocio" name="negocio" placeholder="Fale um pouco sobre seus produtos e serviços"></textarea>
+                    </div>
+                </div>
+                <div class="button-wrapper">
+                    <button type="button" class="btn secondary" data-action="prev">VOLTAR</button>
+                    <button type="button" class="btn primary" data-action="next">CONTINUAR</button>
+                </div>
+            </div>
+            <div class="form-step hide">
+                <div class="content">
+                    <div class="input-wrapper">
+                        <label for="projeto">Objetivo do projeto</label>
+                        <textarea id="projeto" name="projeto" placeholder="Descreva quais objetivos deste projeto"></textarea>
+                    </div>
+                </div>
+                <div class="button-wrapper">
+                    <button type="button" class="btn secondary" data-action="prev">VOLTAR</button>
+                    <button class="btn primary">ENVIAR RESPOSTA</button>
+                </div>
+            </div>
+        </form>
+    </main>
+    <script src="./js/js.js"></script>
+    <script>
+    </script>
+</body>
+</html>

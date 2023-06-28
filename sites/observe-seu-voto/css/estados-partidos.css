@@ -1,0 +1,26 @@
+.estados-partidos{
+    display: grid;
+}
+
+.estados-partidos > div{
+    background-color: rgba(0, 255, 21, 0.418);
+    border-radius: 10px;
+    padding-bottom: 20px;
+    width: 95vw;
+    display: grid;
+    gap: 20px;
+}
+
+.estados-partidos > div > div{ 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-inline: 20px;
+    padding-top: 20px;
+}
+
+
+.apagar-estados-partidos{
+    display: none;
+} 

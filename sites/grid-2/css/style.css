@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+main{
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "head head head"
+    "side content content"
+    "foot foot foot"
+    ;
+    grid-template-rows: 30px auto 30px; 
+}
+
+header{
+    background-color: blue;
+    grid-area: head;
+}
+
+article{
+    background-color: violet;
+    grid-area: content;
+}
+
+aside{
+    background-color: orange;
+    grid-area: side;
+}
+
+footer{
+    background-color: black;
+    grid-area: foot;
+}

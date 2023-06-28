@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Observe seu voto</title>
+    <title>Estados - Observe seu voto</title>
     <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
     <!-- estilo global -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css">    <!-- estilo pagina -->
+    <link rel="stylesheet" href="./css/deputado.css">
+    <link rel="stylesheet" href="./css/partidos.css">
+    <link rel="stylesheet" href="./css/estados.css">
 </head>
 <body>
     <header>
@@ -26,6 +29,12 @@
                     <a href="./estados.html">ESTADOS</a>
                 </li>
                 <li>
+                    <a href="./partidos-estados.html">PARTIDOS - ESTADOS</a>
+                </li>
+                <li>
+                    <a href="./estados-partidos.html">ESTADOS - PARTIDOS</a>
+                </li>
+                <li>
                     <a href="./leis.html">LEIS</a>
                 </li>
                 <li>
@@ -35,6 +44,11 @@
         </nav>
     </header>
     <main>
+        <section>
+            <img src="./img/logo.png" alt="Observe seu voto">
+            <h1>Observe as leis e os votos</h1>
+        </section>
+        <section class="estados"></section>
     </main>
     <footer>
         <!-- <div>
@@ -82,5 +96,16 @@
             </nav>
         </div>
     </footer>
+    <script src="./utils/apis.js"></script>
+    <script src="./functions/funcao.js"></script>
+    <script src="./mvc/model/variaveis.js"></script>
+    <script src="./mvc/view/leis.js"></script>
+    <script src="./mvc/view/deputados.js"></script>
+    <script src="./mvc/view/partidos.js"></script>
+    <script src="./mvc/view/estados.js"></script>
+    <script src="./mvc/controller/leis.js"></script> 
+    <script>
+        leis()
+    </script>
 </body>
 </html>

@@ -8,13 +8,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./css/style.css">
     <title>BoraCodar - Dashboard</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
     <main id="app" class="grid">
         <div class="box nps grid">
             <div class="top text-center"><p>NPS geral</p></div>
             <div class="middle grid">
-                <img src="./assets/smile.svg" alt="">
+                <i></i>
                 <p>Excelente</p>
             </div>
             <div class="bottom">
@@ -24,10 +25,8 @@
         </div>
         <div class="box sell grid">
             <div class="top text-center"><p>Vendas fechadas</p></div>
-            <div class="middle">
-                <!-- viemBox tamanho da imagem top left botton right -->
-                <svg viemBox="0 0 232 232" style="--percentage:70">
-                    <!-- tipo = circle, cx porcentagem do eixo x na imagem, cy porcentagem do eixo x na imagem, r = raio do circulo  -->
+            <div class="middle">                
+                <svg viemBox="0 0 232 232">
                     <circle
                         cx="50%"
                         cy="50%"
@@ -56,34 +55,32 @@
                       </defs>
                 </svg>
                 <div class="content">
-                    <h3>70%</h3>
+                    <h3></h3>
                     <p>Alcançado</p>
                 </div>
             </div>
             <div class="bottom">
                 <div class="item">
                     <span>Esperado</span>
-                    <span>100</span>
+                    <span>100%</span>
                 </div>
                 <div class="item">
                     <span style="--bg-color: linear-gradient(121.94deg,#CE9FFC 15.98%, #7367F0 82.85%);">Alcançado</span>
-                    <span>70</span>
+                    <span></span>
                 </div>
             </div>
         </div>
         <div class="box target grid">
             <div class="top text-center"><p>Meta mensal</p></div>
             <div class="middle">
-                <!-- viemBox tamanho da imagem top left botton right -->
-                <svg viemBox="0 0 232 232" style="--percentage:90">
-                    <!-- tipo = circle, cx porcentagem do eixo x na imagem, cy porcentagem do eixo x na imagem, r = raio do circulo  -->
+                <svg viemBox="0 0 232 232">
                     <circle
                         cx="50%"
                         cy="50%"
                         r="74"
                         opacity="0.1"
                         stroke="#D9D9D9"
-                    />
+                        />
                     <circle
                         cx="50%"
                         cy="50%"
@@ -105,18 +102,18 @@
                       </defs>
                 </svg>
                 <div class="content">
-                    <h3>90%</h3>
+                    <h3></h3>
                     <p>Alcançado</p>
                 </div>        
             </div>
             <div class="bottom">
                 <div class="item">
                     <span>Esperado</span>
-                    <span>R$ 70K</span>
+                    <span></span>
                 </div>
                 <div class="item">
                     <span style="--bg-color: linear-gradient(121.94deg,#CE9FFC 15.98%, #7367F0 82.85%);">Alcançado</span>
-                    <span>R$90K</span>
+                    <span></span>
                 </div>
             </div>
         </div>  
@@ -138,37 +135,38 @@
                 <div class="right">
                     <div class="bars">
                         <div class="bar-wrapper">
-                            <div class="bar" style="--height:3.9rem;"></div>
-                            <span>Dom</span>
+                            <div class="bar"></div>
+                            <span></span>
                         </div>
                         <div class="bar-wrapper">
-                            <div class="bar" style="--height:11.5rem;"></div>
-                            <span>Seg</span>
+                            <div class="bar"></div>
+                            <span></span>
                         </div>
                         <div class="bar-wrapper">
-                            <div class="bar" style="--height:7.6rem;"></div>
-                            <span>Ter</span>
+                            <div class="bar"></div>
+                            <span></span>
                         </div>
                         <div class="bar-wrapper">
-                            <div class="bar" style="--height:15.9rem;"></div>
-                            <span>Qua</span>
+                            <div class="bar"></div>
+                            <span></span>
                         </div>
                         <div class="bar-wrapper">
-                            <div class="bar" style="--height:12.9rem;"></div>
-                            <span>Qui</span>
+                            <div class="bar"></div>
+                            <span></span>
                         </div>
                         <div class="bar-wrapper">
-                            <div class="bar" style="--height:12rem;"></div>
-                            <span>Sex</span>
+                            <div class="bar"></div>
+                            <span></span>
                         </div>
                         <div class="bar-wrapper">
-                            <div class="bar" style="--height:6.9rem;"></div>
-                            <span>Sab</span>
+                            <div class="bar"></div>
+                            <span></span>
                         </div>
                     </div>
                 </div>
             </div>
         </div> 
-    </main> 
+    </main>
+    <script src="./js/js.js"></script>
 </body>
 </html>

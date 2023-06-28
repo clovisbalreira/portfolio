@@ -9,8 +9,8 @@
     <!-- estilo global -->
     <link rel="stylesheet" href="./css/style.css">    <!-- estilo pagina -->
     <link rel="stylesheet" href="./css/deputado.css">
-    <link rel="stylesheet" href="./css/partidos.css">
-    <link rel="stylesheet" href="./css/estados.css">
+    <link rel="stylesheet" href="./css/partidos-estados.css">
+    <link rel="stylesheet" href="./css/estados-partidos.css">
 </head>
 <body>
     <header>
@@ -46,9 +46,9 @@
     <main>
         <section>
             <img src="./img/logo.png" alt="Observe seu voto">
-            <h1>Observe seu Partido</h1>
+            <h1>Observe seu Partido e Estado</h1>
         </section>
-        <section class="estados"></section>
+        <section class="partidos-estados"></section>
     </main>
     <footer>
         <!-- <div>
@@ -100,11 +100,26 @@
     <script src="./functions/funcao.js"></script>
     <script src="./mvc/model/variaveis.js"></script>
     <script src="./mvc/view/partidos.js"></script>
-    <!-- <script src="./mvc/view/estados.js"></script> -->
+    <script src="./mvc/view/estados.js"></script>
     <script src="./mvc/view/deputados.js"></script>
     <script src="./mvc/controller/partidos-estados.js"></script>
     <script>
-        partidosEstados()
+        partidosEstados('partidos-estados')
+        setTimeout(() => {
+            let contarPartidos = document.querySelectorAll('.partidos-estados > div')
+            contarPartidos.forEach( partido =>{
+                let total = 0
+                let contarEstados = partido.querySelectorAll('section')
+                contarEstados.forEach( estado => {
+                    let contar = parseInt(estado.parentNode.querySelector('div > h2').innerHTML.replace(/[^0-9]/g,''))
+                    if(contar > 0){
+                        total += contar
+
+                    }
+                })
+                partido.querySelector('div > div > h2').innerHTML += ` ( ${total} )`
+            })
+        },10000)
     </script>
 </body>
 </html>

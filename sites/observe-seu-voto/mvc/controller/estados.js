@@ -1,4 +1,3 @@
-function estado(){
-    console.log('ola')
-    //mostrarDadosEstadosDeputados()
+function estado(condicao){
+    mostrarDadosEstados(condicao)
 }

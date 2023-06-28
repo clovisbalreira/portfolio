@@ -1,14 +1,15 @@
-const mostrarDadosPartidos = async() => {
+const mostrarDadosPartidos = async(condicao) => {
     const data = await pegarDadosPartidos()
-    mostrarPartidos(data, '.partidos')
+    if(condicao.includes('estados-partidos')){
+        let partido = condicao.split("-")
+        id = `#${partido[0]}`
+    }else{
+        id = `.${condicao}`
+    }
+    mostrarPartidos(data, id, condicao)
 }
 
-const mostrarDadosEstadosPartidosDeputados = async(id) => {
-    const data = await pegarDadosPartidos()
-    mostrarPartidos(data, id)
-}
-
-function mostrarPartidos(data, id){
+function mostrarPartidos(data, id, condicao){
     /* pegando secao no html */
     let sectionPartidos = document.querySelector(id)
     for(let i = 0; i < data.dados.length; i++){
@@ -16,13 +17,18 @@ function mostrarPartidos(data, id){
         let divPartido = document.createElement('div')
         let divDadosPartido = document.createElement('div')
         let sectionDeputados = document.createElement('section')
-        if(id == '.partidos'){
+        if(condicao == 'partidos'){
             sectionDeputados.setAttribute('id', `${data.dados[i].sigla}`)
+            sectionDeputados.classList.add('deputados')
+            sectionDeputados.classList.add('apagar-partidos')
+        }else if(condicao.includes('estados-partidos')){
+            sectionDeputados.setAttribute('id', `${id.replace('#','')}-${data.dados[i].sigla}`)
+            sectionDeputados.classList.add('deputados')
+            sectionDeputados.classList.add('apagar-partidos')
         }else{
-            sectionDeputados.setAttribute('id', `${id.replace('#','').toUpperCase()}-${data.dados[i].sigla}`)
+            sectionDeputados.setAttribute('id', `${data.dados[i].sigla}`)
+            sectionDeputados.classList.add('apagar-partidos-estados')
         }
-        sectionDeputados.classList.add('deputados')
-        sectionDeputados.classList.add('apagar')
         
         /* criando h2 */
         let h2 = document.createElement('h2')
@@ -45,7 +51,13 @@ function mostrarPartidos(data, id){
         acordion.style.fontWeight = 'bold'
         acordion.style.fontSize = '20px'
         acordion.style.cursor = 'pointer'
-        acordion.classList.add('acordion')
+        if(condicao == 'partidos'){
+            acordion.classList.add('acordion-partidos')
+        }else if(condicao.includes('estados-partidos')){
+            acordion.classList.add('acordion-estados')
+        }else{
+            acordion.classList.add('acordion-partidos-estados')
+        }
         
         /* adiconando tags */    
         divDadosPartido.appendChild(h2)
@@ -54,11 +66,15 @@ function mostrarPartidos(data, id){
         divPartido.appendChild(divDadosPartido)
         divPartido.appendChild(sectionDeputados)
         sectionPartidos.appendChild(divPartido)
-        if(id == '.partidos'){                              
-            mostrarDadosPartidosDeputados(data.dados[i].sigla, `#${data.dados[i].sigla}`)
+        if(condicao == 'partidos' || condicao.includes('estados-partidos')){                              
+            mostrarDadosEstadosPartidosDeputados(data.dados[i].sigla, condicao)
         }else{
-            mostrarDadosPartidosDeputados(id, data.dados[i].sigla)
+            mostrarDadosEstados(`${data.dados[i].sigla}-${condicao}`)
         }
     }
-    acordionPartidos()
+    if(condicao == 'partidos'){
+        acordionPartidos() 
+    }else{
+        acordionPartidosEstados()
+    }
 }

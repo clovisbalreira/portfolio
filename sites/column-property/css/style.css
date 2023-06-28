@@ -1,0 +1,19 @@
+body{
+    background-color: blue;
+}
+
+.container{
+    columns: 248px 2;
+    column-gap: 18px;
+    max-height: 480px;
+    padding: 16px;
+    border: 1px solid #FF9559;
+    color: white;
+    resize: both;
+    overflow: hidden;
+}
+
+.column-count{
+    --conta: 0;
+    column-count: var(--conta);
+}

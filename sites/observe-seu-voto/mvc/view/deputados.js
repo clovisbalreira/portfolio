@@ -3,18 +3,33 @@ const mostrarDadosDeputados = async() => {
     mostrarDeputados(data, '.deputados')
 }
 
-const mostrarDadosEstadosDeputados = async() => {
-    //const data = await pegarDadosEstadosDeputados()
-    //mostrarDeputados(data, '.deputados')
-}
-
-const mostrarDadosPartidosDeputados = async(estado, partido) => {
-    if(estado == partido.replace('#','')){
-        const data = await pegarDadosPartidosDeputados(partido)
-        mostrarDeputados(data, `${partido}`)
-    }else{
-        const data = await pegarDadosDeputadosEstadoPartidos(estado, partido)
-        mostrarDeputados(data, `#${estado.replace('#','').toUpperCase()}-${partido}`)
+const mostrarDadosEstadosPartidosDeputados = async(id, condicao) => {
+    if(condicao == 'partidos'){
+        const data = await pegarDadosPartidosDeputados(id)
+        document.querySelector(`#${id}`).parentNode.querySelector('div h2').innerHTML += ` ( ${data.dados.length} )`
+        mostrarDeputados(data, `#${id}`)
+    }else if(condicao == 'estados'){
+        const data = await pegarDadosEstadosDeputados(id.toUpperCase())
+        document.querySelector(`#${id}`).parentNode.querySelector('div h2').innerHTML += ` ( ${data.dados.length} )`
+        mostrarDeputados(data, `#${id}`)
+    }else if(condicao.includes('partidos-estados')){
+        let partido = condicao.split("-")
+        const data = await pegarDadosEstadoPartidosDeputados(id, partido[0])
+        if(data.dados.length > 0){
+            mostrarDeputados(data, `#${id}-${partido[0]}`)
+        }else{
+            document.querySelector(`#${id}-${partido[0]}`).parentNode.style.display = "none"
+        }
+        document.querySelector(`#${id}-${partido[0]}`).parentNode.querySelector('div h2').innerHTML += ` ( ${data.dados.length} )`
+    }else if('estados-partidos'){
+        let estado = condicao.split("-")
+        const data = await pegarDadosEstadoPartidosDeputados(estado[0], id)
+        if(data.dados.length > 0){
+            document.querySelector(`#${estado[0]}-${id}`).parentNode.querySelector('div h2').innerHTML += ` ( ${data.dados.length} )`
+            mostrarDeputados(data, `#${estado[0]}-${id}`)
+        }else{
+            document.querySelector(`#${estado[0]}-${id}`).parentNode.style.display = "none"
+        }
     }
 }
 

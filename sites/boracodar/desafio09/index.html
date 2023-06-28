@@ -19,62 +19,11 @@
             <h2>Conversor de moedas</h2>
             <div class="wrapper">
                 <div class="money-wrapper">
-                    <input type="text" class="amount" value="$1.000">
-                    <div class="dropdown">
-                        <div class="selected">
-                            <span class="fi fi-us fis"></span>
-                            USD
-                        </div>
-                        <ul>
-                            <li>
-                                <span class="fi fi-br fis"></span>
-                                BRL
-                            </li>
-                            <li>
-                                <span class="fi fi-us fis"></span>
-                                USD
-                            </li>
-                            <li>
-                                <span class="fi fi-eu fis"></span>
-                                EUR
-                            </li>
-                            <li>
-                                <span class="fi fi-gb fis"></span>
-                                GBR
-                            </li>
-                        </ul>
-                    </div>
                 </div>
                 <div class="middle">
                     <img src="./imagem/Vector.svg" alt="">
                 </div>
                 <div class="money-wrapper">
-                    <input type="text" class="amount" value="$5.000" readonly>
-                    <div class="dropdown">
-                        <div class="selected">
-                            <span class="fi fi-br fis"></span>
-                            BRL
-                        </div>
-                        <ul>
-                            <li>
-                                <span class="fi fi-br fis"></span>
-                                BRL
-                            </li>
-                            <li>
-                                <span class="fi fi-us fis"></span>
-                                USD
-                            </li>
-                            <li>
-                                <span class="fi fi-eu fis"></span>
-                                EUR
-                            </li>
-                            <li>
-                                <span class="fi fi-gb fis"></span>
-                                GBR
-                            </li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </section>
         <section class="cambio">
@@ -96,5 +45,8 @@
     <script src="./js/apis.js"></script>
     <script src="./js/funcao.js"></script>
     <script src="./js/script.js"></script>
+    <script>
+        contacaoMoeda(['BRL','USD'],1)
+    </script>
 </body>
 </html>

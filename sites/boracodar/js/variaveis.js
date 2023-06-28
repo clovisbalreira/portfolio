@@ -18,6 +18,12 @@ let desafios = [
     {titulo: 'Data', caminho: 'desafio17'},
     {titulo: 'Efeito 3D', caminho: 'desafio18'},
     {titulo: 'Interface UBER', caminho: 'desafio19'},
+    {titulo: 'Galeria', caminho: 'desafio20'},
+    {titulo: 'Carrinho de compras', caminho: 'desafio21'},
+    {titulo: 'Profile Settings', caminho: 'desafio22'},
+    {titulo: 'Formulário', caminho: 'desafio23'},
+    {titulo: 'Ajustes de iliminação', caminho: 'desafio24'},
+    {titulo: 'Interações em VR', caminho: 'desafio25'},
 ]
 let main = document.querySelector('main')
 let ul = document.createElement('ul')

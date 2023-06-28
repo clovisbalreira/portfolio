@@ -36,7 +36,7 @@ body{
     width: fit-content;
     height: fit-content;
     min-height: 100vh;
-    min-width: 100vw;
+    min-width: 98vw;
     padding: 11.2rem 12.3rem;
     place-content: center;
     padding: 3.2rem;
@@ -52,8 +52,10 @@ body{
     height: 19.7rem;
     place-content: center;
     justify-items: center;
-    gap: 1.6rem;
-    color: #81F8B8; 
+    gap: 1.6rem; 
+}
+.nps .middle i{ 
+    font-size: 7rem;
 }
 .nps .bottom{
     gap: 1rem;

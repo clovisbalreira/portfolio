@@ -1,3 +1,3 @@
-function partidos(){
-    mostrarDadosPartidos()
+function partidos(condicao){
+    mostrarDadosPartidos(condicao)
 }

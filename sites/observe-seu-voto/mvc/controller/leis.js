@@ -1,0 +1,3 @@
+function leis(){
+    mostrarDadosLeis()
+}
