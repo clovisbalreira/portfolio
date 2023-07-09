@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: linear-gradient( 45deg , black , white);
+}
+main{
+    margin: auto;
+}
+header h1{
+    background-color: rgba(0, 0, 0, 0.322);
+    text-align: center;
+    padding: 2rem;
+}
+li{
+    list-style: none;
+    padding: 2rem;
+}
+a{
+    color: black;
+    font-size: 2rem;
+    padding-bottom: 2rem;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    z-index: 999;
+}
+embed{
+    width: 100%;
+}
