@@ -165,6 +165,9 @@ var sites = [
     //onebitcode
     {titulo: 'Onebitcode', descricao: 'Projeto criado no modelo do Onebitcode.', linguagem: linguagens[1], url: './sites/onebitcode', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tagsLinguagem[1]} ${tags}`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/onebitcode'},
     
+    //Sujeito Programador
+    {titulo: 'Sujeito Programador', descricao: 'Projeto criado no modelo do Sujeito Programador.', linguagem: linguagens[1], url: './sites/sujeitoprogramador', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tagsLinguagem[1]} ${tags}`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/sujeitoprogramador'},
+
     //Dev Dobro
     {titulo: 'Dev Dobro', descricao: 'Projeto criado no modelo do Dev Dobro. Com mentoria com os Kadu e Beto.', linguagem: linguagens[1], url: './sites/devdobro', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tagsLinguagem[1]} ${tags}`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/devdobro'},
     {titulo: 'Dev Dobro - Mario', descricao: 'Projeto criado no modelo do Dev Dobro. Com mentoria com os Kadu e Beto.', linguagem: linguagens[1], url: './sites/devdobro/desafio01', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tagsLinguagem[1]} ${tags}`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/devdobro/desafio01'},
