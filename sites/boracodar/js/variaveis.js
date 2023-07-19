@@ -25,6 +25,8 @@ let desafios = [
     {titulo: 'Ajustes de iliminação', caminho: 'desafio24'},
     {titulo: 'Interações em VR', caminho: 'desafio25'},
     {titulo: 'Receitas', caminho: 'desafio26'},
+    {titulo: 'Página de erro', caminho: 'desafio27'},
+    {titulo: 'Plataforma de IA', caminho: 'desafio28'},
 ]
 let main = document.querySelector('main')
 let ul = document.createElement('ul')
