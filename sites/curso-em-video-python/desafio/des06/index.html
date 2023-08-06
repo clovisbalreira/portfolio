@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso em video</title>
+    <!--<link rel="stylesheet" href="path/to/pyscript.css" />
+    <script defer src="path/to/pyscript.js"></script>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />-->
+    <link rel="stylesheet" href="../../css/style.css">
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script> 
+</head>
+<body>
+    <section>
+        <h2>Desafio 06 - Faça um programa que leia algo pelo teclado e mostre na tela o seu tipo primitivo as informações possiveis sobre ela.</h2>
+        <hr>
+        <py-script>
+            def dados(*arg, **kags):
+                input_palavra = Element('palavra')
+                palavra = input_palavra.element.value
+                tipo = Element('tipo')
+                tipo.element.innerText = 'O tipo primitivo desse valor é ', type(palavra)
+                espaco = Element('espaco')
+                espaco.element.innerText = 'Só tem espaços ', palavra.isspace()
+                numero = Element('numero')
+                numero.element.innerText = 'É um número ', palavra.isnumeric()
+                alfabetico = Element('alfabetico')
+                alfabetico.element.innerText = 'É alfabético ', palavra.isalpha()
+                alfanumerico = Element('alfanumerico')
+                alfanumerico.element.innerText = 'É alfanúmerico ', palavra.isalnum()
+                maiuscula = Element('maiuscula')
+                maiuscula.element.innerText = "Está em maiusculas?  ", palavra.isupper()
+                minuscula = Element('minuscula')
+                minuscula.element.innerText = 'Está em minusculas? ', palavra.islower()
+                capitalizada = Element('capitalizada')
+                capitalizada.element.innerText = 'Está capitalizada? ', palavra.istitle()
+        </py-script>
+        <div class="input">
+            <label for="palavra">Digite alguma coisa</label>
+            <input type="text" id="palavra" placeholder="Digite algo">
+        </div>
+        <p id="tipo"></p>
+        <p id="espaco"></p>
+        <p id="numero"></p>
+        <p id="alfabetico"></p>
+        <p id="alfanumerico"></p>
+        <p id="maiuscula"></p>
+        <p id="minuscula"></p>
+        <p id="capitalizada"></p>
+        <button id="btn" type="submit" pys-onClick="dados">Enviar</button>        
+        <a href="../../index.html">Voltar</a>       
+    </section>
+</body>
+</html>

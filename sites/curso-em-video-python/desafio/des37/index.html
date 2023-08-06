@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso em video</title>
+    <!--<link rel="stylesheet" href="path/to/pyscript.css" />
+    <script defer src="path/to/pyscript.js"></script>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />-->
+    <link rel="stylesheet" href="../../css/style.css">
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script> 
+    <style>
+        .input{
+            display: grid;
+        }
+        .input div{
+            justify-content: space-between;
+            gap: 10px;
+        }
+    </style> 
+</head>
+<body>
+    <section>
+        <h2>Desafio 37 - Desenvolva um programa que leia o comprimento de três retas e diga ao usuário se elas podem ou não formar um triângulo.</h2>
+        <hr>
+        <py-script>
+            def dados(*arg, **kags):
+                input_reta1 = Element('reta1')
+                reta1 = input_reta1.element.value
+                input_reta2 = Element('reta2')
+                reta2 = input_reta2.element.value
+                input_reta3 = Element('reta3')
+                reta3 = input_reta3.element.value
+                resposta = ''
+                resultado = Element('resultado')
+                resultado.element.innerText = 'Você digitou as reta {} - {} - {}\nEssas retas {} formam um triângulo.'.format(reta1, reta2, reta3, resposta)
+        </py-script>
+        <div class="input">
+            <div>
+                <label for="reta1">Digite a 1º reta</label>
+                <input type="number" id="reta1" placeholder="Digite a 1º reta">
+            </div>
+            <div>
+                <label for="reta2">Digite a 2º reta</label>
+                <input type="number" id="reta2" placeholder="Digite a 2º reta">
+            </div>
+            <div>
+                <label for="reta3">Digite a 3º reta</label>
+                <input type="number" id="reta3" placeholder="Digite a 3º reta">
+            </div>
+        </div>
+        <p id="resultado"></p>
+        <button id="btn" type="submit" pys-onClick="dados">Enviar</button>        
+        <a href="../../index.html">Voltar</a>       
+    </section>
+</body>
+</html>

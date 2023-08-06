@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso em video</title>
+    <!--<link rel="stylesheet" href="path/to/pyscript.css" />
+    <script defer src="path/to/pyscript.js"></script>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />-->
+    <link rel="stylesheet" href="../../css/style.css">
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <style>
+        .input{
+            display: grid;
+        }
+        .input div{
+            justify-content: space-between;
+            gap: 10px;
+        }
+    </style>  
+</head>
+<body>
+    <section>
+        <h2>Desafio 13 - Faça um programa que leia a largura e a altura de uma perede em metros, calcule a sua área e a quantidade de tinta necessária para pintá-la, sabendo que cada litro de tinta pinta uma área de 2m².</h2>
+        <hr>
+        <py-script>
+            def dados(*arg, **kags):
+                input_altura = Element('altura')
+                altura = input_altura.element.value
+                input_largura = Element('largura')
+                largura = input_largura.element.value
+                resultado = Element('resultado')
+                resultado.element.innerText = 'A parede tem {:.2f} de altura e {:.2f} de largura, e sua área quadrada é {:.2f}m² \n você precisa de {:.2f}l para pintar a parede'.format(float(altura),float(largura),float(altura)*float(largura),float(altura)*float(largura) / 2)
+        </py-script>
+        <div class="input">
+            <div>
+                <label for="altura">Digite a altura</label>
+                <input type="number" id="altura" placeholder="Digite a altura" step=".01">
+            </div>
+            <div>
+                <label for="largura">Digite a largura</label>
+                <input type="number" id="largura" placeholder="Digite a largura" step=".01">
+            </div>
+        </div>
+        <p id="resultado"></p>
+        <button id="btn" type="submit" pys-onClick="dados">Enviar</button>        
+        <a href="../../index.html">Voltar</a>       
+    </section>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso em video</title>
+    <!--<link rel="stylesheet" href="path/to/pyscript.css" />
+    <script defer src="path/to/pyscript.js"></script>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />-->
+    <link rel="stylesheet" href="../../css/style.css">
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script> 
+</head>
+<body>
+    <section>
+        <h2>Desafio 31 - Escreva um programa que leia a velocidade de um carro. Se ele ultrapassar 80Km/h. mostre uma mensagem dizendo que ele foi multado. A multa vai custar R$7.00 por cada Km acima do limite.</h2>
+        <hr>
+        <py-script>
+            def dados(*arg, **kags):
+                input_velocidade = Element('velocidade')
+                velocidade = input_velocidade.element.value
+                multa = 7
+                resposta = ''
+                if int(velocidade) > 80:
+                    resposta = 'Você está acima do limite de 80Km\nVocê foi multado\nO valor da multa foi R$ {:.2f}\n*R$7,00 reais por cada Km acima.'.format((int(velocidade) - 80) * multa)
+                resultado = Element('resultado')
+                resultado.element.innerText = 'A velocidade registrada foi {}Km\n{}'.format(velocidade,resposta)
+        </py-script>
+        <div class="input">
+            <label for="velocidade">Digite o nome completo</label>
+            <input type="number" id="velocidade" placeholder="Digite a velocidade" min="0">
+        </div>
+        <p id="resultado"></p>
+        <button id="btn" type="submit" pys-onClick="dados">Enviar</button>        
+        <a href="../../index.html">Voltar</a>       
+    </section>
+</body>
+</html>

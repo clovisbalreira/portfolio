@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso em video</title>
+    <!--<link rel="stylesheet" href="path/to/pyscript.css" />
+    <script defer src="path/to/pyscript.js"></script>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />-->
+    <link rel="stylesheet" href="../../css/style.css">
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script> 
+</head>
+<body>
+    <section>
+        <h2>Desafio 24 - Crie um programa que leia o nome completo de uma pessoa e mostre - o nome com todas as letras maiusculas - O nome com todas letras minusculas - quantas letras ao todo ( sem considerar espaços ) - Quantas letras tem o primeiro nome .</h2>
+        <hr>
+        <py-script>
+            def dados(*arg, **kags):
+                input_nome = Element('nome')
+                nome = input_nome.element.value.strip()
+                primeiro = nome.split()
+                resultado = Element('resultado')
+                resultado.element.innerText = 'O Nome digitado foi {}\n Com todas letra maiusculas {}\n Com todas letra minusculas {}\nTotal de letras sem espaços {}\nO primeiro nome possui {}  letras\n*O primeiro nome possui {} letras'.format(nome, nome.upper(), nome.lower(),len(nome)-nome.count(' '),len(primeiro[0]), nome.find(' '))
+        </py-script>
+        <div class="input">
+            <label for="nome">Digite seu nome completo</label>
+            <input type="text" id="nome" placeholder="Digite o nome">
+        </div>
+        <p id="resultado"></p>
+        <button id="btn" type="submit" pys-onClick="dados">Enviar</button>        
+        <a href="../../index.html">Voltar</a>       
+    </section>
+</body>
+</html>

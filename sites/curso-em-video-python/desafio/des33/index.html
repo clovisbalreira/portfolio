@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso em video</title>
+    <!--<link rel="stylesheet" href="path/to/pyscript.css" />
+    <script defer src="path/to/pyscript.js"></script>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />-->
+    <link rel="stylesheet" href="../../css/style.css">
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script> 
+</head>
+<body>
+    <section>
+        <h2>Desafio 33 - Desenvolva um programa que pergunte a distância de uma viagem em Km. Calcule o preço da passagem, cobrando R$0.50 por Km para viagens de até 200Km e R$0.45 para viagens mais longas.</h2>
+        <hr>
+        <py-script>
+            def dados(*arg, **kags):
+                input_distancia = Element('distancia')
+                distancia = input_distancia.element.value
+                resultado = Element('resultado')
+                resultado.element.innerText = 'A distância de sua viagem é {}Km.\nA sua passagem custara R${}'.format(distancia,int(distancia) * 0.50 if int(distancia) <= 200 else int(distancia) * 0.45)
+        </py-script>
+        <div class="input">
+            <label for="distancia">Digite a distancia</label>
+            <input type="number" id="distancia" placeholder="Digite a distancia">
+        </div>
+        <p id="resultado"></p>
+        <button id="btn" type="submit" pys-onClick="dados">Enviar</button>        
+        <a href="../../index.html">Voltar</a>       
+    </section>
+</body>
+</html>

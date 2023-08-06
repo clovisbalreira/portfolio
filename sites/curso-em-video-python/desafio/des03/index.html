@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso em video</title>
+    <!--<link rel="stylesheet" href="path/to/pyscript.css" />
+    <script defer src="path/to/pyscript.js"></script>
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />-->
+    <link rel="stylesheet" href="../../css/style.css">
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script> 
+    <style>
+        .input{
+            display: grid;
+        }
+        .input div{
+            justify-content: space-between;
+            gap: 10px;
+        }
+    </style> 
+</head>
+<body>
+    <section>
+        <h2>Desafio 03 - Crie um script python que leia dois numeros e tente mostrar a soma entre eles.</h2>
+        <hr>
+        <py-script>
+            from js import console
+            def dados(*arg, **kags):
+                input_n1 = Element('n1')
+                input_n2 = Element('n2')
+                n1 = input_n1.element.value
+                n2 = input_n2.element.value
+                soma = int(n1) + int(n2)
+                resultado = Element('resultado')
+                resultado.element.innerText = "A soma entre {} e {} vale {} ".format(n1,n2,soma)
+        </py-script>
+        <div class="input">
+            <div>
+                <label for="n1">Número 1</label>
+                <input type="number" id="n1" placeholder="Digite o número 1">
+            </div>
+            <div>
+                <label for="n2">Número 2</label>
+                <input type="number" id="n2" placeholder="Digite o número 2">
+            </div>
+        </div>
+        <p id="resultado"></p>
+        <button id="btn" type="submit" pys-onClick="dados">Enviar</button>
+        <a href="../../index.html">Voltar</a>
+    </section>
+</body>
+</html>
