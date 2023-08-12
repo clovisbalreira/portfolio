@@ -1,0 +1,2 @@
+sudo apt install rpm
+npm create vite@latest .

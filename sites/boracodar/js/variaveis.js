@@ -29,6 +29,7 @@ let desafios = [
     {titulo: 'Plataforma de IA', caminho: 'desafio28'},
     {titulo: 'Antes e depois da IA', caminho: 'desafio29'},
     {titulo: 'Sujestão de filmes', caminho: 'desafio30'},
+    {titulo: 'Transcrição de vídeo com IA', caminho: 'desafio31'},
 ]
 let main = document.querySelector('main')
 let ul = document.createElement('ul')
