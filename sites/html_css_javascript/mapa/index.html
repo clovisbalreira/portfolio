@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html><body>
+<style>
+	img {width:64px;}
+	div {width:320px;font-size:0;}
+	img#idJogador {position:absolute;left:128px;top:128px;}
+</style>
+
+<div id="idMapa">
+</div>
+<img id="idJogador" src="./img/jogador.gif">
+
+<script>
+	let p = {x:4,y:4};
+	let movimentos = {
+		ArrowLeft: {x:-1,y:0},
+		ArrowRight: {x:1,y:0},
+		ArrowUp: {x:0,y:-1},
+		ArrowDown: {x:0,y:1}
+	}
+
+let cenario = [
+		[204,204,204,204,204,204,204,204,204,204,],
+		[204,207,202,202,202,202,202,202,211,204,],
+		[204,203,101,  1,  1,  1,  1,  2,210,204,],
+		[204,203,  1,  1,  1,  2,  2,  2,210,204,],
+		[204,203,  1,  1,  1,  2,101,  2,210,204,],
+		[204,203,  1,  1,  1,  2,  2,  2,210,204,],
+		[204,203,  1,  1,  1,102,  2,  2,210,204,],
+		[204,203,  1,  1,  1,  2,  2,  2,210,204,],
+		[204,203,  1,  1,  1,  2,  2,  2,210,204,],
+		[204,208,206,206,205,  2,  2,  2,210,204,],
+		[204,204,204,204,208,206,206,206,212,204,],
+		[204,204,204,204,204,204,204,204,204,204,],
+	];
+
+
+
+	let exibe = () => {
+		document.getElementById('idMapa').innerHTML = cenario.flat().filter( (e,i) => parseInt(i/10) >= p.y-2 && parseInt(i/10) <= p.y+2 && (i%10) >= p.x-2 && (i%10) <= p.x+2).map( e=> `<img src="./img/${e}.p/*  */ng">` ).join('');
+	}
+
+	let move = e => {
+		let p2 = {
+			x:p.x+movimentos[e.key]?.x||0,
+			y:p.y+movimentos[e.key]?.y||0
+		};
+		if (cenario[p2.y][p2.x] < 100) {
+			p = p2;
+			exibe();
+		}
+	}
+
+	exibe();
+	document.addEventListener('keydown', move )
+</script>
+
+</body></html>

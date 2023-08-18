@@ -1,0 +1,63 @@
+<html>
+  <body style='background-color:lightgray'>
+
+  	<div style='position:absolute;left:0;top:0;background-color:white;width:300px;height:333px'>
+  	  <img id="idNave" src="nave2.png" style="position:absolute;left:140px;top:0px">
+  	</div>
+
+  	<div id="idInfo" style="position:absolute;left:0;top:0">
+  	</div>
+
+	<script>
+		let motor = false;
+
+		let altitude = 300;
+		let combustivel = 45;
+		let velocidade = 0;
+		let aceleracao = 0;
+		let intervalo;
+
+		let liga =  () => {
+			motor = true;
+			document.getElementById("idNave").src = "nave1.png";
+		}
+		let desliga =  () => {
+			motor = false;
+			document.getElementById("idNave").src = "nave2.png";
+		}
+
+		let ciclo = () => {
+			if (combustivel <= 0) desliga();
+			if (motor) {aceleracao = 0.2; combustivel--;}
+			else aceleracao = -0.3;
+			velocidade += aceleracao;
+			altitude += velocidade;
+
+			if (altitude <= 0) {
+				if (velocidade <= -2.4) alert("nave explodiu");
+				else alert("pouso bem sucedido");
+				clearInterval(intervalo);
+			}
+
+			document.getElementById("idInfo").innerHTML = 
+			`
+				velocidade: ${velocidade.toFixed(2)}<br/>
+				combustivel: ${combustivel}<br/>
+
+
+
+			`
+			document.getElementById("idNave").style.top = (300-altitude) + "px";
+		}
+
+		intervalo = window.setInterval( ciclo, 100);
+
+		document.addEventListener('mousedown', liga);
+		document.addEventListener('mouseup', desliga);
+
+
+
+	</script>
+
+  </body>
+</html>

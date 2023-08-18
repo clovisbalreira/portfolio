@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <link rel="stylesheet" href="./css/style.css">
+ <body>
+  <script>
+  	let exibe = () => {
+  		document.body.innerHTML = `
+        <table border=1><tr>` +
+
+        memoria2.map( (e,i) => `
+          <td id=${i}>
+          ${e}
+          </td>
+          `).join('')
+        +
+        `
+        </table>
+      `;
+
+  	}
+
+    let click = (e) => {
+      let id = e.srcElement.id;
+      if (memoria2[id] !== "*") return;
+
+      if (fase === 1) {
+        memoria2[id] = memoria1[id];
+        selecionado1 = id;
+        fase = 2;
+      } else if (fase === 2 ) {
+        memoria2[id] = memoria1[id];
+        selecionado2 = id;
+        fase = 3;
+      } else {
+        if (memoria2[selecionado1] !== memoria2[selecionado2]) {
+          memoria2[selecionado1] = "*";
+          memoria2[selecionado2] = "*";
+        }
+        fase = 1;
+      }
+      exibe();
+    }
+
+    
+
+    let fase = 1;
+    let selecionado1 = 0;
+    let selecionado2 = 0;
+    let memoria1 = [1,2,3,4,5,1,2,3,4,5];
+    memoria1.sort( (a,b) => Math.random() - 0.5);
+    let memoria2 = ['*','*','*','*','*','*','*','*','*','*'];
+
+    exibe();
+
+    document.addEventListener('click',click);
+
+  </script>
+ </body>
+</html>
