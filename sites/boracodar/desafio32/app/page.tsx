@@ -10,7 +10,7 @@ import 'prismjs/themes/prism-dark.css'
 export default function Home() {
   const [schema, setSchema] = useState('')
   const { completion, handleSubmit, input, handleInputChange } = useCompletion({
-    api: '/api/completion',
+    api: '/api/generate.sql',
     body: {
       schema
     },
@@ -52,7 +52,7 @@ export default function Home() {
           id="question"
           value={input}
           onChange={handleInputChange} 
-          className='my-4 bg-blueberry-600 border border-blueberry-300 rounded-md px-4 px-3 outline-none focus:ring-2 focus:ring-lemon-500'/>
+          className='my-4 bg-blueberry-600 border border-blueberry-300 rounded-md px-4 py-3 outline-none focus:ring-2 focus:ring-lemon-500'/>
         <button type='submit' className='text-pistachio flex items-center justify-center rounded-lg border border-pistachio h-14 gap-2'>
           <Stars className='w-6 h-6'/>
           Perguntar à inteligencia artificial
@@ -69,7 +69,7 @@ export default function Home() {
             highlight={result => highlight(result, languages.sql, 'sql')} 
             padding={16}
             textareaClassName='outline-none'
-            className='my-4 bg-blueberry-600 border border-blueberry-300 text-foam rounded-md px-4 px-3 outline-none'
+            className='my-4 bg-blueberry-600 border border-blueberry-300 text-foam rounded-md px-4 px-3'
           />
         </div>
       </div>
