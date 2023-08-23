@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ticket IA</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+        <script src="./js/script.js" defer></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="content">
+                <h1>Gere seu ticket e compartilhe com o mundo</h1>
+                <div class="sucess">
+                    <img src="./assets/Confirmado.png" alt="Github">
+                    <label for="username">Digite seu usuário do Github</label>
+                </div>
+                <div class="input">
+                    <img src="./assets/github.svg" alt="Github">
+                    <input type="text" id="username" placeholder="Nome do usuário" autocomplete="off" autocapitalize="off">
+                </div>
+                <span id="error">Usuário invalído. Verifique e tente novamente.</span>
+                <button>GERAR MEU TICKET</button>
+            </div>
+            <div class="ticket">
+                <div class="ticket-container">
+                    <img src="./assets/cover.png" alt="Foto">
+                    <div class="info">
+                        <div class="user-ticket-info">
+                            <img src="./assets/avatar.png" alt="Foto" id="photo"><span>TRIPULANTE</span>
+                            <h1 id="name">Seu nome aqui</h1>
+                        </div>
+                        <div class="event-ticket-info">
+                            <span>EVENTO</span>
+                            <span>IA PARA DEVS</span>
+                        </div>
+                        <div class="event-ticket-info">
+                            <span>DATA</span>
+                            <span>14 - 16 AGO. 2023</span>
+                        </div>
+                        <div class="event-ticket-info">
+                            <span>HORA</span>
+                            <span>AO VIVO - 19H</span>
+                        </div>
+                        <img src="./assets/lines-svg.svg" alt="Codigo de barra">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
