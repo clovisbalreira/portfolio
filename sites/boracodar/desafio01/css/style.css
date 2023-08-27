@@ -131,6 +131,16 @@
     margin-top: 9.6px;
   }
   
+  i{
+    color: white;
+    font-size: 40px;
+  }
+
+  i:hover{
+    color: black;
+    font-size: 40px;
+  }
+  
   @media (max-width: 670px) {
     #app {
       display: flex;

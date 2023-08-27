@@ -1,0 +1,91 @@
+/* div, a, span{
+    outline: 1px solid red;
+}
+
+section{
+    display: grid;
+    margin-block: 10px;
+}
+ */
+body{
+    margin: 0;
+    height: 100vh;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 20% 1fr 10px;
+    grid-template-areas: 
+    'cabecalho cabecalho cabecalho'
+    'lateral principal principal'
+    'rodape rodape rodape'
+    ;
+}
+
+header{
+    background-color: aqua;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-area: cabecalho;
+}
+
+main{
+    background-color: blueviolet;
+    grid-area: principal;
+}
+
+aside{
+    background-color: palevioletred;
+    grid-column: 2/4;
+    grid-area: lateral;
+}
+
+footer{
+    background-color: chartreuse;
+    grid-column: 1/4;
+    grid-area: rodape;
+}
+
+section{
+    display: grid;
+    height: 100vh;
+    width: 100vW;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    
+}
+
+section div{
+    background-color: purple;
+    width: 100px;
+    height: 100px;
+}
+
+section div:nth-child(1){
+    align-self: end;
+}
+section div:nth-child(2){
+    align-self: center;
+}
+section div:nth-child(3){
+    align-self: flex-start;
+}
+section div:nth-child(4){
+    justify-self: end;
+}
+section div:nth-child(5){
+    justify-self: center;
+}
+section div:nth-child(6){
+    justify-self: start;
+}
+section div:nth-child(7){
+    place-content: center;
+}
+section div:nth-child(8){
+    place-content: center;
+}
+section div:nth-child(9){
+    place-content: center;
+}
