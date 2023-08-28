@@ -20,16 +20,13 @@ button{
 
 .button-active{
     color: green;
-}
-/* .music-container{
-    background-color: yellow;
-} */    
+}  
 
 #playlist-title{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 1em 0 4em 0;
+    margin: 1em 0 2em 0;
 }    
 
 #cover{
@@ -41,20 +38,13 @@ button{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 3em 0 1em 0;
-}    
-
-/* #song-info{
-
-} */    
+    margin: 1em 0 1em 0;
+}      
 
 #song-name{
     font-size: 1.5em;
     font-weight: bolder;
 }    
-
-/* #band-name{
-} */
 
 #progress-container{
     cursor: pointer;  
@@ -81,14 +71,6 @@ button{
     font-size: smaller;
     margin-top: 0.5px;
 }
-
-/* #song-time{
-
-} */
-
-/* #total-time{
-
-} */
 
 #button-container{
     display: flex;
