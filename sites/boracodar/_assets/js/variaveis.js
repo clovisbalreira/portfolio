@@ -32,6 +32,7 @@ let desafios = [
     /* {titulo: 'Transcrição de vídeo com IA', caminho: 'desafio31'}, */
     /* {titulo: 'SQL com IA', caminho: 'desafio32'}, */
     {titulo: 'Ticket IA', caminho: 'desafio33'},
+    {titulo: 'Select Customizado', caminho: 'desafio34'},
 ]
 let main = document.querySelector('main')
 let ul = document.createElement('ul')
