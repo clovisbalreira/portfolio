@@ -12,6 +12,7 @@ var linguagens = [
     { nome: 'Arduino', descricao: 'Projetos em arduino.', imagem: 'img/arquivo.jpg', url: './arduino.html' },
     { nome: 'Android', descricao: 'Projetos em android.', imagem: 'img/arquivo.jpg', url: './android.html' },
     { nome: 'Kotlin', descricao: 'Projetos em Kotlin.', imagem: 'img/arquivo.jpg', url: './kotlin.html' },
+    { nome: 'Vite', descricao: 'Projetos em Vite.', imagem: 'img/arquivo.jpg', url: './vite.html' },
     { nome: 'Designer gráfico', descricao: 'Projetos de designer gráfico.', imagem: 'img/arquivo.jpg', url: './imagens/index.html' },
 ]
 
@@ -188,6 +189,7 @@ var sites = [
     {titulo: 'Dev Dobro - X-men', descricao: 'Projeto criado no modelo do Dev Dobro. Com mentoria com os Kadu e Beto.', linguagem: linguagens[1], url: './sites/devdobro/desafio04', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tagsLinguagem[1]} ${tags}`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/devdobro/desafio04'},
     
     // Rocketseat
+    {titulo: 'Grid- Rocketseat', descricao: 'Projeto criado no modelo de player-rocketseat. Com mentoria de Mayk Brito', linguagem: linguagens[0], url: 'sites/player-rocketseat/index.html', tipo: tipos[1], modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tagsLinguagem[0]} ${tags}`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/player-rocketseat'},
     {titulo: 'Grid- Rocketseat', descricao: 'Projeto criado no modelo de Grid- Rocketseat. Com mentoria de Mayk Brito', linguagem: linguagens[0], url: 'sites/grid-rocketseat/index.html', tipo: tipos[1], modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tagsLinguagem[0]} ${tags}`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/grid-rocketseat'},
     {titulo: 'BoraCodar - Jornada do zero a primeira vaga ', descricao: 'Projeto criado no modelo do boracodar. Com mentoria de Mayk Brito e Biro.', linguagem: linguagens[1], url: './sites/jornada-do-zero-a-primeira-vaga/', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tagsLinguagem[1]} ${tags} #boracodar #maykbrito`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/jornada-do-zero-a-primeira-vaga'},
     {titulo: 'BoraCodar', descricao: 'Projeto criado no modelo do boracodar. Com mentoria de Mayk Brito e Biro.', linguagem: linguagens[1], url: './sites/boracodar/', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tagsLinguagem[1]} ${tags} #boracodar #maykbrito`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/boracodar'},
@@ -230,7 +232,7 @@ var sites = [
     
     //alura
     {titulo: 'Alura - Barbearia', descricao: 'Projeto criado no modelo da alura.', linguagem: linguagens[1], url: 'sites/alura/barbearia/index.html', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[1], tag: `${tagsLinguagem[0]} ${tags} #alura `, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/alura/barbearia/'},
-    {titulo: 'Alura - Biografia', descricao: 'Projeto criado no modelo da alura.', linguagem: linguagens[1], url: 'sites/alura/Biografia/index.html', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[1], tag: `${tagsLinguagem[0]} ${tags} #alura `, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/alura/Biografia/'},
+    {titulo: 'Alura - Biografia', descricao: 'Projeto criado no modelo da alura.', linguagem: linguagens[1], url: 'sites/alura/biografia/index.html', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[1], tag: `${tagsLinguagem[0]} ${tags} #alura `, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/alura/biografia/'},
 
 
     // Alura imersão
@@ -286,7 +288,9 @@ var sites = [
   { titulo: 'Celke', descricao: 'Javascript e criando estrutura', linguagem: linguagens[2], url: 'sites/celke/index.html', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[3], tag: `${tags}`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/celke'},
   
   // Hashtag
-  {titulo: 'Hashtag - Javascript', descricao: 'Projeto criado no modelo do hashtag. Com mentoria de Daniel.', linguagem: linguagens[1], url: './sites/hashtag-javascript/', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tagsLinguagem[1]} ${tags} #boracodar #maykbrito`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/hashtag-javascript'},
+  { titulo: 'Hashtag - E-commerce', descricao: 'Projeto criado no modelo do hashtag. Com mentoria de Daniel', linguagem: linguagens[13], url: 'https://github.com/clovisbalreira/vite/tree/main/e-commerce', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[5]}`, repositorio: 'https://github.com/clovisbalreira/vite/tree/main/e-commerce'},    
+  {titulo: 'Hashtag - E-commerce', descricao: 'Projeto criado no modelo do hashtag. Com mentoria de Daniel.', linguagem: linguagens[1], url: './sites/e-commerce/', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tagsLinguagem[1]} ${tags} #daniel`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/e-commerce'},
+  {titulo: 'Hashtag - Javascript', descricao: 'Projeto criado no modelo do hashtag. Com mentoria de Daniel', linguagem: linguagens[0], url: 'sites/player-rocketseat/index.html', tipo: tipos[1], modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tagsLinguagem[0]} ${tags}`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/player-rocketseat'},
   { titulo: 'Python - Hashtag - Criar pdf', descricao: 'Exercicios de python básico', linguagem: linguagens[9], url: 'https://github.com/clovisbalreira/python/tree/main/criar-pdf', tipo: tipos[1], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[8]}`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/criar-pdf'},
   { titulo: 'Python - Hashtag - Minicurso Hashtag', descricao: 'Exercicios de python básico', linguagem: linguagens[9], url: 'https://github.com/clovisbalreira/python/tree/main/minicurso-hashtag', tipo: tipos[1], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[8]}`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/minicurso-hashtag'},
   /* { titulo: 'Python - Hashtag - Minicurso Hashtag Ciencia de dados', descricao: 'Exercicios de python básico', linguagem: linguagens[9], url: 'https://github.com/clovisbalreira/python/tree/main/minicurso-hashtag-ciencia-de-dados', tipo: tipos[1], modelo: modelos[3], status: 'Sim', projeto: projetos[2], tag: `${tags} ${tagsLinguagem[8]}`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/minicurso-hashtag-ciencia-de-dados'}, */
