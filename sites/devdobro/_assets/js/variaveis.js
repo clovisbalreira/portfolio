@@ -2,7 +2,8 @@ let desafios = [
     {titulo:'Mario', caminho: './desafio01'},
     {titulo: 'The last of us', caminho: './desafio02'},
     {titulo: 'Pokemon', caminho: './desafio03'},
-    {titulo: 'X-men', caminho: './desafio04'}
+    {titulo: 'X-men', caminho: './desafio04'},
+    {titulo: 'One Piace', caminho: './desafio05'}
 ]
 let main = document.querySelector('main')
 let ul = document.createElement('ul')
