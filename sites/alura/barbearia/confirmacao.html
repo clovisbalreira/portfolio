@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Confirmação de Formulário</h1>
+
+    <table>
+        <tr>
+            <th>Campo</th>
+            <th>Valor</th>
+        </tr>
+        <tr>
+            <td>Nome e Sobrenome</td>
+            <td id="nomeSobrenome"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td id="email"></td>
+        </tr>
+        <tr>
+            <td>Telefone</td>
+            <td id="telefone"></td>
+        </tr>
+        <tr>
+            <td>Mensagem</td>
+            <td id="mensagem"></td>
+        </tr>
+        <tr>
+            <td>Contato Preferido</td>
+            <td id="contatoPref"></td>
+        </tr>
+        <tr>
+            <td>Horário Preferido</td>
+            <td id="horarioPref"></td>
+        </tr>
+        <tr>
+            <td>Novidades por Email</td>
+            <td id="novidadesPorEmail"></td>
+        </tr>
+    </table>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Obtém os parâmetros da URL
+            var params = new URLSearchParams(window.location.search);
+
+            // Define os valores na tabela
+            document.getElementById('nomeSobrenome').innerText = params.get('nomesobrenome');
+            document.getElementById('email').innerText = params.get('email');
+            document.getElementById('telefone').innerText = params.get('telefone');
+            document.getElementById('mensagem').innerText = params.get('mensagem');
+            document.getElementById('contatoPref').innerText = params.get('contato');
+            document.getElementById('horarioPref').innerText = params.get('horario');
+            document.getElementById('novidadesPorEmail').innerText = params.get('novidades') === 'on' ? 'Sim' : 'Não';
+        });
+    </script>
+
+</body>
+</html>

@@ -233,7 +233,7 @@ var sites = [
     
     //alura
     {titulo: 'Alura - Barbearia', descricao: 'Projeto criado no modelo da alura.', linguagem: linguagens[1], url: 'sites/alura/barbearia/index.html', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[1], tag: `${tagsLinguagem[0]} ${tags} #alura `, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/alura/barbearia/'},
-    {titulo: 'Alura - Biografia', descricao: 'Projeto criado no modelo da alura.', linguagem: linguagens[1], url: 'sites/alura/biografia/index.html', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[1], tag: `${tagsLinguagem[0]} ${tags} #alura `, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/alura/biografia/'},
+    /* {titulo: 'Alura - Biografia', descricao: 'Projeto criado no modelo da alura.', linguagem: linguagens[1], url: 'sites/alura/biografia/index.html', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[1], tag: `${tagsLinguagem[0]} ${tags} #alura `, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/alura/biografia/'}, */
 
 
     // Alura imersão

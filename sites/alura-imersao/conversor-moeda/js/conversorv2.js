@@ -34,5 +34,4 @@ function cotacoes(){
             });    
         }    
     ).catch(error => console.log(error))    
-
 }
