@@ -1,52 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
+    <!-- HTML5 e CSS3 II Turbinando as suas páginas Aula 2 - Atividade 2 Posicionamento dos elementos 1 Alura - Cursos online de tecnologia -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biografia - Clóvis Balreira Rodrigues</title>
-    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/reset.css">
+    <title>João da Silva - Desenvolvedor Web</title>
+    <link rel="shortcut icon" href="imagens/favicon.png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Shadows+Into+Light">
 </head>
 <body>
+    <header class="titulo-principal">
+        <img class="foto-home" src="imagens/eu.jpg" alt="Foto de João da Silva">
+        <h1>João da Silva</h1>
+        <p class="subtitulo-principal">Desenvolvedor web</p>
+    </header>
     <main>
-        <h1>Sobre mim</h1>
-        <p>Moro em São Paulo mas atendo clientes do mundo todo. Sou conhecido por fazer produtos de <em>qualidade</em>, <em>durabilidade</em> e que agregam valor para meus clientes.</p>
-        <p>Trabalho usando a web como plataforma, ou seja, respiro HTML5, CSS3 e JavaScript (ou melhor: ECMASCript). Crio sites para todos, seguindo as principais diretivas de <strong>acessibilidade</strong>, <strong>responsividade</strong> e web semântica, sem descuidar da qualidade de código.</p>
-        <h2>Como trabalho</h2>
-        <blockquote>
-            <p>
-                João é o melhor desenvolvedor front-end com quem já trabalhei. Muito eficiente e muito capaz. Recomendo sem dúvidas!
-            </p>
-            <cite>José Souza, Fiat</cite>
-        </blockquote>
-        <p>Satisfazer meus clientes é prioridade. Para isso, garanto um processo de desenvolvimento altamente interativo, baseado em feedback contínuo. <strong>Não trabalho com escopo fechado</strong>: o cliente é que decide quando o produto está pronto.</p>
-        <p>Também não trabalho com prazos fechados: <strong>qualidade é importante</strong> demais para ser sacrificada.</p>
-        <h2>Experiência</h2>
-        <blockquote>
-            <p>
-                João domina as tecnologias como ninguém. Eu apresentava um problema, ele tinha na ponta da língua a solução mais adequada com as tecnologias mais recentes.
-            </p>
-            <cite>Manoel Santos, Petrobrás</cite>
-        </blockquote>
-        <p>Já <a href="">desenvolvi projetos</a> para grandes empresas como <a href="">BMW</a>, <a href="">UOL</a> e <a href="">IBM</a>. Neles, o foco principal era entregar uma experiência imersiva e impactante para o usuário final sem descuidar do desempenho e da acessibilidade da página.</p>
-        <p>Também já fui contratado para transformar grandes portais, como Terra e G1, em páginas responsivas. Fui responsável por renovar o layout, reorganizar o conteúdo e re-escrever o código de forma mais reaproveitável.</p>
-        <h2>Comunidade</h2>
-        <p>Procuro repassar meu conhecimento para a comunidade. Para isso, já dei diversas palestras e mantenho um blog.</p>
-    </main> 
-    <img src="https://github.com/clovisbalreira.png" alt="Foto do Clóvis Balreira Rodrigues ">
-    <aside>
-        <h1>Clóvis Balreira Rodrigues</h1>
-        <nav>
+        <section class="secao-inicio saudacao">
+            <p class="saudacao"><span class="saudacao-inicio">Olá,</span> meu nome é <strong>Clóvis Balreira Rodrigues</strong> <span class="saudacao-ultima-linha">e eu construo <em>sites maravilhosos</em></span></p>
+            <a class="botao-index" href="bio.html">Conheça mais um pouco sobre mim</a>
+        </section>
+        <section class="secao-inicio trabalhos">
+            <h2>Trabalhos</h2>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">portfolio</a></li>
-                <li><a href="bio.html">Sobre mim</a></li>
+                <li><img src="imagens/bmw.png" alt="Site da BMW"></li>
+                <li><img src="imagens/ibm.png" alt="Site da IBM"></li>
+                <li><img src="imagens/uol.png" alt="Site da UOL"></li>
             </ul>
-        </nav>
-    </aside>
+            <a class="botao-index" href="portfolio.html">Veja mais</a>
+        </section>
+        <section class="secao-inicio blog">
+            <h2>Blog</h2>
+            <small>Últimos posts</small>
+            <ol>
+                <li>
+                    <p class="inicio-post">Design responsivo tem ganho cada vez mais atenção como técinica de desenvolvimento de páginas web para dispositivos móveis. Mas como começar?</p>
+                </li>
+                <li>
+                    <a href="blog.html">O essencial de design responsivo</a>
+                </li>
+                <li>
+                    <a href="blog.html">Por que fazer páginas acessíveis?</a>
+                </li>
+                <li>
+                    <a href="blog.html">JavaScript não obstrusivo</a>
+                </li>
+            </ol>
+            <a class="botao-index" href="blog.html">Veja mais</a>
+        </section>
+    </main>
     <footer>
-        &copy; Clóvis Balreira Rodrigues
+        <h2>Vamos conversar?</h2>
+        <p>Você pode entrar em contato comigo <a href="contato.html">por e-mail</a> ou pelo telefone <a href="tel:+551234567890">(12) 3456-7890</a></p>
     </footer>
 </body>
 </html>

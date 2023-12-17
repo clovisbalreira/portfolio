@@ -1,0 +1,28 @@
+# Reposta do robô trocador de lâmpadas
+
+```
+1 - localizar a escada
+2 - se (escada posicionada abaixo da lâmpada)
+      calcular subida
+    senão
+      avisar o operador
+3 - iniciar a subida
+4 - enquanto (não chegou ao topo da escada)
+      subir
+5 - localizar a lâmpada
+6 - testar a lâmpada
+7 - se (lampada queimada)
+      enquanto (lâmpada no terminal)
+        girar sentido anti-horário
+
+      guardar no recipiente
+    senão
+      avisar o operador
+8 - pegar nova lâmpada
+9 - enquanto (lâmpada não está fixada no terminal)
+      girar sentido horário
+10 - iniciar descida
+11 - enquanto (não chegou ao início da escada)
+      descer
+12 - avisar o operador
+```

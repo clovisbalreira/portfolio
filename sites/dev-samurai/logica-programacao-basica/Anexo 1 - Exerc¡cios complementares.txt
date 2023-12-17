@@ -1,0 +1,117 @@
+## Exercício 1: mascar chicletes
+
+```
+1 - pegar o chiclete
+2 - retirar o papel
+3 - mastigar
+4 - jogar o papel no lixo
+```
+
+## Exercício 2: trocar lâmpadas (simplificado)
+
+```
+1 - se (lâmpada estiver fora de alcance)
+      pegar a escada
+2 - pegar a lâmpada
+3 - se (lâmpada estiver quente)
+      pegar pano
+4 - tirar lâmpada queimada
+5 - colocar lâmpada boa
+```
+
+## Exercício 3: fim de semana
+
+```
+1 - vejo a previsão do tempo
+2 - se (fizer sol)
+      vou à praia
+    senão
+      vou estudar
+3 - almoçar
+4 - ver televisão
+5 - dormir
+```
+
+## Exercício 4: fazer um bolo simples
+
+```
+1 - pegar os ingredientes
+2 - se (roupa branca)
+      colocar avental
+3 - se (tiver batedeira)
+      bater os ingredientes na batedeira
+    senão
+      bater os ingredientes à mão
+4 - colocar a massa na forma
+5 - colocar a forma no forno
+6 - aguardar o tempo necessário
+7 - retirar o bolo
+```
+
+## Exercício 5: descascar batatas
+
+```
+1 - pegar faca, bacia e batatas
+2 - colocar água na bacia
+3 - enquanto (houver batatas)
+      descascar batatas
+```
+
+## Exercício 6: fazer uma prova
+
+```
+1 - ler a prova
+2 - pegar a caneta
+3 - enquanto ((houver questão em branco) e (tempo não terminou)) faça
+      se (souber a questão)
+        resolvê-la
+      senão
+        pular para outra
+4 - entregar a prova
+```
+
+## Exercício 7: jogar jogo da forca
+
+```
+1 - escolher a palavra
+2 - montar o diagrama do jogo
+3 - enquanto ((houver lacunas vazias) e (corpo incompleto)) faça
+      se (acertar uma letra)
+        escrever na lacuna correspondente
+      senão
+        desenhar uma parte do corpo na forca
+```
+
+## Exercício 7: jogar o jogo da velha
+
+```
+enquanto ((existir um quadrado livre) e (ninguém perdeu(ganhou) o jogo))
+  espere a jogada do adversário, continue depois
+  se (existir um quadrado livre)
+  se (centro livre)
+    jogue no centro
+  senão
+    se (adversário tem 2 quadrados em linha com o terceiro desocupado)
+      jogue neste quadrado desocupado
+    senão
+      se (há algum canto livre)
+        jogue neste canto
+```
+
+## Exercício 8: um leão, uma cabra e um bote
+
+Leve um leão, uma cabra e um pedaço de grama de um lado para outro de um rio, atravessando com um bote. Sabe-se que nunca o leão pode ficar sozinho com a cabra e nem a cabra sozinha com a grama.
+
+```
+1 - levar a grama e o leão
+2 - voltar com o leão
+3 - deixar o leão
+4 - levar a cabra
+5 - deixar a cabra
+6 - voltar com a grama
+7 - levar o leão e a grama
+```
+
+## Referências
+
+LOPES, Anita; GARCIA, Guto. Introdução à programação: 500 algoritmos resolvidos.
