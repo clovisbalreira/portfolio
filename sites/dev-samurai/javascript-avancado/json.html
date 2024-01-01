@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <script>
+      const person = {
+        name: "Felipe Fontoura",
+        age: 40,
+        address: {
+          street: "Rua Central",
+          number: "100",
+          complement: "",
+          district: "Centro",
+          city: "São Paulo",
+          state: "São Paulo",
+        },
+      }
+
+      // JSON.stringify transforma o objeto para string.
+      const personStr = JSON.stringify(person)
+      var p = document.createElement('p')
+      p.innerHTML = typeof personStr
+      document.body.append(p)
+
+      // {
+      //   "name": "Felipe Fontoura",
+      //   "age": 40,
+      //   "address": {
+      //     "street": "Rua Central",
+      //     "number": "100",
+      //     "complement": "",
+      //     "district": "Centro",
+      //     "city": "São Paulo",
+      //     "state": "São Paulo"
+      //   }
+      // }
+
+      // JSON.parse transforma um JSON em um NOVO objeto.
+      const personObj = JSON.parse(personStr)
+      p = document.createElement('p')
+      p.innerHTML = typeof personObj
+      document.body.append(p)
+    </script>
+  </body>
+</html>

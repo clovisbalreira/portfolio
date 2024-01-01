@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body></body>
+  <script>
+    let set = [1, 2, 3, 4, 5]
+
+    let [n1, n2] = set // desestruturando um array
+    var p = document.createElement('p')
+    p.innerHTML = `n1 ${n1}`
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = `n2 ${n2}`
+    document.body.append(p)
+
+    function myFunction() {
+      const x = 10
+      const y = 400
+
+      return [x, y]
+    }
+
+    const [x, y] = myFunction() // desestruturando o retorno de uma função
+    p = document.createElement('p')
+    p.innerHTML = `x ${x}`
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = `y ${y}`
+    document.body.append(p)
+  </script>
+</html>

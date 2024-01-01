@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <form action="https://google.com/search" method="get">
+      <label for="q">* Busca</label>
+      <input type="text" name="q" />
+
+      <input type="submit" value="Pesquisar" />
+    </form>
+
+    <script>
+      // https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event
+
+      const formEl = document.querySelector("form")
+      var p = document.createElement('p')
+      
+      formEl.addEventListener("submit", (event) => {
+        const queryValue = event.target.querySelector("input[name=q]").value
+        p.innerHTML += `queryValue ${queryValue}`
+        
+        if (!queryValue) {
+          event.preventDefault()
+          p.innerHTML = `O campo busca é obrigatório.`
+        }
+      })
+      document.body.append(p)
+    </script>
+  </body>
+</html>

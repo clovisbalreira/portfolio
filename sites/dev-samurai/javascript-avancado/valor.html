@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body></body>
+  <script>
+    // Recebe por valor
+    function mult(n) {
+      n *= n
+      return n
+    }
+
+    let numVal = 10
+    var p = document.createElement('p')
+    p.innerHTML = mult(numVal)
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = numVal
+    document.body.append(p)
+
+    // Recebe por referência (atenção a este comportamento)
+    function multObj(obj) {
+      obj.value *= obj.value
+      obj = obj.value
+      return obj
+    }
+    const numObj = { value: 10 }
+    p = document.createElement('p')
+    p.innerHTML = multObj(numObj)
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = multObj(numObj)
+    document.body.append(p)
+  </script>
+</html>

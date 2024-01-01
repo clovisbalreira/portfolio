@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body></body>
+  <script>
+    // https://developer.mozilla.org/en-US/docs/Glossary/Falsy
+    // https://developer.mozilla.org/en-US/docs/Glossary/Truthy
+
+    // '' <-> false
+    // '2' <-> true
+    // 0 <-> false
+    // 1 <-> true
+    var p = document.createElement('p')
+    p.innerHTML = Boolean("")
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = Boolean("abc")
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = Boolean(0)
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = Boolean(1)
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = Number(true)
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = Number(false)
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = String(false)
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = String(true)
+    document.body.append(p)
+    console.log() // typeof string
+  </script>
+</html>

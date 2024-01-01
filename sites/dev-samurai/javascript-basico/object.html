@@ -1,0 +1,19 @@
+<html>
+  <head>
+  </head>
+  <body>
+  </body>
+  <script>
+    let dados = [
+      null,
+      undefined,
+      typeof null,
+      typeof undefined
+    ]
+    for(dado of dados){
+      let p = document.createElement('p')
+      p.innerHTML = dado
+      document.body.append(p)
+    }
+  </script>
+</html>

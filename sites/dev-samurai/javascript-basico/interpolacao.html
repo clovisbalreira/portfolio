@@ -1,0 +1,32 @@
+<html>
+  <head></head>
+  <body>
+  </body>
+  <script>
+    let name, age
+
+    name = "Pedro"
+    age = 22
+    address = {
+      street: "Rua Central",
+      city: "São José dos Campos",
+    }
+
+    var p = document.createElement('p')
+    // Concatenação (antiga)
+    p.innerHTML = name + " tem " + age + " anos. E reside em " + JSON.stringify(address)
+    document.body.append(p)
+
+    console.log(
+      name + " tem " + age + " anos. E reside em " + JSON.stringify(address)
+    )
+
+    p = document.createElement('p')
+    // Interpolação
+    p.innerHTML = `${name} tem ${age} anos. E reside em ${JSON.stringify(address)}.`
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = `${name} tem ${age + 1} anos.`
+    document.body.append(p)
+  </script>
+</html>

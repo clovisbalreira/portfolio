@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+  </body>
+  <script>
+    const person = {
+      name: "Felipe",
+      age: 40,
+      address: {
+        street: "Av. Central",
+        city: "São José dos Campos",
+      },
+    }
+
+    var p = document.createElement('p')
+    p.innerHTML = person
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = person.name
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = person.hairColor
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = `${person.name} tem ${person.age} anos e reside na cidade de ${person.address.city}.`
+    document.body.append(p)
+    person.name = "Pedro"
+    person.hairColor = "Black"
+    p = document.createElement('p')
+    p.innerHTML = person.name
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = person.hairColor
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = person.age
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = `${person.name} tem ${person.age} anos e reside na cidade de ${person.address.city}.`
+    document.body.append(p)
+  </script>
+</html>

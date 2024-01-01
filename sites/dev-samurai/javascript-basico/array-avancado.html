@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+  </body>
+  <script>
+    // variável + índice (que sempre inicia do 0)
+    // const persons = ["Felipe", "Ana", "Paulo"]
+    const persons = [
+      { name: "Felipe", age: 40 },
+      { name: "Ana", age: 35 },
+      { name: "Paulo", age: 22 },
+      // "Zé", // não seria uma boa prática (misturar tipos dentro do array)
+    ]
+    var p = document.createElement('p')
+    p.innerHTML = persons[0].name
+    document.body.append(p)
+
+    persons[0].name = "Zé"
+    // persons[999] = "Zé" // não seria uma boa prática (está fora do rande dos índices)
+    p = document.createElement('p')
+    p.innerHTML = persons[0].name
+    document.body.append(p)
+
+    p = document.createElement('p')
+    p.innerHTML = persons[0].name
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = persons[1].name
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = persons[2].name
+    document.body.append(p)
+    // retorna a quantidade de elementos
+    p = document.createElement('p')
+    p.innerHTML = persons.length
+    document.body.append(p)
+    // fora do índice (undefined)
+    p = document.createElement('p')
+    p.innerHTML = persons[3].name
+    document.body.append(p)
+  </script>
+</html>

@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body></body>
+  <script>
+    // toFixed()
+    // Math.ceil()
+    // Math.floor()
+    // Math.round()
+    // new Intl.NumberFormat().format()
+    let value = 1234.255
+
+    console.log()
+    var p = document.createElement('p')
+    p.innerHTML = value.toFixed(2)
+    document.body.append(p)
+    console.log()
+    p = document.createElement('p')
+    p.innerHTML = Math.ceil(value)
+    document.body.append(p)
+    console.log()
+    p = document.createElement('p')
+    p.innerHTML = Math.floor(value)
+    document.body.append(p)
+    console.log()
+    p = document.createElement('p')
+    p.innerHTML = Math.round(value)
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = new Intl.NumberFormat("pt-BR", {
+        style: "currency",
+        currency: "BRL",
+      }).format(value)
+    document.body.append(p)
+    console.log(
+      
+    )
+  </script>
+</html>

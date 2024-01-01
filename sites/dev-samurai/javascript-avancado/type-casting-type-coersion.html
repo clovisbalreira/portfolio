@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body></body>
+  <script>
+    // Type casting = Conversão pelo usuário
+    // Type coersion = Conversão 'coercitiva' pela VM
+    var p = document.createElement('p')
+    p.innerHTML = "2" + 2
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = Number("2") + 2
+    document.body.append(p)
+  </script>
+</html>

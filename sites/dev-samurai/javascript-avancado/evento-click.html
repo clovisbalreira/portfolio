@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <button>Clique me</button>
+    <a href="https://devsamurai.com.br">Clique me</a>
+
+    <script>
+      // https://developer.mozilla.org/en-US/docs/Web/API/Element/click_event
+      var p = document.createElement('p')
+      const button = document.querySelector("button")
+      button.addEventListener("click", () => {
+        p.innerHTML += "Clicou no botão<br>"
+      })
+      
+      const hyperlink = document.querySelector("a")
+      hyperlink.addEventListener("click", (event) => {
+        event.preventDefault()
+        p.innerHTML += "Clicou no hyperlink<br>"
+      })
+      document.body.append(p)
+    </script>
+  </body>
+</html>

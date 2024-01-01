@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body></body>
+  <script>
+    // Ref. https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+
+    // array.reduce(callback[, initialValue])
+    //
+    // callback - Função que é executada em cada valor no array, recebe quatro argumentos:
+    //   acumulator - O valor retornado na última invocação do *callback*, ou o argumento Valor Inicial, se fornecido.
+    //   currentValue - O elemento atual que está sendo processado no array.
+    //   indice - O índice do elemento atual que está sendo processado no array.
+    //   array - O array ao qual a função reduce foi chamada.
+    // initialValue - Opcional. Objeto a ser usado como o primeiro argumento da primeira chamada da função callback.
+
+    let values = [1.5, 2, 4, 10]
+    var p = document.createElement('p')
+    function callback(acumulator, currentValue, index, array) {
+      p.innerHTML += `<br>acumulator - ${acumulator}`
+      p.innerHTML += `<br>currentValue - ${currentValue}`
+      p.innerHTML += `<br>index - ${index}`
+      p.innerHTML += `<br>array - ${array}`
+      return acumulator
+    }
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = values.reduce(callback, 0)
+    document.body.append(p)
+    values.reduce(callback, 0)
+
+    // Agregação
+    let sum = values.reduce((total, item) => total + item, 0)
+    p = document.createElement('p')
+    p.innerHTML = `sum - ${sum}`
+    document.body.append(p)
+
+  let avg = values.reduce(
+      (total, item, index) => (total + item) / (index + 1),
+      0
+    )
+    p = document.createElement('p')
+    p.innerHTML = `avg - ${avg}`
+    document.body.append(p)
+
+    // Map
+    let double = values.reduce((total, item) => total.concat(item * 2), [])
+    p = document.createElement('p')
+    p.innerHTML = `double - ${double}`
+    document.body.append(p)
+
+    // Filter
+     let newValues = values.reduce((total, item) => {
+       if (item > 2) {
+         total.push(item)
+       }
+
+       return total
+    }, [])
+    p = document.createElement('p')
+    p.innerHTML = `newValues - ${newValues}`
+    document.body.append(p)
+  </script>
+</html>

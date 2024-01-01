@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body></body>
+  <script>
+    // '2' <-> 2
+    var p = document.createElement('p')
+    p.innerHTML = typeof Number("2")
+    document.body.append(p)
+    var p = document.createElement('p')
+    p.innerHTML = Number("a")
+    document.body.append(p)
+    var p = document.createElement('p')
+    p.innerHTML = Number(true)
+    document.body.append(p)
+    var p = document.createElement('p')
+    p.innerHTML = typeof String(2)
+    document.body.append(p)
+  </script>
+</html>

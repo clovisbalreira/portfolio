@@ -1,0 +1,27 @@
+<html>
+  <head></head>
+  <body></body>
+  <script>
+    // False
+    var p = document.createElement('p')
+    p.innerHTML = `0 ? "verdadeiro" : "falso" = ${0 ? "verdadeiro" : "falso"}`
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = `"" ? "verdadeiro" : "falso" = ${"" ? "verdadeiro" : "falso"}`
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = `null ? "verdadeiro" : "falso" = ${null ? "verdadeiro" : "falso"}`
+    document.body.append(p)
+
+    // True
+    p = document.createElement('p')
+    p.innerHTML = `1 ? "verdadeiro" : "falso" = ${1 ? "verdadeiro" : "falso"}`
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = `"0" ? "verdadeiro" : "falso" = ${"0" ? "verdadeiro" : "falso"}`
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = `"abc" ? "verdadeiro" : "falso" = ${"abc" ? "verdadeiro" : "falso"}`
+    document.body.append(p)
+  </script>
+</html>

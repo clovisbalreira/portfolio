@@ -1,0 +1,31 @@
+<html>
+  <head></head>
+  <body>
+  </body>
+  <script>
+    let x // undefined
+    var p = document.createElement('p')
+    p.innerHTML = `x - ${x}`
+    document.body.append(p)
+
+    x = 10
+    p = document.createElement('p')
+    p.innerHTML = `x - ${x}`
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = `x - ${typeof x}`
+    document.body.append(p)
+    x = "A"
+    p = document.createElement('p')
+    p.innerHTML = `x - ${x}`
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = `x - ${typeof x}`
+    document.body.append(p)
+
+    let y = 20 // declaration assignment var / let
+    p = document.createElement('p')
+    p.innerHTML = `y - ${y}`
+    document.body.append(p)
+  </script>
+</html>

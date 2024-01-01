@@ -1,0 +1,82 @@
+<html>
+  <head></head>
+  <body></body>
+  <script>
+    // OR
+    var p = document.createElement('p')
+    p.innerHTML = `OR`
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = `false || false  = ${false || false}`
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = `true || false  = ${true || false}`
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = `false || true  = ${false || true}`
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = `true || true  = ${true || true}`
+    document.body.append(p)
+
+    // AND
+    p = document.createElement('p')
+    p.innerHTML = `AND`
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = `false && false  = ${false && false}`
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = `true && false  = ${true && false}`
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = `false && true  = ${false && true}`
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = `true && true  = ${true && true}`
+    document.body.append(p)
+    
+    // 2+ e Misto
+    p = document.createElement('p')
+    p.innerHTML = `2+ e Misto`
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = `false && false && true  = ${false && false && true}`
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = `false || false || true  = ${false || false || true}`
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = `false || (false && true)  = ${false || (false && true)}`
+    document.body.append(p)
+
+    // NOT
+    p = document.createElement('p')
+    p.innerHTML = `NOT`
+    document.body.append(p)
+    p = document.createElement('p')   
+    p.innerHTML = `!true  = ${!true}`
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = `!(23 < 24)  = ${!(23 < 24)}`
+    document.body.append(p)
+
+    // Resultado de uma expressão (comparação) é boolean
+    p = document.createElement('p')
+    p.innerHTML = `Resultado de uma expressão (comparação) é boolean`
+    document.body.append(p)
+    p = document.createElement('p')    
+    p.innerHTML = `23 < 24 && "A" == "A"  = ${23 < 24 && "A" == "A"}`
+    document.body.append(p)
+
+    // Variáveis
+    p = document.createElement('p')
+    p.innerHTML = `Variáveis`
+    document.body.append(p)
+    const a = 10
+    const b = 20
+    p = document.createElement('p')
+    p.innerHTML = `${a} < ${b} = ${a < b}`
+    document.body.append(p)
+  </script>
+</html>

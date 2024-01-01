@@ -1,17 +1,56 @@
 <html>
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-  <script>
-    var idioma = prompt("Por favor, digite o código do IDIOMA")
-    var variacao = prompt("Por favor, digite a variação")
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  </head>
+  <body>
+    <div>
+      <label for="idioma">Selecione o idioma</label>
+      <select name="idioma" id="idioma">
+        <option value="selecione">Selecione o idioma</option>
+        <option value="pt">Portugues</option>
+        <option value="en">Ingles</option>
+      </select>
+    </div>
+    <br>
+    <div>
+      <label for="variacao">Selecione o variação</label>
+      <select name="variacao" id="variacao">
+        <option value="selecione">Selecione o idioma</option>
+        <option value="br">Brasil</option>
+        <option value="pt">Portugues</option>
+        <option value="us">Estados Unidos</option>
+        <option value="gb">Inglaterra</option>
+      </select>
+    </div>
+    <p></p>
+    <script>
+      //var idioma = prompt("Por favor, digite o código do IDIOMA")
+      //var variacao = prompt("Por favor, digite a variação")
+      let opcaoIdioma = document.querySelector('#idioma')
+      let opcaoVariacao = document.querySelector('#variacao')
 
-    if (idioma == "pt" && (variacao == "br" || variacao == "pt")) {
-      alert("Olá")
-    } else if (idioma == "en" && variacao == "us") {
-      alert("Hi")
-    } else if (idioma == "en" && variacao == "gb") {
-      alert("Hello")
-    } else {
-      alert("Idioma e/ou variação não reconhecido(s).")
-    }
-  </script>
+      opcaoIdioma.addEventListener('change', () => {
+        resultado()
+      })
+
+      opcaoVariacao.addEventListener('change', () => {
+        resultado()
+      })
+
+      function resultado(){
+        idioma = opcaoIdioma.value 
+        variacao = opcaoVariacao.value
+        if (idioma == "pt" && (variacao == "br" || variacao == "pt")) {
+          fala = "Olá"
+        } else if (idioma == "en" && variacao == "us") {
+          fala = "Hi"
+        } else if (idioma == "en" && variacao == "gb") {
+          fala = "Hello"
+        } else {
+          fala = "Idioma e/ou variação não reconhecido(s)."
+        }
+        document.querySelector('p').innerHTML = fala
+      }
+    </script>
+  </body>
 </html>

@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body></body>
+  <script>
+    const nomes = ["Felipe", "Maria", "Paulo", "Marcelo"]
+
+    // Deve-se calcular manualmente as condições de início e parada e ainda acessar o array pelo índice.
+    var p = document.createElement('p')
+    for (let i = 0; i < nomes.length; i++) {
+      p.innerHTML += `${nomes[i]}<br>`
+    }
+    
+    // Calcula "automagicamente" a condição de parada e retorna o elemento corrente do array.
+    for (const nome of nomes) {
+      p.innerHTML += `<br>${nome}`
+    }
+    document.body.append(p)
+  </script>
+</html>

@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body></body>
+  <script>
+    const numbers = [10, 18, 1, 15]
+
+    // let res = []
+    // for (const n of numbers) {
+    //   if (n > 10) {
+    //     res.push(n)
+    //   }
+    // }
+    // console.log(res)
+
+    let res = numbers.filter((n) => n > 10)
+    console.log(res)
+    var p = document.createElement('p')
+    p.innerHTML = res
+    document.body.append(p)
+
+    const people = [
+      { name: "Felipe", gender: "M", age: 40 },
+      { name: "Paulo", gender: "M", age: 14 },
+      { name: "Amanda", gender: "F", age: 18 },
+    ]
+
+    const m = people.filter((p) => p.age >= 18)
+    console.log(m)
+    p = document.createElement('p')
+    for (const prop in m) {
+      p.innerHTML += `${prop} - ${m[prop].name} - ${m[prop].gender} - ${m[prop].age}<br>`
+    }
+    document.body.append(p)
+
+    const n = people.filter((p) => p.age >= 18 && p.gender === "M")
+    console.log(n)
+    p = document.createElement('p')
+    for (const prop in n) {
+      p.innerHTML += `${prop} - ${n[prop].name} - ${n[prop].gender} - ${n[prop].age}<br>`
+    }
+    document.body.append(p)
+
+    const x = people.filter(
+      (p) => p.age >= 18 && p.age <= 25 && p.gender === "M"
+    )
+    console.log(x)
+    p = document.createElement('p')
+    p.innerHTML = x
+    document.body.append(p)
+  </script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>    
+    <p># Comparações</p>        
+    <p>Servem para comparar dois valores e/ou variáveis.</p>
+    <ul>
+        <li>Igual - `==`</li>
+        <li>Diferente - `!=`</li>
+        <li>Menor - `<`</li>
+        <li>Menor igual - `<=`</li>
+        <li>Maior - `>`</li>
+        <li>Maior igual - `>=`</li>
+    </ul>
+    <p>Uma comparação sempre retornará verdadeiro ou falso:</p>
+
+    <pre>
+        ``` 
+            javascript
+            1 > 2
+            1 == 1
+            "A" == "A"
+            "A" < "B"
+        ```
+    </pre>
+    <p>Para variáveis:</p>
+    <pre>
+        ```
+            javascript
+            const idade = 16
+            const limite = 18
+            idade >= limite
+        ```
+    </pre>
+    <p># Comparação estrita (idêntico)</p>
+    <p>O JavaScript tenta converter dados, por isso o uso do `==` pode ocasionar problemas.</p>
+    <p>Ex:</p>
+    <pre>
+        ```
+            javascript
+            "1" == 1
+            1 == true
+            null == undefined
+        ```
+    </pre>
+    <p>Para solucionar este problema utilizamos a comparação estrita (idêntico).</p>
+    <pre>
+        ```
+            javascript
+            "1" === 1
+            1 === true
+            null === undefined
+            null !== undefined
+        ```
+    </pre>
+</body>
+</html>

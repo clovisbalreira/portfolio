@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body></body>
+  <script>
+    // String <-> Array
+    let name = "Felipe Fontoura"
+
+    // Uma string já é um "array" (cadeira de caracteres)
+    var p = document.createElement('p')
+    p.innerHTML = name[0]
+    document.body.append(p)
+
+    // Escreve na vertical
+    p = document.createElement('p')
+    for (const v of name) {
+      p.innerHTML += v
+    }
+    document.body.append(p)
+
+    p = document.createElement('p')
+    p.innerHTML = name.length
+    document.body.append(p)
+
+    // Felipe Fontoura -> ["Felipe", "Fontoura"]
+    p = document.createElement('p')
+    p.innerHTML = name.split(" ")
+    document.body.append(p)
+    let values = [1, 2, 3, 4, 5, 10, 20]
+    p = document.createElement('p')
+    p.innerHTML = values.join(" ")
+    document.body.append(p)
+  </script>
+</html>

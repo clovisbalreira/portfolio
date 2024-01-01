@@ -1,0 +1,39 @@
+<html>
+  <head></head>
+  <body>
+  </body>
+  <script>
+    // Não podem conter espaço
+    let nomeCompleto = "Felipe Fontoura"
+    var p = document.createElement('p')
+    p.innerHTML = nomeCompleto
+    document.body.append(p)
+    // Precisam iniciar com uma letra, _ ou $
+    let num1 = 10
+    p = document.createElement('p')
+    p.innerHTML = num1
+    document.body.append(p)
+    // Podem conter apenas letras, números, _ ou $
+    //let dataNascimento = new Date(1982, 02, 18)
+
+    // Case-sensitive
+    let cpf = "123.456.789-00"
+    p = document.createElement('p')
+    p.innerHTML = cpf
+    document.body.append(p)
+    let Cpf = "123.456.789-00"
+    p = document.createElement('p')
+    p.innerHTML = Cpf
+    document.body.append(p)
+    let CPF = "123.456.789-00"
+    p = document.createElement('p')
+    p.innerHTML = CPF
+    document.body.append(p)
+
+    // Não podem utilizar palavras reservadas
+    let super_ = 123
+    p = document.createElement('p')
+    p.innerHTML = super_
+    document.body.append(p)
+  </script>
+</html>

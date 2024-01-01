@@ -1,26 +1,87 @@
 <html>
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-  <script>
-    function soma(a, b) {
-      return a + b
-    }
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  </head>
+  <body>
+    <div>
+      <label for="n1">Digite o primeiro numero</label>
+      <input type="number" step=".01" min="0" id="n1">
+    </div>
+    <br>
+    <div>
+      <label for="n2">Digite o segundo numero</label>
+      <input type="number" step=".01" min="0" id="n2">
+    </div>
+    <br>
+    <div>
+      <label for="operacao">Escolha a operação</label>
+      <select name="operacao" id="operacao">
+        <option value="Selecione">Selecione a operação</option>
+        <option value="+">Soma</option>
+        <option value="-">Subtração</option>
+        <option value="*">Multiplicação</option>
+        <option value="/">Divisão</option>
+      </select>
+    </div>
+    <p></p>
+    <script>
+      function soma(a, b) {
+        return a + b
+      }
+      function subtracao(a, b) {
+        return a - b
+      }
+      function multiplicacao(a, b) {
+        return a * b
+      }
+      function divisao(a, b) {
+        return a / b
+      }
+      //var n1 = Number(prompt("Número 1"))
+      //var n2 = Number(prompt("Número 2"))
+      //var op = prompt("Operação")
+      //var resultado
+      let n1 = document.querySelector('#n1')
+      let n2 = document.querySelector('#n2')
+      let operacao = document.querySelector('#operacao')
 
-    function subtracao(a, b) {
-      return a - b
-    }
+      n1.addEventListener('change', () => {
+        resultado()
+      })
 
-    var n1 = Number(prompt("Número 1"))
-    var n2 = Number(prompt("Número 2"))
-    var op = prompt("Operação")
+      n2.addEventListener('change', () => {
+        resultado()
+      })
 
-    var resultado
+      operacao.addEventListener('change', () => {
+        resultado()
+      })
 
-    if (op == "+") {
-      resultado = soma(n1, n2)
-    } else if (op == "-") {
-      resultado = subtracao(n1, n2)
-    }
+      n1.addEventListener('input', () => {
+        resultado()
+      })
 
-    alert(resultado)
-  </script>
+      n2.addEventListener('input', () => {
+        resultado()
+      })
+
+      function resultado(){
+        res = 0
+        if (operacao.value == "+") {
+          res = soma(parseFloat(n1.value), parseFloat(n2.value))
+        } else if (operacao.value == "-") {
+          res = subtracao(parseFloat(n1.value), parseFloat(n2.value))
+        } else if (operacao.value == "*") {
+          res = multiplicacao(parseFloat(n1.value), parseFloat(n2.value))
+        } else if (operacao.value == "/") {
+          res = divisao(parseFloat(n1.value), parseFloat(n2.value))
+        }
+        if(n1.value != '' && n2.value != ''){
+          document.querySelector('p').innerHTML = res == 0 ? `Selecione a operação`: `${n1.value} ${operacao.value} ${n2.value} = ${res.toFixed(2)}`
+        }else{
+          document.querySelector('p').innerHTML = ''
+        }
+      }
+    </script>
+  </body>
 </html>

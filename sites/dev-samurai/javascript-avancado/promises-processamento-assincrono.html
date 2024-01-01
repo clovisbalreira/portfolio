@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <button>Executar</button>
+
+    <script>
+      // Promise é um objeto usado para processamento assíncrono. Uma Promise (de "promessa") representa um valor que pode estar disponível agora, no futuro ou nunca.
+
+      // Uma Promise está em um destes estados:
+      // pending (pendente): Estado inicial, que não foi realizada nem rejeitada.
+      // fulfilled (realizada): sucesso na operação.
+      // rejected (rejeitado): falha na operação.
+
+      let count = 0
+      var p = document.createElement('p')
+      function testPromise() {
+        const promiseCount = ++count
+        
+        p.innerHTML += `sync started<br>`
+        
+        new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (promiseCount % 2 == 0) {
+              resolve(promiseCount)
+            } else {
+              reject(promiseCount)
+            }
+          }, 1000)
+        })
+        .then((value) => {
+          p.innerHTML += `async finished ${value}<br>`
+        })
+        .catch((value) => {
+          p.innerHTML += `async error<br>`
+        })
+        
+        p.innerHTML += `sync finished<br>`
+      }
+      document.body.append(p)
+
+      const buttonEl = document.querySelector("button")
+      buttonEl.addEventListener("click", testPromise)
+    </script>
+  </body>
+</html>

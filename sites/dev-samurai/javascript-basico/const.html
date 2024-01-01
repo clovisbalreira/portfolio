@@ -1,0 +1,28 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <p>// const equivalente a uma "variável global"</p>
+  </body>
+  <script>
+    const x = 10
+    let p = document.createElement('p')
+    p.innerHTML = `x ${x}`
+    document.body.append(p)
+
+    {
+      x = 20
+      let p = document.createElement('p')
+      p.innerHTML = `x ${x}`
+      document.body.append(p)
+      const y = 30
+    }
+    let p1 = document.createElement('p')
+    p1.innerHTML = `x ${x}`
+    document.body.append(p1)
+    let p2 = document.createElement('p')
+    p2.innerHTML = `y ${y}`
+    document.body.append(p2)
+    
+  </script>
+</html>

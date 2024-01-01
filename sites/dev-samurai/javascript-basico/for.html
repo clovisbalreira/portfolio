@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    
+  </body>
+  <script>
+    // For é composto por 3 partes:
+    // 1) Variável + condição inicial
+    // 2) Condição de parada
+    // 3) Incremento
+
+    var p = document.createElement('p')
+    for (let i = 0; i < 3; i++) {
+      p.innerHTML += `${i}<br>`
+    }
+    p.innerHTML += `<br>`
+    
+    for (let i = 3; i > 0; i--) {
+      p.innerHTML += `${i}<br>`
+    }
+    p.innerHTML += `fim do programa`
+    document.body.append(p)
+  </script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <button>Executar</button>
+
+    <script>
+      var p = document.createElement('p')
+      function testPromise() {
+        p.innerHTML += `sync started<br>`
+        
+        const p1 = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            p.innerHTML += `p1 finished<br>`
+            resolve(1)
+          }, 1000)
+        })
+        
+        const p2 = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            p.innerHTML += `p2 finished<br>`
+            resolve(2)
+          }, 2000)
+        })
+        
+        const p3 = new Promise((resolve, reject) => {
+          setTimeout(() => {
+            p.innerHTML += `p3 finished<br>`
+            // resolve(3)
+            reject(3)
+          }, 3000)
+        })
+        
+        // p1.then(() => {
+          //   p2.then(() => {
+            //     // resultado final depois de chamar as 2 promises
+            //   })
+            // })
+            
+            Promise.all([p1, p2, p3])
+            .then((values) => {
+              p.innerHTML += `promises values ${values}<br>`
+            })
+            .catch(() => {
+              p.innerHTML += `promises error<br>`
+            })
+            
+            p.innerHTML += `sync finished<br>`
+        }
+      document.body.append(p)
+
+      const buttonEl = document.querySelector("button")
+      buttonEl.addEventListener("click", testPromise)
+    </script>
+  </body>
+</html>

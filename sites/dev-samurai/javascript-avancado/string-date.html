@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body></body>
+  <script>
+    // '30/04/2022' <-> Date
+
+    // Date -> Formato ISO
+    p = document.createElement('p')
+    p.innerHTML = new Date("04/30/2022")
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = new Date("2022-04-30")
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = new Date("2022 04 30")
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = new Date().toString()
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = new Date().toISOString()
+    document.body.append(p)
+  </script>
+</html>

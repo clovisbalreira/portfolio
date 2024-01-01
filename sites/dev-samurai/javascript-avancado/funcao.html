@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body></body>
+  <script>
+    // console.log(mult(10)) // não é possível executar devido ao Hoisting
+
+    const mult = function (n) {
+      n *= n
+      return n
+    }
+    var p = document.createElement('p')
+    p.innerHTML = mult(10)
+    document.body.append(p)
+  </script>
+</html>

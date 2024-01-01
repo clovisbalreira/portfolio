@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+  </body>
+  <script>
+    // +=, -=, *=, /=
+
+    let num = 0
+    var p = document.createElement('p')
+    p.innerHTML = `${num}`
+    document.body.append(p)
+    num += 2 // num = num + 2
+    p = document.createElement('p')
+    p.innerHTML = `+ = ${num}`
+    document.body.append(p)
+    num *= 2 // num = num * 2
+    p = document.createElement('p')
+    p.innerHTML = `* = ${num}`
+    document.body.append(p)
+    num -= 2 // num = num * 2
+    p = document.createElement('p')
+    p.innerHTML = `- = ${num}`
+    document.body.append(p)
+    num /= 2 // num = num * 2
+    p = document.createElement('p')
+    p.innerHTML = `/ = ${num}`
+    document.body.append(p)
+    console.log(num)
+  </script>
+</html>

@@ -1,18 +1,36 @@
 <html>
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-  <script>
-    var idioma = prompt("Por favor, digite o código do IDIOMA")
-
-    if (idioma == "pt") {
-      alert("Olá")
-    } else if (idioma == "en") {
-      alert("Hi")
-    } else if (idioma == "fr") {
-      alert("Salut")
-    } else if (idioma == "es") {
-      alert("Hola")
-    } else {
-      alert("Código do idioma não reconhecido")
-    }
-  </script>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+  </head>
+  <body>
+    <label for="idioma">Selecione o idioma</label>
+    <select name="idioma" id="idioma">
+      <option value="selecionar">Selecione o idioma</option>
+      <option value="pt">Portugues</option>
+      <option value="en">Ingles</option>
+      <option value="fr">Frances</option>
+      <option value="es">Espanhol</option>
+    </select>
+    <p></p>
+    <script>
+      //var idioma = prompt("Por favor, digite o código do IDIOMA")
+      let selecionar = document.querySelector('select')
+      selecionar.addEventListener('change', () => {
+        let idioma = selecionar.value
+        console.log(selecionar.value)
+        if (idioma == "pt") {
+          fala = "Olá"
+        } else if (idioma == "en") {
+          fala = "Hi"
+        } else if (idioma == "fr") {
+          fala = "Salut"
+        } else if (idioma == "es") {
+          fala = "Hola"
+        } else {
+          fala = "Código do idioma não reconhecido"
+        }
+        document.querySelector('p').innerHTML = fala
+      })
+    </script>
+  </body>
 </html>

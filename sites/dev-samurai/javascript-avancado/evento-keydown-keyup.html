@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <input type="text" />
+
+    <script>
+      // https://developer.mozilla.org/en-US/docs/Web/API/Element/keydown_event
+
+      const inputEl = document.querySelector("input[type=text]")
+      var p = document.createElement('p')
+      inputEl.addEventListener("keydown", (event) => {
+      p.innerHTML = `${event.key} - ${event.keyCode}`
+      
+      if (event.keyCode === 13) {
+        p.innerHTML = `Tecla ENTER pressionada - ${inputEl.value}` // evento de enviar o texto
+      }
+    })
+    document.body.append(p)
+    </script>
+  </body>
+</html>

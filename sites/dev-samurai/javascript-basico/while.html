@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    
+  </body>
+  <script>
+    let contador = 1
+
+    // Enquanto condição for verdadeira, execute...
+    // white (true) // condição de um looping infinito (cuidado!)
+    var p = document.createElement('p')
+    while (contador <= 10) {
+      p.innerHTML += `executando ${contador}<br>`
+      contador++
+    }
+    p.innerHTML += `fim do programa`    
+    document.body.append(p)
+  </script>
+</html>

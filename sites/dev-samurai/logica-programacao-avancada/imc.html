@@ -1,13 +1,58 @@
 <html>
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-  <script>
-    // exibir os dados na tela: alert
-    // ler os dados do teclado: prompt
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <style>
+      body{
+        display: flex;
+        gap: .5rem;
+        margin: .5rem;
+        flex-direction: column;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="peso">Peso</label>
+      <input id="peso" type="number" step=".01" min="0">
+    </div>
+    <div>
+      <label for="altura">Altura</label>
+      <input id="altura" type="number" step=".01" min="0">
+    </div>
+    <p>Resultado</p>
+    <script>
+      // exibir os dados na tela: alert
+      // ler os dados do teclado: prompt
+      //var peso = prompt("Por favor, digite o PESO") // ERRADO => 83,5 CERTO => 83.5
+      //var altura = prompt("Por favor, digite a ALTURA") // ERRADO => 1,8 CERTO => 1.8
+      //var resultado = peso / (altura * altura)
+      //alert(resultado)
+      let peso = document.querySelector('#peso')
+      let altura = document.querySelector('#altura')
+      
+      function resultado(){
+        let valorPeso = peso.value
+        let valorAltura = altura.value
+        let resultado = valorAltura == '' || valorAltura == 0 ? 0 : valorPeso / (valorAltura * valorAltura)
+        document.querySelector('p').innerHTML = `Resultado ${resultado.toFixed(2)}`
+      }
+      
+      peso.addEventListener('change', () => {
+        resultado()
+      })
+      
+      peso.addEventListener('input', () => {
+        resultado()
+      })
 
-    var peso = prompt("Por favor, digite o PESO") // ERRADO => 83,5 CERTO => 83.5
-    var altura = prompt("Por favor, digite a ALTURA") // ERRADO => 1,8 CERTO => 1.8
-    var resultado = peso / (altura * altura)
+      altura.addEventListener('change', () => {
+        resultado()
+      })
 
-    alert(resultado)
-  </script>
+      altura.addEventListener('input', () => {
+        resultado()
+      })
+    </script>
+  </body>
 </html>

@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+  </body>
+  <script>
+    let texto = "A"
+    let valor
+
+    // if (texto == "A") {
+    //   valor = 10
+    // } else {
+    //   valor = 20
+    // }
+
+    // atribuição via ternário
+    // variavel = (condicao) ? IF : ELSE
+    valor = texto == "A" ? 10 : 20
+    var p = document.createElement('p')
+    p.innerHTML = `"A" == "A" ? 10 : 20 = ${valor}`
+    document.body.append(p)
+
+    // execução de comando via ternário
+    // (condicao) ? IF : ELSE
+    texto == "A" ? console.log("SE") : console.log("SENÃO")
+    var p = document.createElement('p')
+    p.innerHTML = `"A" == "A" ? 10 : 20 = ${0 ? "SE" : "SENÃO"}`
+    document.body.append(p)
+  </script>
+</html>

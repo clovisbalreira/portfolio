@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body></body>
+  <script>
+    let frase = "Paulo era um cara legal!"
+    var p = document.createElement('p')
+    p.innerHTML = frase
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = frase.replace("Paulo", "Jonny")
+    document.body.append(p)
+    let value = 1234.556
+    p = document.createElement('p')
+    p.innerHTML = value.toFixed(2)
+    document.body.append(p)
+    p = document.createElement('p')
+    p.innerHTML = value.toFixed(2).replace(".", ",")
+    document.body.append(p)
+    // método antigo de internacionalização de números (sem a API Intl)
+  </script>
+</html>

@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body></body>
+  <script>
+    const person = {
+      name: "Felipe",
+      age: 40,
+      city: "São José dos Campos",
+    }
+
+    // obj.prop
+    // obj.['prop'] <<
+    var p = document.createElement('p')
+    for (const prop in person) {
+      p.innerHTML += `Prop: ${prop} - ${person[prop]}<br>`
+    }
+    document.body.append(p)
+  </script>
+</html>

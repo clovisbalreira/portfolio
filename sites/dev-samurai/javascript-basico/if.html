@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+  </head>
+  <body></body>
+  <script>
+    var p = document.createElement('p')
+    p.innerHTML = `início do programa`
+    document.body.append(p)
+
+    // IF
+    if (true) {
+      p = document.createElement('p')
+      p.innerHTML = `true = ${true}`
+      document.body.append(p)
+    }
+
+    if ("1" == 1) {
+      p = document.createElement('p')
+      p.innerHTML = `"1" == 1 = ${"1" == 1}`
+      document.body.append(p)
+    }
+
+    if (1 === 1) {
+      p = document.createElement('p')
+      p.innerHTML = `1 === 1 = ${1 === 1}`
+      document.body.append(p)
+    }
+
+    if ("1" !== 1) {
+      p = document.createElement('p')
+      p.innerHTML = `"1" !== 1 = ${"1" !== 1}`
+      document.body.append(p)
+    }
+
+    if (1 < 2 && 2 < 3) {
+      p = document.createElement('p')
+      p.innerHTML = `1 < 2 && 2 < 3 = ${1 < 2 && 2 < 3}`
+      document.body.append(p)
+    }
+
+    if (!(1 < 2) && !(2 < 3)) {
+      p = document.createElement('p')
+      p.innerHTML = `!(1 < 2) && !(2 < 3 = ${!(1 < 2) && !(2 < 3)}`
+      document.body.append(p)
+    }
+
+    p = document.createElement('p')
+    p.innerHTML = `fim do programa`
+    document.body.append(p)
+  </script>
+</html>
