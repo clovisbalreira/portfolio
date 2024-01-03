@@ -1,15 +1,40 @@
+body{
+    background-color: rgb(0, 162, 255);
+    display: grid;
+    place-items: center;
+    flex-direction: column;
+    gap: .5rem;
+    margin-top: 1rem;
+}
 div{
     display: flex;
     flex-wrap: wrap;
     gap: .5rem;
     text-align: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 20rem;
+}
+div#inicio{
+    background-color: blue;
+    display: flex;
+    columns: row;
+    width: 100%;
+    
 }
 a{
     display: block;
     text-decoration: none;
     color:black;
-    background-color: green;
+    background-color: rgba(255, 0, 0, 0.877);
     padding: .5rem;
     width: 15rem;
+    border-radius: .5rem;
+}
+label{
+    text-align: start;
+}
+input, select{
+    height: 1.5rem;
+    border-radius: .5rem;
+    border: none;
 }
