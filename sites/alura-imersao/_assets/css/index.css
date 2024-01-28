@@ -81,6 +81,7 @@ main{
     font-weight: 700;
     font-size: 36px;
     padding-inline: 2rem;
+    color: #000000;
 }
 
 .projetos-item, .desafios-item{
