@@ -1,0 +1,83 @@
+@media screen and (max-width: 1015px) {
+  .header__search {
+    /* display: none !important; */
+    width: auto !important;
+    display: none;
+  }
+
+  .navigation, .disclaimer-premium {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* .header__login .subscribe {
+    font-size: 12px !important;
+    padding: 10px !important;
+    margin-right: 5px !important;
+  } */
+
+  /* .offer__list-item {
+    grid-template-columns: 1fr 1fr !important;
+  } */
+}
+
+@media screen and (min-width: 1016px) and (max-width: 1140px) {
+  .header__search {
+    /* display: none !important; */
+    width: auto !important;
+    display: none;
+  }
+
+  /* .offer__list-item {
+    grid-template-columns: 1fr 1fr 1fr !important;
+  } */
+}
+
+@media screen and (max-width: 650px) {
+  body .sidebar {
+    position: relative;
+    width: 95%;
+  }
+
+  main .main-container {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  
+  main .main-container .header__navigation{
+    width: 110%;
+  }
+
+  main .main-container .playlist-container{
+    width: 116%;
+  }
+
+  main .playlist-container{
+    padding-bottom: 10rem;
+  }
+}
+
+/* @media screen and (max-width: 375px) {
+  .playlist {
+    display: none;
+  }
+
+  .playlist-container {
+    width: 100%; */
+/* Ocupa toda a largura disponível */
+/* height: auto; */
+/* Altura automática, ajusta conforme o conteúdo */
+/* }
+
+  .sidebar {
+    width: 342px;
+  }
+
+  .offer__list-item {
+    grid-template-columns: 1fr;
+  }
+
+  .offer__scroll-container {
+    overflow-y: visible;
+  }
+} */
