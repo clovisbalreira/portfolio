@@ -1,0 +1,191 @@
+:root {
+    --color-dark: #000;
+    --color-white: #fff;
+    --color-light: #ababab;
+    --color-purple: #5d15a5;
+}
+
+* {
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 16px;
+    padding: 5rem;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.digital .clock {
+    display: flex;
+    justify-content: center;
+}
+
+.digital .clock span {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.digital .clock,
+.clock span {
+    gap: 10px;
+}
+
+.digital .clock span:not(:last-child):after {
+    content: ':';
+    margin-bottom: 7px;
+    color: var(--color-light);
+}
+
+.digital h2,
+h2 strong {
+    font-size: .6rem;
+}
+
+.digital h2 strong {
+    color: var(--color-purple);
+}
+
+.analog {
+    width: 300px;
+    height: 300px;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    border: 15px groove #333;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hours-hand {
+    width: 13px;
+    height: 60px;
+    background-color: var(--color-purple);
+    position: absolute;
+    border-radius: 13px;
+    transform: translate(0, -50%);
+    transform-origin: bottom center;
+}
+
+.minutes-hand {
+    width: 8px;
+    height: 80px;
+    background-color: var(--color-dark);
+    position: absolute;
+    border-radius: 5px;
+    transform: translate(0, -50%);
+    transform-origin: bottom center;
+}
+
+.seconds-hand {
+    width: 5px;
+    height: 90px;
+    background-color: var(--color-purple);
+    position: absolute;
+    border-radius: 5px;
+    transform: translate(0, -50%);
+    transform-origin: bottom center;
+}
+
+.center {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: var(--color-purple);
+    position: absolute;
+}
+
+.number {
+    font-size: 2.2rem;
+    font-weight: 600;
+    background-color: transparent;
+    color: var(--color-dark);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 5px;
+}
+
+.stopwatch{
+    background-color: #262626;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+#timer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #262626;
+    height: 250px;
+    width: 250px;
+    border: 3px solid #9f6bef;
+    border-radius: 100%;
+    font-weight: 600;
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    padding: 4px;
+}
+
+#actions{
+    display: flex;
+    gap: .5rem;
+    background-color: transparent;
+}
+
+i{
+    background-color: transparent;
+}
+
+#actions button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    padding: .6rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color .2s ease-in;
+}
+
+#actions button:hover{
+ background-color: gray;
+}
+
+#marks-list{
+    display: flex;
+    gap: .7rem;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+#marks-list p{
+    background-color: transparent;
+}
+
+#marks-list p:first-child{
+    margin-top: 1rem;
+}
