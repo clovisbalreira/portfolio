@@ -45,4 +45,4 @@ Tags e Seletores CSS
 
 Implementação JavaScript
 
-O JavaScript é utilizado para gerar dinamicamente o conteúdo do catálogo. Ele percorre um array de objetos dinheiros, criando elementos HTML para cada item da coleção e inserindo-os no <main>. Cada item inclui detalhes como nome, país, valor, e imagens. A lógica também calcula totais de itens e valores, exibindo essas informações no cabeçalho da página.
+O JavaScript é utilizado para gerar dinamicamente o conteúdo do catálogo. Ele percorre um array de objetos dinheiros, criando elementos HTML para cada item da coleção e inserindo-os no <main>. Cada item inclui detalhes como nome, país, valor, e imagens. 

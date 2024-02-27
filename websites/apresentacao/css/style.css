@@ -248,7 +248,6 @@ footer a:hover{
 
 @media (max-width: 686px){
     #curriculo .div-dados-pessoais a{
-        background-color: green;
         margin-left: 2rem;
     }
 }

@@ -47,7 +47,6 @@ function pastasImagens(titulo, imagem) {
 }
 
 function inicio() {
-    //mostrarWebSites(webSites)
     removerMain()
     criarSection('Linguagem', linguagens)
     criarSection('Instrutor', instrutores)
@@ -103,7 +102,10 @@ botoes.forEach(botao => {
         else if (atributos.escola != '') {
             removerMain()
             for (let i = 0; i < webSites.length; i++) {
+                console.log(atributos.escola)
+                console.log(webSites[i].Escolas.id)
                 if (atributos.escola == webSites[i].Escolas.id) {
+                    console.log(webSites[i])
                     mostrarWebSites(webSites[i])
                 }
             }
@@ -137,8 +139,16 @@ function mostrarWebSites(webSites){
     divLinguagem.appendChild(h3Linguagem)
     divLinguagem.appendChild(imagens('Linguagem', webSites.Linguagem.imagem))
     divLinguagemEscola.appendChild(divLinguagem)
-    
-    if(webSites.Escolas.imagem != 'clovisbalreira'){
+
+    console.log('')
+    let aGitHub = document.createElement('a')
+    aGitHub.innerHTML = 'GitHub'
+    aGitHub.href = `https://github.com/clovisbalreira/portfolio/tree/main/websites/${webSites.github}`
+    aGitHub.target = `_blank`
+    aGitHub.classList.add('btn-github')
+    a.appendChild(aGitHub)
+
+    if(webSites.Escolas.imagem != 'clovisbalreira' && webSites.Escolas.imagem != 'nenhum'){
         let divEscola = document.createElement('div')
         let h3Escola = document.createElement('h3')
         h3Escola.innerHTML = 'Escola'
@@ -146,16 +156,19 @@ function mostrarWebSites(webSites){
         divEscola.appendChild(imagens('escola', webSites.Escolas.imagem))
         divLinguagemEscola.appendChild(divEscola)
     }
-
+    
     a.appendChild(divLinguagemEscola)
-
     let divInstrutores = document.createElement('div')
     let divInstrutoresTitulo = document.createElement('div')
-    let h3Instrutor = document.createElement('h3')
-    h3Instrutor.innerHTML = 'Instrutores'
-    divInstrutoresTitulo.appendChild(h3Instrutor)
-    divInstrutores.appendChild(divInstrutoresTitulo)
     
+
+    if(webSites.Instrutores[0].imagem != 'clovisbalreira'){
+        let h3Instrutor = document.createElement('h3')
+        h3Instrutor.innerHTML = 'Instrutores'
+        divInstrutoresTitulo.appendChild(h3Instrutor)
+        divInstrutores.appendChild(divInstrutoresTitulo)
+    }
+        
     let divInstrutor = document.createElement('div')
     webSites.Instrutores.forEach( instrutor => {
             if(instrutor.nome != 'Clóvis'){
@@ -169,7 +182,8 @@ function mostrarWebSites(webSites){
     let p = document.createElement('p')
     p.innerHTML = webSites.descricao
     a.appendChild(p)
-
+    
+    
     section.appendChild(a)
     main.appendChild(section)
 }

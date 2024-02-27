@@ -58,6 +58,7 @@ main{
     display: flex;
     gap: 1rem;
     align-items: stretch;
+    flex-wrap: wrap;
 }
 
 main h2{
@@ -134,6 +135,12 @@ main section button:hover img{
     gap: 1rem;
 }
 
+.btn-github{
+    background-color: green;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 20px;
+}
 
 .instrutor-escola{
     border-radius: 50%;

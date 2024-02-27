@@ -27,7 +27,7 @@ let instrutores = [
     { id: 'gustavo-netzke', nome: 'Gustavo Netzke', imagem: 'Gutoneitzke', status: true},
     { id: 'lira', nome: 'Lira', imagem: '', status: false},
     { id: 'mayara-cardoso', nome: 'Mayara Cardoso', imagem: 'mayaracardoso', status: false},
-    { id: 'mayk-brito', nome: 'Mayk Brito', imagem: 'maykbrito', status: false},
+    { id: 'mayk-brito', nome: 'Mayk Brito', imagem: 'maykbrito', status: true},
     { id: 'michele-ambrosio', nome: 'Michele Ambrosio', imagem: 'micheleambrosio', status: false},
     { id: 'neri-netzke', nome: 'Neri Netzke', imagem: '', status: false},
     { id: 'paulo-silveira', nome: 'Paulo Silveira', imagem: 'peas', status: false},
@@ -37,6 +37,7 @@ let instrutores = [
 ]
 
 let escolas = [
+    { id: 'nenhum', nome: 'Nenhum', imagem: 'nenhum', status: false},
     { id: 'pessoal', nome: 'Pessoal', imagem: 'clovisbalreira', status: true},
     { id: 'alura', nome: 'Alura', imagem: 'alura-cursos', status: false},
     { id: 'celke', nome: 'Celke', imagem: '', status: false},
@@ -48,12 +49,14 @@ let escolas = [
     { id: 'hashtag', nome: 'Hashtag', imagem: '', status: false},
     { id: 'informaticon', nome: 'Informaticon', imagem: '', status: false},
     { id: 'onebitcode', nome: 'Onebitcode', imagem: '', status: false},
-    { id: 'rocketseat', nome: 'Rocketseat', imagem: 'Rocketseat', status: false},
+    { id: 'rocketseat', nome: 'Rocketseat', imagem: 'Rocketseat', status: true},
     { id: 'sujeito-programador', nome: 'Sujeito Programador', imagem: 'sujeitoprogramador', status: false},
     { id: 'varos', nome: 'Varos', imagem: '', status: false}
 ]
 
 let webSites = [
-    {nome : 'Relógios', descricao : 'Este projeto apresenta um conjunto de relógios com funcionalidades digitais, analógicas e de cronômetro. Utilizando tecnologias web como HTML, CSS e JavaScript, o projeto oferece uma visão interativa e dinâmica do tempo, permitindo aos usuários visualizarem as horas em formatos diferentes e utilizarem um cronômetro com funções de início, pausa, marcação e reinício.', 'Linguagem' : linguagens[1], 'Instrutores' : [instrutores[0], instrutores[7]], 'Escolas' : escolas[0], site : './websites/relogio/index.html'},
-    {nome : 'To Do List', descricao : 'O projeto To Do List é uma aplicação web simples projetada para permitir aos usuários criar e gerenciar uma lista de tarefas. Os usuários podem adicionar novas tarefas, visualizar as tarefas existentes e remover tarefas concluídas da lista. Este projeto foi criado com o objetivo de oferecer uma interface clara e intuitiva para a gestão de tarefas diárias.', 'Linguagem' : linguagens[1], 'Instrutores' : [instrutores[0], instrutores[7]], 'Escolas' : escolas[0], site : './websites/to-do-list/index.html'}
+    {nome : 'Relógios', descricao : 'Este projeto apresenta um conjunto de relógios com funcionalidades digitais, analógicas e de cronômetro. Utilizando tecnologias web como HTML, CSS e JavaScript, o projeto oferece uma visão interativa e dinâmica do tempo, permitindo aos usuários visualizarem as horas em formatos diferentes e utilizarem um cronômetro com funções de início, pausa, marcação e reinício.', 'Linguagem' : linguagens[1], 'Instrutores' : [instrutores[7]], 'Escolas' : escolas[0], site : './websites/relogio/index.html', github : 'relogio/'},
+    {nome : 'To Do List', descricao : 'O projeto To Do List é uma aplicação web simples projetada para permitir aos usuários criar e gerenciar uma lista de tarefas. Os usuários podem adicionar novas tarefas, visualizar as tarefas existentes e remover tarefas concluídas da lista. Este projeto foi criado com o objetivo de oferecer uma interface clara e intuitiva para a gestão de tarefas diárias.', 'Linguagem' : linguagens[1], 'Instrutores' : [instrutores[7]], 'Escolas' : escolas[0], site : './websites/to-do-list/index.html', github : 'to-do-list/'},
+    {nome : 'Apresenta', descricao : 'Este projeto é um portfólio pessoal que apresenta informações profissionais, habilidades e projetos do desenvolvedor. Destina-se a empregadores potenciais, colegas de profissão e ao público em geral interessado em conhecer o trabalho do desenvolvedor. O site é dividido em três seções principais: "Apresentação", "Links" e "Imagens", cada uma acessível através de sua respectiva página. Além disso, inclui uma seção de "Currículo" detalhada, que pode ser visualizada em diferentes idiomas, enriquecendo a experiência do usuário.', 'Linguagem' : linguagens[1], 'Instrutores' : [instrutores[0]], 'Escolas' : escolas[1], site : './websites/apresentacao/index.html', github : 'apresentacao/'},
+    {nome : 'Pinterest', descricao : 'Este projeto é uma simples réplica da interface do Pinterest, focando em demonstrar habilidades de front-end através da construção de um layout responsivo e atraente. O projeto visa replicar a experiência visual do Pinterest, permitindo aos usuários visualizar uma variedade de imagens organizadas em uma grade dinâmica.', 'Linguagem' : linguagens[1], 'Instrutores' : [instrutores[10]], 'Escolas' : escolas[12], site : './websites/rocketseat/pinterest/index.html', github : 'rocketseat/pinterest/'}
 ]
