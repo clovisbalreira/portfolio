@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://unpkg.com/phosphor-icons"></script>
+</head>
+<body>
+    <div id="app">
+        <div id="top">
+            <div id="user-info">
+                <img src="http://randomuser.me/api/portraits/lego/1.jpg" alt="Imagem Chat">
+                <div id="user-status">
+                    <strong>Atendente</strong>
+                    <div class="status">
+                        Online
+                    </div>
+                </div>
+            </div>
+            <div id="close-chat">
+                <i class="ph-x-fill"></i>
+            </div>
+        </div>
+        <div id="messages">
+            <div id="last-seen">Hoje 11:30</div>
+            <div class="messages"></div>
+        <div id="bottom">
+            <div class="input-wrapper">
+                <input id="mensagem-texto" type="text" placeholder="Digite sua mensagem">
+                <button id="btn-enviar" onclick="atualizarMensagem()">
+                    <i class="ph-paper-plane-right-fill"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+    <script>
+        const messages = document.querySelector(".messages")
+        messages.lastElementChild.scrollIntoView()
+    </script>
+</body>
+</html>
