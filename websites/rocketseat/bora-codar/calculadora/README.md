@@ -3,6 +3,7 @@ Projeto Calculadora Moderna
 Descrição
 
 Este projeto consiste em uma calculadora web estilizada e funcional que permite aos usuários realizar operações básicas de matemática, como adição, subtração, multiplicação e divisão, além de recursos adicionais como porcentagem e inversão de sinal. Desenvolvida com HTML, CSS e JavaScript, esta calculadora possui um design moderno e é responsiva, adaptando-se a diferentes tamanhos de tela.
+
 Características Principais:
 
     Design Moderno: Utiliza um esquema de cores suave e gradiente, com botões estilizados e sombras para uma aparência tridimensional.

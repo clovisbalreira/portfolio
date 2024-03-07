@@ -296,8 +296,8 @@ let dinheiros = [
     { serie : 'A6958095735A', nome : 'Cruzeiros', ano : '', valor : '100', pais : 'Brasil', tipo : 'Cedula', imagem_frente : 'frente-0296.png', imagem_verso : 'verso-0296.png', pacote : '296'},
     { serie : 'A1044042377A', nome : 'Cruzeiros', ano : '', valor : '100', pais : 'Brasil', tipo : 'Cedula', imagem_frente : 'frente-0297.png', imagem_verso : 'verso-0297.png', pacote : '297'},
     { serie : 'A4024004110A', nome : 'Cruzeiros', ano : '', valor : '5000', pais : 'Brasil', tipo : 'Cedula', imagem_frente : 'frente-0298.png', imagem_verso : 'verso-0298.png', pacote : '298'},
-    { serie : 'A0444025071A', nome : 'Cruzeiros', ano : '', valor : '5000', pais : 'Brasil', tipo : 'Cedula', imagem_frente : 'frente-0299.png', imagem_verso : 'verso-0299.png', pacote : '299'},
-    { serie : 'A5650041260A', nome : 'Cruzeiros', ano : '', valor : '100000', pais : 'Brasil', tipo : 'Cedula', imagem_frente : 'frente-0300.png', imagem_verso : 'verso-0300.png', pacote : '300'}, */
+    { serie : 'A0444025071A', nome : 'Cruzeiros', ano : '', valor : '5000', pais : 'Brasil', tipo : 'Cedula', imagem_frente : 'frente-0299.png', imagem_verso : 'verso-0299.png', pacote : '299'}, 
+    { serie : 'A5650041260A', nome : 'Cruzeiros', ano : '', valor : '100000', pais : 'Brasil', tipo : 'Cedula', imagem_frente : 'frente-0300.png', imagem_verso : 'verso-0300.png', pacote : '300'},*/
     { serie : '', nome : '', ano : '', valor : '', pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0001.png', imagem_verso : 'verso-0001.png', pacote : '1'},
     { serie : '', nome : '', ano : '', valor : '', pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0002.png', imagem_verso : 'verso-0002.png', pacote : '2'},
     { serie : '', nome : '', ano : '', valor : '', pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0003.png', imagem_verso : 'verso-0003.png', pacote : '3'},

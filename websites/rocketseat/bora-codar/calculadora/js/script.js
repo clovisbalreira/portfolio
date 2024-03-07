@@ -98,9 +98,6 @@ function handleButtonClick(event) {
                 mostrarCalculo(calcular, digito)
             }
         }else{
-            if(botao.textContent === '%' && digito === ''){
-                console.log(botao.textContent)
-            }
             digito += botao.textContent
             mostrarCalculo(calcular, digito)
         }

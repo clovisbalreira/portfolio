@@ -4,7 +4,7 @@ let cedulas = 0
 let moedas = 0 
 let convertido = 0
 for(let i = 0; i < dinheiros.length; i++){
-    if(dinheiros[i].nome != ''){
+    if(dinheiros[i].pais != ''){
         somarCedulasMoedas(dinheiros[i].tipo)
         soma += parseFloat(dinheiros[i].valor)
         convertido += atualizarValor(dinheiros[i].nome, parseFloat(dinheiros[i].valor))
