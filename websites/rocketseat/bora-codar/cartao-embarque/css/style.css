@@ -14,7 +14,7 @@ body{
     font-family: 'Rubik', sans-serif;
     letter-spacing: -0.02em;
     background: linear-gradient(167.96deg, #B257E5 0%, #271A45 100%) no-repeat;
-    height: 100vh;
+    /* height: 100vh; */
     display: grid;
     place-content: center;
 }
@@ -63,7 +63,22 @@ footer p{
     margin: 2rem auto;
 }
 #bording-pass{
-    margin: auto;
+    margin: 20px auto;
+}
+#bording-pass > div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+button{
+    background-color: rgb(60, 202, 60);
+    padding: .5rem ;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 10px;
+}
+button:hover{
+    background-color: rgb(10, 196, 10);
 }
 #ticket{
     margin-top: 2rem;
@@ -71,10 +86,10 @@ footer p{
 }
 .top{
     gap:2.4rem;
-    /*border-radius: 2.4rem 2.4rem 0 0;
+    /* border-radius: 2.4rem 2.4rem 0 0;
     --mask: radial-gradient(1.2rem at 1.2rem bottom, transparent 95%, black) -1.2rem;
     --webki-mask-repeat: repeat-x;
-    mask-repeat: repeat-x;*/
+    mask-repeat: repeat-x; */
 }
 .top time{
     color: rgba(0, 0, 0, 0.8);
@@ -90,9 +105,9 @@ footer p{
     border: 1px dashed rgba(0, 0, 0, 0.32);
     border-left: 0;
     border-right: 0;
-    /*--mask: radial-gradient(1.2rem at 1.2rem 1.2rem bottom, transparent 95%, black) -1.2rem -1.2rem;
+    /* --mask: radial-gradient(1.2rem at 1.2rem 1.2rem bottom, transparent 95%, black) -1.2rem -1.2rem;
     --webki-mask-repeat: repeat-x;
-    mask-repeat: repeat-x*/
+    mask-repeat: repeat-x */
 }
 .departure, .arrival{
     width: 12.5rem;
@@ -105,8 +120,8 @@ footer p{
     align-self: center;
 }
 .bottom{
-    /*border-radius: 0 0 2.4rem 2.4rem;
-    --mask: radial-gradient(1.2rem at 1.2rem top, transparent 95%, black) -1.2rem;*/
+    /* border-radius: 0 0 2.4rem 2.4rem;
+    --mask: radial-gradient(1.2rem at 1.2rem top, transparent 95%, black) -1.2rem; */
 }
 .bottom .container{
     align-items: center;

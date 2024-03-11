@@ -29,6 +29,27 @@ body{
 .text-center{
     text-align: center;
 }
+div button{
+    display: flex;
+    justify-self: center;
+    width: 90vw;
+    margin-inline: 5vw;
+}
+
+button{
+    text-transform: uppercase;
+    width: 350px;
+    padding: 1rem;
+    border: 0;
+    border-radius: 2rem;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+button:hover{
+    background-color: rgb(29, 182, 29);
+}
 #app{
     background: #292738;
     column-gap: 3.2rem;
@@ -109,7 +130,7 @@ svg circle{
 svg circle:nth-child(1){
     stroke-dashoffset: 0;
 }
-svg circle:nth-child(2){
+svg circle:nth-child(2){  
     stroke-dashoffset: calc(var(--circunferencia) - (var(--circunferencia) * var(--percentage)) / 100);
     stroke-linecap: round;
     animation: progress 1s ease-in-out;
@@ -197,6 +218,12 @@ svg circle:nth-child(2){
     justify-items: center;
     gap: .5rem;
     z-index: 1;
+}
+.bar-wrapper p{
+    font-size: .9rem;
+}
+.bar-wrapper:hover p{
+    transform: scale(1.5);
 }
 .bar{
     width: 1.5rem;
