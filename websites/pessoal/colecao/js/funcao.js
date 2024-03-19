@@ -11,33 +11,51 @@ for(let i = 0; i < dinheiros.length; i++){
         let section = document.createElement('section')
         let divDados = document.createElement('div')
         let h2Nome = document.createElement('h2')
-        h2Nome.innerHTML = `${dinheiros[i].nome} - ${dinheiros[i].pacote}`
+        h2Nome.innerHTML = `${dinheiros[i].nome}`
         divDados.appendChild(h2Nome)
-        let divSerie = document.createElement('div')
-        let h2Serie = document.createElement('h2')
-        h2Serie.innerHTML = 'Série'
-        divSerie.appendChild(h2Serie)
-        let pSerie = document.createElement('p')
-        pSerie.innerHTML = dinheiros[i].serie
-        divSerie.appendChild(pSerie)
-        divDados.appendChild(divSerie)
+
+        if(dinheiros[i].serie != ''){
+            let divSerie = document.createElement('div')
+            let h2Serie = document.createElement('h2')
+            h2Serie.innerHTML = 'Série'
+            divSerie.appendChild(h2Serie)
+            let pSerie = document.createElement('p')
+            pSerie.innerHTML = dinheiros[i].serie
+            divSerie.appendChild(pSerie)
+            divDados.appendChild(divSerie)
+        }
+        
         section.appendChild(divDados)
     
+        let divPaisAno = document.createElement('div') 
+        
+        let divAno = document.createElement('div')
+        let h2Ano = document.createElement('h2')
+        h2Ano.innerHTML = 'Ano'
+        divAno.appendChild(h2Ano)
+        divPaisAno.appendChild(divAno)
+
+        let pAno = document.createElement('p')
+        pAno.innerHTML = dinheiros[i].ano
+        divPaisAno.appendChild(pAno)
+        
         let divPais = document.createElement('div')
         let h2Pais = document.createElement('h2')
         h2Pais.innerHTML = 'Pais'
         divPais.appendChild(h2Pais)
+
         let divNomeImagem = document.createElement('div')
-    
         let pPais = document.createElement('p')
         divNomeImagem.innerHTML = dinheiros[i].pais
         divPais.appendChild(pPais)
         let paisImagem = document.createElement('img')
-        paisImagem.src = `./img/bandeira/${dinheiros[i].pais.toLowerCase().replace(" ", "-")}.png`
+        paisImagem.src = `./img/bandeira/${dinheiros[i].pais.toLowerCase().replace(" ", "-").replace("ç", "c")}.png`
         paisImagem.alt = dinheiros[i].pais
         divNomeImagem.appendChild(paisImagem)
         divPais.appendChild(divNomeImagem)
-        section.appendChild(divPais)
+        divPaisAno.appendChild(divPais)
+        
+        section.appendChild(divPaisAno)
             
         let divValor = document.createElement('div')
         let h2Valor = document.createElement('h2')
@@ -77,6 +95,12 @@ for(let i = 0; i < dinheiros.length; i++){
         versoImagem.alt = `${dinheiros[i].nome} Série: ${dinheiros[i].serie} País: ${dinheiros[i].pais}`
         divImagem.appendChild(versoImagem)
         section.appendChild(divImagem)
+        
+        let divPacote = document.createElement('div')
+        let h6Pacote = document.createElement('h1')
+        h6Pacote.innerHTML = `Pacote - ${dinheiros[i].pacote}`
+        divPacote.appendChild(h6Pacote)
+        section.appendChild(divPacote)
         main.appendChild(section)
     }
 }

@@ -164,7 +164,9 @@ function criarGrafico(data, codigoMoeda){
             y: parseFloat(data[pais].value[dias - i].cotacaoVenda).toFixed(2),
         })
     }
+
     let maiorCotacao = datasCotacao.reduce((max, atual) => atual > max ? atual : max, datasCotacao[0])
+    console.log((parseFloat(maiorCotacao.y)).toFixed(1))
     const options = {
     series: [
         {
@@ -186,8 +188,9 @@ function criarGrafico(data, codigoMoeda){
         curve: "straight",
     },
     yaxis: {
-        min: parseInt(maiorCotacao.y),
-        tickAmount: parseInt(maiorCotacao.y),
+        min: parseInt(maiorCotacao.y) + 2,
+        max: parseInt(maiorCotacao.y),
+        tickAmount: 5,
         labels: {
         formatter: (value) => {
             return value.toFixed(1).replace('.', ',')
