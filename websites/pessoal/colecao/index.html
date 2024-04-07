@@ -5,16 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coleção</title>
     <link rel="stylesheet" href="./css/style.css">
-    <script defer src="./js/api.js"></script>
     <script defer src="./js/variaveis.js"></script>
+    <script defer src="./js/apis.js"></script>
     <script defer src="./js/funcao.js"></script>
 </head>
 <body>
     <header>
-        <p id="moedas">Total de Moedas: </p>
-        <p id="cedulas">Total de Cedulas: </p>
-        <p id="valorTotal">Valor Total R$: </p>
-        <p id="valorConvertido">Valor Convertido R$: </p>
+        <!-- <div>
+            <h1>Coleção Antigo</h1>
+        </div> -->
+        <!-- <div id="somas">
+            <p id="moedas"></p>
+            <p id="cedulas"></p>
+            <p id="valorTotal"></p>
+            <p id="valorConvertido"></p>
+            <p id="valorCotacaoMinimo"></p>
+            <p id="valorCotacaoMaximo"></p>
+            <p id="valorCotacaoMedia"></p>
+        </div> -->
+        <div id="selects">
+            <div>
+                <label for="tipos">Tipos</label>
+                <select name="tipos" id="tipos">
+                    <option value=" ">Selecione o tipo</option>
+                </select>
+            </div>
+            <div>
+                <label for="paises">Paises</label>
+                <select name="paises" id="paises">
+                    <option value=" ">Selecione o Pais</option>
+                </select>
+            </div>
+            <div>
+                <label for="ano">Ano</label>
+                <select name="ano" id="ano">
+                    <option value=" ">Selecione o ano</option>
+                </select>
+            </div>
+            <div>
+                <label for="moeda">Moeda</label>
+                <select name="moeda" id="moeda">
+                    <option value=" ">Selecione o moeda</option>
+                </select>
+            </div>
+            <div>
+                <label for="valor">Valor</label>
+                <select name="valor" id="valor">
+                    <option value=" ">Selecione o valor</option>
+                </select>
+            </div>
+        </div>
     </header>
     <main></main>
 </body>

@@ -84,7 +84,7 @@ botoes.forEach(botao => {
         if (atributos.linguagem != '') {
             removerMain()
             for (let i = 0; i < webSites.length; i++) {
-                if (atributos.linguagem == webSites[i].Linguagem.id) {
+                if (atributos.linguagem == webSites[i].linguagem.id) {
                     mostrarWebSites(webSites[i])
                 }
             }
@@ -92,7 +92,7 @@ botoes.forEach(botao => {
         else if (atributos.instrutor != '') {
             removerMain()
             for (let i = 0; i < webSites.length; i++) {
-                webSites[i].Instrutores.filter(webSite => {
+                webSites[i].instrutor.filter(webSite => {
                     if (atributos.instrutor == webSite.id) {
                         mostrarWebSites(webSites[i])
                     }
@@ -102,9 +102,7 @@ botoes.forEach(botao => {
         else if (atributos.escola != '') {
             removerMain()
             for (let i = 0; i < webSites.length; i++) {
-                console.log(atributos.escola)
-                console.log(webSites[i].Escolas.id)
-                if (atributos.escola == webSites[i].Escolas.id) {
+                if (atributos.escola == webSites[i].escola.id) {
                     console.log(webSites[i])
                     mostrarWebSites(webSites[i])
                 }
@@ -137,7 +135,7 @@ function mostrarWebSites(webSites){
     let h3Linguagem = document.createElement('h3')
     h3Linguagem.innerHTML = 'Linguagem'
     divLinguagem.appendChild(h3Linguagem)
-    divLinguagem.appendChild(imagens('Linguagem', webSites.Linguagem.imagem))
+    divLinguagem.appendChild(imagens('Linguagem', webSites.linguagem.imagem))
     divLinguagemEscola.appendChild(divLinguagem)
 
     console.log('')
@@ -148,12 +146,12 @@ function mostrarWebSites(webSites){
     aGitHub.classList.add('btn-github')
     a.appendChild(aGitHub)
 
-    if(webSites.Escolas.imagem != 'clovisbalreira' && webSites.Escolas.imagem != 'nenhum'){
+    if(webSites.escola.imagem != 'clovisbalreira' && webSites.escola.imagem != 'nenhum'){
         let divEscola = document.createElement('div')
         let h3Escola = document.createElement('h3')
         h3Escola.innerHTML = 'Escola'
         divEscola.appendChild(h3Escola)
-        divEscola.appendChild(imagens('escola', webSites.Escolas.imagem))
+        divEscola.appendChild(imagens('escola', webSites.escola.imagem))
         divLinguagemEscola.appendChild(divEscola)
     }
     
@@ -162,7 +160,7 @@ function mostrarWebSites(webSites){
     let divInstrutoresTitulo = document.createElement('div')
     
 
-    if(webSites.Instrutores[0].imagem != 'clovisbalreira'){
+    if(webSites.instrutor[0].imagem != 'clovisbalreira'){
         let h3Instrutor = document.createElement('h3')
         h3Instrutor.innerHTML = 'Instrutores'
         divInstrutoresTitulo.appendChild(h3Instrutor)
@@ -170,7 +168,7 @@ function mostrarWebSites(webSites){
     }
         
     let divInstrutor = document.createElement('div')
-    webSites.Instrutores.forEach( instrutor => {
+    webSites.instrutor.forEach( instrutor => {
             if(instrutor.nome != 'Clóvis'){
                 divInstrutor.appendChild(imagens('instrutor', instrutor))
             }

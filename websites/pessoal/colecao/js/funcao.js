@@ -1,163 +1,351 @@
-let main = document.querySelector('main')
-let soma = 0 
-let cedulas = 0 
-let moedas = 0 
-let convertido = 0
-for(let i = 0; i < dinheiros.length; i++){
-    if(dinheiros[i].pais != ''){
-        somarCedulasMoedas(dinheiros[i].tipo)
-        soma += parseFloat(dinheiros[i].valor)
-        convertido += atualizarValor(dinheiros[i].nome, parseFloat(dinheiros[i].valor))
-        let section = document.createElement('section')
-        let divDados = document.createElement('div')
-        let h2Nome = document.createElement('h2')
-        h2Nome.innerHTML = `${dinheiros[i].nome}`
-        divDados.appendChild(h2Nome)
+function mostrarDinheiro(dinheriosFiltrados) {
+    let main = document.querySelector('main')
+    main.innerHTML = ''
+    let soma = 0
+    let cedulas = 0
+    let moedas = 0
+    let convertido = 0
+    let cotacaoMinimo = 0
+    let cotacaoMaximo = 0
+    let cotacaoMedia = 0
+    for (let i = 0; i < dinheriosFiltrados.length; i++) {
+        if (dinheriosFiltrados[i].pais != '') {
+            soma += parseFloat(dinheriosFiltrados[i].valor)
+            convertido += atualizarValor(dinheriosFiltrados[i].ano, dinheriosFiltrados[i].nome, dinheriosFiltrados[i].pais, parseFloat(dinheriosFiltrados[i].valor, dinheriosFiltrados[i].ano))
+            cotacaoMinimo += parseFloat(dinheriosFiltrados[i].cotacao.cotacaoMinimo)
+            cotacaoMaximo += parseFloat
+            (dinheriosFiltrados[i].cotacao.cotacaoMaximo)
+            cotacaoMedia += ( parseFloat(dinheriosFiltrados[i].cotacao.cotacaoMinimo) + parseFloat
+            (dinheriosFiltrados[i].cotacao.cotacaoMaximo) ) / 2
+            let section = document.createElement('section')
+            let divDados = document.createElement('div')
+            let h2Nome = document.createElement('h2')
+            h2Nome.innerHTML = `${dinheriosFiltrados[i].nome}`
+            divDados.appendChild(h2Nome)
 
-        if(dinheiros[i].serie != ''){
+            let serie = 'Serie'
+            console.log(dinheriosFiltrados[i].tipo)
+            if (dinheriosFiltrados[i].tipo == 'Moeda') {
+                serie = 'Lado'
+            }
             let divSerie = document.createElement('div')
             let h2Serie = document.createElement('h2')
-            h2Serie.innerHTML = 'Série'
+            h2Serie.innerHTML = serie
             divSerie.appendChild(h2Serie)
             let pSerie = document.createElement('p')
-            pSerie.innerHTML = dinheiros[i].serie
+            pSerie.innerHTML = dinheriosFiltrados[i].serie
             divSerie.appendChild(pSerie)
             divDados.appendChild(divSerie)
+
+            section.appendChild(divDados)
+
+            let divPaisAno = document.createElement('div')
+
+            let divAno = document.createElement('div')
+            let h2Ano = document.createElement('h2')
+            h2Ano.innerHTML = 'Ano'
+            divAno.appendChild(h2Ano)
+            divPaisAno.appendChild(divAno)
+
+            let pAno = document.createElement('p')
+            pAno.innerHTML = dinheriosFiltrados[i].ano
+            divPaisAno.appendChild(pAno)
+
+            let divPais = document.createElement('div')
+            let h2Pais = document.createElement('h2')
+            h2Pais.innerHTML = 'Pais'
+            divPais.appendChild(h2Pais)
+
+            let divNomeImagem = document.createElement('div')
+            let pPais = document.createElement('p')
+            divNomeImagem.innerHTML = dinheriosFiltrados[i].pais
+            divPais.appendChild(pPais)
+            let paisImagem = document.createElement('img')
+            paisImagem.src = `./img/bandeira/${dinheriosFiltrados[i].pais.toLowerCase().replace(" ", "-").replace("ç", "c")}.png`
+            paisImagem.alt = dinheriosFiltrados[i].pais
+            divNomeImagem.appendChild(paisImagem)
+            divPais.appendChild(divNomeImagem)
+            divPaisAno.appendChild(divPais)
+
+            section.appendChild(divPaisAno)
+
+            let divValor = document.createElement('div')
+            let h2Valor = document.createElement('h2')
+            h2Valor.innerHTML = 'Valor'
+            divValor.appendChild(h2Valor)
+            let pValor = document.createElement('p')
+            pValor.innerHTML = `${cifrao(dinheriosFiltrados[i].pais, dinheriosFiltrados[i].nome)} ${parseFloat(dinheriosFiltrados[i].valor).toFixed(2)}`
+            divValor.appendChild(pValor)
+            section.appendChild(divValor)
+
+            let divAtual = document.createElement('div')
+            let h2Atual = document.createElement('h2')
+            h2Atual.innerHTML = 'Conversão'
+            divAtual.appendChild(h2Atual)
+            let pAtual = document.createElement('p')
+            pAtual.innerHTML = `R$: ${casaDecimal(atualizarValor(dinheriosFiltrados[i].ano, dinheriosFiltrados[i].nome, dinheriosFiltrados[i].pais, parseFloat(dinheriosFiltrados[i].valor)).toFixed(20))}`
+            divAtual.appendChild(pAtual)
+            section.appendChild(divAtual)
+
+            let divCotacaoMinimo = document.createElement('div')
+            let h2CotacaoMinimo = document.createElement('h2')
+            h2CotacaoMinimo.innerHTML = 'Cotação Venda Min.'
+            divCotacaoMinimo.appendChild(h2CotacaoMinimo)
+            let pCotacaoMinimo = document.createElement('p')
+            pCotacaoMinimo.innerHTML = `R$: ${parseFloat(dinheriosFiltrados[i].cotacao.cotacaoMinimo).toFixed(2)}`
+            divCotacaoMinimo.appendChild(pCotacaoMinimo)
+            section.appendChild(divCotacaoMinimo)
+
+            let divCotacaoMaximo = document.createElement('div')
+            let h2CotacaoMaximo = document.createElement('h2')
+            h2CotacaoMaximo.innerHTML = 'Cotação Venda Max.'
+            divCotacaoMaximo.appendChild(h2CotacaoMaximo)
+            let pCotacaoMaximo = document.createElement('p')
+            pCotacaoMaximo.innerHTML = `R$: ${parseFloat(dinheriosFiltrados[i].cotacao.cotacaoMaximo).toFixed(2)}`
+            divCotacaoMaximo.appendChild(pCotacaoMaximo)
+            section.appendChild(divCotacaoMaximo)
+
+            let divCotacaoSaldo = document.createElement('div')
+            let h2CotacaoSaldo = document.createElement('h2')
+            h2CotacaoSaldo.innerHTML = 'Cotação Venda Med.'
+            divCotacaoSaldo.appendChild(h2CotacaoSaldo)
+            let pCotacaoSaldo = document.createElement('p')
+            pCotacaoSaldo.innerHTML = `R$: ${parseFloat(( parseFloat(dinheriosFiltrados[i].cotacao.cotacaoMinimo) + parseFloat
+                (dinheriosFiltrados[i].cotacao.cotacaoMaximo) ) / 2).toFixed(2)}`
+            divCotacaoSaldo.appendChild(pCotacaoSaldo)
+            section.appendChild(divCotacaoSaldo)
+
+            let divImagem = document.createElement('div')
+            divImagem.classList.add('imagem')
+            let frenteImagem = document.createElement('img')
+            frenteImagem.src = `./img/${dinheriosFiltrados[i].tipo.toLowerCase()}/${dinheriosFiltrados[i].imagem_frente}`
+            frenteImagem.alt = `${dinheriosFiltrados[i].nome} Série: ${dinheriosFiltrados[i].serie} País: ${dinheriosFiltrados[i].pais}`
+            divImagem.appendChild(frenteImagem)
+            let versoImagem = document.createElement('img')
+            versoImagem.src = `./img/${dinheriosFiltrados[i].tipo.toLowerCase()}/${dinheriosFiltrados[i].imagem_verso}`
+            versoImagem.alt = `${dinheriosFiltrados[i].nome} Série: ${dinheriosFiltrados[i].serie} País: ${dinheriosFiltrados[i].pais}`
+            divImagem.appendChild(versoImagem)
+            section.appendChild(divImagem)
+
+            let divPacote = document.createElement('div')
+            let h6Pacote = document.createElement('h1')
+            h6Pacote.innerHTML = `Pacote - ${dinheriosFiltrados[i].pacote}`
+            divPacote.appendChild(h6Pacote)
+            section.appendChild(divPacote)
+            main.appendChild(section)
+            dinheriosFiltrados[i].tipo == 'Cedula' ? cedulas += 1 : moedas += 1
         }
-        
-        section.appendChild(divDados)
-    
-        let divPaisAno = document.createElement('div') 
-        
-        let divAno = document.createElement('div')
-        let h2Ano = document.createElement('h2')
-        h2Ano.innerHTML = 'Ano'
-        divAno.appendChild(h2Ano)
-        divPaisAno.appendChild(divAno)
-
-        let pAno = document.createElement('p')
-        pAno.innerHTML = dinheiros[i].ano
-        divPaisAno.appendChild(pAno)
-        
-        let divPais = document.createElement('div')
-        let h2Pais = document.createElement('h2')
-        h2Pais.innerHTML = 'Pais'
-        divPais.appendChild(h2Pais)
-
-        let divNomeImagem = document.createElement('div')
-        let pPais = document.createElement('p')
-        divNomeImagem.innerHTML = dinheiros[i].pais
-        divPais.appendChild(pPais)
-        let paisImagem = document.createElement('img')
-        paisImagem.src = `./img/bandeira/${dinheiros[i].pais.toLowerCase().replace(" ", "-").replace("ç", "c")}.png`
-        paisImagem.alt = dinheiros[i].pais
-        divNomeImagem.appendChild(paisImagem)
-        divPais.appendChild(divNomeImagem)
-        divPaisAno.appendChild(divPais)
-        
-        section.appendChild(divPaisAno)
-            
-        let divValor = document.createElement('div')
-        let h2Valor = document.createElement('h2')
-        h2Valor.innerHTML = 'Valor'
-        divValor.appendChild(h2Valor)
-        let pValor = document.createElement('p')
-        pValor.innerHTML = `${cifrao(dinheiros[i].pais, dinheiros[i].nome)} ${parseFloat(dinheiros[i].valor).toFixed(2)}`
-        divValor.appendChild(pValor)
-        section.appendChild(divValor)
-
-        let divAtual = document.createElement('div')
-        let h2Atual = document.createElement('h2')
-        h2Atual.innerHTML = 'Valor Conv.'
-        divAtual.appendChild(h2Atual)
-        let pAtual = document.createElement('p')
-        pAtual.innerHTML = `R$: ${atualizarValor(dinheiros[i].nome, parseFloat(dinheiros[i].valor).toFixed(2))}`
-        divAtual.appendChild(pAtual)
-        section.appendChild(divAtual)
-
-        /* let divCotacao = document.createElement('div')
-        let h2Cotacao = document.createElement('h2')
-        h2Cotacao.innerHTML = 'Cotação pra venda'
-        divCotacao.appendChild(h2Cotacao)
-        let pCotacao = document.createElement('p')
-        pCotacao.innerHTML = `$ ${parseFloat(dinheiros[i].valor).toFixed(2)}`
-        divCotacao.appendChild(pCotacao)
-        section.appendChild(divCotacao) */
-
-        let divImagem = document.createElement('div')
-        divImagem.classList.add('imagem')
-        let frenteImagem = document.createElement('img')
-        frenteImagem.src = `./img/${dinheiros[i].tipo.toLowerCase()}/${dinheiros[i].imagem_frente}`
-        frenteImagem.alt = `${dinheiros[i].nome} Série: ${dinheiros[i].serie} País: ${dinheiros[i].pais}`
-        divImagem.appendChild(frenteImagem)
-        let versoImagem = document.createElement('img')
-        versoImagem.src = `./img/${dinheiros[i].tipo.toLowerCase()}/${dinheiros[i].imagem_verso}`
-        versoImagem.alt = `${dinheiros[i].nome} Série: ${dinheiros[i].serie} País: ${dinheiros[i].pais}`
-        divImagem.appendChild(versoImagem)
-        section.appendChild(divImagem)
-        
-        let divPacote = document.createElement('div')
-        let h6Pacote = document.createElement('h1')
-        h6Pacote.innerHTML = `Pacote - ${dinheiros[i].pacote}`
-        divPacote.appendChild(h6Pacote)
-        section.appendChild(divPacote)
-        main.appendChild(section)
     }
+    mostrarTotais(moedas, cedulas, soma, convertido, cotacaoMinimo, cotacaoMaximo, cotacaoMedia)
 }
 
-function somarCedulasMoedas(valor){
-    if( valor == 'Cedula'){
-        cedulas += 1
-    }else{
-        moedas += 1
+function casaDecimal(numero){
+    let numeroAtualizado = 0
+    virgula = false
+    for(let i = 0; i < numero.length; i++){
+        if(virgula){
+            if(i == parseInt(numero.length - 1)){
+                numeroAtualizado = parseInt(numeroAtualizado).toFixed(2)
+            }else if(parseInt(numero[i]) == 0 ){
+                numeroAtualizado += numero[i]
+            }else{
+                numeroAtualizado += numero[i]
+                if(numero[i+1] != 0){
+                    numeroAtualizado += numero[i+1]
+                }
+                break
+            }
+        }else{
+            if(i == 0){
+                numeroAtualizado = numero[i]
+            }else{
+                numeroAtualizado += numero[i]
+            }
+        }
+        if(numero[i] == '.'){
+            virgula = true
+        }
     }
+    return numeroAtualizado
 }
 
-function atualizarValor(moeda, valor){
-    if( moeda == 'Real'){
-        valor = valor
-    }else if( moeda == 'Cruzeiros'){
-        valor = valor / 2750
-    }else if( moeda == 'Cruzeiros Novos'){
-        valor = 0
-    }else if( moeda == 'Cruzados'){
-        valor = valor / ( 1 * 1 * 2750)
-    }else if( moeda == 'Cruzados Novos'){
-        valor = 0
+function atualizarValor(ano, moeda, pais, valor) {
+    let epoca = ano.length == 4 ? parseInt(ano) : parseInt(ano.substring(0,4))
+    if (pais == 'Brasil') {
+        if((epoca >= 1942 && epoca <= 1967) && moeda == 'Cruzeiros'){
+            valor = (valor / 10000000 ) / 2750
+        }else if((epoca >= 1967 && epoca <= 1970) && moeda == 'Cruzeiros Novos'){
+            valor = (valor / 1000000 ) / 2750
+        }else if((epoca >= 1970 && epoca <= 1986) && moeda == 'Cruzeiros' ){
+            valor = (valor / 100000 ) / 2750
+        }else if((epoca >= 1986 && epoca <= 1989) && moeda == 'Cruzados'){
+            valor = (valor / 10000 ) / 2750
+        }else if((epoca >= 1989 && epoca <= 1990) && moeda == 'Cruzados Novos'){
+            valor = (valor / 1000 ) / 2750
+        }else if((epoca >= 1990 && epoca <= 1993) && moeda == 'Cruzeiros'){
+            valor = (valor / 100 ) / 2750
+        }else if((epoca >= 1992 && epoca <= 1994) && moeda == 'Cruzeiros Reais'){
+            valor = valor / 2750
+        }else if(epoca >= 1994){
+            valor = valor 
+        }
+    } else {
+        cotacao.forEach(cotacao => {
+            if (cotacao.nome == pais) {
+                valor = valor * cotacao.valor
+            }
+        })
     }
-    return valor 
+    return valor
 }
 
-function cifrao(pais, brasil){
+function cifrao(pais, brasil) {
     let cifroes = ''
-    if(pais == 'Brasil'){
-        if( brasil == 'Real'){
+    if (pais == 'Brasil') {
+        if (brasil == 'Real') {
             cifroes = 'R$'
-        }else if( brasil == 'Cruzeiros'){
+        }else if (brasil == 'Cruzeiros Reais') {
+            cifroes = 'CR$'
+        }else if (brasil == 'Cruzeiros') {
             cifroes = 'Cr$'
-        }else if( brasil == 'Cruzeiros Novos'){
+        }else if (brasil == 'Cruzeiros Novos') {
             cifroes = 'NCr$'
-        }else if( brasil == 'Cruzados'){
+        }else if (brasil == 'Cruzados') {
             cifroes = 'Cz$'
-        }else if( brasil == 'Cruzados Novos'){
+        }else if (brasil == 'Cruzados Novos') {
             cifroes = 'NCz$'
         }
-    }else if(pais == 'Estados Unidos'){
-        cifroes = 'US$'
-    }else if(pais == 'Uruguai'){
-        cifroes = '$U'
-    }else if(pais == 'Argentina'){
-        cifroes = 'A'
+    } else {
+        cotacao.forEach(cotacao => {
+            if (cotacao.nome == pais) {
+                cifroes = Number(0).toLocaleString('pt-br', { style: 'currency', currency: cotacao.sigla }).replace('0,00', '')
+            }
+        })
     }
     return cifroes
 }
 
-function somarTotais(id, valor){
+function somarTotais(id, texto, valor) {
     let moeda = document.getElementById(id)
-    moeda.innerHTML += valor 
+    moeda.innerHTML = ''
+    moeda.innerHTML += texto + valor
 }
 
-somarTotais('moedas', moedas)
-somarTotais('cedulas', cedulas)
-somarTotais('valorTotal', soma.toFixed(2))
-somarTotais('valorConvertido', convertido.toFixed(2))
+function mostrarTotais(moedas, cedulas, soma, convertido, cotacaoMinimo, cotacaoMaximo, cotacaoMedia){
+    somarTotais('moedas', 'Total de Moedas: ', moedas)
+    somarTotais('cedulas', 'Total de Cedulas: ', cedulas)
+    somarTotais('valorTotal', 'Valor Total R$: ', soma.toFixed(2))
+    somarTotais('valorConvertido', 'Valor Convertido R$: ', convertido.toFixed(2))
+    somarTotais('valorCotacaoMinimo', 'Valor Contação Minimo R$: ', cotacaoMinimo.toFixed(2))
+    somarTotais('valorCotacaoMaximo', 'Valor Contação Maximo R$: ', cotacaoMaximo.toFixed(2))
+    somarTotais('valorCotacaoMedia', 'Valor Contação Média R$: ', cotacaoMedia.toFixed(2))
+}
+
+function imprimirSelect(){
+    let tipos = criarArrays('tipo')
+    let ano = criarArrays('ano')
+    let pais = criarArrays('pais')
+    let moeda = criarArrays('moeda')
+    let valor = criarArrays('valor')
+    mostrarTodosSelects(tipos, ano, pais, moeda, valor)
+}
+
+function criarArrays(argumento){
+    let dados = []
+    let ordenar = ''
+    if(argumento == 'tipo'){
+        dados = [...new Set(dinheiros.map(item => item.tipo))]
+    }else if(argumento == 'ano'){
+        dados = [...new Set(dinheiros.map(item => item.ano))]
+    }else if(argumento == 'moeda'){
+        dados = [...new Set(dinheiros.map(item => item.nome))]
+    }else if(argumento == 'valor'){
+        dados = [...new Set(dinheiros.map(item => item.valor))]
+    }else if(argumento == 'pais'){
+        dados = [...new Set(dinheiros.map(item => item.pais))]
+    }else if(argumento == 'cotacao'){
+        dados = [...new Set(dinheiros.map(item => item.cotacao))]
+    }
+    if(argumento == 'tipo' || argumento == 'moeda' || argumento == 'ano' || argumento == 'pais'){
+        ordenar = dados.sort()
+    }else if(argumento == 'valor'){
+        ordenar = dados.map(Number).sort((a, b) => a - b)
+    }else{
+        ordenar = dados.map(Number).sort((a, b) => a + b)
+    }
+    return ordenar.map(dado => ({ nome: dado }))
+}
+
+function mostrarTodosSelects(tipos, ano, pais, moeda, valor){
+    mostrarSelect('tipos', tipos)
+    mostrarSelect('paises', pais)
+    mostrarSelect('ano', ano)
+    mostrarSelect('moeda', moeda)
+    mostrarSelect('valor', valor)
+}
+
+function mostrarSelect(id, dados){
+    let divSelect = document.getElementById(id)
+    dados.forEach(dado => {
+        let option = document.createElement('option')
+        option.value = dado.nome
+        option.innerHTML = dado.nome
+        divSelect.appendChild(option)
+    })
+}
+
+function atualizar(){
+    let selectTipos = document.getElementById('tipos').value
+    let selectPaises = document.getElementById('paises').value
+    let selectAno = document.getElementById('ano').value
+    let selectMoeda = document.getElementById('moeda').value
+    let selectValor = document.getElementById('valor').value
+    let dinheriosFiltrados = filtros(selectTipos, selectPaises, selectAno, selectMoeda, selectValor)
+    mostrarDinheiro(dinheriosFiltrados) 
+}
+
+function filtros(selectTipos, selectPaises, selectAno, selectMoeda, selectValor){
+    let array = []
+    if( selectTipos != ' ' || selectPaises != ' ' || selectAno != ' ' || selectMoeda != ' ' || selectValor != ' ' ){
+        array = dinheiros
+        if(selectTipos != ' '){
+            array = array.filter(dinheiro => { return dinheiro.tipo == selectTipos })
+        } 
+        if(selectPaises != ' '){
+            array = array.filter(dinheiro => { return dinheiro.pais == selectPaises })
+        } 
+        if(selectAno != ' '){
+            array = array.filter(dinheiro => { return dinheiro.ano == selectAno })
+        } 
+        if(selectMoeda != ' '){
+            console.log('moeda')
+            console.log(selectMoeda)
+            array = array.filter(dinheiro => { return dinheiro.nome == selectMoeda })
+        } 
+        if(selectValor != ' '){
+            array = array.filter(dinheiro => { return dinheiro.valor == selectValor })
+        }
+    }else{
+        /* dinheiros.sort(function(a, b) {
+            return b.cotacao - a.cotacao;
+        });
+        array = dinheiros.slice(0, 10) */
+        array = dinheiros
+    }
+    return array
+}
+
+function selects(){
+    valorSelect('tipos')
+    valorSelect('paises')
+    valorSelect('ano')
+    valorSelect('moeda')
+    valorSelect('valor')
+}
+
+function valorSelect(id){    
+    const select = document.getElementById(id);
+    select.addEventListener('change', function() {
+        atualizar()
+    });
+}
