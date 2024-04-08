@@ -138,7 +138,6 @@ function mostrarWebSites(webSites){
     divLinguagem.appendChild(imagens('Linguagem', webSites.linguagem.imagem))
     divLinguagemEscola.appendChild(divLinguagem)
 
-    console.log('')
     let aGitHub = document.createElement('a')
     aGitHub.innerHTML = 'GitHub'
     aGitHub.href = `https://github.com/clovisbalreira/portfolio/tree/main/websites/${webSites.github}`
