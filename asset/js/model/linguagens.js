@@ -15,4 +15,3 @@ let linguagens = [
     new linguagem('vitejs','Vite','vitejs.png',false),
     new linguagem('designer','Designer gráfico','arquivo.png',false)
 ]
-console.log(linguagens)

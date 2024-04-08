@@ -31,16 +31,16 @@ function pastasImagens(titulo, imagem) {
     let pasta = ''
     if (imagem == '') {
         if (titulo == 'Instrutores') {
-            pasta = `./__assets/img/linguagem/professor.png`
+            pasta = `./asset/img/linguagem/professor.png`
         } else {
-            pasta = `./__assets/img/linguagem/escola.jpg`
+            pasta = `./asset/img/linguagem/escola.jpg`
         }
     }
     else {
         if (titulo != 'Linguagem') {
             pasta = `https://github.com/${imagem}.png`
         } else {
-            pasta = `./__assets/img/linguagem/${imagem}`
+            pasta = `./asset/img/linguagem/${imagem}`
         }
     }
     return pasta
