@@ -117,7 +117,7 @@ let programacao = [
 ]
 let votosProgramas = []
 let votosGeral = []
-let votos = [{data: "20240403", dia: "14:40:30"},{data: "20240403", dia: "15:40:32"},]
+let votos = [{data: "20240403", hora: "14:40:30"},{data: "20240403", hora: "15:40:32"},]
 let isplayPause = false
 let musicasTocadas = [
     { data: "20240403", hora: "14:31:07", musica: "\\Gabriel Elias - Pedra Preciosa (mp3cut.net).mp3\r" },
@@ -151,12 +151,12 @@ playButton.forEach((plays) => {
             play.style.display = 'block'
             pause.style.display = 'none'
             isplayPause = false
-            radioPlayer.play();
+            radioPlayer.pause();
         }else{
             play.style.display = 'none'
             pause.style.display = 'flex'
             isplayPause = true
-            radioPlayer.pause();
+            radioPlayer.play();
         }
     })
 })
@@ -243,9 +243,13 @@ const contarVotos = () => {
     console.log(musicasTocadas)
     votosProgramas = []
     votosGeral = []
-    musicasTocadas.forEach( musica => {
-        console.log(musicasTocadas.findIndex[musica.hora])
+    votos.forEach( voto => {
+        console.log(voto)
     })
+    /* musicasTocadas.forEach( musica => {
+        let index = musicasTocadas.findIndex(musica => musica.hora === "14:31:07")
+        console.log(index)
+    }) */
 }
 
 contarVotos()
