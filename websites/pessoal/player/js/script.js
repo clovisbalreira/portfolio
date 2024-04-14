@@ -1,23 +1,9 @@
-/* let programacao = [
-    { dia : 0, programa : [
-            { nome : 'a', horaInicio : '00:00', horaFim : '01:00'},
-            { nome : 'b', horaInicio : '01:00', horaFim : '02:00'},
-        ]
-    },
-    { dia : 6, programa : [
-        { nome : 'a', horaInicio : '21:00', horaFim : '22:00'},
-        { nome : 'b', horaInicio : '22:00', horaFim : '23:00'},
-    ]
-}
-] */
-
 let programacao = [
     { dia : 0, programa : [
         { horaInicio : '00:00', horaFim : '00:59', nome : 'DJ Star, com Mario D'},
         { horaInicio : '01:00', horaFim : '01:59', nome : 'As Mais Pedidas'},
         { horaInicio : '02:00', horaFim : '02:59', nome : 'Uma Hora Direto'},
-        { horaInicio : '03:00', horaFim : '03:59', nome : 'Uma Hora Direto'},
-        { horaInicio : '04:00', horaFim : '13:59', nome : '#CNS'},
+        { horaInicio : '03:00', horaFim : '13:59', nome : '#CNS'},
         { horaInicio : '14:00', horaFim : '15:59', nome : 'Uma Hora Direto'},
         { horaInicio : '15:00', horaFim : '16:59', nome : '#CNS'},
         { horaInicio : '16:00', horaFim : '17:59', nome : 'CNS Hits'},
@@ -178,13 +164,62 @@ setInterval( () => {
     let hora = data.getHours()
     let minutos = data.getMinutes()
     let horaMinutos = `${hora.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}`
-    
-    data.setHours(data.getHours() + 1)
-    let proximaDataDiaAtual = data.getDay()
-    let proximaDataHora = data.getHours()
-    let proximaDataMinutos = data.getMinutes()
-    let proximaDataHoraMinutos = `${proximaDataHora.toString().padStart(2, '0')}:${proximaDataMinutos.toString().padStart(2, '0')}`
-    
-    document.getElementById('frase').innerHTML = `Rádio CNS - A rádio que liga você! Você Está ouvindo ${programa(diaAtual, horaMinutos)} logo em seguida ${programa(proximaDataDiaAtual, proximaDataHoraMinutos)}` /* "Hits | Top 40 | Jovem | Pop-Rock | Música Eletrônica | Notícias | Canoas-RS | radiocns.com" */
+    let indice = programacao[diaAtual].programa.length == programacao[diaAtual].programa.findIndex(p => p.nome === programa(diaAtual, horaMinutos)) ? 0 : programacao[diaAtual].programa.findIndex(p => p.nome === programa(diaAtual, horaMinutos)) + 1;
+    document.getElementById('frase').innerHTML = `Rádio CNS - A rádio que liga você! Você Está ouvindo ${programa(diaAtual, horaMinutos)} logo em seguida ${programacao[hora == 23 ? diaAtual == 6 ? 0 : diaAtual : diaAtual].programa[indice].nome}`
 }, 1000)
 radioPlayer.play()
+
+let musicasTocadas = []
+let time = ''
+let musica = ''
+let arquivos = [{nome: "Salamandra-MainPlayer-Log-20240403.txt", data: "20240403"},{nome: "Salamandra-layer-Log-20240403.txt", data: "20240403"}]
+document.getElementById('file-input').addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    const contem = arquivos.filter(arquivo => {
+        if(arquivo.nome == file.name){
+            console.log(arquivo.nome)
+            return false
+        }
+    })
+    console.log(contem)
+    const numbers = file.name.match(/\d+/g);
+    arquivos.push({nome : file.name, data : numbers[0]})
+    if (!file) {
+        return;
+    }
+    console.log(numbers)
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        const contents = e.target.result;
+        const lines = contents.trim().split('\n');
+        lines.forEach(line => {
+            musicasTocadas.push({ hora : pegarHora(line), musica : pegarMusica(line)})
+        });
+
+        console.log(musicasTocadas)
+        console.log(arquivos)
+    };
+    reader.readAsText(file);
+});
+
+const pegarHora = (line) => {
+    const timePattern = /\d{2}:\d{2}:\d{2}/;
+    const match = line.match(timePattern);
+    if (match) {
+        return match[0];
+    }
+}
+
+const pegarMusica = (line) => {
+    const regex = /\\[^\\]*$/;
+    const match = line.match(regex);
+    if (match) {
+        return match[0]
+    }
+}
+
+/* const contemArquivo = (arquivos) => {
+    arquivos.forEach(arquivo => {
+        return arquivo.nome == file.name ? false : true
+    })
+} */
