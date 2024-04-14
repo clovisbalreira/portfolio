@@ -11,7 +11,7 @@ let programacao = [
             { horaInicio : '02:00', horaFim : '02:59', nome : 'Uma Hora Direto'},
             { horaInicio : '03:00', horaFim : '13:59', nome : '#CNS'},
             { horaInicio : '14:00', horaFim : '14:59', nome : 'Uma Hora Direto'},
-            { horaInicio : '15:00', horaFim : '16:59', nome : '#CNS'},
+            { horaInicio : '15:00', horaFim : '15:59', nome : '#CNS'},
             { horaInicio : '16:00', horaFim : '17:59', nome : 'CNS Hits'},
             { horaInicio : '18:00', horaFim : '19:59', nome : 'As Mais Pedidas'},
             { horaInicio : '19:00', horaFim : '20:59', nome : 'Expresso do Rock'},
@@ -115,9 +115,10 @@ let programacao = [
         ]
     },
 ]
-    
+let votosProgramas = []
+let votosGeral = []
 let votos = [{data: "20240403", dia: "14:40:30"},{data: "20240403", dia: "15:40:32"},]
-let isplayPause = true
+let isplayPause = false
 let musicasTocadas = [
     { data: "20240403", hora: "14:31:07", musica: "\\Gabriel Elias - Pedra Preciosa (mp3cut.net).mp3\r" },
     { data: "20240403", hora: "14:24:28", musica: "\\Justin Timberlake - No Angels (mp3cut.net).mp3\r" }
@@ -172,7 +173,7 @@ setInterval( () => {
     let minutos = data.getMinutes()
     let horaMinutos = `${hora.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}`
     let indice = programacao[diaAtual].programa.length == programacao[diaAtual].programa.findIndex(p => p.nome === programa(diaAtual, horaMinutos)) ? 0 : programacao[diaAtual].programa.findIndex(p => p.nome === programa(diaAtual, horaMinutos)) + 1;
-    document.getElementById('frase').innerHTML = `Rádio CNS - A rádio que liga você! | Você está ouvindo ${programa(diaAtual, horaMinutos)} | Em seguida, você vai ouvir ${programacao[hora == 23 ? diaAtual == 6 ? 0 : diaAtual : diaAtual].programa[indice].nome} | www.radiocns.com | Canoas, Rio Grande do Sul, Brasil.`
+    document.getElementById('frase').innerHTML = `Rádio CNS - A rádio que liga você! | Você está ouvindo agora : ${programa(diaAtual, horaMinutos)} | Em seguida, você vai ouvir ${programacao[hora == 23 ? diaAtual == 6 ? 0 : diaAtual : diaAtual].programa[indice].nome} | www.radiocns.com | Canoas, Rio Grande do Sul, Brasil.`
 }, 1000)
 radioPlayer.play()
 
@@ -240,7 +241,11 @@ capturarVotos.addEventListener('click', () => {
 const contarVotos = () => {
     console.log(votos)
     console.log(musicasTocadas)
-    
+    votosProgramas = []
+    votosGeral = []
+    musicasTocadas.forEach( musica => {
+        console.log(musicasTocadas.findIndex[musica.hora])
+    })
 }
 
 contarVotos()
