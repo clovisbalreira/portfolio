@@ -120,8 +120,8 @@ let votosGeral = []
 let votos = [{data: "20240403", hora: "14:40:30"},{data: "20240403", hora: "15:40:32"},]
 let isplayPause = false
 let musicasTocadas = [
+    { data: "20240403", hora: "14:24:28", musica: "\\Justin Timberlake - No Angels (mp3cut.net).mp3\r" },
     { data: "20240403", hora: "14:31:07", musica: "\\Gabriel Elias - Pedra Preciosa (mp3cut.net).mp3\r" },
-    { data: "20240403", hora: "14:24:28", musica: "\\Justin Timberlake - No Angels (mp3cut.net).mp3\r" }
 ]
 let time = ''
 let musica = ''
@@ -173,7 +173,7 @@ setInterval( () => {
     let minutos = data.getMinutes()
     let horaMinutos = `${hora.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}`
     let indice = programacao[diaAtual].programa.length == programacao[diaAtual].programa.findIndex(p => p.nome === programa(diaAtual, horaMinutos)) ? 0 : programacao[diaAtual].programa.findIndex(p => p.nome === programa(diaAtual, horaMinutos)) + 1;
-    document.getElementById('frase').innerHTML = `Rádio CNS - A rádio que liga você! | Você está ouvindo agora : ${programa(diaAtual, horaMinutos)} | Em seguida, você vai ouvir ${programacao[hora == 23 ? diaAtual == 6 ? 0 : diaAtual : diaAtual].programa[indice].nome} | www.radiocns.com | Canoas, Rio Grande do Sul, Brasil.`
+    document.getElementById('frase').innerHTML = `Rádio CNS - A rádio que liga você! | Você está ouvindo agora: ${programa(diaAtual, horaMinutos)} | Em seguida, você vai ouvir: ${programacao[hora == 23 ? diaAtual == 6 ? 0 : diaAtual : diaAtual].programa[indice].nome} | www.radiocns.com | Canoas, Rio Grande do Sul, Brasil.`
 }, 1000)
 radioPlayer.play()
 
@@ -235,16 +235,17 @@ const incluirZero = (numero) => {
 const capturarVotos = document.querySelector('.heart')
 capturarVotos.addEventListener('click', () => {
     let dataAgora = new Date()
-    votos.push({data: `${dataAgora.getFullYear()}${incluirZero(dataAgora.getMonth())}${incluirZero(dataAgora.getDate())}`,dia : `${dataAgora.getHours()}:${dataAgora.getMinutes()}:${dataAgora.getSeconds()}`})
+    votos.push({data: `${dataAgora.getFullYear()}${incluirZero(dataAgora.getMonth())}${incluirZero(dataAgora.getDate())}`,hora : `${dataAgora.getHours()}:${dataAgora.getMinutes()}:${dataAgora.getSeconds()}`})
 })
 
 const contarVotos = () => {
-    console.log(votos)
-    console.log(musicasTocadas)
     votosProgramas = []
     votosGeral = []
     votos.forEach( voto => {
-        console.log(voto)
+        musicasTocadas.forEach( musica => {
+            console.log(musica.hora)
+        })
+        //console.log(voto.hora)
     })
     /* musicasTocadas.forEach( musica => {
         let index = musicasTocadas.findIndex(musica => musica.hora === "14:31:07")
