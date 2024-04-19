@@ -116,16 +116,16 @@ let programacao = [
     },
 ]
 let votosProgramas = []
-let votosGeral = []
-let votos = [{data: "20240403", hora: "14:40:30"},{data: "20240403", hora: "15:40:32"},]
+let votosGeral = [{musicaInterprete: "\\Justin Timberlake - No Angels (mp3cut.net).mp3\r", voto: 1}]
+let votos = [{data: "20240403", hora: "14:30:30"},{data: "20240403", hora: "15:40:32"},]
 let isplayPause = false
-let musicasTocadas = [
+/* let musicasTocadas = [
     { data: "20240403", hora: "14:24:28", musica: "\\Justin Timberlake - No Angels (mp3cut.net).mp3\r" },
-    { data: "20240403", hora: "14:31:07", musica: "\\Gabriel Elias - Pedra Preciosa (mp3cut.net).mp3\r" },
+    { data: "20240403", hora: "15:44:07", musica: "\\Gabriel Elias - Pedra Preciosa (mp3cut.net).mp3\r" },
 ]
 let time = ''
 let musica = ''
-let arquivos = [{nome: "Salamandra-MainPlayer-Log-20240403.txt", data: "20240403"},{nome: "Salamandra-layer-Log-20240403.txt", data: "20240403"}]
+let arquivos = [{nome: "Salamandra-MainPlayer-Log-20240403.txt", data: "20240403"},{nome: "Salamandra-layer-Log-20240403.txt", data: "20240403"}] */
 
 function estaEntre(horaMinutos, horaInicio, horaFim) {
     return horaMinutos >= horaInicio && horaMinutos < horaFim;
@@ -173,7 +173,7 @@ setInterval( () => {
     let minutos = data.getMinutes()
     let horaMinutos = `${hora.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}`
     let indice = programacao[diaAtual].programa.length == programacao[diaAtual].programa.findIndex(p => p.nome === programa(diaAtual, horaMinutos)) ? 0 : programacao[diaAtual].programa.findIndex(p => p.nome === programa(diaAtual, horaMinutos)) + 1;
-    document.getElementById('frase').innerHTML = `Rádio CNS - A rádio que liga você! | Você está ouvindo agora: ${programa(diaAtual, horaMinutos)} | Em seguida, você vai ouvir: ${programacao[hora == 23 ? diaAtual == 6 ? 0 : diaAtual : diaAtual].programa[indice].nome} | www.radiocns.com | Canoas, Rio Grande do Sul, Brasil.`
+    document.getElementById('audio-frase').innerHTML = `Rádio CNS - A rádio que liga você! | Você está ouvindo agora: ${programa(diaAtual, horaMinutos)} | Em seguida, você vai ouvir: ${programacao[hora == 23 ? diaAtual == 6 ? 0 : diaAtual : diaAtual].programa[indice].nome} | www.radiocns.com | Canoas, Rio Grande do Sul, Brasil.`
 }, 1000)
 radioPlayer.play()
 
@@ -206,21 +206,21 @@ document.getElementById('file-input').addEventListener('change', function(event)
     reader.readAsText(file);
 });
 
-const pegarHora = (line) => {
+/* const pegarHora = (line) => {
     const timePattern = /\d{2}:\d{2}:\d{2}/;
     const match = line.match(timePattern);
     if (match) {
         return match[0];
     }
-}
+} */
 
-const pegarMusica = (line) => {
+/* const pegarMusica = (line) => {
     const regex = /\\[^\\]*$/;
     const match = line.match(regex);
     if (match) {
         return match[0]
     }
-}
+} */
 
 /* const contemArquivo = (arquivos) => {
     arquivos.forEach(arquivo => {
@@ -228,29 +228,54 @@ const pegarMusica = (line) => {
     })
 } */
 
-const incluirZero = (numero) => {
+/* const incluirZero = (numero) => {
     return numero < 10 ? `0${numero}` : numero
-}
+} */
 
-const capturarVotos = document.querySelector('.heart')
+/* const capturarVotos = document.querySelector('.heart')
 capturarVotos.addEventListener('click', () => {
     let dataAgora = new Date()
     votos.push({data: `${dataAgora.getFullYear()}${incluirZero(dataAgora.getMonth())}${incluirZero(dataAgora.getDate())}`,hora : `${dataAgora.getHours()}:${dataAgora.getMinutes()}:${dataAgora.getSeconds()}`})
-})
+}) */
+
+/* function parseHora(horaString) {
+    return new Date('1970-01-01T' + horaString + 'Z');
+} */
+
+/* const isEntre = (voto, musica, musicas) =>  {
+    return parseHora(voto) >= parseHora(musica) && parseHora(voto) <= parseHora(musicas)
+} */
 
 const contarVotos = () => {
-    votosProgramas = []
-    votosGeral = []
+    /* votosProgramas = []
+    votosGeral = [] */
     votos.forEach( voto => {
-        musicasTocadas.forEach( musica => {
-            console.log(musica.hora)
-        })
-        //console.log(voto.hora)
+        console.log(voto)
+        /* musicasTocadas.forEach( musica => {
+            console.log(musicasTocadas)
+            let index = musicasTocadas.findIndex(musica => musica.hora === musica.hora) */
+            /* let horaProximo = index == musicasTocadas.length ? '23:59:59' : musicasTocadas[index+1].hora
+            console.log(index)
+            console.log(musicasTocadas.length)
+            console.log(index == musicasTocadas.length) */
+            /* if(isEntre(voto.hora, musica.hora, musicasTocadas[index+1].hora)){
+                if(votosGeral.length == 0){
+                    votosGeral.push({musicaInterprete: musica.musica, voto : 1})
+                }else{
+                    votosGeral.forEach( voto => {
+                        if(voto.musicaInterprete == musica.musica){
+                            voto.voto += 1
+                            console.log(voto.voto)
+                        }else{
+                            votosGeral.push({musicaInterprete: musica.musica, voto : 1})
+                        }
+                    })
+                }
+            }
+        }) */
     })
-    /* musicasTocadas.forEach( musica => {
-        let index = musicasTocadas.findIndex(musica => musica.hora === "14:31:07")
-        console.log(index)
-    }) */
+    //console.log(votosGeral)
 }
+//bconsole.log(votos)
 
 contarVotos()
