@@ -1,14 +1,14 @@
-let real = 1.00
-let estrageiro = 0.00
-let inverter = false
+let valor = 1.00
+let valorCotacao = 0.00
 let middle = document.querySelector('.middle img')
+let inverter = false
 
 middle.addEventListener('click', () => {
     let valoresSimbolo = document.querySelectorAll('p')
     let simbolo = [valoresSimbolo[0].innerHTML, valoresSimbolo[1].innerHTML]
     valoresSimbolo[0].innerHTML = simbolo[1]
     valoresSimbolo[1].innerHTML = simbolo[0]    
-
+    inverter = inverter == true ? false : true
     let valoresInput = document.querySelectorAll('.amount')
     let valores = [valoresInput[0].value, valoresInput[1].value]
     valoresInput[0].value = valores[1]
@@ -21,8 +21,7 @@ middle.addEventListener('click', () => {
 })
 
 function trocarMoeda(){
-    inverter = true
-    let listas = document.querySelectorAll('.dropdown ul')
+    let listas = document.querySelectorAll('.paises')
     let valoresSelect = document.querySelectorAll('.selected')
     let simbolo = [valoresSelect[0].innerHTML.slice(0,3),valoresSelect[1].innerHTML.slice(0,3)]
     listas.forEach((lista,index) => {
@@ -35,10 +34,22 @@ function trocarMoeda(){
                 }else{
                     simbolo[0] = valoresSelect[index].innerHTML.slice(0,3)
                 }
-                contacaoMoeda(simbolo,1)
+               contacaoMoeda(trocarBandeiras(simbolo),1)
             })
         })
     })    
+}
+
+function trocarBandeiras(simbolo){
+    let bandeira = []
+    if(inverter){
+        bandeira.push(simbolo[1])
+        bandeira.push('BRL')
+    }else{
+        bandeira.push('BRL')
+        bandeira.push(simbolo[1])
+    }
+    return bandeira
 }
 
 function adicionarZero(variavel){
@@ -65,7 +76,7 @@ function criarInput(codigoMoeda, k, input, data){
         input.disabled = false
         input.classList.add('brasil')
     }else{
-        estrageiro = data[codigoMoeda[k]].value[data[codigoMoeda[k]].value.length - 1].cotacaoVenda  
+        valorCotacao = data[codigoMoeda[k]].value[data[codigoMoeda[k]].value.length - 1].cotacaoVenda  
         input.disabled = true
         input.classList.remove('brasil')
         soma = data[codigoMoeda[k]].value[data[codigoMoeda[k]].value.length - 1].cotacaoVenda 
@@ -77,6 +88,7 @@ function criarInput(codigoMoeda, k, input, data){
 }
 
 function colocarBandeira(ul, moeda){
+    ul.classList.add('paises')
     for(let i = 0; i < moeda.value.length; i++){
         let li = document.createElement('li')
         li.innerHTML = moeda.value[i].simbolo
@@ -96,18 +108,18 @@ function calcularConversao(){
     bandeiraBrasil = document.querySelectorAll('.selected')
     inputs = document.querySelectorAll('input')
     if(bandeiraBrasil[0].textContent == 'BRL'){
-        inputs[1].value = parseFloat(inputs[0].value / estrageiro).toFixed(2).replace('.',',')
-        real = parseFloat(inputs[0].value).toFixed(2).replace('.',',')
+        inputs[1].value = parseFloat(inputs[0].value / valorCotacao).toFixed(2).replace('.',',')
+        valor = parseFloat(inputs[0].value).toFixed(2).replace('.',',')
     }else{
-        inputs[1].value = parseFloat(estrageiro * inputs[0].value).toFixed(2).replace('.',',')
-        real = parseFloat(inputs[0].value).toFixed(2).replace('.',',')
+        inputs[1].value = parseFloat(valorCotacao * inputs[0].value).toFixed(2).replace('.',',')
+        valor = parseFloat(inputs[0].value).toFixed(2).replace('.',',')
     }
 }
 
 function colocarValoresMoedas(){
     let inputs = document.querySelectorAll('input')
-    inputs[0].value = parseFloat(estrageiro).toFixed(2).replace('.',',')
-    inputs[1].value = parseFloat(real).toFixed(2).replace('.',',')
+    inputs[0].value = parseFloat(valorCotacao).toFixed(2).replace('.',',')
+    inputs[1].value = parseFloat(valor).toFixed(2).replace('.',',')
 }
 
 function mostrarCotacao(moeda,data,simbolo){
@@ -117,9 +129,10 @@ function mostrarCotacao(moeda,data,simbolo){
     let moedas = simbolo
     let codigoMoeda = [-1]
     codigoMoeda = pegarCodigoMoeda(codigoMoeda, moeda, moedas)
+    if(inverter){
+        codigoMoeda.reverse()
+    }
     criarGrafico(data, codigoMoeda)
-    //moedas.slice().reverse()
-    //codigoMoeda.reverse()
     for(let k = 0; k < money_wrapper.length ; k++){  
         let simboloDinheiro = document.createElement('p')
         simboloDinheiro.innerHTML = Number(0).toLocaleString('pt-br', {style:'currency', currency: moedas[k]}).replace('0,00', '')  
@@ -166,7 +179,6 @@ function criarGrafico(data, codigoMoeda){
     }
 
     let maiorCotacao = datasCotacao.reduce((max, atual) => atual > max ? atual : max, datasCotacao[0])
-    console.log((parseFloat(maiorCotacao.y)).toFixed(1))
     const options = {
     series: [
         {
@@ -235,4 +247,4 @@ function criarGrafico(data, codigoMoeda){
 
     const chart = new ApexCharts(document.querySelector("#chart"), options)
     chart.render()
-}
+} 
