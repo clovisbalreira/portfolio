@@ -158,8 +158,8 @@ function mostrarWebSites(webSites){
     let divInstrutores = document.createElement('div')
     let divInstrutoresTitulo = document.createElement('div')
     
-
-    if(webSites.instrutor[0].imagem != 'clovisbalreira'){
+    console.log(`instrutor ${webSites.instrutor[0].imagem}`)
+    if(webSites.instrutor[0].imagem != 'clovisbalreira' && webSites.instrutor[0].imagem != undefined){
         let h3Instrutor = document.createElement('h3')
         h3Instrutor.innerHTML = 'Instrutores'
         divInstrutoresTitulo.appendChild(h3Instrutor)
@@ -168,7 +168,7 @@ function mostrarWebSites(webSites){
         
     let divInstrutor = document.createElement('div')
     webSites.instrutor.forEach( instrutor => {
-            if(instrutor.nome != 'Clóvis'){
+            if(instrutor.nome != 'Clóvis' && instrutor.nome != undefined){
                 divInstrutor.appendChild(imagens('instrutor', instrutor))
             }
         }

@@ -8,7 +8,7 @@ let escolas = [
     new escola('dev-dobro','Dev Dobro','devemdobro',true),
     new escola('dio','Dio','digitalinnovationone',false),
     new escola('estudonauta','Estudonauta','estudonauta',false),
-    new escola('hashtag','Hashtag','',false),
+    new escola('hashtag','Hashtag','',true),
     new escola('informaticon','Informaticon','',false),
     new escola('onebitcode','Onebitcode','',false),
     new escola('rocketseat','Rocketseat','Rocketseat',true),

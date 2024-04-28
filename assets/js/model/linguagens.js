@@ -1,5 +1,5 @@
 let linguagens = [
-    new linguagem('html-css','HTML e CSS','html_css.png',false),
+    new linguagem('html-css','HTML e CSS','html_css.png',true),
     new linguagem('html-css-javscript','HTML, CSS e JavaScript','html_css_javascript.png',true),
     new linguagem('javascript','Javascript','javascript.png',false),
     new linguagem('php','P.H.P.','php.png',false),
