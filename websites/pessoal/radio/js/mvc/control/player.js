@@ -1,0 +1,1 @@
+mostrarPlayer(programacao[indexRadio])

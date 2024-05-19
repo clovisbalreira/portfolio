@@ -1,0 +1,1 @@
+atualizarDados(dados[indexRadio])

@@ -1,0 +1,1 @@
+mostrarPosts(posts, dados[indexRadio].nome)

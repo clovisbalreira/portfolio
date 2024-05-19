@@ -23,17 +23,20 @@ let curriculo = {
             ingles : { nome : 'Demonstrator / Promoter (Operational)', dado : 'Managed stock and product expiry, implemented marketing strategies and competitive analysis.' },   
             empresa : {
                 portugues :[
+                    { nome : 'AMBEV – COMPANHIA DE BEBIDAS DAS AMÉRICAS', data_inicio : '04/2024', data_fim : 'Atualmente' },
                     { nome : 'DIAGIO', data_inicio : '01/2024', data_fim : '02/2024'},
                     { nome : 'VINÍCULA GARIBALDI', data_inicio : '11/2023', data_fim : '12/2023' },
                     { nome : 'COCA-COLA FEMSA', data_inicio : '10/2022', data_fim : '12/2022' },
                     { nome : 'AMBEV – COMPANHIA DE BEBIDAS DAS AMÉRICAS', data_inicio : '12/2010', data_fim : '10/2020' }],
-                espanhol : [ 
+                    espanhol : [ 
+                    { nome : 'AMBEV – COMPAÑÍA DE BEBIDAS DE LAS AMÉRICAS', data_inicio : '04/2024', data_fim : 'En este momento' },
                     { nome : 'DIAGEO', data_inicio : '01/2024', data_fim : '02/2024'},
                     { nome : 'VINÍCOLA GARIBALDI', data_inicio : '11/2023', data_fim : '12/2023' },
                     { nome : 'COCA-COLA FEMSA', data_inicio : '10/2022', data_fim : '12/2022' },
                     { nome : 'AMBEV – COMPAÑÍA DE BEBIDAS DE LAS AMÉRICAS', data_inicio : '12/2010', data_fim : '10/2020' }
                 ],
                 ingles : [ 
+                    { nome : 'AMBEV – BEVERAGE COMPANY OF THE AMERICAS', data_inicio : '04/2024', data_fim : 'At the moment' },
                     { nome : 'DIAGEO', data_inicio : '01/2024', data_fim : '02/2024'},
                     { nome : 'VINÍCOLA GARIBALDI', data_inicio : '11/2023', data_fim : '12/2023' },
                     { nome : 'COCA-COLA FEMSA', data_inicio : '10/2022', data_fim : '12/2022' },
