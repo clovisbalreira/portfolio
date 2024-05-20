@@ -4,7 +4,7 @@ botoes.forEach( botao => {
         dados.forEach( (dado, index) => {
             indexRadio = index
             if(e.target.alt == dado.nome){
-                console.log(dado.nome)
+                conta = 3
                 mostrarPlayer(programacao[indexRadio])
                 atualizarDados(dados[indexRadio])
                 mostrarParada(parada[indexRadio])

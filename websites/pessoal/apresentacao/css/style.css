@@ -173,13 +173,10 @@ main{
 #curriculo .div-dados-pessoais{
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    gap: .1rem;
-}
-
-#curriculo .div-dados-pessoais h4{
+    justify-content: space-between;
+    align-items: start;
     margin-left: 2rem;
-    padding-right: .5rem;
+    gap: .1rem;
 }
 
 #curriculo .div-experiencia-profissional div div{
@@ -234,7 +231,39 @@ footer a:hover{
     color: white;
 }
 
+@media (max-width: 1133px){
+    #curriculo .div-dados-pessoais{
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media (max-width: 1062px){
+    #curriculo .div-formacao-academica{
+        flex-direction: column;
+        align-items: start;
+    }
+    
+    .deletar{
+        display: none;
+    }
+}
+
+@media (max-width: 951px){
+    #curriculo .div-experiencia-profissional div div{
+        flex-direction: column;
+    }
+    
+    #curriculo .div-experiencia-profissional div div p{
+        display: none;
+    }
+}
+
 @media (max-width: 813px){
+    #curriculo .div-experiencia-profissional div div{
+        background-color: red;
+    }
+
     .star-3{
         margin-top: 1rem;
     }

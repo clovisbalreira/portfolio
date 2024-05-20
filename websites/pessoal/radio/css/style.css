@@ -195,6 +195,16 @@ section{
     background-color: rgba(0, 0, 0, 0.76);
 }
 
+#section-post{
+    display: flex;
+    justify-content: center;    
+}
+
+#btn-posts{
+    height: 2rem;
+    padding: 0 2rem ;
+}
+
 #redes-sociais, #parada{
     display: flex;
     flex-direction: column;

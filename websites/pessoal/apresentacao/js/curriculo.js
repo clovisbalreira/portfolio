@@ -53,10 +53,17 @@ function strong(texto){
     return strong
 }
 
-function p(texto){
+function p(texto, classe){
     let p = document.createElement('p')
+    p.classList.add(classe)
     p.innerHTML = texto
     return p
+}
+
+function span(texto){
+    let span = document.createElement('span')
+    span.innerHTML = texto
+    return span
 }
 
 function empresas(contratos){
@@ -65,9 +72,7 @@ function empresas(contratos){
         let div = document.createElement('div')
         div.appendChild(strong(contrato.nome))
         div.appendChild(p('|'))
-        div.appendChild(p(contrato.data_inicio))
-        div.appendChild(p('-'))
-        div.appendChild(p(contrato.data_fim))
+        div.appendChild(span(`${contrato.data_inicio} - ${contrato.data_fim}`))
         divGlobal.appendChild(div)
     })
     return divGlobal
@@ -97,12 +102,10 @@ function formacaoAcademica(formacao){
     let div = document.createElement('div')
     div.classList.add('div-formacao-academica')
     div.appendChild(strong(formacao.nome))
-    div.appendChild(p(' - '))
+    div.appendChild(p(' - ', 'deletar'))
     div.appendChild(p(formacao.instituicao))
-    div.appendChild(p('|'))
-    div.appendChild(p(formacao.data_inicio))
-    div.appendChild(p('-'))
-    div.appendChild(p(formacao.data_fim))
+    div.appendChild(p('|', 'deletar'))
+    div.appendChild(span(`${formacao.data_inicio} - ${formacao.data_fim}`))
     return div
 }
 
