@@ -73,7 +73,6 @@ const programa = (diaAtual, horaMinutos, programacao, desbloquear) => {
                 programa.programas.forEach( tempo => {
                     if(estaEntre(horaMinutos, tempo.horaInicio, tempo.horaFim)){
                         like.push(new Like(programacao[indexRadio].radio.nome, nomeDia(diaAtual), horaMinutos, tempo.nome))
-                        /* desbloquear.push({radio: programacao[indexRadio].radio.nome, dia : nomeDia(diaAtual), inicio: tempo.horaInicio, fim: '16:22'}) */
                         desbloquear = lerLocalStorage('favorito') ?? []
                         desbloquear.push({radio: programacao[indexRadio].radio.nome, dia : nomeDia(diaAtual), inicio: tempo.horaInicio, fim: tempo.horaFim})
                         salvarLocalStorage('favorito', desbloquear)

@@ -4,6 +4,8 @@ const mostrarPosts = (posts, radio) => {
     divPost.innerHTML = ''
     let artigoTotal = artigos.length
     if(conta > artigoTotal){
+        let botaoSection = document.getElementById('section-post')
+        botaoSection.style.display = 'none'
         conta = artigoTotal
     }
     for(let i = 0; i < conta; i++){
