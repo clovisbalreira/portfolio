@@ -103,7 +103,6 @@ botoes.forEach(botao => {
             removerMain()
             for (let i = 0; i < webSites.length; i++) {
                 if (atributos.escola == webSites[i].escola.id) {
-                    console.log(webSites[i])
                     mostrarWebSites(webSites[i])
                 }
             }
@@ -157,8 +156,6 @@ function mostrarWebSites(webSites){
     a.appendChild(divLinguagemEscola)
     let divInstrutores = document.createElement('div')
     let divInstrutoresTitulo = document.createElement('div')
-    
-    console.log(`instrutor ${webSites.instrutor[0].imagem}`)
     if(webSites.instrutor[0].imagem != 'clovisbalreira' && webSites.instrutor[0].imagem != undefined){
         let h3Instrutor = document.createElement('h3')
         h3Instrutor.innerHTML = 'Instrutores'

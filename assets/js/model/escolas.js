@@ -6,7 +6,7 @@ let escolas = [
     new escola('curso-em-video','Curso em video','cursoemvideo',false),
     new escola('deitel','Deitel','',false),
     new escola('dev-dobro','Dev Dobro','devemdobro',true),
-    new escola('dio','Dio','digitalinnovationone',false),
+    new escola('dio','Dio','digitalinnovationone',true),
     new escola('estudonauta','Estudonauta','estudonauta',false),
     new escola('hashtag','Hashtag','',true),
     new escola('informaticon','Informaticon','',false),
