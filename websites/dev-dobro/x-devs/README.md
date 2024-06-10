@@ -1,6 +1,6 @@
 Descrição do Projeto
 
-Este projeto, desenvolvido para a "Semana do Zero ao Programador Contratado" da X-DEVS, é uma página web interativa que apresenta personagens fictícios de desenvolvedores, cada um com suas próprias características e histórias. A interface permite que os usuários naveguem pelos cartões dos personagens utilizando botões de navegação.
+Este projeto, desenvolvido X-DEVS, é uma página web interativa que apresenta personagens fictícios de desenvolvedores, cada um com suas próprias características e histórias. A interface permite que os usuários naveguem pelos cartões dos personagens utilizando botões de navegação.
 Linguagens Utilizadas
 
     HTML: Estruturação do conteúdo da página.
