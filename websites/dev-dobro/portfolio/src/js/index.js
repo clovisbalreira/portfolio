@@ -5,6 +5,7 @@ const websites = [
   {nome: 'Super Mario', caminho: 'super-mario'},
   {nome: 'The Last Us', caminho: 'the-last-us'},
   {nome: 'X-men', caminho: 'x-men'},
+  {nome: 'X-Devs', caminho: 'x-devs'},
 ]
 
 const btnMostrarProjetos = document.querySelector('.btn-mostrar-projetos');
@@ -42,15 +43,15 @@ function mostrarProjetos(websites, quantidadeDeProjetos) {
 function mostrarMaisProjetos() {  
   const projetosInativos = document.querySelectorAll('.projeto:not(.ativo')
   quantidadeDeProjetos += 2
-  for(let i = 0; i < 2; i++){
+  let valor = quantidadeDeProjetos > websites.length ? 1 : 2
+  console.log(quantidadeDeProjetos)
+  for(let i = 0; i < valor; i++){
     projetosInativos[i].classList.add('ativo')
   }
-/*   projetosInativos.forEach(projetosInativo => {
-  }) */
 }
 
 function esconderBotao(){
-  if(quantidadeDeProjetos == websites.length){ 
+  if(quantidadeDeProjetos >= websites.length){ 
     btnMostrarProjetos.classList.add('remover')
   }
 }
