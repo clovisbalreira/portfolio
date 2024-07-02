@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: gray;
+}
+
+.scroll{
+    margin-top: 50px;
+    margin-inline: auto;
+    max-width: 700px;
+    background-color: gray;
+    padding: 25px;
+    border-radius: 5px;
+    overflow: hidden;
+    mask: linear-gradient( to right, transparent, white 15%, white 85%, transparent);
+}
+
+.scroll_container{
+    display: flex;
+    gap: 10px;
+    width: max-content;
+    animation: scrollInfinito 10s linear infinite;
+}
+
+.scroll_item{
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    white-space: nowrap;
+    border-radius: 5px;
+}
+
+@keyframes scrollInfinito {
+    to{
+        translate: calc( -50% - 5px);
+    }
+    
+}
