@@ -1,0 +1,20 @@
+
+@font-face {
+    font-family: "Trench";
+    src: url("../fonte/trench/trench100.ttf");
+}
+
+body{
+    background-color: #121212;
+    color: white;
+}
+
+h1{
+    font-family: "Trench" sans-serif;
+}
+
+.secao--hero{
+    background-image: url(https://cdn.prod.website-files.com/61b9e0dd381626819c8d4f83/660d9e60b52c66db2e67e0b4_%5BBACKGROUND%5D%20-%20BANNER%2001%20-%20WJS1.webp);
+    background-position: 50%;
+    background-size: cover;
+}

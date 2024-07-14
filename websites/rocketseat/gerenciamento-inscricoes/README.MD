@@ -1,4 +1,4 @@
-Projeto: NLW UNITE
+Projeto: NLW UNITE - Gerenciamento de Inscrições
 
 Descrição: NLW UNITE é um projeto desenvolvido para facilitar o gerenciamento de inscrições em eventos, permitindo o registro de participantes e a realização de check-in de maneira simples e eficiente. Utilizando tecnologias web modernas, o projeto oferece uma interface amigável para cadastro de participantes, exibição da lista de inscritos, e uma funcionalidade de check-in com apenas um clique.
 
