@@ -15,5 +15,6 @@ let instrutores = [
     new instrutor('paulo-silveira','Paulo Silveira','peas',false),
     new instrutor('rafaella-ballerini','Rafaella Ballerini','rafaballerini',false),
     new instrutor('ramiro-lobo','Ramiro Lobo','RamiroFabricioLobo',false),
-    new instrutor('ricardo-roberto','Ricardo e Roberto','devemdobro',true)
+    new instrutor('ricardo-roberto','Ricardo e Roberto','devemdobro',true),
+    new instrutor('isaacpontes','Isaac Pontes','isaacpontes',true)
 ]

@@ -10,7 +10,7 @@ let escolas = [
     new escola('estudonauta','Estudonauta','estudonauta',false),
     new escola('hashtag','Hashtag','',true),
     new escola('informaticon','Informaticon','',false),
-    new escola('onebitcode','Onebitcode','',false),
+    new escola('onebitcode','Onebitcode','',true),
     new escola('rocketseat','Rocketseat','Rocketseat',true),
     new escola('sujeito-programador','Sujeito Programador','sujeitoprogramador',false),
     new escola('varos','Varos','',false)
