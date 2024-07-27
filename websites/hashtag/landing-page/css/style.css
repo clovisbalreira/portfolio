@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;    
+    box-sizing: border-box;
+}
 
 @font-face {
     font-family: "Trench";
@@ -7,14 +12,102 @@
 body{
     background-color: #121212;
     color: white;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
 }
 
 h1{
     font-family: "Trench" sans-serif;
+    text-align: center;
+    font-size: 43px;
+    line-height: 100%;
+}
+
+h1 span:nth-child(1){
+    color: #00a1ff;
+}
+
+h1 span:nth-child(2){
+    font-size: 45px;
+}
+
+h1 span:nth-child(3){
+    font-size: 62px;
 }
 
 .secao--hero{
     background-image: url(https://cdn.prod.website-files.com/61b9e0dd381626819c8d4f83/660d9e60b52c66db2e67e0b4_%5BBACKGROUND%5D%20-%20BANNER%2001%20-%20WJS1.webp);
     background-position: 50%;
     background-size: cover;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    background-color: #050505;
+    box-shadow: 0 0 25px 5px #00a1ff;
+    padding: 30px 40px;
+    border-radius: 25px;
+    max-width: 50%;
+    font-size: 19px;
+}
+
+.subtitulo, .data, button{
+    font-size: 23px;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 7.5px;
+    list-style: none;
+}
+
+li{
+    display: flex;
+    align-items: flex-start;
+    gap: 7.5px;
+}
+
+li img{
+    margin-top: 2.5px;
+}
+
+.data{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 0 15px 0 #00a1ff;
+    border-radius: 100px;
+    padding: 10px 30px;
+}
+
+button{
+    background-color: #00a1ff;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 100px;
+    border: 3px solid #003655;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+button:hover{
+    border-right-width: 4px;
+    border-bottom-width: 4px;
+    border-top-width: 4px;
+    border-left-width: 4px;
 }
