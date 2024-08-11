@@ -6,6 +6,7 @@ const websites = [
   {nome: 'The Last Us', caminho: 'the-last-us'},
   {nome: 'X-men', caminho: 'x-men'},
   {nome: 'X-Devs', caminho: 'x-devs'},
+  {nome: 'Casa do Dragão', caminho: 'casa-dragao'},
 ]
 
 const btnMostrarProjetos = document.querySelector('.btn-mostrar-projetos');
