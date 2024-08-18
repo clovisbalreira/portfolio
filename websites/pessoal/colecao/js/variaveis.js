@@ -8,7 +8,7 @@ pacote 41
 */
 
 let dinheiros = [
-  
+  /*
   { serie : 'B13823D44570', nome : 'Cruzeiros', ano : '1970-1980', valor : '1', cotacao : { cotacaoMinimo : '5', cotacaoMaximo : '240'}, pais : 'Brasil', tipo : 'Cedula', imagem_frente : 'frente-0001.png', imagem_verso : 'verso-0001.png', pacote : '1'},
     { serie : 'B15119D32573', nome : 'Cruzeiros', ano : '1970-1980', valor : '1', cotacao : { cotacaoMinimo : '5', cotacaoMaximo : '240'}, pais : 'Brasil', tipo : 'Cedula', imagem_frente : 'frente-0002.png', imagem_verso : 'verso-0002.png', pacote : '2'},
     { serie : 'B17314D26196', nome : 'Cruzeiros', ano : '1970-1980', valor : '1', cotacao : { cotacaoMinimo : '5', cotacaoMaximo : '240'}, pais : 'Brasil', tipo : 'Cedula', imagem_frente : 'frente-0003.png', imagem_verso : 'verso-0003.png', pacote : '3'},
@@ -308,7 +308,8 @@ let dinheiros = [
     { serie : 'A4024004110A', nome : 'Cruzeiros', ano : '1990-1993', valor : '5000', cotacao : { cotacaoMinimo : '4', cotacaoMaximo : '46'}, pais : 'Brasil', tipo : 'Cedula', imagem_frente : 'frente-0298.png', imagem_verso : 'verso-0298.png', pacote : '298'},
     { serie : 'A0444025071A', nome : 'Cruzeiros', ano : '1990-1993', valor : '5000', cotacao : { cotacaoMinimo : '4', cotacaoMaximo : '46'}, pais : 'Brasil', tipo : 'Cedula', imagem_frente : 'frente-0299.png', imagem_verso : 'verso-0299.png', pacote : '299'}, 
     { serie : 'A5650041260A', nome : 'Cruzeiros', ano : '1993', valor : '100000', cotacao : { cotacaoMinimo : '4', cotacaoMaximo : '38'}, pais : 'Brasil', tipo : 'Cedula', imagem_frente : 'frente-0300.png', imagem_verso : 'verso-0300.png', pacote : '300'},
-
+    */
+    
     { serie : '', nome : 'Nuevos Pesos', ano : '1978', valor : '1', cotacao : { cotacaoMinimo : '0', cotacaoMaximo : '0'}, pais : 'Uruguai', tipo : 'Moeda', imagem_frente : 'frente-0001.png', imagem_verso : 'verso-0001.png', pacote : '1'},
     { serie : '', nome : 'Cruzeiros', ano : '1978', valor : '0.50', cotacao : { cotacaoMinimo : '0', cotacaoMaximo : '0'}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0002.png', imagem_verso : 'verso-0002.png', pacote : '2'},
     { serie : '', nome : 'Cruzeiros', ano : '1972', valor : '1', cotacao : { cotacaoMinimo : '0', cotacaoMaximo : '0'}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0003.png', imagem_verso : 'verso-0003.png', pacote : '3'},
@@ -409,7 +410,6 @@ let dinheiros = [
     { serie : '', nome : 'Cruzeiros Reais', ano : '1993', valor : '500', cotacao : { cotacaoMinimo : '0', cotacaoMaximo : '0'}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0098.png', imagem_verso : 'verso-0098.png', pacote : '098'},
                                                      
    { serie : '', nome : 'Cruzeiros Reais', ano : '1993', valor : '500', cotacao : { cotacaoMinimo : '0', cotacaoMaximo : '0'}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0099.png', imagem_verso : 'verso-0099.png', pacote : '099'},
-   /* Cruzeiro (1942-1967) - Cruzeiro novo (1967-1970)- Cruzeiro (1970-1986) - Cruzado (1986-1989) - Cruzado novo (1989-1990) - Cruzeiro (1990-1993) - Cruzeiro real (1993-1994)*/
     { serie : '', nome : '', ano : '', valor : '', cotacao : { cotacaoMinimo : '0', cotacaoMaximo : '0'}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0101.png', imagem_verso : 'verso-0101.png', pacote : '101'},
     { serie : '', nome : '', ano : '', valor : '', cotacao : { cotacaoMinimo : '0', cotacaoMaximo : '0'}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0102.png', imagem_verso : 'verso-0102.png', pacote : '102'},
     { serie : '', nome : '', ano : '', valor : '', cotacao : { cotacaoMinimo : '0', cotacaoMaximo : '0'}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0103.png', imagem_verso : 'verso-0103.png', pacote : '103'},
@@ -647,6 +647,7 @@ let dinheiros = [
     { serie : '', nome : '', ano : '', valor : '', cotacao : { cotacaoMinimo : '0', cotacaoMaximo : '0'}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0337.png', imagem_verso : 'verso-0337.png', pacote : '337'},
     { serie : '', nome : '', ano : '', valor : '', cotacao : { cotacaoMinimo : '0', cotacaoMaximo : '0'}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0338.png', imagem_verso : 'verso-0338.png', pacote : '338'},
     { serie : '', nome : '', ano : '', valor : '', cotacao : { cotacaoMinimo : '0', cotacaoMaximo : '0'}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0339.png', imagem_verso : 'verso-0339.png', pacote : '339'},
+    
     { serie : '', nome : '', ano : '', valor : '', cotacao : { cotacaoMinimo : '0', cotacaoMaximo : '0'}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0340.png', imagem_verso : 'verso-0340.png', pacote : '340'},
     { serie : '', nome : '', ano : '', valor : '', cotacao : { cotacaoMinimo : '0', cotacaoMaximo : '0'}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0341.png', imagem_verso : 'verso-0341.png', pacote : '341'},
     { serie : '', nome : '', ano : '', valor : '', cotacao : { cotacaoMinimo : '0', cotacaoMaximo : '0'}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0342.png', imagem_verso : 'verso-0342.png', pacote : '342'},
