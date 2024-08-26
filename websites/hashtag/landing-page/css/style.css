@@ -142,7 +142,7 @@ button {
 h1 {
   font-family: "Trench", sans-serif;
   text-align: center;
-  font-size: 45px;
+  font-size: 49px;
   line-height: 100%;
 }
 
@@ -329,4 +329,49 @@ li img {
 .footer__links {
   display: flex;
   gap: 10px;
+}
+
+/* Popup */
+.popup {
+  display: none;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(7px);
+}
+
+.popup--aberto .popup {
+  display: flex;
+}
+
+.popup__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #1e1e1e;
+  padding: 25px;
+  border-radius: 25px;
+}
+
+input {
+  padding: 10px 15px;
+  border-radius: 100px;
+  border: 2px solid #0068a5;
+  background-color: transparent;
+  font-size: 16px;
+  outline: none;
+  color: white;
+}
+
+.popup__botao--fechar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+  padding: 10px;
+  aspect-ratio: 1 / 1;
+  height: 54px;
 }

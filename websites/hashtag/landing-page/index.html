@@ -4,9 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MasterClass Full Stack</title>
-
     <link rel="stylesheet" href="./css/style.css" />
-
+    <script defer src="./js/scripts.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,7 +14,7 @@
     />
   </head>
 
-  <body>
+  <body class="">
     <main>
       <section class="secao secao--hero">
         <div class="container">
@@ -243,6 +242,7 @@
               </p>
             </div>
           </div>
+          <button>Garanta sua vaga</button>
         </div>
       </section>
 
@@ -297,5 +297,16 @@
         </div>
       </div>
     </footer>
+    <div class="popup">
+      <form class="popup__container">
+        <button type="button" class="popup__botao popup__botao--fechar">
+          X
+        </button>
+        <input type="text" placeholder="*Seu primeiro nome" />
+        <input type="email" placeholder="*Seu melhor e-mail" />
+        <input type="text" placeholder="*Seu WhatsApp com DDD" />
+        <button class="popup__botao">Quero garantir minha vaga</button>
+      </form>
+    </div>
   </body>
 </html>
