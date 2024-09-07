@@ -19,124 +19,26 @@ function mostrarDinheiro(dinheriosFiltrados) {
             (dinheriosFiltrados[i].cotacao.cotacaoMaximo) ) / 2
             let section = document.createElement('section')
             let divDados = document.createElement('div')
-            let h2Nome = document.createElement('h2')
-            h2Nome.innerHTML = `${dinheriosFiltrados[i].nome}`
-            divDados.appendChild(h2Nome)
-
-            let serie = 'Serie'
-            console.log(dinheriosFiltrados[i].tipo)
-            if (dinheriosFiltrados[i].tipo == 'Moeda') {
-                serie = 'Lado'
-            }
-            let divSerie = document.createElement('div')
-            let h2Serie = document.createElement('h2')
-            h2Serie.innerHTML = serie
-            divSerie.appendChild(h2Serie)
-            let pSerie = document.createElement('p')
-            pSerie.innerHTML = dinheriosFiltrados[i].serie
-            divSerie.appendChild(pSerie)
-            divDados.appendChild(divSerie)
-
+            divDados.appendChild(nomeDinheiro(dinheriosFiltrados[i]))
+            divDados.appendChild(series(dinheriosFiltrados[i]))
             section.appendChild(divDados)
-
             let divPaisAno = document.createElement('div')
-
-            let divAno = document.createElement('div')
-            let h2Ano = document.createElement('h2')
-            h2Ano.innerHTML = 'Ano'
-            divAno.appendChild(h2Ano)
-            divPaisAno.appendChild(divAno)
-
-            let pAno = document.createElement('p')
-            pAno.innerHTML = dinheriosFiltrados[i].ano
-            divPaisAno.appendChild(pAno)
-
-            let divPais = document.createElement('div')
-            let h2Pais = document.createElement('h2')
-            h2Pais.innerHTML = 'Pais'
-            divPais.appendChild(h2Pais)
-
-            let divNomeImagem = document.createElement('div')
-            let pPais = document.createElement('p')
-            divNomeImagem.innerHTML = dinheriosFiltrados[i].pais
-            divPais.appendChild(pPais)
-            let paisImagem = document.createElement('img')
-            paisImagem.src = `./img/bandeira/${dinheriosFiltrados[i].pais.toLowerCase().replace(" ", "-").replace("ç", "c")}.png`
-            paisImagem.alt = dinheriosFiltrados[i].pais
-            divNomeImagem.appendChild(paisImagem)
-            divPais.appendChild(divNomeImagem)
-            divPaisAno.appendChild(divPais)
-
+            divPaisAno.appendChild(anoTitulo())
+            divPaisAno.appendChild(paragrafoAno(dinheriosFiltrados[i])) 
+            divPaisAno.appendChild(pais(dinheriosFiltrados[i]))
             section.appendChild(divPaisAno)
-
-            let divValor = document.createElement('div')
-            let h2Valor = document.createElement('h2')
-            h2Valor.innerHTML = 'Valor'
-            divValor.appendChild(h2Valor)
-            let pValor = document.createElement('p')
-            pValor.innerHTML = `${cifrao(dinheriosFiltrados[i].pais, dinheriosFiltrados[i].nome)} ${parseFloat(dinheriosFiltrados[i].valor).toFixed(2)}`
-            divValor.appendChild(pValor)
-            section.appendChild(divValor)
-
-            let divAtual = document.createElement('div')
-            let h2Atual = document.createElement('h2')
-            h2Atual.innerHTML = 'Conversão'
-            divAtual.appendChild(h2Atual)
-            let pAtual = document.createElement('p')
-            pAtual.innerHTML = `R$: ${casaDecimal(atualizarValor(dinheriosFiltrados[i].ano, dinheriosFiltrados[i].nome, dinheriosFiltrados[i].pais, parseFloat(dinheriosFiltrados[i].valor)).toFixed(20))}`
-            divAtual.appendChild(pAtual)
-            section.appendChild(divAtual)
-
-            let divCotacaoMinimo = document.createElement('div')
-            let h2CotacaoMinimo = document.createElement('h2')
-            h2CotacaoMinimo.innerHTML = 'Cotação Venda Min.'
-            divCotacaoMinimo.appendChild(h2CotacaoMinimo)
-            let pCotacaoMinimo = document.createElement('p')
-            pCotacaoMinimo.innerHTML = `R$: ${parseFloat(dinheriosFiltrados[i].cotacao.cotacaoMinimo).toFixed(2)}`
-            divCotacaoMinimo.appendChild(pCotacaoMinimo)
-            section.appendChild(divCotacaoMinimo)
-
-            let divCotacaoMaximo = document.createElement('div')
-            let h2CotacaoMaximo = document.createElement('h2')
-            h2CotacaoMaximo.innerHTML = 'Cotação Venda Max.'
-            divCotacaoMaximo.appendChild(h2CotacaoMaximo)
-            let pCotacaoMaximo = document.createElement('p')
-            pCotacaoMaximo.innerHTML = `R$: ${parseFloat(dinheriosFiltrados[i].cotacao.cotacaoMaximo).toFixed(2)}`
-            divCotacaoMaximo.appendChild(pCotacaoMaximo)
-            section.appendChild(divCotacaoMaximo)
-
-            let divCotacaoSaldo = document.createElement('div')
-            let h2CotacaoSaldo = document.createElement('h2')
-            h2CotacaoSaldo.innerHTML = 'Cotação Venda Med.'
-            divCotacaoSaldo.appendChild(h2CotacaoSaldo)
-            let pCotacaoSaldo = document.createElement('p')
-            pCotacaoSaldo.innerHTML = `R$: ${parseFloat(( parseFloat(dinheriosFiltrados[i].cotacao.cotacaoMinimo) + parseFloat
-                (dinheriosFiltrados[i].cotacao.cotacaoMaximo) ) / 2).toFixed(2)}`
-            divCotacaoSaldo.appendChild(pCotacaoSaldo)
-            section.appendChild(divCotacaoSaldo)
-
-            let divImagem = document.createElement('div')
-            divImagem.classList.add('imagem')
-            let frenteImagem = document.createElement('img')
-            frenteImagem.src = `./img/${dinheriosFiltrados[i].tipo.toLowerCase()}/${dinheriosFiltrados[i].imagem_frente}`
-            frenteImagem.alt = `${dinheriosFiltrados[i].nome} Série: ${dinheriosFiltrados[i].serie} País: ${dinheriosFiltrados[i].pais}`
-            divImagem.appendChild(frenteImagem)
-            let versoImagem = document.createElement('img')
-            versoImagem.src = `./img/${dinheriosFiltrados[i].tipo.toLowerCase()}/${dinheriosFiltrados[i].imagem_verso}`
-            versoImagem.alt = `${dinheriosFiltrados[i].nome} Série: ${dinheriosFiltrados[i].serie} País: ${dinheriosFiltrados[i].pais}`
-            divImagem.appendChild(versoImagem)
-            section.appendChild(divImagem)
-
-            let divPacote = document.createElement('div')
-            let h6Pacote = document.createElement('h1')
-            h6Pacote.innerHTML = `Pacote - ${dinheriosFiltrados[i].pacote}`
-            divPacote.appendChild(h6Pacote)
-            section.appendChild(divPacote)
+            section.appendChild(valor(dinheriosFiltrados[i]))
+            //section.appendChild(conversao(dinheriosFiltrados[i]))
+            //section.appendChild(minimo(dinheriosFiltrados[i]))
+            //section.appendChild(maximo(dinheriosFiltrados[i]))
+            //section.appendChild(cotacaoSaldo(dinheriosFiltrados[i]))
+            section.appendChild(imagem(dinheriosFiltrados[i]))
+            section.appendChild(pacote(dinheriosFiltrados[i]))
             main.appendChild(section)
             dinheriosFiltrados[i].tipo == 'Cedula' ? cedulas += 1 : moedas += 1
         }
     }
-    mostrarTotais(moedas, cedulas, soma, convertido, cotacaoMinimo, cotacaoMaximo, cotacaoMedia)
+    //mostrarTotais(moedas, cedulas, soma, convertido, cotacaoMinimo, cotacaoMaximo, cotacaoMedia)
 }
 
 function casaDecimal(numero){
@@ -349,3 +251,129 @@ function valorSelect(id){
         atualizar()
     });
 }
+
+function nomeDinheiro(objeto){
+    let h2Nome = document.createElement('h2')
+    h2Nome.innerHTML = `${objeto.nome}`
+    return h2Nome 
+}
+
+function series(objeto){
+    let divSerie = document.createElement('div')
+    let serie = objeto.tipo == 'Moeda' ? 'Lado' : 'Serie'
+    let h2Serie = document.createElement('h2')
+    h2Serie.innerHTML = serie
+    divSerie.appendChild(h2Serie)
+    let pSerie = document.createElement('p')
+    pSerie.innerHTML = objeto.serie
+    divSerie.appendChild(pSerie)
+    return divSerie
+}
+
+function anoTitulo(){
+    let divAno = document.createElement('div')
+    let h2Ano = document.createElement('h2')
+    h2Ano.innerHTML = 'Ano'
+    divAno.appendChild(h2Ano)
+    return divAno                
+}
+
+function paragrafoAno(objeto){
+    let pAno = document.createElement('p')
+    pAno.innerHTML = objeto.ano
+    return pAno
+}
+
+function pais(objeto){
+    let divPais = document.createElement('div')
+    let h2Pais = document.createElement('h2')
+    h2Pais.innerHTML = 'Pais'
+    divPais.appendChild(h2Pais)
+    let divNomeImagem = document.createElement('div')
+    let pPais = document.createElement('p')
+    divNomeImagem.innerHTML = objeto.pais
+    divPais.appendChild(pPais)
+    let paisImagem = document.createElement('img')
+    paisImagem.src = `./img/bandeira/${objeto.pais.toLowerCase().replace(" ", "-").replace("ç", "c")}.png`
+    paisImagem.alt = objeto.pais
+    divNomeImagem.appendChild(paisImagem)
+    divPais.appendChild(divNomeImagem)
+    return divPais
+}
+
+function valor(objeto){
+    let divValor = document.createElement('div')
+    let h2Valor = document.createElement('h2')
+    h2Valor.innerHTML = 'Valor'
+    divValor.appendChild(h2Valor)
+    let pValor = document.createElement('p')
+    pValor.innerHTML = `${cifrao(objeto.pais, objeto.nome)} ${parseFloat(objeto.valor).toFixed(2)}`
+    divValor.appendChild(pValor)
+    return divValor
+}
+
+function conversao(objeto){
+    let divAtual = document.createElement('div')
+    let h2Atual = document.createElement('h2')
+    h2Atual.innerHTML = 'Conversão'
+    divAtual.appendChild(h2Atual)
+    let pAtual = document.createElement('p')
+    pAtual.innerHTML = `R$: ${casaDecimal(atualizarValor(objeto.ano, objeto.nome, objeto.pais, parseFloat(objeto.valor)).toFixed(20))}`
+    divAtual.appendChild(pAtual)
+    return divAtual
+}
+
+function minimo(objeto){
+    let divCotacaoMinimo = document.createElement('div')
+    let h2CotacaoMinimo = document.createElement('h2')
+    h2CotacaoMinimo.innerHTML = 'Cotação Venda Min.'
+    divCotacaoMinimo.appendChild(h2CotacaoMinimo)
+    let pCotacaoMinimo = document.createElement('p')
+    pCotacaoMinimo.innerHTML = `R$: ${parseFloat(objeto.cotacao.cotacaoMinimo).toFixed(2)}`
+    divCotacaoMinimo.appendChild(pCotacaoMinimo)
+    return divCotacaoMinimo
+}
+
+function maximo(objeto){
+    let divCotacaoMaximo = document.createElement('div')
+    let h2CotacaoMaximo = document.createElement('h2')
+    h2CotacaoMaximo.innerHTML = 'Cotação Venda Max.'
+    divCotacaoMaximo.appendChild(h2CotacaoMaximo)
+    let pCotacaoMaximo = document.createElement('p')
+    pCotacaoMaximo.innerHTML = `R$: ${parseFloat(objeto.cotacao.cotacaoMaximo).toFixed(2)}`
+    divCotacaoMaximo.appendChild(pCotacaoMaximo)
+    return divCotacaoMaximo
+}
+
+function imagem(objeto){
+    let divImagem = document.createElement('div')
+    divImagem.classList.add('imagem')
+    let frenteImagem = document.createElement('img')
+    frenteImagem.src = `./img/${objeto.tipo.toLowerCase()}/${objeto.imagem_frente}`
+    frenteImagem.alt = `${objeto.nome} Série: ${objeto.serie} País: ${objeto.pais}`
+    divImagem.appendChild(frenteImagem)
+    let versoImagem = document.createElement('img')
+    versoImagem.src = `./img/${objeto.tipo.toLowerCase()}/${objeto.imagem_verso}`
+    versoImagem.alt = `${objeto.nome} Série: ${objeto.serie} País: ${objeto.pais}`
+    divImagem.appendChild(versoImagem)
+    return divImagem
+}
+
+function cotacaoSaldo(objeto){
+    let divCotacaoSaldo = document.createElement('div')
+    let h2CotacaoSaldo = document.createElement('h2')
+    h2CotacaoSaldo.innerHTML = 'Cotação Venda Med.'
+    divCotacaoSaldo.appendChild(h2CotacaoSaldo)
+    let pCotacaoSaldo = document.createElement('p')
+    pCotacaoSaldo.innerHTML = `R$: ${parseFloat(( parseFloat(objeto.cotacao.cotacaoMinimo) + parseFloat(objeto.cotacao.cotacaoMaximo) ) / 2).toFixed(2)}`
+    divCotacaoSaldo.appendChild(pCotacaoSaldo)
+    return divCotacaoSaldo
+}
+
+function pacote(objeto){
+    let divPacote = document.createElement('div')
+    let h6Pacote = document.createElement('h1')
+    h6Pacote.innerHTML = `Pacote - ${objeto.pacote}`
+    divPacote.appendChild(h6Pacote)
+    return divPacote
+}            

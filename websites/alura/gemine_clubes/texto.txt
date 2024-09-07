@@ -1,0 +1,5 @@
+nome 
+estadio
+localizacao
+cores
+titulo principal
