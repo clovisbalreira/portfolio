@@ -1,5 +1,7 @@
 ## Desvendando os Segredos dos Estados Brasileiros! 🇧🇷
 
+link https://portfolio-eight-orpin-32.vercel.app/websites/alura/gemine_estado/index.html
+
 **O que essa aplicação faz?**
 
 Já se perguntou qual é a curiosidade mais legal sobre o Amazonas, ou qual a característica mais marcante do Rio Grande do Sul? Com essa aplicação, você pode descobrir tudo isso e muito mais! 
