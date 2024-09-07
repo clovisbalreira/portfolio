@@ -30,7 +30,7 @@ Essa aplicação está em constante evolução! Se você é um desenvolvedor e q
 
 **Pronts usados no gemine**
 
-Faça um curto parágrafo sobre a o [estado]
+Faça um curto parágrafo sobre o [estado]
 
 Me diga pontos turisticos e faça um objeto em javascript com esses dados
 
