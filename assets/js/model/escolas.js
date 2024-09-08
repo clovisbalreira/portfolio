@@ -1,7 +1,7 @@
 let escolas = [
     new escola('nenhum','Nenhum','nenhum',false),
     new escola('pessoal','Pessoal','clovisbalreira',true),
-    new escola('alura','Alura','alura-cursos',false),
+    new escola('alura','Alura','alura-cursos',true),
     new escola('celke','Celke','',false),
     new escola('curso-em-video','Curso em video','cursoemvideo',false),
     new escola('deitel','Deitel','',false),

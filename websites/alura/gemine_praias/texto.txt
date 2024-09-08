@@ -1,5 +1,0 @@
-pais
-estado
-cidade
-nome
-pontos turistico
