@@ -1,4 +1,5 @@
 function mostrarDinheiro(dinheriosFiltrados) {
+    dinheriosFiltrados.filter( dinheiro => dinheiro.ano == '1989')
     let main = document.querySelector('main')
     main.innerHTML = ''
     let soma = 0
@@ -203,6 +204,9 @@ function atualizar(){
     let selectMoeda = document.getElementById('moeda').value
     let selectValor = document.getElementById('valor').value
     let dinheriosFiltrados = filtros(selectTipos, selectPaises, selectAno, selectMoeda, selectValor)
+    let dinheiroAno = dinheriosFiltrados.filter( dinheiro => {
+        return dinheiro.ano == '1989'
+    })
     mostrarDinheiro(dinheriosFiltrados) 
 }
 
