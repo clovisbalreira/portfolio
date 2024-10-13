@@ -29,17 +29,17 @@ function mostrarDinheiro(dinheriosFiltrados) {
             divPaisAno.appendChild(pais(dinheriosFiltrados[i]))
             section.appendChild(divPaisAno)
             section.appendChild(valor(dinheriosFiltrados[i]))
-            section.appendChild(conversao(dinheriosFiltrados[i]))
-            section.appendChild(minimo(dinheriosFiltrados[i]))
-            section.appendChild(maximo(dinheriosFiltrados[i]))
-            section.appendChild(cotacaoSaldo(dinheriosFiltrados[i]))
+            //section.appendChild(conversao(dinheriosFiltrados[i]))
+            //section.appendChild(minimo(dinheriosFiltrados[i]))
+            //section.appendChild(maximo(dinheriosFiltrados[i]))
+            //section.appendChild(cotacaoSaldo(dinheriosFiltrados[i]))
             section.appendChild(imagem(dinheriosFiltrados[i]))
             section.appendChild(pacote(dinheriosFiltrados[i]))
             main.appendChild(section)
-            dinheriosFiltrados[i].tipo == 'Cedula' ? cedulas += 1 : moedas += 1
+            //dinheriosFiltrados[i].tipo == 'Cedula' ? cedulas += 1 : moedas += 1
         }
     }
-    mostrarTotais(moedas, cedulas, soma, convertido, cotacaoMinimo, cotacaoMaximo, cotacaoMedia)
+    //mostrarTotais(moedas, cedulas, soma, convertido, cotacaoMinimo, cotacaoMaximo, cotacaoMedia)
 }
 
 function casaDecimal(numero){
@@ -204,16 +204,13 @@ function atualizar(){
     let selectMoeda = document.getElementById('moeda').value
     let selectValor = document.getElementById('valor').value
     let dinheriosFiltrados = filtros(selectTipos, selectPaises, selectAno, selectMoeda, selectValor)
-    let dinheiroAno = dinheriosFiltrados.filter( dinheiro => {
-        return dinheiro.ano == '1989'
-    })
     mostrarDinheiro(dinheriosFiltrados) 
 }
 
 function filtros(selectTipos, selectPaises, selectAno, selectMoeda, selectValor){
     let array = []
+    array = dinheiros
     if( selectTipos != ' ' || selectPaises != ' ' || selectAno != ' ' || selectMoeda != ' ' || selectValor != ' ' ){
-        array = dinheiros
         if(selectTipos != ' '){
             array = array.filter(dinheiro => { return dinheiro.tipo == selectTipos })
         } 
@@ -232,11 +229,7 @@ function filtros(selectTipos, selectPaises, selectAno, selectMoeda, selectValor)
             array = array.filter(dinheiro => { return dinheiro.valor == selectValor })
         }
     }else{
-        /* dinheiros.sort(function(a, b) {
-            return b.cotacao - a.cotacao;
-        });
-        array = dinheiros.slice(0, 10) */
-        array = dinheiros
+        array = array.filter(dinheiro => { return dinheiro.mostrar == true })
     }
     return array
 }
@@ -359,6 +352,9 @@ function imagem(objeto){
     let versoImagem = document.createElement('img')
     versoImagem.src = `./img/${objeto.tipo.toLowerCase()}/${objeto.imagem_verso}`
     versoImagem.alt = `${objeto.nome} Série: ${objeto.serie} País: ${objeto.pais}`
+    if(objeto.tipo == 'Moeda'){
+        divImagem.classList.add('tamanho-imagem')
+    }
     divImagem.appendChild(versoImagem)
     return divImagem
 }
