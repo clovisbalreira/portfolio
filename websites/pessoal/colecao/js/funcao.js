@@ -257,7 +257,7 @@ function nomeDinheiro(objeto){
 
 function series(objeto){
     let divSerie = document.createElement('div')
-    let serie = objeto.tipo == 'Moeda' ? 'Lado' : 'Serie'
+    let serie = objeto.tipo == 'Moeda' ? '' : 'Serie'
     let h2Serie = document.createElement('h2')
     h2Serie.innerHTML = serie
     divSerie.appendChild(h2Serie)
