@@ -11,7 +11,7 @@ let projetos = [
     { titulo : 'Calculadora Média', link : '../calculadora-media/index.html'},
     { titulo : 'Clone spotify', link : '../spotify/index.html'},
     { titulo : 'Gemine', link : '../gemine/index.html'},
-    { titulo : 'Gemine Estado', link : '../gemine-estado/index.html'},
+    { titulo : 'Número Segredo', link : '../numero-segredo/index.html'},
 ]
 
 let desafios = [
