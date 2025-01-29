@@ -77,7 +77,7 @@ function removerTarefa(index) {
     if(tarefas.length == 1){
         apagarBotaoLimpar(false); // Atualiza o estado do botão de limpar se houver apenas uma tarefa.
     }else if(tarefas.length == 0){
-        removerBotaoListarTudo(); // Remove o botão de listar todas as tarefas se não houver mais tarefas.
+        removerBotaoListarTudo(); // Remove o botão de listar todas as tarefas se não houver mais tarefas.        
     }
     renderizarTarefa(); // Re-renderiza a lista de tarefas.
 }
@@ -123,6 +123,8 @@ function limparLista() {
     tarefas = [];
     removerBotaoListarTudo(); // Remove o botão de listar todas as tarefas.
     statusInput(document.getElementById("mensagem"), "", ""); // Limpa a mensagem de validação.
+    statusInput(document.getElementById("mensagem"), `Todas tarefas removida com sucesso!`, "#A34743");
+    
     renderizarTarefa(); // Re-renderiza a lista de tarefas.
 }
 
@@ -155,7 +157,7 @@ function removerBotaoListarTudo(){
     const segundoBotao = div.getElementsByTagName('button')[1];
   
     // Remove o segundo botão.
-    segundoBotao.remove();   
+    segundoBotao.remove();       
 }
 
 function apagarTextoLista(li){
