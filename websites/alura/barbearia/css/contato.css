@@ -1,22 +1,27 @@
-main{
-    max-width: 700px;
+body{
+    font-family: "Montserrat", serif;
+}
+
+main{ 
+    /*width: 940px;*/
     margin: 0 auto;
 }
+
 form{
-    margin: 40px 0;
+    margin: 40px;
 }
 
-label, legend{
-    /* display: block; */
+form label, legend{
+    display: block;
     font-size: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
-.input-padrao, textarea{
+.input-padrao{
     display: block;
     margin-bottom: 20px;
     padding: 10px 25px;
-    width: 100%;
+    width: 50%;
 }
 
 .checkbox{
@@ -24,8 +29,8 @@ label, legend{
 }
 
 .enviar{
-    width: 100%;
-    padding: 15px 0;
+    width: 40%;
+    padding: 15px 20px;
     background-color: orange;
     color: white;
     font-weight: bold;
@@ -39,12 +44,10 @@ label, legend{
 .enviar:hover{
     background-color: darkorange;
     transform: scale(1.2);
-    /* transform: rotate(10deg); */
 }
 
 table{
-    margin: 20px auto 40px;
-    width: 50%;
+    margin: 20px 40px;
 }
 
 thead{
@@ -55,5 +58,19 @@ thead{
 
 th, td{
     border: 1px solid #000000;
-    padding: 8px 15px;
+    padding: 15px 8px;
+}
+
+#resposta{
+    background-color: #dfdada;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-inline: 20px;
+    padding: 20px;
+}
+
+#resposta ul{
+    margin-left: 20px;
 }

@@ -230,7 +230,7 @@ var sites = [
     {titulo: 'BoraCodar - Select Customizado', descricao: 'Projeto criado no modelo do boracodar. Com mentoria de Mayk Brito e Biro.', linguagem: linguagens[1], url: './sites/boracodar/desafio34/', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[2], tag: `${tagsLinguagem[1]} ${tags} #boracodar #maykbrito`, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/boracodar/desafio34'},
     
     //alura
-    {titulo: 'Alura - Barbearia', descricao: 'Projeto criado no modelo da alura.', linguagem: linguagens[1], url: 'sites/alura/barbearia/index.html', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[1], tag: `${tagsLinguagem[0]} ${tags} #alura `, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/alura/barbearia/'},
+    {titulo: 'Alura - Barbearia', descricao: 'Projeto criado no modelo da alura.', linguagem: linguagens[1], url: 'websites/alura/barbearia/index.html', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[1], tag: `${tagsLinguagem[0]} ${tags} #alura `, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/websites/alura/barbearia/'},
     /* {titulo: 'Alura - Biografia', descricao: 'Projeto criado no modelo da alura.', linguagem: linguagens[1], url: 'sites/alura/biografia/index.html', tipo: tipos[0], modelo: modelos[0], status: 'Sim', projeto: projetos[1], tag: `${tagsLinguagem[0]} ${tags} #alura `, repositorio: 'https://github.com/clovisbalreira/portfolio/tree/main/sites/alura/biografia/'}, */
 
 

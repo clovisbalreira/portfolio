@@ -1,34 +1,43 @@
+body{
+    font-family: "Montserrat", serif;
+}
+
 .produtos{
-    max-width: 940px;
+    /*width: 940px;*/
     margin: 0 auto;
     padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
 }
 
 .produtos li{
-    max-width: 280px;
+    /*display: inline-block;
+    width: 30%;
+    margin: 0 1.5%;*/
+    width: 280px;
     text-align: center;
-    display: inline-block;
     vertical-align: top;
-    margin: 9px;
     padding: 30px 10px;
     box-sizing: border-box;
     border: 2px solid #000000;
     border-radius: 10px;
 }
 
-.produtos li:hover{
-    border-color: #c78c19;
+.produtos li:hover {
+    color: #c78c19;
+}
+
+.produtos li:active {
+    color: #088c19;
 }
 
 .produtos li:hover h2{
     font-size: 34px;
 }
 
-.produtos li:active{
-    border-color: #088c19;
-}
-
-h2{
+.produtos h2{
     font-size: 30px;
     font-weight: bold;
 }
