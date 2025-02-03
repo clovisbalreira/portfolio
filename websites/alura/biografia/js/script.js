@@ -31,23 +31,14 @@ botao.addEventListener('click', function(event) {
         li.textContent = `Email: ${dados.Email}`
         ul.appendChild(li)
         li = document.createElement('li')
-        li.textContent = `Telefone: ${dados.Telefone}`
+        li.textContent = `Assunto: ${dados.Assunto}`
+        dados.OutroAssunto != '-' ? li.textContent += ` - ${dados.OutroAssunto}` : `` ;
         ul.appendChild(li)
         li = document.createElement('li')
         li.textContent = `Mensagem: ${dados.Mensagem}`
         ul.appendChild(li)
-        li = document.createElement('li')
-        li.textContent = `Preferência de Contato: ${dados.Contato}`
-        ul.appendChild(li)
-        li = document.createElement('li')
-        li.textContent = `Melhor Turno para Contato: ${dados.Turno}`
-        ul.appendChild(li)
-        li = document.createElement('li')
-        li.textContent = `Receber Atividades por Email: ${dados.Checkbox ? "Sim" : "Não"}`
-        ul.appendChild(li)
         resposta.appendChild(ul)
-        p = document.createElement('p');
-        p.textContent = `Em breve, entraremos em contato com você por ${dados.Contato} durante o turno da ${dados.Turno}.`;    
+        p.textContent = `Em breve, entraremos em contato com você`;    
         resposta.appendChild(p);
         p = document.createElement('p');
         p.textContent = `Agradecemos sua preferência e estamos à disposição para qualquer dúvida ou necessidade.`;    
@@ -56,7 +47,7 @@ botao.addEventListener('click', function(event) {
         p.textContent = `Atenciosamente,`;    
         resposta.appendChild(p);
         p = document.createElement('p');
-        p.textContent = `Barbearia Alura`;    
+        p.textContent = `João da Silva`;    
         resposta.appendChild(p);
     }
     resposta.style.display = "flex"
@@ -66,28 +57,20 @@ botao.addEventListener('click', function(event) {
 });
 
 function pegarDados(){
-    let nome = document.getElementById('nome-sobrenome').value;
+    let nome = document.getElementById('nome').value;
     let email = document.getElementById('email').value;
-    let telefone = document.getElementById('telefone').value;
     let mensagem = document.getElementById('mensagem').value;
-    let contato = document.querySelector('input[name="contato"]:checked').value;
-    let turno = document.getElementById('turno').value;
-    let checkbox = document.getElementById('checkbox');
+    let assunto = document.querySelector('input[name="assunto"]:checked').value;
+    let outroAssunto = document.getElementById('outro-assunto').value;
     let dados = {
         Nome: nome,
         Email: email,
-        Telefone: telefone,
+        Assunto: assunto,
+        OutroAssunto : outroAssunto,
         Mensagem: mensagem,
-        Contato: contato,
-        Turno: turno,
-        Checkbox: verificarCheckbox(checkbox)
     };
     return dados;
 }
-
-function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  }
 
 function verificarDadosVazios(dados) {
     let camposVazios = [];
@@ -100,9 +83,9 @@ function verificarDadosVazios(dados) {
                     camposVazios.push(key);
                 }
             }
-            if(key === 'telefone'){
-                if(!validarTelefone(dados[key])){
-                    camposVazios.push(key);
+            if(key == 'Assunto'){
+                if(dados[key] == 'Blog' || dados[key] == 'Serviço'){
+                    dados.OutroAssunto = '-'
                 }
             }
         }
@@ -113,17 +96,4 @@ function verificarDadosVazios(dados) {
 function validarEmail(email) {
     let regex = /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i;
     return regex.test(email);
-}
-
-function validarTelefone(telefone) {
-    let regex = /^\(\d{2}\)\s\d{4,5}-\d{4}$/;
-    return regex.test(telefone);
-}
-
-function verificarCheckbox(checkbox){
-    if(checkbox.checked){
-        return true;
-    } else {
-        return false;
-    }
 }

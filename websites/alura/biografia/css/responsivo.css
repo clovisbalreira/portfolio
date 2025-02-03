@@ -1,0 +1,119 @@
+@media screen and (max-width: 1124px){
+    .container {
+        width: 80%;
+    }
+    
+    .minha-foto{
+        display: none;
+    }
+
+    .navegacao-site{
+        position: fixed;
+        border: none;
+        width: 100%;
+        height: max-content;
+        padding-top: 2rem;
+    }
+
+    .navegacao-site{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .navegacao-site nav ul{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: .5rem 1rem;
+    }
+
+    main{
+        margin-top: 7rem;
+    }
+
+    .rodape-pagina{
+        background-image: none;
+        background-color: #3C1D3D;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 969px){
+    .blog .inicio-post {
+        top: 8.5em;
+        height: 6em;
+        left: 31%;
+    }
+}
+
+@media screen and (max-width: 962px){
+    .blog .inicio-post {
+        height: 7.5em;
+    }
+}
+
+@media screen and (max-width: 792px){
+    .blog .inicio-post {
+        height: 9em;
+    }
+}
+
+@media screen and (max-width: 740px){
+    .saudacao em {
+        font-size: 3em;
+    }
+}
+
+@media screen and (max-width: 720px){
+    main{
+        margin-top: 10rem;
+    }
+}
+
+@media screen and (max-width: 660px){
+    .blog .inicio-post {
+        height: 10.5em;
+    }
+    .saudacao em {
+        font-size: 2em;
+        padding-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 605px){
+    .blog .inicio-post {
+        height: 12em;
+    }
+}
+
+@media screen and (max-width: 556px){
+    main{
+        margin-top: 13rem;
+    }
+}
+
+@media screen and (max-width: 513px){
+    .blog .inicio-post {
+        height: 13.5em;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .blog .inicio-post {
+        height: 15em;
+    }
+}
+
+@media screen and (max-width: 428px){
+    .blog .inicio-post {
+        height: 16.5em;
+    }
+    .saudacao em {
+        font-size: 1em;
+    }
+    main{
+        margin-top: 16rem;
+    }
+}
