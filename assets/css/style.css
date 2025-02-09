@@ -109,6 +109,7 @@ main section button:hover img{
     width: min-content;
     padding: 1.5rem;
     border-radius: 20px;
+    flex-grow: 1;
 }
 
 .web-sites img{

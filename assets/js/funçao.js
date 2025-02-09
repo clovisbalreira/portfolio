@@ -156,13 +156,13 @@ function mostrarWebSites(webSites){
     a.appendChild(divLinguagemEscola)
     let divInstrutores = document.createElement('div')
     let divInstrutoresTitulo = document.createElement('div')
-    if(webSites.instrutor[0].imagem != 'clovisbalreira' && webSites.instrutor[0].imagem != undefined){
+    console.log(webSites.instrutor[0] == undefined)
+    if((!(webSites.instrutor[0] == undefined)) && (webSites.instrutor[0].imagem != 'clovisbalreira' && webSites.instrutor[0].imagem != undefined)){
         let h3Instrutor = document.createElement('h3')
         h3Instrutor.innerHTML = 'Instrutores'
         divInstrutoresTitulo.appendChild(h3Instrutor)
         divInstrutores.appendChild(divInstrutoresTitulo)
     }
-        
     let divInstrutor = document.createElement('div')
     webSites.instrutor.forEach( instrutor => {
             if(instrutor.nome != 'Clóvis' && instrutor.nome != undefined){
@@ -176,7 +176,6 @@ function mostrarWebSites(webSites){
     let p = document.createElement('p')
     p.innerHTML = webSites.descricao
     a.appendChild(p)
-    
     
     section.appendChild(a)
     main.appendChild(section)
