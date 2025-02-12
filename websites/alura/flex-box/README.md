@@ -9,7 +9,7 @@ Este é um projeto de um site para a flex box, desenvolvido como parte do curso 
 
 ## Funcionalidades
 
-- Página inicial com informações sobre a jogos
+- Página inicial com informações sobre a cursos
 - Galeria de fotos
 - Formulário de contato
 
