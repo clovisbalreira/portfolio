@@ -46,14 +46,14 @@ let webSites = [
     new website('Scroll','Este projeto demonstra uma animação de scroll horizontal infinito, exibindo uma série de habilidades ou tecnologias.',linguagens[0],[''],escolas[9],'./websites/hashtag/scroll/index.html','hashtag/scroll/'),
     //One Bit Code
     new website('Pet Life','O projeto Pet Live é um site desenvolvido com o objetivo de oferecer informações sobre serviços veterinários e produtos para pets.',linguagens[1],[instrutores[17]],escolas[11],'./websites/one-bit-code/petlive/index.html','one-bit-code/petlive/'),
-    new website('','',linguagens[1],[instrutores[17]],escolas[11],'./websites/one-bit-code/adivinhe/index.html','one-bit-code/adivinhe/'),
+    /*new website('','',linguagens[1],[instrutores[17]],escolas[11],'./websites/one-bit-code/adivinhe/index.html','one-bit-code/adivinhe/'),
     new website('','',linguagens[1],[instrutores[17]],escolas[11],'./websites/one-bit-code/calculadora-basica/index.html','one-bit-code/calculadora-basica/'),
     new website('','',linguagens[1],[instrutores[17]],escolas[11],'./websites/one-bit-code/calculadora-desconto/index.html','one-bit-code/calculadora-desconto/'),
     new website('','',linguagens[1],[instrutores[17]],escolas[11],'./websites/one-bit-code/contagem-caracteres/index.html','one-bit-code/contagem-caracteres/'),
     new website('','',linguagens[1],[instrutores[17]],escolas[11],'./websites/one-bit-code/fatorial/index.html','one-bit-code/fatorial/'),
     new website('','',linguagens[1],[instrutores[17]],escolas[11],'./websites/one-bit-code/notas/index.html','one-bit-code/notas/'),
     new website('','',linguagens[1],[instrutores[17]],escolas[11],'./websites/one-bit-code/tabuada/index.html','one-bit-code/tabuada/'),
-    new website('','',linguagens[1],[instrutores[17]],escolas[11],'./websites/one-bit-code/triangulo/index.html','one-bit-code/triangulo/'),
+    new website('','',linguagens[1],[instrutores[17]],escolas[11],'./websites/one-bit-code/triangulo/index.html','one-bit-code/triangulo/'),*/
     //Alura
     new website('Portfólio da Imersão Dev Alura','Este repositório contém o código fonte do meu portfólio pessoal, criado durante a Imersão Dev da Alura. A ideia principal é apresentar meus projetos e desafios realizados durante a imersão de forma organizada e visualmente atrativa.',linguagens[1],[instrutores[5], instrutores[13], instrutores[14]],escolas[2],'./websites/alura/portfolio/index.html','alura/portfolio'),
     new website('Barbearia','Este é um projeto de um site para a Barbearia Alura, desenvolvido como parte do curso de desenvolvimento web da Alura..',linguagens[1],[],escolas[2],'./websites/alura/barbearia/index.html','alura/barbearia'),
