@@ -1,4 +1,4 @@
-# Grid Layout
+# Alura Store
 
 Este é um projeto de um site para a Grid Layout, desenvolvido como parte do curso de desenvolvimento web da Alura.
 
