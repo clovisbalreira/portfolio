@@ -9,6 +9,6 @@ Este é um projeto de um site para a SVG, desenvolvido como parte do curso de de
 
 ## Funcionalidades
 
-- Página inicial com informações sobre os pratos
+- Página inicial com informações verão
 - Galeria de fotos
 
