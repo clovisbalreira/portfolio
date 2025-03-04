@@ -1,0 +1,51 @@
+import { SetList } from "../model/SetList.js";
+import { gravacoes } from "./gravacao.js"
+
+export const setLists = []
+
+export function incluirSetList(setLists, data, ...setList){
+    const setListData = new SetList(data)
+    setList.forEach( set => {
+        setListData.adicionarCancao(set)
+    })
+    setLists.push(setListData)
+}
+
+incluirSetList(setLists, '07/06/24', [gravacoes[0],gravacoes[1],gravacoes[2],gravacoes[3]])
+incluirSetList(setLists, '14/06/24', [gravacoes[4],gravacoes[5],gravacoes[6],gravacoes[7]])
+incluirSetList(setLists, '21/06/24', [gravacoes[8],gravacoes[9],gravacoes[10],gravacoes[11]])
+incluirSetList(setLists, '28/06/24', [gravacoes[12],gravacoes[13],gravacoes[14],gravacoes[15]])
+incluirSetList(setLists, '05/07/24', [gravacoes[16],gravacoes[17],gravacoes[18],gravacoes[19]])
+incluirSetList(setLists, '12/07/24', [gravacoes[20],gravacoes[21],gravacoes[22],gravacoes[23]])
+incluirSetList(setLists, '19/07/24', [gravacoes[24],gravacoes[25],gravacoes[26],gravacoes[27]])
+incluirSetList(setLists, '26/07/24', [gravacoes[28],gravacoes[29],gravacoes[30],gravacoes[31]])
+incluirSetList(setLists, '02/08/24', [gravacoes[32],gravacoes[33],gravacoes[34],gravacoes[35]])
+incluirSetList(setLists, '09/08/24', [gravacoes[36],gravacoes[37],gravacoes[38],gravacoes[39]])
+incluirSetList(setLists, '16/08/24', [gravacoes[40],gravacoes[41],gravacoes[42],gravacoes[43]])
+incluirSetList(setLists, '23/08/24', [gravacoes[44],gravacoes[45],gravacoes[46],gravacoes[47]])
+incluirSetList(setLists, '30/08/24', [gravacoes[48],gravacoes[49],gravacoes[50],gravacoes[51]])
+incluirSetList(setLists, '06/09/24', [gravacoes[52],gravacoes[53],gravacoes[54],gravacoes[55]])
+incluirSetList(setLists, '13/09/24', [gravacoes[56],gravacoes[57],gravacoes[58],gravacoes[59]])
+incluirSetList(setLists, '20/09/24', [gravacoes[60],gravacoes[61],gravacoes[62],gravacoes[63]])
+incluirSetList(setLists, '27/09/24', [gravacoes[64],gravacoes[65],gravacoes[66],gravacoes[67]])
+incluirSetList(setLists, '04/10/24', [gravacoes[68],gravacoes[20],gravacoes[13],gravacoes[69]])
+incluirSetList(setLists, '11/10/24', [gravacoes[70],gravacoes[71],gravacoes[72],gravacoes[73]])
+incluirSetList(setLists, '18/10/24', [gravacoes[75],gravacoes[74],gravacoes[87],gravacoes[99]])
+incluirSetList(setLists, '25/10/24', [gravacoes[100],gravacoes[101],gravacoes[102],gravacoes[103]])
+incluirSetList(setLists, '01/11/24', [gravacoes[104],gravacoes[105],gravacoes[106],gravacoes[107]])
+incluirSetList(setLists, '08/11/24', [gravacoes[108],gravacoes[109],gravacoes[110],gravacoes[111]])
+incluirSetList(setLists, '15/11/24', [gravacoes[112],gravacoes[113],gravacoes[114],gravacoes[115]])
+incluirSetList(setLists, '29/11/24', [gravacoes[116],gravacoes[78],gravacoes[117],gravacoes[118]])
+incluirSetList(setLists, '06/12/24', [gravacoes[119],gravacoes[120],gravacoes[121],gravacoes[122]])
+incluirSetList(setLists, '13/12/24', [gravacoes[123],gravacoes[124],gravacoes[125],gravacoes[91]])
+incluirSetList(setLists, '20/12/24', [gravacoes[126],gravacoes[127],gravacoes[128],gravacoes[148]])
+incluirSetList(setLists, '27/12/24', [gravacoes[129],gravacoes[130],gravacoes[131],gravacoes[132]])
+incluirSetList(setLists, '07/02/25', [gravacoes[133],gravacoes[134],gravacoes[77],gravacoes[135]])
+incluirSetList(setLists, '14/02/25 ', [gravacoes[136],gravacoes[137],gravacoes[138],gravacoes[139]])
+incluirSetList(setLists, '21/02/25', [gravacoes[140],gravacoes[141],gravacoes[142],gravacoes[143]])
+incluirSetList(setLists, '28/02/25', [gravacoes[144],gravacoes[145],gravacoes[146],gravacoes[92]])
+incluirSetList(setLists, '07/03/25', [gravacoes[155], gravacoes[147], gravacoes[152], gravacoes[88]])
+incluirSetList(setLists, '14/03/25', [gravacoes[149], gravacoes[93], gravacoes[85], gravacoes[82]])
+incluirSetList(setLists, '21/03/25', [gravacoes[97], gravacoes[89], gravacoes[76], gravacoes[94]])
+incluirSetList(setLists, '28/03/25', [gravacoes[80], gravacoes[151], gravacoes[153], gravacoes[150]])
+incluirSetList(setLists, '04/04/25', [gravacoes[154], gravacoes[86], gravacoes[83], gravacoes[98]])

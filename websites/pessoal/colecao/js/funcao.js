@@ -29,17 +29,17 @@ function mostrarDinheiro(dinheriosFiltrados) {
             divPaisAno.appendChild(pais(dinheriosFiltrados[i]))
             section.appendChild(divPaisAno)
             section.appendChild(valor(dinheriosFiltrados[i]))
-            //section.appendChild(conversao(dinheriosFiltrados[i]))
-            //section.appendChild(minimo(dinheriosFiltrados[i]))
-            //section.appendChild(maximo(dinheriosFiltrados[i]))
-            //section.appendChild(cotacaoSaldo(dinheriosFiltrados[i]))
+            section.appendChild(conversao(dinheriosFiltrados[i]))
+            section.appendChild(minimo(dinheriosFiltrados[i]))
+            section.appendChild(maximo(dinheriosFiltrados[i]))
+            section.appendChild(cotacaoSaldo(dinheriosFiltrados[i]))
             section.appendChild(imagem(dinheriosFiltrados[i]))
             section.appendChild(pacote(dinheriosFiltrados[i]))
             main.appendChild(section)
-            //dinheriosFiltrados[i].tipo == 'Cedula' ? cedulas += 1 : moedas += 1
+            dinheriosFiltrados[i].tipo == 'Cedula' ? cedulas += 1 : moedas += 1
         }
     }
-    //mostrarTotais(moedas, cedulas, soma, convertido, cotacaoMinimo, cotacaoMaximo, cotacaoMedia)
+    mostrarTotais(moedas, cedulas, soma, convertido, cotacaoMinimo, cotacaoMaximo, cotacaoMedia)
 }
 
 function casaDecimal(numero){
