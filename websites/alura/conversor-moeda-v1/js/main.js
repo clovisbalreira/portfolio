@@ -17,7 +17,7 @@ function Converter(){
                 subtitle.style.backgroundColor = '#00000090'
                 
                 var valorElemento = document.getElementById("valor");
-                var valor = 2//valorElemento.value;
+                var valor = 2
                 var valorDolarNumerico = parseFloat(valor);
                 
                 var valorReal = valorDolarNumerico / data.value[0].cotacaoCompra;
