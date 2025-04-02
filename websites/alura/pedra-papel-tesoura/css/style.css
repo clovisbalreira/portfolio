@@ -1,0 +1,105 @@
+/* Global Styles */
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    position: relative;
+  }
+  
+  /* Logo Styles */
+  .logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    max-width: 150px;
+    width: auto;
+  }
+  
+  /* Container with the background image */
+  .container {
+    background: url('https://i.postimg.cc/TY28jTqJ/bg4-ia.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 40px);
+  }
+  
+  /* Content div for text and button */
+  .content {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+    border-radius: 8px;
+  }
+  
+  .content h2 {
+    margin-bottom: 20px;
+  }
+
+  #emojis{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .emoji{
+    border: .1rem solid white;
+    border-radius: 15px;
+    width: max-content;
+    min-width: 5rem;
+    padding: .1rem 1rem;
+    background-color: rgba(0, 0, 0, 0.822);
+    transition: all 0.3s ease;
+  }
+
+  .emoji:hover{
+    border-color: red;
+    background-color: black;
+  }
+
+  .emoji p:nth-child(1){
+    font-size: 2rem;
+  }
+  
+  /* Button Styles */
+  button {
+    background-color: #ff1b7b;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #1ABC9C;
+  }
+
+  .input{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: .5rem;
+  }
+
+  .input input{
+    width: 150px;
+  }
+
+  #resposta{
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Footer Styles */
+  footer {
+    text-align: center;
+    padding: 10px;
+  }
+  
