@@ -1,0 +1,103 @@
+/* Global Styles */
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    position: relative;
+    color: dar
+  }
+  
+  /* Logo Styles */
+  .logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    max-width: 150px;
+    width: auto;
+  }
+  
+  /* Container with the background image */
+  .container {
+    background: url('https://i.postimg.cc/TY28jTqJ/bg4-ia.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 40px);
+  }
+  
+  /* Content div for text and button */
+  .content {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+    border-radius: 8px;
+  }
+  
+  .content h2 {
+    margin-bottom: 20px;
+  }
+  
+  /* Button Styles */
+  button {
+    background-color: #ff1b7b;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 1rem;
+    font-size: 1.2em;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #1ABC9C;
+  }
+
+  .div-caminho{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .div-coluna{
+    display: flex;
+    justify-content: space-between;
+    gap: .5rem;
+  }
+
+  .div-linha{
+    width: 100px;
+    height: 100px;
+    border: .1rem solid white;
+    border-radius: 15px;
+  }
+
+  .input{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-top: .5rem;
+  }
+
+  .input input{
+    width: 150px;
+  }
+
+  #resposta{
+    display: none;
+    background-color: red;
+    width: max-content;
+    margin: 1rem auto;
+    padding: .5rem;
+    border-radius: 15px;
+  }
+  
+  /* Footer Styles */
+  footer {
+    text-align: center;
+    padding: 10px;
+  }
+  
