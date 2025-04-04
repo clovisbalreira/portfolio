@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capo de Guerra</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/script.js"></script>
+</head>
+<body>
+  <div class="logo">
+    <img src="https://i.postimg.cc/GpCxYmvc/title.png" alt="Logo da Imersão Dev" />
+  </div>
+  <div class="titulo">
+    <h2>Força ou Queda</h2>
+  </div>
+  <main class="conteudo-jogo">
+    <div id="container">
+      <div class="input">
+        <label for="nome">Digite seu nome:</label>
+        <input type="text" id="nome">
+        <button id="btn-input" class="btn-input" onclick="jogar()">Jogar</button>
+      </div>
+      <p></p>
+      <div id="adicionarPersonagem"  style="display:none;">
+        <h2>Digite 1 a 10 jogadores para seu time:</h2>
+        <div id="input"></div>
+        <div id="times">
+          <ul id="informacoesJogador" class="resultado"></ul>
+          <ul id="informacoesComputador" class="resultado"></ul>
+        </div>
+        <div id="botoes">
+          <button id="resultadoBtn" style="display:none;">Ver Resultado</button>
+        </div>
+        <h5 id="resultadoFinal" class="resultado"></h5>
+      </div>
+  </main>
+</body>
+</html>
