@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/script.js"></script>
+</head>
+<body>
+  <div class="logo">
+      <img src="https://i.postimg.cc/GpCxYmvc/title.png" alt="Logo da Imersão Dev" />
+    </div>
+    <div class="titulo">
+      <h2>Perguntas Finais</h2>
+  </div>
+  <div class="conteudo-jogo">
+    <section class="questionario">
+      <div class="principal">
+        <div class="conteudo">
+          <span class="progresso"></span>
+          <span class="pergunta"></span>
+          <div class="respostas"></div>
+        </div>
+        <div class="ajuda">
+          <div id="universitarios" style="display: none;">
+            <p class="universitario">Paulo Silveira</p>
+            <p class="universitario">Fernanda Degolin</p>
+            <p class="universitario">André David</p>
+          </div>
+          <div class="cartas" style="display: none;">  
+            <button class="carta-escolher">1</button>
+            <button class="carta-escolher">2</button>
+            <button class="carta-escolher">3</button>
+            <button class="carta-escolher">4</button>
+          </div>
+          <div id="buttons">
+            <button class="universitarios" onclick="escolhaUniversitarios()">Universitários</button>
+            <button id="pulo-1" onclick="criarPulo(this)" class="pulo">Pulo</button>
+            <button class="carta" onclick="mostraCartas(false)">Cartas</button>
+            <button id="pulo-2" onclick="criarPulo(this)" class="pulo">Pulo</button>
+          </div>
+        </div>
+      </div>
+      <div class="fim">
+        <span></span>
+        <div id="respostas"></div>
+        <button class="reiniciar" onclick="reiniciarJogo()">Reiniciar</button>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

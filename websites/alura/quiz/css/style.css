@@ -1,0 +1,234 @@
+body {
+    background: url("https://i.postimg.cc/TY28jTqJ/bg4-ia.jpg") no-repeat center
+      center fixed;
+    background-size: cover;
+    font-family: "Gabarito", sans-serif;
+    margin: 20px;
+  }
+  
+  .logo {
+    text-align: end;
+  }
+  
+  .logo img {
+    width: 40%;
+  }
+  
+  /* Caixa principal do jogo */
+  .conteudo-jogo {
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 5px #ff1b7b;
+    margin: 30px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .conteudo-jogo:hover {
+    background: rgba(0, 0, 0);
+    box-shadow: 0 0 5px #19caca;
+  }
+  
+  /* Títulos e textos */
+  h2,
+  p {
+    color: white;
+  }
+  
+  /* Estrutura do questionário */
+  .questionario {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+  
+  /* Área de conteúdo */
+  .conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+    width: 350px;
+  }
+  
+  /* Estilo da pergunta */
+  .pergunta {
+    font-weight: 600;
+    color: white;
+  }
+  
+  /* Progresso da pergunta */
+  .progresso {
+    text-align: end;
+    font-size: small;
+    font-weight: 500;
+    color: white;
+  }
+  
+  /* Área das respostas */
+  .respostas {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  /* Botões de resposta */
+  .botao-resposta, .reiniciar {
+    width: 100%;
+    height: 2.5rem;
+    text-align: start;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    background: #ff1b7b;
+    color: white;
+  }
+
+  .principal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    width: 100%;
+  }
+
+  .ajuda{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: end;
+    margin-top: 4rem;
+    height: 15rem;
+  }
+  
+  .cartas{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .carta-escolher{
+    background-color: white;
+    width: 20%;
+    height: 4rem;
+    border: none;
+    border-radius: 5px;
+    padding: .2rem;
+  }
+
+  .carta-escolher:hover{
+    background-color: rgb(245, 235, 235);
+  }
+
+  .carta, .pulo, .universitarios{
+    background-color: #ff1b7b;
+    color: white;
+    width: 45%;
+    height: 40%;
+    display: grid;
+    place-content: center;
+    border-radius: 15px;
+    border: .2rem solid white;
+  }
+
+  #universitarios{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+  }
+  
+  .universitario{
+    margin: .1rem;
+  }
+
+  .carta:hover, .pulo:hover, .universitarios:hover {
+    background: #19caca;
+    font-weight: 600;
+  }
+
+  #buttons{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 75vh;
+    align-items: end;
+    gap: 1rem;
+    margin-bottom: .9rem;
+  }
+
+  .reiniciar {
+    width: max-content;
+    margin: 0 auto;
+    padding: 10px 20px;
+  }
+  
+  .botao-resposta:hover {
+    background: #19caca;
+    font-weight: 600;
+  }
+  
+  /* Tela de fim do jogo */
+  .fim {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .fim span {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+  }
+  /* table */
+  table{
+    color: white;
+    
+  }
+
+  tr{
+    color: black;
+  }
+
+  thead tr, tfoot tr{
+    background-color: #008CCC;
+  }
+
+  tbody tr:nth-child(odd){
+    background-color: #FFFFFF;
+  }
+
+  tbody tr{
+    background-color:#bdd3df;
+  }
+
+  th, td{
+    padding: .5rem;
+    text-align: center;
+  }
+
+  @media (max-width: 846px) {
+    .principal{
+      gap: .1rem;
+    }
+    .conteudo, .ajuda{
+      width: 100%;
+    }
+
+    .universitario{
+      padding-left: 1.5rem;
+    }
+    
+    #universitarios, .cartas, #buttons{
+      margin-top: 1rem;
+    }
+    
+    #buttons{
+      justify-content: center;
+    }
+  }
+  
+  
