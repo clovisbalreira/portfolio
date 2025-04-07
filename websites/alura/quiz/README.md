@@ -1,5 +1,5 @@
 Quiz Interativo Ajudas
-Esse projeto é um jogo de perguntas e respostas (quiz) feito com HTML, CSS e JavaScript, onde o jogador responde a 10 perguntas sorteadas aleatoriamente de uma lista, podendo utilizar ajudas especiais, como pular questões, pedir ajuda aos universitários ou revelar cartas.
+Esse projeto é um jogo de perguntas e respostas (quiz) feito com HTML, CSS e JavaScript, onde o jogador responde a 10 perguntas sorteadas aleatoriamente de uma lista, podendo utilizar ajudas especiais, como pular questões, pedir ajuda aos universitários ou cartas.
 
 🧠 Funcionamento geral
 As perguntas são embaralhadas aleatoriamente a cada partida.

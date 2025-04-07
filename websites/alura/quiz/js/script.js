@@ -297,6 +297,8 @@ function atribuirCartasUnicas(naipes, cartas) {
   }));
 }
 
+naipes = embaralhar(naipes)
+
 // Atribui cartas únicas aos naipes
 naipes = atribuirCartasUnicas(naipes, cartasDisponiveis);
 
