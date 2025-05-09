@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metrônomo Musical</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script defer src="./js/script.js"></script>
+</head>
+<body>
+  <h1>🎵 Metrônomo Visual</h1>
+  <div class="controls">
+    <label>Figura:
+      <select id="figure">
+        <option value="1">𝅝 Semibreve</option>
+        <option value="2">𝅗𝅥 Mínima</option>
+        <option value="4" selected>𝅘𝅥 Semínima</option>
+        <option value="8">𝅘𝅥𝅮 Colcheia</option>
+        <option value="16">𝅘𝅥𝅯 Semicolcheia</option>
+      </select>
+    </label>
+    <label>Compasso:
+      <select id="compass">
+        <option value="4">4/4</option>
+        <option value="3">3/4</option>
+        <option value="6">6/8</option>
+      </select>
+    </label>
+    <label>BPM:
+      <input type="range" id="bpmRange" min="30" max="300" value="80" oninput="updateBPM(this.value)">
+    </label>
+    <button onclick="startMetronome()">🔴 Iniciar</button>
+    <button onclick="stopMetronome()">⏹ Parar</button>
+    <button onclick="tapTempo()">🕺 Tap Tempo</button>
+  </div>
+
+  <div class="pulse" id="pulse"></div>
+  <div class="counter" id="beat-count"></div>
+  <div class="counter" id="bar-count"></div>
+  <div class="bpm-display" id="bpm-display"></div>
+  <div class="partitura" id="partitura"></div>
+
+  <audio id="click" src="https://actions.google.com/sounds/v1/alarms/beep_short.ogg"></audio>
+  <audio id="snare" src="https://cdn.freesound.org/previews/66/66717_931655-lq.mp3"></audio>
+</body>
+</html>

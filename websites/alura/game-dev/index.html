@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/ps5/p5.js"></script>
+    <script src="./js/ps5/p5.sound.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/gh/bmoren/p5.collide2D/p5.collide2d.min.js'></script>
+    <script src="./js/ps5/sketch.js"></script>
+    <script src="./js/preload.js"></script>
+    <script src="./js/variaveis.js"></script>
+    <script src="./js/cenas/BotaoGerenciador.js"></script>
+    <script src="./js/cenas/TelaInicial.js"></script>
+    <script src="./js/jogo/Vida.js"></script>
+    <script src="./js/jogo/Animacao.js"></script>
+    <script src="./js/jogo/Inimigo.js"></script>
+    <script src="./js/jogo/Cenario.js"></script>
+    <script src="./js/jogo/Personagem.js"></script>
+    <script src="./js/jogo/Pontuacao.js"></script>
+    <script src="./js/cenas/Jogo.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Dev</title>
+</head>
+<body>
+    <script>
+        function setup(){
+            createCanvas(windowWidth, windowHeight)
+            //somJogo.play()
+            //somJogo.loop()
+            frameRate(40)
+            jogo = new Jogo()
+            telaInicial = new TelaInicial()
+            jogo.setup()
+            cenas = {
+                jogo,
+                telaInicial
+            }
+            botaoGerenciador = new BotaoGerenciador('Iniciar', width / 2, height / 2)
+        }
+        
+        function keyPressed(){
+            jogo.keyPressed(key)
+        }
+
+        function draw(){
+            cenas[cenaAtual].draw()
+        }
+
+        
+    </script>
+</body>
+</html>
