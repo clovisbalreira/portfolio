@@ -1,40 +1,53 @@
-Projeto Portfólio Pessoal
+Projeto Portfólio de Clóvis Balreira Rodrigues
 
-Este projeto consiste em um portfólio pessoal desenvolvido para exibir informações profissionais, projetos realizados e habilidades técnicas. Utilizando uma combinação de tecnologias web modernas, o projeto oferece uma interface elegante e responsiva, adaptável a diferentes dispositivos. A estrutura do projeto é delineada em HTML5, com a estilização realizada através de CSS3, e a interatividade proporcionada por JavaScript.
-Tecnologias Utilizadas
+Descrição:
+Este repositório contém o código-fonte do portfólio pessoal de Clóvis Balreira Rodrigues, destacando suas habilidades, projetos e contatos profissionais. O site é responsivo, garantindo boa visualização em dispositivos móveis, e apresenta uma interface limpa e profissional.
 
-    HTML5: Estrutura o conteúdo e layout da página.
-    CSS3: Responsável pelo estilo visual, incluindo cores, tipografia, e layout responsivo.
-    JavaScript: Adiciona interatividade ao portfólio, permitindo a manipulação dinâmica dos elementos da página.
+Linguagens Utilizadas:
 
-Tags HTML Principais
+    HTML
+    CSS
+    JavaScript
 
-    <!DOCTYPE html>: Define o tipo de documento como HTML5.
-    <html>: Elemento raiz de um documento HTML.
-    <head>: Contém metadados/informações para o documento.
-    <body>: Representa o conteúdo principal do documento HTML.
-    <header>, <main>, <footer>: Estruturam as seções principais da página.
-    <img>: Incorpora uma imagem no documento.
-    <a>: Define um hiperlink.
+Características principais:
 
-CSS: Classes e Seletores Principais
+    HTML: Estrutura semântica com uso de tags como header, main, footer, section, e button.
+    CSS: Estilos modernos e responsivos com uso de variáveis CSS, pseudo-classes e media queries.
+    JavaScript: Classes e funções para manipulação dinâmica do DOM, destacando a criação de seções interativas e responsivas.
 
-    .light: Possivelmente destinada a definir o tema claro para a página.
-    :root: Define variáveis CSS globais (ex: --azul para cor).
-    *: Aplica estilos de forma global (reset básico de margens, padding e box-sizing).
-    .dados, .redes-sociais: Estilizam as seções de informações pessoais e links de redes sociais.
-    header, footer: Definem o estilo das seções de cabeçalho e rodapé.
-    @media: Regras de media query para responsividade em diferentes tamanhos de tela.
+HTML: Tags, Classes e IDs
 
-JavaScript: Funções e Variáveis
+Tags:
 
-    criarSection(titulo, dados): Cria dinamicamente seções no <main> com base em dados fornecidos (ex: linguagens, instrutores, escolas), exibindo apenas os itens com status true.
-    pastasImagens(titulo, imagem): Determina o caminho das imagens a serem usadas baseando-se no título da seção. Esta função parece incompleta na descrição fornecida.
+    header e footer para estruturar o cabeçalho e rodapé.
+    main contém o conteúdo principal do site.
+    section e button são usadas dinamicamente para apresentar informações interativas.
 
-Como Funcionam as Funções JavaScript
+Classes:
 
-    criarSection(titulo, dados): Recebe um título (string) e um array de dados. Filtra os dados pelo status true e, se houver elementos filtrados, cria uma seção no <main> com um <h2> para o título e um <section> contendo um <button> para cada item filtrado, incluindo um <h3> e <img> para nome e imagem, respectivamente.
+    .dados e .redes-sociais para estilizar as seções de informações pessoais e links de redes sociais.
+    .imgRedonda aplicada em imagens para torná-las redondas.
+    .main-flex, .web-sites e .btn-github para estilização específica de seções de projetos e links.
 
-    pastasImagens(titulo, imagem): A função deveria definir o caminho da pasta baseando-se no título da seção e o nome da imagem fornecido. Contudo, a descrição termina abruptamente, sugerindo que a função calcula o diretório da imagem com base no tipo de conteúdo (Linguagens, Instrutores, Escolas) e o nome da imagem.
+IDs:
 
-    Este projeto é um exemplo de como integrar tecnologias web fundamentais para criar uma experiência de usuário rica e responsiva. Ideal para desenvolvedores que desejam demonstrar suas habilidades e projetos de maneira profissional e atraente.
+    #layout-inicio usado para um elemento clicável que, ao ser acionado, recarrega a página inicial.
+
+CSS: Responsividade e Estilização
+
+Utilização de variáveis para manter a consistência das cores. O design responsivo é alcançado por meio de media queries que ajustam o layout do site em diferentes tamanhos de tela. Transições e transformações são aplicadas para interatividade, como ampliação de ícones de redes sociais ao passar o mouse.
+JavaScript: Funções e Classes
+
+Classes:
+
+    escola, instrutor, linguagem, website: Modelam os dados utilizados no site, cada uma contendo propriedades como id, nome, imagem, e status.
+
+Funções:
+
+    criarSection(titulo, dados): Cria e exibe seções dinamicamente com base nos dados fornecidos.
+    inicio(): Função inicial que carrega as seções principais.
+    removerMain(), mostrarWebSites(webSites), imagens(origem, instrutor): Gerenciam a visualização de conteúdos específicos.
+    pegarAtributos(botao): Extrai atributos de botões para filtrar dados.
+    atualizar(): Recarrega a página.
+
+Este repositório é uma excelente ferramenta para qualquer pessoa interessada em entender como combinar HTML, CSS e JavaScript para criar um site pessoal atraente e funcional.

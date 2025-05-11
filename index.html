@@ -1,45 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br" class="light">
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio</title>
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-    <div id="container">
-        <div id="profile">
-            <img src="https://github.com/clovisbalreira.png" alt="Clóvis Balreira Rodrigues">
-            <p>@clovisbalreira</p>
-            <a href="./index2.html">Sites em atualização</a>
-        </div>
-        <div id="switch" onclick="toogleMode()">
-            <button></button>
-            <span></span>
-        </div>
-        <ul id="ul_inicio">
-        </ul>
-        <div id="social-links">
-            <a href="https://github.com/clovisbalreira" target="_blank">
-                <ion-icon name="logo-github"></ion-icon>
-            </a>
-            <a href="https://www.linkedin.com/in/clovis-balreira-rodrigues/" target="_blank">
-                <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-        </div>
-        <footer><p>Feito por <a href="https://www.linkedin.com/in/clovis-balreira-rodrigues/" alt="Linkedin">Clóvis Balreira Rodrigues</a> passeado no curso devLinks</p></footer> 
-    </div>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="./js/js.js"></script>
-    <script src="./js/toogleMode.js"></script>
-    <script src="./js/script.js"></script>
-    <script>
-        mostrarLinguagem()
-    </script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfólio - Clóvis Balreira Rodrigues</title>
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+    <body>
+        <header>
+            <div id="layout-inicio" class="dados">
+                <img src="https://github.com/clovisbalreira.png" alt="Clóvis Balreira Rodrigues">
+                <p>@clovisbalreira</p>
+            </div>
+            <div class="redes-sociais">
+                <a href="https://www.linkedin.com/in/clovis-balreira-rodrigues/" target="_blank">
+                    <img src="./assets/img/icones/linkedin.png" alt="Linkedin">
+                </a>
+                <a href="https://github.com/clovisbalreira" target="_blank">
+                    <img src="./assets/img/icones/github-big-logo.png" alt="GitHub">
+                </a>
+            </div>
+        </header>
+        <main>
+        </main>
+        <footer>
+            <div class="redes-sociais">
+                <a href="https://www.linkedin.com/in/clovis-balreira-rodrigues/" target="_blank">
+                    <img src="./assets/img/icones/linkedin.png" alt="Linkedin">
+                </a>
+                <a href="https://github.com/clovisbalreira" target="_blank">
+                    <img src="./assets/img/icones/github-big-logo.png" alt="GitHub">
+                </a>
+            </div>
+        </footer>
+        <script src="./assets/js/classes/linguagem.js"></script>
+        <script src="./assets/js/classes/instrutor.js"></script>
+        <script src="./assets/js/classes/escola.js"></script>
+        <script src="./assets/js/classes/website.js"></script>
+        <script src="./assets/js/model/linguagens.js"></script>
+        <script src="./assets/js/model/instrutores.js"></script>
+        <script src="./assets/js/model/escolas.js"></script>
+        <script src="./assets/js/model/websites.js"></script>
+        <script src="./assets/js/funçao.js"></script>
+    </body>
 </html>

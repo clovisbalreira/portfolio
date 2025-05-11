@@ -1,4 +1,4 @@
-Projeto: NLW UNITE - gerenciar atividades
+Projeto: NLW UNITE - Gerenciar atividades
 
 Este projeto é uma aplicação web desenvolvida para gerenciar atividades, permitindo ao usuário adicionar, listar e marcar atividades como concluídas. O projeto utiliza HTML, CSS e JavaScript, juntamente com a biblioteca dayjs para manipulação de datas.
 

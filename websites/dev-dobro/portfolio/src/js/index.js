@@ -1,4 +1,5 @@
 const websites = [
+  {nome: 'Jornada do Zero à Primeira Vaga', caminho: 'jornada-do-zero-a-primeira-vaga'},
   {nome: 'GTA', caminho: 'gta'},
   {nome: 'One Pierce', caminho: 'one-pierce'},
   {nome: 'Pokemon', caminho: 'pokemon'},

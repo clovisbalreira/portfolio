@@ -5,7 +5,7 @@ let instrutores = [
     new instrutor('diogo-m-mainardes','Diogo M Mainardes','diogomainardes',false),
     new instrutor('fernanda-degolin','Fernanda Degolin','fernandadegolin',true),
     new instrutor('guilherme-lima','Guilherme Lima','guilhermeonrails',true),
-    new instrutor('gustavo-guanabara','Gustavo Guanabara','professorguanabara',false),
+    new instrutor('gustavo-guanabara','Gustavo Guanabara','professorguanabara',true),
     new instrutor('gustavo-neitzke','Gustavo Neitzke','Gutoneitzke',true),
     new instrutor('lira','Lira','',false),
     new instrutor('mayara-cardoso','Mayara Cardoso','mayaracardoso',false),

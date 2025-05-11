@@ -2,7 +2,8 @@ Projeto de Chat Virtual
 
 Descrição
 
-Este projeto consiste em uma interface de chat virtual desenvolvida com HTML, CSS e JavaScript, apresentando funcionalidades básicas para a comunicação entre um atendente e um cliente. O objetivo é simular um chat de atendimento ao cliente com respostas pré-definidas e interatividade limitada. Abaixo, detalho os principais componentes do projeto:
+Este projeto consiste em uma interface de chat virtual desenvolvida com HTML, CSS e JavaScript, apresentando funcionalidades básicas para a comunicação entre um atendente e um cliente. O objetivo é simular um chat de atendimento ao cliente com respostas pré-definidas e interatividade limitada. 
+Abaixo, detalho os principais componentes do projeto:
 
 Linguagens Utilizadas
 
