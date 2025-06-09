@@ -307,22 +307,41 @@ let cursos = [
         cursos : [
             { 
                 portugues : {
-                    nome : 'MYSQL - Modulo 00', 
-                    tipo : 'Banco de Dados'
+                    nome : 'Desenvolvimento Web 2020 ( HTML5+CSS3 ) Módulo 01', 
+                    tipo : 'HTML E CSS'
                 },
                 ingles : {
-                    nome : 'MYSQL - Module 00',
-                    tipo : 'Database',
+                    nome : 'Web Development 2020 (HTML5+CSS3) Module 01',
+                    tipo : 'HTML E CSS',
                 },
                 espanhol : {
-                    nome : 'MYSQL - Módulo 00',
-                    tipo : 'Banco de Datos',
+                    nome : 'Desarrollo Web 2020 ( HTML5+CSS3 ) Módulo 01',
+                    tipo : 'HTML E CSS',
                 },
                 filtro : false,  
                 horas : 40,
-                dataInicio : new Date('04/02/2022'),
-                dataFim : new Date('05/02/2022'),
-                imagens : ["./img/cursos/estudonauta/mysql-00.jpg"],
+                dataInicio : new Date('02/23/2022'),
+                dataFim : new Date('03/23/2022'),
+                imagens : ["./img/cursos/estudonauta/html-css-01.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'P.H.P. básico', 
+                    tipo : 'P.H.P.'
+                },
+                ingles : {
+                    nome : 'basic P.H.P.', 
+                    tipo : 'P.H.P.'
+                },
+                espanhol : {
+                    nome : 'P.H.P. básico', 
+                    tipo : 'P.H.P.'
+                },
+                filtro : false,  
+                horas : 40,
+                dataInicio : new Date('03/25/2022'),
+                dataFim : new Date('04/25/2022'),
+                imagens : ["./img/cursos/estudonauta/php-basico.jpg"],
             },
             { 
                 portugues : {
@@ -345,25 +364,6 @@ let cursos = [
             },
             { 
                 portugues : {
-                    nome : 'P.H.P. básico', 
-                    tipo : 'P.H.P.'
-                },
-                ingles : {
-                    nome : 'P.H.P. básico', 
-                    tipo : 'P.H.P.'
-                },
-                espanhol : {
-                    nome : 'P.H.P. básico', 
-                    tipo : 'P.H.P.'
-                },
-                filtro : false,  
-                horas : 40,
-                dataInicio : new Date('03/25/2022'),
-                dataFim : new Date('04/25/2022'),
-                imagens : ["./img/cursos/estudonauta/php-basico.jpg"],
-            },
-            { 
-                portugues : {
                     nome : 'P.H.P. moderno modulo 01', 
                     tipo : 'P.H.P.'
                 },
@@ -383,22 +383,41 @@ let cursos = [
             },
             { 
                 portugues : {
-                    nome : 'Modulo 01 - Pilares e principais Riscos', 
-                    tipo : 'Segurança da Informação'
+                    nome : 'MYSQL - Modulo 00', 
+                    tipo : 'Banco de Dados'
                 },
                 ingles : {
-                    nome : 'Module 01 - Pillars and Main Risks',
-                    tipo : 'Information Security',
+                    nome : 'MYSQL - Module 00',
+                    tipo : 'Database',
                 },
                 espanhol : {
-                    nome : 'Módulo 01 - Pilares y principales Riesgos',
-                    tipo : 'Seguridad de la Información',
+                    nome : 'MYSQL - Módulo 00',
+                    tipo : 'Banco de Datos',
                 },
                 filtro : false,  
-                horas : 20,
-                dataInicio : new Date('05/10/2022'),
-                dataFim : new Date('06/10/2022'),
-                imagens : ["./img/cursos/estudonauta/seguranca-informacao-01.jpg"],
+                horas : 40,
+                dataInicio : new Date('04/02/2022'),
+                dataFim : new Date('05/02/2022'),
+                imagens : ["./img/cursos/estudonauta/mysql-00.jpg"],
+            }, 
+            { 
+                portugues : {
+                    nome : 'Java básico - Módulo 00', 
+                    tipo : 'Java'
+                },
+                ingles : {
+                    nome : 'basic java - Module 00', 
+                    tipo : 'Java'
+                },
+                espanhol : {
+                    nome : 'Java básico - Módulo 00', 
+                    tipo : 'Java'
+                },
+                filtro : false,  
+                horas : 40,
+                dataInicio : new Date('02/27/2022'),
+                dataFim : new Date('03/30/2022'),
+                imagens : ["./img/cursos/estudonauta/java-basico.jpg"],
             },
             { 
                 portugues : {
@@ -421,25 +440,6 @@ let cursos = [
             },
             { 
                 portugues : {
-                    nome : 'Arquitetura de Computadores - Módulo 00', 
-                    tipo : 'Hardware'
-                },
-                ingles : {
-                    nome : 'Computer Architecture - Module 00',
-                    tipo : 'Hardware',
-                },
-                espanhol : {
-                    nome : 'Arquitectura de Computadoras - Módulo 00',
-                    tipo : 'Hardware',
-                },
-                filtro : false,  
-                horas : 20,
-                dataInicio : new Date('08/18/2022'),
-                dataFim : new Date('09/18/2022'),
-                imagens : ["./img/cursos/estudonauta/arquitetura-computador-00.jpg"],
-            },
-            { 
-                portugues : {
                     nome : 'Git - Github', 
                     tipo : 'Versionamento'
                 },
@@ -456,6 +456,120 @@ let cursos = [
                 dataInicio : new Date('10/01/2023'),
                 dataFim : new Date('11/01/2023'),
                 imagens : ["./img/cursos/estudonauta/git-github.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Inteligência Artificial - Módulo 01', 
+                    tipo : 'I.A.'
+                },
+                ingles : {
+                    nome : 'Artificial Intelligence - Module 01',
+                    tipo : 'I.A.',
+                },
+                espanhol : {
+                    nome : 'Inteligencia Artificial - Módulo 01',
+                    tipo : 'I.A.',
+                },
+                filtro : false,  
+                horas : 40,
+                dataInicio : new Date('11/11/2024'),
+                dataFim : new Date('11/12/2024'),
+                imagens : ["./img/cursos/estudonauta/inteligencia-artificial-01.jpg"],
+            },      
+            { 
+                portugues : {
+                    nome : 'Modulo 00 - Segurança da Informação - Pilares e principais Riscos', 
+                    tipo : 'Segurança da Informação'
+                },
+                ingles : {
+                    nome : 'Module 00 - Information Security - Pillars and Main Risks',
+                    tipo : 'Information Security',
+                },
+                espanhol : {
+                    nome : 'Módulo 00 - Seguridad de la Información - Pilares y principales Riesgos',
+                    tipo : 'Seguridad de la Información',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('05/10/2022'),
+                dataFim : new Date('06/10/2022'),
+                imagens : ["./img/cursos/estudonauta/seguranca-informacao-00.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Modulo 01 - Segurança da Informação - Redes Sociais, senhas e verificação em duas etapas', 
+                    tipo : 'Segurança da Informação'
+                },
+                ingles : {
+                    nome : 'Module 01 - Information Security - Social Networks, passwords, and two-factor authentication',
+                    tipo : 'Information Security',
+                },
+                espanhol : {
+                    nome : 'Módulo 01 - Seguridad de la Información - Redes Sociales, contraseñas y verificación en dos pasos',
+                    tipo : 'Seguridad de la Información',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('05/10/2022'),
+                dataFim : new Date('06/10/2022'),
+                imagens : ["./img/cursos/estudonauta/seguranca-informacao-01.jpg"],
+            }, 
+            { 
+                portugues : {
+                    nome : 'Arquitetura de Computadores - Módulo 00', 
+                    tipo : 'Hardware e software'
+                },
+                ingles : {
+                    nome : 'Computer Architecture - Module 00',
+                    tipo : 'Hardware e software',
+                },
+                espanhol : {
+                    nome : 'Arquitectura de Computadoras - Módulo 00',
+                    tipo : 'Hardware e software',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('08/18/2022'),
+                dataFim : new Date('09/18/2022'),
+                imagens : ["./img/cursos/estudonauta/arquitetura-computadores-00.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Arquitetura de Computadores - Módulo 01', 
+                    tipo : 'Hardware e software'
+                },
+                ingles : {
+                    nome : 'Computer Architecture - Module 01',
+                    tipo : 'Hardware e software',
+                },
+                espanhol : {
+                    nome : 'Arquitectura de Computadoras - Módulo 01',
+                    tipo : 'Hardware e software',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('10/18/2022'),
+                dataFim : new Date('11/18/2022'),
+                imagens : ["./img/cursos/estudonauta/arquitetura-computadores-01.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Arquitetura de Computadores - Módulo 02', 
+                    tipo : 'Hardware e software'
+                },
+                ingles : {
+                    nome : 'Computer Architecture - Module 02',
+                    tipo : 'Hardware e software',
+                },
+                espanhol : {
+                    nome : 'Arquitectura de Computadoras - Módulo 02',
+                    tipo : 'Hardware e software',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('04/16/2023'),
+                dataFim : new Date('05/16/2023'),
+                imagens : ["./img/cursos/estudonauta/arquitetura-computadores-02.jpg"],
             },
             // { 
             //     portugues : {

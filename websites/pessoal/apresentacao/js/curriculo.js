@@ -270,6 +270,49 @@ function ingles(idioma, section){
     section.append(formacaoProfissional(curriculo.formacao_profissional.dados, idioma))
 }
 
+function imagensAnimacao(){
+    const imagens = document.querySelectorAll('.div-imagens-curso')
+    imagens.forEach( imagem => {
+        imagem.addEventListener('mouseenter', () => {
+            imagem.style.scale = 2
+            imagem.style.position = 'absolute'
+            // imagem.style.top = '0'
+            imagem.style.left = '85%'         // centraliza horizontalmente...
+            imagem.style.transform = 'translateX(-50%)' // ...com base no centro
+            imagem.style.zIndex = '9999'
+        })
+        
+        imagem.addEventListener('mouseleave', () => {
+            imagem.style.scale = 1
+            imagem.style.position = 'relative'
+            imagem.style.top = ''
+            imagem.style.left = ''
+            imagem.style.transform = ''
+            imagem.style.zIndex = ''
+        })
+        
+        imagem.addEventListener('click', () => {
+            let imagemDiv = imagem.querySelectorAll('img')
+            if(imagemDiv.length > 1){
+                contemClasse(imagemDiv[0])
+                contemClasse(imagemDiv[1])
+                console.log(imagemDiv[0])
+                console.log(imagemDiv[1])
+            }
+        })
+    })
+}
+
+function contemClasse(imagem){
+    if (imagem.classList.contains('mostrar')) {
+        imagem.classList.remove('mostrar')
+        imagem.classList.add('esconder')
+    } else {
+        imagem.classList.add('mostrar')
+        imagem.classList.remove('esconder')
+    }
+}
+
 function mostrarDadosCurriculo(idioma){
     let section = document.getElementById('curriculo')
     section.innerHTML = ''
@@ -295,6 +338,7 @@ function mostrarCursos(cursos, idioma, filtrar){
             filtrar ? condicaoFiltro(dados, ul, idioma, dados, instituicao, posicao) : desenharCursos(ul, idioma, dados, instituicao, posicao)            
         })
     })
+    imagensAnimacao()
 }
 
 function condicaoFiltro(dados, ul, idioma, dados, instituicao, posicao){
@@ -326,19 +370,32 @@ function desenharCursos(ul, idioma, dados, instituicao, posicao){
     let horas = instituicao == 'E.J.A.' ? '' : ` - ${dados.horas} ${hora}`
     pData.appendChild(span(horas))
     li.appendChild(pData)
-    li.appendChild(imagemCurso(dados, instituicao, posicao))    
+    li.appendChild(imagemCurso(dados, idioma, instituicao, posicao))    
     ul.appendChild(li)
 }
 
-function imagemCurso(dados, nome, posicao){
+function traduzir(idioma, dados){
+    let nome = ''
+    if(idioma == 'portugues'){
+        nome =  dados.portugues.nome
+    }else if(idioma == 'espanhol'){
+        nome =  dados.espanhol.nome
+    }else if(idioma == 'ingles'){
+        nome =  dados.ingles.nome
+    }
+    return nome
+}
+
+function imagemCurso(dados, idioma, instituicao, posicao){
     let div = document.createElement('div')
     div.classList.add('div-imagens-curso')
-    if(nome == 'E.J.A.'){
+    let nome = traduzir(idioma, dados)
+    if(instituicao == 'E.J.A.'){
         dados.imagens.forEach(imagem => {
             let img = document.createElement('img')
             img.classList.add('img-vertical')
             img.src = imagem    
-            img.alt = dados.nome
+            img.alt = nome
             div.appendChild(img)
         })
     }else{
@@ -347,7 +404,7 @@ function imagemCurso(dados, nome, posicao){
             index == 0 ? img.classList.add('mostrar') : img.classList.add('esconder')
             img.classList.add(`${posicao == 'vertical' ? 'img-vertical' : 'img-horizontal'}`)
             img.src = imagem    
-            img.alt = dados.nome
+            img.alt = nome
             div.appendChild(img)
         })
     }
@@ -548,7 +605,7 @@ document.getElementById('instituicao').addEventListener('change', () => {
 
 document.getElementById('tipo').addEventListener('change', () => {
     let valor = document.getElementById('tipo').value
-    if(valor == 'Selecione o tipo de curso:' || valor == 'Seleccione el tipo de curso:' || valor == 'Select the type of course:') return mostrarCursos
+    if(valor == 'Selecione o tipo de curso:' || valor == 'Seleccione el tipo de curso:' || valor == 'Select the type of course:') return mostrarCursos(cursos, idiomaAtual, false)
     cursos.forEach( curso => {
         curso.cursos.forEach( cursoNome => {
             cursoNome.portugues.tipo == valor || cursoNome.espanhol.tipo == valor || cursoNome.ingles.tipo == valor ? cursoNome.filtro = true : cursoNome.filtro = false
@@ -559,3 +616,4 @@ document.getElementById('tipo').addEventListener('change', () => {
     selectCursos(idiomaAtual, nomeCursos)
     mostrarCursos(cursos, idiomaAtual, true)
 }) 
+
