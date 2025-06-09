@@ -1,0 +1,20 @@
+.container{
+    border: 3px solid blue;
+    display: grid;
+    grid-template: 100px 100px 100px / auto auto auto;
+    /*grid-template-rows: 100px 100px 100px;*/
+    /*grid-template-columns: auto auto auto;*/
+    place-items: stretch;
+    /*align-items: stretch;*/
+    /*justify-items: stretch;*/
+    place-content: stretch;
+    /*align-content: stretch;*/
+    /*justify-content: stretch;*/
+    grid-auto-rows: 100px;
+    grid-auto-columns: 100px;
+}
+
+.item{
+    border: 3px solid red;
+    padding: 5px;
+}

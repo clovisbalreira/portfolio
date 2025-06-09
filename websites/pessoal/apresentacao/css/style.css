@@ -90,12 +90,14 @@ main{
     align-items: center;
     flex-wrap: wrap;
     gap: 5rem;
-}    
+}   
 
-#imagens img{
-    margin-block: 3.4rem;
-    width: 250px;
-}    
+#imagens{
+    width: 99vh;
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    justify-content: space-evenly;
+}
 
 #formulario{
     margin-block: 5.1rem;
@@ -138,13 +140,22 @@ main{
     flex-direction: column;
     align-items: center;
     margin-block: 2rem;
+    width: 98vw;
 }    
+
+#apresentacao{
+    display: flex;
+    gap: 2rem;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
 
 #curriculo{
     background-color: white;
-    margin-inline: 5rem;
     padding: 2rem;
     box-shadow: 15px 15px 25px rgb(0, 0, 0);
+    max-width: 800px;
+    height: max-content;
 }
 
 #curriculo .nome-foto{
@@ -221,6 +232,49 @@ main{
     padding-block: .1rem;
 }
 
+#formacao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 400px;
+}
+
+#formacao > div{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: .5rem;
+}
+
+#formacao > div > div{
+    display: flex;
+    justify-content: space-between;
+}
+
+#formacao > div > div select{
+    width: 300px;
+}
+
+#formacao ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#formacao ul li{
+    padding: 1rem;
+    background-color: white;
+    border-radius: .5rem;
+    box-shadow: 5px 5px 5px black;
+}
+
+#formacao ul li h2, #formacao ul li p{
+    padding-block: .5rem;
+}
+
 footer a, a{
     text-decoration: none;
     color: black;
@@ -229,6 +283,30 @@ footer a, a{
 
 footer a:hover{
     color: white;
+}
+
+.img-vertical{
+    width: 200px;
+    height: 300px;
+}
+
+.img-horizontal{
+    width: 400px;
+    height: 300px;
+}
+
+.div-imagens-curso{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.esconder{
+    display: none;
+}
+
+.mostrar{
+    display: block;
 }
 
 @media (max-width: 1133px){
@@ -260,10 +338,6 @@ footer a:hover{
 }
 
 @media (max-width: 813px){
-    #curriculo .div-experiencia-profissional div div{
-        background-color: red;
-    }
-
     .star-3{
         margin-top: 1rem;
     }

@@ -1,0 +1,27 @@
+🧙‍♂️ Magick IA - Catálogo de Cartas Interativas
+Projeto de uma vitrine interativa de cartas fictícias com filtros por categoria e preço, ideal para jogos de fantasia ou catálogos colecionáveis. Desenvolvido com HTML, CSS e JavaScript modular.
+
+🔮 Funcionalidades
+Listagem de cartas com nome, imagem, categoria e preço.
+
+Filtro por: Categoria, Preço máximo
+
+Estilo responsivo para diferentes tamanhos de tela.
+
+Botão de compra via WhatsApp com mensagem automática.
+
+🛠️ Tecnologias
+HTML5
+
+CSS3 (com reset.css, estilos e media queries)
+
+JavaScript (modular, estilo MVC simplificado)
+
+Google Fonts - Roboto
+
+Imagens estáticas em ./src/img
+
+📱 Responsividade
+Design adaptado para tablets e smartphones.
+
+Estilização via media queries em responsivo.css.

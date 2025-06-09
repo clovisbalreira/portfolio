@@ -10,6 +10,7 @@ const websites = [
   {nome: 'Casa do Dragão', caminho: 'casa-dragao'},
   {nome: 'Poke Devs', caminho: 'pokedevs'},
   {nome: 'Dragon Ball', caminho: 'dragon-ball'},
+  {nome: 'Magic AI', caminho: 'magickia'},
 ]
 
 const btnMostrarProjetos = document.querySelector('.btn-mostrar-projetos');

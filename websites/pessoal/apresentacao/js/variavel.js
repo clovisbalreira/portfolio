@@ -1,3 +1,11 @@
+let idiomaAtual = 'portugues'
+
+let labelText = {
+    portugues : ['Cursos', 'Ano', 'Intituição', 'Tipo'],
+    espanhol : ['Cursos', 'Año', 'Institución', 'Tipo'],       
+    ingles : ['Courses', 'Year', 'Institution', 'Type'],
+}
+
 let curriculo = {
     nome : {
         portugues : { nome : 'Nome', dado : 'Clóvis Balreira Rodrigues' },   
@@ -292,3 +300,670 @@ let curriculo = {
         ]
     }
 }
+
+let cursos = [
+    {
+        instituicao : 'Estudonauta',
+        cursos : [
+            { 
+                portugues : {
+                    nome : 'MYSQL - Modulo 00', 
+                    tipo : 'Banco de Dados'
+                },
+                ingles : {
+                    nome : 'MYSQL - Module 00',
+                    tipo : 'Database',
+                },
+                espanhol : {
+                    nome : 'MYSQL - Módulo 00',
+                    tipo : 'Banco de Datos',
+                },
+                filtro : false,  
+                horas : 40,
+                dataInicio : new Date('04/02/2022'),
+                dataFim : new Date('05/02/2022'),
+                imagens : ["./img/cursos/estudonauta/mysql-00.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'P.H.P. P.O.O.', 
+                    tipo : 'P.H.P.'
+                },
+                ingles : {
+                    nome : 'P.H.P. P.O.O.', 
+                    tipo : 'P.H.P.'
+                },
+                espanhol : {
+                    nome : 'P.H.P. P.O.O.', 
+                    tipo : 'P.H.P.'
+                },
+                filtro : false,  
+                horas : 40,
+                dataInicio : new Date('03/29/2022'),
+                dataFim : new Date('04/29/2022'),
+                imagens : ["./img/cursos/estudonauta/php-poo.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'P.H.P. básico', 
+                    tipo : 'P.H.P.'
+                },
+                ingles : {
+                    nome : 'P.H.P. básico', 
+                    tipo : 'P.H.P.'
+                },
+                espanhol : {
+                    nome : 'P.H.P. básico', 
+                    tipo : 'P.H.P.'
+                },
+                filtro : false,  
+                horas : 40,
+                dataInicio : new Date('03/25/2022'),
+                dataFim : new Date('04/25/2022'),
+                imagens : ["./img/cursos/estudonauta/php-basico.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'P.H.P. moderno modulo 01', 
+                    tipo : 'P.H.P.'
+                },
+                ingles : {
+                    nome : 'Modern P.H.P. Module 01',
+                    tipo : 'P.H.P.',
+                },
+                espanhol : {
+                    nome : 'P.H.P. moderno módulo 01',
+                    tipo : 'P.H.P.',
+                },
+                filtro : false,  
+                horas : 40,
+                dataInicio : new Date('03/26/2022'),
+                dataFim : new Date('04/26/2022'),
+                imagens : ["./img/cursos/estudonauta/php-moderno-01.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Modulo 01 - Pilares e principais Riscos', 
+                    tipo : 'Segurança da Informação'
+                },
+                ingles : {
+                    nome : 'Module 01 - Pillars and Main Risks',
+                    tipo : 'Information Security',
+                },
+                espanhol : {
+                    nome : 'Módulo 01 - Pilares y principales Riesgos',
+                    tipo : 'Seguridad de la Información',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('05/10/2022'),
+                dataFim : new Date('06/10/2022'),
+                imagens : ["./img/cursos/estudonauta/seguranca-informacao-01.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Java P.O.O. - Módulo 00', 
+                    tipo : 'Java'
+                },
+                ingles : {
+                    nome : 'Java P.O.O. - Module 00', 
+                    tipo : 'Java'
+                },
+                espanhol : {
+                    nome : 'Java P.O.O. - Módulo 00', 
+                    tipo : 'Java'
+                },
+                filtro : false,  
+                horas : 40,
+                dataInicio : new Date('02/27/2022'),
+                dataFim : new Date('03/30/2022'),
+                imagens : ["./img/cursos/estudonauta/java-poo.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Arquitetura de Computadores - Módulo 00', 
+                    tipo : 'Hardware'
+                },
+                ingles : {
+                    nome : 'Computer Architecture - Module 00',
+                    tipo : 'Hardware',
+                },
+                espanhol : {
+                    nome : 'Arquitectura de Computadoras - Módulo 00',
+                    tipo : 'Hardware',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('08/18/2022'),
+                dataFim : new Date('09/18/2022'),
+                imagens : ["./img/cursos/estudonauta/arquitetura-computador-00.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Git - Github', 
+                    tipo : 'Versionamento'
+                },
+                ingles : {
+                    nome : 'Git - Github',
+                    tipo : 'Versioning',
+                },
+                espanhol : {
+                    nome : 'Git - Github',
+                    tipo : 'Versionamiento',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('10/01/2023'),
+                dataFim : new Date('11/01/2023'),
+                imagens : ["./img/cursos/estudonauta/git-github.jpg"],
+            },
+            // { 
+            //     portugues : {
+            //         nome : '', 
+            //         tipo : ''
+            //     },
+            //     ingles : {
+            //         nome : '',
+            //         tipo : '',
+            //     },
+            //     espanhol : {
+            //         nome : '',
+            //         tipo : '',
+            //     },
+            //     filtro : false,  
+            //     horas : 0,
+            //     dataInicio : new Date('//'),
+            //     dataFim : new Date('//'),
+            //     imagens : ["./img/cursos/estudonauta/.jpg"],
+            // },
+        ],
+        posicao : "horizontal",
+    },
+    {
+        instituicao : 'La Salle',
+        cursos : [
+            { 
+                portugues : {
+                    nome : 'Tecnicas Básicas de ilustração Digital e Produção Gráfica', 
+                    tipo : 'Profissionalizante'
+                },
+                ingles : {
+                    nome : 'Basic Techniques of Digital Illustration and Graphic Production',
+                    tipo : 'Vocational training',
+                },
+                espanhol : {
+                    nome : 'Técnicas Básicas de ilustración Digital y Producción Gráfica',
+                    tipo : 'Profesionalizante',
+                },
+                filtro : false,  
+                horas : 90,
+                dataInicio : new Date('06/02/2011'),
+                dataFim : new Date('08/11/2011'),
+                imagens : ["./img/cursos/lasalle/designer-grafico-frente.jpg","./img/cursos/lasalle/designer-grafico-verso.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Tecnicas Básicas de Web Designer e Designer Gráfica', 
+                    tipo : 'Profissionalizante'
+                },
+                ingles : {
+                    nome : 'Basic Techniques of Web Designer and Graphic Designer',
+                    tipo : 'Vocational training',
+                },
+                espanhol : {
+                    nome : 'Técnicas Básicas de Diseñador Web y Diseñador Gráfico',
+                    tipo : 'Profesionalizante',
+                },
+                filtro : false,  
+                horas : 120,
+                dataInicio : new Date('02/24/2011'),
+                dataFim : new Date('05/10/2011'),
+                imagens : ["./img/cursos/lasalle/web-designer-frente.jpg","./img/cursos/lasalle/web-designer-verso.jpg"],
+            }
+        ],
+        posicao : "horizontal",
+    },
+    {
+        instituicao : 'Governo',
+        cursos : [
+            { 
+                portugues : {
+                    nome : 'Auxiliar Serviço Turismo', 
+                    tipo : 'Profissionalizante',
+                },
+                ingles : {
+                    nome : 'Tourism Service Assistant',
+                    tipo : 'Vocational training',
+                },
+                espanhol : {
+                    nome : 'Auxiliar Servicio Turismo',
+                    tipo : 'Profesionalizante',
+                },
+                filtro : false,  
+                horas : 80,
+                dataInicio : new Date('09/26/2007'),
+                dataFim : new Date('10/24/2007'),
+                imagens : ["./img/cursos/governo/auxiliar-servico-turismo-frente.jpg","./img/cursos/governo/auxiliar-servico-turismo-verso.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Informatica Básica', 
+                    tipo : 'Profissionalizante',
+                },
+                ingles : {
+                    nome : 'Basic Informatics',
+                    tipo : 'Vocational training',
+                },
+                espanhol : {
+                    nome : 'Informática Básica',
+                    tipo : 'Profesionalizante',
+                },
+                filtro : false,  
+                horas : 80,
+                dataInicio : new Date('07/10/2001'),
+                dataFim : new Date('08/10/2001'),
+                imagens : ["./img/cursos/governo/informatica-basica-frente.jpg","./img/cursos/governo/informatica-basica-verso.jpg"],
+            }
+        ],
+        posicao : "horizontal",
+    },
+    {
+        instituicao : 'Datacontrol',
+        cursos : [
+            { 
+                portugues : {
+                    nome : 'Práticas Administrativas', 
+                    tipo : 'Profissionalizante',
+                },
+                ingles : {
+                    nome : 'Administrative Practices',
+                    tipo : 'Vocational training',
+                },
+                espanhol : {
+                    nome : 'Prácticas Administrativas',
+                    tipo : 'Profesionalizante',
+                },
+                filtro : false,  
+                horas : 70,
+                dataInicio : new Date('06/18/2005'),
+                dataFim : new Date('11/05/2005'),
+                imagens : ["./img/cursos/datacontrol/praticas-administrativas.jpg"],
+            }
+        ],
+        posicao : "horizontal",
+    },
+    {
+        instituicao : 'Kazasul',
+        cursos : [
+            { 
+                portugues : {
+                    nome : 'Mecanico de Refrigeração, Condicionadores de ar, lavadoras e lavadoras de roupas', 
+                    tipo : 'Profissionalizante'
+                },
+                ingles : {
+                    nome : 'Refrigeration Mechanic, air conditioners, washing machines and laundry machines',
+                    tipo : 'Vocational training',
+                },
+                espanhol : {
+                    nome : 'Mecánico de Refrigeración, aires acondicionados, lavadoras y lavadoras de ropa',
+                    tipo : 'Profesionalizante',
+                },
+                filtro : false,  
+                horas : 80,
+                dataInicio : new Date('01/24/2000'),
+                dataFim : new Date('02/25/2000'),
+                imagens : ["./img/cursos/kazasul/mecanico-lavaroupas.jpg"],
+            }
+        ],
+        posicao : "horizontal",
+    },
+    {
+        instituicao : 'Microlins',
+        cursos : [
+            { 
+                portugues : {
+                    nome : 'Informática Rápida', 
+                    tipo : 'Profissionalizante',
+                },
+                ingles : {
+                    nome : 'Fast Computing',
+                    tipo : 'Vocational training',
+                },
+                espanhol : {
+                    nome : 'Informática Rápida',
+                    tipo : 'Profesionalizante',
+                },
+                filtro : false,  
+                horas : 72,
+                dataInicio : new Date('04/18/2013'),
+                dataFim : new Date('09/26/2013'),
+                imagens : ["./img/cursos/microlins/informatica-rapida-frente.jpg","./img/cursos/microlins/informatica-rapida-verso.jpg"],
+            }
+        ],
+        posicao : "horizontal",
+    },
+    {
+        instituicao : 'Senai',
+        cursos : [
+            { 
+                portugues : {
+                    nome : 'Auxiliar de Mecânica Industrial', 
+                    tipo : 'Profissionalizante'
+                },
+                ingles : {
+                    nome : 'Industrial Mechanics Assistant',
+                    tipo : 'Vocational training',
+                },
+                espanhol : {
+                    nome : 'Auxiliar de Mecánica Industrial',
+                    tipo : 'Profesionalizante',
+                },
+                filtro : false,  
+                horas : 150,
+                dataInicio : new Date('07/12/2004'),
+                dataFim : new Date('09/27/2004'),
+                imagens : ["./img/cursos/senai/mecanica-industrial-frente.jpg","./img/cursos/senai/mecanica-industrial-verso.jpg"],
+            }
+        ],
+        posicao : "vertical",
+    },
+    {
+        instituicao : 'Fundapes',
+        cursos : [
+            { 
+                portugues : {
+                    nome : 'Espanhol Básico', 
+                    tipo : 'Linguas'
+                },
+                ingles : {
+                    nome : 'Basic Spanish',
+                    tipo : 'Languages',
+                },
+                espanhol : {
+                    nome : 'Español Básico',
+                    tipo : 'Lenguas',
+                },
+                filtro : false,  
+                horas : 40,
+                dataInicio : new Date('05/20/2006'),
+                dataFim : new Date('06/20/2006'),
+                imagens : ["./img/cursos/fundapes/espanhol-frente.jpg","./img/cursos/fundapes/espanhol-verso.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Como Ser Uma Pessoa Feliz', 
+                    tipo : 'Oficina'
+                },
+                ingles : {
+                    nome : 'How to Be a Happy Person',
+                    tipo : 'Workshop',
+                },
+                espanhol : {
+                    nome : 'Cómo Ser Una Persona Feliz',
+                    tipo : 'Oficina',
+                },
+                filtro : false,  
+                horas : 10,
+                dataInicio : new Date('06/08/2006'),
+                dataFim : new Date('06/13/2006'),
+                imagens : ["./img/cursos/fundapes/feliz-frente.jpg","./img/cursos/fundapes/feliz-verso.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Relações Humanas', 
+                    tipo : 'Oficina' 
+                },
+                ingles : {
+                    nome : 'Human Relations',
+                    tipo : 'Workshop',
+                },
+                espanhol : {
+                    nome : 'Relaciones Humanas',
+                    tipo : 'Oficina',
+                },
+                filtro : false,  
+                horas : 10,
+                dataInicio : new Date('04/15/2006'),
+                dataFim : new Date('04/20/2006'),
+                imagens : ["./img/cursos/fundapes/humanas-frente.jpg","./img/cursos/fundapes/humanas-verso.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Liderança', 
+                    tipo : 'Oficina'
+                },
+                ingles : {
+                    nome : 'Leadership',
+                    tipo : 'Workshop',
+                },
+                espanhol : {
+                    nome : 'Liderazgo',
+                    tipo : 'Oficina',
+                },
+                filtro : false,  
+                horas : 10,
+                dataInicio : new Date('06/22/2006'),
+                dataFim : new Date('06/17/2006'),
+                imagens : ["./img/cursos/fundapes/lideranca-frente.jpg","./img/cursos/fundapes/lideranca-verso.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Motivando para o Atendimento', 
+                    tipo : 'Oficina' 
+                },
+                ingles : {
+                    nome : 'Motivating for Service',
+                    tipo : 'Workshop',
+                },
+                espanhol : {
+                    nome : 'Motivando para la Atención',
+                    tipo : 'Oficina',
+                },
+                filtro : false,  
+                horas : 10,
+                dataInicio : new Date('01/16/2006'),
+                dataFim : new Date('01/21/2006'),
+                imagens : ["./img/cursos/fundapes/motivacao-frente.jpg","./img/cursos/fundapes/motivacao-verso.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Abrindo Seu Próprio Negócio', 
+                    tipo : 'Oficina' 
+                },
+                ingles : {
+                    nome : 'Starting Your Own Business',
+                    tipo : 'Workshop',
+                },
+                espanhol : {
+                    nome : 'Abriendo Su Propio Negocio',
+                    tipo : 'Oficina',
+                },
+                filtro : false,  
+                horas : 10,
+                dataInicio : new Date('04/22/2006'),
+                dataFim : new Date('04/27/2006'),
+                imagens : ["./img/cursos/fundapes/negocio-frente.jpg","./img/cursos/fundapes/negocio-verso.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Preparação para o Trabalho', 
+                    tipo : 'Oficina' 
+                },
+                ingles : {
+                    nome : 'Preparation for Work',
+                    tipo : 'Workshop',
+                },
+                espanhol : {
+                    nome : 'Preparación para el Trabajo',
+                    tipo : 'Oficina',
+                },
+                filtro : false,  
+                horas : 10,
+                dataInicio : new Date('02/04/2006'),
+                dataFim : new Date('02/09/2006'),
+                imagens : ["./img/cursos/fundapes/preparacao-frente.jpg","./img/cursos/fundapes/preparacao-verso.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Qualidade de Vida', 
+                    tipo : 'Oficina' 
+                },
+                ingles : {
+                    nome : 'Quality of Life',
+                    tipo : 'Workshop',
+                },
+                espanhol : {
+                    nome : 'Calidad de Vida',
+                    tipo : 'Oficina',
+                },
+                filtro : false,  
+                horas : 10,
+                dataInicio : new Date('02/18/2006'),
+                dataFim : new Date('02/23/2006'),
+                imagens : ["./img/cursos/fundapes/qualidade-frente.jpg","./img/cursos/fundapes/qualidade-verso.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Segredo do Sucesso', 
+                    tipo : 'Oficina' 
+                },
+                ingles : {
+                    nome : 'Secret of Success',
+                    tipo : 'Workshop',
+                },
+                espanhol : {
+                    nome : 'Secreto del Éxito',
+                    tipo : 'Oficina',
+                },
+                filtro : false,  
+                horas : 10,
+                dataInicio : new Date('04/01/2006'),
+                dataFim : new Date('04/06/2006'),
+                imagens : ["./img/cursos/fundapes/sucesso-frente.jpg","./img/cursos/fundapes/sucesso-verso.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Arte de Vender', 
+                    tipo : 'Oficina' 
+                },
+                ingles : {
+                    nome : 'The Art of Selling',
+                    tipo : 'Workshop',
+                },
+                espanhol : {
+                    nome : 'Arte de Vender',
+                    tipo : 'Oficina',
+                },
+                filtro : false,  
+                horas : 10,
+                dataInicio : new Date('03/23/2006'),
+                dataFim : new Date('03/17/2006'),
+                imagens : ["./img/cursos/fundapes/vender-frente.jpg","./img/cursos/fundapes/vender-verso.jpg"],
+            },
+        ],
+        posicao : "horizantal",
+    },
+    {
+        instituicao : 'E.J.A.',
+        cursos : [
+            { 
+                portugues : {
+                    nome : 'Ensino Fundamental Completo',
+                    tipo : 'Academico',
+                },
+                ingles : {
+                    nome : 'Complete Elementary Education',
+                    tipo : 'Academic',
+                },
+                espanhol : {
+                    nome : 'Educación Básica Completa',
+                    tipo : 'Académico',
+                },
+                filtro : false, 
+                dataFim : new Date('10/20/2002'),
+                imagens : ["./img/cursos/academico/ensino-fundamental-frente.jpg", "./img/cursos/academico/ensino-fundamental-verso.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Ensino Médio Completo', 
+                    tipo : 'Academico',
+                },
+                ingles : {
+                    nome : 'Complete High School',
+                    tipo : 'Academic',
+                },
+                espanhol : {
+                    nome : 'Educación Media Completa',
+                    tipo : 'Académico',
+                },
+                filtro : false, 
+                dataFim : new Date('09/14/2003'),
+                imagens : ["./img/cursos/academico/ensino-medio-frente.jpg", "./img/cursos/academico/ensino-medio-verso.jpg"],
+            },
+        ],
+        posicao : "vertical",
+    },
+]
+
+let instituicoes = cursos.map((instituicao) => {
+    return instituicao.instituicao;
+});
+
+let nomeCursos = {
+    portugues : cursos.map((instituicao) => {
+    return instituicao.cursos.map((curso) => {
+        return curso.portugues.nome;
+        });
+    }),   
+    ingles : cursos.map((instituicao) => {
+        return instituicao.cursos.map((curso) => {
+            return curso.ingles.nome;
+        });
+    }),   
+    espanhol : cursos.map((instituicao) => {
+        return instituicao.cursos.map((curso) => {
+            return curso.espanhol.nome;
+        });
+    }),   
+}
+
+let tipoCursos = {
+    portugues : cursos.map((instituicao) => {
+        return instituicao.cursos.map((curso) => {
+            return curso.portugues.tipo;
+        });
+    }),   
+    ingles : cursos.map((instituicao) => {
+        return instituicao.cursos.map((curso) => {
+            return curso.ingles.tipo;
+        });
+    }),   
+    espanhol : cursos.map((instituicao) => {
+        return instituicao.cursos.map((curso) => {
+            return curso.espanhol.tipo;
+        });
+    }),   
+}
+
+let anos = cursos.map((instituicao) => {
+        return instituicao.cursos.map((curso) => {
+            let data = new Date(curso.dataFim)
+            return data.getFullYear();
+        })
+    }
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

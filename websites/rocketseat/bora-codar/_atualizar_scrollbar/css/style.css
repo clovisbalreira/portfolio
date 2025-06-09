@@ -140,6 +140,7 @@ form{
     color: #BCBCBA;
     margin-top: 4px;
 }
+
 .list-wrapper ul{
     display: flex;
     flex-direction: column;
@@ -149,4 +150,63 @@ header nav, header form, .list-wrapper{
     max-width: 350px;
     width: 100%;
     margin-inline: auto;
+}
+.icones{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-inline-start: 20px;
+}
+
+.icones li {
+    list-style: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+.fechar {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content h2 {
+    color: black;
+}
+
+form label {
+    color: black;
+  margin-top: 10px;
+}
+
+form input, form select, form button {
+  padding: 8px;
+  margin-top: 5px;
 }

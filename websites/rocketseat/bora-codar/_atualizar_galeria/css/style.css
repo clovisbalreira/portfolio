@@ -73,6 +73,7 @@ main{
 /* hover */
 .container{
     position: relative;
+    width: 300px;
     outline: 4px solid transparent;
     transition: all .4s;
 }

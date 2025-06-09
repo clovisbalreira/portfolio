@@ -14,17 +14,32 @@
         <nav class="flex items-center">
             <h2>Meus Contatos</h2>
             <ul class="flex items-center">
-                <li>
-                    <ion-icon name="add"></ion-icon>
-                </li>
-                <li>
-                    <ion-icon name="pencil"></ion-icon>
-                </li>
-                <li>
-                    <ion-icon name="trash"></ion-icon>
+                <li class="incluir">
+                    <ion-icon name="add" id="abrir-modal"></ion-icon>
                 </li>
             </ul>
         </nav>
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="fechar">&times;</span>
+                <h2></h2>
+                <form id="form-contato">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+                <label for="sexo">Sexo:</label>
+                <select id="sexo" name="sexo" required>
+                    <option value="">Selecione</option>
+                    <option value="men">Homem</option>
+                    <option value="women">Mulher</option>
+                </select>
+                
+                <button type="submit">Salvar</button>
+                </form>
+            </div>
+        </div>
         <form>
             <div class="input-wrapper flex item-center">
                 <ion-icon name="search"></ion-icon>

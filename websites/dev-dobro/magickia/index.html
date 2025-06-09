@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magick IA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/estilos.css">
+    <link rel="stylesheet" href="./src/css/responsivo.css">
+    <script defer type="module" src="./src/js/main.js"></script>
+</head>
+<body>
+    <header class="cabecalho">
+        <img src="./src/img/logo.png" alt="Logo Magic IA">
+    </header>
+    <main class="container">
+        <h1 class="produtos">Produtos</h1>
+        <div class="filtros">
+            <div class="categorias-cartas">
+                <label for="categoria">Categoria</label>
+                <select id="categoria" class="categoria">
+                    <option value="">Selecione uma carta</option>
+                    <option value="comum">Comum</option>
+                    <option value="rara">Rara</option>
+                    <option value="épica">Épica</option>
+                </select>
+            </div>
+            <div class="preco-cartas">
+                <label for="preco">Preço máximo (R$)</label>
+                <input type="number" id="preco" class="preco" placeholder="Digite o preço máximo">
+            </div>
+            <button class="btn-filtrar">Aplicar filtros</button>
+        </div>
+        <ul id="cartas" class="cartas">
+
+        </ul>
+    </main>
+    <footer class="rodape">
+        <p>@2025 - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>

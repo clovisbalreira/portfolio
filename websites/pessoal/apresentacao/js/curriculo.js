@@ -115,6 +115,7 @@ function objetivos(texto){
     div.appendChild(p(texto))
     return div
 }
+
 function interesseProfissionais(profissionais){
     let divGlobal = document.createElement('div')
     divGlobal.classList.add('div-interesse-pessoal')
@@ -194,6 +195,10 @@ function formacaoProfissional(formacoes, idioma){
         }
     }
     return divGlobal
+}
+
+function incluirZero(numero){
+    return numero < 10 ? `0${numero}` : numero  
 }
 
 function portugues(idioma, section){
@@ -280,19 +285,277 @@ function mostrarDadosCurriculo(idioma){
     }
 }
 
-mostrarDadosCurriculo('portugues')
+function mostrarCursos(cursos, idioma, filtrar){
+    let ul = document.getElementById('lista-cursos')
+    ul.innerHTML = ''
+    cursos.forEach(curso => {
+        let instituicao = curso.instituicao
+        let posicao = curso.posicao
+        curso.cursos.forEach( dados => {
+            filtrar ? condicaoFiltro(dados, ul, idioma, dados, instituicao, posicao) : desenharCursos(ul, idioma, dados, instituicao, posicao)            
+        })
+    })
+}
+
+function condicaoFiltro(dados, ul, idioma, dados, instituicao, posicao){
+    if(dados.filtro) desenharCursos(ul, idioma, dados, instituicao, posicao)  
+}
+
+function desenharCursos(ul, idioma, dados, instituicao, posicao){
+    let li = document.createElement('li')
+    let data
+    let hora 
+    if(idioma == 'portugues'){
+        li.appendChild(titulo(`${instituicao} - ${dados.portugues.nome}`))
+        data = 'Data: '
+        hora = ' horas'
+    }else if(idioma == 'espanhol'){
+        li.appendChild(titulo(`${instituicao} - ${dados.espanhol.nome}`))
+        data = 'Datos: '
+        hora = ' horas'       
+    }else if(idioma == 'ingles'){
+        li.appendChild(titulo(`${instituicao} - ${dados.ingles.nome}`))     
+        data = 'Date: '
+        hora = ' hours'    
+    }
+    let pData = document.createElement('p')
+    pData.appendChild(strong(data))
+    let dataInicio = new Date(dados.dataInicio)
+    let dataFim = new Date(dados.dataFim)
+    instituicao == 'E.J.A.' ? pData.appendChild(span(`${incluirZero(dataFim.getDate())}/${incluirZero(dataFim.getMonth() + 1)}/${dataFim.getFullYear()}`)) : pData.appendChild(span(`${incluirZero(dataInicio.getDate())}/${incluirZero(dataInicio.getMonth() + 1)}/${dataInicio.getFullYear()} - ${incluirZero(dataFim.getDate())}/${incluirZero(dataFim.getMonth() + 1)}/${dataFim.getFullYear()}`))
+    let horas = instituicao == 'E.J.A.' ? '' : ` - ${dados.horas} ${hora}`
+    pData.appendChild(span(horas))
+    li.appendChild(pData)
+    li.appendChild(imagemCurso(dados, instituicao, posicao))    
+    ul.appendChild(li)
+}
+
+function imagemCurso(dados, nome, posicao){
+    let div = document.createElement('div')
+    div.classList.add('div-imagens-curso')
+    if(nome == 'E.J.A.'){
+        dados.imagens.forEach(imagem => {
+            let img = document.createElement('img')
+            img.classList.add('img-vertical')
+            img.src = imagem    
+            img.alt = dados.nome
+            div.appendChild(img)
+        })
+    }else{
+        dados.imagens.forEach((imagem, index) => {
+            let img = document.createElement('img')
+            index == 0 ? img.classList.add('mostrar') : img.classList.add('esconder')
+            img.classList.add(`${posicao == 'vertical' ? 'img-vertical' : 'img-horizontal'}`)
+            img.src = imagem    
+            img.alt = dados.nome
+            div.appendChild(img)
+        })
+    }
+    return div
+}
+
+function adicionarLabels(idiomaAtual, labelText){
+    let labels = document.querySelectorAll('label')
+    labels.forEach((label, index) => {
+        if(idiomaAtual == 'portugues')
+            label.textContent = labelText.portugues[index]
+        else if(idiomaAtual == 'ingles')
+            label.textContent = labelText.ingles[index]
+        else if(idiomaAtual == 'espanhol')
+            label.textContent = labelText.espanhol[index]
+    })
+}
+
+function adicionarSelectTexto(idiomaAtual, portugues, espanhol, ingles){
+    let option = document.createElement('option')
+    if(idiomaAtual == 'portugues'){
+        option.textContent = portugues
+    }else if(idiomaAtual == 'espanhol'){
+        option.textContent = espanhol
+    }else if(idiomaAtual == 'ingles'){
+        option.textContent = ingles
+    }
+    return option
+}
+
+function preencherOptions(select, dados){
+    dados.forEach(instituicao => {
+        let option = document.createElement('option')
+        option.value = instituicao
+        option.textContent = instituicao
+        select.appendChild(option)
+    })
+}
+
+function preecherSelectCurso(idiomaAtual, dados){
+    let array = []
+    if(idiomaAtual == 'portugues'){
+        dados.portugues.forEach(dado => {
+            dado.forEach(nome => {
+                array.push(nome)
+            })
+        })
+    }else if(idiomaAtual == 'espanhol'){
+        dados.espanhol.forEach(dado => {
+            dado.forEach(nome => {
+                array.push(nome)
+            })
+        })
+    }else if(idiomaAtual == 'ingles'){
+        dados.ingles.forEach(dado => {
+            dado.forEach(nome => {
+                array.push(nome)
+            })
+        })
+    }
+    return array
+}
+
+function preecherSelectTipoCurso(idiomaAtual, dados){
+    let array = []
+    if(idiomaAtual == 'portugues'){
+        dados.portugues.forEach(dado => {
+            array.push(dado)
+        })
+    }else if(idiomaAtual == 'espanhol'){
+        dados.espanhol.forEach(dado => {
+            array.push(dado)
+        })
+    }else if(idiomaAtual == 'ingles'){
+        dados.ingles.forEach(dado => {
+            array.push(dado)
+        })
+    }
+    return array
+}
+
+function naoRepetir(anos){
+    let dados = []
+    anos.forEach(dado => {
+        dado.forEach(t => {
+            if(!dados.includes(t)){
+                dados.push(t)
+            }
+        })
+    })
+    return dados
+}
+
+function selectAno(idiomaAtual, anos){
+    let select = document.getElementById('ano')
+    select.innerHTML = ''
+    select.appendChild(adicionarSelectTexto(idiomaAtual, 'Selecione o ano:', 'Seleccione el año:', 'Select the year:'))
+    preencherOptions(select, naoRepetir(anos).sort((a,b) => b - a))
+}
+
+function selectInstituicao(idiomaAtual, instituicoes){
+    let select = document.getElementById('instituicao')
+    select.innerHTML = ''
+    select.appendChild(adicionarSelectTexto(idiomaAtual, 'Selecione a instituição:', 'Seleccione la institución:', 'Select the institution:'))
+    preencherOptions(select, instituicoes)
+}
+
+function selectCursos(idiomaAtual, nomeCursos){
+    let select = document.getElementById('cursos')
+    select.innerHTML = ''
+    select.appendChild(adicionarSelectTexto(idiomaAtual, 'Selecione o curso:', 'Seleccione el curso:', 'Select the course:'))
+    preencherOptions(select, preecherSelectCurso(idiomaAtual, nomeCursos))
+}
+
+function selectTipoCurso(idiomaAtual, tipoCursos){
+    let select = document.getElementById('tipo')
+    select.innerHTML = ''
+    select.appendChild(adicionarSelectTexto(idiomaAtual, 'Selecione o tipo de curso:', 'Seleccione el tipo de curso:', 'Select the type of course:'))
+    preencherOptions(select, naoRepetir(preecherSelectTipoCurso(idiomaAtual, tipoCursos)))
+}
+
+function atualizarSelect(idiomaAtual, anos, instituicoes, nomeCursos, tipoCursos){
+    selectAno(idiomaAtual, anos)
+    selectInstituicao(idiomaAtual, instituicoes)
+    selectCursos(idiomaAtual, nomeCursos)
+    selectTipoCurso(idiomaAtual, tipoCursos)
+}
+
+function carregarPagina(cursos, idiomaAtual, labelText, instituicoes, nomeCursos, anos){
+    mostrarDadosCurriculo(idiomaAtual)
+    mostrarCursos(cursos, idiomaAtual, false)
+    adicionarLabels(idiomaAtual, labelText)
+    atualizarSelect(idiomaAtual, anos, instituicoes, nomeCursos, tipoCursos)
+}
+
+carregarPagina(cursos, idiomaAtual, labelText, instituicoes, nomeCursos, anos)
 
 document.getElementById('portugal').addEventListener('click', () => {
-    mostrarDadosCurriculo('portugues')
+    idiomaAtual = 'portugues'
+    carregarPagina(cursos, idiomaAtual, labelText, instituicoes, nomeCursos, anos)
     } 
 )
 
 document.getElementById('espanha').addEventListener('click', () => {     
-    mostrarDadosCurriculo('espanhol')
+    idiomaAtual = 'espanhol'
+    carregarPagina(cursos, idiomaAtual, labelText, instituicoes, nomeCursos, anos)
     }
 )
 
 document.getElementById('inglaterra').addEventListener('click', () => { 
-    mostrarDadosCurriculo('ingles')
+    idiomaAtual = 'ingles'
+    carregarPagina(cursos, idiomaAtual, labelText, instituicoes, nomeCursos, anos)
     }
 )
+
+document.getElementById('cursos').addEventListener('change', () => {
+    let valor = document.getElementById('cursos').value
+    if(valor == 'Selecione o curso:' || valor == 'Seleccione el curso:' || valor == 'Select the course:') return mostrarCursos(cursos, idiomaAtual, false)
+    cursos.forEach( curso => {
+        curso.cursos.forEach( cursoNome => {
+            cursoNome.portugues.nome == valor || cursoNome.espanhol.nome == valor || cursoNome.ingles.nome == valor ? cursoNome.filtro = true : cursoNome.filtro = false
+        })
+    })
+    selectAno(idiomaAtual, anos)
+    selectInstituicao(idiomaAtual, instituicoes)
+    selectTipoCurso(idiomaAtual, tipoCursos)
+    mostrarCursos(cursos, idiomaAtual, true)
+}) 
+
+document.getElementById('ano').addEventListener('change', () => {
+    let valor = document.getElementById('ano').value
+    if(valor == 'Selecione o ano:' || valor == 'Seleccione el año:' || valor == 'Select the year:') return mostrarCursos(cursos, idiomaAtual, false)
+    cursos.forEach( curso => {
+        curso.cursos.forEach( cursoNome => {
+            const anoSelecionado = new Date(cursoNome.dataFim).getFullYear()
+            anoSelecionado == valor ? cursoNome.filtro = true : cursoNome.filtro = false
+        })
+    })
+    selectInstituicao(idiomaAtual, instituicoes)
+    selectCursos(idiomaAtual, nomeCursos)
+    selectTipoCurso(idiomaAtual, tipoCursos)
+    mostrarCursos(cursos, idiomaAtual, true)
+}) 
+
+document.getElementById('instituicao').addEventListener('change', () => {
+    let valor = document.getElementById('instituicao').value
+    if(valor == 'Selecione a instituição:' || valor == 'Seleccione la institución:' || valor == 'Select the institution:') return mostrarCursos(cursos, idiomaAtual, false)
+    cursos.forEach( curso => {
+        curso.cursos.forEach( cursoNome => {
+            curso.instituicao == valor ? cursoNome.filtro = true : cursoNome.filtro = false
+        })
+    })
+    selectAno(idiomaAtual, anos)
+    selectCursos(idiomaAtual, nomeCursos)
+    selectTipoCurso(idiomaAtual, tipoCursos)
+    mostrarCursos(cursos, idiomaAtual, true)
+}) 
+
+document.getElementById('tipo').addEventListener('change', () => {
+    let valor = document.getElementById('tipo').value
+    if(valor == 'Selecione o tipo de curso:' || valor == 'Seleccione el tipo de curso:' || valor == 'Select the type of course:') return mostrarCursos
+    cursos.forEach( curso => {
+        curso.cursos.forEach( cursoNome => {
+            cursoNome.portugues.tipo == valor || cursoNome.espanhol.tipo == valor || cursoNome.ingles.tipo == valor ? cursoNome.filtro = true : cursoNome.filtro = false
+        })
+    })
+    selectAno(idiomaAtual, anos)
+    selectInstituicao(idiomaAtual, instituicoes)
+    selectCursos(idiomaAtual, nomeCursos)
+    mostrarCursos(cursos, idiomaAtual, true)
+}) 
