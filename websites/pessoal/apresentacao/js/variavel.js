@@ -326,6 +326,63 @@ let cursos = [
             },
             { 
                 portugues : {
+                    nome : 'Desenvolvimento Web 2020 ( HTML5+CSS3 ) Módulo 02', 
+                    tipo : 'HTML E CSS'
+                },
+                ingles : {
+                    nome : 'Web Development 2020 (HTML5+CSS3) Module 02',
+                    tipo : 'HTML E CSS',
+                },
+                espanhol : {
+                    nome : 'Desarrollo Web 2020 ( HTML5+CSS3 ) Módulo 02',
+                    tipo : 'HTML E CSS',
+                },
+                filtro : false,  
+                horas : 40,
+                dataInicio : new Date('02/26/2022'),
+                dataFim : new Date('03/26/2022'),
+                imagens : ["./img/cursos/estudonauta/html-css-02.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Desenvolvimento Web 2020 ( HTML5+CSS3 ) Módulo 03', 
+                    tipo : 'HTML E CSS'
+                },
+                ingles : {
+                    nome : 'Web Development 2020 (HTML5+CSS3) Module 03',
+                    tipo : 'HTML E CSS',
+                },
+                espanhol : {
+                    nome : 'Desarrollo Web 2020 ( HTML5+CSS3 ) Módulo 03',
+                    tipo : 'HTML E CSS',
+                },
+                filtro : false,  
+                horas : 40,
+                dataInicio : new Date('02/27/2022'),
+                dataFim : new Date('03/27/2022'),
+                imagens : ["./img/cursos/estudonauta/html-css-03.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Desenvolvimento Web 2020 ( HTML5+CSS3 ) Módulo 04', 
+                    tipo : 'HTML E CSS'
+                },
+                ingles : {
+                    nome : 'Web Development 2020 (HTML5+CSS3) Module 04',
+                    tipo : 'HTML E CSS',
+                },
+                espanhol : {
+                    nome : 'Desarrollo Web 2020 ( HTML5+CSS3 ) Módulo 04',
+                    tipo : 'HTML E CSS',
+                },
+                filtro : false,  
+                horas : 40,
+                dataInicio : new Date('07/03/2022'),
+                dataFim : new Date('08/03/2022'),
+                imagens : ["./img/cursos/estudonauta/html-css-04.jpg"],
+            },
+            { 
+                portugues : {
                     nome : 'P.H.P. básico', 
                     tipo : 'P.H.P.'
                 },
