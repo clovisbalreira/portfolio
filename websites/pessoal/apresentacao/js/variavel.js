@@ -308,15 +308,15 @@ let cursos = [
             { 
                 portugues : {
                     nome : 'Desenvolvimento Web 2020 ( HTML5+CSS3 ) Módulo 01', 
-                    tipo : 'HTML E CSS'
+                    tipo : 'Front End'
                 },
                 ingles : {
                     nome : 'Web Development 2020 (HTML5+CSS3) Module 01',
-                    tipo : 'HTML E CSS',
+                    tipo : 'Front End',
                 },
                 espanhol : {
                     nome : 'Desarrollo Web 2020 ( HTML5+CSS3 ) Módulo 01',
-                    tipo : 'HTML E CSS',
+                    tipo : 'Front End',
                 },
                 filtro : false,  
                 horas : 40,
@@ -327,15 +327,15 @@ let cursos = [
             { 
                 portugues : {
                     nome : 'Desenvolvimento Web 2020 ( HTML5+CSS3 ) Módulo 02', 
-                    tipo : 'HTML E CSS'
+                    tipo : 'Front End'
                 },
                 ingles : {
                     nome : 'Web Development 2020 (HTML5+CSS3) Module 02',
-                    tipo : 'HTML E CSS',
+                    tipo : 'Front End',
                 },
                 espanhol : {
                     nome : 'Desarrollo Web 2020 ( HTML5+CSS3 ) Módulo 02',
-                    tipo : 'HTML E CSS',
+                    tipo : 'Front End',
                 },
                 filtro : false,  
                 horas : 40,
@@ -346,15 +346,15 @@ let cursos = [
             { 
                 portugues : {
                     nome : 'Desenvolvimento Web 2020 ( HTML5+CSS3 ) Módulo 03', 
-                    tipo : 'HTML E CSS'
+                    tipo : 'Front End'
                 },
                 ingles : {
                     nome : 'Web Development 2020 (HTML5+CSS3) Module 03',
-                    tipo : 'HTML E CSS',
+                    tipo : 'Front End',
                 },
                 espanhol : {
                     nome : 'Desarrollo Web 2020 ( HTML5+CSS3 ) Módulo 03',
-                    tipo : 'HTML E CSS',
+                    tipo : 'Front End',
                 },
                 filtro : false,  
                 horas : 40,
@@ -365,34 +365,53 @@ let cursos = [
             { 
                 portugues : {
                     nome : 'Desenvolvimento Web 2020 ( HTML5+CSS3 ) Módulo 04', 
-                    tipo : 'HTML E CSS'
+                    tipo : 'Front End'
                 },
                 ingles : {
                     nome : 'Web Development 2020 (HTML5+CSS3) Module 04',
-                    tipo : 'HTML E CSS',
+                    tipo : 'Front End',
                 },
                 espanhol : {
                     nome : 'Desarrollo Web 2020 ( HTML5+CSS3 ) Módulo 04',
-                    tipo : 'HTML E CSS',
+                    tipo : 'Front End',
                 },
                 filtro : false,  
                 horas : 40,
                 dataInicio : new Date('07/03/2022'),
                 dataFim : new Date('08/03/2022'),
                 imagens : ["./img/cursos/estudonauta/html-css-04.jpg"],
-            },
+            },          
+            { 
+                portugues : {
+                    nome : 'Javascript', 
+                    tipo : 'Programação'
+                },
+                ingles : {
+                    nome : 'Javascript',
+                    tipo : 'Schedule',
+                },
+                espanhol : {
+                    nome : 'Javascript',
+                    tipo : 'Cronograma',
+                },
+                filtro : false,  
+                horas : 40,
+                dataInicio : new Date('02/27/2022'),
+                dataFim : new Date('03/29/2022'),
+                imagens : ["./img/cursos/estudonauta/javascript.jpg"],
+            },   
             { 
                 portugues : {
                     nome : 'P.H.P. básico', 
-                    tipo : 'P.H.P.'
+                    tipo : 'Back End'
                 },
                 ingles : {
                     nome : 'basic P.H.P.', 
-                    tipo : 'P.H.P.'
+                    tipo : 'Back End'
                 },
                 espanhol : {
                     nome : 'P.H.P. básico', 
-                    tipo : 'P.H.P.'
+                    tipo : 'Back End'
                 },
                 filtro : false,  
                 horas : 40,
@@ -403,15 +422,15 @@ let cursos = [
             { 
                 portugues : {
                     nome : 'P.H.P. P.O.O.', 
-                    tipo : 'P.H.P.'
+                    tipo : 'Back End'
                 },
                 ingles : {
                     nome : 'P.H.P. P.O.O.', 
-                    tipo : 'P.H.P.'
+                    tipo : 'Back End'
                 },
                 espanhol : {
                     nome : 'P.H.P. P.O.O.', 
-                    tipo : 'P.H.P.'
+                    tipo : 'Back End'
                 },
                 filtro : false,  
                 horas : 40,
@@ -421,22 +440,326 @@ let cursos = [
             },
             { 
                 portugues : {
+                    nome : 'P.H.P. com M.Y.S.Q.L. - Módulo 00 - Primeiros Passos', 
+                    tipo : 'Back End'
+                },
+                ingles : {
+                    nome : 'P.H.P. with M.Y.S.Q.L. - Module 00 - First Steps', 
+                    tipo : 'Back End'
+                },
+                espanhol : {
+                    nome : 'P.H.P. con M.Y.S.Q.L. - Módulo 00 - Primeros Pasos', 
+                    tipo : 'Back End'
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('02/03/2022'),
+                dataFim : new Date('03/03/2022'),
+                imagens : ["./img/cursos/estudonauta/php-mysql-00.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'P.H.P. com M.Y.S.Q.L. - Módulo 01 - Criando um C.R.U.D.', 
+                    tipo : 'Back End'
+                },
+                ingles : {
+                    nome : 'P.H.P. with M.Y.S.Q.L. - Module 01 - Creating a C.R.U.D.', 
+                    tipo : 'Back End'
+                },
+                espanhol : {
+                    nome : 'P.H.P. con M.Y.S.Q.L. - Módulo 01 - Creando un C.R.U.D.', 
+                    tipo : 'Back End'
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('02/04/2022'),
+                dataFim : new Date('03/04/2022'),
+                imagens : ["./img/cursos/estudonauta/php-mysql-01.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'P.H.P. com M.Y.S.Q.L. - Módulo 02 - Segurança e níveis de acessso', 
+                    tipo : 'Back End'
+                },
+                ingles : {
+                    nome : 'P.H.P. with M.Y.S.Q.L. - Module 02 - Security and Access Levels', 
+                    tipo : 'Back End'
+                },
+                espanhol : {
+                    nome : 'P.H.P. con M.Y.S.Q.L. - Módulo 02 - Seguridad y niveles de acceso', 
+                    tipo : 'Back End'
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('02/05/2022'),
+                dataFim : new Date('03/05/2022'),
+                imagens : ["./img/cursos/estudonauta/php-mysql-02.jpg"],
+            },
+            { 
+                portugues : {
                     nome : 'P.H.P. moderno modulo 01', 
-                    tipo : 'P.H.P.'
+                    tipo : 'Back End'
                 },
                 ingles : {
                     nome : 'Modern P.H.P. Module 01',
-                    tipo : 'P.H.P.',
+                    tipo : 'Back End',
                 },
                 espanhol : {
                     nome : 'P.H.P. moderno módulo 01',
-                    tipo : 'P.H.P.',
+                    tipo : 'Back End',
                 },
                 filtro : false,  
                 horas : 40,
                 dataInicio : new Date('03/26/2022'),
                 dataFim : new Date('04/26/2022'),
                 imagens : ["./img/cursos/estudonauta/php-moderno-01.jpg"],
+            },  
+            { 
+                portugues : {
+                    nome : 'Java básico - Módulo 00', 
+                    tipo : 'Programação'
+                },
+                ingles : {
+                    nome : 'basic java - Module 00', 
+                    tipo : 'Schedule'
+                },
+                espanhol : {
+                    nome : 'Java básico - Módulo 00', 
+                    tipo : 'Cronograma'
+                },
+                filtro : false,  
+                horas : 40,
+                dataInicio : new Date('02/27/2022'),
+                dataFim : new Date('03/30/2022'),
+                imagens : ["./img/cursos/estudonauta/java-basico.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Java P.O.O. - Módulo 00', 
+                    tipo : 'Programação'
+                },
+                ingles : {
+                    nome : 'Java P.O.O. - Module 00', 
+                    tipo : 'Schedule'
+                },
+                espanhol : {
+                    nome : 'Java P.O.O. - Módulo 00', 
+                    tipo : 'Cronograma'
+                },
+                filtro : false,  
+                horas : 40,
+                dataInicio : new Date('02/27/2022'),
+                dataFim : new Date('03/30/2022'),
+                imagens : ["./img/cursos/estudonauta/java-poo.jpg"],
+            },          
+            { 
+                portugues : {
+                    nome : 'Python - Mundo 01 - Fundamentos', 
+                    tipo : 'Programação'
+                },
+                ingles : {
+                    nome : 'Python - World 01 - Fundamentals',
+                    tipo : 'Schedule',
+                },
+                espanhol : {
+                    nome : 'Python - Mundo 01 - Fundamentos',
+                    tipo : 'Cronograma',
+                },
+                filtro : false,  
+                horas : 40,
+                dataInicio : new Date('04/01/2023'),
+                dataFim : new Date('05/01/2023'),
+                imagens : ["./img/cursos/estudonauta/python-01.jpg"],
+            },       
+            { 
+                portugues : {
+                    nome : 'Python - Mundo 02 - Estrutura de controle', 
+                    tipo : 'Programação'
+                },
+                ingles : {
+                    nome : 'Python - World 02 - Control structure',
+                    tipo : 'Schedule',
+                },
+                espanhol : {
+                    nome : 'Python - Mundo 02 - Estructura de control',
+                    tipo : 'Cronograma',
+                },
+                filtro : false,  
+                horas : 40,
+                dataInicio : new Date('04/01/2023'),
+                dataFim : new Date('05/01/2023'),
+                imagens : ["./img/cursos/estudonauta/python-02.jpg"],
+            },          
+            { 
+                portugues : {
+                    nome : 'Python - Mundo 03 - Estrutura compostas', 
+                    tipo : 'Programação'
+                },
+                ingles : {
+                    nome : 'Python - World 03 - Estructuras compuestas',
+                    tipo : 'Schedule',
+                },
+                espanhol : {
+                    nome : 'Python - Mundo 03 - Composite structures',
+                    tipo : 'Cronograma',
+                },
+                filtro : false,  
+                horas : 40,
+                dataInicio : new Date('04/01/2023'),
+                dataFim : new Date('05/01/2023'),
+                imagens : ["./img/cursos/estudonauta/python-03.jpg"],
+            },   
+            { 
+                portugues : {
+                    nome : 'C - Módulo 00 - Primeiros Passos', 
+                    tipo : 'Programação'
+                },
+                ingles : {
+                    nome : 'C - Module 00 - First Steps',
+                    tipo : 'Schedule',
+                },
+                espanhol : {
+                    nome : 'C - Módulo 00 - Primeros pasos',
+                    tipo : 'Cronograma',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('08/20/2022'),
+                dataFim : new Date('09/20/2022'),
+                imagens : ["./img/cursos/estudonauta/c-00.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'C - Módulo 01 - Estruturas Básicas', 
+                    tipo : 'Programação'
+                },
+                ingles : {
+                    nome : 'C - Module 01 - Basic Structures',
+                    tipo : 'Schedule',
+                },
+                espanhol : {
+                    nome : 'C - Módulo 01 - Estructuras básicas',
+                    tipo : 'Cronograma',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('08/28/2022'),
+                dataFim : new Date('09/28/2022'),
+                imagens : ["./img/cursos/estudonauta/c-01.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Android - Módulo 00 - Primeiros Passos', 
+                    tipo : 'Mobile'
+                },
+                ingles : {
+                    nome : 'Android - Module 00 - First Steps',
+                    tipo : 'Mobile',
+                },
+                espanhol : {
+                    nome : 'Android - Módulo 00 - Primeros pasos',
+                    tipo : 'Móvil',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('07/20/2022'),
+                dataFim : new Date('08/20/2022'),
+                imagens : ["./img/cursos/estudonauta/android-00.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Android - Módulo 01 - Estruturas Básicas', 
+                    tipo : 'Mobile'
+                },
+                ingles : {
+                    nome : 'Android - Module 01 - Basic Structures',
+                    tipo : 'Mobile',
+                },
+                espanhol : {
+                    nome : 'Android - Módulo 01 - Estructuras básicas',
+                    tipo : 'Móvil',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('07/20/2022'),
+                dataFim : new Date('08/20/2022'),
+                imagens : ["./img/cursos/estudonauta/android-01.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Android - Módulo 02 - Interfaces', 
+                    tipo : 'Mobile'
+                },
+                ingles : {
+                    nome : 'Android - Module 02 - Interfaces',
+                    tipo : 'Mobile',
+                },
+                espanhol : {
+                    nome : 'Android - Módulo 02 - Interfaces',
+                    tipo : 'Móvil',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('07/23/2022'),
+                dataFim : new Date('08/23/2022'),
+                imagens : ["./img/cursos/estudonauta/android-02.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Android - Módulo 03 - Atividades', 
+                    tipo : 'Mobile'
+                },
+                ingles : {
+                    nome : 'Android - Module 03 - activities',
+                    tipo : 'Mobile',
+                },
+                espanhol : {
+                    nome : 'Android - Módulo 03 - actividades',
+                    tipo : 'Móvil',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('07/25/2022'),
+                dataFim : new Date('08/25/2022'),
+                imagens : ["./img/cursos/estudonauta/android-03.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Kotlin - Módulo 00 - Primeiros Passos', 
+                    tipo : 'Mobile'
+                },
+                ingles : {
+                    nome : 'Kotlin - Module 00 - First Steps',
+                    tipo : 'Mobile',
+                },
+                espanhol : {
+                    nome : 'Kotlin - Módulo 00 - Primeros pasos',
+                    tipo : 'Móvil',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('07/25/2022'),
+                dataFim : new Date('08/25/2022'),
+                imagens : ["./img/cursos/estudonauta/kotlin-00.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Kotlin - Módulo 01 - Estruturas Básicas', 
+                    tipo : 'Mobile'
+                },
+                ingles : {
+                    nome : 'Kotlin - Module 01 - Basic Structures',
+                    tipo : 'Mobile',
+                },
+                espanhol : {
+                    nome : 'Kotlin - Módulo 01 - Estructuras básicas',
+                    tipo : 'Móvil',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('07/30/2022'),
+                dataFim : new Date('08/30/2022'),
+                imagens : ["./img/cursos/estudonauta/kotlin-01.jpg"],
             },
             { 
                 portugues : {
@@ -457,44 +780,6 @@ let cursos = [
                 dataFim : new Date('05/02/2022'),
                 imagens : ["./img/cursos/estudonauta/mysql-00.jpg"],
             }, 
-            { 
-                portugues : {
-                    nome : 'Java básico - Módulo 00', 
-                    tipo : 'Java'
-                },
-                ingles : {
-                    nome : 'basic java - Module 00', 
-                    tipo : 'Java'
-                },
-                espanhol : {
-                    nome : 'Java básico - Módulo 00', 
-                    tipo : 'Java'
-                },
-                filtro : false,  
-                horas : 40,
-                dataInicio : new Date('02/27/2022'),
-                dataFim : new Date('03/30/2022'),
-                imagens : ["./img/cursos/estudonauta/java-basico.jpg"],
-            },
-            { 
-                portugues : {
-                    nome : 'Java P.O.O. - Módulo 00', 
-                    tipo : 'Java'
-                },
-                ingles : {
-                    nome : 'Java P.O.O. - Module 00', 
-                    tipo : 'Java'
-                },
-                espanhol : {
-                    nome : 'Java P.O.O. - Módulo 00', 
-                    tipo : 'Java'
-                },
-                filtro : false,  
-                horas : 40,
-                dataInicio : new Date('02/27/2022'),
-                dataFim : new Date('03/30/2022'),
-                imagens : ["./img/cursos/estudonauta/java-poo.jpg"],
-            },
             { 
                 portugues : {
                     nome : 'Git - Github', 
