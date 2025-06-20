@@ -513,6 +513,82 @@ let cursos = [
                 dataInicio : new Date('03/26/2022'),
                 dataFim : new Date('04/26/2022'),
                 imagens : ["./img/cursos/estudonauta/php-moderno-01.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'WordPress com Gutemberg - modulo 01 - Criação de Site', 
+                    tipo : 'CMS'
+                },
+                ingles : {
+                    nome : 'WordPress with Gutenberg - Module 01 - Website Creation',
+                    tipo : 'CMS',
+                },
+                espanhol : {
+                    nome : 'WordPress con Gutenberg - Módulo 01 - Creación de sitios web',
+                    tipo : 'CMS',
+                },
+                filtro : false,  
+                horas : 40,
+                dataInicio : new Date('03/02/2022'),
+                dataFim : new Date('04/02/2022'),
+                imagens : ["./img/cursos/estudonauta/wordpress-01.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'WordPress com Gutemberg - modulo 02 - Segurança e Performance', 
+                    tipo : 'CMS'
+                },
+                ingles : {
+                    nome : 'WordPress with Gutenberg - Module 02 - Security and Performance',
+                    tipo : 'CMS',
+                },
+                espanhol : {
+                    nome : 'WordPress con Gutenberg - Módulo 02 - Seguridad y rendimiento',
+                    tipo : 'CMS',
+                },
+                filtro : false,  
+                horas : 40,
+                dataInicio : new Date('03/03/2022'),
+                dataFim : new Date('04/03/2022'),
+                imagens : ["./img/cursos/estudonauta/wordpress-02.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'WordPress + WooCommerce - modulo 03 - Criação de Loja com WooCommerce', 
+                    tipo : 'CMS'
+                },
+                ingles : {
+                    nome : 'WordPress + WooCommerce - module 03 - Creating a Store with WooCommerce',
+                    tipo : 'CMS',
+                },
+                espanhol : {
+                    nome : 'WordPress + WooCommerce - módulo 03 - Creando una tienda con WooCommerce',
+                    tipo : 'CMS',
+                },
+                filtro : false,  
+                horas : 40,
+                dataInicio : new Date('03/06/2022'),
+                dataFim : new Date('04/06/2022'),
+                imagens : ["./img/cursos/estudonauta/wordpress-03.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'WordPress - modulo 04 - Adequando Sites e Lojas Virtuais em Wordpress a LGPD', 
+                    tipo : 'CMS'
+                },
+                ingles : {
+                    nome : 'WordPress - Module 04 - Adapting Wordpress Websites and Online Stores to LGPD',
+                    tipo : 'CMS',
+                },
+                espanhol : {
+                    nome : 'WordPress -  Módulo 04 - Adaptación de sitios web y tiendas online de WordPress a la LGPD',
+                    tipo : 'CMS',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('06/11/2023'),
+                dataFim : new Date('07/11/2023'),
+                imagens : ["./img/cursos/estudonauta/wordpress-04.jpg"],
             },  
             { 
                 portugues : {
@@ -801,6 +877,44 @@ let cursos = [
             },
             { 
                 portugues : {
+                    nome : 'S.E.O. - Módulo 01', 
+                    tipo : 'Otimização de site'
+                },
+                ingles : {
+                    nome : 'S.E.O. - Module 01',
+                    tipo : 'Website optimization',
+                },
+                espanhol : {
+                    nome : 'S.E.O. - Módulo 01',
+                    tipo : 'Optimización de sitios web',
+                },
+                filtro : false,  
+                horas : 40,
+                dataInicio : new Date('05/24/2023'),
+                dataFim : new Date('06/24/2023'),
+                imagens : ["./img/cursos/estudonauta/seo-01.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'S.E.O. - Módulo 02', 
+                    tipo : 'Otimização de site'
+                },
+                ingles : {
+                    nome : 'S.E.O. - Module 02',
+                    tipo : 'Website optimization',
+                },
+                espanhol : {
+                    nome : 'S.E.O. - Módulo 02',
+                    tipo : 'Optimización de sitios web',
+                },
+                filtro : false,  
+                horas : 40,
+                dataInicio : new Date('07/13/2023'),
+                dataFim : new Date('08/13/2023'),
+                imagens : ["./img/cursos/estudonauta/seo-02.jpg"],
+            },
+            { 
+                portugues : {
                     nome : 'Inteligência Artificial - Módulo 01', 
                     tipo : 'I.A.'
                 },
@@ -913,25 +1027,480 @@ let cursos = [
                 dataFim : new Date('05/16/2023'),
                 imagens : ["./img/cursos/estudonauta/arquitetura-computadores-02.jpg"],
             },
-            // { 
-            //     portugues : {
-            //         nome : '', 
-            //         tipo : ''
-            //     },
-            //     ingles : {
-            //         nome : '',
-            //         tipo : '',
-            //     },
-            //     espanhol : {
-            //         nome : '',
-            //         tipo : '',
-            //     },
-            //     filtro : false,  
-            //     horas : 0,
-            //     dataInicio : new Date('//'),
-            //     dataFim : new Date('//'),
-            //     imagens : ["./img/cursos/estudonauta/.jpg"],
-            // },
+            { 
+                portugues : {
+                    nome : 'Linux - Módulo 00 - Primeiros Passos', 
+                    tipo : 'Sistema Operacional'
+                },
+                ingles : {
+                    nome : 'Linux - Module 00 - Getting Started',
+                    tipo : 'Operating System',
+                },
+                espanhol : {
+                    nome : 'Linux - Módulo 00 - Primeros pasos',
+                    tipo : 'Sistema operativo',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('01/21/2023'),
+                dataFim : new Date('02/21/2023'),
+                imagens : ["./img/cursos/estudonauta/linux-00.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Linux - Módulo 01 - Interface and Terminal', 
+                    tipo : 'Sistema Operacional'
+                },
+                ingles : {
+                    nome : 'Linux - Module 01 - Getting Started',
+                    tipo : 'Operating System',
+                },
+                espanhol : {
+                    nome : 'Linux - Módulo 01 - Interfaz y terminal',
+                    tipo : 'Sistema operativo',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('01/21/2023'),
+                dataFim : new Date('02/21/2023'),
+                imagens : ["./img/cursos/estudonauta/linux-01.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Linux - Módulo 02 - Pacotes e gestão de Processos', 
+                    tipo : 'Sistema Operacional'
+                },
+                ingles : {
+                    nome : 'Linux - Module 02 - Packages and Process Management',
+                    tipo : 'Operating System',
+                },
+                espanhol : {
+                    nome : 'Linux - Módulo 02 - Gestión de paquetes y procesos',
+                    tipo : 'Sistema operativo',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('01/22/2023'),
+                dataFim : new Date('02/22/2023'),
+                imagens : ["./img/cursos/estudonauta/linux-02.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Linux - Módulo 03 - Programação com Linux', 
+                    tipo : 'Sistema Operacional'
+                },
+                ingles : {
+                    nome : 'Linux - Module 03 - Programming with Linux',
+                    tipo : 'Operating System',
+                },
+                espanhol : {
+                    nome : 'Linux - Módulo 03 - Programación con Linux',
+                    tipo : 'Sistema operativo',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('01/23/2023'),
+                dataFim : new Date('02/23/2023'),
+                imagens : ["./img/cursos/estudonauta/linux-03.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Linux - Módulo 04 - Terminal Avançado', 
+                    tipo : 'Sistema Operacional'
+                },
+                ingles : {
+                    nome : 'Linux - Module 04 - Advanced Terminal',
+                    tipo : 'Operating System',
+                },
+                espanhol : {
+                    nome : 'Linux - Módulo 04 - Terminal avanzada',
+                    tipo : 'Sistema operativo',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('01/25/2023'),
+                dataFim : new Date('02/25/2023'),
+                imagens : ["./img/cursos/estudonauta/linux-04.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Linux - Módulo 05 - Discos e Raid', 
+                    tipo : 'Sistema Operacional'
+                },
+                ingles : {
+                    nome : 'Linux - Module 05 - Disks and Raid',
+                    tipo : 'Operating System',
+                },
+                espanhol : {
+                    nome : 'Linux - Módulo 05 - Discos y Raid',
+                    tipo : 'Sistema operativo',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('01/26/2023'),
+                dataFim : new Date('02/26/2023'),
+                imagens : ["./img/cursos/estudonauta/linux-05.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Redes de Computadores - Módulo 00 - Fundamentos de Rede', 
+                    tipo : 'Redes de Computadores'
+                },
+                ingles : {
+                    nome : 'Computer Networks - Module 00 - Network Fundamentals',
+                    tipo : 'Computer Networks',
+                },
+                espanhol : {
+                    nome : 'Redes de computadoras - Módulo 00 - Fundamentos de redes',
+                    tipo : 'Redes de computadoras',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('07/12/2022'),
+                dataFim : new Date('08/12/2022'),
+                imagens : ["./img/cursos/estudonauta/redes-de-computadores-00.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Redes de Computadores - Módulo 01 - Cabeamento', 
+                    tipo : 'Redes de Computadores'
+                },
+                ingles : {
+                    nome : 'Computer Networks - Module 01 - Cabling',
+                    tipo : 'Computer Networks',
+                },
+                espanhol : {
+                    nome : 'Redes de computadoras - Módulo 01 - Cableado',
+                    tipo : 'Redes de computadoras',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('08/03/2022'),
+                dataFim : new Date('09/03/2022'),
+                imagens : ["./img/cursos/estudonauta/redes-de-computadores-01.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Redes de Computadores - Módulo 02 - TCP/IP e WI-FI', 
+                    tipo : 'Redes de Computadores'
+                },
+                ingles : {
+                    nome : 'Computer Networks - Module 02 - TCP/IP and WI-FI',
+                    tipo : 'Computer Networks',
+                },
+                espanhol : {
+                    nome : 'Redes de computadoras - Módulo 02 - TCP/IP y WI-FI',
+                    tipo : 'Redes de computadoras',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('08/03/2022'),
+                dataFim : new Date('09/03/2022'),
+                imagens : ["./img/cursos/estudonauta/redes-de-computadores-02.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Redes de Computadores - Módulo 03 - Endereçamento IP', 
+                    tipo : 'Redes de Computadores'
+                },
+                ingles : {
+                    nome : 'Computer Networks - Module 03 - IP Addressing',
+                    tipo : 'Computer Networks',
+                },
+                espanhol : {
+                    nome : 'Redes de computadoras - Módulo 03 - Direccionamiento IP',
+                    tipo : 'Redes de computadoras',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('08/07/2022'),
+                dataFim : new Date('09/07/2022'),
+                imagens : ["./img/cursos/estudonauta/redes-de-computadores-03.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Redes de Computadores - Módulo 04 - Equipamentos de Rede', 
+                    tipo : 'Redes de Computadores'
+                },
+                ingles : {
+                    nome : 'Computer Networks - Module 04 - Network Equipment',
+                    tipo : 'Computer Networks',
+                },
+                espanhol : {
+                    nome : 'Redes de computadoras - Módulo 04 - Equipos de red',
+                    tipo : 'Redes de computadoras',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('08/08/2022'),
+                dataFim : new Date('09/08/2022'),
+                imagens : ["./img/cursos/estudonauta/redes-de-computadores-04.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Redes de Computadores - Módulo 05 - Protocolos e Modelos OSI', 
+                    tipo : 'Redes de Computadores'
+                },
+                ingles : {
+                    nome : 'Computer Networks - Module 05 - OSI Protocols and Models',
+                    tipo : 'Computer Networks',
+                },
+                espanhol : {
+                    nome : 'Redes de computadoras - Módulo 05 - Protocolos y modelos OSI',
+                    tipo : 'Redes de computadoras',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('08/09/2022'),
+                dataFim : new Date('09/09/2022'),
+                imagens : ["./img/cursos/estudonauta/redes-de-computadores-05.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Redes de Computadores - Módulo 06 - Transmissão de Sinal', 
+                    tipo : 'Redes de Computadores'
+                },
+                ingles : {
+                    nome : 'Computer Networks - Module 06 - OSI Signal Transmission',
+                    tipo : 'Computer Networks',
+                },
+                espanhol : {
+                    nome : 'Redes de computadoras - Módulo 06 - Transmisión de señales',
+                    tipo : 'Redes de computadoras',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('06/05/2025'),
+                dataFim : new Date('07/05/2025'),
+                imagens : ["./img/cursos/estudonauta/redes-de-computadores-06.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Eletrônica Básico - Módulo 00 - Fundamentos da Eletrônica', 
+                    tipo : 'Eletrônica'
+                },
+                ingles : {
+                    nome : 'Basic Electronics - Module 00 - Fundamentals of Electronics',
+                    tipo : 'Electronics',
+                },
+                espanhol : {
+                    nome : 'Electrónica Básica - Módulo 00 - Fundamentos de Electrónica',
+                    tipo : 'Electronics',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('02/25/2023'),
+                dataFim : new Date('03/25/2023'),
+                imagens : ["./img/cursos/estudonauta/eletronica-basica-00.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Eletrônica Básico - Módulo 01 - Criando Circuito', 
+                    tipo : 'Eletrônica'
+                },
+                ingles : {
+                    nome : 'Basic Electronics - Module 01 - Creating Circuit',
+                    tipo : 'Electronics',
+                },
+                espanhol : {
+                    nome : 'Electrónica Básica - Módulo 01 - Creando circuito',
+                    tipo : 'Electronics',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('02/25/2023'),
+                dataFim : new Date('03/25/2023'),
+                imagens : ["./img/cursos/estudonauta/eletronica-basica-01.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Raspberry Pi - Módulo 00 - Conhecendo o Raspberry Pi', 
+                    tipo : 'Internet das Coisas - IoT'
+                },
+                ingles : {
+                    nome : 'Raspberry Pi - Module 00 - Getting to know the Raspberry Pi',
+                    tipo : 'Internet of Things - IoT',
+                },
+                espanhol : {
+                    nome : 'Raspberry Pi - Módulo 00 - Fundamentos de Electrónica',
+                    tipo : 'Internet de las cosas - IoT',
+                },
+                filtro : false,  
+                horas : 40,
+                dataInicio : new Date('12/01/2022'),
+                dataFim : new Date('01/01/2023'),
+                imagens : ["./img/cursos/estudonauta/raspberry-pi-00.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Raspberry Pi - Módulo 01 - Programando com Raspberry Pi', 
+                    tipo : 'Internet das Coisas - IoT'
+                },
+                ingles : {
+                    nome : 'Raspberry Pi - Module 01 - Programming with Raspberry Pi',
+                    tipo : 'Internet of Things - IoT',
+                },
+                espanhol : {
+                    nome : 'Raspberry Pi - Módulo 01 - Programación con Raspberry Pi',
+                    tipo : 'Internet de las cosas - IoT',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('12/02/2022'),
+                dataFim : new Date('01/02/2023'),
+                imagens : ["./img/cursos/estudonauta/raspberry-pi-01.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Raspberry Pi - Módulo 02 - Raspberry Pi Avaçado', 
+                    tipo : 'Internet das Coisas - IoT'
+                },
+                ingles : {
+                    nome : 'Raspberry Pi - Module 02 - Raspberry Pi Advanced',
+                    tipo : 'Internet of Things - IoT',
+                },
+                espanhol : {
+                    nome : 'Raspberry Pi - Módulo 02 - Raspberry Pi Advanced',
+                    tipo : 'Internet de las cosas - IoT',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('12/03/2022'),
+                dataFim : new Date('01/03/2023'),
+                imagens : ["./img/cursos/estudonauta/raspberry-pi-02.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Raspberry Pi - Módulo 03 - Retro Gaming com Raspberry Pi',                    tipo : 'Internet das Coisas - IoT'
+                },
+                ingles : {
+                    nome : 'Raspberry Pi - Module 03 - Retro Gaming with Raspberry Pi',
+                    tipo : 'Internet of Things - IoT',
+                },
+                espanhol : {
+                    nome : 'Raspberry Pi - Módulo 03 - Juegos retro con Raspberry Pi',
+                    tipo : 'Internet de las cosas - IoT',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('12/08/2022'),
+                dataFim : new Date('01/08/2023'),
+                imagens : ["./img/cursos/estudonauta/raspberry-pi-03.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Produção de Vídeos - Módulo 01 - Cámeras', 
+                    tipo : 'Produção de Vídeos'
+                },
+                ingles : {
+                    nome : 'Video Production - Module 01 - Cameras',
+                    tipo : 'Video Production',
+                },
+                espanhol : {
+                    nome : 'Producción de video - Módulo 01 - Cámaras',
+                    tipo : 'Producción de video',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('10/19/2023'),
+                dataFim : new Date('11/19/2023'),
+                imagens : ["./img/cursos/estudonauta/producao-de-videos-01.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Produção de Vídeos - Módulo 02 - Iluminação', 
+                    tipo : 'Produção de Vídeos'
+                },
+                ingles : {
+                    nome : 'Video Production - Module 02 - Lighting',
+                    tipo : 'Video Production',
+                },
+                espanhol : {
+                    nome : 'Producción de video - Módulo 02 - Iluminación',
+                    tipo : 'Producción de video',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('10/19/2023'),
+                dataFim : new Date('11/19/2023'),
+                imagens : ["./img/cursos/estudonauta/producao-de-videos-02.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Produção de Vídeos - Módulo 03 - Audio com qualidade', 
+                    tipo : 'Produção de Vídeos'
+                },
+                ingles : {
+                    nome : 'Video Production - Module 03 - Quality audio',
+                    tipo : 'Video Production',
+                },
+                espanhol : {
+                    nome : 'Producción de video - Módulo 03 - Audio de calidad',
+                    tipo : 'Producción de video',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('10/19/2023'),
+                dataFim : new Date('11/19/2023'),
+                imagens : ["./img/cursos/estudonauta/producao-de-videos-03.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Produção de Vídeos - Módulo 04 - Edição de Vídeos', 
+                    tipo : 'Produção de Vídeos'
+                },
+                ingles : {
+                    nome : 'Video Production - Module 04 - Video Editing',
+                    tipo : 'Video Production',
+                },
+                espanhol : {
+                    nome : 'Producción de video - Módulo 04 - Audio de calidad',
+                    tipo : 'Edición de vídeo',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('10/19/2023'),
+                dataFim : new Date('11/19/2023'),
+                imagens : ["./img/cursos/estudonauta/producao-de-videos-04.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Produção de Vídeos - Módulo 05 - Criando uma Thumb', 
+                    tipo : 'Produção de Vídeos'
+                },
+                ingles : {
+                    nome : 'Video Production - Module 05 - Creating a Thumb',
+                    tipo : 'Video Production',
+                },
+                espanhol : {
+                    nome : 'Producción de video - Módulo 05 - Creando un pulgar',
+                    tipo : 'Edición de vídeo',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('10/19/2023'),
+                dataFim : new Date('11/19/2023'),
+                imagens : ["./img/cursos/estudonauta/producao-de-videos-05.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'Produção de Vídeos - Módulo 06 - Animação', 
+                    tipo : 'Produção de Vídeos'
+                },
+                ingles : {
+                    nome : 'Video Production - Module 06 - Animation',
+                    tipo : 'Video Production',
+                },
+                espanhol : {
+                    nome : 'Producción de video - Módulo 06 - Animación',
+                    tipo : 'Edición de vídeo',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('10/19/2023'),
+                dataFim : new Date('11/19/2023'),
+                imagens : ["./img/cursos/estudonauta/producao-de-videos-06.jpg"],
+            },
         ],
         posicao : "horizontal",
     },
