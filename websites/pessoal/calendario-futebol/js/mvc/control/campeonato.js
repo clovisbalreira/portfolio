@@ -1,4 +1,4 @@
-import { Campeonato } from "../model/campeonato.js";
+import { Campeonato } from "../model/Campeonato.js";
 import { DatasCampeonatos } from "../model/DatasCampeonatos.js";
 
 export const campeonatos = [
@@ -9576,4 +9576,210 @@ export const campeonatos2026 = [
             'purple'
         ),
     ])
+]
+
+export const campeonatosEuropeu = [
+    new Campeonato('Data F.I.F.A.', [
+        new DatasCampeonatos('Eliminatórias', [
+            new Date('09/01/2025'),
+            new Date('09/02/2025'),
+            new Date('09/03/2025'),
+            new Date('09/04/2025'),
+            new Date('09/05/2025'),
+            new Date('09/06/2025'),
+            new Date('09/07/2025'),
+            new Date('09/08/2025'),
+            new Date('09/09/2025')
+            ],
+            'blue'
+        ),
+        new DatasCampeonatos('Amistosos Internacionais', [
+            new Date('10/06/2025'),
+            new Date('10/07/2025'),
+            new Date('10/08/2025'),
+            new Date('10/09/2025'),
+            new Date('10/10/2025'),
+            new Date('10/11/2025'),
+            new Date('10/12/2025'),
+            new Date('10/13/2025'),
+            new Date('10/14/2025')
+            ],
+            'blue'
+        ),
+        new DatasCampeonatos('Amistosos Internacionais', [
+            new Date('11/10/2025'),
+            new Date('11/11/2025'),
+            new Date('11/12/2025'),
+            new Date('11/13/2025'),
+            new Date('11/14/2025'),
+            new Date('11/15/2025'),
+            new Date('11/16/2025'),
+            new Date('11/17/2025'),
+            new Date('11/18/2025')
+            ],
+            'blue'
+        ),
+        new DatasCampeonatos('Amistosos', [
+            new Date('03/23/2026'),
+            new Date('03/24/2026'),
+            new Date('03/25/2026'),
+            new Date('03/26/2026'),
+            new Date('03/27/2026'),
+            new Date('03/28/2026'),
+            new Date('03/29/2026'),
+            new Date('03/30/2026'),
+            new Date('03/31/2026')
+            ],
+            'blue'
+        ),
+        new DatasCampeonatos('Amistosos', [
+            new Date('06/01/2026'),
+            new Date('06/02/2026'),
+            new Date('06/03/2026'),
+            new Date('06/04/2026'),
+            new Date('06/05/2026'),
+            new Date('06/06/2026'),
+            new Date('06/07/2026'),
+            new Date('06/08/2026'),
+            new Date('06/09/2026'),
+            ],
+            'blue'
+        ),
+    ]),
+    new Campeonato('Copa do Mundo de Clubes', [
+        new DatasCampeonatos('Oitavas de Final', [
+            new Date('07/01/2025'),
+            ],
+            'green'
+        ),
+        new DatasCampeonatos('Quartas de Final', [
+            new Date('07/04/2025'),
+            new Date('07/05/2025'),
+            ],
+            'green'
+        ),
+        new DatasCampeonatos('Semi Final', [
+            new Date('07/08/2025'),
+            new Date('07/09/2025'),
+            ],
+            'green'
+        ),
+        new DatasCampeonatos('Final', [
+            new Date('07/13/2025'),
+            ],
+            'green'
+        ),
+    ]),
+    new Campeonato('Copa do Mundo', [
+        new DatasCampeonatos('1° Rodada', [
+            new Date('06/11/2026'),
+            new Date('06/12/2026'),
+            new Date('06/13/2026'),
+            new Date('06/14/2026'),
+            new Date('06/15/2026'),
+            new Date('06/16/2026'),
+            new Date('06/17/2026'),
+            ],
+            'green'
+        ),
+        new DatasCampeonatos('2° Rodada', [
+            new Date('06/18/2026'),
+            new Date('06/19/2026'),
+            new Date('06/20/2026'),
+            new Date('06/21/2026'),
+            new Date('06/22/2026'),
+            new Date('06/23/2026'),
+            ],
+            'green'
+        ),
+        new DatasCampeonatos('3° Rodada', [
+            new Date('06/24/2026'),
+            new Date('06/25/2026'),
+            new Date('06/26/2026'),
+            new Date('06/27/2026'),
+            ],
+            'green'
+        ),
+        new DatasCampeonatos('32 avos', [
+            new Date('06/28/2026'),
+            new Date('06/29/2026'),
+            new Date('06/30/2026'),
+            new Date('07/01/2026'),
+            new Date('07/02/2026'),
+            new Date('07/03/2026'),
+            ],
+            'green'
+        ),
+        new DatasCampeonatos('Oitavas de Final', [
+            new Date('07/04/2026'),
+            new Date('07/05/2026'),
+            new Date('07/06/2026'),
+            new Date('07/07/2026'),
+            ],
+            'green'
+        ),
+        new DatasCampeonatos('Quartas de Final', [
+            new Date('07/09/2026'),
+            new Date('07/10/2026'),
+            new Date('07/11/2026'),
+            ],
+            'green'
+        ),
+        new DatasCampeonatos('Semi Final', [
+            new Date('07/14/2026'),
+            new Date('07/15/2026'),
+            ],
+            'green'
+        ),
+        new DatasCampeonatos('3º lugar', [
+            new Date('07/18/2026'),
+            ],
+            'green'
+        ),
+        new DatasCampeonatos('Final', [
+            new Date('07/19/2026'),
+            ],
+            'green'
+        ),
+    ]),
+    new Campeonato('Interclubes', [
+        new DatasCampeonatos('Final da Copa Intercontinental', [
+            new Date('12/17/2025'),
+            ],
+            'green'
+        ),
+    ]),
+    new Campeonato('Champions League', [
+        new DatasCampeonatos('Primeira pré-eliminatória', [
+            new Date('07/08/2025'),
+            new Date('07/09/2025'),
+            new Date('07/15/2025'),
+            new Date('07/16/2025'),
+            ],
+            'red'
+        ),
+        new DatasCampeonatos('Segunda pré-eliminatória', [
+            new Date('07/22/2025'),
+            new Date('07/23/2025'),
+            new Date('07/29/2025'),
+            new Date('07/30/2025'),
+            ],
+            'red'
+        ),
+        new DatasCampeonatos('Terceira pré-eliminatória', [
+            new Date('08/05/2025'),
+            new Date('08/06/2025'),
+            new Date('08/12/2025'),
+            ],
+            'red'
+        ),
+        new DatasCampeonatos('Play-off', [
+            new Date('08/19/2025'),
+            new Date('08/20/2025'),
+            new Date('08/26/2025'),
+            new Date('08/27/2025'),
+            ],
+            'red'
+        ),
+    ]),
 ]

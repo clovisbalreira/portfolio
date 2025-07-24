@@ -1,6 +1,7 @@
 import { mouseEnterLeaveCalendario, mouseEnterTabela } from "../../utils/mouseLeave.js"
 
 export function mostrarCalendario(campeonatos, mes, ano) {
+    console.log(mes)
     let meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
     let mesAnterior = ''
     let divCalendario = document.getElementById('calendario') 
@@ -9,7 +10,7 @@ export function mostrarCalendario(campeonatos, mes, ano) {
     let divDiasMes = ''
     let divDia = ''
     for( let i = 0; i < 365; i++){
-        let novaData = atualizarData(new Date(`01/01/${ano}`), i)
+        let novaData = atualizarData(new Date(`${mes}/01/${ano}`), i)
         if(novaData.getMonth() !== mesAnterior){
             divMes = document.createElement('div')
             divMes.classList.add('mes')
