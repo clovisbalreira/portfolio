@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+}
+
+h1{
+    padding: 2rem;
+}
+
+main{
+    background: linear-gradient(to right, green, yellow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;;
+}
+
+.radio{
+    display: flex;
+    gap: 1rem;;
+    padding: 2rem;
+}
+
+#calendario{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    justify-content: center;
+    padding-bottom: 10rem;
+}
+
+.mes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:rgba(0, 0, 255, 0.767);
+    border-radius: 1rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.39);
+    padding-block: 1rem;
+}
+
+.dias-mes{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+    position: relative;
+}
+
+[class^="dia-"]{
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(217, 217, 230);
+    padding: .3rem;
+    border-radius: .3rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.39);
+}
+
+.campeonato{
+    position: absolute;
+    background-color: rgb(139, 139, 153);
+    color: black;
+    right: 0px;
+    top: 250px;
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+    padding: .5rem;
+    border-radius: .3rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.50);
+}
+
+.dia-0{
+    color: red;
+}
+
+.flex{
+    display: flex;
+}
+
+#todos-campeonatos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin-inline: 2rem;
+}
+
+.classe-campeonato, .tabela-campeonato{
+    background-color: rgba(0, 0, 255, 0.726);
+    padding: .5rem;
+    border-radius: .5rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.774);
+}
+
+.classe-campeonato{
+    cursor: pointer;
+    flex: 1 1 auto
+}
+
+.tabela-campeonato{
+    margin-block: 2rem;
+    padding: 2rem;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+}
+
+.tabela-campeonato table{
+    border-radius: 1rem 1rem 0 0;
+    text-align: center;
+    border-collapse: collapse;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.774);    
+}
+
+.tabela-campeonato table caption{
+    font-size: 2rem;
+    font-weight: bolder;
+    padding-bottom: 1rem;
+}
+
+.tabela-campeonato table thead {
+    font-size: 1.3rem;
+}
+
+.tabela-campeonato table thead tr th{
+    padding: .1rem;
+}
+
+.tabela-campeonato table tbody{
+    background-color: rgba(0, 0, 0, 0.11);
+}
+
+.tabela-campeonato table tbody tr td{
+    padding: .4rem 5rem;
+}
+
+.tabela-campeonato table tbody tr{
+    vertical-align: top;
+}
+
+@media (max-width: 629px) {
+    .tabela-campeonato table tbody tr td{
+        padding: .4rem 2rem;
+    }
+}
