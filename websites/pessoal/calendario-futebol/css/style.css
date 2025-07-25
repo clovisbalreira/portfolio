@@ -8,14 +8,109 @@ h1{
     padding: 2rem;
 }
 
-main{
+body{
     background: linear-gradient(to right, green, yellow);
+}
+
+header{
+    text-align: center;
+}
+
+main{
     display: flex;
     flex-direction: column;
     align-items: center;;
 }
 
-.radio{
+#instrucoes{
+    position: absolute;
+    background-color: white;
+    width: 90%;
+    top: 10;
+    padding: 4rem;
+    z-index: 99;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.322);
+}
+
+#instrucoes div h2 {
+      color: #00695c;
+      margin-top: 2rem;
+    }
+
+#instrucoes div ul {
+    margin-left: 1.5rem;
+}
+
+#instrucoes div li {
+    margin-bottom: .5rem;
+}
+
+#instrucoes div p {
+    margin: .1rem 0;
+    text-align: justify;
+}
+
+#instrucoes div button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2rem;
+    font-weight: bolder;
+    padding: .5rem;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    border-top-right-radius: 1rem;
+}
+
+#instrucoes div button:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+#instrucoes p{
+    padding: 2rem;
+}
+
+#legendas{
+    background-color: rgba(255, 255, 255, 0.63);
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1rem 1rem 1rem 0;
+    border-radius: 0 2rem 2rem 0;
+    position: fixed;
+    left: 0;
+    top: 30%;
+    z-index: 99;
+}
+
+#legendas > div{
+    display: flex;
+    gap: .5rem;
+}
+
+#legendas > div > div{
+    width : 20px;
+    height: 20px;
+}
+
+#legendas > div > p{
+    display: none;
+}
+
+#legendas:hover{
+    transition: all 1s ease;
+    background-color: white;
+}
+
+#legendas:hover > div > p{
+    transition: all 1s ease;
+    display: block;
+    
+}
+
+#radio{
     display: flex;
     gap: 1rem;;
     padding: 2rem;

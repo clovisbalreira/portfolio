@@ -156,7 +156,6 @@ function mostrarWebSites(webSites){
     a.appendChild(divLinguagemEscola)
     let divInstrutores = document.createElement('div')
     let divInstrutoresTitulo = document.createElement('div')
-    console.log(webSites.instrutor[0] == undefined)
     if((!(webSites.instrutor[0] == undefined)) && (webSites.instrutor[0].imagem != 'clovisbalreira' && webSites.instrutor[0].imagem != undefined)){
         let h3Instrutor = document.createElement('h3')
         h3Instrutor.innerHTML = 'Instrutores'
