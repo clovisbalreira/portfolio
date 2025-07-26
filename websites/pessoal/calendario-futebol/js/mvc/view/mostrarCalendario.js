@@ -1,7 +1,6 @@
 import { mouseEnterLeaveCalendario, mouseEnterTabela } from "../../utils/mouseLeave.js"
 
-export function mostrarCalendario(campeonatos, mes, ano) {
-    console.log(mes)
+export function mostrarCalendario(campeonato) {
     let meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
     let mesAnterior = ''
     let divCalendario = document.getElementById('calendario') 
@@ -10,7 +9,7 @@ export function mostrarCalendario(campeonatos, mes, ano) {
     let divDiasMes = ''
     let divDia = ''
     for( let i = 0; i < 365; i++){
-        let novaData = atualizarData(new Date(`${mes}/01/${ano}`), i)
+        let novaData = atualizarData(campeonato.dataInicial, i)
         if(novaData.getMonth() !== mesAnterior){
             divMes = document.createElement('div')
             divMes.classList.add('mes')
@@ -25,7 +24,7 @@ export function mostrarCalendario(campeonatos, mes, ano) {
                 }
             }
         }
-        divDiasMes.appendChild(mostrarDias(divDia, `dia-${novaData.getDay()}`, novaData.getDate() < 10 ? `0${novaData.getDate()}` : novaData.getDate(), campeonatos, novaData))
+        divDiasMes.appendChild(mostrarDias(divDia, `dia-${novaData.getDay()}`, novaData.getDate() < 10 ? `0${novaData.getDate()}` : novaData.getDate(), campeonato.tabela, novaData))
         divMes.appendChild(divDiasMes)
 
         mesAnterior = novaData.getMonth()
@@ -60,9 +59,9 @@ function mostrarCampeonato(campeonatos, novaData, divDia){
                 }
                 let p = document.createElement('p')
                 p.innerHTML = `${campeonato.nome} - ${campeonato.datas[index].nome}`
-                p.style.color = datas.cor
+                p.style.color = campeonato.cor
                 divCampeonato.appendChild(p)
-                if(!coresFundo.includes(datas.cor)) coresFundo.push(datas.cor)
+                if(!coresFundo.includes(campeonato.cor)) coresFundo.push(campeonato.cor)
                 divDia = cores(divDia, coresFundo)
                 divDia.appendChild(divCampeonato)
             }

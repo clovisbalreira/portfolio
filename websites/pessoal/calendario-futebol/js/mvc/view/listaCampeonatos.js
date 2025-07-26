@@ -7,10 +7,15 @@ function criarDivTodosCampeonatos(campeonatos){
     let div = document.getElementById('todos-campeonatos')
     div.innerHTML = ''
     campeonatos.forEach(campeonato => {
+        let divLista = document.createElement('div')
         let p = document.createElement('p')
-        p.classList.add('classe-campeonato')
+        divLista.classList.add('classe-campeonato')
         p.textContent = campeonato.nome
-        div.appendChild(p)   
+        divLista.appendChild(p)
+        let input = document.createElement('input')
+        input.type = 'checkbox'
+        divLista.appendChild(input)
+        div.appendChild(divLista)   
     });
 }
 
@@ -23,7 +28,7 @@ function mostrarTabelaCampeonato(campeonatos){
             divCampeonato.classList.add('tabela-campeonato')
             let campeonatoSelecionado = campeonatos.filter( campeonato => campeonato.nome == classe.textContent)
             let table = document.createElement('table')
-            table.style.backgroundColor = campeonatoSelecionado[0].datas[0].cor
+            table.style.backgroundColor = campeonatoSelecionado[0].cor
             table.appendChild(criarTag('caption', campeonatoSelecionado[0].nome, 0))          
             table.appendChild(criarThead())            
             table.appendChild(criarTbody(campeonatoSelecionado[0]))

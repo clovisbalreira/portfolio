@@ -26,7 +26,7 @@ main{
     position: absolute;
     background-color: white;
     width: 90%;
-    top: 10;
+    top: 1;
     padding: 4rem;
     z-index: 99;
     border-radius: 1rem;
@@ -181,7 +181,18 @@ main{
     margin-inline: 2rem;
 }
 
-.classe-campeonato, .tabela-campeonato{
+#todos-campeonatos > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    background-color: rgba(0, 0, 255, 0.726);
+    padding: .5rem;
+    border-radius: .5rem;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.774);
+    flex: 1 1 auto
+}
+
+#todos-campeonatos > div, .tabela-campeonato{
     background-color: rgba(0, 0, 255, 0.726);
     padding: .5rem;
     border-radius: .5rem;
@@ -190,7 +201,6 @@ main{
 
 .classe-campeonato{
     cursor: pointer;
-    flex: 1 1 auto
 }
 
 .tabela-campeonato{
