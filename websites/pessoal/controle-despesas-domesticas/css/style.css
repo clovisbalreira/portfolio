@@ -1,0 +1,135 @@
+html, body{
+    background-color: rgba(128, 128, 128, 0.226);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 1rem;
+}
+
+#pesquisa{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#pesquisa label{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+select{
+    padding: .2rem .6rem;
+    border-radius: 25px;
+}
+
+#cartoes, #pagadores{
+    width: 100%;
+}
+
+.forma-pagamento > thead > tr > th{
+    color: transparent;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td{
+    width: 0%;
+    text-align: left;
+    border: none;
+    padding: .5rem;
+}
+
+td{
+    text-align: left;
+}
+
+.zerar-padding{
+    background-color: #F2F2F4;
+    padding: 0;
+}
+
+[id^="pagador-nome"] thead tr th, table tfoot tr th{
+    text-align: left;
+}
+
+.parcelado, .acao{
+    width: 100%;
+    border-radius: 0;
+}
+
+#cartoes > table > thead > tr > th, #pagadores > table > thead > tr > th{
+    background-color: black;
+    color: white;
+}
+    
+[id^="forma-pagamento"] > thead  th{
+    display: none;
+}
+        
+[id^="cartao-thead"], [id^="pagador-nome"]{
+    background-color: white;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+[id^="cartao-thead"] td {
+    width: 15%;
+}
+
+#cartao-thead-0 td:nth-child(2){
+    width: 30%;
+}
+
+.cartao > thead, .conta > thead{
+    background-color: #11467F;
+    border-bottom: 1px solid black;
+}
+    
+.cartao > tbody > tr, .conta > tbody > tr{
+    background-color: #F2F2F4;
+    border-bottom: 1px solid black;
+}
+
+.cartao > tfoot, .conta > tfoot{
+    background-color: #86B2E8;
+    vertical-align: top;
+}
+    
+.cartao > tfoot th, .conta > tfoot th{
+    background-color: #86B2E8;
+    border-right: 1px solid black;
+}
+    
+.parcelado thead tr{
+    background-color: #3CA94A;
+}
+
+.acao thead tr{
+    background-color: #FF3130;
+}
+
+.parcelado tbody tr, .acao tbody tr{
+    background-color: #D9D9D9;
+    border-bottom: 1px solid black;
+}
+
+[class^="pagador-nome"] thead tr th:nth-child(1){
+    width: 90%;
+}
+
+.cartao, .parcelado, .acao, .conta{
+    display: none;
+}

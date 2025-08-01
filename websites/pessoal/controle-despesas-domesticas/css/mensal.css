@@ -1,0 +1,43 @@
+html, body{
+    background-color: rgba(128, 128, 128, 0.226);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+main{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+}
+
+section{
+    min-width: 400px;
+}
+
+table{
+    background-color: rgba(128, 128, 128, 0.171);
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead{
+    background-color: black;
+    color: white;
+}
+
+tbody{
+    background-color: rgba(0, 0, 0, 0.322);
+}
+
+th, td{
+    padding: .5rem 1rem;
+}
+
+tfoot tr:nth-child(1) {
+    background-color: black;
+    color: white;
+}
