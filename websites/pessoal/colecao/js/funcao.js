@@ -1,5 +1,6 @@
 function mostrarDinheiro(dinheriosFiltrados) {
     dinheriosFiltrados.filter( dinheiro => dinheiro.ano == '1989')
+   // console.log(dinheriosFiltrados)
     let main = document.querySelector('main')
     main.innerHTML = ''
     let soma = 0
@@ -130,8 +131,10 @@ function cifrao(pais, brasil) {
 
 function somarTotais(id, texto, valor) {
     let moeda = document.getElementById(id)
-    moeda.innerHTML = ''
-    moeda.innerHTML += texto + valor
+    if(moeda != null){
+        moeda.innerHTML = ''
+        moeda.innerHTML += texto + valor
+    }
 }
 
 function mostrarTotais(moedas, cedulas, soma, convertido, cotacaoMinimo, cotacaoMaximo, cotacaoMedia){
@@ -185,6 +188,17 @@ function mostrarTodosSelects(tipos, ano, pais, moeda, valor){
     mostrarSelect('ano', ano)
     mostrarSelect('moeda', moeda)
     mostrarSelect('valor', valor)
+    mostrarSelectUnicos('unicos', filtroUnico())
+}
+
+function mostrarSelectUnicos(id, dados){
+    let divSelect = document.getElementById(id)
+    dados.forEach(dado => {
+        let option = document.createElement('option')
+        option.value = `${dado.ano} - ${dado.nome} - ${dado.valor} - ${dado.tipo}`
+        option.innerHTML = `${dado.ano} - ${dado.nome} - ${dado.valor} - ${dado.tipo}`
+        divSelect.appendChild(option)
+    })
 }
 
 function mostrarSelect(id, dados){
@@ -203,14 +217,26 @@ function atualizar(){
     let selectAno = document.getElementById('ano').value
     let selectMoeda = document.getElementById('moeda').value
     let selectValor = document.getElementById('valor').value
-    let dinheriosFiltrados = filtros(selectTipos, selectPaises, selectAno, selectMoeda, selectValor)
+    let selectUnico = document.getElementById('unicos').value
+    let dinheriosFiltrados = filtros(selectTipos, selectPaises, selectAno, selectMoeda, selectValor, selectUnico)
     mostrarDinheiro(dinheriosFiltrados) 
 }
 
-function filtros(selectTipos, selectPaises, selectAno, selectMoeda, selectValor){
+function iniciarSelect(ids){
+    ids.forEach( id => {
+        let option = document.querySelector(`#${id} option[value=" "]`);
+        option.selected = true;
+    })
+}
+
+function filtros(selectTipos, selectPaises, selectAno, selectMoeda, selectValor, selectUnico){
     let array = []
+    ids = []
     array = dinheiros
-    if( selectTipos != ' ' || selectPaises != ' ' || selectAno != ' ' || selectMoeda != ' ' || selectValor != ' ' ){
+    if(selectUnico != ' '){
+        let separar = selectUnico.split(" - ")
+        array = array.filter(dinheiro => { return dinheiro.ano == separar[0] && dinheiro.nome == separar[1] && dinheiro.valor == separar[2] && dinheiro.tipo == separar[3]})
+    }else if( selectTipos != ' ' || selectPaises != ' ' || selectAno != ' ' || selectMoeda != ' ' || selectValor != ' ' ){
         if(selectTipos != ' '){
             array = array.filter(dinheiro => { return dinheiro.tipo == selectTipos })
         } 
@@ -221,8 +247,6 @@ function filtros(selectTipos, selectPaises, selectAno, selectMoeda, selectValor)
             array = array.filter(dinheiro => { return dinheiro.ano == selectAno })
         } 
         if(selectMoeda != ' '){
-            console.log('moeda')
-            console.log(selectMoeda)
             array = array.filter(dinheiro => { return dinheiro.nome == selectMoeda })
         } 
         if(selectValor != ' '){
@@ -234,17 +258,50 @@ function filtros(selectTipos, selectPaises, selectAno, selectMoeda, selectValor)
     return array
 }
 
+function filtroUnico(){
+
+    let array = []
+    array = dinheiros
+    let unicos = [];
+    const seen = new Set();
+
+    array.forEach(item => {
+    const chave = `${item.ano}-${item.tipo}-${item.nome}-${item.pais}-${item.valor}`;
+    if (!seen.has(chave)) {
+        seen.add(chave);
+        unicos.push(item);
+    }
+    });
+
+    unicos.sort( (a, b) => {
+        if(parseInt(a.ano.slice(0, 4)) == parseInt(b.ano.slice(0, 4))){
+            return parseFloat(a.valor.slice(0, 4)) - parseFloat(b.valor.slice(0, 4))
+        }else{
+            return parseInt(a.ano.slice(0, 4)) - parseInt(b.ano.slice(0, 4))
+        }
+    })
+
+    return unicos
+}
+
 function selects(){
     valorSelect('tipos')
     valorSelect('paises')
     valorSelect('ano')
     valorSelect('moeda')
     valorSelect('valor')
+    valorSelect('unicos')
 }
 
-function valorSelect(id){    
+function valorSelect(id){     
     const select = document.getElementById(id);
     select.addEventListener('change', function() {
+        let id = select.id
+        if(id == 'unicos'){
+            iniciarSelect(['tipos', 'paises', 'ano', 'moeda', 'valor'])
+        }else{
+            iniciarSelect(['unicos'])
+        }
         atualizar()
     });
 }
@@ -377,3 +434,11 @@ function pacote(objeto){
     divPacote.appendChild(h6Pacote)
     return divPacote
 }   
+
+function inicio(){
+    imprimirSelect()
+    selects()
+    atualizar()
+}
+
+inicio()

@@ -24,5 +24,4 @@ const carregarCotacoes = async () => {
     selects()
     atualizar()
 };
-
-carregarCotacoes();
+//carregarCotacoes();
