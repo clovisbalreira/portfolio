@@ -43,7 +43,9 @@ section{
 } 
 
 .link-principal{
+    flex:auto;
     background-color: rgba(128, 128, 128, 0.425);
+    width: auto;
     text-decoration: none;
     color: black;
     padding: 5px 10px;
