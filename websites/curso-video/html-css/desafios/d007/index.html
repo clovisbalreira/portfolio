@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio 007</title>
+    <title>Imagem Flexível</title>
     <link rel="stylesheet" href="../../css/style.css">
     <style>
         h1{
             text-align: center;
         }
+        a{
+            display: flex;
+            width: 100%;
+            padding: .5rem;
+            justify-content: center;
+        }  
     </style>
 </head>
 <body>
@@ -18,8 +24,8 @@
         <h2>Imagem Flexível</h2>
         <p>Você está vendo a imagem completa? Experimente ampliar o tamanho da sua janela para aproveitar a melhor experiência &#x1F914</p>
         <picture>
-            <source media="(max-width: 600px )" srcset="imagens/paisagem-p.png">
-            <source media="(max-width: 1000px )" srcset="imagens/paisagem-m.png">
+            <source media="(max-width: 850px )" srcset="imagens/paisagem-p.png">
+            <source media="(max-width: 1200px )" srcset="imagens/paisagem-m.png">
             <img src="imagens/paisagem-g.png" alt="Imagem">
         </picture>
         <br>

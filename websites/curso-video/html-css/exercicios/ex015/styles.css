@@ -16,6 +16,10 @@ h2{
 p{
     text-align: justify;
 }
-a{
-    text-align: center;    
+
+#button{
+    display: flex;
+    width: 100%;
+    padding: .5rem;
+    justify-content: center;
 }

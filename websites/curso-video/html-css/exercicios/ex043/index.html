@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexbox item order</title>
     <style>
+        h2{
+            text-align: center;
+        }
         div.container{
             background-color: lightsalmon;
             display: flex;
@@ -44,9 +47,15 @@
         div#i7{
             order:-4
         }
+        a{
+            display: flex;
+            padding: .5rem;
+            justify-content: center;
+        }  
     </style>
 </head>
 <body>
+    <h2>Flexbox item order</h2>
     <div class="container">
         <div class="item" id="i1">1</div>
         <div class="item" id="i2">2</div>
@@ -56,5 +65,6 @@
         <div class="item" id="i6">6</div>
         <div class="item" id="i7">7</div>
     </div>
+    <a href="../../index.html">Voltar</a>
 </body>
 </html>

@@ -9,7 +9,7 @@ body{
 main{
     background-color: white;
     border-radius: 10px;
-    width: 600px;
+    width: 95%;
     padding: 10px;
     margin: auto;
     box-shadow: 5px 5px 15px rgba(136, 109, 93, 0.616);
@@ -24,4 +24,11 @@ h2{
 }
 p{
     text-align: justify;
+}
+
+#button{
+    display: flex;
+    width: 100%;
+    padding: .5rem;
+    justify-content: center;
 }

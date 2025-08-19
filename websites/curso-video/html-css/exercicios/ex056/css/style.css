@@ -1,3 +1,6 @@
+h2{
+    text-align: center;
+}
 .container{
     border: 3px solid blue;
     display: grid;
@@ -33,3 +36,8 @@
     /*grid-column-end: -1;*/
     background-color: blue;
 }
+a{
+    display: flex;
+    padding: .5rem;
+    justify-content: center;
+}  
