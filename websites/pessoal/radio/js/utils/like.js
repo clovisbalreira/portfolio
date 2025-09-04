@@ -1,7 +1,7 @@
 import { variavelGlobal } from "../mvc/control/global.js"
 import { programacao } from "../mvc/control/programacao.js"
 import { like } from "../mvc/control/like.js"
-import { Like } from "../mvc/model/like.js"
+import { Like } from "../mvc/model/Like.js"
 import { salvarLocalStorage, lerLocalStorage } from "./localStorage.js"
 import { nomeDia } from "./nomeDia.js"
 

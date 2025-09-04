@@ -1,4 +1,4 @@
-import { Posts } from "../model/posts.js";
+import { Posts } from "../model/Posts.js";
 import { dados } from "./dados.js";
 
 export const posts = [ 

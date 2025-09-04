@@ -1,4 +1,4 @@
-import { Programa } from "../model/programa.js";
+import { Programa } from "../model/Programa.js";
 import { locutores } from "./locutores.js";
 import { dados } from "./dados.js";
 

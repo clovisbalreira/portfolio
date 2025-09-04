@@ -1,5 +1,5 @@
+import { Programa } from "./Programa.js"
 import { Dados } from "./Dados.js"
-import { Programa } from "./programa.js"
 
 export class Programacao {
     constructor() {
