@@ -1,4 +1,19 @@
-const atualizarDados = (radio) => {
+import { mostrarProgramacao } from "./programacao.js";
+import { mostrarPosts } from "./posts.js";
+import { mostrarParada } from "./parada.js";
+import { variavelGlobal } from "../control/global.js";
+import { programacao } from "../control/programacao.js";
+import { posts } from "../control/posts.js";
+import { parada } from "../control/parada.js";
+import { dados } from "../control/dados.js";
+import { mostrarPlayer } from "../../utils/player.js";
+import { mostrarRadios } from "../../utils/radios.js";
+import { escolherRadio } from "../../utils/botoes-radios.js";
+import { pegarPaises, pegarEstados, pegarCidades } from "../../api/apis.js";
+import { fazerPedido, atualizarPedido } from "../../utils/fazerPedido.js";
+import { gravarFavoritos, atualizarFavorito } from "../../utils/like.js";
+
+export function atualizarDados(radio){
     let data = new Date()
     let urlRadio = document.getElementById('radioPlayer')
     urlRadio.src = radio.url
@@ -24,4 +39,21 @@ const atualizarDados = (radio) => {
     twitter.href = radio.twitter
     let playstore = document.getElementById('playstore')
     playstore.href = radio.playstore
+    let post = document.getElementById('post')
+    post.innerHTML = ''
+    mostrarPlayer(programacao[variavelGlobal.indexRadio])
+    mostrarParada(parada[variavelGlobal.indexRadio])
+    mostrarProgramacao(programacao[variavelGlobal.indexRadio])
+    mostrarPosts(posts, dados[variavelGlobal.indexRadio].nome)
+    mostrarRadios()
+    escolherRadio()
+    pegarPaises()
+    pegarEstados()
+    pegarCidades()
+    fazerPedido(data)
+    gravarFavoritos()
+    setInterval(() => { 
+        atualizarFavorito()
+        atualizarPedido()
+    }, 1000);
 }

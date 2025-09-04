@@ -6,40 +6,7 @@
         <title>Radio</title>    
         <link rel="stylesheet" href="./css/style.css">
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <script defer src="./js/mvc/view/selects.js"></script>
-        <script defer src="./js/api/apis.js"></script>
-        <script defer src="./js/mvc/model/Dados.js"></script>
-        <script defer src="./js/mvc/model/Parada.js"></script>
-        <script defer src="./js/mvc/model/Programacao.js"></script>
-        <script defer src="./js/mvc/model/Posts.js"></script>
-        <script defer src="./js/mvc/model/Pedido.js"></script>
-        <script defer src="./js/mvc/model/Like.js"></script>
-        <script defer src="./js/variaveis/global.js"></script>
-        <script defer src="./js/variaveis/dados.js"></script>
-        <script defer src="./js/variaveis/parada.js"></script>
-        <script defer src="./js/variaveis/programacao.js"></script>
-        <script defer src="./js/variaveis/posts.js"></script>
-        <script defer src="./js/variaveis/pedido.js"></script>
-        <script defer src="./js/variaveis/like.js"></script>
-        <script defer src="./js/mvc/view/radios.js"></script>
-        <script defer src="./js/mvc/view/dados.js"></script>
-        <script defer src="./js/mvc/view/parada.js"></script>
-        <script defer src="./js/mvc/view/programacao.js"></script>
-        <script defer src="./js/mvc/view/posts.js"></script>
-        <script defer src="./js/mvc/view/post.js"></script>
-        <script defer src="./js/mvc/view/pedido.js"></script>
-        <script defer src="./js/mvc/view/player.js"></script>
-        <script defer src="./js/mvc/control/radios.js"></script>
-        <script defer src="./js/mvc/control/selects.js"></script>
-        <script defer src="./js/mvc/control/dados.js"></script>
-        <script defer src="./js/mvc/control/parada.js"></script>
-        <script defer src="./js/mvc/control/programacao.js"></script>
-        <script defer src="./js/mvc/control/posts.js"></script>
-        <script defer src="./js/mvc/control/post.js"></script>
-        <script defer src="./js/mvc/control/pedido.js"></script>
-        <script defer src="./js/mvc/control/botoes-radios.js"></script>
-        <script defer src="./js/mvc/control/player.js"></script>
-        <script defer src="./js/mvc/control/like.js"></script>
+        <script type="module" src="./js/main.js"></script>
     </head>
     <body>
         <header>
@@ -47,25 +14,26 @@
                 <audio id="radioPlayer" autoplay></audio>
                 <div id="audio-principal">
                     <div id="audio-comandos">
-                        <img id="audio-imagem">
-                        <div id="audio-play-pause">
-                            <div id="like">
-                                <img id="coracao-vazio" src="./img/icone/borda-coracao.png" alt="Coração">
-                                <img id="coracao-cheio" src="./img/icone/coracao.png" alt="Coração">
+                        <div id="img-audio">
+                            <img id="audio-imagem">
+                            <div id="audio-play-pause">
+                                <div id="like">
+                                    <img id="coracao-vazio" src="./img/icone/borda-coracao.png" alt="Coração">
+                                    <img id="coracao-cheio" src="./img/icone/coracao.png" alt="Coração">
+                                </div>
+                                <div id="audio-play" class="audio-play-pause" ></div>
+                                <div id="audio-pause" class="audio-play-pause">
+                                    <div></div>
+                                    <div></div>
+                                </div>
                             </div>
-                            <div id="audio-play" class="audio-play-pause" ></div>
-                            <div id="audio-pause" class="audio-play-pause">
-                                <div></div>
-                                <div></div>
-                            </div>
-                            <div id="audio-input-div">
-                                <input type="range" min="0" max="100" value="100" step="1" id="vol-control">
-                            </div>
+                        </div>
+                        <div id="audio-input-div">
+                            <input type="range" min="0" max="100" value="100" step="1" id="vol-control">
                         </div>
                     </div>
                     <div id="audio-fundo"></div>
-                    <div id="audio-frase">
-                    </div>
+                    <div id="audio-frase"></div>
                 </div>
             </div>
             <div id="radios"></div>
@@ -75,6 +43,7 @@
                 <nav>
                     <ul>
                         <li><a href="#audio-principal">Home</a></li>
+                        <li><a href="#parada">Top 5</a></li>
                         <li><a href="#programacao">Programação</a></li>
                         <li><a href="#posts">Notícias</a></li>
                         <li><a href="#formulario">Peça seu som</a></li>
@@ -100,23 +69,29 @@
                     </a>
                 </div>
                 <h2>Segue a gente e fique por dentro das novidades!</h2>
-            </section>        
+            </section>   
             <section id="parada">
                 <div class="comercial"><p>Anúncio</p></div>            
-            </section>       
+            </section>  
             <section id="programacao">
+                <div class="comercial"><p>Anúncio</p></div>
+            </section>
+            <section id="programa">
+                <div class="comercial"><p>Anúncio</p></div>
+            </section>
+            <section id="locutor">
                 <div class="comercial"><p>Anúncio</p></div>
             </section>
             <section id="posts">
                 <div class="comercial"><p>Anúncio</p></div>
             </section>
             <section id="section-post">
-                <button id="btn-posts" class="btn-post">Mais Posts</button>
+                <button id="btn-mais" class="btn-mais">Mais Posts</button>
             </section>
             <section id="post"></section>
             <section id="formulario">
                 <div class="comercial comercio-form-top"><p>Anúncio</p></div>
-                <form action="">
+                <form>
                     <fieldset>
                         <legend>Peça o seu som</legend>                       
                         <div id="formulario-dados">
@@ -124,9 +99,13 @@
                                 <label for="nome">Qual o seu nome?</label>
                                     <input id="nome" type="text" placeholder="Digite seu nome completo">
                             </div>
-                            <div class="div-idade">
+                            <div>
                                 <label for="idade">Qual sua idade?</label>
                                 <input id="idade" type="number" min="0" placeholder="Digite sua idade">
+                            </div>
+                            <div>
+                                <label for="email">Qual o seu email?</label>
+                                    <input id="email" type="text" placeholder="Digite seu email">
                             </div>
                         </div>
                         <div id="formulario-localizacao">
@@ -137,11 +116,11 @@
                             </div>
                             <div>
                                 <label for="estados">Qual seu estado</label>
-                                <span id="divEstados"></span>
+                                <span id="divEstados">rs</span>
                             </div>
                             <div>
                                 <label for="divCidades">Qual seu cidade</label>
-                                <span id="divCidades"></span>
+                                <span id="divCidades">df</span>
                             </div>
                         </div>
                         <div class="pedidos">

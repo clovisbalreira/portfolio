@@ -1,4 +1,4 @@
-class Posts{
+export class Posts{
     constructor(radio, titulo, descricao, imagem){
         this.radio = radio;
         this.titulo = titulo;

@@ -1,4 +1,4 @@
-class Parada {
+export class Parada {
     constructor(radio, titulo) {
         this.radio = radio;
         this.titulo = titulo;

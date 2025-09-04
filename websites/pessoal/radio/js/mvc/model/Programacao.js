@@ -1,34 +1,39 @@
-class Programacao {
-    constructor(radio) {
-        this.radio = radio;
+import { Dados } from "./Dados.js"
+import { Programa } from "./programa.js"
+
+export class Programacao {
+    constructor() {
         this.dia = [];
+        this.radio = null;
     }
 
     adicionarDia(nome) {
         this.dia.push({
             nome: nome,
-            programas : [],
-            diaNumeros : []
+            programas : []
         });
     }
 
-    adicionarDiaNumero(diaNome, numero) {
-        const diaNumeros = this.dia.find(d => d.nome === diaNome);
-        if (diaNumeros) {
-            diaNumeros.diaNumeros.push({
-                numero: numero,
-            });
-        }
-    }
-
-    adicionarProgramas(diaNome, horaInicio, horaFim, nome) {
+    adicionarProgramas(diaNome, horaInicio, horaFim, programa) {
         const dia = this.dia.find(d => d.nome === diaNome);
         if (dia) {
             dia.programas.push({
                 horaInicio: horaInicio,
                 horaFim: horaFim,
-                nome: nome,
+                programa: programa,
             });
+        }
+    }
+
+    adicionarRadio(radios) {
+        if (radios instanceof Dados) {
+            this.radio = radios
+        }
+    }
+
+    adicionarPrograma(programa) {
+        if (programa instanceof Programa) {
+            return programa
         }
     }
 }

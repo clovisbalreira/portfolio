@@ -1,4 +1,4 @@
-const mostrarPost = (post) => {
+export const mostrarPost = (post) => {
     let section = document.getElementById('post')
     section.innerHTML = ''
     let div = document.createElement('div')

@@ -2,7 +2,7 @@ var produtos = [
   { nome: 'Nome', descricao: 'Descrição.', valor: '00,00', imagem: 'img/produto/produto01.png' },
   { nome: 'Nome', descricao: 'Descrição.', valor: '00,00', imagem: 'img/produto/produto02.png' },
   { nome: 'Nome', descricao: 'Descrição.', valor: '00,00', imagem: 'img/produto/produto03.png' },
-  { nome: 'Nome', descricao: 'Descrição.', valor: '00,00', imagem: 'img/produto/produto03.png' },
+  { nome: 'Nome', descricao: 'Descrição.', valor: '00,00', imagem: 'img/produto/produto04.png' },
 ]
 
 function criarProduto(){

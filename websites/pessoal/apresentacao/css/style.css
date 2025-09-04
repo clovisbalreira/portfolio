@@ -1,10 +1,11 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }    
 
 body{
-    background: linear-gradient(to left, blue 0%, rgb(124, 124, 224) 100%);
+    background: linear-gradient(to left, blue 0%, rgb(124, 124, 224) 100vw);
 }    
 
 header, footer{
@@ -93,10 +94,15 @@ main{
 }   
 
 #imagens{
-    width: 99vh;
-    display: grid;
-    grid-template-columns: 250px 250px 250px;
+    display: flex;
+    width: 90vw;
+    margin: auto;
+    flex-wrap: wrap;
     justify-content: space-evenly;
+}
+
+#imagens img{
+    width: 250px;
 }
 
 #formulario{

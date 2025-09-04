@@ -10,7 +10,7 @@ let classes = (numero) => {
     return nome
 }
 
-const mostrarParada = (paradaMusicas) => {
+export const mostrarParada = (paradaMusicas) => {
     let paradaMusical = document.getElementById('parada')
     paradaMusical.innerHTML = ''
     let h2 = document.createElement('h2')

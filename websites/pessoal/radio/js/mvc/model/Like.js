@@ -1,4 +1,4 @@
-class Like{
+export class Like{
     constructor(radio, dia, hora, programa){
         this.radio = radio;
         this.dia = dia;

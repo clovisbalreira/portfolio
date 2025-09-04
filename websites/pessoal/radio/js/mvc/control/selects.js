@@ -1,3 +1,0 @@
-pegarPaises()
-pegarEstados()
-pegarCidades()

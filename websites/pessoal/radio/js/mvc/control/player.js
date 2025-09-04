@@ -1,1 +1,0 @@
-mostrarPlayer(programacao[indexRadio])

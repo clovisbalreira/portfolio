@@ -1,4 +1,6 @@
-const mostrarPedido = () => {
+import { pedido } from "../control/pedido.js"
+
+export const mostrarPedido = () => {
     let section = document.getElementById('pedido-confirmacao')
     section.innerHTML = ''
     section.style.display = 'block'
@@ -43,18 +45,31 @@ const mostrarPedido = () => {
     pRadio.textContent = pedido[pedido.length - 1].radio
     div.appendChild(pRadio)
     section.appendChild(div)
+    esconderPedido(section)
 }
 
-const mostrarErro = () => {
+export const mostrarErro = () => {
     let section = document.getElementById('pedido-confirmacao')
     section.innerHTML = ''
+    section.style.display = 'block';
     let div = document.createElement('div')
     div.style.backgroundColor = 'red'
     let span = document.createElement('span')
     span.textContent = 'Todos os campos não foram preechidos.'
     div.appendChild(span)
     section.appendChild(div)
-    setTimeout(function() {
-        div.style.display = 'none';
-    }, 5000);
+    esconderPedido(section)
+}
+
+function esconderPedido(section) {
+    section.style.transition = 'opacity 2s ease-in-out';
+
+    setTimeout(() => {
+        section.style.opacity = '0';
+
+        // Depois que a opacidade chegar a 0, escondemos de vez
+        setTimeout(() => {
+            section.style.display = 'none';
+        }, 500); // mesmo tempo da animação
+    }, 5000); // espera 10 segundos para começar a esconder
 }

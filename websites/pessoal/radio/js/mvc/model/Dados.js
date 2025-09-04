@@ -1,4 +1,4 @@
-class Dados{
+export class Dados{
     constructor(nome, nomeCompleto, url, site, facebook, instagram, twitter, playstore, slogan, imagem, imagemLogo, fundacao, pais, estado, cidade){
         this.nome = nome;
         this.nomeCompleto = nomeCompleto;

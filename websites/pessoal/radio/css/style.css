@@ -1,8 +1,25 @@
+:root{
+    --font-branco: white;
+    --font-preto: black;
+    --fundo: white;
+    --fundo-dias: black;
+    --fundo-active: rgba(0, 153, 255, 0.877);
+    --fundo-transparente: rgba(0, 0, 0, 0.76);
+    --fundo-programa: rgba(0, 0, 0, 0.4);
+    --fundo-red: red;
+    --fundo-cinza: grey;
+    --select-fundo: gray;
+    --input-fundo: white;
+    --player-fundo : black;
+    --botao-confirma: green;
+    --botao-excuir: red;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: white;
+    color: var(--font-branco);
 }
 
 html, body{
@@ -13,138 +30,22 @@ body{
     height: 100vh;
     background-size: cover;
     background: black url('../img/fundo.jpg') no-repeat fixed center center;
-    background-color: white;
+    background-color: var(--fundo);
 }
 
-#like{
-    position: relative;
-    width: 1.8rem;
-    height: 1.8rem;
-    cursor: pointer;
-}
-
-#like:hover::after{
-    content: 'Deixe seu like no programa que está no ar!';
-    position: absolute;
-    top: 2.5rem;
-    left: -5rem;
-    width: 22rem;
-    background-color: rgba(0, 0, 0, 0.753);
-}
-
-#coracao-cheio{
-    display: none;
-}
-
-#like img{
-    width: 1.8rem;
-    position: absolute;
-    top: .1rem;
-}
-
-#audio-principal{
-    position: relative;
-}
-
-#audio-comandos{
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    background-color: black;
-    padding-inline: 1.4rem;
-}
-
-#audio-imagem{
-    width: 4rem; 
-    margin-top: .6rem; 
-    z-index: 99;
-}
-
-#audio-play-pause{
-    display: flex; 
-    gap: 10px; 
-    align-items: center; 
-    z-index: 99;
-}
-
-#audio-play{
-    width: 0;
-    height: 0;
-    border-left: .7rem solid transparent;
-    border-right: .7rem solid transparent;
-    border-bottom: 1rem solid white;
-    transform: rotate(90deg)
-}
-
-#audio-pause{
-    gap: 5px; 
-    display: none; 
-    z-index: 99;
-}
-
-#audio-pause div{
-    width: .3rem; 
-    height: 1.2rem; 
-    background-color: white;
-}
-
-#audio-input-div{
-    background-color: black;
-}
-
-#audio-fundo{
-    position: absolute;
-    top: 1.5rem;
-    background-color: black;
-    width: 20%;
-    border-radius: .4rem;
-    height: 1.5rem;
-    z-index: 1;
-}
-
-#audio-frase{
-    white-space: nowrap;
-    position: absolute;
-    left: 100%;
-    animation: scroll-left 20s linear infinite;
-    top: 1.5rem;
-}
-
-#radios{
-    background-color: black;
-    display: flex;
-    justify-content: start;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 1rem;
-}
-
-.button-radios{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: .5rem;
-    width: 10rem;
-    cursor: pointer;
-}
-
-.button-radios img{
-    width: 10rem;
-}
-
+/* ANUNCIOS */
 .comercial{
     width: 10px;
     height: 250px;
     background-color: white;
-    width: 80%;
+    width: 100%;
     margin-bottom: 2rem;
     display: grid;
     place-content: center;
 }
 
 .comercial p{
-    color: black;
+    color: var(--font-preto);
 }
 
 .comercio-form-top, .comercio-form-bottom {
@@ -159,28 +60,182 @@ body{
     margin-top: 2rem;
 }
 
+/* HEADER - PLAYER */
+
+#audio-principal{
+    position: fixed;
+    width: 100vw;
+    height: 5rem;
+    bottom: 0;
+    background-color: var(--fundo-dias);
+    z-index: 99;
+}
+
+#audio-comandos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+#img-audio{
+    padding-inline: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    background-color: var(--fundo-dias);
+    z-index: 99;
+}
+
+#audio-imagem{
+    padding-top: .4rem;
+    width: 4rem; 
+} 
+
+#audio-play-pause{
+    display: flex; 
+    align-items: center; 
+    z-index: 99;
+}
+
+#like{
+    position: relative;
+    width: 1.8rem;
+    height: 1.8rem;
+    padding-right: 2.5rem;
+    cursor: pointer;
+}
+    
+#like:hover::after{
+    content: 'Deixe seu like no programa que está no ar!';
+    position: absolute;
+    top: 2.5rem;
+    left: -5rem;
+    width: 22rem;
+    background-color: var(--fundo-transparente);
+}
+
+#like img{
+    width: 1.8rem;
+    position: absolute;
+    top: .1rem;
+}
+
+#coracao-cheio{
+    display: none;
+}
+
+#audio-play{
+    width: 0;
+    height: 0;
+    border-left: .7rem solid transparent;
+    border-right: .7rem solid transparent;
+    border-bottom: 1rem solid white;
+    transform: rotate(90deg);
+}
+
+#audio-pause{
+    display: none; 
+}
+    
+#audio-pause div{
+    width: .3rem; 
+    height: 1.2rem;
+    background-color: var(--font-branco);
+}
+
+#audio-pause div:nth-child(1){
+    margin-right: .2rem; 
+}
+
+#audio-input-div{
+    background-color: var(--fundo-dias);
+    padding: .5rem;
+    z-index: 99;
+}
+
+#audio-fundo{
+    position: absolute;
+    top: 1.5rem;
+    width: 20%;
+    border-radius: .4rem;
+    height: 1.5rem;
+    z-index: 1;
+}
+
+#audio-frase{
+    white-space: nowrap;
+    position: absolute;
+    left: 100%;
+    animation: scroll-left 20s linear infinite;
+    top: 1.6rem;
+    color: var(--font-branco);
+}
+
+@keyframes scroll-left {
+    from { left: 100%; }
+    to { left: -100%; }
+}
+
+/* HEADER - RADIOS */
+#radios{
+    background-color: var(--player-fundo);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.button-radios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    width: 10rem;
+    cursor: pointer;
+}
+.button-radios img{
+    width: 4rem;
+}
+
+/* HEADER - NAVEGAÇÃO */
 #navegacao{
-    background-color: rgba(0, 0, 0, 0.76);
+    background-color: var(--fundo-transparente);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 #navegacao img{
-    width: 30rem;
+    width: 50vw;
     padding-block: 1rem;
+}
+
+#navegacao .comercial{
+    width: 93%;
+}
+
+#navegacao nav{
+    margin: 0 3rem;
 }
 
 #navegacao nav ul{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     list-style: none;
     gap: 4rem;
-    margin-bottom: 2rem;
+    margin: 3rem;
 }
 
 #navegacao nav ul li{
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 #navegacao nav ul li a{
@@ -191,21 +246,20 @@ body{
     text-decoration: underline;
 }
 
+/* MAIN */
+main{
+    display: grid;
+    grid-template-columns: auto 90vw auto;
+    background-color: var(--fundo-transparente);
+}
+
+/* MAIN - SECTION */
 section{
-    background-color: rgba(0, 0, 0, 0.76);
+    grid-column: 2;
 }
 
-#section-post{
-    display: flex;
-    justify-content: center;    
-}
-
-#btn-posts{
-    height: 2rem;
-    padding: 0 2rem ;
-}
-
-#redes-sociais, #parada{
+/* MAIN - SECTION - REDES SOCIAIS */
+#redes-sociais{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -215,8 +269,10 @@ section{
 
 #redes-sociais .logo-redes{
     display: flex;
-    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
+    gap: 2rem;
 }
 
 #redes-sociais .logo-redes a img{
@@ -228,9 +284,20 @@ section{
     font-weight: bold;
     text-align: center;
 }
+ 
+/* MAIN - SECTION - PARADA */
+#parada{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
 
 #parada h2{
     font-size: 2.5rem;
+    color: var(--font-branco);
+    cursor: pointer;
 }
 
 #parada .parada{
@@ -241,22 +308,23 @@ section{
 }
 
 #parada .parada div h3, #parada .parada div .interprete p{
-    color: black;
+    color: var(--font-preto);
 }
 
 #parada .parada > div{
     display: grid;
     grid-template-columns: 200px 200px;
-    background-color: white;
+    background-color: var(--fundo);
     border-radius: 20px;
-    box-shadow: 5px 5px 5px black;
+    box-shadow: 5px 5px 5px var(--font-preto);
 }
 
-#parada .parada > div h3{
+#parada .parada div h3{
     font-size: 2rem;
     margin: auto;
     border-radius: 50%;
     padding: 1rem 1.5rem;
+    cursor: pointer;
 }
 
 .posicao-um{
@@ -292,45 +360,173 @@ section{
     font-weight: bolder;
 }
 
+/* MAIN - SECTION - PROGRAMAÇÃO */
 #programacao{
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1rem;
     padding: 2rem;
 }
 
-#programacao table{
-    background-color: transparent;
-    border-collapse: collapse;
-    padding: .2rem;
-    width: 350px;
-    box-shadow: 5px 5px 5px black;
+#nav-programacao{
+    display: flex;
+    justify-content: center;
 }
 
-#programacao table thead{
-    background-color: rgba(0, 0, 0, 0.808);
-}
-
-#programacao table thead tr th{
-    font-size: 1.5rem;
-    font-weight: bolder;
+#nav-programacao ul{
+    list-style: none;
+    display: flex;
+    width: 80vw;
+    font-size: .7rem;
     padding: 1rem;
 }
 
-#programacao table tbody tr td{
-    color: black;
+#nav-programacao ul li{
+    background-color: var(--fundo-dias);
     padding: .5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    transition: all .5s;
 }
 
-#programacao table tbody tr:nth-child(even){
-    background-color: white;
+#nav-programacao ul li:not(:last-child){
+    border-right: 2px solid white;
+}
+    
+#nav-programacao ul li:first-child{
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
-#programacao table tbody tr:nth-child(odd){
-    background-color: rgba(0, 153, 255, 0.877);
+#nav-programacao ul li:last-child{
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
+#nav-programacao ul li:hover{
+    background-color: var(--fundo-active);
+    color: var(--font-preto);
+}
+
+#div-programas{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    justify-content: center;
+}
+
+#div-programas > div {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    border-radius: 20px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    box-shadow: 5px 5px 5px var(--font-preto);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+#div-programas > div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--fundo-programa);
+    border-radius: 20px;
+    z-index: 1;
+}
+
+#div-programas > div * {
+    position: relative;
+    z-index: 2;
+}
+
+#div-programas > div span{
+    background-color: var(--fundo-red);
+    width: max-content;
+    border-radius: 15px;
+    padding: .4rem .5rem;
+    font-size: .8rem;
+    margin-bottom: .5rem;
+}
+
+#div-programas > div > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#div-programas > div > div img{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+}
+
+/* MAIN - SECTION - PROGRAMA */
+#programa{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#programa > div{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#programa > div:nth-child(2){
+    background-color: var(--fundo-transparente);
+    margin-bottom: 1rem;
+}
+
+#programa > div img{
+    width: 200px;
+}
+
+/* MAIN - SECTION - LOCUTOR */
+#locutor{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#locutor > div{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#locutor > div:nth-child(2){
+    background-color: var(--fundo-transparente);
+}
+
+#locutor > div  img{
+    width: 200px;
+    height: 200px;
+}
+
+#locutor > div > div > div{
+    display: flex;
+    gap: 1rem;
+}
+
+#locutor > div > div > div ul li{
+    font-size: 1rem;
+    list-style: none;    
+}
+
+/* MAIN - SECTION - POSTS */
 #posts{
     display: flex;
     flex-wrap: wrap;
@@ -340,12 +536,12 @@ section{
 }
 
 .post{
-    background-color: rgba(0, 0, 0, 0.925);
-    width: 400px;
+    background-color: var(--fundo-transparente);
+    width: 100%;
 }
 
 .post img{
-    width: 400px;
+    width: 100%;
 }
 
 .post h2, .post p, .post button{
@@ -357,10 +553,10 @@ section{
     white-space: nowrap;
     text-overflow: ellipsis;
     width: 25rem;
-  }
+}
 
 .post button{
-    background-color: white;
+    background-color: var(--fundo);
     color: black;
     border: none;
     margin: 1rem;
@@ -370,11 +566,33 @@ section{
     background-color: green;
 }
 
+/* MAIN - SECTION - SECTION - POST */
+#section-post{
+    display: flex;
+    justify-content: center;
+}
+
+#btn-mais{
+    height: 2rem;
+    padding: 0 2rem ;
+    background-color: var(--botao-confirma);   
+    border: none;
+}
+
+/* MAIN - SECTION - POST */
+section#post{
+    display: flex;
+    margin-block: 1rem;
+    justify-content: center;
+    width: 100%;
+}
+
 #post > div{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    padding: 5rem;
+    padding: 1rem;
+    gap: 1rem;
+    background-color: var(--fundo-transparente);
 }
 
 .imagem-titulo{
@@ -385,23 +603,20 @@ section{
 }
 
 .imagem-post{
-    max-width: 100%;
-}
+    width: 100%;
+} 
 
-#formulario{
-    padding: 2rem;
-}
-
-fieldset{
+/* MAIN - SECTION - FORMULARIO */ 
+#formulario fieldset{
+    width: 100%;
     padding: 1rem;
-    margin-inline: 2rem;
     border-radius: 10px;
     display: grid;
     place-content: center;
     gap: 10px;
 }
 
-fieldset div{
+#formulario fieldset div{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -417,12 +632,12 @@ fieldset div{
 }
 
 #formulario-dados div{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     align-items: center;
-    width: 30rem;
 }
 
 #formulario-dados div label{
@@ -430,13 +645,13 @@ fieldset div{
 }
 
 #formulario-localizacao div{
-    width: 20rem;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
 #formulario-localizacao div select, #formulario-localizacao div input{
-    width: 150px;
+    width: 250px;
 }
 
 #formulario-pedido{
@@ -457,22 +672,22 @@ fieldset div{
 }
 
 button{
+    background-color: var(--botao-confirma);
     height: 1.5rem;
 }
 
 button, select, input[type='text'], input[type='number']{
-    background-color: rgb(36, 134, 36);
     border: none;
     padding: .2rem 1rem;
 }
 
 button:hover{
-    background-color: rgb(0, 136, 0);
+    background-color: var(--botao-confirma);
     color: black;
 }
 
 select{
-    background-color: gray;
+    background-color: var(--select-fundo);
     width: 250px;
 }
 
@@ -484,6 +699,7 @@ select{
 }
 
 .pedidos div{
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -492,45 +708,25 @@ select, button{
     border-radius: 50px;
 }
 
-input[type='text']{
-    width: 250px;
-}
-
 input[type='text'], input[type='number']{
-    background-color: white;
+    width: 250px;
+    background-color: var(--input-fundo);
     border-radius: 10px;
-    color: black;
+    color: var(--font-preto);
 }
 
 input[type='number']{
-    width: 150px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     padding-right: 0;
 }
 
 .excluir{
-    background-color: red;
+    background-color: var(--fundo-red);
 }
 
-.excluir:hover{
-    color: black;
-    background-color: rgb(243, 23, 23)
-}
-
-.div-idade{
-   width: 400px;
-}
-
-.divFlex{
-    display: flex;
-    columns: row;
-    background-color: red;
-    width: 100%;
-}
-
+/* MAIN - SECTION - FORMULARIO - CONFIRMAÇÃO */
 #pedido-confirmacao{
-    display: none;
     padding: 5rem;
 }
 
@@ -550,154 +746,130 @@ input[type='number']{
     width: 60%;
     margin: auto;
 }
-
+    
 #pedido-confirmacao table thead tr th{
     text-align: left;
 }
 
+/* FOOTER */
 footer{
     background-color: gray;
     padding: 2rem;
     text-align: center;
+    margin-bottom: 4rem;
 }
 
-span{
-    color: black;
+span, footer p, footer p strong{
+    color: var(--font-preto);
 }
 
-footer p, footer p strong{
-    color: black;
-}
-
-@keyframes scroll-left {
-    from { left: 100%; }
-    to { left: -100%; }
-}
-
-@media (max-width:1338px) {
-    .pedidos div div{
-        justify-content: space-between;
+@media(min-width: 900px){
+    /* HEADER - NAVEGAÇÃO */
+    #navegacao nav ul li{
+        font-size: 2rem;
     }
-
-    .div-idade{
-        width: 100%;
-    }
-
-    input[type='number'], select{
-        width: 250px;
-    }
-}
-
-@media (max-width:1138px) {    
-    fieldset div{
-        width: min-content;
-    }
-    
-    #formulario-localizacao div{
-        width: 30rem;
-    }
-    
-    #formulario-localizacao div select, #formulario-localizacao div input{
-        width: 250px;
-    }
-    
-    #formulario-pedido{
-        width: 100%;
+    /* MAIN - SECTION - PROGRAMAÇÃO */
+    #nav-programacao ul{
+        list-style: none;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        width: 80vw;
+        font-size: 1.5rem;
+        padding: 1rem;
     }
-    
-    #input-pedido{
-        display: flex;
-        flex-direction: column;
+
+    #div-programas{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
-    
-    #input-pedido div div{
-        width: 30rem;
-        display: flex;
-        justify-content: space-between;
+
+    /* MAIN - SECTION - PROGRAMA */
+    #programa{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         align-items: center;
     }
-    
-    #formulario-botoes{
-        width: 100%;
+
+    /* MAIN - SECTION - Locutor */
+    #locutor{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        direction: rtl;
     }
 
-    #formulario-botoes button{
-        width: 45%;
+    /* MAIN - SECTION - POSTS */
+    #posts{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
-}
 
-@media (max-width:860px) {
-    #navegacao nav{
-        width: 80%;
-    }
-    
-    #navegacao nav ul{
-        flex-direction: column;
+    /* MAIN - SECTION - FORMULARIO */
+    #formulario{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 1rem;
-    }
-
-    #navegacao nav ul li{
-        font-size: 1.2rem;
-    }
-
-    #pedido-confirmacao{
-        padding: 4rem;
-    }
-    
-    #pedido-confirmacao div{
-        padding: 2rem;
-    }
-
-    #pedido-confirmacao table{
-        width: 100%;
+        align-items: flex-start;
     }
 }
 
-@media (max-width:708px) {
-    #audio-fundo{
-        width: 30%;
-    }
-    
-    #post > div{
+@media(max-width: 432px){
+    /* MAIN - SECTION - PARADA */
+    #parada .parada > div{
         display: flex;
         flex-direction: column;
-        gap: .1rem;
+        flex-wrap: wrap;
+        padding: 1rem;
+        width: 200px;
     }
 
-    @keyframes scroll-left {
-        to { left: -180%; }
+    #parada .parada > div > div p{
+        text-align: center;
     }
-}
 
-@media (max-width:647px) {    
-    #formulario-dados div, #formulario-localizacao div, #input-pedido div div{
-        width: min-content;
+    /* MAIN - SECTION - PROGRAMAÇÃO */
+    #nav-programacao ul{
+        flex-wrap: wrap;
+    }
+
+    #nav-programacao ul li:first-child{
+        border-radius: 0;
+    }
+
+    #nav-programacao ul li:last-child{
+        border-radius: 0;
+    }
+
+    /* MAIN - SECTION - PROGRAMA */
+    #programa div{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* MAIN - SECTION - Locutor */
+    #locutor div{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* MAIN - SECTION - POST */
+    section#post div{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* MAIN - SECTION - FORMULARIO */
+    #formulario fieldset{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #formulario fieldset div div{
+        justify-content: center;    }
+
+    #input-pedido div div{
+        display: flex;
+        flex-direction: column;
     }
     
-    #formulario-botoes{
-        width: 100%;
-    }
-
-    #formulario-botoes button{
-        width: 45%;
-    }
-}
-
-@media (max-width:478px) {
-    #audio-fundo{
-        width: 50%;
-    }
-}
-
-@media (max-width:340px) {
-    #audio-comandos{
-        height: 40px;
-        justify-content: space-around;
-    }
-
-    #audio-frase, #audio-imagem, #audio-fundo{
-        display: none;
-    }
 }

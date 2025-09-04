@@ -1,1 +1,5 @@
-atualizarDados(dados[indexRadio])
+import { Dados } from "../model/Dados.js";
+
+export const dados = [ new Dados('Rádio CNS', 'Rádio CNS Brasil', 'https://s18.maxcast.com.br:8702/live', 'www.radiocns.com', 'https://www.facebook.com/radiocnsbrasil', 'https://www.instagram.com/radiocns', 'https://twitter.com/radiocns', 'https://play.google.com/store/apps/details?id=com.dghost.radiocns', 'A rádio que liga você!', 'https://radiocns.com/wp-content/uploads/2022/08/cropped-cropped-555-2.png', 'https://radiocns.com/wp-content/uploads/2023/04/CNS-Logo-Branco-trasparente-png.png', 2005, 'Brasil', 'Rio Grande do Sul', 'Canoas'), 
+new Dados('Rádio Mix', 'Rádio Mix 106.3 FM', 'https://24493.live.streamtheworld.com/MIXFM_SAOPAULOAAC.aac?1715456773921', 'www.radiomixfm.com.br', '#', '#', '#', '#', 'O melhor Mix de São Paulo!', 'https://img.radios.com.br/radio/lg/radio13955_1532353280.png', 'https://img.radios.com.br/radio/lg/radio13955_1532353280.png', 1996, 'Brasil', 'São Paulo', 'São Paulo')
+]

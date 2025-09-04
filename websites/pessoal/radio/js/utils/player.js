@@ -1,5 +1,5 @@
-let intervalID
-const mostrarPlayer = (programacao) => {
+export const mostrarPlayer = (programacao) => {
+    let intervalID
     const radioPlayer = document.getElementById('radioPlayer');
     const playButton = document.querySelectorAll('.audio-play-pause');
     const play = document.getElementById('audio-play')
@@ -14,16 +14,12 @@ const mostrarPlayer = (programacao) => {
         return horaMinutos >= horaInicio && horaMinutos < horaFim;
     }
 
-    const programa = (diaAtual, horaMinutos, programacao) => {
+    const programa = (horaMinutos, programacao) => {
         let programaAtual = []
         programacao.dia.forEach( programa => {
-            programa.diaNumeros.forEach( dia => {
-                if(parseInt(dia.numero) === diaAtual){
-                    programa.programas.forEach( (tempo, index) => {
-                        if(estaEntre(horaMinutos, tempo.horaInicio, tempo.horaFim)){
-                            programaAtual.push({indice : index, nome : tempo.nome})
-                        }
-                    })
+            programa.programas.forEach( (tempo, index) => {
+                if(estaEntre(horaMinutos, tempo.horaInicio, tempo.horaFim)){
+                    programaAtual.push({indice : index, nome : tempo.programa.nome})
                 }
             })
         })
@@ -31,19 +27,17 @@ const mostrarPlayer = (programacao) => {
     }
 
     const programaDepois = (diaAtual, horaMinutos, programacao) => {
-        let indice = programa(diaAtual, horaMinutos, programacao)[0].indice
-        let nome = programa(diaAtual, horaMinutos, programacao)[0].nome
+        let indice = programa(horaMinutos, programacao)[0].indice
+        let nome = programa(horaMinutos, programacao)[0].nome
         let programaApos = 'Agora'
-        programacao.dia.forEach( programa => {
-            programa.diaNumeros.forEach( numero => {
-                if(programa.programas.length - 1 == indice){
-                    if((diaAtual == 6 ? 0 : diaAtual + 1) === parseInt(numero.numero)){
-                        programaApos = nome == programa.programas[0].nome ? programa.programas[1].nome : programaApos = programa.programas[0].nome
-                    }
-                }else if(diaAtual === parseInt(numero.numero)){
-                    programaApos = programa.programas[parseInt(indice) + 1].nome
+        programacao.dia.forEach( (programa, index)=> {
+            if(programa.programas.length - 1 == indice){
+                if((diaAtual == 6 ? 0 : diaAtual + 1) === index){
+                    programaApos = nome == programa.programas[0].nome ? programa.programas[1].nome : programaApos = programa.programas[0].nome
                 }
-            })
+            }else if(diaAtual === index){
+                programaApos = programa.programas[parseInt(indice) + 1].programa.nome
+            }
         })
        return programaApos
     }
@@ -67,7 +61,6 @@ const mostrarPlayer = (programacao) => {
     )
 
     volumeControl.addEventListener('input', function() {
-        console.log(volumeControl.value)
         radioPlayer.volume = parseFloat(volumeControl.value) / 100;
     });
 
@@ -85,7 +78,7 @@ const mostrarPlayer = (programacao) => {
         let hora = data.getHours()
         let minutos = data.getMinutes()
         let horaMinutos = `${hora.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}`
-        frase.innerHTML = `${programacao.radio.nome} - ${programacao.radio.slogan} | Você está ouvindo agora: ${programa(diaAtual, horaMinutos, programacao)[0].nome} | Em seguida, você vai ouvir: ${programaDepois(diaAtual, horaMinutos, programacao)} | ${programacao.radio.site} | ${programacao.radio.cidade}, ${programacao.radio.estado}, ${programacao.radio.pais}.`
+        frase.innerHTML = `${programacao.radio.nome} - ${programacao.radio.slogan} | Você está ouvindo agora: ${programa(horaMinutos, programacao)[0].nome} | Em seguida, você vai ouvir: ${programaDepois(diaAtual, horaMinutos, programacao)} | ${programacao.radio.site} | ${programacao.radio.cidade}, ${programacao.radio.estado}, ${programacao.radio.pais}.`
     }, 1000)
     radioPlayer.play()
 }

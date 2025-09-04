@@ -1,17 +1,12 @@
+import { pegarEstados, pegarCidades } from '../../api/apis.js'
+import { variavelGlobal } from '../control/global.js'
+
 const incluirOptions = (valor, sigla) => {
     let option = document.createElement('option')
     option.setAttribute('value', sigla)
     option.innerHTML = valor
     return option
 } 
-
-const ordenar = (data) => {
-    data.sort((a, b) => {
-        if (a.nome < b.nome) return -1;
-        if (a.nome > b.nome) return 1;
-        return 0;
-    });
-}
 
 const selectEstadosCidades = (data, id, idInput, placeholder) => {
     const div = document.getElementById(id)
@@ -26,38 +21,39 @@ const selectEstadosCidades = (data, id, idInput, placeholder) => {
     div.appendChild(select)
     if(idInput == 'estados'){
         select.addEventListener('change', () => {
-            select.value != '' ? selectEstados = select.value : selectEstados = ''
+            select.value != '' ? variavelGlobal.selectEstados = select.value : variavelGlobal.selectEstados = ''
             pegarCidades()
         })
     }
 }
 
-const inputEstadosCidades = (id, idInput, placeholder) => {
+export const inputEstadosCidades = (id, idInput, placeholder) => {
     const div = document.getElementById(id)
     div.innerHTML = ''
     const input = document.createElement('input')
+    input.value = ''
     input.setAttribute('id', idInput)
     input.setAttribute('type', 'text')
     input.setAttribute('placeholder', placeholder)
     div.appendChild(input)
 }
 
-const mostrarSelectPaises = (data) => {
+export const mostrarSelectPaises = (data) => {
     const select = document.getElementById('paises')
     select.appendChild(incluirOptions('Selecione o pais'))
-    data.sort((a, b) => a.translations.por.common.localeCompare(b.translations.por.common)).forEach( pais => {
-        select.appendChild(incluirOptions(pais.translations.por.common, pais.translations.por.common))
+    data.sort((a, b) => a.name.common.localeCompare(b.name.common)).forEach( pais => {
+        select.appendChild(incluirOptions(pais.name.common, pais.name.common))
     })
     select.addEventListener('change', () => {
-        select.value == 'Brasil' ? selectPais = select.value : selectPais = ''
+        select.value == 'Brazil' ? variavelGlobal.selectPais = select.value : variavelGlobal.selectPais = ''
         pegarEstados()
     })
 }
 
-const mostrarSelectEstados = (data) => {
-    selectPais == '' ? inputEstadosCidades('divEstados', 'estados', 'Digite o estado') : selectEstadosCidades(data, 'divEstados', 'estados', 'Selecione o estado')
+export const mostrarSelectEstados = (data) => {
+    variavelGlobal.selectPais == '' ? inputEstadosCidades('divEstados', 'estados', 'Digite o estado') : selectEstadosCidades(data, 'divEstados', 'estados', 'Selecione o estado')
 }
 
-const mostrarSelectCidades = (data) => {
-    selectEstados == '' ? inputEstadosCidades('divCidades','cidades', 'Digite a cidade') : selectEstadosCidades(data, 'divCidades','cidades', 'Selecione a cidade')
+export const mostrarSelectCidades = (data) => {
+    variavelGlobal.selectEstados == '' ? inputEstadosCidades('divCidades','cidades', 'Digite a cidade') : selectEstadosCidades(data, 'divCidades','cidades', 'Selecione a cidade')
 }
