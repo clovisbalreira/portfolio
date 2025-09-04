@@ -1,7 +1,8 @@
 import { pedido } from "../control/pedido.js"
+import { scroll } from "../../utils/scroll.js"
 
 export const mostrarPedido = () => {
-    let section = document.getElementById('pedido-confirmacao')
+    let section = document.getElementById('pedido')
     section.innerHTML = ''
     section.style.display = 'block'
     let div = document.createElement('div')
@@ -46,10 +47,11 @@ export const mostrarPedido = () => {
     div.appendChild(pRadio)
     section.appendChild(div)
     esconderPedido(section)
+    scroll('pedido')
 }
 
 export const mostrarErro = () => {
-    let section = document.getElementById('pedido-confirmacao')
+    let section = document.getElementById('pedido')
     section.innerHTML = ''
     section.style.display = 'block';
     let div = document.createElement('div')
@@ -63,13 +65,13 @@ export const mostrarErro = () => {
 
 function esconderPedido(section) {
     section.style.transition = 'opacity 2s ease-in-out';
+    section.style.opacity = '100';
 
     setTimeout(() => {
         section.style.opacity = '0';
-
-        // Depois que a opacidade chegar a 0, escondemos de vez
+        
         setTimeout(() => {
             section.style.display = 'none';
-        }, 500); // mesmo tempo da animação
-    }, 5000); // espera 10 segundos para começar a esconder
+        }, 500);
+    }, 5000);
 }

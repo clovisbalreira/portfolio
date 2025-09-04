@@ -109,34 +109,27 @@ export const atualizarPedido = () => {
 const deletarPedido = (pedido) => {
   let dataAgora = normalizarData(new Date())
   if(normalizarData(new Date(pedido.data)).getTime() != dataAgora.getTime()){
-    inputs(false)
+    liberarPedido(false)
     apagarDoLocalStorage('pedido', dataAgora)
   }else{
-    inputs(true)
+    liberarPedido(true)
   }
 }
 
-function inputs(condicao){
-  let nome = document.getElementById('nome')
-      let email = document.getElementById('email')
-      let idade = document.getElementById('idade')
-      let pais = document.getElementById('paises')
-      let estado = document.getElementById('estados')
-      let cidade = document.getElementById('cidades')
-      let inputMusicas = document.querySelector('.input-musica')
-      let inputInterpretes = document.querySelector('.input-interprete')
-      let adicionar = document.getElementById('btn-adicionar')
-      let remover = document.getElementById('btn-excluir')
-      let enviar = document.getElementById('enviar')
-      nome.disabled = condicao
-      email.disabled = condicao
-      idade.disabled = condicao
-      pais.disabled = condicao
-      estado.disabled = condicao
-      cidade.disabled = condicao
-      inputMusicas.disabled = condicao
-      inputInterpretes.disabled = condicao
-      adicionar.disabled = condicao
-      remover.disabled = condicao
-      enviar.disabled = condicao
+function liberarPedido(condicao){
+  let formulario = document.querySelector('#formulario')
+  if(condicao){
+    formulario.querySelector('form').style.display = 'none'
+    if(document.querySelector('.erro-pedido') == null) formulario.appendChild(pedidoTrancado())
+  }else{
+    formulario.querySelector('form').style.display = 'block'
+  }
+}
+
+function pedidoTrancado(){
+  let span = document.createElement('span')
+  span.classList.add('erro-pedido')
+  span.innerHTML = ''
+  span.textContent = 'O pedido de hoje já foi feito espere até amanhã para fazer outro.'
+  return span
 }
