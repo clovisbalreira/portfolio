@@ -1,3 +1,5 @@
+import { anuncio } from "../../utils/anuncio.js"
+
 let classes = (numero) => {
     let nome = 'posicao-quatro'
     if(numero == 1){
@@ -13,6 +15,7 @@ let classes = (numero) => {
 export const mostrarParada = (paradaMusicas) => {
     let paradaMusical = document.getElementById('parada')
     paradaMusical.innerHTML = ''
+    paradaMusical.appendChild(anuncio('<p>anuncio</p>'))
     let h2 = document.createElement('h2')
     h2.textContent = paradaMusicas.titulo
     paradaMusical.appendChild(h2)
