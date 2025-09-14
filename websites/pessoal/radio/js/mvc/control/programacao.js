@@ -1,5 +1,5 @@
 import { Programacao } from "../model/Programacao.js";
-import { dados } from "./dados.js";
+import { radios } from "./radios.js";
 import { programas } from "./programas.js";
 
 export let programacao = []
@@ -16,7 +16,7 @@ function incluirProgramacao(programacao, radio, dia){
     programacao.push(novo)
 }
 
-incluirProgramacao(programacao, dados[0], [
+incluirProgramacao(programacao, radios[0], [
     {dia: 'Domingos', programas : [
         {horaInicio: '00:00', horaFim: '00:59', nome: programas[0]},
         {horaInicio: '01:00', horaFim: '01:59', nome: programas[1]},
@@ -58,7 +58,7 @@ incluirProgramacao(programacao, dados[0], [
     ]},
     {dia: 'Quarta', programas : [
         {horaInicio: '00:00', horaFim: '00:59', nome: programas[2]},
-        /*{horaInicio: '01:00', horaFim: '02:59', nome: programas[4]},
+        {horaInicio: '01:00', horaFim: '02:59', nome: programas[4]},
         {horaInicio: '03:00', horaFim: '05:59', nome: programas[6]},
         {horaInicio: '06:00', horaFim: '06:59', nome: programas[2]},
         {horaInicio: '07:00', horaFim: '07:59', nome: programas[7]},
@@ -66,7 +66,7 @@ incluirProgramacao(programacao, dados[0], [
         {horaInicio: '10:00', horaFim: '12:59', nome: programas[3]},
         {horaInicio: '13:00', horaFim: '13:59', nome: programas[6]},
         {horaInicio: '14:00', horaFim: '15:59', nome: programas[3]},
-        {horaInicio: '16:00', horaFim: '23:59', nome: programas[6]},*/
+        {horaInicio: '16:00', horaFim: '23:59', nome: programas[6]},
     ]},
     {dia: 'Quinta', programas : [
         {horaInicio: '00:00', horaFim: '00:59', nome: programas[2]},
@@ -113,57 +113,57 @@ incluirProgramacao(programacao, dados[0], [
     ]},
 ])
 
-incluirProgramacao(programacao, dados[1], [
+incluirProgramacao(programacao, radios[1], [
     {dia: 'Domingos', programas : [
-        {horaInicio: '00:00', horaFim: '11:59', nome: 'Baú da Mix'},
-        {horaInicio: '12:00', horaFim: '12:59', nome: 'Toca Pro Face'},
-        {horaInicio: '13:00', horaFim: '23:59', nome: 'Baú da Mix'},
+        {horaInicio: '00:00', horaFim: '11:59', nome: programas[10]},
+        {horaInicio: '12:00', horaFim: '12:59', nome: programas[11]},
+        {horaInicio: '13:00', horaFim: '23:59', nome: programas[10]},
     ]},
     {dia: 'Segunda', programas : [
-        {horaInicio: '00:00', horaFim: '11:59', nome: 'Baú da Mix'},
-        {horaInicio: '12:00', horaFim: '12:59', nome: 'Toca Pro Face'},
-        {horaInicio: '13:00', horaFim: '18:59', nome: 'Baú da Mix'},
-        {horaInicio: '19:00', horaFim: '19:59', nome: 'Mix Tudo'},
-        {horaInicio: '20:00', horaFim: '20:59', nome: 'Agora o Bicho Vai Pegar'},
-        {horaInicio: '21:00', horaFim: '23:59', nome: 'Baú da Mix'},
+        {horaInicio: '00:00', horaFim: '11:59', nome: programas[10]},
+        {horaInicio: '12:00', horaFim: '12:59', nome: programas[11]},
+        {horaInicio: '13:00', horaFim: '18:59', nome: programas[10]},
+        {horaInicio: '19:00', horaFim: '19:59', nome: programas[12]},
+        {horaInicio: '20:00', horaFim: '20:59', nome: programas[13]},
+        {horaInicio: '21:00', horaFim: '23:59', nome: programas[10]},
     ]},
     {dia: 'Terça', programas : [
-        {horaInicio: '00:00', horaFim: '11:59', nome: 'Baú da Mix'},
-        {horaInicio: '12:00', horaFim: '12:59', nome: 'Toca Pro Face'},
-        {horaInicio: '13:00', horaFim: '18:59', nome: 'Baú da Mix'},
-        {horaInicio: '19:00', horaFim: '19:59', nome: 'Mix Tudo'},
-        {horaInicio: '20:00', horaFim: '20:59', nome: 'Agora o Bicho Vai Pegar'},
-        {horaInicio: '21:00', horaFim: '23:59', nome: 'Baú da Mix'},
+        {horaInicio: '00:00', horaFim: '11:59', nome: programas[10]},
+        {horaInicio: '12:00', horaFim: '12:59', nome: programas[11]},
+        {horaInicio: '13:00', horaFim: '18:59', nome: programas[10]},
+        {horaInicio: '19:00', horaFim: '19:59', nome: programas[12]},
+        {horaInicio: '20:00', horaFim: '20:59', nome: programas[13]},
+        {horaInicio: '21:00', horaFim: '23:59', nome: programas[10]},
     ]},
     {dia: 'Quarta', programas : [
-        {horaInicio: '00:00', horaFim: '11:59', nome: 'Baú da Mix'},
-        {horaInicio: '12:00', horaFim: '12:59', nome: 'Toca Pro Face'},
-        {horaInicio: '13:00', horaFim: '18:59', nome: 'Baú da Mix'},
-        {horaInicio: '19:00', horaFim: '19:59', nome: 'Mix Tudo'},
-        {horaInicio: '20:00', horaFim: '20:59', nome: 'Agora o Bicho Vai Pegar'},
-        {horaInicio: '21:00', horaFim: '23:59', nome: 'Baú da Mix'},
+        {horaInicio: '00:00', horaFim: '11:59', nome: programas[10]},
+        {horaInicio: '12:00', horaFim: '12:59', nome: programas[11]},
+        {horaInicio: '13:00', horaFim: '18:59', nome: programas[10]},
+        {horaInicio: '19:00', horaFim: '19:59', nome: programas[12]},
+        {horaInicio: '20:00', horaFim: '20:59', nome: programas[13]},
+        {horaInicio: '21:00', horaFim: '23:59', nome: programas[10]},
     ]},
     {dia: 'Quinta', programas : [
-        {horaInicio: '00:00', horaFim: '11:59', nome: 'Baú da Mix'},
-        {horaInicio: '12:00', horaFim: '12:59', nome: 'Toca Pro Face'},
-        {horaInicio: '13:00', horaFim: '18:59', nome: 'Baú da Mix'},
-        {horaInicio: '19:00', horaFim: '19:59', nome: 'Mix Tudo'},
-        {horaInicio: '20:00', horaFim: '20:59', nome: 'Agora o Bicho Vai Pegar'},
-        {horaInicio: '21:00', horaFim: '23:59', nome: 'Baú da Mix'},
+        {horaInicio: '00:00', horaFim: '11:59', nome: programas[10]},
+        {horaInicio: '12:00', horaFim: '12:59', nome: programas[11]},
+        {horaInicio: '13:00', horaFim: '18:59', nome: programas[10]},
+        {horaInicio: '19:00', horaFim: '19:59', nome: programas[12]},
+        {horaInicio: '20:00', horaFim: '20:59', nome: programas[13]},
+        {horaInicio: '21:00', horaFim: '23:59', nome: programas[10]},
     ]},
     {dia: 'Sexta', programas : [
-        {horaInicio: '00:00', horaFim: '11:59', nome: 'Baú da Mix'},
-        {horaInicio: '12:00', horaFim: '12:59', nome: 'Toca Pro Face'},
-        {horaInicio: '13:00', horaFim: '18:59', nome: 'Baú da Mix'},
-        {horaInicio: '19:00', horaFim: '19:59', nome: 'Mix Tudo'},
-        {horaInicio: '20:00', horaFim: '20:59', nome: 'Agora o Bicho Vai Pegar'},
-        {horaInicio: '21:00', horaFim: '23:59', nome: 'Baú da Mix'},
+        {horaInicio: '00:00', horaFim: '11:59', nome: programas[10]},
+        {horaInicio: '12:00', horaFim: '12:59', nome: programas[11]},
+        {horaInicio: '13:00', horaFim: '18:59', nome: programas[10]},
+        {horaInicio: '19:00', horaFim: '19:59', nome: programas[12]},
+        {horaInicio: '20:00', horaFim: '20:59', nome: programas[13]},
+        {horaInicio: '21:00', horaFim: '23:59', nome: programas[10]},
     ]},
     {dia: 'Sábado', programas : [
-        {horaInicio: '00:00', horaFim: '11:59', nome: 'Baú da Mix'},
-        {horaInicio: '12:00', horaFim: '12:59', nome: 'Toca Pro Face'},
-        {horaInicio: '13:00', horaFim: '22:59', nome: 'Baú da Mix'},
-        {horaInicio: '23:00', horaFim: '23:59', nome: 'Club Mix'},
+        {horaInicio: '00:00', horaFim: '11:59', nome: programas[10]},
+        {horaInicio: '12:00', horaFim: '12:59', nome: programas[11]},
+        {horaInicio: '13:00', horaFim: '22:59', nome: programas[10]},
+        {horaInicio: '23:00', horaFim: '23:59', nome: programas[14]},
     ]},
 ])
 

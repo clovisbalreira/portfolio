@@ -1,4 +1,70 @@
-export const mostrarPlayer = (programacao) => {
+import { gravarFavoritos } from "./like.js";
+
+export function mostrarPlayer(radio, programacao){
+    let player = document.getElementById('player')
+    let audio = document.createElement('audio')
+    audio.id = "radioPlayer"
+    audio.autoplay = true;
+    audio.loop = true;
+    audio.src = `./sons/${radio.url}`
+    player.appendChild(audio)
+    let audioPrincipal = document.createElement('div')
+    audioPrincipal.id = 'audio-principal'
+    let audioComandos = document.createElement('div')
+    audioComandos.id = 'audio-comandos'
+    audioPrincipal.appendChild(audioComandos)
+    let divAudio = document.createElement('div')
+    divAudio.id = 'img-audio'
+    let imgAudioImagem = document.createElement('img')
+    imgAudioImagem.id = 'audio-imagem'
+    imgAudioImagem.alt = radio.nome 
+    imgAudioImagem.src = `./img/radio/${radio.imagem}`
+    divAudio.appendChild(imgAudioImagem)
+    let divAudioPlayPause = document.createElement('div')
+    divAudioPlayPause.id = 'audio-play-pause'
+    let divLike = document.createElement('div')
+    divLike.id = 'like'
+    divLike.innerHTML = '<i class="fa-regular fa-heart"></i>'
+    divAudioPlayPause.appendChild(divLike)
+    let audioPlay = document.createElement('div')
+    audioPlay.id = 'audio-play'
+    audioPlay.classList.add('audio-play-pause')
+    divAudioPlayPause.appendChild(audioPlay)
+    let audioPlayPause = document.createElement('div')
+    audioPlayPause.id = 'audio-pause'
+    audioPlayPause.classList.add('audio-play-pause')
+    let divPause1 = document.createElement('div')
+    audioPlayPause.appendChild(divPause1)
+    let divPause2 = document.createElement('div')
+    audioPlayPause.appendChild(divPause2)
+    divAudioPlayPause.appendChild(audioPlayPause)
+    divAudio.appendChild(divAudioPlayPause)
+    let divAudioInput= document.createElement('div')
+    divAudioInput.id = 'audio-input-div'
+    divAudioInput.innerHTML = '<i class="fa-solid fa-volume-high"></i>'
+    let range = document.createElement('input')
+    range.id = 'vol-control'
+    range.type = 'range';
+    range.min = '0';
+    range.max = '100';
+    range.value = '50';
+    range.step = '1';
+    divAudioInput.appendChild(range)
+    let audioFundo = document.createElement('div')
+    audioFundo.id = 'audio-fundo'
+    audioComandos.appendChild(audioFundo)
+    let audioFrase = document.createElement('div')
+    audioFrase.id = 'audio-frase'
+    audioComandos.appendChild(divAudio)
+    audioComandos.appendChild(divAudioInput)
+    audioComandos.appendChild(audioFrase)
+    audioPrincipal.appendChild(audioComandos)
+    player.appendChild(audioPrincipal)
+    mostrarFrase(programacao)
+    gravarFavoritos()
+}
+
+const mostrarFrase = (programacao) => {
     let intervalID
     const radioPlayer = document.getElementById('radioPlayer');
     const playButton = document.querySelectorAll('.audio-play-pause');

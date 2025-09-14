@@ -1,8 +1,15 @@
 import { selecionarLocutor } from "../../utils/selecionarLocutor.js"
 import { selecionarPrograma } from "../../utils/selecionarPrograma.js"
+import { publicidade } from "../../utils/publicidade.js"
+import { links } from "../control/links.js";
+import { Links } from "../model/Links.js";
+
 export const mostrarProgramacao = (programacao) => {
+    links.push(new Links('Programação', 'nav-programacao'))
     let divProgramacao = document.getElementById('programacao')
+    divProgramacao.style.display = 'flex'
     divProgramacao.innerHTML = ''
+    divProgramacao.appendChild(publicidade())
     let nav = document.createElement('nav')
     nav.id = 'nav-programacao'
     let ul = document.createElement('ul')
@@ -43,21 +50,29 @@ function mostrarProgramas(programacao, hoje){
     let listas = programacao.dia.find( (d, index) => index == hoje)
     listas.programas.forEach( lista => {
         let div = document.createElement('div')
-        div.style.backgroundImage = `url('${lista.programa.foto}')`
+        if(lista.programa.foto == ''){
+            div.style.backgroundColor = 'var(--fundo)'
+        }else{
+            div.style.backgroundImage = `url('${lista.programa.foto}')`
+        }
         if(hoje == new Date().getDay() && estaEntre(lista.horaInicio, lista.horaFim)) div.appendChild(aovivo())
+        let divTextosImagem = document.createElement('div') 
+        let divTextos = document.createElement('div') 
         let h2 = document.createElement('h2')
         h2.classList.add('nome-programa')
         h2.textContent = lista.programa.nome
-        div.appendChild(h2)
-        let divLocutor = document.createElement('div')
+        divTextos.appendChild(h2)
         let h3 = document.createElement('h3')
         h3.classList.add('nome-locutor')
         h3.textContent = `Com ${lista.programa.locutor.nome}`
-        divLocutor.appendChild(h3)        
+        divTextos.appendChild(h3)   
+        divTextosImagem.appendChild(divTextos)  
         let img = document.createElement('img')
+        let divImagem = document.createElement('div') 
+        divImagem.appendChild(img)
         img.src = lista.programa.locutor.foto
-        divLocutor.appendChild(img)
-        div.appendChild(divLocutor)
+        divTextosImagem.appendChild(divImagem)
+        div.appendChild(divTextosImagem)
         let p = document.createElement('p')
         p.textContent = `${lista.horaInicio} ${lista.programa.descricao == '' ? '' : '-'} ${lista.programa.descricao}`
         div.appendChild(p)

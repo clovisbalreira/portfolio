@@ -1,6 +1,6 @@
 Projeto Rádio online
 
-Este projeto de rádio online, onde os usuários podem acessar diferentes estações de rádio, visualizar informações sobre a programação, fazer pedidos de músicas e ler notícias relacionadas às estações. O projeto utiliza HTML, CSS e JavaScript para fornecer uma experiência interativa e envolvente aos usuários.
+Este projeto de rádio online ficticia permite que usuários escutem as faixas background-music-instrumental-207886 e station-radio-238854, explorem a programação completa, conheçam locutores e apresentadores, façam pedidos de músicas e leiam posts/novidades. Além das funcionalidades básicas, a versão estendida inclui perfis detalhados de locutores, programas e autores de posts (escritores). Os nomes dos locutores, programas e autores são fictícios — gerados aleatoriamente com o metodo Math.random() — e as fotos de perfil são carregadas dinamicamente a partir da API externa https://randomuser.me/api/portraits/, garantindo imagens realistas sem precisar de um banco de imagens próprio, com resposibilidade e espaços para a publicidade.
 
 Linguagens:
 

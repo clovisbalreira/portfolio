@@ -1,13 +1,13 @@
-import { dados } from "./dados.js";
+import { radios } from "./radios.js";
 import { Parada } from "../model/Parada.js";
 
-let paradaCns = new Parada(dados[0].nomeCompleto, 'As 5+ CNS')
+let paradaCns = new Parada(radios[0].nomeCompleto, 'As 5+ CNS')
 paradaCns.adicionarMusica('Billie Jean','Michael Jackson')
 paradaCns.adicionarMusica('Bohemian Rhapsody','Queen')
 paradaCns.adicionarMusica('Shape of You','Ed Sheeran')
 paradaCns.adicionarMusica('Rolling in the Deep','Adele')
 paradaCns.adicionarMusica('Thriller','Michael Jackson')
-let paradaMix = new Parada(dados[1].nomeCompleto, 'As 10+ Mix')
+let paradaMix = new Parada(radios[1].nomeCompleto, 'As 10+ Mix')
 paradaMix.adicionarMusica('Billie Jean','Michael Jackson')
 paradaMix.adicionarMusica('Bohemian Rhapsody','Queen')
 paradaMix.adicionarMusica('Hotel California','The Eagles')

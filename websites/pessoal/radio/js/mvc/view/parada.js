@@ -1,33 +1,27 @@
-import { anuncio } from "../../utils/anuncio.js"
+import { publicidade } from "../../utils/publicidade.js"
+import { links } from "../control/links.js";
+import { Links } from "../model/Links.js";
 
-let classes = (numero) => {
-    let nome = 'posicao-quatro'
-    if(numero == 1){
-        nome = 'posicao-um'
-    }else if(numero == 2){
-        nome = 'posicao-dois'
-    }else if(numero == 3){
-        nome = 'posicao-tres'
-    }
-    return nome
-}
+let cores = ['gold', 'silver', 'brown', 'orange']
 
 export const mostrarParada = (paradaMusicas) => {
+    links.push(new Links('Parada', 'h2-parada'))
     let paradaMusical = document.getElementById('parada')
+    paradaMusical.style.display = 'flex'
     paradaMusical.innerHTML = ''
-    paradaMusical.appendChild(anuncio('<p>anuncio</p>'))
+    paradaMusical.appendChild(publicidade())
     let h2 = document.createElement('h2')
+    h2.id = 'h2-parada'
     h2.textContent = paradaMusicas.titulo
     paradaMusical.appendChild(h2)
     let divParada = document.createElement('div')
     divParada.classList.add('parada')
-    let posicao = 1
-    paradaMusicas.musicas.forEach(musica => {
+    paradaMusicas.musicas.forEach((musica, index) => {
         let div = document.createElement('div')
         let h3 = document.createElement('h3')
-        h3.textContent = posicao
-        h3.classList.add(classes(posicao++))
-        posicao > 10 ? h3.style.padding = '1.5rem' : ''
+        h3.textContent = index + 1
+        h3.style.backgroundColor = index < cores.length ? cores[index] : cores[cores.length - 1]
+        index + 1 > 10 ? h3.style.padding = '1.5rem' : ''
         div.appendChild(h3)
         let divInterprete = document.createElement('div')
         divInterprete.classList.add('interprete')

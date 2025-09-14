@@ -1,5 +1,5 @@
 import { Locutor } from "./Locutor.js";
-import { Dados } from "./Dados.js";
+import { Radio } from "./Radio.js";
 
 export class Programa {
     constructor(nome, descricao, foto) {
@@ -17,7 +17,7 @@ export class Programa {
     }
 
     adicionarRadio(radios) {
-        if (radios instanceof Dados) {
+        if (radios instanceof Radio) {
             this.radio = radios
         }
     }

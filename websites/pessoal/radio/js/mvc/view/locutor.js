@@ -1,34 +1,53 @@
 import { programas } from "../control/programas.js"
+import { publicidade } from "../../utils/publicidade.js"
+import { mostrarPrograma } from "./programa.js"
+import { scroll } from "../../utils/scroll.js"
 
 export function mostrarLocutor(selecao){
     let locutorProgramas = programas.filter( programa => programa.locutor.nome === selecao.nome)
     let section = document.getElementById('locutor')
+    section.innerHTML = ''
     let divPrincipal = document.createElement('div')
     let img = document.createElement('img')
     img.src = selecao.foto 
     divPrincipal.appendChild(img)
     let div = document.createElement('div')
+    div.id = 'div-h2'
     let h2 = document.createElement('h2')
-    h2.textContent = `Locutor: ${selecao.nome}`
+    h2.textContent = `Locutor ${selecao.nome}`
     div.appendChild(h2)
     let divUl = document.createElement('div')
     let h3 = document.createElement('h3')
     if(selecao.descricao != ''){
         let p = document.createElement('p')
-        p.textContent = `Descrição: ${selecao.descricao}`
+        p.textContent = `Descrição ${selecao.descricao}`
         div.appendChild(p)
     }
-    h3.textContent = `Programa${locutorProgramas.length > 0 ? 's' : ''}:`
+    h3.textContent = `Programa${locutorProgramas.length > 0 ? 's' : ''}`
     divUl.appendChild(h3)
     let ul = document.createElement('ul')
     locutorProgramas.forEach( programa => {
         let li = document.createElement('li')
         li.textContent = programa.nome
-        li.classList.add('nome-programa-select')
+        li.classList.add('programa-single')
         ul.appendChild(li)
     })
     divUl.appendChild(ul)
     div.appendChild(divUl)
     divPrincipal.appendChild(div)
     section.appendChild(divPrincipal)
+    section.appendChild(publicidade())
+    escolherPrograma()
+    scroll('locutor')
+}
+
+function escolherPrograma(){
+    let classes = document.querySelectorAll('.programa-single')
+    classes.forEach( classe => {
+        classe.addEventListener('click', () => {
+            let selecao = programas.find( programa => {
+                return programa.nome == classe.textContent} )
+            mostrarPrograma(selecao)
+        })
+    })
 }

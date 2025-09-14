@@ -1,5 +1,8 @@
-import { dados } from "../js/mvc/control/dados.js";
+import { programacao } from "./mvc/control/programacao.js"
+import { radios } from "./mvc/control/radios.js";
+import { parada } from "./mvc/control/parada.js";
+import { posts } from "./mvc/control/posts.js";
+import { mostrarSite } from "./utils/mostrarSite.js"
 import { variavelGlobal } from "./mvc/control/global.js";
-import { atualizarDados } from "../js/mvc/view/dados.js";
 
-atualizarDados(dados[variavelGlobal.indexRadio]);
+mostrarSite(radios[variavelGlobal.indexRadio], programacao, radios, parada, posts, variavelGlobal)

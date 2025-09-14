@@ -5,153 +5,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Radio</title>    
         <link rel="stylesheet" href="./css/style.css">
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <script type="module" src="./js/main.js"></script>
+        <script defer src="https://kit.fontawesome.com/e02fa1058f.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <header>
-            <div class="player">
-                <audio id="radioPlayer" autoplay></audio>
-                <div id="audio-principal">
-                    <div id="audio-comandos">
-                        <div id="img-audio">
-                            <img id="audio-imagem">
-                            <div id="audio-play-pause">
-                                <div id="like">
-                                    <img id="coracao-vazio" src="./img/icone/borda-coracao.png" alt="Coração">
-                                    <img id="coracao-cheio" src="./img/icone/coracao.png" alt="Coração">
-                                </div>
-                                <div id="audio-play" class="audio-play-pause" ></div>
-                                <div id="audio-pause" class="audio-play-pause">
-                                    <div></div>
-                                    <div></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="audio-input-div">
-                            <input type="range" min="0" max="100" value="100" step="1" id="vol-control">
-                        </div>
-                    </div>
-                    <div id="audio-fundo"></div>
-                    <div id="audio-frase"></div>
-                </div>
-            </div>
+            <div id="player"></div>
+            <div id="navegacao"></div>
             <div id="radios"></div>
-            <div id="navegacao">
-                <img id="imagem-logo">
-                <nav>
-                    <ul>
-                        <li><a href="#audio-principal">Home</a></li>
-                        <li><a href="#parada">Top 5</a></li>
-                        <li><a href="#programacao">Programação</a></li>
-                        <li><a href="#posts">Notícias</a></li>
-                        <li><a href="#formulario">Peça seu som</a></li>
-                    </ul>
-                </nav>
-            </div>
         </header>
-        <main>
-            <section id="redes-sociais">
-                <!--<div class="comercial"><p>Anúncio</p></div>-->
-                <div class="logo-redes">
-                    <a target="_blank">
-                        <img src="./img/icone/facebook.svg" alt="Facebbok">
-                    </a>
-                    <a id="instagram" target="_blank">
-                        <img src="./img/icone/instagram.svg" alt="Instagram">
-                    </a>
-                    <a id="twitter" target="_blank">
-                        <img src="./img/icone/twitter.svg" alt="Twitter">
-                    </a>
-                    <a id="playstore" target="_blank">
-                        <img src="./img/icone/google-play-store-novo.svg" alt="PlayStore">
-                    </a>
-                </div>
-                <h2>Segue a gente e fique por dentro das novidades!</h2>
-            </section>   
-            <section id="parada">
-                <!--<div class="comercial"><p>Anúncio</p></div>-->            
-            </section>  
-            <section id="programacao">
-                <!--<div class="comercial"><p>Anúncio</p></div>-->
-            </section>
-            <section id="programa">
-                <!--<div class="comercial"><p>Anúncio</p></div>-->
-            </section>
-            <section id="locutor">
-                <!--<div class="comercial"><p>Anúncio</p></div>-->
-            </section>
-            <section id="posts">
-                <!--<div class="comercial"><p>Anúncio</p></div>-->
-            </section>
-            <section id="section-post">
-                <button id="btn-mais" class="btn-mais">Mais Posts</button>
-            </section>
+        <main id="principal">
+            <section id="redes-sociais"></section>   
+            <section id="parada"></section>  
+            <section id="programacao"></section>
+            <section id="programa"></section>
+            <section id="locutor"></section>
+            <section id="posts"></section>
+            <section id="section-post"></section>
             <section id="post"></section>
-            <section id="formulario">
-                <!--<div class="comercial comercio-form-top"><p>Anúncio</p></div>-->
-                <form>
-                    <fieldset>
-                        <legend>Peça o seu som</legend>                       
-                        <div id="formulario-dados">
-                            <div>
-                                <label for="nome">Qual o seu nome?</label>
-                                    <input id="nome" type="text" placeholder="Digite seu nome completo">
-                            </div>
-                            <div>
-                                <label for="idade">Qual sua idade?</label>
-                                <input id="idade" type="number" min="0" placeholder="Digite sua idade">
-                            </div>
-                            <div>
-                                <label for="email">Qual o seu email?</label>
-                                    <input id="email" type="text" placeholder="Digite seu email">
-                            </div>
-                        </div>
-                        <div id="formulario-localizacao">
-                            <div>
-                                <label for="paises">Qual seu Pais</label>
-                                <select name="paises" id="paises">
-                                </select>
-                            </div>
-                            <div>
-                                <label for="estados">Qual seu estado</label>
-                                <span id="divEstados">rs</span>
-                            </div>
-                            <div>
-                                <label for="divCidades">Qual seu cidade</label>
-                                <span id="divCidades">df</span>
-                            </div>
-                        </div>
-                        <div class="pedidos">
-                            <label for="playlist">Você que montar sua playlist? Deixe nome das musicas e artistas ( Máximo de 5 musicas )</label>
-                            <div id="formulario-pedido">
-                                <div id="input-pedido">
-                                    <div>
-                                        <div>
-                                            <p>Música</p>
-                                            <input class="input-musica" type="text" placeholder="Digite a música">
-                                        </div>
-                                        <div>
-                                            <p>Interprete</p>
-                                            <input class="input-interprete" type="text" placeholder="Digite o interprete">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="formulario-botoes">
-                                    <button id="btn-adicionar">Adicionar</button>
-                                    <button id="btn-excluir" class="excluir">Excluir</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button id="enviar">Enviar</button>
-                    </fieldset>
-                </form>
-            </section>
+            <section id="social-midia"></section>
+            <section id="formulario"></section>
             <section id="pedido"></section>
         </main>
-        <footer>
-            <p>Copyright © | <span id="ano"></span> -  <span id="atual"></span> | <strong id="nome-radio"></strong> - <span id="slogan-radio"></span></p>
-        </footer>
+        <footer id="footer"></footer>
     </body>
 </html>

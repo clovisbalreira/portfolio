@@ -1,5 +1,5 @@
 import { mostrarPedido, mostrarErro } from "../mvc/view/pedido.js"
-import { dados } from "../mvc/control/dados.js"
+import { radios } from "../mvc/control/radios.js"
 import { pedido } from "../mvc/control/pedido.js"
 import { variavelGlobal } from "../mvc/control/global.js"
 import { Pedido } from "../mvc/model/Pedido.js"
@@ -68,10 +68,8 @@ export function fazerPedido(data){
     let musicas = Array.from(inputMusicas).map(input => input.value);
     let inputInterpretes = document.querySelectorAll('.input-interprete')
     let interpretes = Array.from(inputInterpretes).map(input => input.value);
-    if(nome.value != '' && idade.value != '' && pais.value != '' && estado.value != '' && cidade.value != '' && !musicas.some(array => {return array.length === 0}) && !interpretes.some(array => {
-      return array.length === 0
-    })){
-      let pedidoAtual = new Pedido(data, dados[variavelGlobal.indexRadio].nome, nome.value, idade.value, email.value, pais.value, estado.value, cidade.value)
+    if(nome.value != '' && idade.value != '' && validarEmail(email.value) && pais.value != '' && estado.value != '' && cidade.value != '' && !musicas.some(array => { return array.length === 0 }) && !interpretes.some(array => { return array.length === 0 })){
+      let pedidoAtual = new Pedido(data, radios[variavelGlobal.indexRadio].nome, nome.value, idade.value, email.value, pais.value, estado.value, cidade.value)
       nome.value = ''
       idade.value = ''
       email.value = ''
@@ -132,4 +130,9 @@ function pedidoTrancado(){
   span.innerHTML = ''
   span.textContent = 'O pedido de hoje já foi feito espere até amanhã para fazer outro.'
   return span
+}
+
+function validarEmail(email) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
 }

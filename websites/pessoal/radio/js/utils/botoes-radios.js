@@ -1,30 +1,31 @@
-import { dados } from "../mvc/control/dados.js";
+import { mostrarSite } from "../utils/mostrarSite.js";
+import { radios } from "../mvc/control/radios.js";
 import { programacao } from "../mvc/control/programacao.js";
 import { parada } from "../mvc/control/parada.js";
 import { posts } from "../mvc/control/posts.js";
 import { variavelGlobal } from "../mvc/control/global.js";
-import { mostrarPlayer } from "./player.js";
-import { atualizarDados } from "../mvc/view/dados.js";
-import { mostrarParada } from "../mvc/view/parada.js";
-import { mostrarProgramacao } from "../mvc/view/programacao.js";
-import { mostrarPosts } from "../mvc/view/posts.js";
+import { links } from "../mvc/control/links.js"
 
 export function escolherRadio(){
     const botoes = document.querySelectorAll('.button-radios')
     botoes.forEach( botao => {
         botao.addEventListener('click', (e) => {
-            dados.forEach( (dado, index) => {
-                variavelGlobal.indexRadio = index
+            radios.forEach( (dado, index) => {
                 if(e.target.alt == dado.nome){
-                    variavelGlobal.conta = 3
-                    mostrarPlayer(programacao[variavelGlobal.indexRadio])
-                    atualizarDados(dados[variavelGlobal.indexRadio])
-                    mostrarParada(parada[variavelGlobal.indexRadio])
-                    mostrarProgramacao(programacao[variavelGlobal.indexRadio])
-                    mostrarPosts(posts, dados[variavelGlobal.indexRadio].nome)
-                    document.getElementById('coracao-cheio').style.display = 'none'
+                    variavelGlobal.indexRadio = index
+                    variavelGlobal.conta = 2
+                    links.splice(0, links.length)
+                    deletarId()
+                    mostrarSite(radios[variavelGlobal.indexRadio], programacao, radios, parada, posts, variavelGlobal)
                 }
             })
         })
     })
+}
+
+function deletarId(){
+    const ids = ["player","navegacao","radios","redes-sociais","parada","programacao","programa","locutor","posts","section-post","post","formulario","pedido","footer"]
+    for( let i = 0; i < ids.length; i++){
+        document.getElementById(ids[i]).innerHTML = ''
+    }
 }
