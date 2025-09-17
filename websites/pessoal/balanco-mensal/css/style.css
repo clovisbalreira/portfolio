@@ -1,0 +1,179 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body div{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 1rem;
+    gap: 1rem;
+}
+
+body div h1{
+    text-align: center;
+}
+
+#ativo-passivo, #balanco{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#ativo-passivo table, #balanco table{
+    width: 100%;
+}
+
+#limpar{
+    background-color: red;
+    width: 100%;
+    border: none;
+    padding: .5rem;
+}
+
+/* TABLE */
+table{
+    border-collapse: collapse;
+}
+
+#ativo-passivo table thead tr th{
+    color: black;
+    background-color: transparent;
+    padding: .5rem;
+}
+
+#ativo-passivo table tbody tr td{
+    background-color: white;
+    border: 1px solid black;
+}
+
+#ativo-passivo table tbody tr td:has(input){
+    padding: .5rem;
+}
+
+#ativo-passivo table tbody tr td:not(:has(input, select)){
+    padding-inline: .5rem;
+}
+
+#ativo-passivo table:nth-child(1) thead tr th{
+    color: white;
+    background-color: black;
+}
+
+#ativo-passivo table tbody tr th:nth-child(2){
+    width: 80px;
+    text-align: center;
+}
+
+#ativo-passivo table tbody tr td input[type='text'], #ativo-passivo table tbody tr td input[type='number']{
+    width: 100%;
+    border: 0;
+    font-size: 1rem;
+}
+
+#ativo-passivo table tbody tr .valor{
+    padding: 0;
+    width: 100px;
+}
+
+#ativo-passivo table tbody tr .valor input[type='number']{
+    background-color:  rgb(102, 102, 243);
+    width: 100%;
+    padding: .5rem;
+    border: 0;
+    text-align: end;
+    font-size: 1rem;
+}
+
+#ativo-passivo table tbody tr td:has(input[type='text']), #ativo-passivo table tbody tr td:has(input[type='number']){
+    padding: 0;
+}
+
+#ativo-passivo table tbody tr td input[type='text'], #ativo-passivo table tbody tr td input[type='number'], #ativo-passivo table tbody tr td select {
+    width: 100%;
+    padding: .5rem;
+    border: 0;
+    box-sizing: border-box;
+}
+
+#ativo-passivo table tbody tr td:has(select){
+    width: 150px;
+}
+
+.salvar{
+    width: 101%;
+    padding: .8rem;
+    border: none;
+    box-sizing: border-box;
+    background-color: green;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#ativo-passivo table:nth-child(2) tbody tr td:nth-child(2), #ativo-passivo table:nth-child(3) tbody tr td:nth-child(2){
+    width: 150px;
+}
+
+input[type='checkbox']{
+    margin-block: .5rem;
+    margin-left: .2rem;
+}
+
+#ativo-passivo table tfoot tr th{
+    background-color: orange;
+    border: 1px solid black;
+    padding: .5rem;
+}
+
+#ativo-passivo table:nth-last-child(1) thead tr th{
+    text-align: left;
+}
+
+#ativo-passivo table:nth-last-child(1) tbody tr th{
+    border: 1px solid black;
+    padding: .5rem;
+}
+
+#ativo-passivo table:nth-last-child(1) tbody tr:nth-child(1){
+    background-color: orange;
+}
+
+#balanco table thead tr th, #balanco table tbody tr td, #balanco table tfoot tr td{
+    border: 1px solid black;
+    padding: .5rem;
+}
+
+#balanco table thead tr th{
+    background-color: purple;
+}
+
+#balanco table tbody tr td:has(input){
+    padding: 0;
+}
+
+#balanco table tbody tr td input{
+    padding: .5rem;
+    width: 100%;
+    text-align: right;
+    font-size: 1rem;
+}
+
+#balanco table tfoot tr td{
+    background-color: orange;
+}
+
+#balanco table tbody tr td:nth-child(2), #balanco table tfoot tr td:nth-child(2){
+    text-align: center;
+}
+
+#balanco table tbody tr td:nth-child(3), #balanco table tfoot tr td:nth-child(3){
+    text-align: right;
+}
+
+@media (max-width : 800px) {
+    body div{
+        grid-template-columns: 1fr;
+    }
+}
+
