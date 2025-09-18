@@ -156,6 +156,7 @@ main section button:hover img{
 @media (max-width: 440px) {
     main{
         display: flex;
+        flex-direction: column;
         justify-content: center;
     }
 
