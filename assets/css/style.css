@@ -41,12 +41,15 @@ header{
     align-items: center;
 }
 
-.redes-sociais a img{
-    width: 3rem;
+.redes-sociais a i{
+    font-size: 2rem;
+    color: white;
+    transition: .5s;
 }
 
-.redes-sociais a img:hover{
-    transform: scale(1.4)
+.redes-sociais a i:hover{
+    transform: scale(1.4);
+    color: black;
 }
 
 main{

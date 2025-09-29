@@ -1,4 +1,4 @@
-class instrutor{
+export class Instrutor{
     constructor(id, nome, imagem, status){
         this.id = id, 
         this.nome = nome, 

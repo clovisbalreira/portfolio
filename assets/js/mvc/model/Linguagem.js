@@ -1,4 +1,4 @@
-class linguagem{
+export class Linguagem{
     constructor(id, nome, imagem, status){ 
         this.id = id, 
         this.nome = nome,

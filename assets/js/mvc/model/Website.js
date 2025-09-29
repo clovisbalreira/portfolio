@@ -1,4 +1,4 @@
-class website{
+export class Website{
     constructor(nome, descricao, linguagem, instrutor, escola, site, github){
         this.nome = nome, 
         this.descricao = descricao, 

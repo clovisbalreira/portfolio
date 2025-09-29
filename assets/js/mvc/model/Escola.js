@@ -1,4 +1,4 @@
-class escola{
+export class Escola{
     constructor(id, nome, imagem, status){
         this.id = id,  
         this.nome = nome, 

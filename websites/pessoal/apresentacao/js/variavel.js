@@ -17,7 +17,7 @@ let curriculo = {
         espanhol : { titulo : 'Datos Personales' },   
         ingles : { titulo : 'Personal Data' },   
         dados : {
-            linkedin : { nome : 'Linkedin', dado : 'https://www.linkedin.com/in/clovis-balreira-rodrigues/' },
+            linkedin : { nome : 'Linkedin', dado : 'https://www.linkedin.com/in/clovis-balreira-rodrigues-dev/' },
             github : { nome : 'GitHub', dado : 'https://github.com/clovisbalreira' },
         },   
     },
@@ -239,7 +239,7 @@ let curriculo = {
                 ingles : { nome : 'Vocational Training in Web Design' },   
                 instituicoes : [
                     {portugues : [ 
-                        { nome : 'La Salle', descricao : 'tecnicas de ilustração digital, produção gráfica, web design e design gráfico. (2011)' }
+                        { nome : 'La Salle', descricao : 'Tecnicas de ilustração digital, produção gráfica, web design e design gráfico. (2011)' }
                     ]},   
                     {espanhol : [ 
                         { nome : 'La Salle', descricao : 'tecnicas de ilustración digital, producción gráfica, diseño web y diseño gráfico. (2011)' }
