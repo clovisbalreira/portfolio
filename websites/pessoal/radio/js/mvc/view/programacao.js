@@ -36,7 +36,7 @@ function escolherDia(programacao){
         mostrarProgramas(programacao, new Date().getDay())
         lista.addEventListener('click', (e) => { 
             listas.forEach( l => {
-                l.style.backgroundColor = 'var(--fundo-dias)'
+                l.style.backgroundColor = 'var(--fundo-principal)'
             })
             mostrarProgramas(programacao, parseInt(e.target.dataset.dia))
         })
