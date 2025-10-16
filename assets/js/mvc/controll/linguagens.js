@@ -1,4 +1,4 @@
-import { Linguagem } from "../model/linguagem.js";
+import { Linguagem } from "../model/Linguagem.js";
 
 export let linguagens = [
     new Linguagem('html-css','HTML e CSS','html_css.png',true),
