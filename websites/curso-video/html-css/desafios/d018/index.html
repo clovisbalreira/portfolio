@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="./imagens/icones/favicon.svg" type="image/svg">
     <title>Portfólio Clóvis Balreira Rodrigues</title>
     <link rel="stylesheet" href="./estilos/style.css">
-    <script defer src="./scripts/script.js"></script>
+    <script type="module" src="./js/main.js"></script>
     <script defer src="https://kit.fontawesome.com/e02fa1058f.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -14,33 +14,28 @@
         <nav id="menu">
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="#video" class="link">
                         <i class="fa-solid fa-house"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#skills" class="link">
                         <i class="fa-solid fa-brain"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#formacao" class="link">
                         <i class="fa-solid fa-graduation-cap"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#projetos" class="link">
                         <i class="fa-sharp fa-solid fa-trowel-bricks"></i>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#ficha" id="botao-tema" class="link">
                         <i class="fa-solid fa-moon"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-sun"></i>
                     </a>
                 </li>
             </ul>
@@ -94,9 +89,13 @@
                     <i class="fa-solid fa-handshake"></i>
                     Projetos
                 </h2>
+                <div id="projeto-container">
+                </div>
             </article>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <p>Portfólio desenvolvido por <a href="https://www.cursoemvideo.com" target="_blank" rel="nofollow">Curso em Vídeo</a> em 2025</p>
+    </footer>
 </body>
 </html>

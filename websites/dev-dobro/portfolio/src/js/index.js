@@ -5,7 +5,7 @@ const websites = [
   {nome: 'Pokemon', caminho: 'pokemon'},
   {nome: 'Super Mario', caminho: 'super-mario'},
   {nome: 'The Last Us', caminho: 'the-last-us'},
-  {nome: 'X-men', caminho: 'x-men'},
+  {nome: 'X-Men', caminho: 'x-men'},
   {nome: 'X-Devs', caminho: 'x-devs'},
   {nome: 'Casa do Dragão', caminho: 'casa-dragao'},
   {nome: 'Poke Devs', caminho: 'pokedevs'},
