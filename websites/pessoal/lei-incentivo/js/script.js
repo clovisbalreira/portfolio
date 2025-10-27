@@ -282,10 +282,14 @@ async function modalFornecedor(url){
         if(produto.valor_pagamento != '') ul.appendChild(criarLi('Valor pagamento', valorMonetario(produto.valor_pagamento)))
         if(produto.tipo_forma_pagamento != '') ul.appendChild(criarLi('Forma pagamento', produto.tipo_forma_pagamento))
         if(produto.tipo_documento != '') ul.appendChild(criarLi('Tipo documento', produto.tipo_documento))
+        let hr = document.createElement('hr')
+        ul.appendChild(hr)
       })
     } else {
       console.error('Nenhum produto encontrado.')
     }
+    let valorTotal = dados._embedded.produtos.reduce( (total, produto) => total + produto.valor_pagamento, 0)
+    ul.appendChild(criarLi('Valor', valorMonetario(valorTotal)))
     modal.appendChild(ul)
   } catch (erro) {
     console.error('Erro ao mostrar produtos:', erro)
@@ -320,7 +324,7 @@ async function modalIncentivador(url){
   modal.showModal()
 }
 
-async function modalProjeto(url){Me 
+async function modalProjeto(url){ 
   const modal = document.querySelector('dialog');
   modal.innerHTML = ''
   modal.appendChild(criarButaoFechar(modal))
