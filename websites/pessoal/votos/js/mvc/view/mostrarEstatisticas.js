@@ -49,6 +49,7 @@ function mostrarEstatistica(idSelecionado, votoUsuario, lei, id, combinacoes, es
 
 function mostrarConbinacoes(combinacoes, escolhaUsuario){
     let section = document.getElementById('combinacoes')
+    section.style.display = 'flex'
     let div = document.createElement('div')
     div.appendChild(mostrarCombinadoDeputados(combinacoes))
     div.appendChild(mostrarCombinadoPartidos(escolhaUsuario.partidos))
