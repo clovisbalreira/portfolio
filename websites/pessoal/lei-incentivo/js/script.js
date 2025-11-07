@@ -358,8 +358,6 @@ function pegarTrs(){
   let trs = document.querySelectorAll('#tabela tbody tr')
   trs.forEach( tr => {
     tr.addEventListener('click', (e) => {
-      console.log(e.currentTarget.dataset.id)
-      console.log(e.currentTarget.dataset.tipo)
       if(e.currentTarget.dataset.tipo == 'proponentes')modalProponente(e.currentTarget.dataset.id)  
       if(e.currentTarget.dataset.tipo == 'propostas') modalProposta(e.currentTarget.dataset.id)  
       if(e.currentTarget.dataset.tipo == 'fornecedores') modalFornecedor(e.currentTarget.dataset.id)  

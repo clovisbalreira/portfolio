@@ -1,0 +1,31 @@
+import { Estado } from "../model/Estados.js";
+
+export const estados = [
+    new Estado("Acre","AC"),
+    new Estado("Alagoas","AL"),
+    new Estado("Amapá","AP"),
+    new Estado("Amazonas","AM"),
+    new Estado("Bahia","BA"),
+    new Estado("Ceará","CE"),
+    new Estado("Distrito Federal","DF"),
+    new Estado("Espírito Santo","ES"),
+    new Estado("Goiás","GO"),
+    new Estado("Maranhão","MA"),
+    new Estado("Mato Grosso","MT"),
+    new Estado("Mato Grosso do Sul","MS"),
+    new Estado("Minas Gerais","MG"),
+    new Estado("Pará","PA"),
+    new Estado("Paraíba","PB"),
+    new Estado("Paraná","PR"),
+    new Estado("Pernambuco","PE"),
+    new Estado("Piauí","PI"),
+    new Estado("Rio de Janeiro","RJ"),
+    new Estado("Rio Grande do Norte","RN"),
+    new Estado("Rio Grande do Sul","RS"),
+    new Estado("Rondônia","RO"),
+    new Estado("Roraima","RR"),
+    new Estado("Santa Catarina","SC"),
+    new Estado("São Paulo","SP"),
+    new Estado("Sergipe","SE"),
+    new Estado("Tocantins","TO")
+];

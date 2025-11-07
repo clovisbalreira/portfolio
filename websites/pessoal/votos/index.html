@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Votos: Análise Parlamentar Personalizada</title>
+    <script type="module" src="./js/main.js"></script>
+    <link rel="stylesheet" href="./css/estilos.css">
+    <script defer src="https://kit.fontawesome.com/e02fa1058f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <header>
+        <div>
+            <h1>Votos</h1>
+            <div>
+                <p>Listando alguns dos projetos disponíveis no arquivo público.</p>
+                <a href="https://dadosabertos.camara.leg.br/" target="_blank">https://dadosabertos.camara.leg.br/</a>
+            </div>
+        </div>
+        <div id="configuracao"></div>
+    </header>
+    <main>
+        <dialog></dialog>
+        <div id="deputados-partidos">
+            <section id="deputados"></section>
+            <section id="partidos"></section>
+        </div>
+        <section id="leis"></section>
+        <section id="estatisticas"></section>
+        <section id="combinacoes"></section>
+    </main>
 </body>
 </html>

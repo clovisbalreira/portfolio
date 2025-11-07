@@ -188,7 +188,7 @@ function mostrarTodosSelects(tipos, ano, pais, moeda, valor){
     mostrarSelect('ano', ano)
     mostrarSelect('moeda', moeda)
     mostrarSelect('valor', valor)
-    mostrarSelectUnicos('unicos', filtroUnico())
+    mostrarSelectUnicos('unicos', removerRepetidosContarOrdenar())
 }
 
 function mostrarSelectUnicos(id, dados){
@@ -258,31 +258,43 @@ function filtros(selectTipos, selectPaises, selectAno, selectMoeda, selectValor,
     return array
 }
 
-function filtroUnico(){
+function removerRepetidosContar() {
+    const contagem = {};
 
-    let array = []
-    array = dinheiros
-    let unicos = [];
-    const seen = new Set();
+    dinheiros.forEach(item => {
+        const chave = `${item.ano}-${item.tipo}-${item.nome}-${item.pais}-${item.valor}`;
 
-    array.forEach(item => {
-    const chave = `${item.ano}-${item.tipo}-${item.nome}-${item.pais}-${item.valor}`;
-    if (!seen.has(chave)) {
-        seen.add(chave);
-        unicos.push(item);
-    }
+        if (!contagem[chave]) {
+            contagem[chave] = { ...item, quantidade: 0 }; // cria o item
+        }
+        contagem[chave].quantidade++; // incrementa
     });
 
-    unicos.sort( (a, b) => {
-        if(parseInt(a.ano.slice(0, 4)) == parseInt(b.ano.slice(0, 4))){
-            return parseFloat(a.valor.slice(0, 4)) - parseFloat(b.valor.slice(0, 4))
-        }else{
-            return parseInt(a.ano.slice(0, 4)) - parseInt(b.ano.slice(0, 4))
-        }
-    })
-
-    return unicos
+    // Converte de objeto para array
+    return Object.values(contagem);
 }
+
+function removerRepetidosContarOrdenar() {
+    const lista = removerRepetidosContar();
+
+    lista.sort((a, b) => {
+        const anoA = parseInt(a.ano);
+        const anoB = parseInt(b.ano);
+
+        if (anoA !== anoB) return anoA - anoB;
+
+        const valorA = parseFloat(a.valor.replace(',', '.'));
+        const valorB = parseFloat(b.valor.replace(',', '.'));
+        return valorA - valorB;
+    });
+
+    return lista;
+}
+
+
+removerRepetidosContarOrdenar().forEach( money => {
+    console.log(`${money.ano} - ${money.nome} - ${money.valor} - ${money.tipo} - Quantidade: ${money.quantidade}`)
+})
 
 function selects(){
     valorSelect('tipos')

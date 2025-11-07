@@ -477,8 +477,8 @@ export const campeoes = [
         { colocacao : '20',  clube: clubes[5] },
     ]),
     new Campeao(2025, campeonatos[2], [
-        { colocacao : 'Campeão',  clube: '' },
-        { colocacao : 'Vice',  clube: [clubes[35],clubes[53]] },
+        { colocacao : 'Campeão',  clube: clubes[53] },
+        { colocacao : 'Vice',  clube: clubes[35] },
         { colocacao : 'Semifinal',  clube: [clubes[138],clubes[6],clubes[62],clubes[55],clubes[152],clubes[22]] },
         { colocacao : '9',  clube: clubes[220] },
         { colocacao : '10',  clube: clubes[4] },

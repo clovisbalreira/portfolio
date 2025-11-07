@@ -1,0 +1,564 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* header */
+header{
+    background-color: rgba(0, 0, 0, 0.089);
+    margin: .5rem;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: start;
+    gap: 1rem;
+}
+
+header > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header > div > div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+header > div > div a{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+header > div > div a:hover{
+    text-decoration: underline;
+}
+
+header #configuracao #configuracao-div{
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+header #configuracao #configuracao-div p{
+    font-size: 1.5rem;
+}
+
+header #configuracao{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+header #configuracao #div-inputs{
+    flex-direction: column;
+}
+
+header #configuracao #div-inputs div{
+    width: 200px;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header #configuracao:hover #div-inputs div{
+    display: flex;
+}
+
+header #configuracao #div-inputs div label{
+    font-size: 1.5rem;
+}
+
+header #configuracao #div-inputs div input{
+    width: 80px;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    text-align: right;
+}
+
+header > div:nth-child(3){
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+header > div:nth-child(3) label{
+    font-size: 1.5rem;
+}
+
+header > div:nth-child(3) select{
+    font-size: 1rem;
+    width: 80px;
+    border: none;
+    padding: 0.2rem 1rem;
+    border-radius: 15px;
+}
+
+/* main */
+main > #deputados-partidos{
+    background-color: rgba(0, 0, 0, 0.089);
+    margin: .5rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* section deputados */
+#deputados{
+    width: 45%;
+    margin: 1rem;
+}
+
+#deputados p{
+    width: 100%;
+    background-color: red;
+    display: inline-block;
+    margin: 4rem 0;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.397);
+}
+
+#deputados span{
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+  display: block;
+}
+
+#deputados div{
+    padding: 0.5rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-block: .5rem;
+}
+
+#deputados div label{
+    font-size: 1.5rem;
+}
+
+#deputados div select{
+    width: 170px;
+    border: none;
+    padding-inline: 1rem;
+    border-radius: 15px;
+}
+
+#deputados table{
+    width: 100%;
+}
+
+#deputados table tbody tr td{
+    border: 1px solid black;
+}
+
+#deputados table tbody tr td:nth-child(odd){
+    border-right-color: transparent ;
+}
+
+#deputados table tbody tr td img{
+    width: 40px;
+    padding: 0;
+}
+
+/* section partidos */
+#partidos{
+    width: 45%;
+    margin: 1rem;
+}
+
+#partidos > p{
+    width: 100%;
+    background-color: red;
+    display: inline-block;
+    margin: 4rem 0;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.397);
+}
+
+#partidos span{
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+  display: block;
+}
+
+#partidos table{
+    width: 100%;
+    margin-top: 3.6rem;
+}
+
+#partidos table tbody tr td{
+    border: 1px solid black;
+}
+
+#partidos table tbody tr td:nth-child(2){
+    border-right-color: transparent;
+}
+
+#partidos table tbody tr td img{
+    width: 60px;
+}
+
+/* model */
+dialog{
+    margin: auto;
+    padding: 1rem;
+}
+
+dialog[open]{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, max-width);
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+dialog[open] img{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 100%;
+    min-width: 100px;
+    margin-top: 1rem;
+}
+
+dialog[open] > div > p{
+    font-size: 3rem;   
+    text-align: center;
+    text-shadow: 2px 2px 3px black;
+}
+
+dialog[open] div, dialog[open] ul{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+dialog[open] ul{
+    list-style: none;
+}
+
+dialog[open] ul li{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+dialog[open] ul li div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+dialog[open] ul li img{
+    width: 50px;
+}
+
+dialog[open] #div-button{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+dialog[open] #div-button button{
+    background-color: green;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    transition: all 1s ease;
+}
+
+dialog[open] #div-button button:hover{
+    background-color: rgb(17, 158, 17);
+}
+
+/* Leis */
+#leis p{
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+}
+
+#leis div{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#leis div ul{
+    list-style: none;
+}
+
+#leis div ul li{
+    display: flex;
+    gap: 1rem;
+}
+
+#leis div ul li p:nth-child(1){
+    font-weight: bolder;
+}
+
+#leis div ul li:nth-child(1){
+    justify-content: space-between;
+}
+
+#leis #div-colar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#leis #div-colar p{
+    font-weight: bolder;
+}
+
+#leis #div-colar i{
+    font-size: 2rem;
+}
+
+#leis div div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#leis div div button{
+    padding: .5rem 1rem;
+    border: none;
+    background-color: lightgreen;
+    border-radius: 10px;
+    transition: all 1s ease;
+}
+
+#leis div div button:hover{
+    background-color:green;
+}
+
+/* section estatisticas */
+#estatisticas{
+    margin: .5rem;
+}
+
+/* menu estatisticas */
+#estatisticas > div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .1rem;
+}
+
+#estatisticas p{
+    background-color: #F5F5F5;
+    padding: 1rem;
+    border-top-right-radius: 15px;
+    cursor: pointer;
+}
+
+.estatisticas-selecionado{
+    background-color: rgba(0, 0, 0, 0.089) !important;
+}
+
+/* corpo estatisticas */
+#corpo{
+    background-color: rgba(0, 0, 0, 0.089);
+    padding: 1rem .5rem;
+}
+
+#corpo > div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+/* combinacoes estatisticas */
+#combinacoes{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.089);
+    padding: 1rem .5rem;
+    margin: .5rem;
+}
+
+#combinacoes div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    align-items: flex-start;
+}
+
+#combinacoes div table{
+    width: 32%;
+}
+
+/* tabelas */
+table{
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 48%;
+}
+
+table thead tr{
+    background-color: #F5F5F5;
+    border: 1px solid black;
+}
+
+table thead tr:nth-child(odd){
+    background-color: #FFFFFF;
+}
+
+table thead tr th{
+    text-align: left;
+    vertical-align: top;
+    padding: 1rem;
+    background-color: #1E88E5;
+    border: 1px solid black;
+}
+
+table thead tr td{
+    padding: 1rem;
+}
+
+table tbody tr{
+    background-color: #F5F5F5;
+    border: 1px solid black;
+}
+
+table tbody tr:nth-child(odd){
+    background-color: #FFFFFF;
+}
+
+table tbody tr th{
+    background-color: #1e88e5a6;
+}
+
+table tbody tr th, table tbody tr td{
+    padding: 1rem;
+}
+
+table tbody tr td:nth-child(2){
+    text-align: right;
+}
+
+#btn-copiar, #btn-atualizar{
+    cursor: pointer;
+}
+
+#msg-copiado{
+    text-align: right;
+    color: green;
+}
+
+.flex{
+    display: flex;
+}
+
+.none{
+    display: none !important;
+}
+
+.spinner {
+  border: 6px solid rgba(0, 0, 0, 0.1);
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: girar 1s linear infinite;
+  margin: 1rem auto;
+}
+
+@keyframes girar {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 1233px) {
+    #partidos table{
+        margin-top: 7.3rem;
+    }
+
+    #deputados > p, #partidos > p{
+        margin: 7rem 0;
+    }
+}
+
+@media (max-width: 1127px) {
+    #combinacoes div table{
+        width: 100%;
+    }
+}
+
+@media (max-width: 1210px) {
+    #deputados, #partidos{
+        width: 100%;
+    }
+
+    #partidos table{
+        margin-top: 0;
+    }
+
+    #deputados > p, #partidos > p{
+        margin-block: 0;
+    }
+}
+
+@media (max-width: 784px) {
+    table{
+        width: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    #deputados table tbody tr td:nth-child(odd){
+        width: 0%;
+        padding: 0;
+    }
+
+    #deputados table tbody tr td img{
+        width: 0%;
+    }
+
+    #partidos table tbody tr td:nth-child(2){
+        width: 0%;
+        padding: 0;
+    }
+
+    #partidos table tbody tr td img{
+        width: 0%;
+    }
+}
+
+@media (max-width: 340px) {
+    dialog[open]{
+        display: flex;
+        flex-direction: column;
+    }
+
+    dialog[open] ul li{
+        flex-wrap: wrap;
+    }
+}
