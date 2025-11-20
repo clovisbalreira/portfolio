@@ -6,7 +6,7 @@ export function mostrarCursos(){
   let divFormacaoContainer = document.getElementById('formacao-container')
   cursos.forEach( curso => {
     let a = criarElemento('a', 'link')
-    a.href = curso.link
+    //a.href = curso.link
     a.target = '_blank'
     let divCurso = criarElemento('div', 'curso')
     let pTitulacao = criarElemento('p', 'periodo')
