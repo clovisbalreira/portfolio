@@ -123,7 +123,7 @@ article h2 {
     color: var(--primary-color); /* Cor do texto */
 }
 
-article p, article span {
+article p {
     margin: 0.5rem 0; /* Margem superior e inferior */
     line-height: 1.6; /* Altura da linha para melhor legibilidade */
     font-size: 1rem; /* Tamanho da fonte */
@@ -137,7 +137,6 @@ article p strong {
 }
 
 article a {
-    display: block;
     color: var(--primary-color); /* Cor do link */
     text-decoration: none; /* Remove o sublinhado padrão */
     font-weight: 200; /* Peso da fonte */

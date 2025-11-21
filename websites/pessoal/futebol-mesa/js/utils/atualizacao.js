@@ -1517,6 +1517,16 @@ for(let i = 0; i < 16; i++ ){
  */
 
 
+mostrarTabela(temporadas[0])
+function mostrarTabela(temporada){
+    console.log(temporada.tabela.nome)
+    temporada.tabela.tabela.forEach( temporada => {
+        console.log(temporada.fase, temporada.turno)
+        temporada.tabela.forEach( clube => {
+            console.log(clube.tecnico.participante.nome, 'PG', clube.pg, 'j', clube.j, 'V', clube.v, 'E', clube.e, 'D', clube.d, 'GP', clube.gp, 'GC', clube.gc, 'SG', clube.sg, /*'PGP', clube.pgp, 'VP', clube.vp, 'EP', clube.ep, 'DP', clube.dp, 'GPP', clube.gpp, 'GCP', clube.gcp, 'SGP', clube.sgp, 'PGPT', clube.pgpt, 'VPT', clube.vpt, 'DPT', clube.dpt, 'GPPT', clube.gppt, 'GCPT', clube.gcpt, 'SGPT', clube.sgpt*/)
+        })
+    })
+}
 
 
 function mostrarTemporadas(){

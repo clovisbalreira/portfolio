@@ -17,12 +17,14 @@ async function iniciarBusca(){
         dado.nome.toLowerCase().includes(termoBusca) ||
         dado.descricao.toLowerCase().includes(termoBusca)
     )
+    console.log(dadosFiltrados)
     renderizarCards(dadosFiltrados)
 }
 
 function renderizarCards(dados){
     cardContainer.innerHTML = ""
     for(let dado of dados){
+        console.log(dado)
         let article = document.createElement('article')
         article.classList.add('card')
         let h2 = document.createElement('h2')
@@ -34,11 +36,7 @@ function renderizarCards(dados){
         let pDescricao = document.createElement('p')
         pDescricao.textContent = dado.descricao
         article.appendChild(pDescricao)
-        dado.tags.forEach( tag => {
-            let span = document.createElement('span')
-            span.textContent = `#${tag} `
-            article.appendChild(span)
-        })
+        
         let a = document.createElement('a')
         a.href = dado.link
         a.target = '_blank'
