@@ -11,6 +11,7 @@ export function mostrarSocios(socio, campeonatos, temporadas, variavelGlobal, so
     section.appendChild(apresentacao(socio))
     section.appendChild(dadosTitulos(socio, campeonatos, temporadas))
     section.appendChild(colocacaoAssociados(socio, temporadas, campeonatos))
+    let classesColocacao = document.ATTRIBUTE_NODE
     estatisticas(socio.nome, campeonatos, variavelGlobal, socios, temporadas)
 }
 
@@ -119,20 +120,26 @@ function Colocacao(associados, naoAssociados, classe, campeonatos, socio){
 }
 
 function colocacoesCampeonato(associados, campeonatos, titulo, condicao, socio){
+    let contem = ''
     let div = document.createElement('div')
     div.classList.add('div-associacoes')
-    let contem = true
     let divCampeoesTabela = document.createElement('div')
     divCampeoesTabela.classList.add('div-campeoes-tabela')
     divCampeoesTabela.appendChild(criarTag('h3',`${condicao ? `Associado (${titulo})` : `Não Associado (${titulo})`}`));
     campeonatos.forEach( campeonato => {
+        contem = true
         let filtrarCampeonato = associados.filter( associado => associado.campeonato == campeonato.nome) 
         if(filtrarCampeonato.length > 0){
             divCampeoesTabela.appendChild(tabelaColocacao(campeonato, socio, filtrarCampeonato));
-            div.appendChild(divCampeoesTabela)
+            div.appendChild(divCampeoesTabela)  
+        }else{
             contem = false
         }
     })
+    if(!contem){
+        divCampeoesTabela.appendChild(tabelaColocacaoVazio());
+        div.appendChild(divCampeoesTabela)  
+    }
     return div
 }
 
@@ -143,6 +150,13 @@ function tabelaColocacao(campeonato, socio, filtrarCampeonato){
     div.appendChild(criarTag('h4', `${campeonato.nome} ( ${filtrarCampeonato.length} )`))
     div.appendChild(criarTabela(filterTabela, '', ''))
     div.appendChild(criarUl(filtrarCampeonato))
+    return div
+}
+
+function tabelaColocacaoVazio(){
+    let div = document.createElement('div')
+    div.classList.add('div-tabela-colocacao')
+    div.appendChild(criarTag('h4', 'Não contém dados.'))
     return div
 }
 
