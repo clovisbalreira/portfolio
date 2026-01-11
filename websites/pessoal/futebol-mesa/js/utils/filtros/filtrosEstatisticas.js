@@ -16,8 +16,8 @@ import { mediaGolsContra } from "../estatisticas/mediaGolsContra.js"
 import { criarTag } from "../tags/criarTag.js"
 
 export function filtrosEstatisticas(elemento, jogos, tabelas, socio, variavelGlobal, socios, campeonatos, temporadas){
-    //elemento.appendChild(menus(jogos, socio, variavelGlobal))
-    //elemento.appendChild(tabela([tabelas]))
+    elemento.appendChild(menus(jogos, socio, variavelGlobal))
+    elemento.appendChild(tabela([tabelas]))
     const resultado = { jogos: jogos }
     let dados = [
             { titulo: 'Média de gols', dado: mediaGolsIndividual(tabelas, false, true)},
@@ -27,7 +27,7 @@ export function filtrosEstatisticas(elemento, jogos, tabelas, socio, variavelGlo
             { titulo: 'Jogo com maior diferença de gols pro', dado: jogoDiferencaGolsPro(resultado, false, true, socio)},
             { titulo: 'Jogo com maior diferença de gols Contra', dado: jogoDiferencaGolsContra(resultado, false, true, socio)},
         ]
-    //elemento.appendChild(listas(dados, { tag: 'h2', nome: 'Dados'}))
+    elemento.appendChild(listas(dados, { tag: 'h2', nome: 'Dados'}))
     elemento.appendChild(todasPartidas(jogos))
     principal.appendChild(elemento)
     filtrosMenusJogos(jogos, socio, variavelGlobal, socios, campeonatos, temporadas)

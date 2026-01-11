@@ -8,9 +8,9 @@ import { criarUl } from "../../utils/tags/criarUl.js"
 export function mostrarSocios(socio, campeonatos, temporadas, variavelGlobal, socios){
     let section = document.getElementById('principal')
     section.innerHTML = ''
-    //section.appendChild(apresentacao(socio))
-    //section.appendChild(dadosTitulos(socio, campeonatos, temporadas))
-    //section.appendChild(colocacaoAssociados(socio, temporadas, campeonatos))
+    section.appendChild(apresentacao(socio))
+    section.appendChild(dadosTitulos(socio, campeonatos, temporadas))
+    section.appendChild(colocacaoAssociados(socio, temporadas, campeonatos))
     estatisticas(socio.nome, campeonatos, variavelGlobal, socios, temporadas)
 }
 
