@@ -1,4 +1,4 @@
-import { criarLabelSelect } from "../criarLabelSelect.JS"
+import { criarLabelSelect } from "../criarLabelSelect.js"
 
 export function menuSocios(socios, associacao){
     let nav = document.createElement('nav')
