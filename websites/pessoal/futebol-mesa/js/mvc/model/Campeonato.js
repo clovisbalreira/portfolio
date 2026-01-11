@@ -4,5 +4,7 @@ export class Campeonato{
         this.tipo = tipo
         this.regra = regra
         this.associacao = associacao
+        this.jogos = []
+        this.tabelas = []
     }
 }

@@ -1,7 +1,7 @@
 import { Campeonato } from "../model/Campeonato.js";
 import { tipos } from "./tipos.js"
 import { regras } from "./regras.js";
-import { associacoes } from "./associacao.js";
+import { associacoes } from "./associacoes.js";
 
 export let campeonatos = [
     new Campeonato('Copa Rodrigues', tipos[0], regras[4], associacoes[0]),

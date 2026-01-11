@@ -1,18 +1,22 @@
 import { Regra } from "./Regra.js"
 
 export class Associacao{
-    constructor(nome, fundacao, sigla, logradouro, numero, cidade, estado, pais, cep, escudo){
+    constructor(nome, fundacao, sigla, logradouro, numero, bairro, cidade, estado, pais, cep, escudo, corPrimary, corSecundary, corHover){
         this.nome = nome
         this.fundacao = fundacao
         this.sigla = sigla
         this.logradouro = logradouro
         this.numero = numero
+        this.bairro = bairro
         this.cidade = cidade
         this.estado = estado
         this.pais = pais
         this.cep = cep
         this.escudo = escudo
-        this.status = false
+        this.corPrimary = corPrimary
+        this.corSecundary = corSecundary
+        this.corHover = corHover
+        this.status = true
         this.regras = []
     }
 
@@ -24,11 +28,7 @@ export class Associacao{
         })
     }
 
-    adicionarStatus(status){
-        status.forEach( nome => {
-            if(nome instanceof Regra){
-                this.status.push(nome)
-            }
-        })
+    adicionarStatus(){
+        this.status = false
     }
 }

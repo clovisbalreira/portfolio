@@ -8,6 +8,7 @@ export class Socio{
         this.nascimento = nascimento
         this.associacoes = []
         this.regras = []
+        this.status = false
     }
 
     adicionarRegra(nome){
@@ -19,6 +20,14 @@ export class Socio{
     adicionarAssociacao(nome){
         if(nome instanceof Associacao){
             this.associacoes.push(nome)
+        }
+    }
+
+    adicionarSocio(associacaoAtivo){
+        if(associacaoAtivo != false){
+            this.associacoes.forEach( associacao => {
+                if(associacaoAtivo.nome == associacao.nome) this.status = associacaoAtivo
+            })
         }
     }
 }
