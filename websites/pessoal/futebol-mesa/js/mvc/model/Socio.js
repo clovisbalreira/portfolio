@@ -23,11 +23,16 @@ export class Socio{
         }
     }
 
-    adicionarSocio(associacaoAtivo){
-        if(associacaoAtivo != false){
-            this.associacoes.forEach( associacao => {
-                if(associacaoAtivo.nome == associacao.nome) this.status = associacaoAtivo
-            })
+    adicionarSocio(associacao){
+    if (!(associacao instanceof Associacao)) return
+
+        const encontrada = this.associacoes.some(a => a.nome === associacao.nome)
+
+        if (encontrada && associacao.status) {
+            this.status = true
+        } else {
+            this.status = false
         }
     }
+
 }

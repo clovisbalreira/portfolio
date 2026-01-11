@@ -5,7 +5,12 @@ export function criarUl(dados){
     let ul = document.createElement('ul')
     ul.classList.add('ul-lista')
     dados.forEach( dado => {
-        if(dado.dado != ''){
+        if(dado.titulo == 'Associação'){
+            let li = document.createElement('li')
+            li.appendChild(criarTag('p', dado.titulo))
+            li.appendChild(criarTag('p', classificarTexto(dado.dado == true ? 'Ativa' : 'Desativada')))
+            ul.appendChild(li)
+        }else if(dado.dado != ''){
             let li = document.createElement('li')
             li.appendChild(criarTag('p', dado.titulo))
             li.appendChild(criarTag('p', classificarTexto(dado.dado)))
@@ -18,8 +23,6 @@ export function criarUl(dados){
 function classificarTexto(dado){
     if(typeof dado == 'string'){
         return dado
-    }else if(typeof dado == 'boolean'){
-        return dado == true ? 'Ativa' : 'Desativada'
     }else if(typeof dado == 'object'){
         if(dado.length == undefined) {
             return formatarData(dado)

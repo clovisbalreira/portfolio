@@ -18,7 +18,7 @@ function descricao(section, associacao){
         { titulo: 'Sigla', dado: associacao.sigla},
         { titulo: 'Fundação', dado: associacao.fundacao},
         { titulo: 'Logradouro', dado: associacao.logradouro},
-        { titulo: 'Numero', dado: associacao.numero},
+        { titulo: 'Número', dado: associacao.numero},
         { titulo: 'Cidade', dado: associacao.cidade},
         { titulo: 'Estado', dado: associacao.estado},
         { titulo: 'Pais', dado: associacao.pais},

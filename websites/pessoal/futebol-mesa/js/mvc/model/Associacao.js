@@ -28,7 +28,7 @@ export class Associacao{
         })
     }
 
-    adicionarStatus(){
+    desativar(){
         this.status = false
     }
 }

@@ -1,5 +1,5 @@
 export function formatarData(dado){
-    return `${adicionarZero(dado.getDate())}/${adicionarZero(dado.getMonth() + 1)}/${dado.getFullYear()}`
+    return dado == '' ? '' : `${adicionarZero(dado.getDate())}/${adicionarZero(dado.getMonth() + 1)}/${dado.getFullYear()} ${adicionarZero(dado.getHours())}:${adicionarZero(dado.getMinutes())}`
 }
 
 function adicionarZero(dado){

@@ -2,8 +2,6 @@ import { mudarStyleCor } from "./mudarStyleCor.js";
 import { menuAssociacao } from "./menus/menuAssociacao.js";
 import { mostrarHeader } from "./body/mostrarHeader.js";
 import { mostrarMain } from "./body/mostrarMain.js";
-import { mostrarDadosGerais } from "./body/mostrarDadosGerais.js";
-import { mostrarCampeonato } from "../mvc/view/mostrarCampeonato.js";
 import { mostrarFooter } from "./body/mostrarFooter.js";
 import { navegacaoSocioCampeonato } from "./navegacaoSocioCampeonato.js";
 
