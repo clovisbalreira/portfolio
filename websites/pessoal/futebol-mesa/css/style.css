@@ -418,6 +418,7 @@ main #principal #dados-titulos > div:nth-child(1){
     flex-direction: column;
     align-items: center;
     width: 49%;
+    gap: 1rem;
 }
 
 main #principal #dados-titulos #section-titulo{
@@ -428,6 +429,11 @@ main #principal #dados-titulos #section-titulo{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
+}
+
+main #principal #dados-titulos #section-titulo .div-titulo div{
+    gap: 1rem;
 }
 
 main #principal #dados-titulos #section-titulo .div-titulo{
@@ -532,6 +538,7 @@ main #principal #todas-estatisticas .tabela-filtros{
 
 main #principal #todas-estatisticas .tabela-filtros table{
     width: 100%;
+    margin-top: 1rem;
 }
 
 main #principal #todas-estatisticas .todas-partidas-filtros{

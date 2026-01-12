@@ -36,6 +36,7 @@ export function filtrosEstatisticas(elemento, jogos, tabelas, socio, variavelGlo
 function menus(jogos, socio, variavelGlobal){
     let div = document.createElement('div')
     div.classList.add('menus-filtros')
+    div.appendChild(criarTag('h2', 'Menus'))
     div.appendChild(menuJogosAdversarios(jogos, socio, variavelGlobal.ativoAdversario))
     div.appendChild(menuJogosCampeonato(jogos, variavelGlobal.ativoCampeonato))
     div.appendChild(menuJogosTemporada(jogos, variavelGlobal.ativoTemporada))
@@ -46,6 +47,7 @@ function menus(jogos, socio, variavelGlobal){
 function tabela(tabelas){
     let div = document.createElement('div')
     div.classList.add('tabela-filtros')
+    div.appendChild(criarTag('h2', 'Tabela'))
     div.appendChild(criarTabela(tabelas, false, false))
     return div
 }

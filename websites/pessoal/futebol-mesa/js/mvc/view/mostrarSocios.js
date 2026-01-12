@@ -36,7 +36,7 @@ function dados(section, socio){
         { titulo: 'Nome', dado: socio.nome},
         { titulo: 'Data de nascimento', dado: socio.nascimento},
         { titulo: 'Regras', dado: socio.regras},
-        { titulo: 'Associado', dado: socio.status.nome == undefined ? 'Sem associado' : socio.status.nome},
+        { titulo: 'Associado', dado: socio.status.nome == undefined ? 'Sem associação' : socio.status.nome},
     ]
     section.appendChild(listas(dados, { tag: 'h3', nome: 'Dados'}))
 }
@@ -121,22 +121,24 @@ function Colocacao(associados, naoAssociados, classe, campeonatos, socio){
 
 function colocacoesCampeonato(associados, campeonatos, titulo, condicao, socio){
     let contem = ''
+    let contemAssociacao = false
     let div = document.createElement('div')
     div.classList.add('div-associacoes')
     let divCampeoesTabela = document.createElement('div')
     divCampeoesTabela.classList.add('div-campeoes-tabela')
-    divCampeoesTabela.appendChild(criarTag('h3',`${condicao ? `Associado (${titulo})` : `Não Associado (${titulo})`}`));
+    divCampeoesTabela.appendChild(criarTag('h3',`${condicao ? `Associado ( ${titulo} )` : `Não Associado ( ${titulo} )`}`));
     campeonatos.forEach( campeonato => {
         contem = true
         let filtrarCampeonato = associados.filter( associado => associado.campeonato == campeonato.nome) 
         if(filtrarCampeonato.length > 0){
             divCampeoesTabela.appendChild(tabelaColocacao(campeonato, socio, filtrarCampeonato));
             div.appendChild(divCampeoesTabela)  
+            contemAssociacao = true
         }else{
             contem = false
         }
     })
-    if(!contem){
+    if(!contem && !contemAssociacao){
         divCampeoesTabela.appendChild(tabelaColocacaoVazio());
         div.appendChild(divCampeoesTabela)  
     }
