@@ -1,0 +1,4 @@
+export function adicionarJogosPlacar(temporadas, numero, jogo, fase, turno, rodada, mesa, data, participanteCasa, participanteFora, prorrogacao, pontosPenalti){
+    temporadas[numero].adicionarJogos(fase, turno, rodada, mesa, data, temporadas[numero].participantes[participanteCasa[0]], temporadas[numero].participantes[participanteFora[0]], prorrogacao, pontosPenalti)
+    temporadas[numero].adicionarPlacar(temporadas[numero].jogos[jogo], participanteCasa[1], participanteFora[1], participanteCasa[2], participanteFora[2], participanteCasa[3], participanteFora[3], participanteCasa[4], participanteFora[4], prorrogacao, pontosPenalti)
+}

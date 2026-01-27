@@ -18,6 +18,8 @@ export class Associacao{
         this.corHover = corHover
         this.status = true
         this.regras = []
+        this.jogos = []
+        this.tabelas = []
     }
 
     adicionarRegra(regra){

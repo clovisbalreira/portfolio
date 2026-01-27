@@ -1,22 +1,25 @@
 import { pegarDados } from "../pegarDados.js";
 
-export function menosEmpate(campeonato, tecnico, condicaoGols){
-    let menor = ''
-    let jogos = ''
+export function menosEmpate(campeonato, condicaoGols, mostrar){
+    let menor
+    let jogos
+    let tabelasValidas
     if(campeonato.tabelaClassificacaoGeral == undefined){
+        tabelasValidas = campeonato.tabelas.filter(tabela => tabela.j > 0)
         menor = Math.min(
-            ...campeonato.tabelas.map(
+            ...tabelasValidas.map(
                 tabela => tabela.e
             )
         );
-        jogos = campeonato.tabelas.filter(tabela => tabela.e === menor);
+        jogos = tabelasValidas.filter(tabela => tabela.e === menor);
     }else{
+        tabelasValidas = campeonato.tabelaClassificacaoGeral.filter(tabela => tabela.j > 0)
         menor = Math.min(
-            ...campeonato.tabelaClassificacaoGeral.map(
+            ...tabelasValidas.map(
                 tabela => tabela.e
             )
         );
-        jogos = campeonato.tabelaClassificacaoGeral.filter(tabela => tabela.e === menor);
+        jogos = tabelasValidas.filter(tabela => tabela.e === menor);
     }
-    return pegarDados(jogos, tecnico, condicaoGols)
+    return pegarDados(jogos, condicaoGols, campeonato.tipo.nome, mostrar)
 }

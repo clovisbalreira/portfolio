@@ -1,6 +1,6 @@
 import { pegarDados } from "../pegarDados.js";
 
-export function melhorAtaque(campeonato, tecnico, condicaoGols){
+export function melhorAtaque(campeonato, condicaoGols, mostrar){
     let maior = ''
     let gols = ''
     if(campeonato.tabelaClassificacaoGeral == undefined){
@@ -18,5 +18,5 @@ export function melhorAtaque(campeonato, tecnico, condicaoGols){
         );
         gols = campeonato.tabelaClassificacaoGeral.filter(tabela => tabela.gp === maior);
     }
-    return pegarDados(gols, tecnico, condicaoGols)
+    return pegarDados(gols, condicaoGols, campeonato.tipo != undefined ? campeonato.tipo.nome : campeonato.campeonato.tipo.nome, mostrar)
 }

@@ -6,5 +6,6 @@ export class Campeonato{
         this.associacao = associacao
         this.jogos = []
         this.tabelas = []
+        this.tabelaAssociacao = []
     }
 }

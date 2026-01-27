@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor-primary : #198754;
+    --cor-secundary : #75b798;
+    --cor-hover : #ffffff;
+}
+
+.flex{
+    flex: 1;
+}
+
+main #principal{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+}

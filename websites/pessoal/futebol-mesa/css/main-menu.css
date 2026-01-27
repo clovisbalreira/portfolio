@@ -1,0 +1,68 @@
+main #navegacao-socio-campeonato{
+    background-color: var(--cor-secundary);
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-inline: 1rem;
+}
+
+main #navegacao-socio-campeonato #nav-menu-socio{
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    gap: 1rem;
+}
+
+main #navegacao-socio-campeonato #nav-menu-socio{
+    padding-top: 1rem;
+}
+
+main #navegacao-socio-campeonato #menu-campeonato{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
+    gap: 1rem;
+}
+
+main #navegacao-socio-campeonato #menu-campeonato details {
+    cursor: pointer;
+    width: 100%;
+    padding-top: .1rem;
+}
+
+main #navegacao-socio-campeonato #menu-campeonato details .menu-campeonato{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.082);
+}
+
+main #navegacao-socio-campeonato #menu-campeonato details .menu-campeonato li{
+    list-style: none;
+    padding: .5rem;
+}
+
+main #navegacao-socio-campeonato #menu-campeonato details .menu-campeonato li:hover{
+    color: var(--cor-hover);
+}
+
+@media (max-width: 823px){
+    main #navegacao-socio-campeonato{
+        display: flex;
+    }
+}
+
+@media (max-width: 600px){
+    main #navegacao-socio-campeonato{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main #navegacao-socio-campeonato #nav-menu-socio{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

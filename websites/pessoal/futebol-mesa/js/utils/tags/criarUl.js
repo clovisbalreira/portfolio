@@ -4,16 +4,16 @@ import { formatarData } from "../formatarData.js"
 export function criarUl(dados){
     let ul = document.createElement('ul')
     ul.classList.add('ul-lista')
-    dados.forEach( dado => {
+    dados.forEach( (dado) => {
         if(dado.titulo == 'Associação'){
             let li = document.createElement('li')
             li.appendChild(criarTag('p', dado.titulo))
-            li.appendChild(criarTag('p', classificarTexto(dado.dado == true ? 'Ativa' : 'Desativada')))
+            li.appendChild(criarTag('div', classificarTexto(dado.dado == true ? 'Ativa' : 'Desativada')))
             ul.appendChild(li)
         }else if(dado.dado != ''){
             let li = document.createElement('li')
             li.appendChild(criarTag('p', dado.titulo))
-            li.appendChild(criarTag('p', classificarTexto(dado.dado)))
+            li.appendChild(criarTag('div', classificarTexto(dado.dado)))
             ul.appendChild(li)
         }
     })
@@ -22,6 +22,8 @@ export function criarUl(dados){
 
 function classificarTexto(dado){
     if(typeof dado == 'string'){
+        return dado
+    }else if(typeof dado == 'number'){
         return dado
     }else if(typeof dado == 'object'){
         if(dado.length == undefined) {

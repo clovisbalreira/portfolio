@@ -1,22 +1,25 @@
 import { pegarDados } from "../pegarDados.js";
 
-export function melhorDefesa(campeonato, tecnico, condicaoGols){
-    let menor = ''
-    let gols = ''
+export function melhorDefesa(campeonato, condicaoGols, mostrar){
+    let menor
+    let gols
+    let tabelasValidas
     if(campeonato.tabelaClassificacaoGeral == undefined){
+        tabelasValidas = campeonato.tabelas.filter(tabela => tabela.j > 0)
         menor = Math.min(
-            ...campeonato.tabelas.map(
+            ...tabelasValidas.map(
                 tabela => tabela.gc
             )
         );
-        gols = campeonato.tabelas.filter(tabela => tabela.gc === menor);
+        gols = tabelasValidas.filter(tabela => tabela.gc === menor);
     }else{
+        tabelasValidas = campeonato.tabelaClassificacaoGeral.filter(tabela => tabela.j > 0)
         menor = Math.min(
-            ...campeonato.tabelaClassificacaoGeral.map(
+            ...tabelasValidas.map(
                 tabela => tabela.gc
             )
         );
-        gols = campeonato.tabelaClassificacaoGeral.filter(tabela => tabela.gc === menor);
+        gols = tabelasValidas.filter(tabela => tabela.gc === menor);
     }
-    return pegarDados(gols, tecnico, condicaoGols)
+    return pegarDados(gols, condicaoGols, campeonato.tipo != undefined ? campeonato.tipo.nome : campeonato.campeonato.tipo.nome, mostrar)
 }

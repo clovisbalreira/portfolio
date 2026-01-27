@@ -1,0 +1,21 @@
+header #btn-navegacao{
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    width: 2rem;
+}
+
+header .esconder-navegacao-associacao{
+    display: none;
+}
+
+header #btn-fechar{
+    position: absolute;
+    right: 1rem;
+    width: 2rem;
+    cursor: pointer;
+}
+
+header .lista-associacao{
+    cursor: pointer;
+}

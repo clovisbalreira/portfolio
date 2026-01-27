@@ -13,10 +13,17 @@ function criarLabel(texto, id){
 function criarSelect(principal, filtrando, id, placeholder, optgroups, selecionado){
     let select = document.createElement('select')
     select.id = id
-    select.appendChild(option('', placeholder))
+    select.appendChild(option('', placeholder, selecionado))
     if(optgroups != ''){
         optgroups.forEach( opt => {
-            select.appendChild(optgroup(principal, filtrando, opt.texto, opt.condicao, selecionado))
+        let sociosFiltrar = principal.filter( texto => {
+        if(opt.condicao) return texto.status.nome == filtrando.nome
+        else return texto.status.nome != filtrando.nome
+        })
+        sociosFiltrar.sort((a, b) => 
+            a.nome.localeCompare(b.nome, 'pt-BR')
+        )
+        if(sociosFiltrar.length > 0) select.appendChild(optgroup(opt.texto, selecionado, sociosFiltrar))
         })
     }else{
         principal.forEach( dado => {
@@ -26,14 +33,7 @@ function criarSelect(principal, filtrando, id, placeholder, optgroups, seleciona
     return select
 }
 
-function optgroup(principal, filtrando, texto, condicao, selecionado){
-    let sociosFiltrar = principal.filter( texto => {
-        if(condicao) return texto.status.nome == filtrando.nome
-        else return texto.status.nome != filtrando.nome
-    })
-    sociosFiltrar.sort((a, b) => 
-        a.nome.localeCompare(b.nome, 'pt-BR')
-    )
+function optgroup(texto, selecionado, sociosFiltrar){
     let optgroup = document.createElement('optgroup')
     optgroup.label = texto
     sociosFiltrar.forEach(socio => {

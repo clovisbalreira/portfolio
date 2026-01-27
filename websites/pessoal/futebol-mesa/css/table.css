@@ -1,0 +1,147 @@
+table{
+    border-collapse: collapse;
+}
+
+table thead{
+    background-color: rgba(0, 0, 0, 0.356);
+}
+
+table tbody tr:nth-child(odd){
+    background-color: var(--cor-secundary);
+}
+
+table tbody tr:nth-child(even){
+    background-color: var(--cor-hover);
+}
+
+table thead tr th, table tbody tr td{
+    padding: .5rem;
+}
+
+.coluna-menor{
+    text-align: center;
+    width: 3.5rem;
+}
+
+.coluna-menor-total{
+    text-align: center;
+}
+
+#tabela-jogos {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+#tabela-jogos tbody tr{
+    background-color: rgba(128, 128, 128, 0.137);
+    border-bottom: 1px solid black;
+}
+
+.placar-jogo{
+    text-align: center;
+    width: 5%;
+}
+
+.time-tecnico-jogo-mandante,
+.time-tecnico-jogo-visitante{
+    padding: .75rem .5rem;
+    vertical-align: middle;
+    width: 42.5%;
+}
+
+.time-tecnico-jogo-mandante div,
+.time-tecnico-jogo-visitante div{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.time-tecnico-jogo-visitante div{
+    justify-content: flex-end;
+}
+
+.time-tecnico-jogo-mandante img, .time-tecnico-jogo-visitante img{
+    width: 30px;
+}
+
+.nome-jogo{
+    text-align: center;
+    width: 42.5%;
+}
+
+.turno-jogo{
+    text-align: center;
+}
+
+.regra-jogo{
+    text-align: center;
+}
+
+.tipo-jogo{
+    text-align: center;
+}
+
+.regra-jogo-so{
+    text-align: center;
+    background-color: red;
+}
+
+.data-jogo{
+    width: 15%;
+    text-align: center;
+}
+
+.jogo-estatisticas{
+    display: grid !important;
+    grid-template-columns: 1fr 10px 10px 10px 1fr;
+    grid-template-rows: 1fr;
+    place-content: start start;
+    gap: .5rem;
+    border: none !important;
+}
+
+.jogo-estatisticas > p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jogo-estatisticas div{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.jogo-estatisticas div:last-child{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: .5rem;
+}
+
+.jogo-estatisticas div img{
+    width: 30px;
+}
+
+.tabela-filtros table tbody tr td div{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.tabela-filtros table tbody tr td div img{
+    width: 30px;
+}
+
+@media (max-width: 1356px){
+    .apagar-coluna-menor-penalti{
+        display: none;
+    }
+}
+
+@media (max-width: 600px){
+    .apagar-coluna-menor{
+        display: none;
+    }
+}

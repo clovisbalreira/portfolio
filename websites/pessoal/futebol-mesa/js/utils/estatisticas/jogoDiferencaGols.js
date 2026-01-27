@@ -1,6 +1,6 @@
 import { pegarDados } from "../pegarDados.js";
 
-export function jogoDiferencaGols(campeonato, tecnico, condicaoGols){
+export function jogoDiferencaGols(campeonato, condicaoGols, mostrar){
     const maior= Math.max(
         ...campeonato.jogos.map(
             jogo => jogo.diferencaGols
@@ -8,7 +8,7 @@ export function jogoDiferencaGols(campeonato, tecnico, condicaoGols){
     );
     const jogos = campeonato.jogos
     .filter(jogo => jogo.diferencaGols === maior);
-    return pegarDados(jogos, tecnico, condicaoGols)
+    return pegarDados(jogos, condicaoGols, '', mostrar)
 }
 
 

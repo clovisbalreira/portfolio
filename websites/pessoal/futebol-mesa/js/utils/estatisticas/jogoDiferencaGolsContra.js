@@ -1,14 +1,15 @@
 import { pegarDados } from "../pegarDados.js";
 
-export function jogoDiferencaGolsContra(campeonato, tecnico, condicaoGols, socio) {
-
+export function jogoDiferencaGolsContra(campeonato, condicaoGols, socio, mostrar) {
     const diferencas = campeonato.jogos
         .filter(jogo =>
             jogo.timeCasa.tecnico.participante.nome === socio ||
-            jogo.timeFora.tecnico.participante.nome === socio
+            jogo.timeFora.tecnico.participante.nome === socio ||
+            jogo.timeCasa.tecnico.associacao.nome === socio ||
+            jogo.timeFora.tecnico.associacao.nome === socio
         )
         .map(jogo => {
-            if (jogo.timeCasa.tecnico.participante.nome === socio) {
+            if (jogo.timeCasa.tecnico.participante.nome === socio || jogo.timeCasa.tecnico.associacao.nome === socio) {
                 return jogo.diferencaGolsCasa
             }
             return jogo.diferencaGolsFora
@@ -16,14 +17,17 @@ export function jogoDiferencaGolsContra(campeonato, tecnico, condicaoGols, socio
 
     if (diferencas.length === 0) return []
 
-    const maior = Math.min(...diferencas)
+    const menor = Math.min(...diferencas)
 
     const jogos = campeonato.jogos.filter(jogo =>
         (jogo.timeCasa.tecnico.participante.nome === socio &&
-         jogo.diferencaGolsCasa === maior) ||
+         jogo.diferencaGolsCasa === menor) ||
         (jogo.timeFora.tecnico.participante.nome === socio &&
-         jogo.diferencaGolsFora === maior)
+         jogo.diferencaGolsFora === menor) ||
+         (jogo.timeCasa.tecnico.associacao.nome === socio &&
+         jogo.diferencaGolsCasa === menor) ||
+        (jogo.timeFora.tecnico.associacao.nome === socio &&
+         jogo.diferencaGolsFora === menor)
     )
-
-    return pegarDados(jogos, tecnico, condicaoGols)
+    return menor > 0 ? '' : pegarDados(jogos, condicaoGols, '', mostrar)
 }

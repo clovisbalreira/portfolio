@@ -17,22 +17,15 @@ export class Socio{
         }
     }
 
-    adicionarAssociacao(nome){
-        if(nome instanceof Associacao){
-            this.associacoes.push(nome)
+    adicionarAssociacao(associacao){
+        if(associacao instanceof Associacao){
+            this.associacoes.push(associacao)
         }
     }
 
     adicionarSocio(associacao){
-    if (!(associacao instanceof Associacao)) return
-
-        const encontrada = this.associacoes.some(a => a.nome === associacao.nome)
-
-        if (encontrada && associacao.status) {
-            this.status = true
-        } else {
-            this.status = false
-        }
+        if(associacao == false) this.status = associacao
+        else if(associacao instanceof Associacao) this.status = associacao
     }
 
 }

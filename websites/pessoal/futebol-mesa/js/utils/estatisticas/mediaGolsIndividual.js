@@ -1,7 +1,7 @@
 import { pegarDados } from "../pegarDados.js";
 
-export function mediaGolsIndividual(campeonato, tecnico, condicaoGols){
+export function mediaGolsIndividual(campeonato, condicaoGols, mostrar){
     let partidas = campeonato.j
     let gols = campeonato.gp + campeonato.gc
-    return pegarDados( gols / partidas , tecnico, condicaoGols)
+    return pegarDados( gols / partidas, condicaoGols, '', mostrar)
 }

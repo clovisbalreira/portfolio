@@ -1,15 +1,15 @@
 import { criarTag } from "../tags/criarTag.js"
 import { criarImagem } from "../tags/criarImagem.js"
-import { mostrarMain } from "./mostrarMain.js"
+import { inicio } from "../inicio.js"
 
-export function mostrarHeader(associacoes, variavelGlobal, socios, associacaoMain, campeonatos, temporadas){
+export function mostrarHeader(associacoes, variavelGlobal, socios, campeonatos, temporadas, tipos, regras){
     let associacao = associacoes[variavelGlobal.associacao]
     let div = document.getElementById('header-associacao')
     div.innerHTML = ''
-    div.appendChild(criarImagem('./img/', associacao.escudo, associacao.nome))
+    div.appendChild(criarImagem('./img/associacoes/', associacao.escudo, associacao.nome))
     div.appendChild(mostrarDescricao(associacao))
-    div.appendChild(criarImagem('./img/', associacao.escudo, associacao.nome))
-    acaoImagem(socios, associacaoMain, campeonatos, temporadas)
+    div.appendChild(criarImagem('./img/associacoes/', associacao.escudo, associacao.nome))
+    acaoImagem(associacoes, socios, campeonatos, temporadas, variavelGlobal, tipos, regras)
 }
 
 function mostrarDescricao(associacao){
@@ -19,11 +19,13 @@ function mostrarDescricao(associacao){
     return div
 }
 
-function acaoImagem(socios, associacaoMain, campeonatos, temporadas){
+function acaoImagem(associacoes, socios, campeonatos, temporadas, variavelGlobal, tipos, regras){
     let imagens = document.querySelectorAll('#header-associacao img')
     imagens.forEach( imagem => {
         imagem.addEventListener('click', () => {
-            mostrarMain(socios, associacaoMain, campeonatos, temporadas)
+            variavelGlobal.socio = 0
+            variavelGlobal.campeonato = 0
+            inicio(socios, campeonatos, associacoes, temporadas, variavelGlobal, tipos, regras)
         })
     })
 }

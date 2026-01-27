@@ -1,0 +1,48 @@
+.ul-lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.ul-lista li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 2px 0;
+    margin-bottom: 1rem;
+}
+
+.ul-lista li > p {
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.ul-lista li > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ul-lista li > div
+.campeonato{
+    text-align: center;
+}
+
+.ul-lista li > div p{
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    text-align: right;
+}
+
+.ul-lista li > div div p:first-child{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    text-align: left;
+}

@@ -1,6 +1,6 @@
 import { pegarDados } from "../pegarDados.js";
 
-export function mediaGols(campeonato, tecnico, condicaoGols){
+export function mediaGols(campeonato, condicaoGols, mostrar){
     let partidas = 0
     let gols = 0
     if(campeonato.tabelaClassificacaoGeral == undefined){
@@ -11,5 +11,5 @@ export function mediaGols(campeonato, tecnico, condicaoGols){
         gols = campeonato.tabelaClassificacaoGeral.reduce( (total, tabela) =>  total += tabela.gp, 0)
     } 
 
-    return pegarDados(gols / (partidas / 2), tecnico, condicaoGols)
+    return pegarDados(gols / (partidas / 2), condicaoGols, '', mostrar)
 }

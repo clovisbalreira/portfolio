@@ -1,0 +1,187 @@
+main #principal #dados-gerais #dados-geral #dados-campeonato{
+    border: .2rem solid var(--cor-hover);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+main #principal #dados-gerais #dados-geral #dados-campeonato .section-etapa{
+    width: 100%;
+    display: flex;
+    margin-block: 1rem;
+    flex-direction: row-reverse;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+main #principal #dados-gerais #dados-geral #dados-campeonato .section-etapa .rodadas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    flex: 1;
+}
+
+main #principal #dados-gerais #dados-geral #dados-campeonato .section-etapa .rodadas .div-rodada{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+main #principal #dados-gerais #dados-geral #dados-campeonato .section-etapa .rodadas .div-rodada .rodada{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .1rem;
+}
+
+main #principal #dados-gerais #dados-geral #dados-campeonato .section-etapa .tabelas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral .estatisticas-geral-tabela{
+    grid-column: 1; 
+    grid-row: 1;
+}
+
+main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral .estatisticas-geral-tabela-associacao{
+    grid-column: 1; 
+    grid-row: 2;
+}
+
+main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral .estatisticas-geral-tabela-associacao table tbody tr td:first-child div{
+    display: flex;
+    flex-direction: row;
+}
+
+main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral #estatisticas{
+    grid-column: 2; 
+    grid-row: 1 / span 2;
+}
+
+main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral .estatisticas-geral-tabela table tbody tr td:nth-child(1) div{
+    display: flex;
+    flex-direction: row;
+}
+
+main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral #estatisticas div .ul-lista li div{
+    display: flex;
+    align-items: flex-end;
+}
+
+main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral #estatisticas div .ul-lista li div img{
+    width: 30px;
+}
+
+main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral #estatisticas div .ul-lista div .tecnico p{
+    white-space: nowrap;
+}
+
+main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral #estatisticas div .ul-lista div .tecnico div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral #estatisticas div .ul-lista div .tecnico{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+}
+
+main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral #estatisticas div .ul-lista div:has(.jogo-estatisticas){
+    margin-right: .5rem;
+}
+
+main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral #estatisticas div .ul-lista div .jogo-estatisticas{
+    display: grid;
+    grid-template-columns: 40% 2% 2% 2% 41%;
+    gap: .5rem;
+    align-items: center;
+    width: 100%;
+}
+
+main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral #estatisticas div .ul-lista div .jogo-estatisticas div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: .5rem;
+    justify-content: flex-start;
+}
+
+main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral #estatisticas div .ul-lista div .jogo-estatisticas div:first-child p{
+    text-align: left;
+    width: 100%;
+}
+
+main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral #estatisticas div .ul-lista div .jogo-estatisticas div:last-child p{
+    text-align: right;
+    width: 100%;
+}
+
+@media (max-width: 1130px){ 
+    main #principal #dados-gerais #dados-geral #dados-campeonato .section-etapa{
+        flex-direction: column-reverse;
+    }
+    
+    main #principal #dados-gerais #dados-geral #dados-campeonato .section-etapa .tabelas table{
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral{
+        width: 100%;
+    }
+
+    main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral div{
+        width: 100%;
+    }
+
+    main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral .estatisticas-geral-tabela table{
+        width: 100%;
+    }
+
+    main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral .estatisticas-geral-tabela{
+        grid-column: 1; 
+        grid-row: 1;
+    }
+
+    main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral .estatisticas-geral-tabela-associacao{
+        grid-column: 1; 
+        grid-row: 2;
+    }
+
+    main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral .estatisticas-geral-tabela-associacao table{
+        width: 100%;
+    }
+
+    main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral #estatisticas{
+        grid-column: 1; 
+        grid-row: 3
+    }
+}

@@ -1,0 +1,212 @@
+main #principal #dados-gerais{
+    display: flex;
+    margin: 1rem;
+    gap: 2rem;
+}
+
+main #principal #dados-gerais #menu-temporada{
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+}
+
+
+main #principal #dados-gerais #menu-temporada ul .lista-temporada{
+    list-style: none;
+    margin-bottom: .5rem;
+}
+
+main #principal #dados-gerais #menu-temporada ul .lista-temporada:hover{
+    color: var(--cor-hover);
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 1rem;
+    flex: 1;
+}
+
+main #principal #dados-gerais{ 
+    width: 100%;
+}
+
+main #principal #dados-gerais #dados-geral #dados{ 
+    grid-column: 1; 
+    grid-row: 1; 
+    padding: 1rem;
+}
+
+main #principal #dados-gerais #dados-geral  #dados div .ul-lista li:nth-child(-n+6) div{
+    width: auto;
+}
+
+main #principal #dados-gerais #dados-geral  #dados div .ul-lista li div{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    gap: .5rem;
+}
+
+main #principal #dados-gerais #dados-geral  #dados  div .ul-lista li div .tecnico p{
+    width: auto;
+}
+
+main #principal #dados-gerais #dados-geral > #dados > div .ul-lista li div .tecnico{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    gap: .5rem;
+}
+
+main #principal #dados-gerais #dados-geral > #dados > div .ul-lista li div .tecnico div{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    width: auto;
+    gap: .5rem;
+}
+
+main #principal #dados-gerais #dados-geral > #dados  div .ul-lista li div .jogo-estatisticas{
+    display: grid;
+    grid-template-columns: 40% 2% 2% 2% 40%;
+    width: 100%;
+    align-items: center;
+}
+
+main #principal #dados-gerais #dados-geral > #dados  div .ul-lista li div .jogo-estatisticas p:first-child{
+    display: flex;
+    justify-content: flex-start;
+}
+
+main #principal #dados-gerais #dados-geral > #dados  div .ul-lista li div .jogo-estatisticas p:last-child{
+    justify-content: flex-end;
+    
+}
+
+
+main #principal #dados-gerais #dados-geral > #dados > div .ul-lista li div > .jogo-estatistica{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+main #principal #dados-gerais #dados-geral > #dados > div .ul-lista li div > .jogo-estatisticas div:nth-child(5) p{
+    text-align: right;
+}
+
+main #principal #dados-gerais #dados-geral > #dados > div .ul-lista div img{
+    width: 30px;
+}
+
+main #principal #dados-gerais #dados-geral #campeoes-ranking
+{ 
+    grid-column: 2; 
+    grid-row: 1; 
+}
+
+main #principal #dados-gerais #dados-geral > #dados > div, main #principal #dados-gerais #dados-geral > div > #campeoes > div, main #principal #dados-gerais #dados-geral > div > #ranking > div{ 
+    display: flex;
+    gap: 1rem;
+    margin-inline: 1rem;
+}
+
+main #principal #dados-gerais #dados-geral > #dados, main #principal #dados-gerais #dados-geral > div{ 
+    border: .2rem solid var(--cor-hover);
+    border-radius: 20px;
+}
+
+main #principal #dados-gerais #dados-geral > #dados > div, main #principal #dados-gerais #dados-geral > div > #campeoes > div, main #principal #dados-gerais #dados-geral > div > #ranking > div{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    height: 100%;
+    padding: 2rem .5rem;
+}
+
+main #principal #dados-gerais #dados-geral table{ 
+    grid-column: 1 / 3; 
+    grid-row: 2; 
+}
+
+main #principal #dados-gerais #dados-geral .estatisticas-geral-tabela, main #principal #dados-gerais #dados-geral .estatisticas-geral-tabela-associacao{
+    border: none;
+}
+
+main #principal #dados-gerais #dados-geral .tela-inteira{
+    grid-column: 1 / 3; 
+    grid-row: 2; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    border: none;
+}
+
+main #principal #dados-gerais #dados-geral .tela-inteira table{
+    width: 100%;
+}
+
+main #principal #dados-gerais #dados-geral table tbody tr td:first-child div{ 
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+main #principal #dados-gerais #dados-geral table tbody tr td:first-child div img{ 
+    width: 30px;
+}
+
+main #principal #dados-gerais #dados-geral .estatisticas-geral-tabela, main #principal #dados-gerais #dados-geral .estatisticas-geral-tabela-associacao{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+@media (max-width: 1230px){ 
+    .grid{
+        display: flex;
+        flex-direction: column;
+    }
+
+    main #principal #dados-gerais #dados-geral #dados-campeonato .section-etapa{
+        flex-direction: column;
+    }
+
+    main #principal #dados-gerais #dados-geral .estatisticas-geral-tabela table, main #principal #dados-gerais #dados-geral .estatisticas-geral-tabela-associacao table{
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px){    
+    main #principal #dados-gerais{
+        flex-direction: column;
+    }
+    
+    main #principal #dados-gerais #menu-temporada{
+        width: 100%;
+    }
+    
+    main #principal #dados-gerais #menu-temporada ul{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+        place-items: center;
+    }
+}
+
+@media (max-width: 602px){    
+    main #principal #dados-gerais #menu-temporada ul{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px){    
+    main #principal #dados-gerais #menu-temporada ul{
+        grid-template-columns: 1fr;
+    }
+}
