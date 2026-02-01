@@ -67,37 +67,38 @@ function possuiTime(obj, casaFora, tipo, mostrar) {
     if(mostrar){
         if (casaFora && tipo === 'Externo' && temTime) {
             texto = `
-                <div>
-                    <img src="./img/times/${obj.participante.time.escudo}">
-                    <p>${obj.participante.tecnico.nome}</p>
-                </div>
+            <div>
+            <img src="./img/associacoes/${obj.participante.associacao.escudo}">
+            <img src="./img/times/${obj.participante.time.escudo}">
+            <p>${obj.participante.tecnico.nome}</p>
+            </div>
             `
         } else if (!casaFora && tipo === 'Externo' && temTime) {
             texto = `
-                <div>
-                    <p>${obj.participante.tecnico.nome}</p>
-                    <img src="./img/times/${obj.participante.time.escudo}">
-                    <img src="./img/associacoes/${obj.participante.associacao.escudo}">
-                </div>
+            <div>
+            <p>${obj.participante.tecnico.nome}</p>
+            <img src="./img/times/${obj.participante.time.escudo}">
+            <img src="./img/associacoes/${obj.participante.associacao.escudo}">
+            </div>
             `
         }else if (casaFora && tipo === 'Externo' && !temTime) {
             texto = `
-                <div>
-                    <img src="./img/associacoes/${obj.participante.associacao.escudo}">
-                    <p>${obj.participante.tecnico.nome}</p>
-                </div>
+            <div>
+            <img class="posicao" src="./img/associacoes/${obj.participante.associacao.escudo}">
+            <p>${obj.participante.tecnico.nome}</p>
+            </div>
             `
         } else if (!casaFora && tipo === 'Externo' && !temTime) {
             texto = `
                 <div>
                     <p>${obj.participante.tecnico.nome}</p>
-                    <img src="./img/associacoes/${obj.participante.associacao.escudo}">
+                    <img class="posicao" src="./img/associacoes/${obj.participante.associacao.escudo}">
                 </div>
             `
         } else if (casaFora && tipo !== 'Externo' && temTime) {
             texto = `
                 <div>
-                    <img src="./img/times/${obj.participante.time.escudo}">
+                    <img class="posicao" src="./img/times/${obj.participante.time.escudo}">
                     <p>${obj.participante.tecnico.nome}</p>
                 </div>
             `
@@ -105,7 +106,7 @@ function possuiTime(obj, casaFora, tipo, mostrar) {
             texto = `
                 <div>
                     <p>${obj.participante.tecnico.nome}</p>
-                    <img src="./img/times/${obj.participante.time.escudo}">
+                    <img class="posicao" src="./img/times/${obj.participante.time.escudo}">
                 </div>
             `
         } else{

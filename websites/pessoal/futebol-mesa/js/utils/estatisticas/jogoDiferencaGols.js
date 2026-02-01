@@ -8,7 +8,7 @@ export function jogoDiferencaGols(campeonato, condicaoGols, mostrar){
     );
     const jogos = campeonato.jogos
     .filter(jogo => jogo.diferencaGols === maior);
-    return pegarDados(jogos, condicaoGols, '', mostrar)
+    return pegarDados(jogos, condicaoGols, campeonato.campeonato == undefined ? campeonato.tipo.nome : campeonato.campeonato.tipo.nome, mostrar)
 }
 
 

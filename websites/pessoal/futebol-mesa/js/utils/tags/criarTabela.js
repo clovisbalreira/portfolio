@@ -86,7 +86,7 @@ function imagemTexto(associacao, tipo, time) {
             colocarImagem(
                 associacao.associacao == undefined ? associacao.escudo : associacao.associacao.escudo,
                 associacao.associacao == undefined ? associacao?.nome ?? '' : associacao?.associacao?.nome ?? '',
-                'associacoes'
+                'associacoes', time !== true
             )
         )
     }
@@ -96,7 +96,7 @@ function imagemTexto(associacao, tipo, time) {
             colocarImagem(
                 associacao.time.escudo,
                 associacao.time.nome,
-                'times'
+                'times', tipo !== 'Externo'
             )
         )
     }
@@ -108,9 +108,10 @@ function imagemTexto(associacao, tipo, time) {
 }
 
 
-function colocarImagem(imagem, alt, pasta){
+function colocarImagem(imagem, alt, pasta, classe){
     let img = document.createElement('img')
     img.src = `./img/${pasta}/${imagem}`
     img.alt = alt
+    if(classe) img.classList.add('posicao')
     return img
 }

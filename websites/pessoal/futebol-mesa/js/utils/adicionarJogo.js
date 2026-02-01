@@ -70,11 +70,11 @@ function criarTd(dado, coluna, classe){
 
 function timeTecnico(time, casaVisitante, tipo){
     let texto = '<div>'
-    if(casaVisitante && tipo == 'Externo') texto += `<img src="./img/associacoes/${time.participante.associacao.escudo}" alt="${time.participante.associacao.nome}">`
-    if(casaVisitante && time.participante.time.nome != undefined) texto += `<img src="./img/times/${time.participante.time.escudo}" alt="${time.participante.time.nome}">`
+    if(casaVisitante && tipo == 'Externo') texto += `<img ${time.participante.time.nome != undefined ? '' : 'class="posicao"'} src="./img/associacoes/${time.participante.associacao.escudo}" alt="${time.participante.associacao.nome}">`
+    if(casaVisitante && time.participante.time.nome != undefined) texto += `<img ${tipo == 'Externo' ? '' : 'class="posicao"'} src="./img/times/${time.participante.time.escudo}" alt="${time.participante.time.nome}">`
     texto += `<p>${time.participante.tecnico.nome}</p>`
-    if(!casaVisitante && time.participante.time.nome != undefined) texto += `<img src="./img/times/${time.participante.time.escudo}" alt="${time.participante.time.nome}">`
-    if(!casaVisitante && tipo == 'Externo') texto += `<img src="./img/associacoes/${time.participante.associacao.escudo}" alt="${time.participante.associacao.nome}">`
+    if(!casaVisitante && time.participante.time.nome != undefined) texto += `<img ${tipo == 'Externo' ? '' : 'class="posicao"'} src="./img/times/${time.participante.time.escudo}" alt="${time.participante.time.nome}">`
+    if(!casaVisitante && tipo == 'Externo') texto += `<img ${time.participante.time.nome != undefined ? '' : 'class="posicao"'} src="./img/associacoes/${time.participante.associacao.escudo}" alt="${time.participante.associacao.nome}">`
     texto += '</div>'
     return texto
 }
