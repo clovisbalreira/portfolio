@@ -15,14 +15,14 @@ function filtroMenuJogosAssociacoes(jogos, associacao, associacoes, variavelGlob
         if(this.value != ''){
             let filtrarJogos = jogos.filter(jogo => {
                 variavelGlobal.ativoAssociacao = this.value.toString()
-                return jogo.timeCasa.tecnico.associacao.nome == this.value.toString() || jogo.timeFora.tecnico.associacao.nome == this.value.toString()
+                return jogo.timeMandante.participante.associacao.nome == this.value.toString() || jogo.timeVisitante.participante.associacao.nome == this.value.toString()
             })
-            let tabelas = { tecnico: associacao, pg: 0, j: 0, v: 0, e: 0, d: 0, gp: 0, gc: 0, sg: 0, pgp: 0, vp: 0,  ep: 0, dp: 0, gpp: 0, gcp: 0, sgp: 0, gpt: 0,   vpt: 0, dpt: 0, gppt: 0, gcpt: 0, sgpt: 0, cd: 0, pgpt: 0 }
+            let tabelas = { participante: associacao, pg: 0, j: 0, v: 0, e: 0, d: 0, gp: 0, gc: 0, sg: 0, pgp: 0, vp: 0,  ep: 0, dp: 0, gpp: 0, gcp: 0, sgp: 0, gpt: 0,   vpt: 0, dpt: 0, gppt: 0, gcpt: 0, sgpt: 0, cd: 0, pgpt: 0 }
             filtrarJogos.forEach( jogo => {
-                if(associacao.nome == jogo.timeCasa.tecnico.associacao.nome){
-                    atualizarTabela(tabelas, jogo, jogo.timeCasa.gols, jogo.timeFora.gols, jogo.timeCasa.golsProrrogacao,  jogo.timeFora.golsProrrogacao, jogo.timeCasa.golsPenalti,  jogo.timeFora.golsPenalti)
+                if(associacao.nome == jogo.timeMandante.participante.associacao.nome){
+                    atualizarTabela(tabelas, jogo, jogo.timeMandante.gols, jogo.timeVisitante.gols, jogo.timeMandante.golsProrrogacao,  jogo.timeVisitante.golsProrrogacao, jogo.timeMandante.golsPenalti,  jogo.timeVisitante.golsPenalti)
                 }else{
-                    atualizarTabela(tabelas, jogo, jogo.timeFora.gols, jogo.timeCasa.gols, jogo.timeFora.golsProrrogacao, jogo.timeCasa.golsProrrogacao, jogo.timeFora.golsPenalti, jogo.timeCasa.golsPenalti)
+                    atualizarTabela(tabelas, jogo, jogo.timeVisitante.gols, jogo.timeMandante.gols, jogo.timeVisitante.golsProrrogacao, jogo.timeMandante.golsProrrogacao, jogo.timeVisitante.golsPenalti, jogo.timeMandante.golsPenalti)
                 }
             });
             atualizarTabelaEstatisticas(filtrarJogos, tabelas, associacoes, associacao, campeonatos, temporadas, variavelGlobal, socios)
@@ -46,12 +46,12 @@ function filtroMenuJogosRegras(jogos, associacao, associacoes, variavelGlobal, c
                     }
                 })
             })
-            let tabelas = { tecnico: associacao, pg: 0, j: 0, v: 0, e: 0, d: 0, gp: 0, gc: 0, sg: 0, pgp: 0, vp: 0,  ep: 0, dp: 0, gpp: 0, gcp: 0, sgp: 0, gpt: 0,   vpt: 0, dpt: 0, gppt: 0, gcpt: 0, sgpt: 0, cd: 0, pgpt: 0 }
+            let tabelas = { participante: associacao, pg: 0, j: 0, v: 0, e: 0, d: 0, gp: 0, gc: 0, sg: 0, pgp: 0, vp: 0,  ep: 0, dp: 0, gpp: 0, gcp: 0, sgp: 0, gpt: 0,   vpt: 0, dpt: 0, gppt: 0, gcpt: 0, sgpt: 0, cd: 0, pgpt: 0 }
             filtrarJogos.forEach( jogo => {
-                if(associacao.nome == jogo.timeCasa.tecnico.participante.status.nome){
-                    atualizarTabela(tabelas, jogo, jogo.timeCasa.gols, jogo.timeFora.gols, jogo.timeCasa.golsProrrogacao, jogo.timeFora.golsProrrogacao, jogo.timeCasa.golsPenalti,  jogo.timeFora.golsPenalti)
+                if(associacao.nome == jogo.timeMandante.participante.tecnico.status.nome){
+                    atualizarTabela(tabelas, jogo, jogo.timeMandante.gols, jogo.timeVisitante.gols, jogo.timeMandante.golsProrrogacao, jogo.timeVisitante.golsProrrogacao, jogo.timeMandante.golsPenalti,  jogo.timeVisitante.golsPenalti)
                 }else{
-                    atualizarTabela(tabelas, jogo, jogo.timeFora.gols, jogo.timeCasa.gols, jogo.timeFora.golsProrrogacao, jogo.timeCasa.golsProrrogacao, jogo.timeFora.golsPenalti, jogo.timeCasa.golsPenalti)
+                    atualizarTabela(tabelas, jogo, jogo.timeVisitante.gols, jogo.timeMandante.gols, jogo.timeVisitante.golsProrrogacao, jogo.timeMandante.golsProrrogacao, jogo.timeVisitante.golsPenalti, jogo.timeMandante.golsPenalti)
                 }
             });
             atualizarTabelaEstatisticas(filtrarJogos, tabelas, associacoes, associacao, campeonatos, temporadas, variavelGlobal, socios)

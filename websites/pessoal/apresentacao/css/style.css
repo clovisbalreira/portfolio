@@ -33,6 +33,12 @@ header, footer{
     cursor: pointer;
 }
 
+#main-curriculo nav{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
 #main-curriculo div nav button{
     background-color: transparent;
     border: none;
@@ -142,25 +148,28 @@ main{
 }    
 
 #main-curriculo{
-    display: flex;
+    display: grid;
     flex-direction: column;
     align-items: center;
     margin-block: 2rem;
-    width: 98vw;
+    width: 100%;
 }    
 
-#apresentacao{
-    display: flex;
-    gap: 2rem;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+#apresentacao {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    margin: 1rem;
+    justify-items: center;
+    align-items: flex-start;
 }
 
 #curriculo{
     background-color: white;
+    width: 100%;
     padding: 2rem;
+    margin-inline: 5rem;
     box-shadow: 15px 15px 25px rgb(0, 0, 0);
-    max-width: 800px;
     height: max-content;
 }
 
@@ -169,7 +178,12 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
     flex-wrap: wrap;
+}
+
+#curriculo .nome-foto h1{
+    text-align: center;
 }
 
 #curriculo .nome-foto img{
@@ -315,10 +329,39 @@ footer a:hover{
     display: block;
 }
 
+@media (max-width: 1380px){
+    #apresentacao{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #curriculo{
+        margin: auto;
+        width: 100%;
+    }
+    
+    #formacao{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+    }  
+    
+    #formacao div{
+        width: 100%;
+    }  
+
+    #formacao ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 @media (max-width: 1133px){
     #curriculo .div-dados-pessoais{
         flex-direction: column;
-        width: 100%;
     }
 }
 
@@ -341,6 +384,20 @@ footer a:hover{
     #curriculo .div-experiencia-profissional div div p{
         display: none;
     }
+
+    #formacao ul{
+        grid-template-columns: 1fr;
+        
+    }
+    
+    .img-vertical, .img-horizontal, .div-imagens-curso{
+        width: 100%;
+        height: 600px;
+    }
+
+    .div-imagens-curso > .img-vertical{
+        width: 50%;
+    }
 }
 
 @media (max-width: 813px){
@@ -350,14 +407,20 @@ footer a:hover{
 }
 
 @media (max-width: 740px){
-    #curriculo{
-        margin-inline: 2rem;
+    #formacao ul{
+        width: 100%;
     }
 }
 
 @media (max-width: 686px){
     #curriculo .div-dados-pessoais a{
         margin-left: 2rem;
+    }
+}
+   
+@media (max-width: 660px){
+    .img-vertical, .img-horizontal, .div-imagens-curso{
+        height: 400px;
     }
 }
 
@@ -368,5 +431,80 @@ footer a:hover{
 
     #curriculo .div-experiencia-profissional div div{
         flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px){
+    #header-curriculo{
+        flex-direction: column;
+    }
+
+    #main-curriculo{
+        margin: 0;
+        padding: 0;
+    }
+    
+    #curriculo{
+        box-shadow: none;
+        padding: .3rem;
+    }
+
+    #curriculo .nome-foto{
+        justify-content: center;
+    }
+    
+    #curriculo .h3-titulo{
+        padding: .1rem;
+    }
+    
+    #curriculo .div-dados-pessoais{
+        margin-left: .1rem;
+    }
+    
+    #curriculo .div-experiencia-profissional div div{
+        padding: .1rem;
+    }
+    
+    #curriculo .div-formacao-academica{
+        padding: .1rem;
+    }
+    
+    #curriculo .objetivos{
+        padding: .1rem;
+    }
+    
+    #curriculo .div-interesse-pessoal{
+        padding: .1rem;
+    }
+    
+    #curriculo .div-competencia-tecnicas-idiomas-projetos{
+        padding: .1rem;
+    }
+    
+    #curriculo .div-formacao-profissional h4{
+        padding: .1rem;
+    }
+    
+    #curriculo .div-formacao-profissional p{
+        padding: .1rem;
+    }
+
+    #formacao div{
+        flex-direction: column;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    #formacao div div select{
+        width: 100%;
+    }
+    
+    #formacao ul li{
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .img-vertical, .img-horizontal, .div-imagens-curso{
+        height: 300px;
     }
 }

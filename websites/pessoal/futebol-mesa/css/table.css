@@ -43,25 +43,25 @@ table thead tr th, table tbody tr td{
     width: 5%;
 }
 
-.time-tecnico-jogo-mandante,
-.time-tecnico-jogo-visitante{
+.time-participante-jogo-mandante,
+.time-participante-jogo-visitante{
     padding: .75rem .5rem;
     vertical-align: middle;
     width: 42.5%;
 }
 
-.time-tecnico-jogo-mandante div,
-.time-tecnico-jogo-visitante div{
+.time-participante-jogo-mandante div,
+.time-participante-jogo-visitante div{
     display: flex;
     align-items: center;
     gap: .5rem;
 }
 
-.time-tecnico-jogo-visitante div{
+.time-participante-jogo-visitante div{
     justify-content: flex-end;
 }
 
-.time-tecnico-jogo-mandante img, .time-tecnico-jogo-visitante img{
+.time-participante-jogo-mandante img, .time-participante-jogo-visitante img{
     width: 30px;
 }
 
@@ -84,7 +84,6 @@ table thead tr th, table tbody tr td{
 
 .regra-jogo-so{
     text-align: center;
-    background-color: red;
 }
 
 .data-jogo{
@@ -107,17 +106,25 @@ table thead tr th, table tbody tr td{
     align-items: center;
 }
 
-.jogo-estatisticas div{
+.jogo-estatisticas p, .jogo-estatisticas div{
     display: flex;
     align-items: center;
     gap: .5rem;
 }
 
-.jogo-estatisticas div:last-child{
+.jogo-estatisticas p:first-child, .jogo-estatisticas div p:last-child, .jogo-estatisticas p:last-child, .jogo-estatisticas div p:first-child{
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: end;
     gap: .5rem;
+}
+
+.jogo-estatisticas p:first-child, .jogo-estatisticas div:first-child p:first-child{
+    justify-content: flex-start;
+}
+
+.jogo-estatisticas p:last-child, .jogo-estatisticas div:last-child p:last-child{
+    justify-content: flex-end;
 }
 
 .jogo-estatisticas div img{

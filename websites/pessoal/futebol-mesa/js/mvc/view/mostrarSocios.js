@@ -15,11 +15,11 @@ export function mostrarSocios(socio, campeonatos, temporadas, variavelGlobal, so
     section.appendChild(colocacaoAssociados(socio, temporadas, campeonatos, tipos, regras))    
     let socioNome = socio.nome
     let totalJogos = []
-    let tabelas = { tecnico: '', pg: 0, j: 0, v: 0, e: 0, d: 0, gp: 0, gc: 0, sg: 0, pgp: 0, vp: 0,  ep: 0, dp: 0, gpp: 0, gcp: 0, sgp: 0, gpt: 0,   vpt: 0, dpt: 0, gppt: 0, gcpt: 0, sgpt: 0, cd: 0, pgpt: 0 }
+    let tabelas = { participante: '', pg: 0, j: 0, v: 0, e: 0, d: 0, gp: 0, gc: 0, sg: 0, pgp: 0, vp: 0,  ep: 0, dp: 0, gpp: 0, gcp: 0, sgp: 0, gpt: 0,   vpt: 0, dpt: 0, gppt: 0, gcpt: 0, sgpt: 0, cd: 0, pgpt: 0 }
     campeonatos.forEach(campeonato => {
         campeonato.tabelas.forEach( tabela => {
-            if(tabela.tecnico.participante.nome == socioNome) {
-                tabelas.tecnico = tabela.tecnico
+            if(tabela.participante.tecnico.nome == socioNome) {
+                tabelas.participante = tabela.participante
                 tabelas.pg += tabela.pg
                 tabelas.j += tabela.j
                 tabelas.v += tabela.v
@@ -46,7 +46,7 @@ export function mostrarSocios(socio, campeonatos, temporadas, variavelGlobal, so
             }
         })
         campeonato.jogos.forEach( jogo => {
-            if(jogo.timeCasa.tecnico.participante.nome == socioNome || jogo.timeFora.tecnico.participante.nome == socioNome){
+            if(jogo.timeMandante.participante.tecnico.nome == socioNome || jogo.timeVisitante.participante.tecnico.nome == socioNome){
                 totalJogos.push(jogo)
             } 
         })
@@ -91,7 +91,7 @@ function titulo(section, socio, temporadas, campeonatos){
         if (!campeonato) return;
         const pertenceAssociacao = socio.associacoes.some(a => a.nome === campeonato.associacao.nome);
         if (!pertenceAssociacao) return;
-        const foiCampeao = temporada.tabelaClassificacaoGeral.some((tabela, index) => index === 0 && tabela.tecnico.participante.nome === socio.nome );
+        const foiCampeao = temporada.tabelaClassificacaoGeral.some((tabela, index) => index === 0 && tabela.participante.tecnico.nome === socio.nome );
         if (!foiCampeao) return;
         const titulo = { titulo: `${temporada.nome} ${temporada.campeonato.nome}`, regra : temporada.campeonato.regra.nome, tipo : temporada.campeonato.tipo.nome, dado: 'Campeão' };
         if (campeonato.associacao.nome === socio.status.nome) titulosAssociado.push(titulo)
@@ -149,7 +149,7 @@ function colocacaoAssociados(socio, temporadas, campeonatos){
     const colocacaoNaoAssociado = [];
     temporadas.forEach( temporada => {
         temporada.tabelaClassificacaoGeral.forEach( (tabela, index) => {
-            if(tabela.tecnico.participante.nome == socio.nome){
+            if(tabela.participante.tecnico.nome == socio.nome){
                 const registro = {campeonato: temporada.campeonato.nome, titulo: `${temporada.nome} ${temporada.campeonato.nome}`,dado: textoColocacoes(index), regra: temporada.campeonato.regra.nome, tipo: temporada.campeonato.tipo.nome}
                 if(socio.status.nome == temporada.campeonato.associacao.nome) colocacaoAssociado.push(registro)
                 else colocacaoNaoAssociado.push(registro)
@@ -210,7 +210,7 @@ function colocacoesCampeonato(associados, campeonatos, titulo, condicao, socio){
 function tabelaColocacao(campeonato, socio, filtrarCampeonato){
     let div = document.createElement('div')
     div.classList.add('div-tabela-colocacao')
-    let filtrarTabela = campeonato.tabelas.filter( tabela => tabela.tecnico.participante.nome == socio)
+    let filtrarTabela = campeonato.tabelas.filter( tabela => tabela.participante.tecnico.nome == socio)
     div.appendChild(criarTag('h4', `${campeonato.nome} ( ${filtrarCampeonato.length} )`))
     if(filtrarTabela.length > 0){
         if(filtrarTabela[0].j > 0) div.appendChild(criarTabela(filtrarTabela, '', ''))

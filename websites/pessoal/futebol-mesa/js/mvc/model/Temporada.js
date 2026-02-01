@@ -23,7 +23,7 @@ export class Temporada{
 
     adicionarParticipantes(nome){
         if(nome instanceof Socio){
-            this.participantes.push({participante:nome, time: '', associacao: nome.status})
+            this.participantes.push({tecnico:nome, time: '', associacao: nome.status})
             this.adicionarParticipacaoAssociacao(nome)
         }
     }
@@ -37,53 +37,52 @@ export class Temporada{
         tecnico.time = time
     }
 
-    adicionarJogos(fase, turno, rodada, mesa, data, timeCasa, timeFora, prorrogacao, penalti){
-        this.jogos.push({campeonato: `${this.nome} - ${this.campeonato.nome}`, regra: this.campeonato.regra.nome, tipo : this.campeonato.tipo.nome, fase: fase, turno: turno, rodada, mesa: mesa, data: data, timeCasa: {tecnico: timeCasa, gols : 0, golsProrrogacao: 0, golsPenalti: 0}, timeFora: {tecnico: timeFora, gols : 0, golsProrrogacao: 0, golsPenalti: 0}, prorrogacao: prorrogacao, penalti: penalti, diferencaGols: 0, diferencaGolsCasa: 0, diferencaGolsFora: 0, totalGols : 0, desempate: 0})
+    adicionarJogos(fase, turno, rodada, mesa, data, timeMandante, timeVisitante, prorrogacao, penalti){
+        this.jogos.push({campeonato: `${this.nome} - ${this.campeonato.nome}`, regra: this.campeonato.regra.nome, tipo : this.campeonato.tipo.nome, fase: fase, turno: turno, rodada, mesa: mesa, data: data, timeMandante: {participante: timeMandante, gols : 0, golsProrrogacao: 0, golsPenalti: 0}, timeVisitante: {participante: timeVisitante, gols : 0, golsProrrogacao: 0, golsPenalti: 0}, prorrogacao: prorrogacao, penalti: penalti, diferencaGols: 0, diferencaGolsCasa: 0, diferencaGolsFora: 0, totalGols : 0, desempate: 0})
     }
 
-    adicionarPlacar(jogo, timeCasaGols, timeForaGols, timeCasaGolsProrrogacao, timeForaGolsProrrogacao, timeCasaGolsPenalti, timeForaGolsPenalti, desempateCasa, desempateFora, prorrogacao, pontoPenalti){
+    adicionarPlacar(jogo, timeMandanteGols, timeForaGolsVisitante, timeMandanteGolsProrrogacao, timeVisitanteGolsProrrogacao, timeCasaGolsPenalti, timeVisitanteGolsPenalti, desempateMandante, desempateVisitante, prorrogacao, pontoPenalti){
         jogo.penalti = pontoPenalti
-        if(pontoPenalti == undefined) console.log(jogo)
-        if(typeof timeCasaGols == 'number' && typeof timeForaGols == 'number'){
-            this.adicionarGolsPartida(jogo, timeCasaGols, timeForaGols)
-            if(timeCasaGols == timeForaGols && prorrogacao){
-                this.adicionarGolsPartidaProrrogacao(jogo, timeCasaGolsProrrogacao, timeForaGolsProrrogacao)
-                this.adicionarGolsPartidaPenalti(jogo, timeCasaGolsPenalti, timeForaGolsPenalti)
-            }else if(timeCasaGols == timeForaGols && pontoPenalti){
-                this.adicionarGolsPartidaPenalti(jogo, timeCasaGolsPenalti, timeForaGolsPenalti)
+        if(typeof timeMandanteGols == 'number' && typeof timeForaGolsVisitante == 'number'){
+            this.adicionarGolsPartida(jogo, timeMandanteGols, timeForaGolsVisitante)
+            if(timeMandanteGols == timeForaGolsVisitante && prorrogacao){
+                this.adicionarGolsPartidaProrrogacao(jogo, timeMandanteGolsProrrogacao, timeVisitanteGolsProrrogacao)
+                this.adicionarGolsPartidaPenalti(jogo, timeCasaGolsPenalti, timeVisitanteGolsPenalti)
+            }else if(timeMandanteGols == timeForaGolsVisitante && pontoPenalti){
+                this.adicionarGolsPartidaPenalti(jogo, timeCasaGolsPenalti, timeVisitanteGolsPenalti)
             }
         }else{
-            this.adicionarGolsPartida(jogo, timeCasaGols, timeForaGols)
+            this.adicionarGolsPartida(jogo, timeMandanteGols, timeForaGolsVisitante)
         }
-        this.desempate(jogo, desempateCasa, desempateFora)
-        this.totalGols(jogo, timeCasaGols, timeForaGols)
-        this.diferencaGols(jogo, timeCasaGols, timeForaGols)
-        if(this.campeonato.tipo.nome == 'Externo' && !(jogo.timeCasa.tecnico.associacao.nome == jogo.timeFora.tecnico.associacao.nome)){
+        this.desempate(jogo, desempateMandante, desempateVisitante)
+        this.totalGols(jogo, timeMandanteGols, timeForaGolsVisitante)
+        this.diferencaGols(jogo, timeMandanteGols, timeForaGolsVisitante)
+        if(this.campeonato.tipo.nome == 'Externo' && !(jogo.timeMandante.participante.associacao.nome == jogo.timeVisitante.participante.associacao.nome)){
             this.adicionarJogoAssociacao(jogo)
             this.adicionarPontuacaoAssociacao(jogo)
         } 
     }
     
     adicionarJogoAssociacao(jogo){
-        let associacaoCasa = associacoes.find( associacao => associacao.nome == jogo.timeCasa.tecnico.associacao.nome)
-        let associacaoFora = associacoes.find( associacao => associacao.nome == jogo.timeFora.tecnico.associacao.nome)
-        if(associacaoCasa != associacaoFora){
-            associacaoCasa.jogos.push(jogo)
-            associacaoFora.jogos.push(jogo)
+        let associacaoMandante = associacoes.find( associacao => associacao.nome == jogo.timeMandante.participante.associacao.nome)
+        let associacaoVisitante = associacoes.find( associacao => associacao.nome == jogo.timeVisitante.participante.associacao.nome)
+        if(associacaoMandante != associacaoVisitante){
+            associacaoMandante.jogos.push(jogo)
+            associacaoVisitante.jogos.push(jogo)
         }
     }
 
     adicionarPontuacaoAssociacao(jogo){
         if(jogo != undefined){
-            this.tabelaAssociacao(jogo.timeCasa, jogo.timeFora)
-            this.tabelaAssociacao(jogo.timeFora, jogo.timeCasa)
+            this.tabelaAssociacao(jogo.timeMandante, jogo.timeVisitante)
+            this.tabelaAssociacao(jogo.timeVisitante, jogo.timeMandante)
         }    
     }
 
-    tabelaAssociacao(timeCasa, timeFora){
-        let associacaoCasa = timeCasa
-        let associacaoFora = timeFora
-        let tabela = associacaoCasa.tecnico.participante.status.tabelas
+    tabelaAssociacao(timeMandante, timeVisitante){
+        let associacaoMandante = timeMandante
+        let associacaoVisitante = timeVisitante
+        let tabela = associacaoMandante.participante.tecnico.status.tabelas
         let regra = this.campeonato.regra.nome
         const criarTabela = (associacao) => ({
             associacao,
@@ -95,76 +94,76 @@ export class Temporada{
             gppt: 0, gcpt: 0, sgpt: 0
         })
         if(tabela.length == 0){
-            tabela.push({regra: regra, tabela: criarTabela(associacaoCasa.tecnico.participante.status)})
+            tabela.push({regra: regra, tabela: criarTabela(associacaoMandante.participante.tecnico.status)})
         }else{
             let contem = tabela.find(tabela => {
                 return tabela.regra == regra
             })
             if(contem == undefined){
-                tabela.push({regra: regra, tabela: criarTabela(associacaoCasa.tecnico.participante.status)})
+                tabela.push({regra: regra, tabela: criarTabela(associacaoMandante.participante.tecnico.status)})
             }
         }
         let filtarTabela = tabela.find( tabela => tabela.regra == regra)
-        this.pontuacaoAssociacaoGeral(filtarTabela, associacaoCasa, associacaoFora)
+        this.pontuacaoAssociacaoGeral(filtarTabela, associacaoMandante, associacaoVisitante)
     }
 
-    pontuacaoAssociacaoGeral(tabela, timeCasa, timeFora){
-        tabela.tabela.v += timeCasa.gols > timeFora.gols ? 1 : 0
-        tabela.tabela.e += timeCasa.gols == timeFora.gols ? 1 : 0
-        tabela.tabela.d += timeCasa.gols < timeFora.gols ? 1 : 0
+    pontuacaoAssociacaoGeral(tabela, timeMandante, timeVisitante){
+        tabela.tabela.v += timeMandante.gols > timeVisitante.gols ? 1 : 0
+        tabela.tabela.e += timeMandante.gols == timeVisitante.gols ? 1 : 0
+        tabela.tabela.d += timeMandante.gols < timeVisitante.gols ? 1 : 0
         tabela.tabela.j = tabela.tabela.v + tabela.tabela.e + tabela.tabela.d
         tabela.tabela.pg = ( tabela.tabela.v * this.pontoVitoria) + tabela.tabela.e
-        tabela.tabela.gp += timeCasa.gols
-        tabela.tabela.gc += timeFora.gols
+        tabela.tabela.gp += timeMandante.gols
+        tabela.tabela.gc += timeVisitante.gols
         tabela.tabela.sg = tabela.tabela.gp - tabela.tabela.gc
-        if(timeCasa.gols == timeFora.gols){
-            tabela.tabela.vp += timeCasa.golsProrrogacao > timeFora.golsProrrogacao ? 1 : 0
-            tabela.tabela.ep += timeCasa.golsProrrogacao == timeFora.golsProrrogacao ? 1 : 0
-            tabela.tabela.dp += timeCasa.golsProrrogacao < timeFora.golsProrrogacao ? 1 : 0
-            tabela.tabela.gpp += timeCasa.golsProrrogacao
-            tabela.tabela.gcp += timeFora.golsProrrogacao
+        if(timeMandante.gols == timeVisitante.gols){
+            tabela.tabela.vp += timeMandante.golsProrrogacao > timeVisitante.golsProrrogacao ? 1 : 0
+            tabela.tabela.ep += timeMandante.golsProrrogacao == timeVisitante.golsProrrogacao ? 1 : 0
+            tabela.tabela.dp += timeMandante.golsProrrogacao < timeVisitante.golsProrrogacao ? 1 : 0
+            tabela.tabela.gpp += timeMandante.golsProrrogacao
+            tabela.tabela.gcp += timeVisitante.golsProrrogacao
             tabela.tabela.sgp = tabela.tabela.gpp - tabela.tabela.gcp
-            if(timeCasa.golsProrrogacao == timeFora.golsProrrogacao){
-                tabela.tabela.vpt += timeCasa.golsPenalti > timeFora.golsPenalti ? 1 : 0
-                tabela.tabela.dpt += timeCasa.golsPenalti < timeFora.golsPenalti ? 1 : 0
+            if(timeMandante.golsProrrogacao == timeVisitante.golsProrrogacao){
+                tabela.tabela.vpt += timeMandante.golsPenalti > timeVisitante.golsPenalti ? 1 : 0
+                tabela.tabela.dpt += timeMandante.golsPenalti < timeVisitante.golsPenalti ? 1 : 0
                 tabela.tabela.pgpt
-                tabela.tabela.gppt += timeCasa.golsPenalti
-                tabela.tabela.gcpt += timeFora.golsPenalti
+                tabela.tabela.gppt += timeMandante.golsPenalti
+                tabela.tabela.gcpt += timeVisitante.golsPenalti
                 tabela.tabela.sgpt = tabela.tabela.gppt - tabela.tabela.gcpt
             }
         }
     }
 
-    adicionarGolsPartida(jogo, timeCasaGols, timeForaGols){
-        jogo.timeCasa.gols = timeCasaGols
-        jogo.timeFora.gols = timeForaGols
+    adicionarGolsPartida(jogo, timeMandanteGols, timeForaGolsVisitante){
+        jogo.timeMandante.gols = timeMandanteGols
+        jogo.timeVisitante.gols = timeForaGolsVisitante
     }
 
-    adicionarGolsPartidaProrrogacao(jogo, timeCasaGolsProrrogacao, timeForaGolsProrrogacao){
-        jogo.timeCasa.golsProrrogacao = timeCasaGolsProrrogacao
-        jogo.timeFora.golsProrrogacao = timeForaGolsProrrogacao
+    adicionarGolsPartidaProrrogacao(jogo, timeMandanteGolsProrrogacao, timeVisitanteGolsProrrogacao){
+        jogo.timeMandante.golsProrrogacao = timeMandanteGolsProrrogacao
+        jogo.timeVisitante.golsProrrogacao = timeVisitanteGolsProrrogacao
     }
     
-    adicionarGolsPartidaPenalti(jogo, timeCasaGolsPenalti, timeForaGolsPenalti){
-        jogo.timeCasa.golsPenalti = timeCasaGolsPenalti
-        jogo.timeFora.golsPenalti = timeForaGolsPenalti
+    adicionarGolsPartidaPenalti(jogo, timeCasaGolsPenalti, timeVisitanteGolsPenalti){
+        jogo.timeMandante.golsPenalti = timeCasaGolsPenalti
+        jogo.timeVisitante.golsPenalti = timeVisitanteGolsPenalti
     }
 
-    desempate(jogo, desempateCasa, desempateFora){
-        jogo.timeCasa.desempate = desempateCasa
-        jogo.timeFora.desempate = desempateFora
+    desempate(jogo, desempateMandante, desempateVisitante){
+        jogo.timeMandante.desempate = desempateMandante
+        jogo.timeVisitante.desempate = desempateVisitante
     }
 
-    totalGols(jogo, timeCasaGols, timeForaGols){
-        jogo.totalGols = timeCasaGols + timeForaGols
+    totalGols(jogo, timeMandanteGols, timeForaGolsVisitante){
+        jogo.totalGols = timeMandanteGols + timeForaGolsVisitante
     }
 
-    diferencaGols(jogo, timeCasaGols, timeForaGols){
-        jogo.diferencaGolsCasa = timeCasaGols - timeForaGols
-        jogo.diferencaGolsFora = timeForaGols - timeCasaGols
+    diferencaGols(jogo, timeMandanteGols, timeForaGolsVisitante){
+        jogo.diferencaGolsCasa = timeMandanteGols - timeForaGolsVisitante
+        jogo.diferencaGolsFora = timeForaGolsVisitante - timeMandanteGols
         if(jogo.diferencaGolsCasa > 0) jogo.diferencaGols = jogo.diferencaGolsCasa
         else if(jogo.diferencaGolsCasa < 0) jogo.diferencaGols = jogo.diferencaGolsFora
-        else jogo.diferencaGols = timeCasaGols - timeForaGols
+        else jogo.diferencaGols = timeMandanteGols - timeForaGolsVisitante
     }
 
     modoCampeonato(temporada){
@@ -207,19 +206,18 @@ export class Temporada{
     }
 
     criarGrupos(tabelas) {
-        const criarObj = (tecnico) => ({
-            tecnico, pg: 0, j: 0, v: 0, e: 0, d: 0, gp: 0, gc: 0, sg: 0, pgp: 0, vp: 0, ep: 0, dp: 0, gpp: 0, gcp: 0, sgp: 0, pgpt: 0, vpt: 0, dpt: 0, gppt: 0, gcpt: 0, sgpt: 0, cd:0, desempate: 0 });
-
-        const existeTecnico = (tabela, tecnico) => {
+        const criarObj = (participante) => ({
+            participante, pg: 0, j: 0, v: 0, e: 0, d: 0, gp: 0, gc: 0, sg: 0, pgp: 0, vp: 0, ep: 0, dp: 0, gpp: 0, gcp: 0, sgp: 0, pgpt: 0, vpt: 0, dpt: 0, gppt: 0, gcpt: 0, sgpt: 0, cd:0, desempate: 0 });
+        const existeTecnico = (tabela, participante) => {
             return tabela.some(item =>
-                item.tecnico.participante.nome === tecnico.participante.nome &&
-                item.tecnico.time.nome === tecnico.time.nome
+                item.participante.tecnico.nome === participante.tecnico.nome &&
+                item.participante.time.nome === participante.time.nome
             );
         };
         tabelas.tabela.forEach(tabela => {
             tabela.jogos.forEach(jogo => {
-                const casa = jogo.timeCasa.tecnico;
-                const fora = jogo.timeFora.tecnico;
+                const casa = jogo.timeMandante.participante;
+                const fora = jogo.timeVisitante.participante;
                 if (tabela.fase.includes("X")) {
                     if(tabela.tabela.length == 0){
                         let grupos = this.separarStringGrupos(tabela.fase);
@@ -228,7 +226,7 @@ export class Temporada{
                             tabelas.tabela.forEach( (tab, index) => {
                                 if(index < grupos.length && tab.fase.includes(grupo)){
                                     tab.tabela.forEach( clube => {
-                                        tabela.tabela[i].clubes.push({tecnico: clube.tecnico, pg: 0, j: 0, v: 0, e: 0, d: 0, gp: 0, gc: 0, sg: 0, pgp: 0, vp: 0, ep: 0, dp: 0, gpp: 0, gcp: 0, sgp: 0, pgpt: 0, vpt: 0, dpt: 0, gppt: 0, gcpt: 0, sgpt: 0, cd:0, desempate: 0 })
+                                        tabela.tabela[i].clubes.push({participante: clube.participante, pg: 0, j: 0, v: 0, e: 0, d: 0, gp: 0, gc: 0, sg: 0, pgp: 0, vp: 0, ep: 0, dp: 0, gpp: 0, gcp: 0, sgp: 0, pgpt: 0, vpt: 0, dpt: 0, gppt: 0, gcpt: 0, sgpt: 0, cd:0, desempate: 0 })
                                     })
                                 }
                             })
@@ -256,28 +254,28 @@ export class Temporada{
     adicionarPontuacao(tabelas){
         tabelas.tabela.forEach( tabela => {
             tabela.jogos.forEach( jogo => {
-                let timeCasa, timeFora
+                let timeMandante, timeVisitante
                 if(tabela.tabela[0].grupo != undefined){
-                    let grupoClubeCasa = tabela.tabela.find( grupo => grupo.grupo && grupo.clubes.some( clube => clube.tecnico.participante.nome === jogo.timeCasa.tecnico.participante.nome && clube.tecnico.time.nome === jogo.timeCasa.tecnico.time.nome))
-                    timeCasa = grupoClubeCasa.clubes.find( clube => clube.tecnico.participante.nome === jogo.timeCasa.tecnico.participante.nome && clube.tecnico.time.nome === jogo.timeCasa.tecnico.time.nome)
-                    let grupoClubeFora = tabela.tabela.find( grupo => grupo.grupo && grupo.clubes.some( clube => clube.tecnico.participante.nome === jogo.timeFora.tecnico.participante.nome && clube.tecnico.time.nome === jogo.timeFora.tecnico.time.nome))
-                    timeFora = grupoClubeFora.clubes.find( clube => clube.tecnico.participante.nome === jogo.timeFora.tecnico.participante.nome && clube.tecnico.time.nome === jogo.timeFora.tecnico.time.nome)
+                    let grupoClubeCasa = tabela.tabela.find( grupo => grupo.grupo && grupo.clubes.some( clube => clube.participante.tecnico.nome === jogo.timeMandante.participante.tecnico.nome && clube.participante.time.nome === jogo.timeMandante.participante.time.nome))
+                    timeMandante = grupoClubeCasa.clubes.find( clube => clube.participante.tecnico.nome === jogo.timeMandante.participante.tecnico.nome && clube.participante.time.nome === jogo.timeMandante.participante.time.nome)
+                    let grupoClubeFora = tabela.tabela.find( grupo => grupo.grupo && grupo.clubes.some( clube => clube.participante.tecnico.nome === jogo.timeVisitante.participante.tecnico.nome && clube.participante.time.nome === jogo.timeVisitante.participante.time.nome))
+                    timeVisitante = grupoClubeFora.clubes.find( clube => clube.participante.tecnico.nome === jogo.timeVisitante.participante.tecnico.nome && clube.participante.time.nome === jogo.timeVisitante.participante.time.nome)
                 }else{
-                    timeCasa = tabela.tabela.find( clube => clube.tecnico.participante.nome === jogo.timeCasa.tecnico.participante.nome && clube.tecnico.time.nome === jogo.timeCasa.tecnico.time.nome)
-                    timeFora = tabela.tabela.find( clube => clube.tecnico.participante.nome === jogo.timeFora.tecnico.participante.nome && clube.tecnico.time.nome === jogo.timeFora.tecnico.time.nome)
+                    timeMandante = tabela.tabela.find( clube => clube.participante.tecnico.nome === jogo.timeMandante.participante.tecnico.nome && clube.participante.time.nome === jogo.timeMandante.participante.time.nome)
+                    timeVisitante = tabela.tabela.find( clube => clube.participante.tecnico.nome === jogo.timeVisitante.participante.tecnico.nome && clube.participante.time.nome === jogo.timeVisitante.participante.time.nome)
                 }
                 this.campeonato.jogos.push(jogo)
-                let golsCasa = jogo.timeCasa.gols
-                let golsFora = jogo.timeFora.gols
-                this.adicionarVitoria(timeCasa, golsCasa, timeFora, golsFora)
-                this.adicionarEmpate(timeCasa, golsCasa, timeFora, golsFora)
-                this.adicionarDerrota(timeCasa, golsCasa, timeFora, golsFora)
-                this.somarJogos(timeCasa, timeFora)
-                this.adicionarGolsPro(timeCasa, golsCasa, timeFora, golsFora)
-                this.adicionarGolsContra(timeCasa, golsCasa, timeFora, golsFora)
-                this.adicionarSaldoGols(timeCasa, golsCasa, timeFora, golsFora)
-                this.adicionarDesempate(timeCasa, jogo.timeCasa.desempate, timeFora, jogo.timeFora.desempate)
-                this.decisaoPenalti(jogo, timeCasa, timeFora)
+                let golsCasa = jogo.timeMandante.gols
+                let golsFora = jogo.timeVisitante.gols
+                this.adicionarVitoria(timeMandante, golsCasa, timeVisitante, golsFora)
+                this.adicionarEmpate(timeMandante, golsCasa, timeVisitante, golsFora)
+                this.adicionarDerrota(timeMandante, golsCasa, timeVisitante, golsFora)
+                this.somarJogos(timeMandante, timeVisitante)
+                this.adicionarGolsPro(timeMandante, golsCasa, timeVisitante, golsFora)
+                this.adicionarGolsContra(timeMandante, golsCasa, timeVisitante, golsFora)
+                this.adicionarSaldoGols(timeMandante, golsCasa, timeVisitante, golsFora)
+                this.adicionarDesempate(timeMandante, jogo.timeMandante.desempate, timeVisitante, jogo.timeVisitante.desempate)
+                this.decisaoPenalti(jogo, timeMandante, timeVisitante)
             })
             this.ordenarClassificacao(tabela, tabela)
         })
@@ -285,23 +283,23 @@ export class Temporada{
         this.somarTabelasCampeonato()
     }
 
-    adicionarVitoria(timeCasa, golsCasa, timeFora, golsFora){
+    adicionarVitoria(timeMandante, golsCasa, timeVisitante, golsFora){
         if(golsCasa > golsFora){
-            timeCasa.v += 1
-            this.adicionarPontos(timeCasa, this.pontoVitoria)
+            timeMandante.v += 1
+            this.adicionarPontos(timeMandante, this.pontoVitoria)
         }else if(golsCasa < golsFora){
-            timeFora.v += 1
-            this.adicionarPontos(timeFora, this.pontoVitoria)
+            timeVisitante.v += 1
+            this.adicionarPontos(timeVisitante, this.pontoVitoria)
         }
     }
 
-    adicionarEmpate(timeCasa, golsCasa, timeFora, golsFora){
+    adicionarEmpate(timeMandante, golsCasa, timeVisitante, golsFora){
         if(golsCasa == golsFora){
             if(golsCasa != 'W.O.', golsFora != 'W.O.'){
-                timeCasa.e += 1
-                timeFora.e += 1
-                this.adicionarPontos(timeCasa, 1)
-                this.adicionarPontos(timeFora, 1)
+                timeMandante.e += 1
+                timeVisitante.e += 1
+                this.adicionarPontos(timeMandante, 1)
+                this.adicionarPontos(timeVisitante, 1)
             }
         }
     }
@@ -310,97 +308,97 @@ export class Temporada{
         time.pg += pontos
     }
 
-    adicionarDerrota(timeCasa, golsCasa, timeFora, golsFora){
+    adicionarDerrota(timeMandante, golsCasa, timeVisitante, golsFora){
         if(golsCasa < golsFora){
-            timeCasa.d += 1
+            timeMandante.d += 1
         }else if(golsCasa > golsFora){
-            timeFora.d += 1
+            timeVisitante.d += 1
         }
     }
 
-    somarJogos(timeCasa, timeFora){
-        timeCasa.j += 1
-        timeFora.j += 1
+    somarJogos(timeMandante, timeVisitante){
+        timeMandante.j += 1
+        timeVisitante.j += 1
     }
 
-    adicionarGolsPro(timeCasa, golsCasa, timeFora, golsFora){
-        timeCasa.gp += golsCasa == 'W.O.' ? 0 : golsCasa
-        timeFora.gp += golsFora == 'W.O.' ? 0 : golsFora
+    adicionarGolsPro(timeMandante, golsCasa, timeVisitante, golsFora){
+        timeMandante.gp += golsCasa == 'W.O.' ? 0 : golsCasa
+        timeVisitante.gp += golsFora == 'W.O.' ? 0 : golsFora
     }
 
-    adicionarGolsContra(timeCasa, golsCasa, timeFora, golsFora){
-        timeCasa.gc += golsFora == 'W.O.' ? 0 : golsFora
-        timeFora.gc += golsCasa == 'W.O.' ? 0 : golsCasa
+    adicionarGolsContra(timeMandante, golsCasa, timeVisitante, golsFora){
+        timeMandante.gc += golsFora == 'W.O.' ? 0 : golsFora
+        timeVisitante.gc += golsCasa == 'W.O.' ? 0 : golsCasa
     }
 
-    adicionarSaldoGols(timeCasa, golsCasa, timeFora, golsFora){
-        timeCasa.sg += golsCasa == 'W.O.' ? 0 : golsCasa - golsFora 
-        timeFora.sg += golsFora == 'W.O.' ? 0 : golsFora - golsCasa 
+    adicionarSaldoGols(timeMandante, golsCasa, timeVisitante, golsFora){
+        timeMandante.sg += golsCasa == 'W.O.' ? 0 : golsCasa - golsFora 
+        timeVisitante.sg += golsFora == 'W.O.' ? 0 : golsFora - golsCasa 
     }
 
-    adicionarDesempate(timeCasa, desempateCasa, timeFora, desempateFora){
-        timeCasa.desempate += desempateCasa
-        timeFora.desempate += desempateFora
+    adicionarDesempate(timeMandante, desempateMandante, timeVisitante, desempateVisitante){
+        timeMandante.desempate += desempateMandante
+        timeVisitante.desempate += desempateVisitante
     }
 
-    decisaoPenalti(jogo, timeCasa, timeFora){
-        let golsCasaPenalti = jogo.timeCasa.golsPenalti
-        let golsForaPenalti = jogo.timeFora.golsPenalti
-        this.adicionarGolsProPenalti(timeCasa, golsCasaPenalti, timeFora, golsForaPenalti)
-        this.adicionarGolsPenalti(timeCasa, golsCasaPenalti, timeFora, golsForaPenalti)
-        this.adicionarSaldoPenalti(timeCasa, golsCasaPenalti, timeFora, golsForaPenalti)
-        this.adicionarVitoriaPenalti(timeCasa, golsCasaPenalti, timeFora, golsForaPenalti)
-        this.adicionarDerrotaPenalti(timeCasa, golsCasaPenalti, timeFora, golsForaPenalti)
+    decisaoPenalti(jogo, timeMandante, timeVisitante){
+        let golsCasaPenalti = jogo.timeMandante.golsPenalti
+        let golsForaPenalti = jogo.timeVisitante.golsPenalti
+        this.adicionarGolsProPenalti(timeMandante, golsCasaPenalti, timeVisitante, golsForaPenalti)
+        this.adicionarGolsPenalti(timeMandante, golsCasaPenalti, timeVisitante, golsForaPenalti)
+        this.adicionarSaldoPenalti(timeMandante, golsCasaPenalti, timeVisitante, golsForaPenalti)
+        this.adicionarVitoriaPenalti(timeMandante, golsCasaPenalti, timeVisitante, golsForaPenalti)
+        this.adicionarDerrotaPenalti(timeMandante, golsCasaPenalti, timeVisitante, golsForaPenalti)
         if(jogo.penalti){ 
-            this.adicionarPontosPenalti(timeCasa, golsCasaPenalti, timeFora, golsForaPenalti)
-            this.adicionarPontosGeralPenalti(timeCasa, golsCasaPenalti, timeFora, golsForaPenalti)
+            this.adicionarPontosPenalti(timeMandante, golsCasaPenalti, timeVisitante, golsForaPenalti)
+            this.adicionarPontosGeralPenalti(timeMandante, golsCasaPenalti, timeVisitante, golsForaPenalti)
         } 
     }
 
-    adicionarGolsProPenalti(timeCasa, golsCasa, timeFora, golsFora){
-        timeCasa.gppt += golsCasa
-        timeFora.gppt += golsFora
+    adicionarGolsProPenalti(timeMandante, golsCasa, timeVisitante, golsFora){
+        timeMandante.gppt += golsCasa
+        timeVisitante.gppt += golsFora
     }
 
-    adicionarGolsPenalti(timeCasa, golsCasa, timeFora, golsFora){
-        timeCasa.gcpt += golsFora
-        timeFora.gcpt += golsCasa
+    adicionarGolsPenalti(timeMandante, golsCasa, timeVisitante, golsFora){
+        timeMandante.gcpt += golsFora
+        timeVisitante.gcpt += golsCasa
     }
 
-    adicionarSaldoPenalti(timeCasa, golsCasa, timeFora, golsFora){
-        timeCasa.sgpt += golsCasa - golsFora
-        timeFora.sgpt += golsFora - golsCasa
+    adicionarSaldoPenalti(timeMandante, golsCasa, timeVisitante, golsFora){
+        timeMandante.sgpt += golsCasa - golsFora
+        timeVisitante.sgpt += golsFora - golsCasa
     }
     
-    adicionarVitoriaPenalti(timeCasa, golsCasaPenalti, timeFora, golsForaPenalti){
+    adicionarVitoriaPenalti(timeMandante, golsCasaPenalti, timeVisitante, golsForaPenalti){
         if(golsCasaPenalti > golsForaPenalti){
-            timeCasa.vpt += 1
+            timeMandante.vpt += 1
         }else if(golsCasaPenalti < golsForaPenalti){
-            timeFora.vpt += 1
+            timeVisitante.vpt += 1
         }
     }
 
-    adicionarDerrotaPenalti(timeCasa, golsCasaPenalti, timeFora, golsForaPenalti){
+    adicionarDerrotaPenalti(timeMandante, golsCasaPenalti, timeVisitante, golsForaPenalti){
         if(golsCasaPenalti < golsForaPenalti){
-            timeCasa.dpt += 1
+            timeMandante.dpt += 1
         }else if(golsCasaPenalti > golsForaPenalti){
-            timeFora.dpt += 1
+            timeVisitante.dpt += 1
         }
     }
 
-    adicionarPontosPenalti(timeCasa, golsCasaPenalti, timeFora, golsForaPenalti){
+    adicionarPontosPenalti(timeMandante, golsCasaPenalti, timeVisitante, golsForaPenalti){
         if(golsCasaPenalti > golsForaPenalti){
-            timeCasa.pgpt += 1
+            timeMandante.pgpt += 1
         }else if(golsCasaPenalti < golsForaPenalti){
-            timeFora.pgpt += 1
+            timeVisitante.pgpt += 1
         }
     }
 
-    adicionarPontosGeralPenalti(timeCasa, golsCasaPenalti, timeFora, golsForaPenalti){
+    adicionarPontosGeralPenalti(timeMandante, golsCasaPenalti, timeVisitante, golsForaPenalti){
         if(golsCasaPenalti > golsForaPenalti){
-            timeCasa.pg += 1
+            timeMandante.pg += 1
         }else if(golsCasaPenalti < golsForaPenalti){
-            timeFora.pg += 1
+            timeVisitante.pg += 1
         }
     }
 
@@ -427,19 +425,19 @@ export class Temporada{
             const jogoFinal = this.jogos.find(jogo =>
                 (jogo.fase === a.fase) &&
                 (
-                    jogo.timeCasa.tecnico.participante.nome === a.tecnico.participante.nome ||
-                    jogo.timeFora.tecnico.participante.nome === a.tecnico.participante.nome
+                    jogo.timeMandante.participante.tecnico.nome === a.participante.tecnico.nome ||
+                    jogo.timeVisitante.participante.tecnico.nome === a.participante.tecnico.nome
                 )
             );
             if (!jogoFinal) return 0;
             const golsA =
-                jogoFinal.timeCasa.tecnico.participante.nome === a.tecnico.participante.nome
-                    ? jogoFinal.timeCasa.gols + jogoFinal.timeCasa.golsProrrogacao + jogoFinal.timeCasa.golsPenalti
-                    : jogoFinal.timeFora.gols + jogoFinal.timeFora.golsProrrogacao + jogoFinal.timeFora.golsPenalti;
+                jogoFinal.timeMandante.participante.tecnico.nome === a.participante.tecnico.nome
+                    ? jogoFinal.timeMandante.gols + jogoFinal.timeMandante.golsProrrogacao + jogoFinal.timeMandante.golsPenalti
+                    : jogoFinal.timeVisitante.gols + jogoFinal.timeVisitante.golsProrrogacao + jogoFinal.timeVisitante.golsPenalti;
             const golsB =
-                jogoFinal.timeCasa.tecnico.participante.nome === b.tecnico.participante.nome
-                    ? jogoFinal.timeCasa.gols + jogoFinal.timeCasa.golsProrrogacao + jogoFinal.timeCasa.golsPenalti
-                    : jogoFinal.timeFora.gols + jogoFinal.timeFora.golsProrrogacao + jogoFinal.timeFora.golsPenalti;
+                jogoFinal.timeMandante.participante.tecnico.nome === b.participante.tecnico.nome
+                    ? jogoFinal.timeMandante.gols + jogoFinal.timeMandante.golsProrrogacao + jogoFinal.timeMandante.golsPenalti
+                    : jogoFinal.timeVisitante.gols + jogoFinal.timeVisitante.golsProrrogacao + jogoFinal.timeVisitante.golsPenalti;
             return golsB - golsA;
         }
         if (a.fase !== b.fase && a.fase !== undefined && b.fase !== undefined) {
@@ -457,20 +455,20 @@ export class Temporada{
     }
 
     confrontoDireto(a, b, fase){
-        if(a.tecnico.participante != undefined){
+        if(a.participante.tecnico != undefined){
             let jogosConfronto = this.jogos.filter( jogo => 
-                ((jogo.timeCasa.tecnico.participante.nome === a.tecnico.participante.nome && jogo.timeFora.tecnico.participante.nome === b.tecnico.participante.nome && jogo.timeCasa.tecnico.time.nome === a.tecnico.time.nome && jogo.timeFora.tecnico.time.nome === b.tecnico.time.nome) ||
-                (jogo.timeCasa.tecnico.participante.nome === b.tecnico.participante.nome && jogo.timeFora.tecnico.participante.nome === a.tecnico.participante.nome && jogo.timeCasa.tecnico.time.nome === b.tecnico.time.nome && jogo.timeFora.tecnico.time.nome === a.tecnico.time.nome)) && (fase == undefined ? jogo.fase.includes('fase') : jogo.fase.includes(fase.fase))
+                ((jogo.timeMandante.participante.tecnico.nome === a.participante.tecnico.nome && jogo.timeVisitante.participante.tecnico.nome === b.participante.tecnico.nome && jogo.timeMandante.participante.time.nome === a.participante.time.nome && jogo.timeVisitante.participante.time.nome === b.participante.time.nome) ||
+                (jogo.timeMandante.participante.tecnico.nome === b.participante.tecnico.nome && jogo.timeVisitante.participante.tecnico.nome === a.participante.tecnico.nome && jogo.timeMandante.participante.time.nome === b.participante.time.nome && jogo.timeVisitante.participante.time.nome === a.participante.time.nome)) && (fase == undefined ? jogo.fase.includes('fase') : jogo.fase.includes(fase.fase))
             )
             let golsA = 0
             let golsB = 0
             jogosConfronto.forEach( jogo => {
-                if(jogo.timeCasa.tecnico.participante.nome === a.tecnico.participante.nome && jogo.timeCasa.tecnico.time.nome === a.tecnico.time.nome){
-                    golsA += jogo.timeCasa.gols
-                    golsB += jogo.timeFora.gols
+                if(jogo.timeMandante.participante.tecnico.nome === a.participante.tecnico.nome && jogo.timeMandante.participante.time.nome === a.participante.time.nome){
+                    golsA += jogo.timeMandante.gols
+                    golsB += jogo.timeVisitante.gols
                 }else{
-                    golsA += jogo.timeFora.gols
-                    golsB += jogo.timeCasa.gols
+                    golsA += jogo.timeVisitante.gols
+                    golsB += jogo.timeMandante.gols
                 }
             })
             a.cd = 0
@@ -493,16 +491,16 @@ export class Temporada{
             tabela.tabela[i - 1].tabela.forEach(clube => {
                 let existe
                 if(clube.grupo != undefined){
-                    existe = this.tabelaClassificacaoGeral.some(cg => { return clube.clubes.some( c => cg.tecnico.participante.nome === c.tecnico.participante.nome && cg.tecnico.time.nome === c.tecnico.time.nome) }) 
+                    existe = this.tabelaClassificacaoGeral.some(cg => { return clube.clubes.some( c => cg.participante.tecnico.nome === c.participante.tecnico.nome && cg.participante.time.nome === c.participante.time.nome) }) 
                 }else{
-                    existe = this.tabelaClassificacaoGeral.some(cg => cg.tecnico.participante.nome === clube.tecnico.participante.nome && cg.tecnico.time.nome === clube.tecnico.time.nome );
+                    existe = this.tabelaClassificacaoGeral.some(cg => cg.participante.tecnico.nome === clube.participante.tecnico.nome && cg.participante.time.nome === clube.participante.time.nome );
                 }
                 if (existe) {
                     let clubeGeral
                     if(clube.grupo != undefined){
                         clube.clubes.forEach( c => {
                             clubeGeral = this.tabelaClassificacaoGeral.forEach(cg => {
-                                if(cg.tecnico.participante.nome === c.tecnico.participante.nome && cg.tecnico.time.nome === c.tecnico.time.nome){
+                                if(cg.participante.tecnico.nome === c.participante.tecnico.nome && cg.participante.time.nome === c.participante.time.nome){
                                     cg.pg += c.pg;
                                     cg.j += c.j;
                                     cg.v += c.v;
@@ -528,7 +526,7 @@ export class Temporada{
                             })
                         })
                     }else{                        
-                        clubeGeral = this.tabelaClassificacaoGeral.find(cg => cg.tecnico.participante.nome === clube.tecnico.participante.nome && cg.tecnico.time.nome === clube.tecnico.time.nome );
+                        clubeGeral = this.tabelaClassificacaoGeral.find(cg => cg.participante.tecnico.nome === clube.participante.tecnico.nome && cg.participante.time.nome === clube.participante.time.nome );
                         clubeGeral.pg += clube.pg;
                         clubeGeral.j += clube.j;
                         clubeGeral.v += clube.v;
@@ -552,7 +550,7 @@ export class Temporada{
                         clubeGeral.sgpt += clube.sgpt;
                     }
                 } else {
-                    this.tabelaClassificacaoGeral.push({ tecnico: clube.tecnico, pg: clube.pg, j: clube.j, v: clube.v, e: clube.e,  d: clube.d, gp: clube.gp,  gc: clube.gc, sg: clube.sg, pgp: clube.pgp, vp: clube.vp, ep: clube.ep, dp: clube.dp, gpp: clube.gpp, gcp: clube.gcp,  sgp: clube.sgp,  pgpt: clube.pgpt, vpt: clube.vpt, dpt: clube.dpt, gppt: clube.gppt, gcpt: clube.gcpt, sgpt: clube.sgpt, cd:0, fase: tabela.tabela[i - 1].fase.includes('3º Lugar') || tabela.tabela[i - 1].fase.includes('Final') ? tabela.tabela[i - 1].fase : fase});
+                    this.tabelaClassificacaoGeral.push({ participante: clube.participante, pg: clube.pg, j: clube.j, v: clube.v, e: clube.e,  d: clube.d, gp: clube.gp,  gc: clube.gc, sg: clube.sg, pgp: clube.pgp, vp: clube.vp, ep: clube.ep, dp: clube.dp, gpp: clube.gpp, gcp: clube.gcp,  sgp: clube.sgp,  pgpt: clube.pgpt, vpt: clube.vpt, dpt: clube.dpt, gppt: clube.gppt, gcpt: clube.gcpt, sgpt: clube.sgpt, cd:0, fase: tabela.tabela[i - 1].fase.includes('3º Lugar') || tabela.tabela[i - 1].fase.includes('Final') ? tabela.tabela[i - 1].fase : fase});
                 }
             });
             nomeFase = this.nomeFaseAnterior(tabela, i)
@@ -572,11 +570,11 @@ export class Temporada{
     somarTabelasCampeonato(){
         this.tabelaClassificacaoGeral.forEach(clube => {
             const existe = this.campeonato.tabelas.some(cg =>
-                cg.tecnico.participante.nome === clube.tecnico.participante.nome
+                cg.participante.tecnico.nome === clube.participante.tecnico.nome
             )
             if (existe) {
                 const clubeGeral = this.campeonato.tabelas.find(cg =>
-                    cg.tecnico.participante.nome === clube.tecnico.participante.nome 
+                    cg.participante.tecnico.nome === clube.participante.tecnico.nome 
                 );
                 clubeGeral.pg += clube.pg;
                 clubeGeral.j += clube.j;
@@ -600,14 +598,14 @@ export class Temporada{
                 clubeGeral.gcpt += clube.gcpt;
                 clubeGeral.sgpt += clube.sgpt;
             } else {
-                this.campeonato.tabelas.push({tecnico: clube.tecnico, pg: clube.pg, j: clube.j, v: clube.v, e: clube.e, d: clube.d, gp: clube.gp, gc: clube.gc, sg: clube.sg, pgp: clube.pgp, vp: clube.vp, ep: clube.ep, dp: clube.dp, gpp: clube.gpp, gcp: clube.gcp, sgp: clube.sgp, gpt: clube.pgpt, vpt: clube.vpt, dpt: clube.dpt, gppt: clube.gppt, gcpt: clube.gcpt, sgpt: clube.sgpt, cd:0 })
+                this.campeonato.tabelas.push({participante: clube.participante, pg: clube.pg, j: clube.j, v: clube.v, e: clube.e, d: clube.d, gp: clube.gp, gc: clube.gc, sg: clube.sg, pgp: clube.pgp, vp: clube.vp, ep: clube.ep, dp: clube.dp, gpp: clube.gpp, gcp: clube.gcp, sgp: clube.sgp, gpt: clube.pgpt, vpt: clube.vpt, dpt: clube.dpt, gppt: clube.gppt, gcpt: clube.gcpt, sgpt: clube.sgpt, cd:0 })
             }
         })
         this.ordenarClassificacao(this.campeonato.tabelas)
     } 
 
-    adicionarPontuacaoCompleta(tecnico, v, e, d, gp, gc){
-        this.tabelaClassificacaoGeral.push({tecnico: tecnico, pg: ( v * this.pontoVitoria ) + e, j: v + e + d, v: v, e: e, d: d, gp: gp, gc: gc, sg: gp - gc, pgp: 0, vp: 0, ep: 0, dp: 0, gpp: 0, gcp: 0, sgp: 0, pgpt: 0, vpt: 0, dpt: 0, gppt: 0, gcpt: 0, sgpt: 0, cd:0, desempate: 0 , fase: '1º fase'})
+    adicionarPontuacaoCompleta(participante, v, e, d, gp, gc){
+        this.tabelaClassificacaoGeral.push({participante: participante, pg: ( v * this.pontoVitoria ) + e, j: v + e + d, v: v, e: e, d: d, gp: gp, gc: gc, sg: gp - gc, pgp: 0, vp: 0, ep: 0, dp: 0, gpp: 0, gcp: 0, sgp: 0, pgpt: 0, vpt: 0, dpt: 0, gppt: 0, gcpt: 0, sgpt: 0, cd:0, desempate: 0 , fase: '1º fase'})
         this.ordenarClassificacao(this.tabelaClassificacaoGeral)
     }
 
@@ -616,22 +614,22 @@ export class Temporada{
         const filtrarAssociacao = [
             ...new Set(
                 temporada.campeonato.tabelas
-                    .map(t => t?.tecnico?.associacao?.nome)
+                    .map(t => t?.participante?.associacao?.nome)
                     .filter(Boolean)
             )
         ];
         associacoes.forEach( associacao => {
             filtrarAssociacao.forEach( nome => {
                 if(nome == associacao.nome){
-                        temporada.campeonato.tabelaAssociacao.push({tecnico: associacao, pg: 0, j: 0, v: 0, e: 0, d: 0, gp: 0, gc: 0, sg: 0, pgp: 0, vp: 0, ep: 0, dp: 0, gpp: 0, gcp: 0, sgp: 0, pgpt: 0, vpt: 0, dpt: 0, gppt: 0, gcpt: 0, sgpt: 0, cd:0, desempate: 0 })
+                        temporada.campeonato.tabelaAssociacao.push({participante: associacao, pg: 0, j: 0, v: 0, e: 0, d: 0, gp: 0, gc: 0, sg: 0, pgp: 0, vp: 0, ep: 0, dp: 0, gpp: 0, gcp: 0, sgp: 0, pgpt: 0, vpt: 0, dpt: 0, gppt: 0, gcpt: 0, sgpt: 0, cd:0, desempate: 0 })
                 }
             })
         })
         temporada.campeonato.jogos.forEach( jogo => {
             temporada.campeonato.tabelaAssociacao.forEach( tabela => {
-                if(jogo.timeCasa.tecnico.associacao.nome != jogo.timeFora.tecnico.associacao.nome){
-                    this.pontuacaoAssociacao(tabela, jogo.timeCasa, jogo.timeFora)
-                    this.pontuacaoAssociacao(tabela, jogo.timeFora, jogo.timeCasa)
+                if(jogo.timeMandante.participante.associacao.nome != jogo.timeVisitante.participante.associacao.nome){
+                    this.pontuacaoAssociacao(tabela, jogo.timeMandante, jogo.timeVisitante)
+                    this.pontuacaoAssociacao(tabela, jogo.timeVisitante, jogo.timeMandante)
                 }
             })
         })
@@ -649,44 +647,45 @@ export class Temporada{
         associacoes.forEach( associacao => {
             filtrarAssociacao.forEach( nome => {
                 if(nome == associacao.nome){
-                        this.tabelaGeralAssociacao.push({tecnico: associacao, pg: 0, j: 0, v: 0, e: 0, d: 0, gp: 0, gc: 0, sg: 0, pgp: 0, vp: 0, ep: 0, dp: 0, gpp: 0, gcp: 0, sgp: 0, pgpt: 0, vpt: 0, dpt: 0, gppt: 0, gcpt: 0, sgpt: 0, cd:0, desempate: 0 })
+                        this.tabelaGeralAssociacao.push({participante: associacao, pg: 0, j: 0, v: 0, e: 0, d: 0, gp: 0, gc: 0, sg: 0, pgp: 0, vp: 0, ep: 0, dp: 0, gpp: 0, gcp: 0, sgp: 0, pgpt: 0, vpt: 0, dpt: 0, gppt: 0, gcpt: 0, sgpt: 0, cd:0, desempate: 0 })
                 }
             })
         })
         temporada.jogos.forEach( jogo => {
             this.tabelaGeralAssociacao.forEach( tabela => {
-                if(jogo.timeCasa.tecnico.associacao.nome != jogo.timeFora.tecnico.associacao.nome){
-                    this.pontuacaoAssociacao(tabela, jogo.timeCasa, jogo.timeFora)
-                    this.pontuacaoAssociacao(tabela, jogo.timeFora, jogo.timeCasa)
+                if(jogo.timeMandante.participante.associacao.nome != jogo.timeVisitante.participante.associacao.nome){
+                    this.pontuacaoAssociacao(tabela, jogo.timeMandante, jogo.timeVisitante)
+                    this.pontuacaoAssociacao(tabela, jogo.timeVisitante, jogo.timeMandante)
                 }
             })
         })
+        
         this.ordenarClassificacao(this.tabelaGeralAssociacao, this.tabelaGeralAssociacao)
     }    
 
-    pontuacaoAssociacao(tabela, timeCasa, timeFora){
-        if(timeCasa.tecnico.associacao.nome == tabela.tecnico.nome){  
-            tabela.v += timeCasa.gols > timeFora.gols ? 1 : 0
-            tabela.e += timeCasa.gols == timeFora.gols ? 1 : 0
-            tabela.d += timeCasa.gols < timeFora.gols ? 1 : 0
+    pontuacaoAssociacao(tabela, timeMandante, timeVisitante){
+        if(timeMandante.participante.associacao.nome == tabela.participante.nome){  
+            tabela.v += timeMandante.gols > timeVisitante.gols ? 1 : 0
+            tabela.e += timeMandante.gols == timeVisitante.gols ? 1 : 0
+            tabela.d += timeMandante.gols < timeVisitante.gols ? 1 : 0
             tabela.j = tabela.v + tabela.e + tabela.d
             tabela.pg = (tabela.v * this.pontoVitoria) + tabela.e
-            tabela.gp += timeCasa.gols
-            tabela.gc += timeFora.gols
-            tabela.sg += timeCasa.gols - timeFora.gols
-            tabela.vp += timeCasa.golsProrrogacao > timeFora.golsProrrogacao ? 1 : 0
-            tabela.ep += timeCasa.golsProrrogacao == timeFora.golsProrrogacao ? 1 : 0
-            tabela.dp += timeCasa.golsProrrogacao < timeFora.golsProrrogacao ? 1 : 0
-            tabela.pgp += timeCasa.golsProrrogacao > timeFora.golsProrrogacao ? 1 : 0
-            tabela.gpp += timeCasa.golsProrrogacao
-            tabela.gcp += timeFora.golsProrrogacao
-            tabela.sgp += timeCasa.golsProrrogacao - timeFora.golsProrrogacao
-            tabela.vpt += timeCasa.golsPenalti > timeFora.golsPenalti ? 1 : 0
-            tabela.dpt += timeCasa.golsPenalti < timeFora.golsPenalti ? 1 : 0
-            tabela.pgpt += timeCasa.golsPenalti > timeFora.golsPenalti ? 1 : 0
-            tabela.gppt += timeCasa.golsPenalti
-            tabela.gcpt += timeFora.golsPenalti
-            tabela.sgpt += timeCasa.golsPenalti - timeFora.golsPenalti
+            tabela.gp += timeMandante.gols
+            tabela.gc += timeVisitante.gols
+            tabela.sg += timeMandante.gols - timeVisitante.gols
+            tabela.vp += timeMandante.golsProrrogacao > timeVisitante.golsProrrogacao ? 1 : 0
+            tabela.ep += timeMandante.golsProrrogacao == timeVisitante.golsProrrogacao ? 1 : 0
+            tabela.dp += timeMandante.golsProrrogacao < timeVisitante.golsProrrogacao ? 1 : 0
+            tabela.pgp += timeMandante.golsProrrogacao > timeVisitante.golsProrrogacao ? 1 : 0
+            tabela.gpp += timeMandante.golsProrrogacao
+            tabela.gcp += timeVisitante.golsProrrogacao
+            tabela.sgp += timeMandante.golsProrrogacao - timeVisitante.golsProrrogacao
+            tabela.vpt += timeMandante.golsPenalti > timeVisitante.golsPenalti ? 1 : 0
+            tabela.dpt += timeMandante.golsPenalti < timeVisitante.golsPenalti ? 1 : 0
+            tabela.pgpt += timeMandante.golsPenalti > timeVisitante.golsPenalti ? 1 : 0
+            tabela.gppt += timeMandante.golsPenalti
+            tabela.gcpt += timeVisitante.golsPenalti
+            tabela.sgpt += timeMandante.golsPenalti - timeVisitante.golsPenalti
             tabela.cd += 0
             tabela.desempate += 0
         }

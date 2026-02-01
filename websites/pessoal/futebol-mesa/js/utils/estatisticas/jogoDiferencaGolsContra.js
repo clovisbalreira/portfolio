@@ -3,13 +3,13 @@ import { pegarDados } from "../pegarDados.js";
 export function jogoDiferencaGolsContra(campeonato, condicaoGols, socio, mostrar) {
     const diferencas = campeonato.jogos
         .filter(jogo =>
-            jogo.timeCasa.tecnico.participante.nome === socio ||
-            jogo.timeFora.tecnico.participante.nome === socio ||
-            jogo.timeCasa.tecnico.associacao.nome === socio ||
-            jogo.timeFora.tecnico.associacao.nome === socio
+            jogo.timeMandante.participante.tecnico.nome === socio ||
+            jogo.timeVisitante.participante.tecnico.nome === socio ||
+            jogo.timeMandante.participante.associacao.nome === socio ||
+            jogo.timeVisitante.participante.associacao.nome === socio
         )
         .map(jogo => {
-            if (jogo.timeCasa.tecnico.participante.nome === socio || jogo.timeCasa.tecnico.associacao.nome === socio) {
+            if (jogo.timeMandante.participante.tecnico.nome === socio || jogo.timeMandante.participante.associacao.nome === socio) {
                 return jogo.diferencaGolsCasa
             }
             return jogo.diferencaGolsFora
@@ -20,13 +20,13 @@ export function jogoDiferencaGolsContra(campeonato, condicaoGols, socio, mostrar
     const menor = Math.min(...diferencas)
 
     const jogos = campeonato.jogos.filter(jogo =>
-        (jogo.timeCasa.tecnico.participante.nome === socio &&
+        (jogo.timeMandante.participante.tecnico.nome === socio &&
          jogo.diferencaGolsCasa === menor) ||
-        (jogo.timeFora.tecnico.participante.nome === socio &&
+        (jogo.timeVisitante.participante.tecnico.nome === socio &&
          jogo.diferencaGolsFora === menor) ||
-         (jogo.timeCasa.tecnico.associacao.nome === socio &&
+         (jogo.timeMandante.participante.associacao.nome === socio &&
          jogo.diferencaGolsCasa === menor) ||
-        (jogo.timeFora.tecnico.associacao.nome === socio &&
+        (jogo.timeVisitante.participante.associacao.nome === socio &&
          jogo.diferencaGolsFora === menor)
     )
     return menor > 0 ? '' : pegarDados(jogos, condicaoGols, '', mostrar)

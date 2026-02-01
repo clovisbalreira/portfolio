@@ -8,5 +8,5 @@ export function jogoMaisNumeroGols(campeonato, condicaoGols, mostrar){
     );
     const jogos = campeonato.jogos
     .filter(jogo => jogo.totalGols === maior);
-    return pegarDados(jogos, condicaoGols, mostrar, mostrar)
+    return pegarDados(jogos, condicaoGols, '', mostrar)
 }

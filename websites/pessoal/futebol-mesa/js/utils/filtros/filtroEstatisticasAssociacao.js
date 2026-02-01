@@ -68,7 +68,7 @@ function criarTh(texto, apagar){
 function criarTbodyAssociacao(tabela){
     let tbody = document.createElement('tbody')
     let tr = document.createElement('tr')   
-    tr.appendChild(criarTd(imagemTexto(tabela.tecnico), false, false))
+    tr.appendChild(criarTd(imagemTexto(tabela.participante), false, false))
     tr.appendChild(criarTd(tabela.pg, false, false))
     tr.appendChild(criarTd(tabela.j, false, false))
     tr.appendChild(criarTd(tabela.v, false, false))

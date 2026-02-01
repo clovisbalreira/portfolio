@@ -276,9 +276,8 @@ function imagensAnimacao(){
         imagem.addEventListener('mouseenter', () => {
             imagem.style.scale = 2
             imagem.style.position = 'absolute'
-            // imagem.style.top = '0'
-            imagem.style.left = '85%'         // centraliza horizontalmente...
-            imagem.style.transform = 'translateX(-50%)' // ...com base no centro
+            imagem.style.left = '85%' 
+            imagem.style.transform = 'translateX(-50%)'
             imagem.style.zIndex = '9999'
         })
         
@@ -338,7 +337,10 @@ function mostrarCursos(cursos, idioma, filtrar){
             filtrar ? condicaoFiltro(dados, ul, idioma, dados, instituicao, posicao) : desenharCursos(ul, idioma, dados, instituicao, posicao)            
         })
     })
-    imagensAnimacao()
+    if (window.innerWidth > 950) {
+        console.log(window.innerWidth)
+        imagensAnimacao()
+    }
 }
 
 function condicaoFiltro(dados, ul, idioma, dados, instituicao, posicao){

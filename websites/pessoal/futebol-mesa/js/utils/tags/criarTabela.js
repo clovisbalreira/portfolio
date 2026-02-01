@@ -1,7 +1,7 @@
 import { criarTag } from "./criarTag.js"
 
 export function criarTabela(campeonatos, penaltiPontos, tipo , time){
-    if(campeonatos[0].tecnico != undefined){
+    if(campeonatos[0] != undefined){
         let table = document.createElement('table')
         table.appendChild(criarThead(campeonatos, penaltiPontos))
         table.appendChild(criarTbody(campeonatos, penaltiPontos, tipo, time))
@@ -24,9 +24,9 @@ export function criarTabela(campeonatos, penaltiPontos, tipo , time){
 function criarThead(campeonatos, penaltiPontos){
     let thead = document.createElement('thead')
     let tr = document.createElement('tr')
-    let tituloTabela = [campeonatos[0].tecnico.nome == undefined ? 'Tecnico' : 'Associação', 'PG', 'J', 'V', 'E', 'D', 'GP', 'GC', 'SG']
+    let tituloTabela = [campeonatos[0].participante.nome == undefined ? 'Tecnico' : 'Associação', 'PG', 'J', 'V', 'E', 'D', 'GP', 'GC', 'SG']
     if(penaltiPontos){
-        tituloTabela = [campeonatos[0].tecnico.nome == undefined ? 'Tecnico' : 'Associação', 'PG', 'J', 'V', 'E', 'D', 'GP', 'GC', 'SG', 'VPT', 'DPT', 'GPPT', 'GCPT',  'SGPT']
+        tituloTabela = [campeonatos[0].participante.nome == undefined ? 'Tecnico' : 'Associação', 'PG', 'J', 'V', 'E', 'D', 'GP', 'GC', 'SG', 'VPT', 'DPT', 'GPPT', 'GCPT',  'SGPT']
     }
     tituloTabela.forEach( titulo => {
         let th = document.createElement('th')
@@ -44,7 +44,7 @@ function criarTbody(campeonato, penaltiPontos, tipo, time){
     let tbody = document.createElement('tbody')
     campeonato.forEach( tabela => {
         let tr = document.createElement('tr')
-        tr.appendChild(criarTd(imagemTexto(tabela.tecnico, tipo, time)))
+        tr.appendChild(criarTd(imagemTexto(tabela.participante, tipo, time)))
         tr.appendChild(criarTd(tabela.pg, false))
         tr.appendChild(criarTd(tabela.j, false))
         tr.appendChild(criarTd(tabela.v, false))
@@ -81,17 +81,16 @@ function criarTd(conteudo, apagar){
 
 function imagemTexto(associacao, tipo, time) {
     const div = document.createElement('div')
-    
     if (tipo === 'Externo' && (associacao?.associacao || associacao?.nome)) {
         div.appendChild(
             colocarImagem(
                 associacao.associacao == undefined ? associacao.escudo : associacao.associacao.escudo,
-                associacao.participante == undefined ? associacao?.nome ?? '' : associacao?.participante?.nome ?? '',
+                associacao.associacao == undefined ? associacao?.nome ?? '' : associacao?.associacao?.nome ?? '',
                 'associacoes'
             )
         )
     }
-
+    
     if (time === true && associacao?.time?.nome) {
         div.appendChild(
             colocarImagem(
@@ -101,9 +100,8 @@ function imagemTexto(associacao, tipo, time) {
             )
         )
     }
-
     const p = document.createElement('p')
-    p.textContent = associacao.participante == undefined ? associacao?.sigla ?? '' : associacao?.participante?.nome ?? ''
+    p.textContent = associacao.tecnico == undefined ? associacao?.sigla ?? '' : associacao?.tecnico?.nome ?? ''
     div.appendChild(p)
 
     return div

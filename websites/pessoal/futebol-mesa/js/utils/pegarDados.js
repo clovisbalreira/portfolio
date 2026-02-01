@@ -5,8 +5,8 @@ export function pegarDados(jogos, condicaoGols, tipo, mostrar){
         texto = partidasGols(jogos, condicaoGols)
     }else{
         jogos.forEach( (jogo, index) => {
-            if(jogo.tecnico == undefined){
-                texto += partidasEstatisticas(JogoAnterior, jogo, condicaoGols, index, jogo.tipo, mostrar)
+            if(jogo.participante == undefined){
+                texto += partidasEstatisticas(JogoAnterior, jogo, condicaoGols, index, tipo, mostrar)
                 JogoAnterior = jogo.campeonato;
             }else{
                 texto += gerarTextoTecnico(jogo, condicaoGols, tipo, mostrar)
@@ -32,9 +32,9 @@ function partidasEstatisticas(JogoAnterior, jogo, condicaoGols, index, tipo, mos
     if (index > 0) texto += '</p>';
         texto += `<p class="campeonato">${jogo.campeonato}</p>`;
     }
-    const nomeCasa = possuiTime(jogo.timeCasa, true, tipo, mostrar)
-    const nomeFora = possuiTime(jogo.timeFora, false, tipo, mostrar)
-    texto += `<div class="jogo-estatisticas">${nomeCasa}<p>${jogo.timeCasa.gols}</p><p>X</p><p>${jogo.timeFora.gols}</p>${nomeFora}</div>`;
+    const nomeCasa = possuiTime(jogo.timeMandante, true, tipo, mostrar)
+    const nomeFora = possuiTime(jogo.timeVisitante, false, tipo, mostrar)
+    texto += `<div class="jogo-estatisticas">${nomeCasa}<p>${jogo.timeMandante.gols}</p><p>X</p><p>${jogo.timeVisitante.gols}</p>${nomeFora}</div>`;
     return texto
 }
 
@@ -62,62 +62,61 @@ function possuiTime(obj, casaFora, tipo, mostrar) {
     let texto = ''
     casaFora = Boolean(casaFora)
     const temTime =
-    obj?.tecnico?.time?.nome &&
-    obj.tecnico.time.nome.trim() !== ''
+    obj?.participante?.time?.nome &&
+    obj.participante.time.nome.trim() !== ''
     if(mostrar){
         if (casaFora && tipo === 'Externo' && temTime) {
             texto = `
                 <div>
-                    <img src="./img/associacoes/${obj.tecnico.associacao.escudo}">
-                    <img src="./img/times/${obj.tecnico.time.escudo}">
-                    <p>${obj.tecnico.participante.nome}</p>
+                    <img src="./img/times/${obj.participante.time.escudo}">
+                    <p>${obj.participante.tecnico.nome}</p>
                 </div>
             `
         } else if (!casaFora && tipo === 'Externo' && temTime) {
             texto = `
                 <div>
-                    <p>${obj.tecnico.participante.nome}</p>
-                    <img src="./img/times/${obj.tecnico.time.escudo}">
-                    <img src="./img/associacoes/${obj.tecnico.associacao.escudo}">
+                    <p>${obj.participante.tecnico.nome}</p>
+                    <img src="./img/times/${obj.participante.time.escudo}">
+                    <img src="./img/associacoes/${obj.participante.associacao.escudo}">
                 </div>
             `
         }else if (casaFora && tipo === 'Externo' && !temTime) {
             texto = `
                 <div>
-                    <img src="./img/associacoes/${obj.tecnico.associacao.escudo}">
-                    <p>${obj.tecnico.participante.nome}</p>
+                    <img src="./img/associacoes/${obj.participante.associacao.escudo}">
+                    <p>${obj.participante.tecnico.nome}</p>
                 </div>
             `
         } else if (!casaFora && tipo === 'Externo' && !temTime) {
             texto = `
                 <div>
-                    <p>${obj.tecnico.participante.nome}</p>
-                    <img src="./img/associacoes/${obj.tecnico.associacao.escudo}">
+                    <p>${obj.participante.tecnico.nome}</p>
+                    <img src="./img/associacoes/${obj.participante.associacao.escudo}">
                 </div>
             `
         } else if (casaFora && tipo !== 'Externo' && temTime) {
             texto = `
                 <div>
-                    <img src="./img/times/${obj.tecnico.time.escudo}">
-                    <p>${obj.tecnico.participante.nome}</p>
+                    <img src="./img/times/${obj.participante.time.escudo}">
+                    <p>${obj.participante.tecnico.nome}</p>
                 </div>
             `
         } else if (!casaFora && tipo !== 'Externo' && temTime) {
             texto = `
                 <div>
-                    <p>${obj.tecnico.participante.nome}</p>
-                    <img src="./img/times/${obj.tecnico.time.escudo}">
+                    <p>${obj.participante.tecnico.nome}</p>
+                    <img src="./img/times/${obj.participante.time.escudo}">
                 </div>
             `
         } else{
             texto = `
                 <div>
-                    <p>${obj.tecnico.participante.nome}</p>
+                    <p>${obj.participante.tecnico.nome}</p>
                 </div>
             `
         }
     }else {
-        texto = `<p>${obj.tecnico.participante.nome}</p>`
+        texto = `<p>${obj.participante.tecnico.nome}</p>`
     }
 
     return texto

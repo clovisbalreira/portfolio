@@ -64,7 +64,6 @@ function dadosGerais(campeonato, filtrarTemporadas){
     }
     section.appendChild(mostrarDados(dados, 'Dados', 'dados', true))
     section.appendChild(campeoesRanking(filtrarTemporadas))
-
     if(campeonato.tabelas[0].j != 0){
         let div = document.createElement('div')
         div.classList.add(campeonato.tipo.nome == 'Externo' ? 'estatisticas-geral-tabela' : 'tela-inteira')
@@ -87,7 +86,7 @@ function campeoesRanking(filtrarTemporadas){
     div.id = "campeoes-ranking"
     const campeoes = filtrarTemporadas.map(temporada => ({
         titulo: `${temporada.nome} ${temporada.campeonato.nome}`,
-        dado: temporada.tabelaClassificacaoGeral[0].tecnico.participante.nome
+        dado: temporada.tabelaClassificacaoGeral[0].participante.tecnico.nome
     }));
     div.appendChild(mostrarDados(campeoes, 'Campeões', 'campeoes'))
     const ranking = Object.values(

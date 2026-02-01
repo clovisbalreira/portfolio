@@ -16,9 +16,9 @@ export function mostrarMain(socios, associacao, campeonatos, temporadas, variave
         totalJogos.push(jogo)
     })
     if(totalJogos.length > 0){
-        let tabelas = { tecnico: '', pg: 0, j: 0, v: 0, e: 0, d: 0, gp: 0, gc: 0, sg: 0, pgp: 0, vp: 0,  ep: 0, dp: 0, gpp: 0, gcp: 0, sgp: 0, gpt: 0,   vpt: 0, dpt: 0, gppt: 0, gcpt: 0, sgpt: 0, pgpt: 0 }
+        let tabelas = { participante: '', pg: 0, j: 0, v: 0, e: 0, d: 0, gp: 0, gc: 0, sg: 0, pgp: 0, vp: 0,  ep: 0, dp: 0, gpp: 0, gcp: 0, sgp: 0, gpt: 0,   vpt: 0, dpt: 0, gppt: 0, gcpt: 0, sgpt: 0, pgpt: 0 }
         filtrarAssociacao.tabelas.forEach( tabela => {
-            tabelas.tecnico = tabela.tabela.associacao
+            tabelas.participante = tabela.tabela.associacao
             tabelas.pg += tabela.tabela.pg
             tabelas.j += tabela.tabela.j
             tabelas.v += tabela.tabela.v
@@ -84,7 +84,7 @@ function campeoes(socios, associacao, campeonatos, filtrarTemporadas){
         temporada.tabelaClassificacaoGeral.forEach(( tabela, index) => {
             if(index == 0){
                 filtrarSocios.forEach( socio => {
-                    if(tabela.tecnico.participante.nome == socio.nome){
+                    if(tabela.participante.tecnico.nome == socio.nome){
                         socio.campeonatos.forEach( campeonato => {
                             if(campeonato.nome == temporada.campeonato.nome && temporada.campeonato.regra.nome == campeonato.regra){
                                 campeonato.total += 1
