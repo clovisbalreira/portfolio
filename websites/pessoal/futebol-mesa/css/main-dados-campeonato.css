@@ -186,7 +186,7 @@ main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral
     }
 }
 
-@media (max-width: 390px){ 
+@media (max-width: 412px){ 
     main #principal #dados-gerais #dados-geral #dados-campeonato .section-etapa .tabelas table tbody tr td:first-child div{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -216,13 +216,13 @@ main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral
         align-items: center;
     }
 
-    main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral #estatisticas div ul li:nth-child(n+14) div div div:first-child, main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral #estatisticas div ul li:nth-child(n+14) div div div:last-child{
+    main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral #estatisticas div ul li:nth-child(n+14) div div div:first-child, main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral #estatisticas div ul li:nth-child(n+14) div div div:last-child, main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral .estatisticas-geral-tabela table tbody tr td:first-child div{
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
     }
 
-    main #principal #dados-gerais #dados-geral #dados-campeonato .section-etapa .tabelas table tbody tr td:first-child div p, main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral .estatisticas-geral-tabela table tbody tr td:first-child div p, main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral #estatisticas div ul li:nth-child(n+14) div div div:first-child p, main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral #estatisticas div ul li:nth-child(n+14) div div div:last-child p{
+    main #principal #dados-gerais #dados-geral #dados-campeonato .section-etapa .tabelas table tbody tr td:first-child div p, main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral .estatisticas-geral-tabela table tbody tr td:first-child div p, main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral #estatisticas div ul li:nth-child(n+14) div div div:first-child p, main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral #estatisticas div ul li:nth-child(n+14) div div div:last-child p, main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral .estatisticas-geral-tabela table tbody tr td:first-child div p{
         grid-column: 1 / 3; 
         grid-row: 1;
         justify-content: center;
@@ -239,7 +239,7 @@ main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral
         grid-row: 2;
     }
 
-    main #principal #dados-gerais #dados-geral #dados-campeonato .section-etapa .tabelas table tbody tr td:first-child div .posicao{
+    main #principal #dados-gerais #dados-geral #dados-campeonato .section-etapa .tabelas table tbody tr td:first-child div .posicao, main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral .estatisticas-geral-tabela table tbody tr td:first-child div .posicao{
         grid-column: 1 / 3; 
         grid-row: 2;
         margin: auto;

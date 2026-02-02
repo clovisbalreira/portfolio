@@ -1,5 +1,5 @@
 export let variavelGlobal = {
-    associacao : 2,
+    associacao : 0,
     campeonato : 0,
     temporada : 0,
     socio: 0,
