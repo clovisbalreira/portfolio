@@ -10,7 +10,7 @@ export function adicionarJogo(dados, campeonato){
     tbody.appendChild(criarTrJogo(dados, false))
     if(dados.diferencaGols == 0 && dados.prorrogacao){
         if(dados.prorrogacao != 'Penalti') tbody.appendChild(criarTrProrragacaoPenalti(dados, true))
-       if(dados.timeMandante.golsProrrogacao == dados.timeVisitante.golsProrrogacao) tbody.appendChild(criarTrProrragacaoPenalti(dados, false))
+       if(dados.equipeMandante.golsProrrogacao == dados.equipeVisitante.golsProrrogacao) tbody.appendChild(criarTrProrragacaoPenalti(dados, false))
     }else if(dados.diferencaGols == 0 && dados.penalti){
         tbody.appendChild(criarTrProrragacaoPenalti(dados, false))
     }
@@ -21,7 +21,7 @@ export function adicionarJogo(dados, campeonato){
 function criarTrJogo(dados, table){
     let tr = document.createElement('tr')
     if(table){
-        if (dados.timeMandante != undefined) {
+        if (dados.equipeMandante != undefined) {
             tr.appendChild(criarTh(dados.campeonato, 1, table ? 'nome-jogo' : 'nome-jogo-maior'))
             tr.appendChild(criarTh(formatarData(dados.data), 3, 'data-jogo'))
             tr.appendChild(criarTh(`${dados.fase.includes('-') ? dados.fase.split('-')[1].trim() : dados.fase} - ${dados.turno}`, 1, 'turno-jogo'))
@@ -29,12 +29,12 @@ function criarTrJogo(dados, table){
             tr.appendChild(criarTh(dados.tipo, 1, 'tipo-jogo'))
         }
     }else{
-        if (dados.timeMandante != undefined) {
-            tr.appendChild(criarTd(timeTecnico(dados.timeMandante, true, dados.tipo), 1, 'time-participante-jogo-mandante'))
-            tr.appendChild(criarTd(dados.timeMandante.gols, 1, 'placar-jogo'))
+        if (dados.equipeMandante != undefined) {
+            tr.appendChild(criarTd(equipeTecnico(dados.equipeMandante, true, dados.tipo), 1, 'equipe-participante-jogo-mandante'))
+            tr.appendChild(criarTd(dados.equipeMandante.gols, 1, 'placar-jogo'))
             tr.appendChild(criarTd('X', 1, 'placar-jogo'))
-            tr.appendChild(criarTd(dados.timeVisitante.gols, 1, 'placar-jogo'))
-            tr.appendChild(criarTd(timeTecnico(dados.timeVisitante, false, dados.tipo), 3, 'time-participante-jogo-visitante'))
+            tr.appendChild(criarTd(dados.equipeVisitante.gols, 1, 'placar-jogo'))
+            tr.appendChild(criarTd(equipeTecnico(dados.equipeVisitante, false, dados.tipo), 3, 'equipe-participante-jogo-visitante'))
         }
     }
     return tr
@@ -42,12 +42,12 @@ function criarTrJogo(dados, table){
 
 function criarTrProrragacaoPenalti(dados, condicao){
     let tr = document.createElement('tr')
-    tr.appendChild(criarTd(condicao ? 'Prorrogação' : 'Penalti', 1, 'time-participante-jogo-mandante'))
-    if (dados.timeMandante != undefined) {
-        tr.appendChild(criarTd(condicao ? dados.timeMandante.golsProrrogacao : dados.timeMandante.golsPenalti, 1, 'placar-jogo'))
+    tr.appendChild(criarTd(condicao ? 'Prorrogação' : 'Penalti', 1, 'equipe-participante-jogo-mandante'))
+    if (dados.equipeMandante != undefined) {
+        tr.appendChild(criarTd(condicao ? dados.equipeMandante.golsProrrogacao : dados.equipeMandante.golsPenalti, 1, 'placar-jogo'))
         tr.appendChild(criarTd('X', 1, 'placar-jogo'))
-        tr.appendChild(criarTd(condicao ? dados.timeVisitante.golsProrrogacao : dados.timeVisitante.golsPenalti, 1, 'placar-jogo'))
-        tr.appendChild(criarTd('', 3, 'time-participante-jogo-visitante'))
+        tr.appendChild(criarTd(condicao ? dados.equipeVisitante.golsProrrogacao : dados.equipeVisitante.golsPenalti, 1, 'placar-jogo'))
+        tr.appendChild(criarTd('', 3, 'equipe-participante-jogo-visitante'))
     }
     return tr
 }
@@ -68,13 +68,13 @@ function criarTd(dado, coluna, classe){
     return td
 }
 
-function timeTecnico(time, casaVisitante, tipo){
+function equipeTecnico(equipe, casaVisitante, tipo){
     let texto = '<div>'
-    if(casaVisitante && tipo == 'Externo') texto += `<img ${time.participante.time.nome != undefined ? '' : 'class="posicao"'} src="./img/associacoes/${time.participante.associacao.escudo}" alt="${time.participante.associacao.nome}">`
-    if(casaVisitante && time.participante.time.nome != undefined) texto += `<img ${tipo == 'Externo' ? '' : 'class="posicao"'} src="./img/times/${time.participante.time.escudo}" alt="${time.participante.time.nome}">`
-    texto += `<p>${time.participante.tecnico.nome}</p>`
-    if(!casaVisitante && time.participante.time.nome != undefined) texto += `<img ${tipo == 'Externo' ? '' : 'class="posicao"'} src="./img/times/${time.participante.time.escudo}" alt="${time.participante.time.nome}">`
-    if(!casaVisitante && tipo == 'Externo') texto += `<img ${time.participante.time.nome != undefined ? '' : 'class="posicao"'} src="./img/associacoes/${time.participante.associacao.escudo}" alt="${time.participante.associacao.nome}">`
+    if(casaVisitante && tipo == 'Externo') texto += `<img ${equipe.participante.equipe.nome != undefined ? '' : 'class="posicao"'} src="./img/associacoes/${equipe.participante.associacao.escudo}" alt="${equipe.participante.associacao.nome}">`
+    if(casaVisitante && equipe.participante.equipe.nome != undefined) texto += `<img ${tipo == 'Externo' ? '' : 'class="posicao"'} src="./img/equipes/${equipe.participante.equipe.escudo}" alt="${equipe.participante.equipe.nome}">`
+    texto += `<p>${equipe.participante.tecnico.nome}</p>`
+    if(!casaVisitante && equipe.participante.equipe.nome != undefined) texto += `<img ${tipo == 'Externo' ? '' : 'class="posicao"'} src="./img/equipes/${equipe.participante.equipe.escudo}" alt="${equipe.participante.equipe.nome}">`
+    if(!casaVisitante && tipo == 'Externo') texto += `<img ${equipe.participante.equipe.nome != undefined ? '' : 'class="posicao"'} src="./img/associacoes/${equipe.participante.associacao.escudo}" alt="${equipe.participante.associacao.nome}">`
     texto += '</div>'
     return texto
 }

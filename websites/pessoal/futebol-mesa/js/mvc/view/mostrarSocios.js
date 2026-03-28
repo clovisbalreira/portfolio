@@ -46,7 +46,7 @@ export function mostrarSocios(socio, campeonatos, temporadas, variavelGlobal, so
             }
         })
         campeonato.jogos.forEach( jogo => {
-            if(jogo.timeMandante.participante.tecnico.nome == socioNome || jogo.timeVisitante.participante.tecnico.nome == socioNome){
+            if(jogo.equipeMandante.participante.tecnico.nome == socioNome || jogo.equipeVisitante.participante.tecnico.nome == socioNome){
                 totalJogos.push(jogo)
             } 
         })

@@ -78,9 +78,19 @@ function mostrarEstatisticas(campeonato, tipo){
     section.classList.add('grid')
     let div = document.createElement('div')
     div.classList.add('estatisticas-geral-tabela')
-    div.appendChild(criarTag('h2', 'Classificação Geral'))
-    div.appendChild(criarTabela(campeonato.tabelaClassificacaoGeral, campeonato.penaltiPontos, tipo, true))
-    section.appendChild(div)
+    console.log(campeonato.tabelaClassificacaoGeral, campeonato.tabelaClassificacaoEquipe)
+    if(campeonato.tabelaClassificacaoGeral.length != campeonato.tabelaClassificacaoEquipe.length && campeonato.tabelaClassificacaoEquipe.length > 0){
+        div.appendChild(criarTag('h2', 'Classificação Geral Equipes'))
+        div.appendChild(criarTabela(campeonato.tabelaClassificacaoEquipe, campeonato.penaltiPontos, tipo, true))
+        section.appendChild(div)
+        div.appendChild(criarTag('h2', 'Classificação Geral Tecnicos'))
+        div.appendChild(criarTabela(campeonato.tabelaClassificacaoGeral, campeonato.penaltiPontos, tipo, true))
+        section.appendChild(div)
+    }else{
+        div.appendChild(criarTag('h2', 'Classificação Geral'))
+        div.appendChild(criarTabela(campeonato.tabelaClassificacaoGeral, campeonato.penaltiPontos, tipo, true))
+        section.appendChild(div)
+    }
     if(campeonato.campeonato.tipo.nome == 'Externo'){
         div = document.createElement('div')
         div.classList.add('estatisticas-geral-tabela-associacao')
@@ -102,9 +112,11 @@ function mostrarEstatisticas(campeonato, tipo){
         { titulo: 'Pior ataque', dado: piorAtaque(campeonato, 'gp', true)},
         { titulo: 'Melhor defesa', dado: melhorDefesa(campeonato, 'gc', true)},
         { titulo: 'Pior defesa', dado: piorDefesa(campeonato, 'gc', true)},
-        { titulo: 'Jogo com mais gols', dado: jogoMaisNumeroGols(campeonato, false, true)},
-        { titulo: 'Jogo com maior diferença de gols', dado: jogoDiferencaGols(campeonato, false, true)},
     ]
+    if(campeonato.jogos.length > 0){
+        dados.push({ titulo: 'Jogo com mais gols', dado: jogoMaisNumeroGols(campeonato, false, true)})
+        dados.push({ titulo: 'Jogo com maior diferença de gols', dado: jogoDiferencaGols(campeonato, false, true)})
+    }
     section.appendChild(mostrarDados(dados, 'Estatísticas', 'estatisticas'))
     return section
 }

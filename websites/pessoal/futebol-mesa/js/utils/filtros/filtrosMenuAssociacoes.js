@@ -15,14 +15,14 @@ function filtroMenuJogosAssociacoes(jogos, associacao, associacoes, variavelGlob
         if(this.value != ''){
             let filtrarJogos = jogos.filter(jogo => {
                 variavelGlobal.ativoAssociacao = this.value.toString()
-                return jogo.timeMandante.participante.associacao.nome == this.value.toString() || jogo.timeVisitante.participante.associacao.nome == this.value.toString()
+                return jogo.equipeMandante.participante.associacao.nome == this.value.toString() || jogo.equipeVisitante.participante.associacao.nome == this.value.toString()
             })
             let tabelas = { participante: associacao, pg: 0, j: 0, v: 0, e: 0, d: 0, gp: 0, gc: 0, sg: 0, pgp: 0, vp: 0,  ep: 0, dp: 0, gpp: 0, gcp: 0, sgp: 0, gpt: 0,   vpt: 0, dpt: 0, gppt: 0, gcpt: 0, sgpt: 0, cd: 0, pgpt: 0 }
             filtrarJogos.forEach( jogo => {
-                if(associacao.nome == jogo.timeMandante.participante.associacao.nome){
-                    atualizarTabela(tabelas, jogo, jogo.timeMandante.gols, jogo.timeVisitante.gols, jogo.timeMandante.golsProrrogacao,  jogo.timeVisitante.golsProrrogacao, jogo.timeMandante.golsPenalti,  jogo.timeVisitante.golsPenalti)
+                if(associacao.nome == jogo.equipeMandante.participante.associacao.nome){
+                    atualizarTabela(tabelas, jogo, jogo.equipeMandante.gols, jogo.equipeVisitante.gols, jogo.equipeMandante.golsProrrogacao,  jogo.equipeVisitante.golsProrrogacao, jogo.equipeMandante.golsPenalti,  jogo.equipeVisitante.golsPenalti)
                 }else{
-                    atualizarTabela(tabelas, jogo, jogo.timeVisitante.gols, jogo.timeMandante.gols, jogo.timeVisitante.golsProrrogacao, jogo.timeMandante.golsProrrogacao, jogo.timeVisitante.golsPenalti, jogo.timeMandante.golsPenalti)
+                    atualizarTabela(tabelas, jogo, jogo.equipeVisitante.gols, jogo.equipeMandante.gols, jogo.equipeVisitante.golsProrrogacao, jogo.equipeMandante.golsProrrogacao, jogo.equipeVisitante.golsPenalti, jogo.equipeMandante.golsPenalti)
                 }
             });
             atualizarTabelaEstatisticas(filtrarJogos, tabelas, associacoes, associacao, campeonatos, temporadas, variavelGlobal, socios)
@@ -48,10 +48,10 @@ function filtroMenuJogosRegras(jogos, associacao, associacoes, variavelGlobal, c
             })
             let tabelas = { participante: associacao, pg: 0, j: 0, v: 0, e: 0, d: 0, gp: 0, gc: 0, sg: 0, pgp: 0, vp: 0,  ep: 0, dp: 0, gpp: 0, gcp: 0, sgp: 0, gpt: 0,   vpt: 0, dpt: 0, gppt: 0, gcpt: 0, sgpt: 0, cd: 0, pgpt: 0 }
             filtrarJogos.forEach( jogo => {
-                if(associacao.nome == jogo.timeMandante.participante.tecnico.status.nome){
-                    atualizarTabela(tabelas, jogo, jogo.timeMandante.gols, jogo.timeVisitante.gols, jogo.timeMandante.golsProrrogacao, jogo.timeVisitante.golsProrrogacao, jogo.timeMandante.golsPenalti,  jogo.timeVisitante.golsPenalti)
+                if(associacao.nome == jogo.equipeMandante.participante.tecnico.status.nome){
+                    atualizarTabela(tabelas, jogo, jogo.equipeMandante.gols, jogo.equipeVisitante.gols, jogo.equipeMandante.golsProrrogacao, jogo.equipeVisitante.golsProrrogacao, jogo.equipeMandante.golsPenalti,  jogo.equipeVisitante.golsPenalti)
                 }else{
-                    atualizarTabela(tabelas, jogo, jogo.timeVisitante.gols, jogo.timeMandante.gols, jogo.timeVisitante.golsProrrogacao, jogo.timeMandante.golsProrrogacao, jogo.timeVisitante.golsPenalti, jogo.timeMandante.golsPenalti)
+                    atualizarTabela(tabelas, jogo, jogo.equipeVisitante.gols, jogo.equipeMandante.gols, jogo.equipeVisitante.golsProrrogacao, jogo.equipeMandante.golsProrrogacao, jogo.equipeVisitante.golsPenalti, jogo.equipeMandante.golsPenalti)
                 }
             });
             atualizarTabelaEstatisticas(filtrarJogos, tabelas, associacoes, associacao, campeonatos, temporadas, variavelGlobal, socios)
@@ -59,40 +59,40 @@ function filtroMenuJogosRegras(jogos, associacao, associacoes, variavelGlobal, c
     })
 }
 
-function atualizarTabela(tabelas, jogo, timeCasaGols,  timeForaGols, timeCasaProrrogacao,  timeForaProrrogacao, timeCasaPenalti,  timeForaPenalti){
-    if(jogo.prorrogacao && timeCasaGols == timeForaGols){
-        tabelas.vp += timeCasaProrrogacao > timeForaProrrogacao ? 1 : 0
-        tabelas.ep += timeCasaProrrogacao == timeForaProrrogacao ? 1 : 0
-        tabelas.dp += timeCasaProrrogacao < timeForaProrrogacao ? 1 : 0
+function atualizarTabela(tabelas, jogo, equipeMandanteGols,  equipeVisitandeGols, equipeMandanteGolsProrrogacao,  equipeVisitandeGolsProrrogacao, equipeMandanteGolsPenalti,  equipeVisitandeGolsPenalti){
+    if(jogo.prorrogacao && equipeMandanteGols == equipeVisitandeGols){
+        tabelas.vp += equipeMandanteGolsProrrogacao > equipeVisitandeGolsProrrogacao ? 1 : 0
+        tabelas.ep += equipeMandanteGolsProrrogacao == equipeVisitandeGolsProrrogacao ? 1 : 0
+        tabelas.dp += equipeMandanteGolsProrrogacao < equipeVisitandeGolsProrrogacao ? 1 : 0
         tabelas.pgp = tabelas.vp
-        tabelas.gpp += timeCasaProrrogacao
-        tabelas.gcp += timeForaProrrogacao,
-        tabelas.sgp += timeCasaProrrogacao - timeForaProrrogacao
-        if(timeCasaProrrogacao == timeForaProrrogacao){
-            tabelas.vpt += timeCasaPenalti > timeForaPenalti ? 1 : 0
-            tabelas.dpt += timeCasaPenalti < timeForaPenalti ? 1 : 0
-            tabelas.gppt += timeCasaPenalti
-            tabelas.gcpt += timeForaPenalti
-            tabelas.sgpt += timeCasaPenalti - timeForaPenalti
+        tabelas.gpp += equipeMandanteGolsProrrogacao
+        tabelas.gcp += equipeVisitandeGolsProrrogacao,
+        tabelas.sgp += equipeMandanteGolsProrrogacao - equipeVisitandeGolsProrrogacao
+        if(equipeMandanteGolsProrrogacao == equipeVisitandeGolsProrrogacao){
+            tabelas.vpt += equipeMandanteGolsPenalti > equipeVisitandeGolsPenalti ? 1 : 0
+            tabelas.dpt += equipeMandanteGolsPenalti < equipeVisitandeGolsPenalti ? 1 : 0
+            tabelas.gppt += equipeMandanteGolsPenalti
+            tabelas.gcpt += equipeVisitandeGolsPenalti
+            tabelas.sgpt += equipeMandanteGolsPenalti - equipeVisitandeGolsPenalti
             tabelas.pgpt = tabelas.vpt
         }
     }
-    if(jogo.penalti  && timeCasaGols == timeForaGols){
-        tabelas.vpt += timeCasaPenalti > timeForaPenalti ? 1 : 0
-        tabelas.dpt += timeCasaPenalti < timeForaPenalti ? 1 : 0
-        tabelas.gppt += timeCasaPenalti
-        tabelas.gcpt += timeForaPenalti
-        tabelas.sgpt += timeCasaPenalti - timeForaPenalti
+    if(jogo.penalti  && equipeMandanteGols == equipeVisitandeGols){
+        tabelas.vpt += equipeMandanteGolsPenalti > equipeVisitandeGolsPenalti ? 1 : 0
+        tabelas.dpt += equipeMandanteGolsPenalti < equipeVisitandeGolsPenalti ? 1 : 0
+        tabelas.gppt += equipeMandanteGolsPenalti
+        tabelas.gcpt += equipeVisitandeGolsPenalti
+        tabelas.sgpt += equipeMandanteGolsPenalti - equipeVisitandeGolsPenalti
         tabelas.pg = tabelas.vpt
     }
-    tabelas.v += timeCasaGols > timeForaGols ? 1 : 0
-    if(jogo.penalti && timeCasaPenalti > timeForaPenalti) tabelas.v += 1
-    tabelas.d += timeCasaGols < timeForaGols ? 1 : 0
-    tabelas.e += timeCasaGols == timeForaGols ? 1 : 0
+    tabelas.v += equipeMandanteGols > equipeVisitandeGols ? 1 : 0
+    if(jogo.penalti && equipeMandanteGolsPenalti > equipeVisitandeGolsPenalti) tabelas.v += 1
+    tabelas.d += equipeMandanteGols < equipeVisitandeGols ? 1 : 0
+    tabelas.e += equipeMandanteGols == equipeVisitandeGols ? 1 : 0
     tabelas.j = tabelas.v + tabelas.e + tabelas.d
     tabelas.pg = (tabelas.v * 3) + tabelas.e
-    tabelas.gp += timeCasaGols
-    tabelas.gc += timeForaGols
+    tabelas.gp += equipeMandanteGols
+    tabelas.gc += equipeVisitandeGols
     tabelas.sg = tabelas.gp - tabelas.gc
 }
 

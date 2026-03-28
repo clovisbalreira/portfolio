@@ -7,6 +7,6 @@ export function menuJogosTemporada(totalJogos, variavelGlobal){
             totalJogos.map(jogo => jogo.campeonato)
         )
     ]
-    criarLabelSelect(div, 'Temporada', 'menu-jogo-temporada', filtrar, '', 'Selecione a temporada', '', variavelGlobal)
+    criarLabelSelect(div, 'Temporada', 'menu-jogo-temporada', totalJogos, '', 'Selecione a temporada', '', variavelGlobal)
     return div
 }

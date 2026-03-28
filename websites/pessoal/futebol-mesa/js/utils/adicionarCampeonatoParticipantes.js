@@ -2,6 +2,6 @@ export function adicionarCampeonatoParticipantes(campeonato, temporada, particip
     temporada.adicionarCampeonato(campeonato)
     participantes.forEach( (participante, index) => {
         temporada.adicionarParticipantes(participante.socio)
-        if(participante.time != '') temporada.adicionarTime(temporada.participantes[index], participante.time)
+        if(participante.equipe != '') temporada.adicionarEquipe(temporada.participantes[index], participante.equipe)
     })
 }

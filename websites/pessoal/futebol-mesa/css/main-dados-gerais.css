@@ -146,7 +146,11 @@ main #principal #dados-gerais #dados-geral .tela-inteira{
     border: none;
 }
 
-main #principal #dados-gerais #dados-geral .tela-inteira table{
+main #principal #dados-gerais #dados-geral .tela-inteira div{
+    width: 100%;
+}
+
+main #principal #dados-gerais #dados-geral .tela-inteira div table{
     width: 100%;
 }
 
@@ -158,6 +162,7 @@ main #principal #dados-gerais #dados-geral table tbody tr td:first-child div{
 
 main #principal #dados-gerais #dados-geral table tbody tr td:first-child div img{ 
     width: 30px;
+    height: 35px;
 }
 
 main #principal #dados-gerais #dados-geral .estatisticas-geral-tabela, main #principal #dados-gerais #dados-geral .estatisticas-geral-tabela-associacao{

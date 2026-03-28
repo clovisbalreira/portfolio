@@ -32,14 +32,14 @@ function partidasEstatisticas(JogoAnterior, jogo, condicaoGols, index, tipo, mos
     if (index > 0) texto += '</p>';
         texto += `<p class="campeonato">${jogo.campeonato}</p>`;
     }
-    const nomeCasa = possuiTime(jogo.timeMandante, true, tipo, mostrar)
-    const nomeFora = possuiTime(jogo.timeVisitante, false, tipo, mostrar)
-    texto += `<div class="jogo-estatisticas">${nomeCasa}<p>${jogo.timeMandante.gols}</p><p>X</p><p>${jogo.timeVisitante.gols}</p>${nomeFora}</div>`;
+    const nomeCasa = possuiEquipe(jogo.equipeMandante, true, tipo, mostrar)
+    const nomeFora = possuiEquipe(jogo.equipeVisitante, false, tipo, mostrar)
+    texto += `<div class="jogo-estatisticas">${nomeCasa}<p>${jogo.equipeMandante.gols}</p><p>X</p><p>${jogo.equipeVisitante.gols}</p>${nomeFora}</div>`;
     return texto
 }
 
 function gerarTextoTecnico(jogo, condicaoGols, tipo, mostrar) {
-    const cabecalho = possuiTime(jogo, true, tipo, mostrar)
+    const cabecalho = possuiEquipe(jogo, true, tipo, mostrar)
     let quantidade = 0
     if(condicaoGols == 'j'){
         quantidade = jogo.j
@@ -58,55 +58,55 @@ function gerarTextoTecnico(jogo, condicaoGols, tipo, mostrar) {
     return `<div class="tecnico">${cabecalho}<p>- ${quantidade} ${sufixo}</p></div>`;
 }
 
-function possuiTime(obj, casaFora, tipo, mostrar) {
+function possuiEquipe(obj, casaFora, tipo, mostrar) {
     let texto = ''
     casaFora = Boolean(casaFora)
-    const temTime =
-    obj?.participante?.time?.nome &&
-    obj.participante.time.nome.trim() !== ''
+    const temEquipe =
+    obj?.participante?.equipe?.nome &&
+    obj.participante.equipe.nome.trim() !== ''
     if(mostrar){
-        if (casaFora && tipo === 'Externo' && temTime) {
+        if (casaFora && tipo === 'Externo' && temEquipe) {
             texto = `
             <div>
             <img src="./img/associacoes/${obj.participante.associacao.escudo}">
-            <img src="./img/times/${obj.participante.time.escudo}">
+            <img src="./img/equipes/${obj.participante.equipe.escudo}">
             <p>${obj.participante.tecnico.nome}</p>
             </div>
             `
-        } else if (!casaFora && tipo === 'Externo' && temTime) {
+        } else if (!casaFora && tipo === 'Externo' && temEquipe) {
             texto = `
             <div>
             <p>${obj.participante.tecnico.nome}</p>
-            <img src="./img/times/${obj.participante.time.escudo}">
+            <img src="./img/equipes/${obj.participante.equipe.escudo}">
             <img src="./img/associacoes/${obj.participante.associacao.escudo}">
             </div>
             `
-        }else if (casaFora && tipo === 'Externo' && !temTime) {
+        }else if (casaFora && tipo === 'Externo' && !temEquipe) {
             texto = `
             <div>
             <img class="posicao" src="./img/associacoes/${obj.participante.associacao.escudo}">
             <p>${obj.participante.tecnico.nome}</p>
             </div>
             `
-        } else if (!casaFora && tipo === 'Externo' && !temTime) {
+        } else if (!casaFora && tipo === 'Externo' && !temEquipe) {
             texto = `
                 <div>
                     <p>${obj.participante.tecnico.nome}</p>
                     <img class="posicao" src="./img/associacoes/${obj.participante.associacao.escudo}">
                 </div>
             `
-        } else if (casaFora && tipo !== 'Externo' && temTime) {
+        } else if (casaFora && tipo !== 'Externo' && temEquipe) {
             texto = `
                 <div>
-                    <img class="posicao" src="./img/times/${obj.participante.time.escudo}">
+                    <img class="posicao" src="./img/equipes/${obj.participante.equipe.escudo}">
                     <p>${obj.participante.tecnico.nome}</p>
                 </div>
             `
-        } else if (!casaFora && tipo !== 'Externo' && temTime) {
+        } else if (!casaFora && tipo !== 'Externo' && temEquipe) {
             texto = `
                 <div>
                     <p>${obj.participante.tecnico.nome}</p>
-                    <img class="posicao" src="./img/times/${obj.participante.time.escudo}">
+                    <img class="posicao" src="./img/equipes/${obj.participante.equipe.escudo}">
                 </div>
             `
         } else{

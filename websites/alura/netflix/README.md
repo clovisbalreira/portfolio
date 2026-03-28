@@ -2,14 +2,6 @@
 
 Este projeto é uma aplicação web dinâmica projetada para simular uma tela de seleção de perfis, semelhante à Netflix. Ele permite aos usuários escolher diferentes categorias de conteúdo, alternar entre vários temas visuais e possui um design responsivo para visualização otimizada em diversos dispositivos.
 
-## Índice
-
-*   [Funcionalidades](#funcionalidades)
-*   [Tecnologias Utilizadas](#tecnologias-utilizadas)
-*   [Como Executar](#como-executar)
-*   [Capturas de Tela](#capturas-de-tela)
-*   [Criador](#criador)
-
 ## Funcionalidades
 
 *   **Seleção de Perfis:** Os usuários podem selecionar perfis categorizados por:
@@ -33,28 +25,3 @@ Este projeto é uma aplicação web dinâmica projetada para simular uma tela de
 *   **CSS3:** Para estilização, incluindo recursos avançados como Variáveis CSS para temas dinâmicos, planos de fundo `radial-gradient` e consultas de mídia `@media` responsivas.
 *   **JavaScript (Módulos ES6):** Para comportamento dinâmico, carregamento de conteúdo, tratamento de eventos e lógica de troca de tema.
 *   **Font Awesome:** Utilizado para ícones vetoriais escaláveis em toda a aplicação (por exemplo, alternância lua/sol, ícones de redes sociais).
-
-## Como Executar
-
-Para colocar este projeto em funcionamento em sua máquina local:
-
-1.  **Clone o repositório:**
-    ```bash
-    git clone https://github.com/clovisbalreira/netflix.git # (Assumindo que esta seja a URL do repositório)
-    cd netflix
-    ```
-2.  **Abra `index.html`:**
-    Basta abrir o arquivo `index.html` em seu navegador da web preferido.
-
-A aplicação deverá estar agora em execução no seu navegador.
-
-## Capturas de Tela
-
-*(A ser adicionado: Incluir capturas de tela da tela de seleção de perfis, diferentes variações de tema e o layout responsivo.)*
-
-## Criador
-
-**Clóvis Balreira Rodrigues**
-*   [GitHub](https://github.com/clovisbalreira)
-*   [LinkedIn](https://www.linkedin.com/in/clovis-balreira-rodrigues-dev/)
-*   [Portfólio](https://clovisbalreira.github.io/portfolio/)

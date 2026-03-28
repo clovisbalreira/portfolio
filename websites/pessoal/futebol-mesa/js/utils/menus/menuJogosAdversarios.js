@@ -5,8 +5,8 @@ export function menuJogosAdversarios(totalJogos, socio, variavelGlobal){
     const filtrar = [
         ...new Set(
             totalJogos.flatMap(jogo => [
-            jogo.timeMandante.participante.tecnico.nome,
-            jogo.timeVisitante.participante.tecnico.nome
+            jogo.equipeMandante.participante.tecnico.nome,
+            jogo.equipeVisitante.participante.tecnico.nome
             ])
         )
     ];

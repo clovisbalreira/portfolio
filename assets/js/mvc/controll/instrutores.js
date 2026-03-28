@@ -18,5 +18,6 @@ export let instrutores = [
     new Instrutor('rafaella-ballerini','Rafaella Ballerini','rafaballerini',true),
     new Instrutor('ramiro-lobo','Ramiro Lobo','RamiroFabricioLobo',false),
     new Instrutor('ricardo-roberto','Ricardo e Roberto','devemdobro',true),
-    new Instrutor('isaacpontes','Isaac Pontes','isaacpontes',true)
+    new Instrutor('isaacpontes','Isaac Pontes','isaacpontes',true),
+    new Instrutor('ThamirisdaSilva','Thamiris da Silva','thamirisdasilva',true)
 ]

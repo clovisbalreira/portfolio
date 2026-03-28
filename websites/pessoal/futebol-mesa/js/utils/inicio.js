@@ -4,6 +4,8 @@ import { mostrarHeader } from "./body/mostrarHeader.js";
 import { mostrarMain } from "./body/mostrarMain.js";
 import { mostrarFooter } from "./body/mostrarFooter.js";
 import { navegacaoSocioCampeonato } from "./navegacaoSocioCampeonato.js";
+import { mostrarDadosGerais } from "./body/mostrarDadosGerais.js";
+import { mostrarCampeonato } from "../mvc/view/mostrarCampeonato.js";
 
 export function inicio(socios, campeonatos, associacoes, temporadas, variavelGlobal, tipos, regras){
     let associacao = associacoes[variavelGlobal.associacao]
@@ -11,6 +13,8 @@ export function inicio(socios, campeonatos, associacoes, temporadas, variavelGlo
     menuAssociacao(socios, campeonatos, associacoes, variavelGlobal, temporadas, tipos, regras)
     mostrarHeader(associacoes, variavelGlobal, socios, campeonatos, temporadas, tipos, regras)
     mostrarMain(socios, associacao, campeonatos, temporadas, variavelGlobal)
+    mostrarDadosGerais(campeonatos, variavelGlobal, temporadas, tipos, regras)
+    mostrarCampeonato(campeonatos, variavelGlobal, temporadas, tipos, regras)
     mostrarFooter()
     navegacaoSocioCampeonato(associacoes, associacao, variavelGlobal, socios, campeonatos, temporadas, tipos, regras)
 }

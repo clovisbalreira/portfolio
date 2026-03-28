@@ -10,10 +10,11 @@ let projetos = [
     { titulo : 'Mentalismo V 2.0', link : '../mentalista-v2/index.html'},
     { titulo : 'Calculadora Média', link : '../calculadora-media/index.html'},
     { titulo : 'Clone spotify', link : '../spotify/index.html'},
-    { titulo : 'Gemine', link : '../gemine/index.html'},
     { titulo : 'Número Segredo', link : '../numero-segredo/index.html'},
+    { titulo : 'Netflix', link : '../netflix/index.html'},
 ]
 
+/*
 let desafios = [
     { titulo : "1º Dia", link : "../../../sites/alura-imersao/desafios-alura/dia01.html" },
     { titulo : "2º Dia", link : "../../../sites/alura-imersao/desafios-alura/dia02.html" },
@@ -23,6 +24,7 @@ let desafios = [
     { titulo : "6º Dia", link : "../../../sites/alura-imersao/desafios-alura/dia06.html" },
     { titulo : "7º Dia", link : "../../../sites/alura-imersao/desafios-alura/dia07.html" },   
 ]
+    */
                     
 function mudaTema(){
     document.body.classList.toggle  ("dark")
@@ -50,4 +52,4 @@ function mostrar(id, classe, dados ){
     divProjetos.appendChild(ul)
 }
 mostrar('projetos', 'projetos-item', projetos)
-mostrar('desafios', 'desafios-item', desafios)
+//mostrar('desafios', 'desafios-item', desafios)

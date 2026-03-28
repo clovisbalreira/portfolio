@@ -43,26 +43,27 @@ table thead tr th, table tbody tr td{
     width: 5%;
 }
 
-.time-participante-jogo-mandante,
-.time-participante-jogo-visitante{
+.equipe-participante-jogo-mandante,
+.equipe-participante-jogo-visitante{
     padding: .75rem .5rem;
     vertical-align: middle;
     width: 42.5%;
 }
 
-.time-participante-jogo-mandante div,
-.time-participante-jogo-visitante div{
+.equipe-participante-jogo-mandante div,
+.equipe-participante-jogo-visitante div{
     display: flex;
     align-items: center;
     gap: .5rem;
 }
 
-.time-participante-jogo-visitante div{
+.equipe-participante-jogo-visitante div{
     justify-content: flex-end;
 }
 
-.time-participante-jogo-mandante img, .time-participante-jogo-visitante img{
+.equipe-participante-jogo-mandante img, .equipe-participante-jogo-visitante img{
     width: 30px;
+    height: 35px;
 }
 
 .nome-jogo{
@@ -125,6 +126,7 @@ table thead tr th, table tbody tr td{
 
 .jogo-estatisticas div img{
     width: 30px;
+    height: 35px;
 }
 
 .tabela-filtros table tbody tr td div{
@@ -135,6 +137,7 @@ table thead tr th, table tbody tr td{
 
 .tabela-filtros table tbody tr td div img{
     width: 30px;
+    height: 35px;
 }
 
 @media (max-width: 1356px){
@@ -159,13 +162,13 @@ table thead tr th, table tbody tr td{
 }
 
 @media (max-width: 412px){
-    .time-participante-jogo-mandante div, .time-participante-jogo-visitante div{
+    .equipe-participante-jogo-mandante div, .equipe-participante-jogo-visitante div{
         display: grid !important;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto;
         width: 100%;
     }
-    .time-participante-jogo-mandante div p, .time-participante-jogo-visitante div p{
+    .equipe-participante-jogo-mandante div p, .equipe-participante-jogo-visitante div p{
         grid-column: 1 / 3; 
         grid-row: 1;
         justify-content: center;
@@ -173,11 +176,11 @@ table thead tr th, table tbody tr td{
         width: 100%;
     }
     
-    .time-participante-jogo-mandante div img, .time-participante-jogo-visitante div img{
+    .equipe-participante-jogo-mandante div img, .equipe-participante-jogo-visitante div img{
         margin: auto;
     }
     
-    .time-participante-jogo-mandante div .posicao, .time-participante-jogo-visitante div .posicao{
+    .equipe-participante-jogo-mandante div .posicao, .equipe-participante-jogo-visitante div .posicao{
         grid-column: 1 / 3; 
         grid-row: 2;
     }

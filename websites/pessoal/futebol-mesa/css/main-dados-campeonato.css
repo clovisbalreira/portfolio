@@ -45,6 +45,15 @@ main #principal #dados-gerais #dados-geral #dados-campeonato .section-etapa .tab
     flex: 1;
 }
 
+main #principal #dados-gerais #dados-geral #dados-campeonato .section-etapa .tabelas > div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
 main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -89,6 +98,7 @@ main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral
 
 main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral #estatisticas div .ul-lista li div img{
     width: 30px;
+    height: 35px;
 }
 
 main #principal #dados-gerais #dados-geral #dados-campeonato .estatisticas-geral #estatisticas div .ul-lista div .tecnico p{

@@ -14,8 +14,8 @@ function incluirSocio(socios, nome, foto, nascimento, regras, status){
     socios.push(socio)
 }
 
-incluirSocio(socios, 'Clóvis', 'https://github.com/clovisbalreira.png' , new Date(1980, 7, 6, 0, 59), [regras[0], regras[4]], associacoes[1]) // 0
-incluirSocio(socios, 'Claudio','' , '', [regras[0], regras[4]], associacoes[1]) // 1
+incluirSocio(socios, 'Clóvis', 'https://github.com/clovisbalreira.png' , new Date(1980, 7, 6, 0, 59), [regras[0], regras[4]], associacoes[0]) // 0
+incluirSocio(socios, 'Claudio','' , '', [regras[0], regras[4]], associacoes[0]) // 1
 incluirSocio(socios, 'Joaquim', '' , '', [regras[0]], associacoes[0]) // 2
 incluirSocio(socios, 'Robinson', '' , '', [regras[0]], associacoes[0]) // 3
 incluirSocio(socios, 'Sandro', '' , '', [regras[0]], associacoes[0]) // 4

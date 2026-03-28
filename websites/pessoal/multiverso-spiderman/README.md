@@ -17,5 +17,3 @@ O objetivo deste projeto é criar uma plataforma onde os usuários possam navega
 
 - **HTML5** e **CSS3** para estrutura e estilo.
 - **JavaScript** para funcionalidades dinâmicas.
-- **Frameworks/Libraries**: [Adicionar aqui, se aplicável].
-- **API**: [Adicionar aqui, se aplicável].
