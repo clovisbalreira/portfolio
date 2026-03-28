@@ -1,60 +1,60 @@
-# Netflix Profile Selector
+# Seletor de Perfis Netflix
 
-This project is a dynamic web application designed to mimic a profile selection screen, similar to Netflix. It allows users to choose different content categories, switch between various visual themes, and features a responsive design for optimal viewing across devices.
+Este projeto é uma aplicação web dinâmica projetada para simular uma tela de seleção de perfis, semelhante à Netflix. Ele permite aos usuários escolher diferentes categorias de conteúdo, alternar entre vários temas visuais e possui um design responsivo para visualização otimizada em diversos dispositivos.
 
-## Table of Contents
+## Índice
 
-*   [Features](#features)
-*   [Technologies Used](#technologies-used)
-*   [How to Run](#how-to-run)
-*   [Screenshots](#screenshots)
-*   [Creator](#creator)
+*   [Funcionalidades](#funcionalidades)
+*   [Tecnologias Utilizadas](#tecnologias-utilizadas)
+*   [Como Executar](#como-executar)
+*   [Capturas de Tela](#capturas-de-tela)
+*   [Criador](#criador)
 
-## Features
+## Funcionalidades
 
-*   **Profile Selection:** Users can select profiles categorized by:
-    *   "Filmes e Séries" (Movies & Series)
-    *   "Músicas" (Music)
-    *   "Variado" (Varied Content)
-    Each category dynamically loads its respective profile cards.
-*   **Dynamic Content Loading:** Profile cards are dynamically generated and displayed based on the chosen content category.
-*   **Theme Switching:**
-    *   **Light/Dark Mode:** A toggle button allows users to switch between a light and dark visual theme for the application.
-    *   **Color Themes:** Dedicated buttons enable switching between distinct color schemes:
-        *   **Netflix Theme:** Predominantly red.
-        *   **Spotify Theme:** Predominantly green.
-        *   **Varied Theme:** Predominantly blue.
-*   **Responsive Design:** The layout automatically adjusts to provide an optimal viewing experience on various screen sizes, from mobile devices to desktops.
-*   **External Links:** The footer includes convenient links to the creator's GitHub, LinkedIn, and Portfolio.
+*   **Seleção de Perfis:** Os usuários podem selecionar perfis categorizados por:
+    *   "Filmes e Séries"
+    *   "Músicas"
+    *   "Variado"
+    Cada categoria carrega dinamicamente seus respectivos cartões de perfil.
+*   **Carregamento Dinâmico de Conteúdo:** Os cartões de perfil são gerados e exibidos dinamicamente com base na categoria de conteúdo escolhida.
+*   **Troca de Tema:**
+    *   **Modo Claro/Escuro:** Um botão de alternância permite aos usuários mudar entre um tema visual claro e escuro para a aplicação.
+    *   **Temas de Cores:** Botões dedicados permitem alternar entre esquemas de cores distintos:
+        *   **Tema Netflix:** Predominantemente vermelho.
+        *   **Tema Spotify:** Predominantemente verde.
+        *   **Tema Variado:** Predominantemente azul.
+*   **Design Responsivo:** O layout se ajusta automaticamente para proporcionar uma experiência de visualização otimizada em vários tamanhos de tela, desde dispositivos móveis até desktops.
+*   **Links Externos:** O rodapé inclui links convenientes para o GitHub, LinkedIn e Portfólio do criador.
 
-## Technologies Used
+## Tecnologias Utilizadas
 
-*   **HTML5:** For the basic structure and content of the web pages.
-*   **CSS3:** For styling, including advanced features like CSS Variables for dynamic theming, `radial-gradient` backgrounds, and responsive `@media` queries.
-*   **JavaScript (ES6 Modules):** For dynamic behavior, content loading, event handling, and theme switching logic.
-*   **Font Awesome:** Used for scalable vector icons throughout the application (e.g., moon/sun toggle, social media icons).
+*   **HTML5:** Para a estrutura básica e conteúdo das páginas web.
+*   **CSS3:** Para estilização, incluindo recursos avançados como Variáveis CSS para temas dinâmicos, planos de fundo `radial-gradient` e consultas de mídia `@media` responsivas.
+*   **JavaScript (Módulos ES6):** Para comportamento dinâmico, carregamento de conteúdo, tratamento de eventos e lógica de troca de tema.
+*   **Font Awesome:** Utilizado para ícones vetoriais escaláveis em toda a aplicação (por exemplo, alternância lua/sol, ícones de redes sociais).
 
-## How to Run
+## Como Executar
 
-To get this project up and running on your local machine:
+Para colocar este projeto em funcionamento em sua máquina local:
 
-1.  **Clone the repository:**
+1.  **Clone o repositório:**
     ```bash
-    git clone https://github.com/clovisbalreira/netflix.git # (Assuming this is the repo URL)
+    git clone https://github.com/clovisbalreira/netflix.git # (Assumindo que esta seja a URL do repositório)
     cd netflix
     ```
-2.  **Open `index.html`:**
-    Simply open the `index.html` file in your preferred web browser.
+2.  **Abra `index.html`:**
+    Basta abrir o arquivo `index.html` em seu navegador da web preferido.
 
-The application should now be running in your browser.
+A aplicação deverá estar agora em execução no seu navegador.
 
-## Screenshots
+## Capturas de Tela
 
-*(To be added: Include screenshots of the profile selection screen, different theme variations, and the responsive layout.)*
+*(A ser adicionado: Incluir capturas de tela da tela de seleção de perfis, diferentes variações de tema e o layout responsivo.)*
 
-## Creator
+## Criador
 
 **Clóvis Balreira Rodrigues**
 *   [GitHub](https://github.com/clovisbalreira)
 *   [LinkedIn](https://www.linkedin.com/in/clovis-balreira-rodrigues-dev/)
-*   [Portfolio](https://clovisbalreira.github.io/portfolio/)
+*   [Portfólio](https://clovisbalreira.github.io/portfolio/)
