@@ -31,6 +31,11 @@ details img {
   margin-top: 10px;
 }
 
+details img:hover {
+  transform: scale(1.5);
+  transition: all 0.2s ease;
+}
+
 details span {
   display: none;
   color: #00ffcc;

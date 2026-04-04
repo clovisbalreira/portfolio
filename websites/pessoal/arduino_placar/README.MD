@@ -39,6 +39,7 @@
   📖 Como Usar
 
    1. Arduino: Faça o upload do arquivo arduino.ino para sua placa (Uno, Mega, Nano, etc).
+   ![Esquema Arduino](./img/arduino.png)
    2. Montagem: Conecte os botões e o buzzer conforme a tabela de hardware acima.
    3. Interface Web: Abra o arquivo index.html em um navegador moderno (Chrome ou Edge recomendados).
    4. Conexão:
@@ -55,3 +56,4 @@
 
    - Web -> Arduino: Envia comandos de start, configuracao, equipes e reset_gols.
    - Arduino -> Web: Envia eventos de gol_anulado, intervalo, fim_jogo, além do estado atual do tempo e placares em cada segundo.
+   ![Esquema Arduino](./img/tela-site.png)
