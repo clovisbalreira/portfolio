@@ -1,15 +1,28 @@
-# Loja Pessoal
+# 🛍️ Loja Pessoal (E-commerce)
 
-Este é um projeto de uma loja pessoal desenvolvido para fins de aprendizado e demonstração de habilidades em desenvolvimento web.
+## 📌 Sobre o projeto
+Aplicação web de e-commerce desenvolvida para simular uma loja online, permitindo a visualização de produtos, adição ao carrinho e finalização de compra.
 
-## Funcionalidades
+## 🔗 Acesse o projeto
+👉 (coloque o link aqui)
 
-- Exibição de produtos com detalhes.
-- Carrinho de compras funcional.
-- Sistema de checkout básico.
-- Design responsivo.
+## 🚀 Tecnologias utilizadas
+- HTML5
+- CSS3
+- JavaScript
 
-## Tecnologias Utilizadas
+## 🎯 Funcionalidades
+- Exibição de produtos com detalhes
+- Adição e remoção de itens no carrinho
+- Atualização dinâmica do total da compra
+- Simulação de checkout
+- Layout responsivo para diferentes dispositivos
 
-- **HTML5** e **CSS3** para estrutura e estilo.
-- **JavaScript** para interatividade.
+## 📷 Preview
+(coloque imagens ou GIF — importante)
+
+## ⚙️ Destaques técnicos
+- Manipulação dinâmica do DOM
+- Controle de estado do carrinho em JavaScript
+- Atualização em tempo real dos valores
+- Estrutura organizada de código

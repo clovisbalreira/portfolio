@@ -718,19 +718,6 @@ function textoBotao(texto){
   botao.textContent = texto
 }
 
-// limpar mensagem
-function limparMensagem() {
-  if (telaStatus) {
-    telaStatus.remove();
-    telaStatus = null;
-  }
-  // Reforço: tenta buscar pelo ID caso a variável global tenha se perdido
-  const msgExistente = document.getElementById("mensagem-fixa");
-  if (msgExistente) {
-    msgExistente.remove();
-  }
-}
-
 // tocar som
 function tocarSomWeb(frequencia, repeticoes) {
   const ctx = new (window.AudioContext || window.webkitAudioContext)();

@@ -1,23 +1,72 @@
-Super Trunfo Alura: A Batalha dos Heróis! ‍♂️
+# 🃏 Super Trunfo - Imersão Dev Alura
 
-O que essa aplicação faz?
+Este projeto é uma aplicação web interativa inspirada no clássico jogo **Super Trunfo**, desenvolvida durante a Imersão Dev da Alura.
 
-Prepare-se para uma aventura épica no universo dos super-heróis! Com essa aplicação, você pode criar seu próprio baralho de Super Trunfo personalizado, escolher seus atributos favoritos e desafiar seus amigos em batalhas épicas.
+O jogo utiliza dados reais de super-heróis através de uma API externa, permitindo partidas dinâmicas entre jogador e máquina com cartas geradas automaticamente.
 
-Como a mágica acontece?
+---
 
-Por trás dessa diversão, estão as seguintes tecnologias:
+## 🚀 Funcionalidades
 
-    HTML: A estrutura básica da página, onde tudo é organizado de forma clara e intuitiva.
-    CSS: O responsável por deixar a aplicação com uma cara bonita e fácil de usar.
-    JavaScript: A alma da aplicação! É ele quem faz toda a lógica, desde a criação do baralho até a mecânica do jogo.
-    API Super Hero: Fornece dados de super-heróis para criar um baralho mais realista e divertido.
+### 🎮 Jogabilidade
 
-Como jogar?
+- Sorteio automático de cartas para jogador e máquina
+- Escolha de atributos para disputa:
+  - Durabilidade
+  - Poder
+  - Velocidade
+  - Combate
+  - Inteligência
+  - Força
+- Sistema de vitória, derrota ou empate
+- Transferência de cartas entre jogador e máquina (estilo clássico do jogo)
 
-    Escolha seu baralho: Selecione um dos universos disponíveis (Marvel, DC, George Lucas ou todos) para criar seu baralho.
-    Defina a quantidade de cartas: Escolha quantas cartas você quer no seu baralho.
-    Sorteie as cartas: Clique em "Sortear carta" para iniciar o jogo. As cartas serão distribuídas entre você e o computador.
-    Escolha um atributo: Selecione um dos atributos da sua carta para comparar com a carta do computador.
-    Descubra o vencedor: A carta com o maior valor no atributo escolhido vence a rodada.
-    Repita: O jogo continua até que um dos jogadores fique sem cartas.
+---
+
+### 🦸‍♂️ Cartas Dinâmicas
+
+- Dados obtidos da API:
+  - Nome do herói
+  - Imagem
+  - Atributos
+- Tratamento automático para valores nulos (gera valores aleatórios)
+
+---
+
+### 🎯 Modos de Baralho
+
+O usuário pode escolher:
+
+- Todas as cartas
+- Marvel Comics
+- DC Comics
+- George Lucas
+
+---
+
+### ⚙️ Configuração
+
+- Escolha da quantidade de cartas (mínimo 1, máximo 366)
+- Distribuição automática entre jogador e máquina
+
+---
+
+### 💻 Interface
+
+- Layout responsivo
+- Cartas visuais com imagem de fundo
+- Feedback visual do resultado da rodada
+- Atualização automática a cada jogada
+
+---
+
+## 📚 Aprendizados
+
+- Consumo de API
+- Manipulação de objetos em JavaScript
+- Lógica de comparação de atributos
+- Tratamento de dados inconsistentes
+
+## 🖼️ Interface do Jogo
+
+> Adicione prints aqui se quiser melhorar ainda mais seu README:
