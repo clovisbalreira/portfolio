@@ -67,6 +67,4 @@ O usuário pode escolher:
 - Lógica de comparação de atributos
 - Tratamento de dados inconsistentes
 
-## 🖼️ Interface do Jogo
-
-> Adicione prints aqui se quiser melhorar ainda mais seu README:
+<!--## 🖼️ Interface do Jogo-->

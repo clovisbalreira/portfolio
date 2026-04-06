@@ -3,8 +3,8 @@
 ## 📌 Sobre o projeto
 Aplicação web dinâmica que gera um currículo interativo com suporte a múltiplos idiomas (português, inglês e espanhol), permitindo visualização e filtragem de cursos e experiências.
 
-## 🔗 Acesse o projeto
-👉 (link aqui)
+<!--## 🔗 Acesse o projeto
+👉 (link aqui)-->
 
 ## 🚀 Tecnologias utilizadas
 - HTML5
@@ -18,8 +18,8 @@ Aplicação web dinâmica que gera um currículo interativo com suporte a múlti
 - Exibição interativa de dados profissionais
 - Interface responsiva
 
-## 📷 Preview
-(imagens ou GIF)
+<!--## 📷 Preview
+(imagens ou GIF)-->
 
 ## ▶️ Como usar
 

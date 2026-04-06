@@ -17,8 +17,8 @@ Portfólio pessoal desenvolvido para apresentar projetos, habilidades e informa�
 - Layout responsivo para mobile e desktop
 - Integração com links externos (GitHub, LinkedIn)
 
-## 📷 Preview
-![Preview](./assets/img/portfolio.png)
+<!--## 📷 Preview
+![Preview](./assets/img/portfolio.png)-->
 
 ## ⚙️ Destaques técnicos
 - Uso de JavaScript para criação dinâmica de seções

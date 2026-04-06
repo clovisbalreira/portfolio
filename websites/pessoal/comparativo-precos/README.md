@@ -3,8 +3,8 @@
 ## 📌 Sobre o projeto
 Aplicação web para gerenciamento e comparação de preços entre diferentes lojas, permitindo identificar automaticamente a opção mais econômica para cada produto.
 
-## 🔗 Acesse o projeto
-👉 (coloque aqui o link se estiver online)
+<!--## 🔗 Acesse o projeto
+👉 (coloque aqui o link se estiver online)-->
 
 ## 🚀 Tecnologias utilizadas
 - HTML5
@@ -20,8 +20,8 @@ Aplicação web para gerenciamento e comparação de preços entre diferentes lo
 - Geração de lista final com os itens mais baratos
 - Persistência de dados no navegador
 
-## 📷 Preview
-(coloque imagem ou GIF aqui — MUITO IMPORTANTE)
+<!--## 📷 Preview
+(coloque imagem ou GIF aqui — MUITO IMPORTANTE)-->
 
 ## ▶️ Como usar
 

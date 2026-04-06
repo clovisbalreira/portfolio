@@ -3,8 +3,8 @@
 ## 📌 Sobre o projeto
 Aplicação web interativa que permite analisar o cenário político brasileiro de forma personalizada, possibilitando a seleção de deputados, partidos e leis para comparação e análise de alinhamento.
 
-## 🔗 Acesse o projeto
-👉 (coloque o link aqui)
+<!--## 🔗 Acesse o projeto
+👉 (coloque o link aqui)-->
 
 ## 🚀 Tecnologias utilizadas
 - HTML5
@@ -19,8 +19,8 @@ Aplicação web interativa que permite analisar o cenário político brasileiro 
 - Visualização de alinhamento político
 - Interface interativa e dinâmica
 
-## 📷 Preview
-(coloque imagens ou GIF — ESSENCIAL)
+<!--## 📷 Preview
+(coloque imagens ou GIF — ESSENCIAL)-->
 
 ## ⚙️ Destaques técnicos
 - Integração com APIs externas (dados políticos)
