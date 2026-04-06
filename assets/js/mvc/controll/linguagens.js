@@ -4,7 +4,7 @@ export let linguagens = [
     new Linguagem('html-css','HTML e CSS','html_css.png',true),
     new Linguagem('html-css-javscript','HTML, CSS e JavaScript','html_css_javascript.png',true),
     new Linguagem('javascript','Javascript','javascript.png',false),
-    new Linguagem('php','P.H.P.','php.png',false),
+    new Linguagem('php','P.H.P.','php.png',true),
     new Linguagem('mysql','MySql','mysql.png',false),
     new Linguagem('react','React','react.png',false),
     new Linguagem('java','Java','java.png',false),

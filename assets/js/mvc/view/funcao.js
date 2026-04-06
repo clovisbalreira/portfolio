@@ -6,7 +6,7 @@ import { webSites } from '../controll/websites.js'
 let redesSociais = [
     {
         nome: 'Curriculo',   
-        link: 'https://clovisbalreira.github.io/portfolio/websites/pessoal/apresentacao/curriculo.html',
+        link: 'https://clovisbalreira.github.io/portfolio/websites/pessoal/apresentacao/curriculo/curriculo.html',
         imagem: ['fa-solid', 'fa-file']
     },
     {
@@ -66,18 +66,32 @@ function removerMain(){
     main.innerHTML = ''
 }
 
-function criarSection(titulo, dados) {
+function criarButton(classe, texto){
+    let button = document.createElement('button')
+    button.classList.add('btn')
+    button.classList.add(classe)
+    button.setAttribute('onclick', 'scrollLeft')
+    button.textContent = texto
+    return button
+}
+
+function criarCarrossel(titulo, dados) {
     let contadorStatusTrue = dados.filter(dado => dado.status === true).length;
-    let main = document.querySelector('main')
+    let div = document.createElement('div')
+    div.classList.add('carrossel-container')
     if (contadorStatusTrue != 0) {
         let h2 = document.createElement('h2')
         h2.innerHTML = titulo
-        main.appendChild(h2)
+        div.appendChild(h2)
+        let divSection = document.createElement('div')
+        divSection.appendChild(criarButton('left', '◀'))
         let section = document.createElement('section')
+        section.id = 'carrossel'
+        section.classList.add('carrossel')
         dados.map((dado) => {
             if (dado.status) {
                 let button = document.createElement('button')
-                button.classList.add('linguagem-instrutor-escola')
+                button.classList.add('card')
                 button.setAttribute(titulo, dado.id)
                 let h3 = document.createElement('h3')
                 h3.innerHTML = dado.nome
@@ -91,8 +105,11 @@ function criarSection(titulo, dados) {
                 section.appendChild(button)
             }
         })
-        main.appendChild(section)
+        divSection.appendChild(section)
+        divSection.appendChild(criarButton('right', '▶'))
+        div.appendChild(divSection)
     }
+    return div
 }
 
 function pastasImagens(titulo, imagem) {
@@ -119,13 +136,10 @@ function mostrarWebSites(webSites){
     main.classList.add('main-flex')
     let section = document.createElement('section')
     section.classList.add('web-sites')
-    
-    let a = document.createElement('a')
-    a.href = webSites.site
-    a.target = '_blank'
+
     let h2 = document.createElement('h2')
     h2.innerHTML = webSites.nome
-    a.appendChild(h2)
+    section.appendChild(h2)
 
     let divLinguagemEscola = document.createElement('div')
 
@@ -135,13 +149,22 @@ function mostrarWebSites(webSites){
     divLinguagem.appendChild(h3Linguagem)
     divLinguagem.appendChild(imagens('Linguagem', webSites.linguagem.imagem))
     divLinguagemEscola.appendChild(divLinguagem)
+    
+    if(webSites.site != ''){
+        let aSite = document.createElement('a')
+        aSite.innerHTML = 'Site'
+        aSite.href = webSites.site
+        aSite.target = `_blank`
+        aSite.classList.add('btn-site')
+        section.appendChild(aSite)
+    }
 
     let aGitHub = document.createElement('a')
     aGitHub.innerHTML = 'GitHub'
     aGitHub.href = `https://github.com/clovisbalreira/portfolio/tree/main/websites/${webSites.github}`
     aGitHub.target = `_blank`
     aGitHub.classList.add('btn-github')
-    a.appendChild(aGitHub)
+    section.appendChild(aGitHub)
 
     if(webSites.escola.imagem != 'clovisbalreira' && webSites.escola.imagem != 'nenhum'){
         let divEscola = document.createElement('div')
@@ -152,7 +175,7 @@ function mostrarWebSites(webSites){
         divLinguagemEscola.appendChild(divEscola)
     }
     
-    a.appendChild(divLinguagemEscola)
+    section.appendChild(divLinguagemEscola)
     let divInstrutores = document.createElement('div')
     let divInstrutoresTitulo = document.createElement('div')
     if((!(webSites.instrutor[0] == undefined)) && (webSites.instrutor[0].imagem != 'clovisbalreira' && webSites.instrutor[0].imagem != undefined)){
@@ -169,13 +192,12 @@ function mostrarWebSites(webSites){
         }
     )
     divInstrutores.appendChild(divInstrutor)
-    a.appendChild(divInstrutores)
+    section.appendChild(divInstrutores)
 
     let p = document.createElement('p')
     p.innerHTML = webSites.descricao
-    a.appendChild(p)
+    section.appendChild(p)
     
-    section.appendChild(a)
     main.appendChild(section)
 }
 
@@ -248,10 +270,25 @@ export function inicio() {
     header()
     footer()
     removerMain()
-    criarSection('Linguagem', linguagens)
-    criarSection('Instrutor', instrutores)
-    criarSection('Escola', escolas)
+    let main = document.querySelector('main')
+    main.appendChild(criarCarrossel('Linguagem', linguagens))
+    main.appendChild(criarCarrossel('Escola', escolas))
+    main.appendChild(criarCarrossel('Instrutor', instrutores))
     document.getElementById('layout-inicio').addEventListener('click', atualizar)
     botoesWebSites()
+    rolagem()
+    
 }
 
+function rolagem(){
+    const carrosseis = document.querySelectorAll('.carrossel-container div')
+    carrosseis.forEach( carrossel => {
+        carrossel.querySelector(".left").addEventListener("click", () => {
+            carrossel.querySelector(".carrossel").scrollBy({ left: -300, behavior: 'smooth' });
+        });
+
+        carrossel.querySelector(".right").addEventListener("click", () => {
+            carrossel.querySelector(".carrossel").scrollBy({ left: 300, behavior: 'smooth' });
+        });
+    })
+}
