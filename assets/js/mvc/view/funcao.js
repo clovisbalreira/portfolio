@@ -161,7 +161,7 @@ function mostrarWebSites(webSites){
 
     let aGitHub = document.createElement('a')
     aGitHub.innerHTML = 'GitHub'
-    aGitHub.href = `https://github.com/clovisbalreira/portfolio/tree/main/websites/${webSites.github}`
+    aGitHub.href = `https://github.com/clovisbalreira/${webSites.github}`
     aGitHub.target = `_blank`
     aGitHub.classList.add('btn-github')
     section.appendChild(aGitHub)
