@@ -9,7 +9,7 @@ export let escolas = [
     new Escola('deitel','Deitel','',false),
     new Escola('dev-dobro','Dev Dobro','devemdobro',true),
     new Escola('dio','Dio','digitalinnovationone',true),
-    new Escola('estudonauta','Estudonauta','estudonauta',false),
+    new Escola('estudonauta','Estudonauta','estudonauta',true),
     new Escola('hashtag','Hashtag','',true),
     new Escola('Dev Samurai','DevSamurai','',true),
     new Escola('onebitcode','Onebitcode','',true),
