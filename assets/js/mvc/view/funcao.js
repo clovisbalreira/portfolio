@@ -115,7 +115,7 @@ function criarCarrossel(titulo, dados) {
 function pastasImagens(titulo, imagem) {
     let pasta = ''
     if (imagem == '') {
-        if (titulo == 'Instrutores') {
+        if (titulo == 'Instrutor') {
             pasta = `./assets/img/linguagem/professor.png`
         } else {
             pasta = `./assets/img/linguagem/escola.jpg`
