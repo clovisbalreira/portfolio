@@ -22,19 +22,17 @@ export let linguagens = [
     // vite
     new Linguagem('vitejs','Vite','vitejs.png',true),
     // nodejs
-    new Linguagem('nodejs','Node js','nodejs.png',false),
+    new Linguagem('nodejs','Node js','nodejs.png',true),
     // c
-    new Linguagem('c','C','c.png',false),
+    new Linguagem('c','C','c.png',true),
     // c-sharp
-    new Linguagem('c#','C#','c-sharp.png',false),
+    new Linguagem('c#','C#','c-sharp.png',true),
     // flutter
-    new Linguagem('flutter','Flutter','flutter.png',false),
+    new Linguagem('flutter','Flutter','flutter.png',true),
     // android
-    new Linguagem('android','Android','android.png',false),
+    new Linguagem('android','Android','android.png',true),
     // kotlin
-    new Linguagem('kotlin','Kotlin','kotlin.png',false),
-    // arduino
-    new Linguagem('arduino','Arduino','arduino.png',false),
+    new Linguagem('kotlin','Kotlin','kotlin.png',true),
     // Designer
     new Linguagem('designer','Designer gráfico','arquivo.png',false)
 ]

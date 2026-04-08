@@ -198,7 +198,7 @@ export let webSites = [
     // Hashtag
     new Website('Aplicação de livros em React com Vite, focada em exibição de cards, filtragem e design moderno.','Aprendi a usar Vite com React e a estruturar um projeto frontend moderno com componentes reutilizáveis.',linguagens[5],[''],escolas[9],'','react_js/tree/main/hashtag/hashtag-books'),
     // Rocketseat
-    new Website('Projeto exemplo com Vite e configurações iniciais para desenvolvimento em React.','',linguagens[5],[instrutores[10]],escolas[12],'','react_js/tree/main/rocketseat/desafio_31'),
+    new Website('Projeto exemplo com Vite e configurações iniciais para desenvolvimento em React.','Projeto exemplo com Vite e configurações iniciais para desenvolvimento em React.',linguagens[5],[instrutores[10]],escolas[12],'','react_js/tree/main/rocketseat/desafio_31'),
     new Website('Projeto Next.js construído como desafio da Rocketseat com recursos de interface e deploy.','Aprendi a criar aplicações com Next.js, Tailwind CSS e a estruturar rotas e páginas em React.',linguagens[5],[instrutores[10]],escolas[12],'','react_js/tree/main/rocketseat/desafio_32'),
     new Website('Aplicação React/Vite para gerenciamento de inscrições com interface moderna e componentes reutilizáveis.','Aprendi a criar interfaces com Tailwind CSS e a estruturar um projeto Vite com React e TypeScript.',linguagens[5],[instrutores[10]],escolas[12],'','react_js/tree/main/rocketseat/gerenciamento-inscricoes'),
 
@@ -241,7 +241,7 @@ export let webSites = [
     new Website('Tabela - Interface de Dados','Projeto de criação e manipulação de tabelas em Python usando interface gráfica (GUI) com libraries como tkinter ou similar.',linguagens[8],[instrutores[0]],escolas[1],'','python/tree/main/pessoal/tabela'),
     // Alura 
     new Website('Imersão em Dados 2025 - Dashboard','Dashboard interativo desenvolvido durante a Imersão em Dados da Alura 2025, com análise exploratória de dados e visualizações usando Python.',linguagens[8],[],escolas[2],'','python/tree/main/alura/imersao-dados-2025'),
-    new Website('Imersão em Dados 2025 - Dashboard','',linguagens[8],[],escolas[2],'','python/tree/main/alura/imersao-dados-2026'),
+    new Website('Imersão em Dados 2026 - Dashboard','Dashboard interativo desenvolvido durante a Imersão em Dados da Alura 2026, com análise exploratória de dados e visualizações usando Python.',linguagens[8],[],escolas[2],'','python/tree/main/alura/imersao-dados-2026'),
     // Curso em video
     new Website('Curso em Vídeo - Python','Série completa de módulos do Curso em Vídeo de Python, com desafios progressivos e exercícios de lógica de programação.',linguagens[8],[instrutores[6]],escolas[4],'','python/tree/main/curso-em-video'),
     // Dio
@@ -256,4 +256,116 @@ export let webSites = [
     // Vite js
     // Pessoal
     new Website('E-commerce','Projeto de e-commerce completo desenvolvido com Vite JS, HTML, CSS e JavaScript. O sistema permite navegação por catálogo de produtos, aplicação de filtros, adição de items ao carrinho e processo de checkout com gestão de pedidos.',linguagens[9],[instrutores[0]],escolas[1],'','vite/tree/main/e-commerce'),
+
+    // Nodejs
+    // Pessoal
+    new Website('BancoDados','Projeto Node.js para gerenciar operações de banco de dados local com SQLite e `sqlite3`.',linguagens[10],[instrutores[0]],escolas[1],'','nodejs/tree/main/pessoal/bancoDados'),
+    new Website('Cripto','Projeto Node.js que consome APIs externas usando `axios` para trabalhar com dados de criptomoedas.',linguagens[10],[instrutores[0]],escolas[1],'','nodejs/tree/main/pessoal/cripto'),
+    new Website('Projeto Node.js','Aplicação backend em Node.js com Express e conexão a banco de dados MySQL via `mysql2`.',linguagens[10],[instrutores[0]],escolas[1],'','nodejs/tree/main/pessoal/nodejs'),
+    // Alura 
+    new Website('Base de Conhecimento','Projeto Node.js que gera e atualiza uma base de conhecimento em JSON usando a API Gemini.',linguagens[10],[],escolas[2],'','nodejs/tree/main/alura/base-de-conhecimento'),
+    new Website('Instalike Back-end','API de backend em Node.js para um projeto de rede social com upload de arquivos e persistência em MongoDB.',linguagens[10],[],escolas[2],'','nodejs/tree/main/alura/instalike/back-end'),
+    // Hashtag
+    new Website('Formulários','Projeto Node.js com Express e validação de formulários usando `joi` para um fluxo de cadastro ou formulários web.',linguagens[10],[''],escolas[9],'','nodejs/tree/main/hashtag/formularios'),
+    new Website('Hashtaurante','Aplicação front-end em React e Vite que apresenta um cardápio de restaurante com componentes e navegação.',linguagens[10],[''],escolas[9],'','nodejs/tree/main/hashtag/hashtaurante'),
+    new Website('Servidor e cliente','Projeto em Node.js com Express e Socket.IO que cria comunicação em tempo real entre servidor e clientes.',linguagens[10],[''],escolas[9],'','nodejs/tree/main/hashtag/servidor-cliente'),
+    // Rocketseat
+    new Website('Gerenciamento de Inscrições','Projeto em Node.js e TypeScript para gerenciar inscrições em eventos, com backend Fastify e banco de dados gerenciado por Prisma.',linguagens[10],[instrutores[10]],escolas[12],'','nodejs/tree/main/rocketseat/gerenciamento-inscricoes'),
+
+    // C
+    // Estudonauta
+    new Website('Módulo 00 - Introdução ao C','Este módulo apresenta os conceitos básicos da linguagem C, incluindo a estrutura de um programa simples, saídas na tela e entrada de dados básicos.',linguagens[11],[instrutores[6]],escolas[8],'','c/tree/main/estudonauta/modulo00'),
+    new Website('Módulo 01 - Variáveis e Tipos','Este módulo explora os fundamentos das variáveis, tipos de dados primitivos, constantes e entrada/saída formatada em C.',linguagens[11],[instrutores[6]],escolas[8],'','c/tree/main/estudonauta/modulo01'),
+    new Website('Módulo 02 - Operadores','Este módulo cobre os operadores aritméticos, de atribuição, relacionais, lógicos, bit a bit e outros operadores em C.',linguagens[11],[instrutores[6]],escolas[8],'','c/tree/main/estudonauta/modulo02'),
+    new Website('Módulo 03 - Estruturas de Controle','Este módulo ensina estruturas condicionais simples, compostas, aninhadas e múltiplas, além de manipulação de data e hora em C.',linguagens[11],[instrutores[6]],escolas[8],'','c/tree/main/estudonauta/modulo03'),
+
+    // C#
+    // Estudonauta
+    new Website('Olá Mundo Console','Primeiro projeto em C# - uma aplicação de console simples que exibe a mensagem "Olá Mundo" no terminal.',linguagens[12],[instrutores[6]],escolas[8],'','c-sharp/tree/main/estudonauta/modulo00/exercicio/olamondo-console'),
+    new Website('Olá Mundo Windows Forms','Aplicação Windows Forms que exibe "Olá Mundo" em uma interface gráfica usando o framework Windows Forms.',linguagens[12],[instrutores[6]],escolas[8],'','c-sharp/tree/main/estudonauta/modulo00/exercicio/olamundo-wpf'),
+    new Website('','',linguagens[12],[instrutores[6]],escolas[8],'','c-sharp/tree/main/estudonauta/modulo00/exercicio/olamunndo-forms'),
+    new Website('Desafio 001','Primeiro desafio do módulo 01 - aplicação que pratica conceitos fundamentais de C# aprendidos no módulo anterior.',linguagens[12],[instrutores[6]],escolas[8],'','c-sharp/tree/main/estudonauta/modulo01/desafio/des001'),
+    new Website('Comentários','Exercício focado na prática de comentários em C# - aprender a documentar código com comentários de uma linha, múltiplas linhas e XML.',linguagens[12],[instrutores[6]],escolas[8],'','c-sharp/tree/main/estudonauta/modulo01/exercicio/comentarios'),
+    new Website('Constantes','Exercício sobre constantes em C# - aprender a declarar, usar e identificar quando usar constantes em vez de variáveis.',linguagens[12],[instrutores[6]],escolas[8],'','c-sharp/tree/main/estudonauta/modulo01/exercicio/contantes'),
+    new Website('Conversão de Tipos','Exercício sobre conversão de tipos em C# - aprender a converter valores entre diferentes tipos de dados (int, double, string, etc).',linguagens[12],[instrutores[6]],escolas[8],'','c-sharp/tree/main/estudonauta/modulo01/exercicio/conversaoTipos'),
+    new Website('Datas e Horas','Exercício sobre manipulação de datas e horas em C# - aprender a trabalhar com a classe DateTime e operações com datas.',linguagens[12],[instrutores[6]],escolas[8],'','c-sharp/tree/main/estudonauta/modulo01/exercicio/datasHoras'),
+    new Website('Entrada de Dados','Exercício sobre captura de entrada de dados do usuário em C# - aprender a ler e processar dados inseridos pelo usuário via console.',linguagens[12],[instrutores[6]],escolas[8],'','c-sharp/tree/main/estudonauta/modulo01/exercicio/entradaDados'),
+    new Website('Formatação','Exercício sobre formatação de saída em C# - aprender a formatar números, moedas, percentuais e outras saídas de dados.',linguagens[12],[instrutores[6]],escolas[8],'','c-sharp/tree/main/estudonauta/modulo01/exercicio/formatacao'),
+    new Website('Interpolação','Exercício sobre interpolação de strings em C# - aprender a inserir variáveis dentro de strings de forma elegante e legível.',linguagens[12],[instrutores[6]],escolas[8],'','c-sharp/tree/main/estudonauta/modulo01/exercicio/interpolacao'),
+    new Website('Mostrar','Exercício sobre diferentes formas de exibição/output em C# - consolidar e praticar os métodos de escrita em console.',linguagens[12],[instrutores[6]],escolas[8],'','c-sharp/tree/main/estudonauta/modulo01/exercicio/mostrar'),
+    new Website('Números Aleatórios','Exercício sobre geração de números aleatórios em C# - aprender a usar a classe Random para gerar valores aleatórios.',linguagens[12],[instrutores[6]],escolas[8],'','c-sharp/tree/main/estudonauta/modulo01/exercicio/numerosAleatorios'),
+    new Website('Temporização','Exercício sobre temporização e medição de tempo em C# - aprender a medir intervalos de tempo e trabalhar com delays.',linguagens[12],[instrutores[6]],escolas[8],'','c-sharp/tree/main/estudonauta/modulo01/exercicio/temporaziacao'),
+    new Website('Tipos Primitivos','Exercício sobre tipos primitivos de dados em C# - aprender sobre int, double, float, bool, char, string e suas características.',linguagens[12],[instrutores[6]],escolas[8],'','c-sharp/tree/main/estudonauta/modulo01/exercicio/tiposPrimitivos'),
+    new Website('Usando Variáveis','Exercício sobre declaração e uso de variáveis em C# - aprender a criar, atribuir valores e manipular variáveis.',linguagens[12],[instrutores[6]],escolas[8],'','c-sharp/tree/main/estudonauta/modulo01/exercicio/usandoVariaveis'),
+
+    // Flutter
+    // Pessoal
+    new Website('App Filmes','Aplicativo mobile para explorar, buscar e gerenciar filmes. Integrado com API de filmes, permite aos usuários visualizar informações detalhadas, ratings, elenco e adicionar filmes à sua watchlist pessoal.',linguagens[13],[instrutores[0]],escolas[1],'','flutter/tree/main/pessoal/app_filmes'),
+    new Website('Cartão Flutter','Projeto de design e UI focado em criar uma interface minimalista e elegante de um cartão digital. Demonstra animações suaves, transições e boas práticas de design em Flutter.',linguagens[13],[instrutores[0]],escolas[1],'','flutter/tree/main/pessoal/cartaoFlutter'),
+    new Website('Pokemon','Explorador interativo de Pokémon desenvolvido em Flutter. Busque Pokémon, visualize informações detalhadas, estatísticas, tipos e evoluções através de uma API pública de Pokémon.',linguagens[13],[instrutores[0]],escolas[1],'','flutter/tree/main/pessoal/Pokemon'),
+    new Website('Vakinha Burger Mobile','Aplicativo de delivery de hambúrgueres desenvolvido em Flutter. Permite aos usuários navegar pelo cardápio, adicionar itens ao carrinho, acompanhar pedidos e realizar pagamentos de forma segura.',linguagens[13],[instrutores[0]],escolas[1],'','flutter/tree/main/pessoal/vakinha_burger-mobile'),
+    // Alura 
+    new Website('Bytebank','Aplicativo bancário completo desenvolvido em Flutter durante os cursos do Alura. Permite gerenciar contas, transferências e visualizar o histórico de transações com uma interface intuitiva.',linguagens[13],[],escolas[2],'','flutter/tree/main/alura/bytebank'),
+    new Website('ByteBank API','Extensão do projeto ByteBank que integra requisições HTTP para comunicação com uma API REST. Aprenda como consumir APIs e trabalhar com autenticação básica em Flutter.',linguagens[13],[],escolas[2],'','flutter/tree/main/alura/bytebankapi'),
+    new Website('ByteBank API Autenticação','Evolução do projeto ByteBank API implementando autenticação JWT e autorização. Aprenda como gerenciar tokens, fazer login seguro e manter sessões de usuário.',linguagens[13],[],escolas[2],'','flutter/tree/main/alura/bytebankapiauthetic'),
+    new Website('ByteBank Banco de Dados','Projeto que aprofunda o uso de persistência de dados em Flutter, implementando um banco de dados local completo com SQLite. Gerencia contas, transações e dados de forma persistente.',linguagens[13],[],escolas[2],'','flutter/tree/main/alura/bytebankbancodedados'),
+    new Website('Cozinhando em Casa','Aplicativo mobile para explorar e compartilhar receitas caseiras. Desenvolvido em Flutter, permite aos usuários visualizar receitas, ingredientes, modo de preparo e favoritar seus pratos favoritos.',linguagens[13],[],escolas[2],'','flutter/tree/main/alura/cozinhando_casa'),
+    new Website('','',linguagens[13],[],escolas[2],'','flutter/tree/main/alura/'),
+    new Website('TechTaste','Plataforma de compartilhamento de receitas e dicas culinárias desenvolvida em Flutter. Permite aos usuários criar perfil, compartilhar receitas, seguir outros usuários e descobrir novas receitas da comunidade.',linguagens[13],[],escolas[2],'','flutter/tree/main/alura/techtaste'),
+
+    // Android
+    // Pessoal
+    new Website('Aluno','Aplicativo Android para gerenciamento de informações de alunos.',linguagens[14],[instrutores[0]],escolas[1],'','android/tree/main/pessoal/Aluno'),
+    new Website('Aluno Conceito','Aplicativo Android para avaliar conceitos de alunos.',linguagens[14],[instrutores[0]],escolas[1],'','android/tree/main/pessoal/AlunoConceito'),
+    new Website('Associação','Aplicativo Android para gerenciamento de associações.',linguagens[14],[instrutores[0]],escolas[1],'','android/tree/main/pessoal/Associacao'),
+    new Website('Banco Dados','Aplicativo Android com integração de banco de dados.',linguagens[14],[instrutores[0]],escolas[1],'','android/tree/main/pessoal/BancoDados'),
+    new Website('Comissao','Aplicativo Android para cálculo de comissões.',linguagens[14],[instrutores[0]],escolas[1],'','android/tree/main/pessoal/Comissao'),
+    new Website('Data','Aplicativo Android para manipulação de datas.',linguagens[14],[instrutores[0]],escolas[1],'','android/tree/main/pessoal/Data'),
+    new Website('Favorite Twitter Searches','Aplicativo Android para salvar buscas favoritas no Twitter.',linguagens[14],[instrutores[0]],escolas[1],'','android/tree/main/pessoal/favoriteTwitterSearches'),
+    new Website('Gorjeta','Aplicativo Android para cálculo de gorjetas.',linguagens[14],[instrutores[0]],escolas[1],'','android/tree/main/pessoal/Gorjeta'),
+    new Website('Nadador','Aplicativo Android relacionado a natação.',linguagens[14],[instrutores[0]],escolas[1],'','android/tree/main/pessoal/Nadador'),
+    new Website('Pessoa Peso','Aplicativo Android para monitoramento de peso.',linguagens[14],[instrutores[0]],escolas[1],'','android/tree/main/pessoal/PessoaPeso'),
+    new Website('Operações','Aplicativo Android para operações matemáticas.',linguagens[14],[instrutores[0]],escolas[1],'','android/tree/main/pessoal/projAOperacoes'),
+    new Website('Soma','Aplicativo Android para somar valores.',linguagens[14],[instrutores[0]],escolas[1],'','android/tree/main/pessoal/ProjASoma'),
+    new Website('Renda Familia','Aplicativo Android para cálculo de renda familiar.',linguagens[14],[instrutores[0]],escolas[1],'','android/tree/main/pessoal/RendaFamilia'),
+    new Website('Saque','Aplicativo Android para simulação de saques.',linguagens[14],[instrutores[0]],escolas[1],'','android/tree/main/pessoal/Saque'),
+    new Website('Signos','Aplicativo Android para signos do zodíaco.',linguagens[14],[instrutores[0]],escolas[1],'','android/tree/main/pessoal/Signos'),
+    new Website('Triangulo','Aplicativo Android para cálculos com triângulos.',linguagens[14],[instrutores[0]],escolas[1],'','android/tree/main/pessoal/Triangulo'),
+    new Website('Welcome','Aplicativo Android de boas-vindas.',linguagens[14],[instrutores[0]],escolas[1],'','android/tree/main/pessoal/welcome'),
+    // Estudonauta
+    new Website('Escola','Aplicativo Android relacionado a funcionalidades escolares, como gerenciamento de alunos e notas.',linguagens[14],[instrutores[6]],escolas[8],'','android/tree/main/estudonauta/Escola'),
+    new Website('Estudonauta','Aplicativo Android principal do estudonauta, focado em aprendizado e exercícios.',linguagens[14],[instrutores[6]],escolas[8],'','android/tree/main/estudonauta/estudonauta'),
+    new Website('Meu Nome','Aplicativo Android simples que exibe o nome do usuário.',linguagens[14],[instrutores[6]],escolas[8],'','android/tree/main/estudonauta/MeuNome'),
+    new Website('Ola Mundo','Aplicativo Android clássico "Olá Mundo" para iniciantes.',linguagens[14],[instrutores[6]],escolas[8],'','android/tree/main/estudonauta/olamundo'),
+    new Website('Ola Mundo 20','Variação do aplicativo "Olá Mundo" com recursos adicionais.',linguagens[14],[instrutores[6]],escolas[8],'','android/tree/main/estudonauta/OlaMundo20'),
+
+    // Kotlin
+    // Pessoal
+    new Website('Aluno','Aplicativo Android desenvolvido em Kotlin que calcula a média de notas de um aluno e determina sua situação (Aprovado/Reprovado).',linguagens[15],[instrutores[0]],escolas[1],'','kotlin/tree/main/pessoal/Aluno'),
+    new Website('Funcionário','Aplicativo Android desenvolvido em Kotlin para gerenciar dados de funcionários, capturando informações pessoais e profissionais com navegação entre telas.',linguagens[15],[instrutores[0]],escolas[1],'','kotlin/tree/main/pessoal/Funcionario'),
+    new Website('Produto','Aplicativo Android desenvolvido em Kotlin para gerenciar informações de produtos, incluindo nome, descrição, valor unitário e quantidade.',linguagens[15],[instrutores[0]],escolas[1],'','kotlin/tree/main/pessoal/Produto'),
+    new Website('Soma','Aplicativo Android simples desenvolvido em Kotlin que realiza a soma de dois números inseridos pelo usuário.',linguagens[15],[instrutores[0]],escolas[1],'','kotlin/tree/main/pessoal/soma'),
+    // Estudonauta
+    new Website('Olá Mundo','Primeiro programa em Kotlin! Um simples "Hello World" que demonstra como criar e executar seu primeiro aplicativo na linguagem.',linguagens[15],[instrutores[6]],escolas[8],'','kotlin/tree/main/estudonauta/000_Ola_Mundo'),
+    new Website('Mostrar Coisas na Tela','Aprenda diferentes formas de exibir informações e dados na tela usando Kotlin. Explora vários métodos de output no console.',linguagens[15],[instrutores[6]],escolas[8],'','kotlin/tree/main/estudonauta/001_Mostrar_Coisas_Tela'),
+    new Website('Comentários','Estude como usar comentários em seu código Kotlin. Saiba a diferença entre comentários de linha única e múltiplas linhas.',linguagens[15],[instrutores[6]],escolas[8],'','kotlin/tree/main/estudonauta/002_Comentarios'),
+    new Website('Tipos Primitivos','Explore todos os tipos de dados primitivos disponíveis em Kotlin: números inteiros, reais, caracteres e booleanos.',linguagens[15],[instrutores[6]],escolas[8],'','kotlin/tree/main/estudonauta/003_Tipos_Primitivos'),
+    new Website('Variáveis','Aprenda a declarar, inicializar e utilizar variáveis em Kotlin. Entenda as diferenças entre var e val.',linguagens[15],[instrutores[6]],escolas[8],'','kotlin/tree/main/estudonauta/004_Variaveis'),
+    new Website('Variáveis e Constantes','Entenda a diferença entre variáveis (var) e constantes (val) em Kotlin e quando usar cada uma.',linguagens[15],[instrutores[6]],escolas[8],'','kotlin/tree/main/estudonauta/005_VariaveisConstantes'),
+    new Website('Conversor de Tipos','Aprenda a converter valores entre diferentes tipos primitivos em Kotlin usando funções de conversão.',linguagens[15],[instrutores[6]],escolas[8],'','kotlin/tree/main/estudonauta/006_Conversor_Tipos'),
+    new Website('Analisando Tipos','Explore técnicas para analisar e verificar tipos de variáveis em tempo de execução usando Kotlin.',linguagens[15],[instrutores[6]],escolas[8],'','kotlin/tree/main/estudonauta/007_Analisando_Tipos'),
+    new Website('Valor Nulo (Null Safety)','Entenda o sistema de null safety do Kotlin e como trabalhar com valores nulos de forma segura.',linguagens[15],[instrutores[6]],escolas[8],'','kotlin/tree/main/estudonauta/008_Valor_Nulo'),
+    new Website('Saídas Interpoladas','Aprenda a usar string interpolation em Kotlin para criar strings dinâmicas e formatadas.',linguagens[15],[instrutores[6]],escolas[8],'','kotlin/tree/main/estudonauta/009_Saidas_Interpoladas'),
+    new Website('Cores','Aprenda a trabalhar com cores no console usando códigos ANSI e técnicas de colorização de texto em Kotlin.',linguagens[15],[instrutores[6]],escolas[8],'','kotlin/tree/main/estudonauta/010_Cores'),
+    new Website('Entrada de Dados','Aprenda a receber dados do usuário através do console usando readLine() e outras técnicas de input em Kotlin.',linguagens[15],[instrutores[6]],escolas[8],'','kotlin/tree/main/estudonauta/011_Entrada_Dados'),
+    new Website('Entrada com Validação','Implemente técnicas para validar e verificar dados de entrada do usuário antes de processar.',linguagens[15],[instrutores[6]],escolas[8],'','kotlin/tree/main/estudonauta/012_Entrada_Validando'),
+    new Website('Operadores Aritméticos','Explore todos os operadores aritméticos disponíveis em Kotlin: adição, subtração, multiplicação, divisão e módulo.',linguagens[15],[instrutores[6]],escolas[8],'','kotlin/tree/main/estudonauta/013_Operatores_Aritmeticos'),
+    new Website('Biblioteca','Aprenda a usar bibliotecas e dependências externas em projetos Kotlin com Gradle.',linguagens[15],[instrutores[6]],escolas[8],'','kotlin/tree/main/estudonauta/014_Biblioteca'),
+    new Website('Operadores Relacionais','Estude operadores relacionais para comparação de valores: igual, diferente, maior, menor, etc.',linguagens[15],[instrutores[6]],escolas[8],'','kotlin/tree/main/estudonauta/015_Operatores_relacionais'),
+    new Website('Operadores de Atribuição','Aprenda os diferentes operadores de atribuição em Kotlin para modificar valores de variáveis.',linguagens[15],[instrutores[6]],escolas[8],'','kotlin/tree/main/estudonauta/016_Operatores_Atribuicao'),
+    new Website('Operadores de Incremento e Decremento','Explore operadores de incremento (++) e decremento (--) em Kotlin - versões pré e pós-fixadas.',linguagens[15],[instrutores[6]],escolas[8],'','kotlin/tree/main/estudonauta/017_Operatores_Incremento_Decremento'),
+    new Website('Operadores Lógicos','Dominе operadores lógicos em Kotlin: AND (&&), OR (||) e NOT (!) para criar expressões booleanas complexas.',linguagens[15],[instrutores[6]],escolas[8],'','kotlin/tree/main/estudonauta/018_Operatores_Logicos'),
+    new Website('Valores Aleatórios','Aprenda a gerar números aleatórios em Kotlin usando Random e explore suas funcionalidades.',linguagens[15],[instrutores[6]],escolas[8],'','kotlin/tree/main/estudonauta/019_Valores_Aleatorios'),
+    new Website('Data e Hora','Trabalhe com datas e horas em Kotlin usando LocalDateTime e explore manipulação temporal.',linguagens[15],[instrutores[6]],escolas[8],'','kotlin/tree/main/estudonauta/020_Data_Hora'),
+    new Website('Exercícios Práticos','Coleção de exercícios práticos que consolidam todos os conceitos aprendidos nos módulos anteriores de Kotlin.',linguagens[15],[instrutores[6]],escolas[8],'','kotlin/tree/main/estudonauta/021_Exercicios'),
 ]
