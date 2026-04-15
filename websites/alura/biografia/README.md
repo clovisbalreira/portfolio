@@ -1,15 +1,25 @@
 # Biografia Alura
+📌 **Descrição**
+Projeto de site de biografia desenvolvido para praticar estruturação de conteúdo e estilização web.
 
-Este é um projeto de um site para a Biografia Alura, desenvolvido como parte do curso de desenvolvimento web da Alura.
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
 
-## Tecnologias Utilizadas
+🎯 **Funcionalidades**
+- Página inicial biográfica.
+- Galeria de fotos.
+- Formulário de contato simples.
 
-- HTML5
-- CSS3
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/alura/biografia/index.html
 
-## Funcionalidades
+<!-- 📸 **Imagens** -->
 
-- Página inicial com informações sobre a biografia
-- Galeria de fotos
-- Formulário de contato
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
 
+📚 **Aprendizados**
+Prática de layouts de página única com seções bem definidas e estilização consistente.

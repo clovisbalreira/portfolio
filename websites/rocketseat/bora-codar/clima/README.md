@@ -1,15 +1,29 @@
-# Clima - Bora Codar 🚀
+# Weather App UI
 
-Este é um projeto desenvolvido como parte do desafio **Bora Codar** da Rocketseat. O objetivo é criar uma aplicação que exibe informações climáticas de forma simples e intuitiva.
+📌 **Descrição**
+Dashboard de previsão do tempo com interface rica em detalhes meteorológicos e ícones dinâmicos.
 
-## 🛠️ Tecnologias Utilizadas
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
 
-- **HTML5**: Estrutura do projeto.
-- **CSS3**: Estilização e responsividade.
-- **JavaScript**: Lógica e integração com APIs.
+🎯 **Funcionalidades**
+- Previsão do tempo detalhada
+- Ícones dinâmicos
+- Layout moderno
 
-## 🌟 Funcionalidades
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/rocketseat/bora-codar/clima/index.html
 
-- Exibição da temperatura atual.
-- Informações sobre a condição climática (ex.: ensolarado, nublado).
-- Atualização dinâmica com base na localização do usuário.
+<!-- <!-- 📸 **Imagens** -->
+![alt text](path/to/image.png)
+-->
+
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 **Aprendizados**
+- Consumo de APIs de clima (ou simulação)
+- Exibição de dados dinâmicos

@@ -1,15 +1,29 @@
-# Cartão de Crédito - Bora Codar
+# Formulário de Cartão de Crédito
 
-Este é um projeto desenvolvido como parte do desafio **Bora Codar** da Rocketseat. O objetivo é criar uma interface de cartão de crédito estilizada e funcional, utilizando tecnologias modernas de desenvolvimento web.
+📌 **Descrição**
+Formulário interativo para inserção de dados de cartão de crédito com espelhamento visual em tempo real (frente e verso).
 
-## Tecnologias Utilizadas
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
 
-- **HTML5**: Estrutura do projeto.
-- **CSS3**: Estilização e layout.
-- **JavaScript**: Funcionalidades interativas.
+🎯 **Funcionalidades**
+- Espelhamento de dados em tempo real
+- Animação de virada do cartão
+- Validação de campos
 
-## Funcionalidades
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/rocketseat/bora-codar/cartao-credito/index.html
 
-- Exibição de um cartão de crédito estilizado.
-- Preenchimento dinâmico das informações do cartão.
-- Validação básica dos dados inseridos.
+<!-- <!-- 📸 **Imagens** -->
+![alt text](path/to/image.png)
+-->
+
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 **Aprendizados**
+- Animações 3D com CSS
+- Manipulação de eventos de input em tempo real

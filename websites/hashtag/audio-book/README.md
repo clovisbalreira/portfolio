@@ -1,15 +1,31 @@
 # Audio Book
 
-Este é um projeto de um site para audiolivros, desenvolvido como parte do portfólio.
+📌 Descrição
+Aplicativo de Audio Book desenvolvido durante a Imersão da Hashtag Treinamentos, permitindo a reprodução de capítulos de livros.
 
-## Funcionalidades
+🚀 Tecnologias
+- HTML
+- CSS
+- JavaScript
+- Bootstrap Icons
 
-- Interface amigável para explorar audiolivros.
-- Reprodução de áudio integrada.
-- Organização por categorias e gêneros.
-- Suporte para diferentes dispositivos.
+🎯 Funcionalidades
+- Reprodução de áudio dos capítulos.
+- Navegação entre capítulos (próximo e anterior).
+- Controle de Play/Pause.
+- Exibição dinâmica do nome do capítulo e autor.
 
-## Tecnologias Utilizadas
+🖥️ Demonstração
+Link do projeto online: [Adicionar Link]
 
-- **HTML5** e **CSS3** para estrutura e estilo.
-- **JavaScript** para funcionalidades interativas.
+<!-- 📸 Imagens -->
+[Adicionar Imagens]
+
+▶️ Como rodar
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 Aprendizados
+- Manipulação de elementos de áudio com JavaScript.
+- Lógica de navegação em listas de arquivos.
+- Estilização de interfaces de player.

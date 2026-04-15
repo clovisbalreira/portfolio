@@ -1,15 +1,28 @@
-# Plataforma de IA - Bora Codar 🚀
+# Plataforma de IA
 
-Este é um projeto desenvolvido como parte do desafio **Bora Codar** da Rocketseat. A plataforma utiliza inteligência artificial para resolver problemas e criar soluções inovadoras.
+📌 **Descrição**
+Interface centralizadora de ferramentas e modelos de Inteligência Artificial.
 
-## Funcionalidades
+🚀 **Tecnologias**
+- HTML
+- CSS
 
-- Integração com APIs de IA.
-- Interface amigável e responsiva.
-- Processamento de dados em tempo real.
-- Suporte a múltiplos idiomas.
+🎯 **Funcionalidades**
+- Listagem de ferramentas de IA
+- Categorização
+- Interface futurista
 
-## Tecnologias Utilizadas
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/rocketseat/bora-codar/plataforma-ia/index.html
 
-- **HTML5** e **CSS3** para estrutura e estilização.
-- **JavaScript** para funcionalidades dinâmicas.
+<!-- <!-- 📸 **Imagens** -->
+![alt text](path/to/image.png)
+-->
+
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 **Aprendizados**
+- Design moderno para produtos de IA
+- Organização de conteúdo complexo

@@ -1,16 +1,29 @@
-# Sugestão de Filmes 🎥
+# Sugestão de Filmes
 
-Este é um projeto desenvolvido como parte do desafio **Bora Codar** da Rocketseat. O objetivo é criar uma aplicação que sugere filmes para assistir, utilizando uma interface moderna e intuitiva.
+📌 **Descrição**
+Sistema interativo que recomenda filmes com base em preferências do usuário.
 
-## 🚀 Tecnologias
-
-Este projeto foi desenvolvido com as seguintes tecnologias:
-
-- HTML5 e CSS3
+🚀 **Tecnologias**
+- HTML
+- CSS
 - JavaScript
 
-## 📂 Estrutura do Projeto
+🎯 **Funcionalidades**
+- Algoritmo simples de recomendação
+- Listagem de filmes
+- Interface de feedback
 
-- `index.html`: Estrutura principal da aplicação.
-- `style.css`: Estilos aplicados à interface.
-- `script.js`: Lógica para exibição e sugestão de filmes.
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/rocketseat/bora-codar/sujestao-filmes/index.html
+
+<!-- <!-- 📸 **Imagens** -->
+![alt text](path/to/image.png)
+-->
+
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 **Aprendizados**
+- Lógica de recomendação básica
+- Interação com APIs de filmes

@@ -1,70 +1,26 @@
-# 🃏 Super Trunfo - Imersão Dev Alura
+# Super Trunfo
+📌 **Descrição**
+O clássico jogo Super Trunfo de super-heróis em uma versão web interativa que consome dados reais via API externa.
 
-Este projeto é uma aplicação web interativa inspirada no clássico jogo **Super Trunfo**, desenvolvida durante a Imersão Dev da Alura.
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
 
-O jogo utiliza dados reais de super-heróis através de uma API externa, permitindo partidas dinâmicas entre jogador e máquina com cartas geradas automaticamente.
+🎯 **Funcionalidades**
+- Sorteio automático de cartas com atributos reais (Força, Poder, Velocidade).
+- Disputa de atributos entre jogador e máquina.
+- Seleção de diferentes temas de baralho (Marvel, DC, Star Wars).
+- Cartas geradas dinamicamente com imagem e atributos da API.
 
----
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/alura/super-trunfo/index.html
 
-## 🚀 Funcionalidades
+<!-- 📸 **Imagens** -->
 
-### 🎮 Jogabilidade
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
 
-- Sorteio automático de cartas para jogador e máquina
-- Escolha de atributos para disputa:
-  - Durabilidade
-  - Poder
-  - Velocidade
-  - Combate
-  - Inteligência
-  - Força
-- Sistema de vitória, derrota ou empate
-- Transferência de cartas entre jogador e máquina (estilo clássico do jogo)
-
----
-
-### 🦸‍♂️ Cartas Dinâmicas
-
-- Dados obtidos da API:
-  - Nome do herói
-  - Imagem
-  - Atributos
-- Tratamento automático para valores nulos (gera valores aleatórios)
-
----
-
-### 🎯 Modos de Baralho
-
-O usuário pode escolher:
-
-- Todas as cartas
-- Marvel Comics
-- DC Comics
-- George Lucas
-
----
-
-### ⚙️ Configuração
-
-- Escolha da quantidade de cartas (mínimo 1, máximo 366)
-- Distribuição automática entre jogador e máquina
-
----
-
-### 💻 Interface
-
-- Layout responsivo
-- Cartas visuais com imagem de fundo
-- Feedback visual do resultado da rodada
-- Atualização automática a cada jogada
-
----
-
-## 📚 Aprendizados
-
-- Consumo de API
-- Manipulação de objetos em JavaScript
-- Lógica de comparação de atributos
-- Tratamento de dados inconsistentes
-
-<!--## 🖼️ Interface do Jogo-->
+📚 **Aprendizados**
+Consumo de APIs RESTful externas, tratamento de dados assíncronos e lógica avançada de jogos baseada em atributos.

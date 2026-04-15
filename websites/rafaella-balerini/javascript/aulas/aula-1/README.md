@@ -1,19 +1,26 @@
-Projeto: Saudação Personalizada
+# Saudação Personalizada
 
-Descrição:
-Este projeto demonstra como personalizar uma saudação em uma página web usando JavaScript. Ao clicar no botão "Personalizar Saudação", o texto da saudação é alterado para incluir o nome especificado no código JavaScript.
+📌 Descrição
+Este projeto demonstra como personalizar uma saudação em uma página web usando JavaScript, alterando o texto dinamicamente ao clicar em um botão.
 
-Tecnologias Utilizadas:
-    HTML
-    CSS
-    JavaScript
+🚀 Tecnologias
+- HTML
+- CSS
+- JavaScript
 
-Funcionamento:
-    A página exibe uma saudação inicial.
-    Ao clicar no botão, a função mudarNome() é chamada.
-    A função obtém o nome especificado.
-    O texto da saudação é atualizado com o nome personalizado.
+🎯 Funcionalidades
+- Exibição de saudação inicial.
+- Alteração dinâmica de texto via função JavaScript.
+- Personalização de nome no código.
 
-Personalização:
-    Nome: Modifique o valor da variável nome na função mudarNome() para alterar o nome da saudação.
-    Estilo: Personalize o estilo da página editando o arquivo style.css.
+🖥️ Demonstração
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/rafaella-balerini/javascript/aulas/aula-1/index.html
+
+<!-- <!-- 📸 Imagens --> -->
+
+▶️ Como rodar
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 Aprendizados
+Prática de manipulação básica do DOM e chamada de funções através de eventos de clique em botões.

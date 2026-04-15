@@ -1,15 +1,32 @@
-# E-Commerce Hashtag
+# E-commerce
 
-Este é um projeto de e-commerce desenvolvido para a plataforma **Hashtag**. O objetivo é criar uma aplicação funcional e moderna para vendas online.
+📌 Descrição
+Plataforma de e-commerce funcional com listagem de produtos, filtros por categoria e sistema de carrinho de compras.
 
-## Funcionalidades
+🚀 Tecnologias
+- HTML
+- CSS (Tailwind CSS)
+- JavaScript
+- Font Awesome
 
-- Catálogo de produtos com categorias.
-- Carrinho de compras dinâmico.
-- Sistema de login e cadastro de usuários.
-- Integração com métodos de pagamento.
-- Painel administrativo para gerenciamento de produtos e pedidos.
+🎯 Funcionalidades
+- Listagem dinâmica de produtos.
+- Filtros por gênero (Masculino, Feminino e Todos).
+- Carrinho de compras lateral interativo.
+- Cálculo de total do carrinho.
+- Páginas de checkout e pedidos.
 
-## Tecnologias Utilizadas
+🖥️ Demonstração
+Link do projeto online: [Adicionar Link]
 
-- **Frontend**: HTML, CSS, JavaScript
+<!-- 📸 Imagens -->
+[Adicionar Imagens]
+
+▶️ Como rodar
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 Aprendizados
+- Uso de Tailwind CSS para estilização rápida e responsiva.
+- Gerenciamento de estado do carrinho de compras.
+- Manipulação de DOM para filtros dinâmicos.

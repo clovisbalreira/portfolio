@@ -1,7 +1,26 @@
-# Instagram Clone
+# Clone Instagram Login
 
-Este repositório contém um projeto de clonagem do Instagram, desenvolvido com o objetivo de praticar e demonstrar habilidades em desenvolvimento web.
+📌 Descrição
+Recriação fiel da interface de login do Instagram, com foco em precisão de design e responsividade.
 
-## Tecnologias Utilizadas
+🚀 Tecnologias
+- HTML
+- CSS
 
-- **Frontend**: HTML, CSS, JavaScript
+🎯 Funcionalidades
+- Layout fiel à interface original do Instagram (versão web)
+- Design responsivo adaptado para simular a visualização em dispositivos móveis
+- Uso de Flexbox para alinhamento e distribuição precisa dos elementos
+- Integração de elementos visuais como logo oficial e imagens de mockup de celular
+
+🖥️ Demonstração
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/pessoal/instagram/index.html
+
+<!-- 📸 Imagens -->
+
+▶️ Como rodar
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 Aprendizados
+Aprofundamento em CSS Flexbox, posicionamento absoluto/relativo e técnicas de estilização para clonagem de interfaces populares.

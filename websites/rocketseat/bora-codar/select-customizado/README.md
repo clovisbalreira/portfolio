@@ -1,15 +1,29 @@
-# Select Customizado - Bora Codar
+# Select Customizado
 
-Este é um projeto desenvolvido como parte do desafio **Bora Codar** da Rocketseat. O objetivo é criar um componente de seleção customizado com HTML, CSS e JavaScript.
+📌 **Descrição**
+Componente de dropdown estilizado com busca interna e seleção múltipla.
 
-## Tecnologias Utilizadas
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
 
-- **HTML5**: Estrutura do componente.
-- **CSS3**: Estilização e animações.
-- **JavaScript**: Funcionalidade e interatividade.
+🎯 **Funcionalidades**
+- Dropdown customizado
+- Busca interna de itens
+- Seleção múltipla
 
-## Funcionalidades
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/rocketseat/bora-codar/select-customizado/index.html
 
-- Seleção de opções personalizadas.
-- Design responsivo e acessível.
-- Animações suaves para interação do usuário.
+<!-- <!-- 📸 **Imagens** -->
+![alt text](path/to/image.png)
+-->
+
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 **Aprendizados**
+- Recriação de componentes nativos do navegador
+- Gerenciamento de estado de seleção

@@ -1,42 +1,30 @@
-# 🏡 Residencial Bela Vista - Landing Page ( Projeta para um vaga de emprego )
+# Residencial Bela Vista
 
-O **Residencial Bela Vista** é uma landing page institucional moderna e responsiva, desenvolvida com HTML, CSS e JavaScript. Criada para promover um empreendimento imobiliário, a página destaca os diferenciais do projeto, apresenta galeria de imagens, localização estratégica e formulário de contato para agendamento de visitas.
+📌 **Descrição**
+Uma landing page moderna e elegante desenvolvida para promover um empreendimento imobiliário fictício, apresentando suas características, galeria de imagens e canais de contato.
 
-## 🔍 Visão Geral
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript (FontAwesome)
 
-Esta página tem como objetivo fornecer uma experiência visual envolvente para potenciais clientes de um empreendimento imobiliário, destacando:
+🎯 **Funcionalidades**
+- Navegação fluida através de links internos (âncoras).
+- Seções informativas detalhando os diferenciais do empreendimento.
+- Galeria de fotos responsiva para visualização do imóvel.
+- Mapa interativo integrado do Google Maps.
+- Formulário de contato para agendamento de visitas.
+- Design responsivo adaptável a diferentes tamanhos de tela.
 
-- Identidade visual forte
-- Destaques do empreendimento
-- Galeria de imagens com ambientes
-- Mapa de localização com integração ao Google Maps
-- Formulário de contato funcional e responsivo
+🖥️ **Demonstração**
+Link do projeto online:
+https://clovisbalreira.github.io/portfolio/websites/pessoal/mides/index.html
 
-## 🧱 Tecnologias Utilizadas
+<!-- 📸 **Imagens** -->
 
-- **HTML5** — estrutura semântica
-- **CSS3** — estilização com foco em responsividade
-- **Google Fonts** — tipografias Montserrat e Playfair Display
-- **Font Awesome** — ícones de destaque
-- **JavaScript (básico)** — interações e navegação suave (se implementado futuramente)
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
 
-## 🖼️ Principais Seções
-
-- **Hero Section**: Imagem principal com chamada para ação.
-- **Sobre**: Apresentação do empreendimento.
-- **Destaques**: Benefícios e diferenciais.
-- **Galeria**: Imagens reais ou simuladas dos ambientes.
-- **Localização**: Mapa interativo com endereço.
-- **Contato**: Formulário simples para agendamento.
-
-## 📱 Responsividade
-
-A landing page é totalmente responsiva e adaptada para:
-
-- Celulares
-- Tablets
-- Desktops
-
-Utiliza `flexbox` e `media queries` para garantir boa experiência do usuário em diferentes tamanhos de tela.
-
-
+📚 **Aprendizados**
+O projeto focou na criação de uma interface profissional utilizando CSS avançado (Flexbox e Grid), integração de APIs externas como Google Maps, uso de bibliotecas de ícones e fontes externas, além de boas práticas de estruturação semântica de HTML para SEO e acessibilidade.

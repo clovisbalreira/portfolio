@@ -1,24 +1,27 @@
-# Projetos da Lei Rouanet
+# Projetos Lei Rouanet
 
-Este é um projeto simples que consome a API [Salic](https://api.salic.cultura.gov.br/docs) para listar projetos da Lei Rouanet.
+📌 Descrição
+Uma plataforma de consulta para visualização de projetos culturais brasileiros que utilizam incentivos fiscais da Lei Rouanet.
 
-## Descrição
+🚀 Tecnologias
+- HTML
+- CSS
+- JavaScript
 
-A aplicação web permite a visualização de dados relacionados a projetos incentivados pela Lei Rouanet. É possível navegar entre diferentes categorias, como proponentes, incentivadores, fornecedores, propostas e projetos. Além disso, a aplicação oferece a funcionalidade de filtrar os resultados para facilitar a busca por informações específicas.
+🎯 Funcionalidades
+- Integração com a API Salic para busca de dados oficiais em tempo real
+- Listagem organizada de projetos em formato de tabela detalhada
+- Uso de elementos de diálogo (modais) para visualização de informações extras
+- Indicador de status de carregamento e interface focada em transparência de dados
 
-## Tecnologias Utilizadas
+🖥️ Demonstração
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/pessoal/lei-incentivo/index.html
 
-*   HTML5
-*   CSS3
-*   JavaScript
+<!-- 📸 Imagens -->
 
-## Funcionalidades
+▶️ Como rodar
+1. Clone o repositório
+2. Abra o arquivo index.html
 
-*   Listagem de Proponentes
-*   Listagem de Incentivadores
-*   Listagem de Fornecedores
-*   Listagem de Propostas
-*   Listagem de Projetos
-*   Filtros por estado, município, tipo, etc.
-*   Paginação para navegar entre os resultados.
-*   Visualização de detalhes em um modal.
+📚 Aprendizados
+Consumo de APIs governamentais complexas, tratamento de dados JSON e renderização dinâmica de tabelas com grandes volumes de informação.

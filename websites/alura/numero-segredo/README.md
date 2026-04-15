@@ -1,30 +1,25 @@
-# JS Game - Jogo de Adivinhação
+# Jogo do Número Secreto
+📌 **Descrição**
+Um jogo de adivinhação onde o objetivo é descobrir o número secreto gerado pelo computador no menor número de tentativas possível.
 
-Um jogo interativo de adivinhação desenvolvido com **HTML**, **CSS** e **JavaScript**, onde o jogador tenta descobrir um número secreto gerado aleatoriamente.
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
 
-## 🕹️ Como Funciona
+🎯 **Funcionalidades**
+- Definição personalizada do limite máximo do intervalo (1 até n).
+- Sistema de chutes interativo com feedback de "maior" ou "menor".
+- Exibição do número de tentativas necessárias ao acertar.
 
-1. **Defina o Limite Máximo**: Insira um número para definir o intervalo (1 até o número máximo).
-2. **Adivinhe o Número**: Insira um palpite e clique no botão "Chute".
-3. O jogo informa se o número secreto é maior ou menor que o palpite até o jogador acertar.
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/alura/numero-segredo/index.html
 
-## 🚀 Tecnologias Utilizadas
+<!-- 📸 **Imagens** -->
 
-- **HTML**: Estrutura da página.
-- **CSS**: Estilização e design responsivo.
-- **JavaScript**: Lógica do jogo e manipulação do DOM.
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
 
-## 📂 Estrutura do Projeto
-
-```plaintext
-.
-├── index.html        # Arquivo principal do jogo
-├── assets/
-│   ├── css/
-│   │   └── style.css # Estilos da interface
-│   ├── img/
-│   │   ├── robot.png # Imagem do robô
-│   │   ├── trophy.png# Ícone de troféu
-│   │   └── Ruido.png # Imagem de fundo
-│   └── js/
-│       └── app.js    # Lógica do jogo
+📚 **Aprendizados**
+Prática de lógica de programação com JavaScript para controle de estado do jogo e manipulação do DOM.

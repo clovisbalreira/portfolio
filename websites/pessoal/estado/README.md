@@ -1,23 +1,27 @@
-# Estados
+# Estados do Brasil
 
-## Desvendando os Segredos dos Estados Brasileiros! 🇧🇷
+📌 Descrição
+Guia interativo que fornece informações detalhadas e curiosidades sobre os estados brasileiros de forma rápida e intuitiva.
 
-**O que essa aplicação faz?**
+🚀 Tecnologias
+- HTML
+- CSS
+- JavaScript
 
-Já se perguntou qual é a curiosidade mais legal sobre o Amazonas, ou qual a característica mais marcante do Rio Grande do Sul? Com essa aplicação, você pode descobrir tudo isso e muito mais! 
+🎯 Funcionalidades
+- Busca dinâmica por nome do estado ou curiosidades específicas
+- Exibição de resultados em cartões informativos com design moderno
+- Pop-up interativo para detalhamento de informações adicionais
+- Interface responsiva adaptada para diferentes dispositivos
 
-Ao digitar uma palavra-chave, a aplicação vasculha um banco de dados com informações sobre todos os estados brasileiros e te apresenta os resultados que mais combinam com a sua busca. Quer saber mais sobre um estado em específico? Basta clicar no botão "Mais informações" e um pop-up te mostrará tudo o que você precisa saber! 
+🖥️ Demonstração
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/pessoal/estado/index.html
 
-**Como a mágica acontece?**
+<!-- 📸 Imagens -->
 
-Por trás dessa experiência incrível, estão as seguintes tecnologias:
+▶️ Como rodar
+1. Clone o repositório
+2. Abra o arquivo index.html
 
-* **HTML:** A estrutura básica da página, onde tudo é organizado de forma clara e intuitiva.
-* **CSS:** O responsável por deixar a aplicação com uma cara bonita e fácil de usar.
-* **JavaScript:** A alma da aplicação! É ele quem faz toda a lógica, desde a busca até a criação dos elementos na tela.
-
-**Como usar a aplicação?**
-
-1. **Digite sua curiosidade:** No campo de pesquisa, digite qualquer palavra relacionada ao estado que você quer saber mais.
-2. **Explore os resultados:** A aplicação te mostrará uma lista com os estados que mais se encaixam na sua busca.
-3. **Clique para saber mais:** Ao clicar no botão "Mais informações", um pop-up será aberto com detalhes sobre o estado selecionado.
+📚 Aprendizados
+Prática de algoritmos de busca em arrays de objetos e manipulação de visibilidade de elementos (pop-ups) via JavaScript.

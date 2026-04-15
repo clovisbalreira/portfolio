@@ -1,16 +1,32 @@
-# 🎵 Player Hashtag
+# Player
 
-Este é um projeto de um player de música desenvolvido para o portfólio. Ele foi criado com o objetivo de demonstrar habilidades em desenvolvimento web e design interativo.
+📌 Descrição
+Player de música moderno e interativo com controles completos de reprodução e interface visual atraente.
 
-## 🚀 Funcionalidades
+🚀 Tecnologias
+- HTML
+- CSS
+- JavaScript
+- Bootstrap Icons
 
-- Reproduzir, pausar e parar músicas.
-- Controle de volume.
-- Interface amigável e responsiva.
-- Suporte a playlists.
+🎯 Funcionalidades
+- Reprodução, pausa e navegação entre músicas.
+- Barra de progresso interativa com tempo atual e total.
+- Modos de reprodução: Aleatório (Shuffle) e Repetir (Repeat).
+- Funcionalidade de "curtir" (Like) com feedback visual.
+- Exibição de capa do álbum e informações da banda/música.
 
-## 🛠️ Tecnologias Utilizadas
+🖥️ Demonstração
+Link do projeto online: [Adicionar Link]
 
-- **HTML5**: Estrutura do projeto.
-- **CSS3**: Estilização e design responsivo.
-- **JavaScript**: Funcionalidades interativas do player.
+<!-- 📸 Imagens -->
+[Adicionar Imagens]
+
+▶️ Como rodar
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 Aprendizados
+- Lógica avançada de controle de áudio em JavaScript.
+- Sincronização de interface com o tempo de reprodução.
+- Implementação de funcionalidades de Shuffle e Repeat.

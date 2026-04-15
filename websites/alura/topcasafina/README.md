@@ -1,15 +1,26 @@
 # TopCasaFina
+📌 **Descrição**
+Site sobre arquitetura moderna e design de interiores desenvolvido para praticar conceitos de estruturação responsiva.
 
-Este é um projeto de um site para a Bootstrap, desenvolvido como parte do curso de desenvolvimento web da Alura.
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
 
-## Tecnologias Utilizadas
+🎯 **Funcionalidades**
+- Página inicial com informações detalhadas sobre projetos de arquitetura.
+- Galeria de fotos de alta qualidade.
+- Formulário de contato estruturado para novos clientes.
 
-- HTML5
-- CSS3
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/alura/topcasafina/index.html
 
-## Funcionalidades
+<!-- 📸 **Imagens** -->
 
-- Página inicial com informações sobre a arquitetura
-- Galeria de fotos
-- Formulário de contato
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
 
+📚 **Aprendizados**
+Estruturação de sites profissionais com design responsivo e foco em apresentação visual utilizando Bootstrap.

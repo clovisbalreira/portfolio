@@ -16,6 +16,7 @@ body {
 
 body::before {
     background-image: url("../img/code.png");
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
     content: "";
@@ -27,7 +28,7 @@ body::before {
 }
 
 .container {
-    min-width: 1200px;
+    width: 1200px;
     height: 600px;
     display: flex;
     align-items: center;

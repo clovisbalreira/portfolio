@@ -1,8 +1,29 @@
-# Ticket IA - Bora Codar 🚀
+# Ticket de Evento IA
 
-Este é um projeto desenvolvido como parte do desafio **Bora Codar** da Rocketseat. O objetivo é criar uma interface para geração de tickets utilizando inteligência artificial.
+📌 **Descrição**
+Gerador de ingressos personalizados com estética futurista para eventos de IA.
 
-## 🛠️ Tecnologias Utilizadas
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
 
-- **HTML5** e **CSS3**: Estrutura e estilização da interface.
-- **JavaScript**: Funcionalidades dinâmicas.
+🎯 **Funcionalidades**
+- Geração de ticket com nome do usuário
+- Estética futurista
+- Animações de entrada
+
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/rocketseat/bora-codar/ticket-ia/index.html
+
+<!-- <!-- 📸 **Imagens** -->
+![alt text](path/to/image.png)
+-->
+
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 **Aprendizados**
+- Uso de canvas ou manipulação de DOM para tickets
+- Estilização temática

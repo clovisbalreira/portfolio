@@ -1,18 +1,25 @@
-Adivinhe o Número - Seu desafio mental!
+# Mentalista V1
+📌 **Descrição**
+Jogo de adivinhação clássico onde você desafia sua intuição para acertar um número secreto entre 0 e 10.
 
-O que essa aplicação faz?
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
 
-Já pensou em desafiar sua mente e testar sua intuição? Com essa aplicação, você pode colocar suas habilidades à prova tentando adivinhar um número secreto entre 0 e 10. É como ter um mentalista particular te desafiando a cada tentativa!
+🎯 **Funcionalidades**
+- Geração aleatória de um número secreto pelo computador.
+- Sistema de chutes com dicas de "maior" ou "menor".
+- Interface interativa para feedback imediato sobre o palpite.
 
-Como funciona?
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/alura/mentalista-v1/index.html
 
-    Um número secreto é escolhido: A cada nova partida, um número aleatório entre 0 e 10 é gerado pelo computador.
-    Faça seu chute: Digite um número no campo e clique em "Chutar".
-    Descubra se acertou: A aplicação te dirá se você acertou, errou para mais ou para menos.
-    Continue tentando: Se você errar, terá dicas para te ajudar a chegar mais perto do número secreto.
+<!-- 📸 **Imagens** -->
 
-Quais tecnologias foram usadas?
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
 
-    HTML: A estrutura básica da página, onde tudo é organizado de forma clara e intuitiva.
-    CSS: O responsável por deixar a aplicação com uma cara bonita e fácil de usar.
-    JavaScript: A alma da aplicação! É ele quem faz toda a lógica, desde a geração do número secreto até a verificação dos chutes.
+📚 **Aprendizados**
+Lógica fundamental de programação com geração de números aleatórios e estruturas condicionais em JavaScript.

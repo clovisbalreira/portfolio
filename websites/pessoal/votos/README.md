@@ -1,29 +1,30 @@
-# 🏛️ Análise Parlamentar Personalizada
+# Votos: Análise Parlamentar
 
-## 📌 Sobre o projeto
-Aplicação web interativa que permite analisar o cenário político brasileiro de forma personalizada, possibilitando a seleção de deputados, partidos e leis para comparação e análise de alinhamento.
+📌 Descrição
+Uma ferramenta de análise parlamentar personalizada que utiliza dados abertos da Câmara dos Deputados para oferecer transparência sobre votações, partidos e a atuação de deputados federais.
 
-<!--## 🔗 Acesse o projeto
-👉 (coloque o link aqui)-->
+🚀 Tecnologias
+- HTML
+- CSS
+- JavaScript (Módulos/ES6)
+- FontAwesome (Ícones)
+- API de Dados Abertos (Câmara dos Deputados)
 
-## 🚀 Tecnologias utilizadas
-- HTML5
-- CSS3
-- JavaScript
-- Consumo de APIs externas
+🎯 Funcionalidades
+- Listagem e filtragem de Deputados e Partidos
+- Consulta de leis e projetos em pauta na Câmara
+- Visualização de estatísticas de votação e combinações políticas
+- Modais de diálogo para informações detalhadas dos parlamentares
+- Integração direta com a base de dados oficial do governo brasileiro
 
-## 🎯 Funcionalidades
-- Seleção de deputados e partidos
-- Filtro de leis para análise
-- Análise comparativa personalizada
-- Visualização de alinhamento político
-- Interface interativa e dinâmica
+🖥️ Demonstração
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/pessoal/votos/index.html
 
-<!--## 📷 Preview
-(coloque imagens ou GIF — ESSENCIAL)-->
+<!-- 📸 Imagens -->
 
-## ⚙️ Destaques técnicos
-- Integração com APIs externas (dados políticos)
-- Arquitetura MVC para organização do código
-- Manipulação dinâmica do DOM
-- Estrutura modular em JavaScript
+▶️ Como rodar
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 Aprendizados
+O desenvolvimento deste projeto envolveu o uso de Módulos JavaScript para gerenciar a complexidade da integração com uma API governamental robusta. Foi praticado o uso do elemento `<dialog>` nativo do HTML5, técnicas avançadas de filtragem de dados e a criação de uma interface analítica focada em transparência pública.

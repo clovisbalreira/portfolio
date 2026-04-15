@@ -1,14 +1,25 @@
-# Verão
+# Verão (SVG)
+📌 **Descrição**
+Projeto desenvolvido para explorar as capacidades e versatilidade de imagens SVG no desenvolvimento web.
 
-Este é um projeto de um site para a SVG, desenvolvido como parte do curso de desenvolvimento web da Alura.
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
+- SVG
 
-## Tecnologias Utilizadas
+🎯 **Funcionalidades**
+- Página inicial informativa com temática de verão.
+- Galeria de imagens com foco em vetores escaláveis (SVG).
 
-- HTML5
-- CSS3
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/alura/svg/index.html
 
-## Funcionalidades
+<!-- 📸 **Imagens** -->
 
-- Página inicial com informações verão
-- Galeria de fotos
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
 
+📚 **Aprendizados**
+Técnicas de implementação e manipulação de elementos SVG para garantir qualidade visual em todas as resoluções.

@@ -1,27 +1,31 @@
-Landing Page da Masterclass Full Stack
+# Landing Page
 
-Esta página HTML5, estilizada com CSS3 e com interações em JavaScript, serve como landing page para uma masterclass de programação full stack. A página utiliza flexbox e grid para criar um layout responsivo e moderno, além de fontes personalizadas e ícones do Font Awesome.
+📌 Descrição
+Landing page desenvolvida para a MasterClass Programação Full Stack da Hashtag Treinamentos, com foco em conversão e informações do evento.
 
-Funcionalidades:
+🚀 Tecnologias
+- HTML
+- CSS
+- JavaScript
 
-Formulário de inscrição com validação básica.
-Animações simples com CSS.
-Modal de inscrição ao clicar no botão.
-Tecnologias:
+🎯 Funcionalidades
+- Seção Hero com destaque para o evento.
+- Passo a passo detalhado para participação.
+- Seção informativa sobre o conteúdo das aulas.
+- Apresentação do instrutor/organizador.
+- Popup de inscrição integrado.
 
-HTML5
-CSS3
-JavaScript
-Font Awesome
-Estrutura:
+🖥️ Demonstração
+Link do projeto online: [Adicionar Link]
 
-index.html: Contém a estrutura principal da página.
-style.css: Arquivo de estilos CSS.
-scripts.js: Arquivo com o código JavaScript.
-fonts/: Pasta com as fontes personalizadas.
-images/: Pasta com as imagens utilizadas.
-Melhorias Futuras:
+<!-- 📸 Imagens -->
+[Adicionar Imagens]
 
-Implementar validação mais robusta no formulário.
-Adicionar animações mais complexas.
-Integrar com uma ferramenta de analytics para acompanhar as métricas da página.
+▶️ Como rodar
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 Aprendizados
+- Criação de layouts de alta conversão.
+- Implementação de popups e interatividade básica.
+- Uso de fontes externas e recursos visuais otimizados.

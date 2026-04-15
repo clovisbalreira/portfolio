@@ -1,27 +1,25 @@
-Aluraflix: Seu Cinema Pessoal!
+# Alura Flix V1
+📌 **Descrição**
+O Aluraflix é uma plataforma de streaming pessoal onde você pode criar sua própria lista de filmes favoritos para acessá-la sempre que quiser.
 
-O que essa aplicação faz?
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
 
-Já pensou em ter sua própria plataforma de streaming? Com o Aluraflix, você pode criar sua lista de filmes favoritos e acessá-la sempre que quiser!
+🎯 **Funcionalidades**
+- Adicionar filmes informando o nome e o endereço da imagem do pôster.
+- Exibir a lista de filmes de forma organizada e intuitiva.
+- Remover filmes da lista através de um botão de exclusão.
 
-Como a mágica acontece?
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/alura/alura-flix-v1/index.html
 
-Por trás dessa experiência incrível, estão as seguintes tecnologias:
+<!-- 📸 **Imagens** -->
 
-    HTML: A estrutura básica da página, onde tudo é organizado de forma clara e intuitiva.
-    CSS: O responsável por deixar a aplicação com uma cara bonita e fácil de usar.
-    JavaScript: A alma da aplicação! É ele quem faz toda a lógica, desde a adição de novos filmes até a exibição da lista.
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
 
-Como usar a aplicação?
-
-    Adicione seus filmes: Preencha os campos com o nome do filme e o endereço da imagem do pôster.
-    Explore sua lista: A aplicação irá exibir todos os filmes adicionados em uma lista organizada.
-    Remova filmes: Se quiser remover algum filme da lista, basta clicar no botão "Deletar".
-
-Quer contribuir?
-
-Essa aplicação está em constante evolução! Se você é um desenvolvedor e quer dar uma força, fique à vontade para contribuir com novas funcionalidades ou melhorar o código existente.
-
-Dica: Para ter uma melhor experiência, use um navegador moderno como Chrome, Firefox ou Edge.
-
-Vamos juntos criar a melhor plataforma de streaming do mundo!
+📚 **Aprendizados**
+Desenvolvimento de lógica para manipulação de listas e interação com o DOM para criação dinâmica de elementos.

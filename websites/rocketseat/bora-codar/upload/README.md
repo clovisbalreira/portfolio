@@ -1,10 +1,29 @@
-# Bora Codar - Upload
+# File Upload UI
 
-Este é um projeto desenvolvido como parte do desafio **Bora Codar** da Rocketseat. O objetivo deste desafio é criar uma interface funcional para upload de arquivos.
+📌 **Descrição**
+Componente moderno para seleção e monitoramento de upload de arquivos.
 
-## 🚀 Tecnologias
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
 
-As tecnologias utilizadas neste projeto incluem:
+🎯 **Funcionalidades**
+- Drag and drop de arquivos
+- Barra de progresso de upload
+- Listagem de arquivos selecionados
 
-- **HTML5** e **CSS3**: Para a estrutura e estilização da interface.
-- **JavaScript**: Para a interação e funcionalidades.
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/rocketseat/bora-codar/upload/index.html
+
+<!-- <!-- 📸 **Imagens** -->
+![alt text](path/to/image.png)
+-->
+
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 **Aprendizados**
+- Manipulação de File API no JavaScript
+- Estados de upload na UI

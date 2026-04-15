@@ -1,20 +1,28 @@
-# Página Não Encontrada - Bora Codar 🚀
+# 404 Page Not Found
 
-Este repositório contém o projeto de uma página de erro "404 - Página Não Encontrada", desenvolvido como parte do desafio **Bora Codar** da Rocketseat.
+📌 **Descrição**
+Página de erro 404 personalizada com design criativo para melhorar a experiência de navegação.
 
-## 🖥️ Sobre o Projeto
+🚀 **Tecnologias**
+- HTML
+- CSS
 
-O objetivo deste projeto é criar uma página estilizada e funcional para exibir quando o usuário tentar acessar uma rota inexistente no site. O design foi inspirado no desafio proposto pela Rocketseat.
+🎯 **Funcionalidades**
+- Design criativo para erro 404
+- Botão de retorno à home
+- Ilustrações personalizadas
 
-## 🚀 Tecnologias Utilizadas
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/rocketseat/bora-codar/pagina-nao-encontrada/index.html
 
-- **HTML5**: Estrutura do projeto.
-- **CSS3**: Estilização e layout.
-- **JavaScript**: Funcionalidades interativas (se aplicável).
+<!-- <!-- 📸 **Imagens** -->
+![alt text](path/to/image.png)
+-->
 
-## 📂 Estrutura do Projeto
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
 
-- `index.html`: Arquivo principal da página.
-- `styles/`: Contém os arquivos de estilo CSS.
-- `scripts/`: Contém os arquivos JavaScript (se necessário).
-- `assets/`: Imagens e outros recursos utilizados no projeto.
+📚 **Aprendizados**
+- Design de páginas de erro
+- UX para situações inesperadas

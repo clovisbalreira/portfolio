@@ -1,15 +1,25 @@
-Clone, explore e embarque em uma jornada musical!
+# Spotify
+📌 **Descrição**
+Interface que simula o serviço de música Spotify, oferecendo playlists categorizadas e busca de artistas.
 
-Este projeto é a sua interface para curtir aquele som massa, seja para relaxar, treinar ou dar aquela animada!
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
 
-Como funciona?
+🎯 **Funcionalidades**
+- Navegação por playlists organizadas por humor e gêneros.
+- Sistema de busca de artistas integrado.
+- Exibição de informações do artista e integração com clipe musical via modal.
 
-    Tela inicial: Navegue por playlists categorizadas para todos os gostos, desde as mais badaladas até as seleções relaxantes.
-    Busca: Não encontrou a sua vibe? Sem problemas! Use a barra de busca para encontrar o seu artista favorito.
-    Informações do artista: Clique na imagem do artista para ver detalhes e curtir um clipe musical direto na plataforma (é preciso de internet, hein!).
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/alura/spotify/index.html
 
-Que tecnologias estão por trás dessa experiência?
+<!-- 📸 **Imagens** -->
 
-    HTML: A estrutura básica da página, onde tudo é organizado de forma clara e intuitiva.
-    CSS: O responsável pela beleza da interface, deixando tudo visualmente atraente e fácil de usar.
-    JavaScript: A alma da aplicação! É ele quem faz toda a lógica, desde a exibição das playlists até a busca por artistas e a interação com o modal de vídeo.
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 **Aprendizados**
+Criação de interfaces complexas de música com foco em interatividade e manipulação de modais em JavaScript.

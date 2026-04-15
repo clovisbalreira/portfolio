@@ -1,15 +1,29 @@
-# Beber Água 💧
+# Lembrete de Hidratação
 
-Este é um projeto desenvolvido como parte do desafio **Bora Codar** da Rocketseat. O objetivo é criar uma aplicação que ajude os usuários a monitorar e lembrar de beber água ao longo do dia.
+📌 **Descrição**
+Aplicativo de lembrete de hidratação com definição de metas diárias e timer para consumo de água.
 
-## 🚀 Tecnologias
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
 
-- **HTML5**
-- **CSS3**
-- **JavaScript**
+🎯 **Funcionalidades**
+- Definição de metas diárias
+- Timer para consumo de água
+- Histórico de consumo
 
-## 📦 Funcionalidades
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/rocketseat/bora-codar/beber-agua/index.html
 
-- Adicionar metas diárias de consumo de água.
-- Registrar a quantidade de água consumida.
-- Visualizar o progresso em tempo real.
+<!-- <!-- 📸 **Imagens** -->
+![alt text](path/to/image.png)
+-->
+
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 **Aprendizados**
+- Uso de timers em JavaScript
+- Gerenciamento de estado simples no frontend

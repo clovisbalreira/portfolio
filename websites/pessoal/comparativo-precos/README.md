@@ -1,52 +1,27 @@
-# 🛒 Comparador de Preços
+# Comparativo de Preços
 
-## 📌 Sobre o projeto
-Aplicação web para gerenciamento e comparação de preços entre diferentes lojas, permitindo identificar automaticamente a opção mais econômica para cada produto.
+📌 Descrição
+Ferramenta para ajudar na economia doméstica, permitindo comparar preços entre diferentes estabelecimentos e gerenciar listas de compras.
 
-<!--## 🔗 Acesse o projeto
-👉 (coloque aqui o link se estiver online)-->
+🚀 Tecnologias
+- HTML
+- CSS
+- JavaScript
 
-## 🚀 Tecnologias utilizadas
-- HTML5
-- CSS3
-- JavaScript (ES6 Modules)
-- LocalStorage
+🎯 Funcionalidades
+- Cadastro e gestão de múltiplas lojas e itens de compra
+- Cálculo automático do valor total da lista em cada estabelecimento
+- Identificação visual dos itens pesquisados e pendentes
+- Sistema de aviso via modal para dados já existentes no armazenamento local
 
-## 🎯 Funcionalidades
-- Cadastro de lojas com informações de entrega
-- Adição de produtos com preços por loja
-- Comparação automática de preços
-- Destaque para menor, maior e preços iguais
-- Geração de lista final com os itens mais baratos
-- Persistência de dados no navegador
+🖥️ Demonstração
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/pessoal/comparativo-precos/index.html
 
-<!--## 📷 Preview
-(coloque imagem ou GIF aqui — MUITO IMPORTANTE)-->
+<!-- 📸 Imagens -->
 
-## ▶️ Como usar
+▶️ Como rodar
+1. Clone o repositório
+2. Abra o arquivo index.html
 
-1. Cadastre as lojas
-2. Adicione produtos e preços
-3. Visualize automaticamente o menor preço
-4. Gere a lista final otimizada
-
-## 🧩 Arquitetura
-
-O projeto segue o padrão MVC:
-
-- Model: gerenciamento de dados e regras
-- View: interface e renderização
-- Controller: controle de interações
-
-## 💡 Diferenciais
-
-- Persistência local (não perde dados)
-- Comparação automática em tempo real
-- Organização modular do código
-
-## ⚙️ Destaques técnicos
-- Arquitetura MVC para organização do código
-- Uso de módulos JavaScript (ES6)
-- Separação de responsabilidades (Model, View, Controller)
-- Manipulação dinâmica do DOM
-- Persistência de dados com LocalStorage
+📚 Aprendizados
+Manipulação de LocalStorage para persistência de dados e criação de interfaces dinâmicas para comparação de preços em tempo real.

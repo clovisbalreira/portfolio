@@ -1,21 +1,29 @@
-# Antes e Depois com IA
+# Comparador Antes/Depois IA
 
-Este é um projeto desenvolvido como parte do desafio **Bora Codar** da Rocketseat. O objetivo é criar uma aplicação que utiliza inteligência artificial para gerar comparações de "antes e depois".
+📌 **Descrição**
+Componente de comparação visual que permite deslizar entre uma imagem original e uma processada por inteligência artificial.
 
-## 🚀 Tecnologias
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
 
-Este projeto foi desenvolvido com as seguintes tecnologias:
+🎯 **Funcionalidades**
+- Slider de comparação antes/depois
+- Design responsivo
+- Interatividade fluida
 
-- **HTML5** e **CSS3**
-- **JavaScript**
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/rocketseat/bora-codar/antes-depois-ia/index.html
 
-## 📂 Estrutura do Projeto
+<!-- <!-- 📸 **Imagens** -->
+![alt text](path/to/image.png)
+-->
 
-- `index.html`: Estrutura principal da aplicação.
-- `style.css`: Estilos aplicados à interface.
-- `script.js`: Lógica e integração com a API de IA.
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
 
-## 🛠️ Funcionalidades
-
-- Gerar uma comparação de "antes e depois" utilizando IA.
-- Interface amigável e responsiva.
+📚 **Aprendizados**
+- Implementação de slider de comparação customizado
+- Manipulação de eventos de mouse e touch

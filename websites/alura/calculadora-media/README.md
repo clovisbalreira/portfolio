@@ -1,29 +1,25 @@
-Calculadora de Média: Descubra se você foi aprovado!
+# Calculadora de Média
+📌 **Descrição**
+Aplicação simples e rápida para calcular médias bimestrais e descobrir o status de aprovação.
 
-O que essa aplicação faz?
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
 
-Já se estressou na hora de calcular a sua média? Com essa calculadora, você pode descobrir sua média em poucos cliques!
+🎯 **Funcionalidades**
+- Entrada de notas bimestrais.
+- Cálculo automático da média final ao enviar.
+- Exibição de mensagem personalizada (Aprovado, Reprovado ou Recuperação).
 
-Basta inserir suas notas bimestrais e pronto! A aplicação calcula sua média final e te mostra se você foi aprovado, reprovado ou se ficou de recuperação.
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/alura/calculadora-media/index.html
 
-Como a mágica acontece?
+<!-- 📸 **Imagens** -->
 
-Por trás dessa simplicidade, estão as seguintes tecnologias:
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
 
-    HTML: A estrutura básica da página, onde tudo é organizado de forma clara e intuitiva.
-    CSS: O responsável por deixar a aplicação com uma cara bonita e fácil de usar.
-    JavaScript: A alma da aplicação! É ele quem faz todos os cálculos e exibe os resultados na tela.
-
-Como usar a aplicação?
-
-    Digite suas notas: Insira suas notas bimestrais nos campos correspondentes.
-    Clique em "Enviar": A aplicação calculará sua média automaticamente.
-    Confira o resultado: A sua média final, junto com uma mensagem indicando se você foi aprovado, reprovado ou se ficou de recuperação, será exibida na tela.
-
-Quer contribuir?
-
-Essa aplicação é um projeto simples, mas pode ser aprimorado! Se você é um desenvolvedor e quer dar uma força, fique à vontade para adicionar novas funcionalidades, como:
-
-    Cálculo de média ponderada: Permita que o usuário defina pesos diferentes para cada nota.
-    Gráfico de desempenho: Mostre um gráfico visual da evolução das notas do aluno.
-    Salvar histórico: Permita que o usuário salve suas médias para acompanhar seu desempenho ao longo do tempo.
+📚 **Aprendizados**
+Tratamento de dados numéricos em JavaScript e lógica condicional para feedback ao usuário.

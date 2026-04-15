@@ -1,15 +1,28 @@
-# Formulário - Bora Codar
+# Formulário de Evento
 
-Este é um projeto desenvolvido como parte do desafio **Bora Codar** da Rocketseat. O objetivo é criar um formulário estilizado e funcional utilizando tecnologias modernas da web.
+📌 **Descrição**
+Landing page com formulário de inscrição otimizado para eventos de tecnologia.
 
-## 🚀 Tecnologias
+🚀 **Tecnologias**
+- HTML
+- CSS
 
-- **HTML5**
-- **CSS3**
-- **JavaScript**
+🎯 **Funcionalidades**
+- Formulário de inscrição
+- Design de landing page
+- Responsividade
 
-## 📂 Estrutura do Projeto
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/rocketseat/bora-codar/formulario/index.html
 
-- `index.html`: Estrutura principal do formulário.
-- `styles.css`: Estilos aplicados ao formulário.
-- `script.js`: Funcionalidades e validações do formulário.
+<!-- <!-- 📸 **Imagens** -->
+![alt text](path/to/image.png)
+-->
+
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 **Aprendizados**
+- Estruturação de formulários para conversão
+- Estilização de inputs customizados

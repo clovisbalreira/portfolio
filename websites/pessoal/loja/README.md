@@ -1,28 +1,27 @@
-# 🛍️ Loja Pessoal (E-commerce)
+# E-commerce Loja
 
-## 📌 Sobre o projeto
-Aplicação web de e-commerce desenvolvida para simular uma loja online, permitindo a visualização de produtos, adição ao carrinho e finalização de compra.
+📌 Descrição
+Um protótipo de loja virtual completo com catálogo de produtos, carrossel de ofertas e informações institucionais.
 
-<!--## 🔗 Acesse o projeto
-👉 (coloque o link aqui)-->
+🚀 Tecnologias
+- HTML
+- CSS
+- JavaScript (ES6 Modules)
 
-## 🚀 Tecnologias utilizadas
-- HTML5
-- CSS3
-- JavaScript
+🎯 Funcionalidades
+- Carrossel de imagens (Slider) dinâmico com autoplay e controles de navegação
+- Sistema de busca e filtragem de produtos em tempo real por nome e categoria
+- Organização modular de componentes (Classes para Produtos, Categorias e UI)
+- Integração com Google Maps para localização física da loja
 
-## 🎯 Funcionalidades
-- Exibição de produtos com detalhes
-- Adição e remoção de itens no carrinho
-- Atualização dinâmica do total da compra
-- Simulação de checkout
-- Layout responsivo para diferentes dispositivos
+🖥️ Demonstração
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/pessoal/loja/index.html
 
-<!--## 📷 Preview
-(coloque imagens ou GIF — importante)-->
+<!-- 📸 Imagens -->
 
-## ⚙️ Destaques técnicos
-- Manipulação dinâmica do DOM
-- Controle de estado do carrinho em JavaScript
-- Atualização em tempo real dos valores
-- Estrutura organizada de código
+▶️ Como rodar
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 Aprendizados
+Arquitetura de software no front-end com POO (Programação Orientada a Objetos), criação de componentes reutilizáveis e integração de serviços de terceiros.

@@ -1,19 +1,27 @@
 # Multiverso Spiderman
 
-Bem-vindo ao repositório do projeto **Multiverso Spiderman**! Este projeto é dedicado a explorar o universo do Homem-Aranha através de uma aplicação web interativa.
+📌 Descrição
+Site interativo dedicado ao multiverso do Homem-Aranha, apresentando as três versões cinematográficas do herói (Tobey Maguire, Andrew Garfield e Tom Holland) através de uma interface moderna e imersiva.
 
-## 📖 Sobre o Projeto
+🚀 Tecnologias
+- HTML
+- CSS (Transformações 3D)
+- JavaScript
 
-O objetivo deste projeto é criar uma plataforma onde os usuários possam navegar por diferentes versões do Homem-Aranha no multiverso, conhecer suas histórias e interagir com conteúdos exclusivos.
+🎯 Funcionalidades
+- Carrossel 3D interativo para seleção de personagens
+- Animações suaves de hover nos cards de cada versão do Homem-Aranha
+- Navegação entre páginas específicas de cada ator/filme
+- Interface responsiva com controle visual de seleção
 
-## 🚀 Funcionalidades
+🖥️ Demonstração
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/pessoal/multiverso-spiderman/index.html
 
-- Exibição de diferentes versões do Homem-Aranha.
-- Informações detalhadas sobre cada personagem.
-- Interface interativa e responsiva.
-- Integração com APIs para dados atualizados.
+<!-- 📸 Imagens -->
 
-## 🛠️ Tecnologias Utilizadas
+▶️ Como rodar
+1. Clone o repositório
+2. Abra o arquivo index.html
 
-- **HTML5** e **CSS3** para estrutura e estilo.
-- **JavaScript** para funcionalidades dinâmicas.
+📚 Aprendizados
+Neste projeto, foi explorado o uso avançado de transformações 3D no CSS para criar um carrossel cilíndrico. O aprendizado envolveu a manipulação dinâmica do DOM via JavaScript para rotacionar o carrossel e a aplicação de conceitos de profundidade (Z-index e transform-style: preserve-3d) para criar uma experiência visual envolvente.

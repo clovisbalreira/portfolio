@@ -1,15 +1,36 @@
-# Barbearia
+# Sujeito Barbearia
 
-Este repositório contém o código-fonte de um projeto de portfólio para uma barbearia. O objetivo é demonstrar habilidades em desenvolvimento web, utilizando tecnologias modernas para criar um site funcional e atrativo.
+📌 **Descrição**
+Landing page premium para barbearia com sistema de agendamento via WhatsApp e design focado em conversão.
 
-## Funcionalidades
+🚀 **Tecnologias**
+- HTML5
+- CSS3 (SCSS)
+- JavaScript
+- AOS (Animate On Scroll)
+- Font Awesome
+- Google Fonts (Sora)
 
-- Página inicial com informações sobre a barbearia.
-- Galeria de imagens dos serviços oferecidos.
-- Formulário de contato para agendamento.
-- Design responsivo para dispositivos móveis.
+🎯 **Funcionalidades**
+- Seção Hero com chamada para ação (CTA) clara
+- Galeria de serviços com preços integrados
+- Integração com Google Maps para localização
+- Botão flutuante de agendamento via WhatsApp
+- Animações de scroll dinâmicas
 
-## Tecnologias Utilizadas
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/sujeito-programador/barbearia/index.html
 
-- **HTML5** e **CSS3** para estrutura e estilização.
-- **JavaScript** para interatividade.
+<!-- <!-- 📸 **Imagens** -->
+![alt text](path/to/image.png)
+-->
+
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 **Aprendizados**
+- Implementação de bibliotecas de animação (AOS)
+- Estruturação de projetos utilizando SCSS
+- Criação de interfaces responsivas e elegantes
+- Integração de APIs externas (Maps e WhatsApp)

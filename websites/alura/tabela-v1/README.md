@@ -1,28 +1,26 @@
-Crie sua própria tabela de campeonato! ⚽
+# Tabela de Campeonato V1
+📌 **Descrição**
+Gerenciador de tabelas de classificação que facilita a organização de campeonatos esportivos ou de jogos.
 
-O que essa aplicação faz?
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
 
-Cansado de planilhas complexas para gerenciar seu campeonato? Com essa aplicação, você pode criar sua própria tabela de classificação de forma fácil e intuitiva!
+🎯 **Funcionalidades**
+- Adição de participantes com nome e foto de perfil.
+- Geração automática da tabela de classificação e das rodadas.
+- Cálculo de pontos, saldo de gols e classificação em tempo real após inserção de resultados.
+- Sistema de desempate automático integrado.
 
-Como a mágica acontece?
+🖥️ **Demonstração**
+Link do projeto online: https://seu-link-aqui.com
 
-Por trás dessa experiência incrível, estão as seguintes tecnologias:
+📸 **Imagens**
 
-    HTML: A estrutura básica da página, onde tudo é organizado de forma clara e intuitiva.
-    CSS: O responsável por deixar a aplicação com uma cara bonita e fácil de usar.
-    JavaScript: A alma da aplicação! É ele quem faz toda a lógica, desde a criação da tabela até o cálculo dos pontos e a geração das rodadas.
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
 
-Como usar a aplicação?
-
-    Adicione os participantes: Preencha os campos "Nome" e "Foto" e clique em "Adicionar Jogador".
-    Crie a tabela: Clique em "Criar Tabela" para gerar a tabela de classificação e as rodadas.
-    Simule os jogos: Insira os resultados dos jogos nos campos correspondentes. A tabela será atualizada automaticamente.
-    Gerencie a tabela: Você pode zerar a tabela, excluir participantes e até mesmo configurar se deseja um campeonato de turno e returno.
-
-Funcionalidades:
-
-    Criação de tabelas personalizadas: Defina o número de participantes e crie sua própria tabela.
-    Cálculo automático de pontos: A aplicação calcula automaticamente os pontos, saldo de gols e classificação de cada time.
-    Geração de rodadas: A aplicação gera as rodadas de forma aleatória, evitando confrontos repetidos.
-    Simulação de jogos: Insira os resultados dos jogos e veja a tabela ser atualizada em tempo real.
-    Desempate: A aplicação possui um sistema de desempate automático em caso de empate por pontos.
+📚 **Aprendizados**
+Implementação de lógicas matemáticas complexas para cálculos de tabelas classificatórias e sorteios de rodadas.

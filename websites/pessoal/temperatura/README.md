@@ -1,48 +1,31 @@
-Clima Agora
+# App de Consulta de Temperatura
 
-Este projeto é uma aplicação web que exibe informações climáticas de uma cidade específica. Ele foi desenvolvido utilizando HTML, CSS e JavaScript.
-Descrição
+📌 Descrição
+Uma aplicação web que permite consultar as condições meteorológicas em tempo real de qualquer cidade do mundo, exibindo temperatura, descrição do clima, umidade e velocidade do vento.
 
-A aplicação permite que o usuário insira o nome de uma cidade e visualize dados climáticos como temperatura, condições do tempo, umidade e velocidade do vento. Os dados são obtidos através da API do OpenWeatherMap.
-Linguagens Utilizadas
+🚀 Tecnologias
+- HTML
+- CSS
+- JavaScript
+- FontAwesome (Ícones)
+- API de Clima (OpenWeatherMap)
 
-    HTML
-    CSS
-    JavaScript
+🎯 Funcionalidades
+- Busca de dados climáticos por nome da cidade
+- Exibição automática da bandeira do país da cidade consultada
+- Ícones dinâmicos representativos das condições do tempo (ensolarado, nublado, etc.)
+- Informações detalhadas sobre umidade e velocidade do vento
+- Interface responsiva com efeitos de exibição suave dos dados
 
-Estrutura HTML
+🖥️ Demonstração
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/pessoal/temperatura/index.html
 
-O HTML da aplicação é responsável por estruturar os elementos da interface do usuário. Aqui está um resumo das principais tags utilizadas:
+<!-- 📸 Imagens -->
 
-    <div class="container">: Contém toda a aplicação.
-    <div class="form">: Contém o formulário de entrada de dados.
-    <input type="text" id="city-input">: Campo de texto onde o usuário digita o nome da cidade.
-    <button id="search" onclick="apertou()">: Botão para iniciar a busca pelos dados climáticos.
-    <div id="weather-data" class="hide">: Contém os dados climáticos que são exibidos após a busca.
+▶️ Como rodar
+1. Clone o repositório
+2. Abra o arquivo index.html
+3. Digite o nome de uma cidade e clique na lupa.
 
-Estilos CSS
-
-O CSS define o estilo visual da aplicação, utilizando classes e IDs para aplicar estilos específicos. Aqui estão algumas das principais classes e IDs utilizados:
-Classes
-
-    .container: Define o contêiner principal da aplicação, incluindo fundo, sombra e espaçamento.
-    .form: Estiliza o formulário de entrada de dados.
-    .form-input-container: Define o layout flexível para o campo de texto e o botão de busca.
-    .hide: Esconde elementos, usada para ocultar os dados climáticos até que sejam buscados.
-
-IDs
-
-    #city-input: Estiliza o campo de texto para entrada do nome da cidade.
-    #search: Estiliza o botão de busca.
-    #weather-data: Define a aparência da seção de dados climáticos.
-    #description-container: Estiliza o contêiner das descrições do clima.
-    #details-container: Estiliza o contêiner que contém detalhes adicionais como umidade e velocidade do vento.
-
-Funções JavaScript
-
-O JavaScript adiciona a funcionalidade à aplicação, manipulando eventos e interagindo com a API do OpenWeatherMap. Aqui estão as principais funções:
-
-    getWeatherData: Função assíncrona que busca os dados climáticos da API do OpenWeatherMap.
-    showWeatherData: Função assíncrona que exibe os dados climáticos na interface do usuário.
-    apertou: Função chamada ao clicar no botão de busca ou pressionar Enter no campo de texto, que inicia o processo de busca e exibição dos dados.
-    DOMContentLoaded: Evento que adiciona um listener ao campo de texto para detectar a tecla Enter e acionar a busca.
+📚 Aprendizados
+Neste projeto, o foco técnico foi o consumo de APIs externas utilizando `fetch`. Aprendi a lidar com requisições assíncronas, manipulação de respostas JSON, tratamento de erros (como cidades não encontradas) e a atualização dinâmica do DOM baseada em dados externos em tempo real.

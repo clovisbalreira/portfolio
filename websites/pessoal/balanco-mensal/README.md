@@ -1,37 +1,27 @@
-# 📊 Balanço Mensal - Projeto de Contabilidade
+# Balanço Mensal
 
-Este é um projeto simples em **HTML, CSS e JavaScript** que permite organizar e visualizar receitas, despesas e saldos mensais.  
-A aplicação é totalmente **frontend**, não utiliza banco de dados, e funciona diretamente no navegador.
+📌 Descrição
+Ferramenta de gestão financeira para controle de ativos, passivos e cálculo de balanço contábil mensal.
 
----
+🚀 Tecnologias
+- HTML
+- CSS
+- JavaScript (ES6 Modules)
 
-## 🚀 Funcionalidades
+🎯 Funcionalidades
+- Registro detalhado de ativos e passivos financeiros
+- Cálculo automático do balanço final (Ativo - Passivo)
+- Interface modular e organizada para visualização de dados contábeis
+- Opção para limpeza rápida de todos os registros
 
-- ✅ Cadastro de contas (Crédito, Débito e Futuro)  
-- ✅ Edição de valores diretamente na tabela  
-- ✅ Exibição do balanço geral do mês  
-- ✅ Cálculo automático de porcentagens e totais  
-- ✅ Organização das contas por **tempo** (Agora, Passado, Futuro)  
-- ✅ Definição de metas financeiras  
-- ✅ Botão para **limpar** todas as contas cadastradas  
-- ✅ Responsividade para telas menores (até 800px)  
+🖥️ Demonstração
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/pessoal/balanco-mensal/index.html
 
----
+<!-- 📸 Imagens -->
 
-## 🖥️ Tecnologias Utilizadas
+▶️ Como rodar
+1. Clone o repositório
+2. Abra o arquivo index.html
 
-- **HTML5** → Estrutura da aplicação  
-- **CSS3** → Layout responsivo e estilização das tabelas  
-- **JavaScript (ES Modules)** → Manipulação dinâmica do DOM e cálculos  
-
----
-
-📸 Demonstração
-
-🔹 Tela inicial:
-
-Mostra o Balanço Mensal com opções de adicionar e editar contas.
-
-🔹 Exemplo de tabelas:
-
-Ativo, Passivo, Balanço Geral, Contas por Tempo e Metas.
+📚 Aprendizados
+Uso de módulos JavaScript para organização de código e implementação de lógica matemática aplicada à contabilidade.

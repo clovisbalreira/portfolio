@@ -1,15 +1,25 @@
 # Alura Store
+📌 **Descrição**
+Projeto de uma loja virtual desenvolvida para praticar conceitos de Grid Layout no CSS.
 
-Este é um projeto de um site para a Grid Layout, desenvolvido como parte do curso de desenvolvimento web da Alura.
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
 
-## Tecnologias Utilizadas
+🎯 **Funcionalidades**
+- Página inicial com informações sobre jogos.
+- Galeria de fotos dos produtos.
+- Formulário de contato funcional.
 
-- HTML5
-- CSS3
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/alura/alura-store/index.html
 
-## Funcionalidades
+<!-- 📸 **Imagens** -->
 
-- Página inicial com informações sobre a jogos
-- Galeria de fotos
-- Formulário de contato
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
 
+📚 **Aprendizados**
+Domínio de CSS Grid Layout para criação de interfaces complexas e responsivas.

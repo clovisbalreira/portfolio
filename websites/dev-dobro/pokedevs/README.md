@@ -1,12 +1,25 @@
-    Pokedevs: Um time de desenvolvedores inspirados em Pokémon! ⚡
+# Pokedevs Card Gallery
+📌 **Descrição**
+Uma galeria criativa de "Pokedevs", fundindo o universo Pokémon com características de desenvolvedores, apresentando cards dinâmicos.
 
-    Este projeto web interativo traz à vida um time de desenvolvedores, cada um com habilidades e personalidades únicas, inspirados nos queridos Pokémon. Explore os cards de cada desenvolvedor, descubra suas características e habilidades, e veja como a paixão pela programação os une.
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
 
-    Tecnologias utilizadas: HTML, CSS, JavaScript
+🎯 **Funcionalidades**
+- Navegação entre cards de diferentes desenvolvedores.
+- Informações sobre o nível e especialidade de cada Pokedev.
+- Design responsivo e interativo.
 
-    Características:
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/dev-dobro/pokedevs/index.html
 
-        Design responsivo para diferentes dispositivos;
-        Interação dinâmica entre os cards dos desenvolvedores e a lista de seleção;
-        Utilização de classes e IDs para estilização e manipulação do DOM;
-        Efeitos visuais para tornar a experiência mais interessante.
+<!-- 📸 **Imagens** -->
+
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 **Aprendizados**
+Este projeto me ajudou a entender como criar layouts complexos e interativos com CSS, focando em cartões com conteúdo variável e transições de interface.

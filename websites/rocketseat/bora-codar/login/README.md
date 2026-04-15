@@ -1,15 +1,28 @@
-# Bora Codar - Página de Login
+# Login Screen
 
-Este repositório contém o projeto de uma página de login desenvolvida como parte do desafio **Bora Codar** da Rocketseat.
+📌 **Descrição**
+Tela de autenticação moderna com foco em segurança e acessibilidade.
 
-## 🚀 Tecnologias
+🚀 **Tecnologias**
+- HTML
+- CSS
 
-- **HTML5**
-- **CSS3**
-- **JavaScript**
+🎯 **Funcionalidades**
+- Campos de login e senha
+- Design moderno
+- Acessibilidade
 
-## 📂 Estrutura do Projeto
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/rocketseat/bora-codar/login/index.html
 
-- `index.html`: Estrutura principal da página.
-- `style.css`: Estilos aplicados à página.
-- `script.js`: Funcionalidades e interatividade.
+<!-- <!-- 📸 **Imagens** -->
+![alt text](path/to/image.png)
+-->
+
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 **Aprendizados**
+- Práticas de acessibilidade em formulários
+- Design UI para telas de login

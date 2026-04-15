@@ -1,14 +1,29 @@
-# Realidade Aumentada
+# Realidade Aumentada (RA) Informativo
 
-Este repositório contém um projeto de demonstração de realidade aumentada, desenvolvido para explorar e aplicar conceitos dessa tecnologia.
+📌 Descrição
+Um site educativo dedicado a explorar o conceito de Realidade Aumentada, abordando desde sua definição e história até suas aplicações práticas em livros, jogos e no cotidiano.
 
-## Funcionalidades
+🚀 Tecnologias
+- HTML
+- CSS
+- JavaScript
+- jQuery (Integração de plugins)
 
-- Exibição de objetos 3D em realidade aumentada.
-- Integração com dispositivos móveis e câmeras.
-- Interatividade com os objetos renderizados.
+🎯 Funcionalidades
+- Navegação estruturada em capítulos (Home, História, Como Usar, etc.)
+- Efeito de lupa (magnifier) em imagens técnicas para visualização de detalhes
+- Letreiro dinâmico de navegação por seção
+- Conteúdo rico com textos explicativos e referências cinematográficas
+- Design responsivo com identidade visual futurista
 
-## Tecnologias Utilizadas
+🖥️ Demonstração
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/pessoal/realidade-aumentada/index.html
 
-- **HTML5** e **CSS3** para estrutura e estilo.
-- **JavaScript** para lógica e interatividade.
+<!-- 📸 Imagens -->
+
+▶️ Como rodar
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 Aprendizados
+Este projeto permitiu praticar a integração de bibliotecas externas (jQuery e plugins de visualização) para melhorar a experiência do usuário em sites de conteúdo longo. O foco foi a estruturação semântica de um site informativo e a aplicação de estilos CSS para criar um ambiente temático consistente com o assunto tecnologia.

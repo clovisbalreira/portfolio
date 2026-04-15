@@ -1,14 +1,25 @@
-# Jornada do Zero à Primeira Vaga
+# Endless Nightmare - Horror Game Landing Page
+📌 **Descrição**
+Uma landing page para um jogo de terror fictício chamado "Endless Nightmare", criada durante a Jornada do Zero à Primeira Vaga.
 
-Este repositório contém o projeto **Jornada do Zero à Primeira Vaga**, criado para ajudar iniciantes a se prepararem para conquistar sua primeira vaga na área de tecnologia.
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
 
-## Objetivo
+🎯 **Funcionalidades**
+- Layout temático de terror com tipografia personalizada.
+- Chamadas para ação (CTAs) para jogar e ler mais.
+- Links para desafios adicionais do projeto.
 
-O objetivo deste projeto é fornecer recursos, dicas e exemplos práticos para guiar quem está começando na programação e deseja entrar no mercado de trabalho.
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/dev-dobro/jornada-do-zero-a-primeira-vaga/index.html
 
-## Estrutura do Projeto
+<!-- 📸 **Imagens** -->
 
-- **Aulas e Materiais**: Conteúdo teórico e prático para aprendizado.
-- **Exercícios**: Atividades para reforçar o conhecimento.
-- **Projetos Práticos**: Exemplos reais para construir um portfólio.
-- **Dicas de Carreira**: Orientações para entrevistas e currículos.
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 **Aprendizados**
+Aprendi a trabalhar com fontes externas e estilos visuais temáticos, além de organizar a estrutura de uma landing page focada em conversão e experiência do usuário.

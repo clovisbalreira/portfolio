@@ -1,15 +1,25 @@
 # Barbearia Alura
+📌 **Descrição**
+Site institucional desenvolvido para a Barbearia Alura para apresentar serviços e localização.
 
-Este é um projeto de um site para a Barbearia Alura, desenvolvido como parte do curso de desenvolvimento web da Alura.
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
 
-## Tecnologias Utilizadas
+🎯 **Funcionalidades**
+- Página inicial informativa com história da barbearia.
+- Galeria de imagens dos serviços prestados.
+- Formulário de contato para agendamentos.
 
-- HTML5
-- CSS3
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/alura/barbearia/index.html
 
-## Funcionalidades
+<!-- 📸 **Imagens** -->
 
-- Página inicial com informações sobre a barbearia
-- Galeria de fotos
-- Formulário de contato
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
 
+📚 **Aprendizados**
+Criação de sites institucionais com foco em design limpo e formulários funcionais.

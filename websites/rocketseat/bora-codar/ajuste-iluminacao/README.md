@@ -1,15 +1,30 @@
 # Ajuste de Iluminação
 
-Este é um projeto desenvolvido como parte do desafio **Bora Codar** da Rocketseat. O objetivo é criar uma interface para ajustar a iluminação de um ambiente de forma intuitiva e funcional.
+📌 **Descrição**
+Interface interativa para ajuste de matiz (hue), brilho e contraste de uma imagem em tempo real.
 
-## Tecnologias Utilizadas
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
 
-- **HTML5**: Estrutura do projeto.
-- **CSS3**: Estilização e responsividade.
-- **JavaScript**: Funcionalidades interativas.
+🎯 **Funcionalidades**
+- Ajuste de brilho
+- Ajuste de contraste
+- Ajuste de matiz (hue)
+- Visualização em tempo real
 
-## Funcionalidades
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/rocketseat/bora-codar/ajuste-iluminacao/index.html
 
-- Controle de intensidade da luz.
-- Alteração de temperatura de cor (quente/fria).
-- Interface responsiva para diferentes dispositivos.
+<!-- <!-- 📸 **Imagens** -->
+![alt text](path/to/image.png)
+-->
+
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 **Aprendizados**
+- Manipulação de filtros CSS via JavaScript
+- Uso de inputs do tipo range

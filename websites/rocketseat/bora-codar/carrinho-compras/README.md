@@ -1,16 +1,29 @@
 # Carrinho de Compras
 
-Este é um projeto desenvolvido como parte do desafio **Bora Codar** da Rocketseat. O objetivo é criar uma interface funcional de um carrinho de compras.
+📌 **Descrição**
+Interface de carrinho de compras completa, permitindo a listagem de produtos, ajuste de quantidades e cálculo automático de valores.
 
-## Tecnologias Utilizadas
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
 
-- **HTML5**
-- **CSS3**
-- **JavaScript**
+🎯 **Funcionalidades**
+- Listagem de produtos
+- Ajuste de quantidades
+- Cálculo automático de total
 
-## Funcionalidades
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/rocketseat/bora-codar/carrinho-compras/index.html
 
-- Adicionar itens ao carrinho.
-- Remover itens do carrinho.
-- Atualizar quantidade de itens.
-- Calcular o total da compra.
+<!-- <!-- 📸 **Imagens** -->
+![alt text](path/to/image.png)
+-->
+
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 **Aprendizados**
+- Manipulação de arrays de objetos em JavaScript
+- Atualização dinâmica da UI baseada em dados

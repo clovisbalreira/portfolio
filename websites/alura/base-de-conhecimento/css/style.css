@@ -64,6 +64,7 @@ div input:focus {
 }
 
 #botao-busca {
+    margin-top: 1rem;
     padding: 1rem 2rem; /* Espaçamento interno */
     border-radius: 1rem; /* Arredonda as bordas */
     border: none; /* Remove a borda padrão */

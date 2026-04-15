@@ -1,9 +1,30 @@
-# Efeito 3D - Bora Codar
+# Efeito 3D Atropos
 
-Este é um projeto desenvolvido como parte do desafio **Bora Codar** da Rocketseat. O objetivo é criar um efeito 3D interativo utilizando HTML, CSS e JavaScript.
+📌 **Descrição**
+Demonstração de efeitos de profundidade e paralaxe interativos usando a biblioteca Atropos.
 
-## Tecnologias Utilizadas
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
+- Atropos.js
 
-- **HTML5**: Estrutura do projeto.
-- **CSS3**: Estilização e efeitos visuais.
-- **JavaScript**: Interatividade e manipulação do DOM.
+🎯 **Funcionalidades**
+- Efeito de profundidade 3D
+- Paralaxe ao mover o mouse
+- Interface interativa
+
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/rocketseat/bora-codar/efeito-3d/index.html
+
+<!-- <!-- 📸 **Imagens** -->
+![alt text](path/to/image.png)
+-->
+
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 **Aprendizados**
+- Uso de bibliotecas de efeitos visuais
+- Configuração de parâmetros 3D

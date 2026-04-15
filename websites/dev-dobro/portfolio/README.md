@@ -1,41 +1,25 @@
-Projeto Portfolio
+# Meu Portfolio
+📌 **Descrição**
+Um portfolio pessoal desenvolvido para exibir meus projetos de desenvolvimento frontend e informações de contato.
 
-O projeto contém o código fonte de um portfólio pessoal desenvolvido utilizando tecnologias web padrão (HTML, CSS e JavaScript). O objetivo do portfólio é apresentar Clovis Balreira Rodrigues, um desenvolvedor frontend em formação, juntamente com seus projetos, habilidades e contatos profissionais.
-Linguagens Utilizadas
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
 
-    HTML: Estruturação do conteúdo da página.
-    CSS: Estilização visual da página, incluindo layouts responsivos para diferentes tamanhos de tela.
-    JavaScript: Funcionalidades interativas, como a exibição de projetos adicionais.
+🎯 **Funcionalidades**
+- Seção de informações pessoais e redes sociais.
+- Listagem dinâmica de projetos.
+- Botão "Mostrar mais" para expandir a lista de projetos.
 
-Tags HTML Principais
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/dev-dobro/portfolio/index.html
 
-    <!DOCTYPE html>: Declara o documento como HTML5.
-    <html>: Raiz do documento HTML.
-    <head>: Contém metadados e links para folhas de estilo externas.
-    <body>: Corpo do documento, contendo o conteúdo visível da página.
-    <header>: Cabeçalho da página, com logo e menu de navegação.
-    <section>: Seções de conteúdo, como a home e projetos.
-    <div>: Usado para agrupar conteúdo e estilização.
-    <a>: Links para seções internas da página, redes sociais e projetos.
-    <h1>, <h2>, <p>: Títulos e parágrafos para texto.
+<!-- 📸 **Imagens** -->
 
-Classes e IDs CSS
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
 
-    Classes:
-        .cabecalho: Estilo do cabeçalho da página.
-        .logo: Estilo do logo no cabeçalho.
-        .menu: Estilo da navegação.
-        .home: Estilo da seção inicial com informações pessoais.
-        .projetos: Estilo da seção de projetos.
-        .btn-mostrar-projetos: Botão para carregar mais projetos.
-        .container-projetos: Contêiner dos projetos listados.
-        .projeto: Estilo de cada projeto individual listado.
-
-    IDs:
-        Não são usados IDs específicos neste código. As funcionalidades e estilizações baseiam-se em classes.
-
-Funções JavaScript
-
-    mostrarProjetos(websites, quantidadeDeProjetos): Exibe uma quantidade inicial de projetos na página.
-    mostrarMaisProjetos(): Aumenta a quantidade de projetos visíveis na página.
-    esconderBotao(): Esconde o botão de "Mostrar mais" quando todos os projetos já estão visíveis.
+📚 **Aprendizados**
+Criei uma estrutura organizada para meu portfolio, integrando ícones externos e focando na responsividade para que meu trabalho seja acessível em qualquer dispositivo.

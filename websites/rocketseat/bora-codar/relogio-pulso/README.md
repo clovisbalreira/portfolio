@@ -1,15 +1,29 @@
-# Relógio de Pulso - Bora Codar
+# Relógio de Pulso UI
 
-Este é um projeto desenvolvido como parte do desafio **Bora Codar** da Rocketseat. O objetivo é criar um relógio de pulso estilizado utilizando tecnologias web modernas.
+📌 **Descrição**
+Interface de smartwatch digital com diversas funcionalidades de monitoramento.
 
-## Tecnologias Utilizadas
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
 
-- **HTML5**: Estrutura do projeto.
-- **CSS3**: Estilização e layout.
-- **JavaScript**: Funcionalidade e interatividade.
+🎯 **Funcionalidades**
+- Relógio digital em tempo real
+- Monitoramento de atividades (fictício)
+- Troca de watchfaces
 
-## Funcionalidades
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/rocketseat/bora-codar/relogio-pulso/index.html
 
-- Exibição do horário atual em tempo real.
-- Design responsivo e estilizado.
-- Animações suaves para uma melhor experiência do usuário.
+<!-- <!-- 📸 **Imagens** -->
+![alt text](path/to/image.png)
+-->
+
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 **Aprendizados**
+- Criação de relógios digitais
+- Interatividade em telas pequenas

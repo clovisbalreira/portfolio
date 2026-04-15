@@ -1,14 +1,28 @@
-# Receitas - Bora Codar 🚀
+# Cardápio de Receitas
 
-Este é um projeto desenvolvido como parte do desafio **Bora Codar** da Rocketseat. O objetivo é criar uma aplicação simples e funcional para exibir receitas de forma organizada e atrativa.
+📌 **Descrição**
+Galeria interativa de pratos com foco em apresentação visual e facilidade de leitura.
 
-## 📋 Funcionalidades
+🚀 **Tecnologias**
+- HTML
+- CSS
 
-- Listagem de receitas.
-- Visualização detalhada de cada receita.
-- Interface moderna e responsiva.
+🎯 **Funcionalidades**
+- Listagem de receitas
+- Filtros por categoria
+- Layout apetitoso
 
-## 🛠️ Tecnologias Utilizadas
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/rocketseat/bora-codar/receitas/index.html
 
-- **HTML5** e **CSS3** para estrutura e estilização.
-- **JavaScript** para interatividade.
+<!-- <!-- 📸 **Imagens** -->
+![alt text](path/to/image.png)
+-->
+
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 **Aprendizados**
+- UX para sites de culinária
+- Organização visual de informações

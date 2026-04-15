@@ -1,8 +1,28 @@
-# Calendário - Bora Codar 🚀
+# Calendário de Eventos
 
-Este é um projeto desenvolvido como parte do desafio **Bora Codar** da Rocketseat. O objetivo é criar uma aplicação de calendário funcional e estilizada.
+📌 **Descrição**
+Interface de calendário interativa que permite navegar entre os meses e visualizar os dias do ano de forma dinâmica.
 
-## 🛠️ Tecnologias Utilizadas
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
 
-- **HTML5** e **CSS3** para a estrutura e estilização.
-- **JavaScript** para a lógica e interatividade.
+🎯 **Funcionalidades**
+- Navegação entre meses
+- Visualização dinâmica de dias
+- Interface intuitiva
+
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/rocketseat/bora-codar/calendario/index.html
+<!-- <!-- 📸 **Imagens** -->
+![alt text](path/to/image.png)
+-->
+
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 **Aprendizados**
+- Manipulação de datas com a API Date do JavaScript
+- Criação de calendários dinâmicos

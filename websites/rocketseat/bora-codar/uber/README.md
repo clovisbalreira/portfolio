@@ -1,19 +1,28 @@
-# Bora Codar - Uber Clone
+# Uber UI Clone
 
-Este repositório faz parte do desafio **Bora Codar** da Rocketseat, onde recriamos a interface do aplicativo da Uber.
+📌 **Descrição**
+Recriação visual da interface de solicitação de viagens do aplicativo Uber.
 
-## 🚀 Tecnologias
+🚀 **Tecnologias**
+- HTML
+- CSS
 
-- **HTML5** e **CSS3**: Estrutura e estilização da interface.
-- **JavaScript**: Funcionalidades interativas.
-- **Responsividade**: Design adaptado para diferentes dispositivos.
+🎯 **Funcionalidades**
+- Mapa de fundo (simulado)
+- Seletor de categorias de viagem
+- Interface fiel ao app original
 
-## 📂 Estrutura do Projeto
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/rocketseat/bora-codar/uber/index.html
 
-- `index.html`: Página principal.
-- `style.css`: Estilos do projeto.
-- `script.js`: Scripts para interatividade.
+<!-- <!-- 📸 **Imagens** -->
+![alt text](path/to/image.png)
+-->
 
-## 📸 Demonstração
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
 
-Adicione aqui uma captura de tela ou GIF mostrando o projeto em funcionamento.
+📚 **Aprendizados**
+- Clonagem de interfaces reais
+- Layouts complexos de apps mobile na web

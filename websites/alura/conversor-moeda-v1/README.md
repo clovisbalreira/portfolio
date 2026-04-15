@@ -1,19 +1,25 @@
-Seu Conversor de Moedas Personalizado!
+# Conversor de Moeda V1
+📌 **Descrição**
+Conversor de moedas simples que permite transformar valores em Reais para Dólares ou Euros usando cotações do Banco Central.
 
-O que essa aplicação faz?
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
 
-Já precisou converter uma quantia em reais para dólares ou euros rapidinho? Com esse conversor, você pode fazer isso de forma simples e rápida! A aplicação busca as cotações mais atualizadas do Banco Central e te mostra o valor convertido na hora.
+🎯 **Funcionalidades**
+- Entrada de valor em Reais.
+- Busca automática de cotações através de API do Banco Central.
+- Exibição rápida do resultado convertido.
 
-Como a mágica acontece?
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/alura/conversor-moeda-v1/index.html
 
-Por trás dessa ferramenta útil, estão as seguintes tecnologias:
+<!-- 📸 **Imagens** -->
 
-    HTML: A estrutura básica da página, onde tudo é organizado de forma clara e intuitiva.
-    CSS: O responsável por deixar a aplicação com uma cara bonita e fácil de usar.
-    JavaScript: A alma da aplicação! É ele quem faz toda a lógica, desde a busca das cotações até a exibição dos resultados na tela.
-    API do Banco Central: Fornece as cotações atualizadas das moedas.
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
 
-Como usar a aplicação?
-
-    Insira o valor: Digite o valor que você deseja converter no campo indicado.
-    Clique em converter: A aplicação buscará as cotações e mostrará o resultado na tela.
+📚 **Aprendizados**
+Integração de APIs externas para obtenção de dados em tempo real e exibição dinâmica na tela.

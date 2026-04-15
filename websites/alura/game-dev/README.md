@@ -1,36 +1,26 @@
-# Game Dev - Projeto Interativo
+# Game Dev
+📌 **Descrição**
+Um jogo interativo desenvolvido para proporcionar uma experiência dinâmica e divertida, utilizando tecnologias web modernas.
 
-## 🎮 Descrição
-Este projeto é um jogo interativo desenvolvido durante a Imersão Dev da Alura. O objetivo é proporcionar uma experiência divertida e educativa, utilizando tecnologias web modernas para criar uma interface dinâmica e responsiva.
+🚀 **Tecnologias**
+- HTML
+- CSS
+- JavaScript
+- p5.js
 
-## 🚀 Tecnologias Utilizadas
-- **HTML5**: Estruturação do jogo.
-- **CSS3**: Estilização e responsividade.
-- **JavaScript**: Lógica do jogo e interatividade.
+🎯 **Funcionalidades**
+- Controle do jogador utilizando as teclas direcionais.
+- Sistema de desvio de obstáculos para sobrevivência.
+- Pontuação em tempo real baseada no desempenho.
 
-# Game Dev - Projeto Interativo
+🖥️ **Demonstração**
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/alura/game-dev/index.html
 
-## 🎮 Descrição
-Este projeto é um jogo interativo desenvolvido durante a Imersão Dev da Alura. O objetivo é proporcionar uma experiência divertida e educativa, utilizando tecnologias web modernas para criar uma interface dinâmica e responsiva.
+<!-- 📸 **Imagens** -->
 
-## 🚀 Tecnologias Utilizadas
-- **HTML5**: Estruturação do jogo.
-- **CSS3**: Estilização e responsividade.
-- **JavaScript**: Lógica do jogo e interatividade.
+▶️ **Como rodar**
+1. Clone o repositório
+2. Abra o arquivo index.html
 
-## 🕹️ Como Jogar
-1. Abra o arquivo `index.html` em seu navegador.
-2. Utilize as teclas direcionais para controlar o jogador.
-3. Desvie dos obstáculos e alcance a maior pontuação possível.
-
-
-## 🧠 Tecnologias Utilizadas
-
-- HTML5
-- CSS3
-- JavaScript ES6
-- [p5.js](https://p5js.org/)
-- [p5.sound](https://p5js.org/reference/#/libraries/p5.sound)
-- [p5.collide2D](https://github.com/bmoren/p5.collide2D) (para colisões)
-
-
+📚 **Aprendizados**
+Utilização da biblioteca p5.js para renderização de gráficos em tempo real e detecção de colisões.

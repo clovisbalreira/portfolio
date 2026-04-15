@@ -1,16 +1,28 @@
-# Projeto - Pôquer
+# Poker Simulator
 
-Este é um projeto pessoal para criar um site relacionado ao jogo de pôquer. O objetivo é explorar conceitos de desenvolvimento web e compartilhar informações sobre o jogo.
+📌 Descrição
+Um simulador de Poker que realiza o sorteio aleatório de mãos de cartas e identifica automaticamente as combinações vencedoras (como Par, Trinca, Flush, etc.).
 
-## Funcionalidades
+🚀 Tecnologias
+- HTML
+- CSS
+- JavaScript
 
-- Informações sobre regras e estratégias de pôquer.
-- Simulador de mãos de pôquer.
-- Estatísticas e probabilidades.
-- Design responsivo e interativo.
+🎯 Funcionalidades
+- Sorteio aleatório de cartas de um baralho virtual
+- Identificação automática de jogadas de poker
+- Exibição visual das cartas sorteadas
+- Tradução de nomes de naipes e valores para português
+- Reinicialização de rodadas para novos jogos
 
-## Tecnologias Utilizadas
+🖥️ Demonstração
+Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/pessoal/poquer/index.html
 
-- **HTML5** e **CSS3** para estrutura e estilo.
-- **JavaScript** para interatividade.
-- **API** para fornecer dados dinâmicos, como estatísticas de mãos e probabilidades em tempo real.- Pôquer
+<!-- 📸 Imagens -->
+
+▶️ Como rodar
+1. Clone o repositório
+2. Abra o arquivo index.html
+
+📚 Aprendizados
+A implementação deste projeto focou em lógica algorítmica para detecção de padrões. Foi necessário modularizar o código JavaScript em diversos arquivos para gerenciar diferentes responsabilidades (API de cartas, naipes, identificação de jogos), além de praticar a manipulação de arrays e objetos para representar o estado de um baralho.
