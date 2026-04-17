@@ -2,8 +2,23 @@
     src: url("../fonte/Starjedi.ttf") format("truetype");
     font-family: Starjedi;
 }
-body{
-    background-color: black;
+
+body {
+    background: 
+        linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.7)),
+        url('../img/jogo-forca.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: start;
+    align-items: start;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+body section{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,9 +36,14 @@ img.dartvader{
     width: 300px;
 }
 
-.palavra{
+.palavra, .resultado{
     color: yellow;
     font-size: 42px;
+}
+
+span{
+    color: red;
+    font-weight: bolder;
 }
 
 .letra{
@@ -53,15 +73,31 @@ button{
     width: 300px;
 }
 
-#divChute {
+#divChute, #divResposta {
+    width: 100%;
     margin-top: 1rem;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: .5rem;
 }
 
-#divChute label {
+#divResposta {
+    display: none;
+}
+
+#divChute div, #divResposta div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#reiniciar{
+    display: none;
+}
+
+#divChute label, #divResposta label {
     color: yellow;
     font-size: 1.5rem;
 }
@@ -69,6 +105,11 @@ button{
 input{
     padding: 8px;
     font-size: 16px;
+    border: none;
+    border-radius: 10px;
+}
+
+#chute{
     width: 1rem;
 }
 
@@ -121,4 +162,23 @@ input{
     position: absolute;
     right: 0;
     top: 190px;
+}
+
+@media (max-width: 1000px) {
+    body{     
+        grid-template-columns: 1fr;
+    }
+    #divChute, #divResposta {
+        width: 60%;
+    }
+
+    #divResposta input{
+        width: 100%;
+    }
+}
+
+@media (max-width: 700px) {
+    #divChute, #divResposta {
+        grid-template-columns: 1fr;
+    }
 }

@@ -9,21 +9,38 @@
     <script defer src="./js/script.js"></script>
 </head>
 <body>
-    <h1>Jogo da forca</h1>
-    <div class="boneco">
-        <img src="img/darth-vader.png" class="darth-vader" />
-        <div class="parte-do-boneco cabeca"></div>
-        <div class="parte-do-boneco braco-esquerdo"></div>
-        <div class="parte-do-boneco torso"></div>
-        <div class="parte-do-boneco braco-direito"></div>
-        <div class="parte-do-boneco perna-esquerda"></div>
-        <div class="parte-do-boneco perna-direita"></div>
-    </div>
-    <p class="palavra"></p>
-    <div id="divChute">
-        <label for="chute">Chute uma letra:</label>
-        <input type="text" id="chute" maxlength="1">
-        <button id="enviar">CHUTAR LETRA</button>
-    </div>
+    <section>
+        <h1>Jogo da forca</h1>
+        <div class="boneco">
+            <img src="img/darth-vader.png" class="darth-vader" />
+            <div class="parte-do-boneco cabeca"></div>
+            <div class="parte-do-boneco braco-esquerdo"></div>
+            <div class="parte-do-boneco torso"></div>
+            <div class="parte-do-boneco braco-direito"></div>
+            <div class="parte-do-boneco perna-esquerda"></div>
+            <div class="parte-do-boneco perna-direita"></div>
+        </div>
+        <p class="palavra"></p>
+    </section>
+    <section>
+        <p class="resultado"></p>
+        <div id="divResposta">
+            <div>
+                <label for="resposta">Chute uma resposta:</label>
+                <input type="text" id="resposta">
+            </div>
+            <button id="enviarResposta">CHUTAR RESPOSTA</button>
+        </div>
+        <div id="divChute">
+            <div>
+                <label for="chute">Chute uma letra:</label>
+                <input type="text" id="chute" maxlength="1">
+            </div>
+            <button id="enviar">CHUTAR LETRA</button>
+        </div>
+        <div id="divReiniciar">
+            <button id="reiniciar">REINICIAR</button>
+        </div>
+    </section>
 </body>
 </html>
