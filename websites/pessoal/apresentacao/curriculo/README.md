@@ -3,8 +3,8 @@
 ## 📌 Sobre o projeto
 Aplicação web dinâmica que gera um currículo interativo com suporte a múltiplos idiomas (português, inglês e espanhol), permitindo visualização e filtragem de cursos e experiências.
 
-<!--## 🔗 Acesse o projeto
-👉 (link aqui)-->
+## 🔗 Acesse o projeto
+👉 https://clovisbalreira.github.io/portfolio/websites/pessoal/apresentacao/curriculo/index.html
 
 ## 🚀 Tecnologias utilizadas
 - HTML5
