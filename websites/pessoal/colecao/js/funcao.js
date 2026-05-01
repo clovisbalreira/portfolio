@@ -1,6 +1,5 @@
 function mostrarDinheiro(dinheriosFiltrados) {
     dinheriosFiltrados.filter( dinheiro => dinheiro.ano == '1989')
-   // console.log(dinheriosFiltrados)
     let main = document.querySelector('main')
     main.innerHTML = ''
     let soma = 0

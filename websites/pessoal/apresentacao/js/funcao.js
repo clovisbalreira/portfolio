@@ -6,7 +6,7 @@ function links(classe, link){
 
 function inicio(){
     links('.star-1', './links.html')
-    links('.star-2', './curriculo/curriculo.html')
+    links('.star-2', './curriculo/index.html')
     links('.star-3', './imagens.html')
 }
 

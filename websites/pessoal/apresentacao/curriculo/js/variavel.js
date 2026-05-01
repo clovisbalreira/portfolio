@@ -383,7 +383,26 @@ let cursos = [
                 dataInicio : new Date('07/03/2022'),
                 dataFim : new Date('08/03/2022'),
                 imagens : ["./img/cursos/estudonauta/html-css-04.jpg"],
-            },          
+            }, 
+            { 
+                portugues : {
+                    nome : 'Desenvolvimento Web 2020 ( HTML5+CSS3 ) Módulo 05', 
+                    tipo : 'Front End'
+                },
+                ingles : {
+                    nome : 'Web Development 2020 (HTML5+CSS3) Module 5',
+                    tipo : 'Front End',
+                },
+                espanhol : {
+                    nome : 'Desarrollo Web 2020 ( HTML5+CSS3 ) Módulo 5',
+                    tipo : 'Front End',
+                },
+                filtro : false,  
+                horas : 40,
+                dataInicio : new Date('11/13/2026'),
+                dataFim : new Date('11/13/2026'),
+                imagens : ["./img/cursos/estudonauta/html-css-05.jpg"],
+            },           
             { 
                 portugues : {
                     nome : 'Javascript', 
@@ -728,6 +747,63 @@ let cursos = [
             },
             { 
                 portugues : {
+                    nome : 'C - Módulo 02 - Operadores', 
+                    tipo : 'Programação'
+                },
+                ingles : {
+                    nome : 'C - Module 02 - Operators',
+                    tipo : 'Schedule',
+                },
+                espanhol : {
+                    nome : 'C - Módulo 02 - Operadores',
+                    tipo : 'Cronograma',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('07/22/2025'),
+                dataFim : new Date('08/22/2025'),
+                imagens : ["./img/cursos/estudonauta/c-02.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'C - Módulo 03 - Estruturas de controle (condições)', 
+                    tipo : 'Programação'
+                },
+                ingles : {
+                    nome : 'C - Module 03 - Control structures (conditions)',
+                    tipo : 'Schedule',
+                },
+                espanhol : {
+                    nome : 'C - Módulo 03 - Estructuras de control (condiciones)',
+                    tipo : 'Cronograma',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('07/23/2025'),
+                dataFim : new Date('08/23/2025'),
+                imagens : ["./img/cursos/estudonauta/c-03.jpg"],
+            },
+            { 
+                portugues : {
+                    nome : 'C# - Módulo 00 - Primeiros Passos', 
+                    tipo : 'Programação'
+                },
+                ingles : {
+                    nome : 'C# - Module 00 - First Steps',
+                    tipo : 'Schedule',
+                },
+                espanhol : {
+                    nome : 'C# - Módulo 00 - Primeros Pasos',
+                    tipo : 'Cronograma',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('07/23/2025'),
+                dataFim : new Date('08/23/2025'),
+                imagens : ["./img/cursos/estudonauta/csharp-00.jpg"],
+            },
+            { 
+                portugues : {
                     nome : 'Android - Módulo 00 - Primeiros Passos', 
                     tipo : 'Mobile'
                 },
@@ -934,7 +1010,64 @@ let cursos = [
                 dataInicio : new Date('11/11/2024'),
                 dataFim : new Date('11/12/2024'),
                 imagens : ["./img/cursos/estudonauta/inteligencia-artificial-01.jpg"],
-            },      
+            },
+            { 
+                portugues : {
+                    nome : 'Jornada IA - Criando Conteúdos para Sites com IA', 
+                    tipo : 'I.A.'
+                },
+                ingles : {
+                    nome : 'Jornada IA - Creating Content for Websites with AI',
+                    tipo : 'I.A.',
+                },
+                espanhol : {
+                    nome : 'Jornada IA - Creando Contenidos para Sitios con IA',
+                    tipo : 'I.A.',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('03/20/2026'),
+                dataFim : new Date('04/20/2026'),
+                imagens : ["./img/cursos/estudonauta/criando-conteudos-para-sites-com-ia.jpg"],
+            },   
+            { 
+                portugues : {
+                    nome : 'Jornada IA - Criando e Editando Imagens', 
+                    tipo : 'I.A.'
+                },
+                ingles : {
+                    nome : 'Jornada IA - Creating and Editing Images',
+                    tipo : 'I.A.',
+                },
+                espanhol : {
+                    nome : 'Jornada IA - Creando y Editando Imágenes',
+                    tipo : 'I.A.',
+                },
+                filtro : false,  
+                horas : 20,
+                dataInicio : new Date('03/18/2026'),
+                dataFim : new Date('04/18/2026'),
+                imagens : ["./img/cursos/estudonauta/criando-e-editando-imagens.jpg"],
+            },     
+            { 
+                portugues : {
+                    nome : 'Jornada IA - Engenharia de Prompt', 
+                    tipo : 'I.A.'
+                },
+                ingles : {
+                    nome : 'Jornada IA - Prompt Engineering',
+                    tipo : 'I.A.',
+                },
+                espanhol : {
+                    nome : 'Jornada IA - Ingeniería de Prompt',
+                    tipo : 'I.A.',
+                },
+                filtro : false,  
+                horas : 6,
+                dataInicio : new Date('03/19/2026'),
+                dataFim : new Date('04/19/2026'),
+                imagens : ["./img/cursos/estudonauta/engenharia-de-prompt.jpg"],
+            },   
             { 
                 portugues : {
                     nome : 'Modulo 00 - Segurança da Informação - Pilares e principais Riscos', 
