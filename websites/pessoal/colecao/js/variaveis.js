@@ -316,7 +316,7 @@ let dinheiros = [
   { mostrar : true, serie : '', nome : 'Rappen', ano : '1988', valor : '5', cotacao : { cotacaoMinimo : 1, cotacaoMaximo : 10}, pais : 'Suiça', tipo : 'Moeda', imagem_frente : 'frente-0015.png', imagem_verso : 'verso-0015.png', pacote : '0015'},
   { mostrar : true, serie : '', nome : 'Rappen', ano : '1974', valor : '0.50', cotacao : { cotacaoMinimo : 3, cotacaoMaximo : 15}, pais : 'Suiça', tipo : 'Moeda', imagem_frente : 'frente-0016.png', imagem_verso : 'verso-0016.png', pacote : '0016'},
   { mostrar : false, serie : '', nome : 'Cruzados', ano : '1986', valor : '0.01', cotacao : { cotacaoMinimo : 0.50, cotacaoMaximo : 5}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0017.png', imagem_verso : 'verso-0017.png', pacote : '0017'},
-  { mostrar : true, serie : '', nome : 'Cruzeiros', ano : '1972', valor : '20', cotacao : { cotacaoMinimo : 2, cotacaoMaximo : 20}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0018.png', imagem_verso : 'verso-0018.png', pacote : '0018'},
+  { mostrar : false, serie : '', nome : '5 Cruzados', ano : '1988', valor : '5', cotacao : { cotacaoMinimo : 0.50, cotacaoMaximo : 3.00}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-1006.png', imagem_verso : 'verso-1006.png', pacote : '0018'},
   { mostrar : true, serie : '', nome : 'Cruzeiros Novos', ano : '1969', valor : '0.01', cotacao : { cotacaoMinimo : 0.50, cotacaoMaximo : 5}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0019.png', imagem_verso : 'verso-0019.png', pacote : '0019'},
   { mostrar : false, serie : '', nome : 'Cruzeiros', ano : '1986', valor : '100', cotacao : { cotacaoMinimo : 1, cotacaoMaximo : 10}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0020.png', imagem_verso : 'verso-0020.png', pacote : '0020'},
   { mostrar : false, serie : '', nome : 'Cruzeiros', ano : '1986', valor : '100', cotacao : { cotacaoMinimo : 1, cotacaoMaximo : 10}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0021.png', imagem_verso : 'verso-0021.png', pacote : '0021'},
@@ -1304,7 +1304,6 @@ let dinheiros = [
   { mostrar : false, serie : '', nome : '10 Cruzados', ano : '1987', valor : '10', cotacao : { cotacaoMinimo : 0.50, cotacaoMaximo : 3.00}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-1003.png', imagem_verso : 'verso-1003.png', pacote : '1003'},
   { mostrar : false, serie : '', nome : '10 Cruzeiros', ano : '1986', valor : '10', cotacao : { cotacaoMinimo : 0.50, cotacaoMaximo : 3.00}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-1004.png', imagem_verso : 'verso-1004.png', pacote : '1004'},
   { mostrar : false, serie : '', nome : '10 Cruzeiros', ano : '1983', valor : '10', cotacao : { cotacaoMinimo : 0.50, cotacaoMaximo : 3.00}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-1005.png', imagem_verso : 'verso-1005.png', pacote : '1005'},
-  { mostrar : false, serie : '', nome : '5 Cruzados', ano : '1988', valor : '5', cotacao : { cotacaoMinimo : 0.50, cotacaoMaximo : 3.00}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-1006.png', imagem_verso : 'verso-1006.png', pacote : '1006'},
 ]
 /**
 Quero que seja um especialista em moedas e cedulas antigas vou de mandar fotos de frente e verso quero que me avalie ela e me de uma cotação minima e uma cotação maxima.
