@@ -415,7 +415,7 @@ let dinheiros = [
   { mostrar : false, serie : '', nome : '1000 Cruzeiros (Acará)', ano : '1993', valor : '1000', cotacao : { cotacaoMinimo : 2.00, cotacaoMaximo : 12.00}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0114.png', imagem_verso : 'verso-0114.png', pacote : '0114'},
   { mostrar : false, serie : '', nome : '1000 Cruzeiros (Acará)', ano : '1993', valor : '1000', cotacao : { cotacaoMinimo : 2.00, cotacaoMaximo : 12.00}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0115.png', imagem_verso : 'verso-0115.png', pacote : '0115'},
   { mostrar : false, serie : '', nome : '1000 Cruzeiros (Acará)', ano : '1993', valor : '1000', cotacao : { cotacaoMinimo : 2.00, cotacaoMaximo : 12.00}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0116.png', imagem_verso : 'verso-0116.png', pacote : '0116'},
-  { mostrar : false, serie : '', nome : '5 Centavos (Real)', ano : '1998', valor : '0.05', cotacao : { cotacaoMinimo : 0.50, cotacaoMaximo : 3.00}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0117.png', imagem_verso : 'verso-0117.png', pacote : '0117'},
+  { mostrar : false, serie : '', nome : '1000 Centavos (Cruzeiros)', ano : '1993', valor : '1000', cotacao : { cotacaoMinimo : 0.50, cotacaoMaximo : 3.00}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0117.png', imagem_verso : 'verso-0117.png', pacote : '0117'},
   { mostrar : false, serie : '', nome : '1000 Cruzeiros (Acará)', ano : '1993', valor : '1000', cotacao : { cotacaoMinimo : 2.00, cotacaoMaximo : 12.00}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0118.png', imagem_verso : 'verso-0118.png', pacote : '0118'},
   { mostrar : false, serie : '', nome : '1000 Cruzeiros (Acará)', ano : '1993', valor : '1000', cotacao : { cotacaoMinimo : 2.00, cotacaoMaximo : 12.00}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0119.png', imagem_verso : 'verso-0119.png', pacote : '0119'},
   { mostrar : false, serie : '', nome : '1000 Cruzeiros (Acará)', ano : '1993', valor : '1000', cotacao : { cotacaoMinimo : 2.00, cotacaoMaximo : 12.00}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-0120.png', imagem_verso : 'verso-0120.png', pacote : '0120'},
@@ -1305,7 +1305,144 @@ let dinheiros = [
   { mostrar : false, serie : '', nome : '10 Cruzeiros', ano : '1986', valor : '10', cotacao : { cotacaoMinimo : 0.50, cotacaoMaximo : 3.00}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-1004.png', imagem_verso : 'verso-1004.png', pacote : '1004'},
   { mostrar : false, serie : '', nome : '10 Cruzeiros', ano : '1983', valor : '10', cotacao : { cotacaoMinimo : 0.50, cotacaoMaximo : 3.00}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-1005.png', imagem_verso : 'verso-1005.png', pacote : '1005'},
 ]
-/**
+/*
+1939 - Pesos - 5 - Cedula - Quantidade: 1
+1943 - Cruzeiros - 5 - Cedula - Quantidade: 3
+1944-1958 - Cruzeiros - 1 - Cedula - Quantidade: 2
+1944-1958 - Cruzeiros - 2 - Cedula - Quantidade: 1
+1946 - Cruzeiros - 1 - Moeda - Quantidade: 1
+1949-1962 - Cruzeiros - 100 - Cedula - Quantidade: 1
+1951 - Cruzeiros - 0.20 - Moeda - Quantidade: 1
+1960 - 5 Centavos (Cruzeiro) - 0.05 - Moeda - Quantidade: 1
+1961-1963 - Cruzeiros - 5 - Cedula - Quantidade: 1
+1963-2021 - Dollars - 1 - Cedula - Quantidade: 1
+1963-2021 - Dollars - 100 - Cedula - Quantidade: 1
+1965 - Cruzeiros - 20 - Moeda - Quantidade: 1
+1966-1967 - Cruzeiros - 50 - Cedula - Quantidade: 1
+1969 - Cruzeiros Novos - 0.01 - Moeda - Quantidade: 1
+1970 - Cruzeiros - 0.20 - Moeda - Quantidade: 1
+1970-1980 - Cruzeiros - 1 - Cedula - Quantidade: 6
+1970-1979 - Cruzeiros - 5 - Cedula - Quantidade: 1
+1970-1980 - Cruzeiros - 10 - Cedula - Quantidade: 2
+1972 - Cruzeiros - 1 - Moeda - Quantidade: 1
+1974 - Rappen - 0.50 - Moeda - Quantidade: 1
+1975 - Cruzeiros - 0.01 - Moeda - Quantidade: 1
+1975 - Cruzeiros - 0.02 - Moeda - Quantidade: 1
+1976 - Cruzeiros - 0.05 - Moeda - Quantidade: 1
+1978 - Cruzeiros - 0.10 - Moeda - Quantidade: 1
+1978 - Cruzeiros - 0.50 - Moeda - Quantidade: 1
+1978 - Nuevo Pesos - 1 - Moeda - Quantidade: 1
+1979 - Cruzeiros - 0.10 - Moeda - Quantidade: 1
+1979 - 1 Cruzeiro - 1 - Moeda - Quantidade: 4
+1980 - 1 Cruzeiro - 1 - Moeda - Quantidade: 4
+1980 - 5 Cruzeiros - 5 - Moeda - Quantidade: 17
+1981 - 1 Cruzeiro - 1 - Moeda - Quantidade: 7
+1981 - 5 Cruzeiros - 5 - Moeda - Quantidade: 2
+1981 - 10 Cruzeiros - 10 - Moeda - Quantidade: 1
+1981 - 20 Cruzeiros - 20 - Moeda - Quantidade: 1
+1981-1984 - Cruzeiros - 100 - Cedula - Quantidade: 10
+1981-1984 - Cruzeiros - 200 - Cedula - Quantidade: 3
+1981-1985 - Cruzeiros - 500 - Cedula - Quantidade: 3
+1981-1986 - Cruzeiros - 1000 - Cedula - Quantidade: 72
+1981-1985 - Cruzeiros - 5000 - Cedula - Quantidade: 2
+1982 - 1 Cruzeiro - 1 - Moeda - Quantidade: 17
+1982 - 5 Cruzeiros - 5 - Moeda - Quantidade: 2
+1982 - 20 Cruzeiros - 20 - Moeda - Quantidade: 4
+1982 - 50 Cruzeiros - 50 - Moeda - Quantidade: 3
+1983 - 5 Cruzeiros - 5 - Moeda - Quantidade: 5
+1983 - 10 Cruzeiros - 10 - Moeda - Quantidade: 3
+1983 - 20 Cruzeiros - 20 - Moeda - Quantidade: 4
+1983 - 50 Cruzeiros - 50 - Moeda - Quantidade: 1
+1984 - 1 Cruzeiro - 1 - Moeda - Quantidade: 9
+1984 - 5 Cruzeiros - 5 - Moeda - Quantidade: 39
+1984 - 10 Cruzeiros - 10 - Moeda - Quantidade: 3
+1984 - 20 Cruzeiros - 20 - Moeda - Quantidade: 1
+1984 - 50 Cruzeiros - 50 - Moeda - Quantidade: 4
+1984-1986 - Cruzeiros - 50000 - Cedula - Quantidade: 11
+1985 - Rupee - 1 - Moeda - Quantidade: 1
+1985 - 5 Cruzeiros - 5 - Moeda - Quantidade: 1
+1985 - 10 Cruzeiros - 10 - Moeda - Quantidade: 3
+1985 - 20 Cruzeiros - 20 - Moeda - Quantidade: 7
+1985 - 50 Cruzeiros - 50 - Moeda - Quantidade: 4
+1985-1991 - Australes - 100 - Cedula - Quantidade: 1
+1985 - Cruzeiros - 500 - Moeda - Quantidade: 1
+1985-1986 - Cruzeiros - 100000 - Cedula - Quantidade: 16
+1986 - Cruzados - 0.01 - Moeda - Quantidade: 1
+1986 - 10 Centavos (Cruzado) - 0.10 - Moeda - Quantidade: 2
+1986 - 20 Centavos (Cruzado) - 0.20 - Moeda - Quantidade: 6
+1986 - 50 Centavos (Cruzeiro) - 0.50 - Moeda - Quantidade: 13
+1986 - 1 Cruzado - 1 - Moeda - Quantidade: 47
+1986 - 5 Cruzeiros - 5 - Moeda - Quantidade: 18
+1986-1987 - Cruzados - 10 - Cedula - Quantidade: 3
+1986 - 10 Cruzeiros - 10 - Moeda - Quantidade: 3
+1986 - 20 Cruzeiros - 20 - Moeda - Quantidade: 4
+1986-1988 - Cruzados - 50 - Cedula - Quantidade: 16
+1986-1988 - Cruzados - 100 - Cedula - Quantidade: 17
+1986 - Cruzeiros - 100 - Moeda - Quantidade: 4
+1986 - Cruzeiros - 200 - Moeda - Quantidade: 1
+1986-1988 - Cruzados - 500 - Cedula - Quantidade: 14
+1986 - Cruzeiros - 10000 - Cedula - Quantidade: 2
+1987 - 10 Centavos (Cruzado) - 0.10 - Moeda - Quantidade: 6
+1987 - 20 Centavos (Cruzado) - 0.20 - Moeda - Quantidade: 36
+1987 - 50 Centavos (Cruzado) - 0.50 - Moeda - Quantidade: 14
+1987 - 1 Cruzado - 1 - Moeda - Quantidade: 99
+1987 - 5 Cruzados - 5 - Moeda - Quantidade: 33
+1987 - 10 Cruzados - 10 - Moeda - Quantidade: 19
+1987 - Nuevos Pesos - 100 - Cedula - Quantidade: 1
+1987-1988 - Cruzados - 1000 - Cedula - Quantidade: 41
+1988 - 5 Centavos (Cruzado) - 0.05 - Moeda - Quantidade: 1
+1988 - 10 Centavos (Cruzado) - 0.10 - Moeda - Quantidade: 2
+1988 - 50 Centavos (Cruzado) - 0.50 - Moeda - Quantidade: 6
+1988 - 1 Cruzado - 1 - Moeda - Quantidade: 92
+1988 - Rappen - 5 - Moeda - Quantidade: 1
+1988 - 5 Cruzados - 5 - Moeda - Quantidade: 95
+1988 - 10 Cruzados - 10 - Moeda - Quantidade: 79
+1988 - Cruzados - 5000 - Cedula - Quantidade: 6
+1988 - Cruzados - 10000 - Cedula - Quantidade: 12
+1989 - 1 Centavo (Cruzado Novo) - 0.01 - Moeda - Quantidade: 11
+1989 - 5 Centavos (Cruzado Novo) - 0.05 - Moeda - Quantidade: 23
+1989 - 10 Centavos (Cruzado Novo) - 0.10 - Moeda - Quantidade: 67
+1989 - 50 Centavos (Cruzado Novo) - 0.50 - Moeda - Quantidade: 5
+1989 - Cruzados Novos - 1 - Moeda - Quantidade: 1
+1989-1990 - Cruzeiros - 100 - Cedula - Quantidade: 11
+1990 - 50 Centavos (Cruzeiro) - 0.50 - Moeda - Quantidade: 5
+1990 - 1 Cruzeiro - 1 - Moeda - Quantidade: 3
+1990 - 5 Cruzeiros - 5 - Moeda - Quantidade: 2
+1990 - 10 Cruzeiros - 10 - Moeda - Quantidade: 4
+1990-1991 - Cruzeiros - 1000 - Cedula - Quantidade: 2
+1990 - Cruzeiros - 5000 - Cedula - Quantidade: 1
+1990-1993 - Cruzeiros - 5000 - Cedula - Quantidade: 2
+1991 - 5 Cruzeiros - 5 - Moeda - Quantidade: 3
+1991 - 10 Cruzeiros - 10 - Moeda - Quantidade: 4
+1991-1992 - Nuevos Pesos - 1000 - Cedula - Quantidade: 1
+1991-1993 - Cruzeiros - 10000 - Cedula - Quantidade: 30
+1992 - Os Trapalhões - 0 - Moeda - Quantidade: 1
+1992 - Cruzeiros - 100 - Moeda - Quantidade: 7
+1992 - 100 Cruzeiros (Peixe-Boi) - 100 - Moeda - Quantidade: 8
+1992 - 500 Cruzeiros (Tartaruga Marinha) - 500 - Moeda - Quantidade: 11
+1992 - 500 Cruzeiros Reais (Tartaruga) - 500 - Moeda - Quantidade: 1
+1993 - Cruzeiros Reais - 5 - Moeda - Quantidade: 11
+1993 - Cruzeiros Reais - 10 - Moeda - Quantidade: 3
+1993 - 10 Cruzeiros Reais (Tamanduá-bandeira) - 10 - Moeda - Quantidade: 2
+1993 - 50 Cruzeiros Reais (Onça-pintada) - 50 - Moeda - Quantidade: 2
+1993 - 100 Cruzeiros Reais (Lobo-guará) - 100 - Moeda - Quantidade: 1
+1993 - Cruzeiros - 100 - Moeda - Quantidade: 3
+1993 - 500 Cruzeiros (Tartaruga Marinha) - 500 - Moeda - Quantidade: 14
+1993 - 500 Cruzeiros Reais (Tartaruga Marinha) - 500 - Moeda - Quantidade: 1
+1993 - 500 Cruzeiros (Tartaruga) - 500 - Moeda - Quantidade: 2
+1993 - 1000 Cruzeiros (Acará) - 1000 - Moeda - Quantidade: 32
+1993 - 1000 Cruzeiros Reais (Acará) - 1000 - Moeda - Quantidade: 4
+1993 - Cruzeiros Reais - 100000 - Cedula - Quantidade: 2
+1994 - 1 Centavo (Real) - 0.01 - Moeda - Quantidade: 4
+1994 - Cruzeiros Reais - 5 - Moeda - Quantidade: 12
+1994 - Cruzeiros Reais - 10 - Moeda - Quantidade: 3
+1995 - 1 Centavo (Real) - 0.01 - Moeda - Quantidade: 1
+1996 - 1 Centavo (Real) - 0.01 - Moeda - Quantidade: 3
+1997 - 1 Centavo (Real) - 0.01 - Moeda - Quantidade: 5
+1998 - 5 Centavos (Real) - 0.05 - Moeda - Quantidade: 1
+*/
+
+/*
 Quero que seja um especialista em moedas e cedulas antigas vou de mandar fotos de frente e verso quero que me avalie ela e me de uma cotação minima e uma cotação maxima.
 Na pasta websites\pessoal\colecao\js\ tem esse aquivos variaveis.js quero que atualize os valores do objeto so quando o cotacaoMinimo e cotacaoMaximo for igual a 0
 1 - As fotos estão na pasta websites\pessoal\colecao\img\cedula
