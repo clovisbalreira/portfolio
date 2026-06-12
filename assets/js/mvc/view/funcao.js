@@ -273,7 +273,7 @@ export function inicio() {
     let main = document.querySelector('main')
     main.appendChild(criarCarrossel('Linguagem', linguagens))
     main.appendChild(criarCarrossel('Escola', escolas))
-    main.appendChild(criarCarrossel('Instrutor', instrutores))
+    //main.appendChild(criarCarrossel('Instrutor', instrutores))
     document.getElementById('layout-inicio').addEventListener('click', atualizar)
     botoesWebSites()
     rolagem()

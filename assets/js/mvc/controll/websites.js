@@ -508,4 +508,9 @@ export let webSites = [
     // Designer
     // Pessoal
     new Website('Galeria de Imagens','Visualizador de fotos com efeitos de transição.',linguagens[16],[instrutores[0]],escolas[1],'./websites/pessoal/imagens/index.html','portfolio/tree/main/websites/pessoal/imagens/'),
+
+    // Power Bi
+    // Hashtag
+    new Website('Power Bi - Hashtag','Projeto de dashboard Power BI imerso em uma página web com navegação entre relatórios embutidos.',linguagens[17],[''],escolas[9],'./websites/power-bi/hashtag/index.html','portfolio/tree/main/websites/power-bi/hashtag/'),
+
 ]

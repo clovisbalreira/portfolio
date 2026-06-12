@@ -34,5 +34,7 @@ export let linguagens = [
     // kotlin
     new Linguagem('kotlin','Kotlin','kotlin.png',true),
     // Designer
-    new Linguagem('designer','Designer gráfico','arquivo.png',false)
+    new Linguagem('designer','Designer gráfico','arquivo.png',false),
+    // Power Bi
+    new Linguagem('powerbi','Power Bi','power-bi.png',true),
 ]
