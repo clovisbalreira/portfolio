@@ -512,5 +512,6 @@ export let webSites = [
     // Power Bi
     // Hashtag
     new Website('Power Bi - Hashtag','Projeto de dashboard Power BI imerso em uma página web com navegação entre relatórios embutidos.',linguagens[17],[''],escolas[9],'./websites/power-bi/hashtag/index.html','portfolio/tree/main/websites/power-bi/hashtag/'),
+    new Website('Power Bi - Leticia Smirelli','Projeto de dashboard Power BI imerso em uma página web com navegação entre relatórios embutidos.',linguagens[17],[''],escolas[9],'./websites/power-bi/leticia-smirelli/index.html','portfolio/tree/main/websites/power-bi/leticia-smirelli/'),
 
 ]
