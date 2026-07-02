@@ -1,0 +1,16 @@
+.classificacao-goleadores{
+    margin: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+@media (max-width: 870px) {
+
+    .classificacao-goleadores{
+        flex-direction: column;
+    }
+
+    .classificacao-goleadores table{
+        width: 100%;
+    }
+}

@@ -1,0 +1,124 @@
+.card-jogo{
+    width: 100%;
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+    overflow:hidden;
+    font-family:Arial;
+    margin:20px auto;
+    flex-direction: column;
+}
+
+.topo{
+    background:#0057A8;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    padding:12px 20px;
+    font-weight:bold;
+    margin-top: 1rem;
+}
+
+.topo-fase-eliminatorio{
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.placar{
+    display:flex;
+    align-items:center;
+    padding:25px;
+}
+
+.placar div:nth-child(1), .placar div:nth-child(3){
+    flex:1;
+}
+
+.placar div:nth-child(2){
+    flex:5;
+}
+
+.placar span{
+    width: 100%;  
+}
+
+.placar div:nth-child(2) span:nth-child(1){
+    text-align: right;
+}
+
+.placar div:nth-child(2) span:nth-child(2){
+    text-align: center;
+}
+
+.equipe{
+    width:120px;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap:8px;
+    font-size:14px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.equipe:last-child{
+    flex-direction:row-reverse;
+}
+
+.equipe img{
+    width:55px;
+}
+
+.resultado{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    font-size:34px;
+    font-weight:bold;
+}
+
+.x{
+    color:#999;
+}
+
+.info{
+    display:flex;
+    justify-content:space-around;
+    padding:12px;
+    background:#F7F7F7;
+    font-size:14px;
+    margin-bottom: 1rem;
+}
+
+.gols{
+    display:flex;
+    justify-content:space-between;
+    padding:10px 20px;
+    font-size:14px;
+}
+
+.gols-casa{
+    flex-direction: column;
+    text-align:left;
+    width:45%;
+}
+
+.gols-fora{
+    flex-direction: column;
+    text-align:right;
+    width:45%;
+}
+
+@media (max-width: 870px) { 
+    .placar, .resultado, .gols, .info{
+        flex-direction: row !important;
+    }
+
+    .equipe{
+        flex-direction: column !important;
+    }
+
+    .equipe:last-child{
+        flex-direction:column !important;
+    }
+}

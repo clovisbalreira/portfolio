@@ -1,0 +1,66 @@
+
+.celular{
+    display: none !important;
+}
+
+@media (max-width: 1078px){
+    .celular{
+        display: block !important;
+    }
+
+    .celular div{
+        display: flex;
+    }
+    
+    .celular > div:nth-child(1){
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .celular > div:nth-child(1) .grupos{
+        gap: 0.5rem;
+        margin-inline: .5rem;
+    }
+
+    .celular > div:nth-child(1) .grupos div{
+       flex: 1;
+    }
+
+    .celular > div:not(:nth-child(1)) {
+        margin-inline: .5rem;
+    }
+
+    .celular .card-jogo .placar .resultado span:first-child, .celular .card-jogo .placar .resultado span:last-child {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 870px) {
+    .celular div{
+        flex-direction: column;
+    }
+
+    .celular table{
+        width: 100%;
+    }
+}
+
+@media (max-width: 650px) { 
+    .celular .card-jogo .placar .resultado span:first-child, .celular .card-jogo .placar .resultado span:last-child {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 560px) { 
+    .celular .card-jogo .placar .resultado span:first-child, .celular .card-jogo .placar .resultado span:last-child, .equipe span{
+        font-size: .875rem;
+    }
+
+    .equipe{
+        width: max-content;
+    }
+
+    .equipe img{
+        width:40px;
+    }
+}
