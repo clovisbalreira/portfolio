@@ -9,7 +9,6 @@ import { mostrarEliminatoriaTelaCelular } from "./mostrarEliminatoriaTelaCelular
 export function mostrarTelaCelular(campeonato){
     let section = document.createElement('section')
     section.classList.add('celular')
-    let terceiros = true
     campeonato.fases.forEach( fase => {
         let div = document.createElement('div')
         let divEliminatorio = document.createElement('div')
@@ -22,12 +21,9 @@ export function mostrarTelaCelular(campeonato){
                 divTabela.appendChild(criarTabela(jogos))
                 divTabela.appendChild(criarJogosGrupos(jogos))
                 div.appendChild(divTabela)
+                if(index + 1 == fase.fase.length) mostrarMelhoresTerceiros(campeonato, div)
                 section.appendChild(div)
             }else{
-                if(terceiros){
-                    mostrarMelhoresTerceiros(campeonato, div)
-                    terceiros = false
-                }
                 mostrarEliminatoriaTelaCelular(divEliminatorio, jogos, div, section)
             }
         })

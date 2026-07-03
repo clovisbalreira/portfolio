@@ -33,6 +33,16 @@
     .celular .card-jogo .placar .resultado span:first-child, .celular .card-jogo .placar .resultado span:last-child {
         font-size: 1.5rem;
     }
+
+    .celular > div > div:last-child{
+        width: 100%;
+        padding-inline: .5rem
+    }
+
+    .celular div > div:last-child table{
+        width: 100%;
+    }
+
 }
 
 @media (max-width: 870px) {
