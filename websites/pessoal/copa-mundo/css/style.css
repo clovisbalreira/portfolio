@@ -25,3 +25,11 @@ h1, h2, .texto-colocacao p{
     font-size: 2rem;
 }
 
+#gol-contra{
+    background-color: rgba(255, 0, 0, 0.699);
+}
+
+#gol-contra:nth-child(even){
+    background-color: rgba(255, 0, 0, 0.445);
+}
+

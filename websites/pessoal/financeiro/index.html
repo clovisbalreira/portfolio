@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Painel Financeiro do Governo Federal</title>
+
+<link rel="stylesheet" href="./css/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🇧🇷 Painel Financeiro do Governo Federal</h1>
+
+<div class="filtros">
+
+<label>
+
+Ano
+
+<select id="ano">
+</select>
+
+</label>
+
+<label>
+
+Mês
+
+<select id="mes">
+
+<option value="1">Janeiro</option>
+<option value="2">Fevereiro</option>
+<option value="3">Março</option>
+<option value="4">Abril</option>
+<option value="5">Maio</option>
+<option value="6">Junho</option>
+<option value="7">Julho</option>
+<option value="8">Agosto</option>
+<option value="9">Setembro</option>
+<option value="10">Outubro</option>
+<option value="11">Novembro</option>
+<option value="12">Dezembro</option>
+
+</select>
+
+</label>
+
+<button id="btnAtualizar">
+
+Atualizar Dados
+
+</button>
+
+</div>
+
+</header>
+
+<main>
+
+<section class="cards">
+
+<div class="card receita">
+
+<h2>Receita</h2>
+
+<p id="receita">
+
+R$ 0,00
+
+</p>
+
+</div>
+
+<div class="card despesa">
+
+<h2>Despesa</h2>
+
+<p id="despesa">
+
+R$ 0,00
+
+</p>
+
+</div>
+
+<div class="card saldo">
+
+<h2>Saldo</h2>
+
+<p id="saldo">
+
+R$ 0,00
+
+</p>
+
+</div>
+
+<div class="card divida">
+
+<h2>Dívida Pública</h2>
+
+<p id="divida">
+
+R$ 0,00
+
+</p>
+
+</div>
+
+</section>
+
+<section class="graficos">
+
+<div class="grafico">
+    <h2>Gastos por Estado</h2>
+    <canvas id="graficoEstados"></canvas>
+</div>
+
+<div class="grafico">
+    <h2>Evolução Mensal</h2>
+    <canvas id="graficoLinha"></canvas>
+</div>
+
+<div class="grafico">
+
+<h2>
+
+Receita x Despesa
+
+</h2>
+
+<canvas id="graficoReceita"></canvas>
+
+</div>
+
+<div class="grafico">
+
+<h2>
+
+Gastos por Categoria
+
+</h2>
+
+<canvas id="graficoCategoria"></canvas>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>
+
+Top Gastos
+
+</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Categoria</th>
+<th>Valor</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tabelaGastos">
+
+</tbody>
+
+</table>
+
+</section>
+
+<section>
+
+<h2>
+
+Última Atualização
+
+</h2>
+
+<p id="ultimaAtualizacao">
+
+--
+
+</p>
+
+</section>
+
+</main>
+
+<footer>
+
+Painel desenvolvido com HTML, CSS e JavaScript
+
+</footer>
+
+<script src="./js/config.js"></script>
+<script src="./js/api.js"></script>
+<script src="./js/graficos.js"></script>
+<script src="./js/app.js"></script>
+
+</body>
+
+</html>

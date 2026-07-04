@@ -70,6 +70,9 @@
         ordenarGoleadores(equipe.pais)
     }
 
-    function ordenarGoleadores(campeonato){
-        campeonato.goleadores.sort((a, b) =>  b.gol - a.gol)
-    }
+    function ordenarGoleadores(campeonato) {
+    campeonato.goleadores.sort((a, b) => {
+        if (a.favor !== b.favor) return a.favor ? -1 : 1;
+        return b.gol - a.gol;
+    });
+}

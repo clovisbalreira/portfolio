@@ -29,7 +29,6 @@ function prorrogacao(campeonato, jogo, fase, golEquipeCasaProrrogacao, golEquipe
         jogo.golsEquipeCasa += jogo.golProrrogacaoEquipeCasa
         jogo.golsEquipeFora += jogo.golProrrogacaoEquipeFora
         golsProrrogacao(jogo)
-        atualizarGoleadores(campeonato, jogo, jogo.golsJogaresCasa, jogo.golsJogaresFora, true)
         if(jogo.golProrrogacaoEquipeCasa > jogo.golProrrogacaoEquipeFora) gravarFases(fase, jogo.equipeCasa, jogo.golsJogaresFora)
         else if(jogo.golProrrogacaoEquipeCasa < jogo.golProrrogacaoEquipeFora) gravarFases(fase, jogo.equipeFora, jogo.equipeCasa)
         else classificacaoPenalti(jogo, fase, golEquipeCasaPenalti, golEquipeForaPenalti)

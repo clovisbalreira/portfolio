@@ -202,16 +202,16 @@ function desseseisAvos(copaMundo2026){
     copaMundo2026.placarEliminatorio(copaMundo2026.fases[1].fase[9], [{ nome: 'Diallo', favor: true}], [{ nome: 'Nusa', favor: true},{ nome: 'Haaland', favor: true}], new Date(2026, 5, 30, 14, 0, 0), 'Oitavas de Final', true)
     copaMundo2026.placarEliminatorio(copaMundo2026.fases[1].fase[10], [{ nome: 'Raúl Jiménez', favor: true},{ nome: 'Quiñones', favor: true}], [], new Date(2026, 5, 30, 22, 0, 0), 'Oitavas de Final', true)
     copaMundo2026.placarEliminatorio(copaMundo2026.fases[1].fase[11], [{ nome: 'Harry Kane', favor: true}, { nome: 'Harry Kane', favor: true}], [{ nome: 'Cipenga', favor: true}], new Date(2026, 6, 1, 13, 0, 0), 'Oitavas de Final', true)
-    copaMundo2026.placarEliminatorio(copaMundo2026.fases[1].fase[12], '', '', new Date(2026, 6, 3, 19, 0, 0), 'Oitavas de Final', true)
-    copaMundo2026.placarEliminatorio(copaMundo2026.fases[1].fase[13], '', '', new Date(2026, 6, 3, 15, 0, 0), 'Oitavas de Final', true)
-    copaMundo2026.placarEliminatorio(copaMundo2026.fases[1].fase[14], '', '', new Date(2026, 6, 3, 0, 0, 0), 'Oitavas de Final', true)
-    copaMundo2026.placarEliminatorio(copaMundo2026.fases[1].fase[15], '', '', new Date(2026, 6, 3, 22, 30, 0), 'Oitavas de Final', true)
+    copaMundo2026.placarEliminatorio(copaMundo2026.fases[1].fase[12], [{ nome: 'Messi', favor: true}], [{ nome: 'Deroy Duarte', favor: true}], new Date(2026, 6, 3, 19, 0, 0), 'Oitavas de Final', true, [{ nome: 'Diney Borges', favor: false}, { nome: 'Lisandro Martínez', favor: true}], [{ nome: 'Sidny Cabral', favor: true}])
+    copaMundo2026.placarEliminatorio(copaMundo2026.fases[1].fase[13], [{ nome: 'Hany', favor: false}], [{ nome: 'Ashour', favor: true}], new Date(2026, 6, 3, 15, 0, 0), 'Oitavas de Final', true, [], [], 2, 4)
+    copaMundo2026.placarEliminatorio(copaMundo2026.fases[1].fase[14], [{ nome: 'Ndoye', favor: true}, { nome: 'Embolo', favor: true}], [], new Date(2026, 6, 3, 0, 0, 0), 'Oitavas de Final', true)
+    copaMundo2026.placarEliminatorio(copaMundo2026.fases[1].fase[15], [{ nome: 'Jhon Arias', favor: true}], [], new Date(2026, 6, 3, 22, 30, 0), 'Oitavas de Final', true)
 }
 
 function oitavasFinal(copaMundo2026){
     copaMundo2026.faseEliminatoria(copaMundo2026.fases[1], 'Oitavas de Final', confrontoOitavasFinal)
-    copaMundo2026.placarEliminatorio(copaMundo2026.fases[2].fase[0], '', '', new Date(2026, 6, 4, 18, 0, 0), 'Quartas de Final', true)
-    copaMundo2026.placarEliminatorio(copaMundo2026.fases[2].fase[1], '', '', new Date(2026, 6, 4, 14, 0, 0), 'Quartas de Final', true)
+    copaMundo2026.placarEliminatorio(copaMundo2026.fases[2].fase[0], [], [{ nome: 'Mbappé', favor: true}], new Date(2026, 6, 4, 18, 0, 0), 'Quartas de Final', true)
+    copaMundo2026.placarEliminatorio(copaMundo2026.fases[2].fase[1], [], [{ nome: 'Rahimi', favor: true}, { nome: 'Ounahi', favor: true}, { nome: 'Ounahi', favor: true}], new Date(2026, 6, 4, 14, 0, 0), 'Quartas de Final', true)
     copaMundo2026.placarEliminatorio(copaMundo2026.fases[2].fase[2], '', '', new Date(2026, 6, 6, 16, 0, 0), 'Quartas de Final', true)
     copaMundo2026.placarEliminatorio(copaMundo2026.fases[2].fase[3], '', '', new Date(2026, 6, 6, 21, 0, 0), 'Quartas de Final', true)
     copaMundo2026.placarEliminatorio(copaMundo2026.fases[2].fase[4], '', '', new Date(2026, 6, 5, 16, 0, 0), 'Quartas de Final', true)

@@ -22,8 +22,8 @@ function mostrarResultado(jogo){
     let div = document.createElement('div')
     div.classList.add('resultado')
     if(jogo.jogado){
-        let golCasa = golProrrogacao(jogo.golsEquipeCasa, jogo.golsEquipeFora, jogo.golNormalEquipeCasa, jogo.golProrrogacaoEquipeCasa, jogo.golPenaltiEquipeCasa)
-        let golFora = golProrrogacao(jogo.golsEquipeFora, jogo.golsEquipeCasa, jogo.golNormalEquipeFora, jogo.golProrrogacaoEquipeFora, jogo.golPenaltiEquipeFora)
+        let golCasa = golProrrogacao(jogo.golsEquipeCasa, jogo.golsEquipeFora, jogo.golNormalEquipeCasa, jogo.golNormalEquipeFora, jogo.golProrrogacaoEquipeCasa, jogo.golProrrogacaoEquipeFora, jogo.golPenaltiEquipeCasa, jogo.golPenaltiEquipeFora)
+        let golFora = golProrrogacao(jogo.golsEquipeFora, jogo.golsEquipeCasa, jogo.golNormalEquipeFora, jogo.golNormalEquipeCasa, jogo.golProrrogacaoEquipeFora, jogo.golProrrogacaoEquipeCasa, jogo.golPenaltiEquipeFora, jogo.golPenaltiEquipeCasa)
         
         div.appendChild(criarElemento('span', golCasa))
         div.appendChild(criarElemento('span', 'X', 'x'))
@@ -37,18 +37,12 @@ function mostrarResultado(jogo){
     return div
 }
 
-function golProrrogacao(gol, golOutro, golNormal, golProrrogacao, golPenalti){
-    let totalGol = gol
-        if(gol == golOutro && golProrrogacao != undefined){
-            if(golProrrogacao != undefined){
-                totalGol += ' ( ' + String(golNormal) + ' - ' + String(golProrrogacao)
-            } 
-            if(golPenalti == undefined){
-                totalGol += + ' )'
-            } 
-            if(golPenalti != undefined){
-                totalGol += ' - ' + String(golPenalti) + ' )'
-            } 
-        }
-        return totalGol
+function golProrrogacao(gol1, gol2, golNormal1, golNormal2, golProrrogacao1, golProrrogacao2, golPenalti1, golPenalti2){
+    let totalGol = gol1
+    if(golNormal1 == golNormal2 && typeof golNormal1 == 'number' && typeof golNormal2 == 'number'){
+        totalGol += ' ( ' + String(golNormal1) + ' - ' + String(golProrrogacao1)
+        typeof golPenalti1 == 'number' && typeof golPenalti2 == 'number' ? totalGol += ' - ' + String(golPenalti1) + ' )'
+        : totalGol += ' )'
+    }
+    return totalGol
 }

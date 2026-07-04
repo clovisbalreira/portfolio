@@ -68,10 +68,11 @@ function criarTBody(array, textoCaption){
             tbody.appendChild(tr)   
         })
     }else if(textoCaption == 'Goleadores'){
-        let total = array.participantes.length - 1
+        let total =  array.participantes.length
         array.goleadores.forEach( (goleador, index) => {
             if(index < total){
                 let tr = document.createElement('tr')
+                if(!goleador.favor) tr.id = 'gol-contra'
                 tr.appendChild(criarElemento('th', `${index + 1} º`))
                 tr.appendChild(textoImagem(goleador, textoCaption))
                 tr.appendChild(criarElemento('td', goleador.gol))
