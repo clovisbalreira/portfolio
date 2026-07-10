@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>ChatBot com IA — PyScript</title>
+
+  <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.1/core.css" />
+  <script type="module" src="https://pyscript.net/releases/2026.7.1/core.js"></script>
+
+  <py-config>
+    packages = []
+  </py-config>
+
+  <style>
+    :root {
+      --bg: #0f1115;
+      --panel: #171a21;
+      --border: #2a2e37;
+      --text: #e7e9ee;
+      --muted: #9aa1ad;
+      --accent: #6ea8fe;
+      --accent-dark: #3d6fd6;
+      --bad: #e2596b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      line-height: 1.5;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header { padding: 20px 32px; border-bottom: 1px solid var(--border); }
+    header h1 { margin: 0 0 4px; font-size: 1.3rem; }
+    header p { margin: 0; color: var(--muted); font-size: 0.85rem; }
+
+    #barra-chave {
+      display: flex; gap: 8px; align-items: center;
+      padding: 10px 32px; border-bottom: 1px solid var(--border);
+      background: var(--panel); flex-wrap: wrap;
+    }
+    #barra-chave input {
+      flex: 1; min-width: 220px;
+      background: #10131a; border: 1px solid var(--border); border-radius: 6px;
+      padding: 8px 10px; color: var(--text); font-size: 0.85rem;
+    }
+    #barra-chave span { font-size: 0.8rem; color: var(--muted); }
+    #status-chave { font-size: 0.8rem; }
+    #status-chave.ok { color: var(--ok, #4caf7d); }
+    #status-chave.faltando { color: var(--bad); }
+
+    main {
+      flex: 1;
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 20px 24px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .bolha {
+      max-width: 75%;
+      padding: 10px 14px;
+      border-radius: 12px;
+      font-size: 0.92rem;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+    .bolha.user {
+      align-self: flex-end;
+      background: var(--accent-dark);
+      color: white;
+      border-bottom-right-radius: 3px;
+    }
+    .bolha.assistant {
+      align-self: flex-start;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-bottom-left-radius: 3px;
+    }
+    .bolha.erro {
+      align-self: flex-start;
+      background: rgba(226,89,107,0.12);
+      border: 1px solid var(--bad);
+      color: var(--bad);
+    }
+    .bolha.digitando { color: var(--muted); font-style: italic; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      gap: 10px;
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    footer input {
+      flex: 1;
+      background: #10131a; border: 1px solid var(--border); border-radius: 8px;
+      padding: 12px 14px; color: var(--text); font-size: 0.92rem;
+    }
+    footer button {
+      background: var(--accent-dark);
+      color: white; border: none; padding: 0 20px; border-radius: 8px;
+      font-size: 0.9rem; cursor: pointer;
+    }
+    footer button:hover:not(:disabled) { background: var(--accent); }
+    footer button:disabled, footer input:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    #loading-inicial { padding: 40px 32px; color: var(--muted); text-align: center; }
+  </style>
+</head>
+<body>
+
+  <div id="loading-inicial">Carregando o ambiente Python no navegador…</div>
+
+  <div id="app" style="display:none; flex-direction: column; height: 100%;">
+
+    <header>
+      <h1>💬 ChatBot com IA</h1>
+      <p>Conversão do exemplo Streamlit para PyScript — o chat inteiro roda no seu navegador.</p>
+    </header>
+
+    <div id="barra-chave">
+      <span>Chave da API OpenAI:</span>
+      <input id="campo-chave" type="password" placeholder="sk-..." />
+      <button id="btn-salvar-chave" style="background:#2a2e37; padding:6px 14px; border-radius:6px; border:none; color:#e7e9ee; cursor:pointer;">Usar chave</button>
+      <span id="status-chave" class="faltando">nenhuma chave definida</span>
+    </div>
+
+    <main id="janela-chat"></main>
+
+    <footer>
+      <input id="campo-mensagem" type="text" placeholder="Escreva sua mensagem aqui" disabled />
+      <button id="btn-enviar" disabled>Enviar</button>
+    </footer>
+  </div>
+
+  <script type="py">
+import json
+from pyscript import when, document
+from pyodide.http import pyfetch
+
+# session_state = memória do PyScript (equivalente ao st.session_state)
+state = {
+    "lista_mensagens": [],
+    "chave_api": None,
+}
+
+
+def rolar_para_baixo():
+    janela = document.getElementById("janela-chat")
+    janela.scrollTop = janela.scrollHeight
+
+
+def exibir_mensagem(role, content, classe_extra=""):
+    janela = document.getElementById("janela-chat")
+    bolha = document.createElement("div")
+    bolha.classList.add("bolha", role if not classe_extra else classe_extra)
+    bolha.innerText = content
+    janela.appendChild(bolha)
+    rolar_para_baixo()
+    return bolha
+
+
+def travar_entrada(travado):
+    document.getElementById("campo-mensagem").disabled = travado
+    document.getElementById("btn-enviar").disabled = travado
+
+
+async def perguntar_para_ia(lista_mensagens, chave):
+    resposta = await pyfetch(
+        "https://api.openai.com/v1/chat/completions",
+        method="POST",
+        headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {chave}",
+        },
+        body=json.dumps({
+            "model": "gpt-4o",
+            "messages": lista_mensagens,
+        }),
+    )
+    dados = await resposta.json()
+    if "error" in dados:
+        raise RuntimeError(dados["error"].get("message", "Erro desconhecido da API"))
+    return dados["choices"][0]["message"]["content"]
+
+
+@when("click", "#btn-salvar-chave")
+def salvar_chave(event=None):
+    chave = document.getElementById("campo-chave").value.strip()
+    status = document.getElementById("status-chave")
+    if chave:
+        state["chave_api"] = chave
+        status.innerText = "chave definida ✓"
+        status.classList.remove("faltando")
+        status.classList.add("ok")
+        travar_entrada(False)
+        document.getElementById("campo-mensagem").focus()
+    else:
+        state["chave_api"] = None
+        status.innerText = "nenhuma chave definida"
+        status.classList.remove("ok")
+        status.classList.add("faltando")
+        travar_entrada(True)
+
+
+async def enviar_mensagem(event=None):
+    campo = document.getElementById("campo-mensagem")
+    mensagem_usuario = campo.value.strip()
+    if not mensagem_usuario:
+        return
+    if not state["chave_api"]:
+        exibir_mensagem("erro", "Defina sua chave da API OpenAI acima antes de conversar.", "erro")
+        return
+
+    # user -> ser humano
+    exibir_mensagem("user", mensagem_usuario)
+    state["lista_mensagens"].append({"role": "user", "content": mensagem_usuario})
+    campo.value = ""
+    travar_entrada(True)
+
+    bolha_digitando = exibir_mensagem("assistant", "digitando...", "digitando")
+
+    try:
+        resposta_ia = await perguntar_para_ia(state["lista_mensagens"], state["chave_api"])
+        bolha_digitando.remove()
+        exibir_mensagem("assistant", resposta_ia)
+        state["lista_mensagens"].append({"role": "assistant", "content": resposta_ia})
+    except Exception as erro:
+        bolha_digitando.remove()
+        exibir_mensagem("erro", f"Erro ao falar com a IA: {erro}", "erro")
+
+    travar_entrada(False)
+    campo.focus()
+
+
+@when("click", "#btn-enviar")
+async def clique_enviar(event=None):
+    await enviar_mensagem()
+
+
+@when("keydown", "#campo-mensagem")
+async def tecla_no_campo(event):
+    if event.key == "Enter":
+        await enviar_mensagem()
+
+
+document.getElementById("loading-inicial").style.display = "none"
+document.getElementById("app").style.display = "flex"
+  </script>
+
+</body>
+</html>

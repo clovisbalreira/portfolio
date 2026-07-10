@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Score de Crédito — PyScript + IA</title>
+
+  <!-- PyScript -->
+  <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.1/core.css" />
+  <script type="module" src="https://pyscript.net/releases/2026.7.1/core.js"></script>
+
+  <py-config>
+    packages = ["pandas", "numpy", "scikit-learn"]
+  </py-config>
+
+  <style>
+    :root {
+      --bg: #0f1115;
+      --panel: #171a21;
+      --border: #2a2e37;
+      --text: #e7e9ee;
+      --muted: #9aa1ad;
+      --accent: #6ea8fe;
+      --accent-dark: #3d6fd6;
+      --ok: #4caf7d;
+      --warn: #e0a13f;
+      --bad: #e2596b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      line-height: 1.5;
+    }
+    header {
+      padding: 28px 32px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    header h1 { margin: 0 0 6px; font-size: 1.5rem; }
+    header p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 32px 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    section.passo {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+    section.passo h2 { margin: 0 0 4px; font-size: 1.05rem; }
+    section.passo p.desc { margin: 0 0 12px; color: var(--muted); font-size: 0.9rem; }
+    section.passo p.aviso {
+      margin: 0 0 12px;
+      color: var(--warn);
+      font-size: 0.85rem;
+      border-left: 3px solid var(--warn);
+      padding-left: 10px;
+    }
+
+    button {
+      background: var(--accent-dark);
+      color: white;
+      border: none;
+      padding: 9px 16px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+    button:hover:not(:disabled) { background: var(--accent); }
+    button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    .output { margin-top: 14px; overflow-x: auto; }
+
+    table.tabela {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 0.85rem;
+    }
+    table.tabela th, table.tabela td {
+      border: 1px solid var(--border);
+      padding: 6px 10px;
+      text-align: right;
+      white-space: nowrap;
+    }
+    table.tabela th { background: #1f2430; color: var(--accent); }
+    table.tabela tr:nth-child(even) { background: #1a1d25; }
+
+    pre {
+      background: #0c0e12;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 12px;
+      font-size: 0.8rem;
+      overflow-x: auto;
+      white-space: pre-wrap;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+    .badge.boa { background: rgba(76,175,125,0.15); color: var(--ok); }
+    .badge.ok  { background: rgba(224,161,63,0.15); color: var(--warn); }
+    .badge.ruim{ background: rgba(226,89,107,0.15); color: var(--bad); }
+
+    #loading-inicial { padding: 40px 32px; color: var(--muted); text-align: center; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🏦 Previsão de Score de Crédito (IA)</h1>
+    <p>Conversão do notebook Jupyter (gabarito.ipynb) para PyScript — RandomForest vs KNN.</p>
+  </header>
+
+  <div id="loading-inicial">Carregando o ambiente Python no navegador (pandas, numpy, scikit-learn)… isso pode levar um pouco mais na primeira vez por causa do scikit-learn.</div>
+
+  <main id="app" style="display:none;">
+
+    <section class="passo">
+      <h2>Passo 1 — Importar a base de dados</h2>
+      <p class="desc">Lê o arquivo <code>clientes.csv</code> (~100 mil linhas). O download/leitura pode levar alguns segundos.</p>
+      <button id="btn-passo1">Executar Passo 1</button>
+      <div id="output-1" class="output"></div>
+    </section>
+
+    <section class="passo">
+      <h2>Passo 2 — Preparar a base para a IA</h2>
+      <p class="desc">
+        Codifica as colunas de texto (<code>profissao</code>, <code>mix_credito</code>,
+        <code>comportamento_pagamento</code>) com <code>LabelEncoder</code> e separa os dados
+        em treino (70%) e teste (30%).
+      </p>
+      <button id="btn-passo2" disabled>Executar Passo 2</button>
+      <div id="output-2" class="output"></div>
+    </section>
+
+    <section class="passo">
+      <h2>Passo 3 — Treinar a Inteligência Artificial</h2>
+      <p class="desc">Treina dois modelos: <code>RandomForestClassifier</code> (árvore de decisão) e <code>KNeighborsClassifier</code> (vizinhos próximos).</p>
+      <p class="aviso">⚠️ Com ~70 mil linhas de treino, o navegador pode ficar sem responder por até 1 minuto durante o treino — isso é esperado, não feche a aba.</p>
+      <button id="btn-passo3" disabled>Executar Passo 3</button>
+      <div id="output-3" class="output"></div>
+    </section>
+
+    <section class="passo">
+      <h2>Passo 4 — Escolher o melhor modelo</h2>
+      <p class="desc">Compara a acurácia dos dois modelos nos dados de teste e escolhe o melhor automaticamente.</p>
+      <button id="btn-passo4" disabled>Executar Passo 4</button>
+      <div id="output-4" class="output"></div>
+    </section>
+
+    <section class="passo">
+      <h2>Passo 5 — Prever novos clientes</h2>
+      <p class="desc">Aplica o melhor modelo em <code>novos_clientes.csv</code> e mostra o score de crédito previsto para cada um.</p>
+      <button id="btn-passo5" disabled>Executar Passo 5</button>
+      <div id="output-5" class="output"></div>
+    </section>
+
+  </main>
+
+  <script type="py">
+import io
+import warnings
+import pandas as pd
+from pyscript import when, document
+from pyodide.http import pyfetch
+from sklearn.preprocessing import LabelEncoder
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import accuracy_score
+
+warnings.filterwarnings("ignore")  # silencia avisos internos do sklearn/threadpoolctl no Pyodide
+
+pd.set_option("display.max_columns", None)
+
+# guarda tudo que precisa ficar vivo entre os passos (equivalente às variáveis
+# globais do notebook: tabela, codificadores, modelos, x_treino, etc.)
+state = {}
+
+TRADUCAO_SCORE = {"Good": "Boa", "Standard": "OK", "Poor": "Ruim"}
+CLASSE_BADGE = {"Good": "boa", "Standard": "ok", "Poor": "ruim"}
+
+
+def render_df(df, target_id, max_rows=15):
+    document.getElementById(target_id).innerHTML = df.head(max_rows).to_html(classes="tabela", border=0)
+
+
+def render_text(msg, target_id):
+    document.getElementById(target_id).innerHTML = f"<pre>{msg}</pre>"
+
+
+def habilitar(botao_id):
+    document.getElementById(botao_id).disabled = False
+
+
+async def carregar_csv(caminho):
+    response = await pyfetch(caminho)
+    texto = await response.string()
+    return pd.read_csv(io.StringIO(texto))
+
+
+document.getElementById("loading-inicial").style.display = "none"
+document.getElementById("app").style.display = "flex"
+
+
+@when("click", "#btn-passo1")
+async def passo1(event=None):
+    document.getElementById("output-1").innerHTML = "<p>Carregando clientes.csv (~18 MB)...</p>"
+    df = await carregar_csv("clientes.csv")
+    state["tabela"] = df
+    render_df(df, "output-1")
+    habilitar("btn-passo2")
+
+
+@when("click", "#btn-passo2")
+def passo2(event=None):
+    df = state.get("tabela")
+    if df is None:
+        render_text("Execute o Passo 1 primeiro.", "output-2")
+        return
+
+    buffer_antes = io.StringIO()
+    df.info(buf=buffer_antes)
+    antes = buffer_antes.getvalue()
+
+    codificador_profissao = LabelEncoder()
+    df["profissao"] = codificador_profissao.fit_transform(df["profissao"])
+
+    codificador_credito = LabelEncoder()
+    df["mix_credito"] = codificador_credito.fit_transform(df["mix_credito"])
+
+    codificador_pagamento = LabelEncoder()
+    df["comportamento_pagamento"] = codificador_pagamento.fit_transform(df["comportamento_pagamento"])
+
+    buffer_depois = io.StringIO()
+    df.info(buf=buffer_depois)
+    depois = buffer_depois.getvalue()
+
+    y = df["score_credito"]
+    x = df.drop(columns=["score_credito", "id_cliente"])
+    x_treino, x_teste, y_treino, y_teste = train_test_split(x, y, test_size=0.3, random_state=42)
+
+    state.update({
+        "tabela": df,
+        "codificador_profissao": codificador_profissao,
+        "codificador_credito": codificador_credito,
+        "codificador_pagamento": codificador_pagamento,
+        "x_treino": x_treino, "x_teste": x_teste,
+        "y_treino": y_treino, "y_teste": y_teste,
+    })
+
+    document.getElementById("output-2").innerHTML = (
+        "<h4>Antes da codificação</h4><pre>" + antes + "</pre>"
+        "<h4>Depois da codificação (profissao, mix_credito, comportamento_pagamento viram números)</h4><pre>" + depois + "</pre>"
+        f"<p>Treino: {len(x_treino)} linhas · Teste: {len(x_teste)} linhas</p>"
+    )
+    habilitar("btn-passo3")
+
+
+@when("click", "#btn-passo3")
+def passo3(event=None):
+    if "x_treino" not in state:
+        render_text("Execute os passos anteriores primeiro.", "output-3")
+        return
+
+    document.getElementById("output-3").innerHTML = "<p>Treinando RandomForest e KNN, aguarde (a aba pode travar um pouco)...</p>"
+
+    x_treino, y_treino = state["x_treino"], state["y_treino"]
+
+    modelo_arvoredecisao = RandomForestClassifier(random_state=42)
+    modelo_arvoredecisao.fit(x_treino, y_treino)
+
+    modelo_knn = KNeighborsClassifier()
+    modelo_knn.fit(x_treino, y_treino)
+
+    state["modelo_arvoredecisao"] = modelo_arvoredecisao
+    state["modelo_knn"] = modelo_knn
+
+    document.getElementById("output-3").innerHTML = "<p>✅ Os dois modelos foram treinados com sucesso.</p>"
+    habilitar("btn-passo4")
+
+
+@when("click", "#btn-passo4")
+def passo4(event=None):
+    if "modelo_arvoredecisao" not in state:
+        render_text("Execute os passos anteriores primeiro.", "output-4")
+        return
+
+    x_teste, y_teste = state["x_teste"], state["y_teste"]
+
+    previsao_arvoredecisao = state["modelo_arvoredecisao"].predict(x_teste)
+    previsao_knn = state["modelo_knn"].predict(x_teste)
+
+    acuracia_arvore = accuracy_score(y_teste, previsao_arvoredecisao)
+    acuracia_knn = accuracy_score(y_teste, previsao_knn)
+
+    if acuracia_arvore >= acuracia_knn:
+        state["melhor_modelo"] = state["modelo_arvoredecisao"]
+        melhor_nome = "RandomForest (árvore de decisão)"
+    else:
+        state["melhor_modelo"] = state["modelo_knn"]
+        melhor_nome = "KNN (vizinhos próximos)"
+
+    document.getElementById("output-4").innerHTML = (
+        f"<p>Acurácia RandomForest: <b>{acuracia_arvore:.2%}</b></p>"
+        f"<p>Acurácia KNN: <b>{acuracia_knn:.2%}</b></p>"
+        f"<p>🏆 Melhor modelo: <b>{melhor_nome}</b></p>"
+    )
+    habilitar("btn-passo5")
+
+
+@when("click", "#btn-passo5")
+async def passo5(event=None):
+    if "melhor_modelo" not in state:
+        render_text("Execute os passos anteriores primeiro.", "output-5")
+        return
+
+    document.getElementById("output-5").innerHTML = "<p>Carregando novos_clientes.csv e prevendo...</p>"
+
+    novos = await carregar_csv("novos_clientes.csv")
+
+    novos["profissao"] = state["codificador_profissao"].transform(novos["profissao"])
+    novos["mix_credito"] = state["codificador_credito"].transform(novos["mix_credito"])
+    novos["comportamento_pagamento"] = state["codificador_pagamento"].transform(novos["comportamento_pagamento"])
+
+    previsoes = state["melhor_modelo"].predict(novos)
+
+    resultado = novos.copy()
+    resultado.insert(0, "score_credito_previsto", previsoes)
+    resultado["score_credito_previsto"] = resultado["score_credito_previsto"].map(
+        lambda v: f'<span class="badge {CLASSE_BADGE.get(v, "")}">{TRADUCAO_SCORE.get(v, v)}</span>'
+    )
+
+    html = resultado.to_html(classes="tabela", border=0, escape=False)
+    document.getElementById("output-5").innerHTML = html
+  </script>
+
+</body>
+</html>

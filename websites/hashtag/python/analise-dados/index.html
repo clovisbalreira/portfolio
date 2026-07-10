@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Análise de Cancelamentos — PyScript</title>
+
+  <!-- PyScript -->
+  <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.1/core.css" />
+  <script type="module" src="https://pyscript.net/releases/2026.7.1/core.js"></script>
+
+  <!-- Plotly.js carregado uma única vez (os gráficos reutilizam esta instância) -->
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+
+  <py-config>
+    packages = ["pandas", "numpy", "plotly"]
+
+    [files]
+    "./cancelamentos.csv" = "./cancelamentos.csv"
+  </py-config>
+
+  <style>
+    :root {
+      --bg: #0f1115;
+      --panel: #171a21;
+      --border: #2a2e37;
+      --text: #e7e9ee;
+      --muted: #9aa1ad;
+      --accent: #6ea8fe;
+      --accent-dark: #3d6fd6;
+      --ok: #4caf7d;
+      --warn: #e0a13f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      line-height: 1.5;
+    }
+    header {
+      padding: 28px 32px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    header h1 { margin: 0 0 6px; font-size: 1.5rem; }
+    header p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 32px 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    section.passo {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+    section.passo h2 {
+      margin: 0 0 4px;
+      font-size: 1.05rem;
+    }
+    section.passo p.desc {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    button {
+      background: var(--accent-dark);
+      color: white;
+      border: none;
+      padding: 9px 16px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+    button:hover:not(:disabled) { background: var(--accent); }
+    button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    .output { margin-top: 14px; overflow-x: auto; }
+
+    table.tabela {
+      border-collapse: collapse;
+      width: 100%;
+      font-size: 0.85rem;
+    }
+    table.tabela th, table.tabela td {
+      border: 1px solid var(--border);
+      padding: 6px 10px;
+      text-align: right;
+      white-space: nowrap;
+    }
+    table.tabela th { background: #1f2430; color: var(--accent); }
+    table.tabela tr:nth-child(even) { background: #1a1d25; }
+
+    pre {
+      background: #0c0e12;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 12px;
+      font-size: 0.8rem;
+      overflow-x: auto;
+      white-space: pre-wrap;
+    }
+
+    .grafico { margin-bottom: 18px; }
+
+    #loading-inicial {
+      padding: 40px 32px;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📊 Análise de Cancelamentos de Clientes</h1>
+    <p>Conversão do notebook Jupyter (gabarito.ipynb) para PyScript — execute cada passo na ordem.</p>
+  </header>
+
+  <div id="loading-inicial">Carregando o ambiente Python no navegador (pandas, numpy, plotly)… isso pode levar alguns segundos na primeira vez.</div>
+
+  <main id="app" style="display:none;">
+
+    <section class="passo">
+      <h2>Passo 1 — Importar a base de dados</h2>
+      <p class="desc">Lê o arquivo <code>cancelamentos.csv</code> e remove a coluna inútil <code>CustomerID</code>.</p>
+      <button id="btn-passo1">Executar Passo 1</button>
+      <div id="output-1" class="output"></div>
+    </section>
+
+    <section class="passo">
+      <h2>Passo 2 — Visualizar a base de dados</h2>
+      <p class="desc">Mostra as primeiras linhas da tabela carregada.</p>
+      <button id="btn-passo2" disabled>Executar Passo 2</button>
+      <div id="output-2" class="output"></div>
+    </section>
+
+    <section class="passo">
+      <h2>Passo 3 — Corrigir problemas da base (valores vazios)</h2>
+      <p class="desc">Compara <code>tabela.info()</code> antes e depois de remover linhas com valores vazios (<code>dropna()</code>).</p>
+      <button id="btn-passo3" disabled>Executar Passo 3</button>
+      <div id="output-3" class="output"></div>
+    </section>
+
+    <section class="passo">
+      <h2>Passo 4 — Análise inicial dos cancelamentos</h2>
+      <p class="desc">Quantidade e percentual de clientes que cancelaram.</p>
+      <button id="btn-passo4" disabled>Executar Passo 4</button>
+      <div id="output-4" class="output"></div>
+    </section>
+
+    <section class="passo">
+      <h2>Passo 5 — Causas dos cancelamentos (gráficos)</h2>
+      <p class="desc">Gera um histograma para cada coluna, colorido por <code>cancelou</code>. Pode levar alguns segundos com 50 mil linhas.</p>
+      <button id="btn-passo5" disabled>Executar Passo 5</button>
+      <div id="output-5" class="output"></div>
+    </section>
+
+    <section class="passo">
+      <h2>Extra — Aplicar filtros recomendados</h2>
+      <p class="desc">
+        Remove contratos mensais, clientes com mais de 4 ligações ao call center e mais de 20 dias de atraso,
+        e recalcula o percentual de cancelamento sobre o restante.
+      </p>
+      <button id="btn-extra" disabled>Aplicar filtros e reanalisar</button>
+      <div id="output-extra" class="output"></div>
+    </section>
+
+  </main>
+
+  <script type="py">
+import io
+import pandas as pd
+import plotly.express as px
+from pyscript import when, document, window
+
+pd.set_option("display.max_columns", None)
+
+# guarda o estado da tabela entre os passos (equivalente à variável global do notebook)
+state = {"tabela": None}
+
+
+def render_df(df, target_id, max_rows=15):
+    html = df.head(max_rows).to_html(classes="tabela", border=0)
+    document.getElementById(target_id).innerHTML = html
+
+
+def render_text(msg, target_id):
+    document.getElementById(target_id).innerHTML = f"<pre>{msg}</pre>"
+
+
+def habilitar(botao_id):
+    document.getElementById(botao_id).disabled = False
+
+
+# ambiente pronto: libera a interface
+document.getElementById("loading-inicial").style.display = "none"
+document.getElementById("app").style.display = "flex"
+
+
+@when("click", "#btn-passo1")
+def passo1(event=None):
+    document.getElementById("output-1").innerHTML = "<p>Carregando dados...</p>"
+    df = pd.read_csv("cancelamentos.csv")
+    df = df.drop(columns="CustomerID")
+    state["tabela"] = df
+    render_df(df, "output-1")
+    habilitar("btn-passo2")
+
+
+@when("click", "#btn-passo2")
+def passo2(event=None):
+    df = state["tabela"]
+    if df is None:
+        render_text("Execute o Passo 1 primeiro.", "output-2")
+        return
+    render_df(df, "output-2", max_rows=20)
+    habilitar("btn-passo3")
+
+
+@when("click", "#btn-passo3")
+def passo3(event=None):
+    df = state["tabela"]
+    if df is None:
+        render_text("Execute os passos anteriores primeiro.", "output-3")
+        return
+
+    buffer_antes = io.StringIO()
+    df.info(buf=buffer_antes)
+    antes = buffer_antes.getvalue()
+
+    df = df.dropna()
+    state["tabela"] = df
+
+    buffer_depois = io.StringIO()
+    df.info(buf=buffer_depois)
+    depois = buffer_depois.getvalue()
+
+    document.getElementById("output-3").innerHTML = (
+        "<h4>Antes do dropna()</h4><pre>" + antes + "</pre>"
+        "<h4>Depois do dropna()</h4><pre>" + depois + "</pre>"
+    )
+    habilitar("btn-passo4")
+
+
+@when("click", "#btn-passo4")
+def passo4(event=None):
+    df = state["tabela"]
+    if df is None:
+        render_text("Execute os passos anteriores primeiro.", "output-4")
+        return
+
+    contagem = df["cancelou"].value_counts()
+    percentual = df["cancelou"].value_counts(normalize=True)
+
+    html = "<h4>Contagem</h4>" + contagem.to_frame("contagem").to_html(classes="tabela", border=0)
+    html += "<h4>Percentual</h4>" + percentual.to_frame("percentual").to_html(classes="tabela", border=0)
+    document.getElementById("output-4").innerHTML = html
+    habilitar("btn-passo5")
+
+
+@when("click", "#btn-passo5")
+def passo5(event=None):
+    df = state["tabela"]
+    if df is None:
+        render_text("Execute os passos anteriores primeiro.", "output-5")
+        return
+
+    container = document.getElementById("output-5")
+    container.innerHTML = "<p>Gerando gráficos, aguarde...</p>"
+
+    # 1) cria primeiro todas as divs vazias no DOM
+    graficos_html = ""
+    for coluna in df.columns:
+        graficos_html += (
+            f"<div class='grafico'><div id='plot-{coluna}'></div></div>"
+        )
+    container.innerHTML = graficos_html
+
+    # 2) agora que as divs existem de fato no DOM, desenha cada gráfico
+    #    chamando Plotly.newPlot diretamente (innerHTML não executa <script>,
+    #    por isso não dava pra usar fig.to_html() direto)
+    for coluna in df.columns:
+        fig = px.histogram(df, x=coluna, color="cancelou")
+        fig_json = window.JSON.parse(fig.to_json())
+        window.Plotly.newPlot(f"plot-{coluna}", fig_json.data, fig_json.layout)
+
+    habilitar("btn-extra")
+
+
+@when("click", "#btn-extra")
+def extra(event=None):
+    df = state["tabela"]
+    if df is None:
+        render_text("Execute os passos anteriores primeiro.", "output-extra")
+        return
+
+    df = df[df["duracao_contrato"] != "Monthly"]
+    df = df[df["ligacoes_callcenter"] <= 4]
+    df = df[df["dias_atraso"] <= 20]
+    state["tabela"] = df
+
+    contagem = df["cancelou"].value_counts()
+    percentual = df["cancelou"].value_counts(normalize=True)
+
+    html = "<h4>Contagem</h4>" + contagem.to_frame("contagem").to_html(classes="tabela", border=0)
+    html += "<h4>Percentual</h4>" + percentual.to_frame("percentual").to_html(classes="tabela", border=0)
+    document.getElementById("output-extra").innerHTML = html
+  </script>
+
+</body>
+</html>

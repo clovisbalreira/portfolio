@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Cadastro Automático de Produtos — PyScript</title>
+
+  <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.1/core.css" />
+  <script type="module" src="https://pyscript.net/releases/2026.7.1/core.js"></script>
+
+  <py-config>
+    packages = ["pandas"]
+  </py-config>
+
+  <style>
+    :root {
+      --bg: #0f1115;
+      --panel: #171a21;
+      --border: #2a2e37;
+      --text: #e7e9ee;
+      --muted: #9aa1ad;
+      --accent: #6ea8fe;
+      --accent-dark: #3d6fd6;
+      --ok: #4caf7d;
+      --warn: #e0a13f;
+      --bad: #e2596b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      line-height: 1.5;
+    }
+    header { padding: 28px 32px 16px; border-bottom: 1px solid var(--border); }
+    header h1 { margin: 0 0 6px; font-size: 1.5rem; }
+    header p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+    header p.aviso {
+      margin-top: 10px; color: var(--warn); font-size: 0.85rem;
+      border-left: 3px solid var(--warn); padding-left: 10px;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 32px 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    section.painel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+    section.painel h2 { margin: 0 0 4px; font-size: 1.05rem; }
+    section.painel p.desc { margin: 0 0 12px; color: var(--muted); font-size: 0.9rem; }
+
+    .controles { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 14px; }
+
+    button {
+      background: var(--accent-dark);
+      color: white; border: none; padding: 9px 16px; border-radius: 6px;
+      font-size: 0.9rem; cursor: pointer; transition: background 0.15s ease;
+    }
+    button:hover:not(:disabled) { background: var(--accent); }
+    button:disabled { opacity: 0.4; cursor: not-allowed; }
+    button.secundario { background: #2a2e37; }
+    button.secundario:hover:not(:disabled) { background: #3a3f4b; }
+    button.perigo { background: #7a2c37; }
+    button.perigo:hover:not(:disabled) { background: var(--bad); }
+
+    select {
+      background: #1f2430; color: var(--text); border: 1px solid var(--border);
+      border-radius: 6px; padding: 8px 10px; font-size: 0.88rem;
+    }
+
+    .progresso { color: var(--muted); font-size: 0.88rem; margin-bottom: 4px; }
+    .barra-fundo { background: #1f2430; border-radius: 999px; height: 8px; overflow: hidden; }
+    .barra-preenchida { background: var(--accent); height: 100%; width: 0%; transition: width 0.2s ease; }
+
+    .formulario {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .campo { display: flex; flex-direction: column; gap: 4px; }
+    .campo label { font-size: 0.78rem; color: var(--muted); }
+    .campo input {
+      background: #10131a; border: 1px solid var(--border); border-radius: 6px;
+      padding: 8px 10px; color: var(--text); font-size: 0.9rem;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    .campo input.ativo {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(110,168,254,0.25);
+    }
+
+    #btn-enviar-form {
+      margin-top: 16px;
+      background: var(--ok);
+    }
+    #btn-enviar-form.clicado { background: #2f6b4d; transform: scale(0.97); }
+
+    .output { margin-top: 14px; overflow-x: auto; max-height: 420px; overflow-y: auto; }
+    table.tabela { border-collapse: collapse; width: 100%; font-size: 0.85rem; }
+    table.tabela th, table.tabela td {
+      border: 1px solid var(--border); padding: 6px 10px; text-align: left; white-space: nowrap;
+    }
+    table.tabela th { background: #1f2430; color: var(--accent); position: sticky; top: 0; }
+    table.tabela tr:nth-child(even) { background: #1a1d25; }
+    table.tabela tr.nova { animation: destaque 1s ease; }
+    @keyframes destaque {
+      from { background: rgba(76,175,125,0.25); }
+      to { background: transparent; }
+    }
+
+    #loading-inicial { padding: 40px 32px; color: var(--muted); text-align: center; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🖥️ Cadastro Automático de Produtos</h1>
+    <p>Simulação visual do notebook (gabarito.py) — o PyScript não controla o mouse/teclado do sistema, então aqui o "robô" preenche um formulário na própria página em vez do site real.</p>
+    <p class="aviso">⚠️ Isso não substitui o script original com <code>pyautogui</code>: para automatizar de fato o site da empresa, o script Python precisa rodar no seu computador, fora do navegador.</p>
+  </header>
+
+  <div id="loading-inicial">Carregando o ambiente Python no navegador (pandas)…</div>
+
+  <main id="app" style="display:none;">
+
+    <section class="painel">
+      <h2>Controle do robô de cadastro</h2>
+      <p class="desc">Carrega o <code>produtos.csv</code> e preenche o formulário abaixo, um produto por vez, como o <code>pyautogui</code> faria campo a campo.</p>
+
+      <div class="controles">
+        <button id="btn-iniciar">▶ Iniciar cadastro</button>
+        <button id="btn-pausar" class="secundario" disabled>⏸ Pausar</button>
+        <button id="btn-parar" class="perigo" disabled>⏹ Parar</button>
+        <button id="btn-reiniciar" class="secundario">↺ Reiniciar tudo</button>
+        <select id="select-velocidade">
+          <option value="rapido">Velocidade: Rápida</option>
+          <option value="normal" selected>Velocidade: Normal</option>
+          <option value="devagar">Velocidade: Devagar</option>
+        </select>
+      </div>
+
+      <div class="progresso" id="texto-progresso">Aguardando início...</div>
+      <div class="barra-fundo"><div class="barra-preenchida" id="barra-progresso"></div></div>
+
+      <div class="formulario">
+        <div class="campo"><label>Código</label><input id="campo-codigo" readonly /></div>
+        <div class="campo"><label>Marca</label><input id="campo-marca" readonly /></div>
+        <div class="campo"><label>Tipo</label><input id="campo-tipo" readonly /></div>
+        <div class="campo"><label>Categoria</label><input id="campo-categoria" readonly /></div>
+        <div class="campo"><label>Preço unitário</label><input id="campo-preco_unitario" readonly /></div>
+        <div class="campo"><label>Custo</label><input id="campo-custo" readonly /></div>
+        <div class="campo"><label>Obs</label><input id="campo-obs" readonly /></div>
+      </div>
+      <button id="btn-enviar-form" disabled>Enviar cadastro</button>
+    </section>
+
+    <section class="painel">
+      <h2>Produtos cadastrados</h2>
+      <p class="desc">Cada produto aparece aqui assim que o "envio" simulado é concluído.</p>
+      <div class="output" id="tabela-cadastrados">
+        <table class="tabela">
+          <thead>
+            <tr><th>#</th><th>Código</th><th>Marca</th><th>Tipo</th><th>Categoria</th><th>Preço</th><th>Custo</th><th>Obs</th></tr>
+          </thead>
+          <tbody id="corpo-tabela-cadastrados"></tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+  
+
+  <script type="py">
+import asyncio
+import io
+import math
+import pandas as pd
+from pyscript import when, document
+from pyodide.http import pyfetch
+
+CAMPOS = ["codigo", "marca", "tipo", "categoria", "preco_unitario", "custo", "obs"]
+
+VELOCIDADES = {
+    "rapido": 0.015,
+    "normal": 0.04,
+    "devagar": 0.09,
+}
+
+state = {
+    "tabela": None,
+    "indice_atual": 0,
+    "rodando": False,
+    "pausado": False,
+}
+
+
+async def carregar_csv(caminho):
+    response = await pyfetch(caminho)
+    texto = await response.string()
+    return pd.read_csv(io.StringIO(texto))
+
+
+def formatar_valor(campo, valor):
+    if campo == "obs" and (valor is None or (isinstance(valor, float) and math.isnan(valor))):
+        return ""
+    if campo in ("preco_unitario", "custo"):
+        return f"{float(valor):.2f}"
+    return str(valor)
+
+
+async def digitar(elem_id, texto, velocidade):
+    elem = document.getElementById(elem_id)
+    elem.classList.add("ativo")
+    elem.value = ""
+    for caractere in texto:
+        elem.value = elem.value + caractere
+        await asyncio.sleep(velocidade)
+    await asyncio.sleep(velocidade * 4)  # simula o "tab" pausando um instante no campo
+    elem.classList.remove("ativo")
+
+
+def limpar_formulario():
+    for campo in CAMPOS:
+        document.getElementById(f"campo-{campo}").value = ""
+
+
+def atualizar_progresso(indice, total, codigo):
+    pct = int(((indice) / total) * 100) if total else 0
+    document.getElementById("texto-progresso").innerText = (
+        f"Cadastrando produto {indice + 1} de {total} — código {codigo}"
+    )
+    document.getElementById("barra-progresso").style.width = f"{pct}%"
+
+
+def adicionar_na_tabela(indice, linha):
+    corpo = document.getElementById("corpo-tabela-cadastrados")
+    tr = document.createElement("tr")
+    tr.classList.add("nova")
+    obs = linha["obs"]
+    obs_texto = "" if pd.isna(obs) else str(obs)
+    tr.innerHTML = (
+        f"<td>{indice + 1}</td><td>{linha['codigo']}</td><td>{linha['marca']}</td>"
+        f"<td>{linha['tipo']}</td><td>{linha['categoria']}</td>"
+        f"<td>{float(linha['preco_unitario']):.2f}</td><td>{float(linha['custo']):.2f}</td>"
+        f"<td>{obs_texto}</td>"
+    )
+    corpo.appendChild(tr)
+    tr.scrollIntoView({"behavior": "smooth", "block": "end"})
+
+
+async def cadastrar_um_produto(linha, velocidade):
+    for campo in CAMPOS:
+        valor = formatar_valor(campo, linha[campo])
+        await digitar(f"campo-{campo}", valor, velocidade)
+
+    botao = document.getElementById("btn-enviar-form")
+    botao.classList.add("clicado")
+    await asyncio.sleep(0.25)
+    botao.classList.remove("clicado")
+
+
+def bloquear_controles_em_execucao():
+    document.getElementById("btn-iniciar").disabled = True
+    document.getElementById("btn-pausar").disabled = False
+    document.getElementById("btn-parar").disabled = False
+    document.getElementById("select-velocidade").disabled = True
+
+
+def liberar_controles_parado():
+    document.getElementById("btn-iniciar").disabled = False
+    document.getElementById("btn-pausar").disabled = True
+    document.getElementById("btn-parar").disabled = True
+    document.getElementById("select-velocidade").disabled = False
+    document.getElementById("btn-pausar").innerText = "⏸ Pausar"
+
+
+async def loop_cadastro():
+    df = state["tabela"]
+    total = len(df)
+    velocidade_nome = document.getElementById("select-velocidade").value
+    velocidade = VELOCIDADES.get(velocidade_nome, 0.04)
+
+    while state["indice_atual"] < total:
+        if not state["rodando"]:
+            return
+        while state["pausado"]:
+            await asyncio.sleep(0.15)
+            if not state["rodando"]:
+                return
+
+        i = state["indice_atual"]
+        linha = df.iloc[i]
+        atualizar_progresso(i, total, linha["codigo"])
+        await cadastrar_um_produto(linha, velocidade)
+        adicionar_na_tabela(i, linha)
+        limpar_formulario()
+        state["indice_atual"] = i + 1
+
+    document.getElementById("texto-progresso").innerText = f"✅ {total} produtos cadastrados com sucesso!"
+    document.getElementById("barra-progresso").style.width = "100%"
+    state["rodando"] = False
+    liberar_controles_parado()
+
+
+@when("click", "#btn-iniciar")
+async def iniciar(event=None):
+    if state["tabela"] is None:
+        document.getElementById("texto-progresso").innerText = "Carregando produtos.csv..."
+        state["tabela"] = await carregar_csv("produtos.csv")
+
+    state["rodando"] = True
+    state["pausado"] = False
+    bloquear_controles_em_execucao()
+    await loop_cadastro()
+
+
+@when("click", "#btn-pausar")
+def pausar(event=None):
+    state["pausado"] = not state["pausado"]
+    document.getElementById("btn-pausar").innerText = "▶ Continuar" if state["pausado"] else "⏸ Pausar"
+
+
+@when("click", "#btn-parar")
+def parar(event=None):
+    state["rodando"] = False
+    state["pausado"] = False
+    liberar_controles_parado()
+    document.getElementById("texto-progresso").innerText = (
+        f"Parado no produto {state['indice_atual']}. Clique em Iniciar para continuar de onde parou."
+    )
+
+
+@when("click", "#btn-reiniciar")
+def reiniciar(event=None):
+    state["rodando"] = False
+    state["pausado"] = False
+    state["indice_atual"] = 0
+    state["tabela"] = None
+    limpar_formulario()
+    document.getElementById("corpo-tabela-cadastrados").innerHTML = ""
+    document.getElementById("barra-progresso").style.width = "0%"
+    document.getElementById("texto-progresso").innerText = "Aguardando início..."
+    liberar_controles_parado()
+
+
+document.getElementById("loading-inicial").style.display = "none"
+document.getElementById("app").style.display = "flex"
+  </script>
+
+</body>
+</html>
