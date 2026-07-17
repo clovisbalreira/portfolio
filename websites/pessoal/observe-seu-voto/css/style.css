@@ -58,6 +58,7 @@ main section{
     justify-content: center;
     align-items: center;
     gap: 30px;
+    height: 25vh;
     padding-bottom: 20px;
 }
 

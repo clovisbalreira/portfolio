@@ -2,6 +2,7 @@ import { criarImg } from "./criarImg.js";
 import { mostrarPartidos } from "../mvc/view/mostrarPartidos.js";
 import { mostrarDeputados } from "../mvc/view/mostrarDeputados.js"
 import { trancarConfiguracoes } from "./trancarConfiguracoes.js";
+import { removerAcentosImagem } from "./removerAcentosImagem.js";
 
 export function modal(id, codigo, dados, escolhaUsuario){
     const modal = document.querySelector('dialog');
@@ -16,7 +17,7 @@ export function modal(id, codigo, dados, escolhaUsuario){
 
 function criarTela(id, modal, filtro){
     if(id == 'partidos'){
-        modal.appendChild(criarImg(`./img/partidos/${filtro.foto}`, filtro.nome)) 
+        modal.appendChild(criarImg(`./img/partidos/${removerAcentosImagem(filtro.foto)}`, filtro.nome)) 
         modal.appendChild(criarTextoPartido(filtro))
     }else{
         modal.appendChild(criarImg(filtro.foto, filtro.nome))

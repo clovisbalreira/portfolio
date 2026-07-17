@@ -21,10 +21,3 @@ Uma ferramenta de análise parlamentar personalizada que utiliza dados abertos d
 Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/pessoal/votos/index.html
 
 <!-- 📸 Imagens -->
-
-▶️ Como rodar
-1. Clone o repositório
-2. Abra o arquivo index.html
-
-📚 Aprendizados
-O desenvolvimento deste projeto envolveu o uso de Módulos JavaScript para gerenciar a complexidade da integração com uma API governamental robusta. Foi praticado o uso do elemento `<dialog>` nativo do HTML5, técnicas avançadas de filtragem de dados e a criação de uma interface analítica focada em transparência pública.

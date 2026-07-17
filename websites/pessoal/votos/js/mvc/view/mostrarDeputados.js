@@ -6,6 +6,7 @@ import { selecionar } from "../../utils/selecionar.js";
 import { escolhaUsuario } from "../controll/escolhaUsuario.js";
 import { configuracoes } from "../controll/configuracoes.js"
 import { liberarLeis } from "./mostrarLeis.js";
+import { removerAcentosImagem } from "../../utils/removerAcentosImagem.js";
 
 export async function inicializarDeputados(){
   await carregarDadosDeputados()
@@ -79,7 +80,7 @@ function criarTbody(deputados, escolhaUsuario){
       tr.appendChild(criarTd(deputado.nome))
       tr.appendChild(criarTd(criarImg(`./img/estados/${deputado.fotoEstado}`, deputado.estado)))
       tr.appendChild(criarTd(deputado.estado))
-      tr.appendChild(criarTd(criarImg(`./img/partidos/${deputado.fotoPartido}`, deputado.partido)))
+      tr.appendChild(criarTd(criarImg(`./img/partidos/${removerAcentosImagem(deputado.fotoPartido)}`, deputado.partido)))
       tr.appendChild(criarTd(deputado.partido))
       tbody.appendChild(tr)
     }

@@ -19,6 +19,7 @@ export async function init() {
         const estado = data.address.state || "Estado não identificado";
         return estado
     } catch (err) {
-        info.textContent = "Erro: " + err.message;
+        console.error("Erro ao buscar estado:", err.message);
+        return null
     }
 }

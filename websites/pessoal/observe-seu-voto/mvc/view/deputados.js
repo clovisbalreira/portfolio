@@ -62,7 +62,9 @@ function mostrarDeputados(data, id){
         /* incluindo imagens */
         nomeFoto.setAttribute('src',data.dados[i].urlFoto)
         nomeFoto.setAttribute('alt',data.dados[i].nome)
-        partidoFoto.setAttribute('src',`./img/partidos/${data.dados[i].siglaPartido == 'UNIÃO' ? 'uniao' : data.dados[i].siglaPartido.toLowerCase()}.png`)
+        partidoFoto.setAttribute('src',`./img/partidos/${data.dados[i].siglaPartido.toLowerCase()
+  .normalize("NFD")
+  .replace(/[\u0300-\u036f]/g, "")}.png`)
         partidoFoto.setAttribute('alt',data.dados[i].siglaPartido)
         estadoFoto.setAttribute('src',`./img/bandeiras/${data.dados[i].siglaUf.toLowerCase()}.png`)
         estadoFoto.setAttribute('alt',data.dados[i].siglaUf)

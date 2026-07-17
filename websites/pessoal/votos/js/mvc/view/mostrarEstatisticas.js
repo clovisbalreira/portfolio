@@ -50,6 +50,9 @@ function mostrarEstatistica(idSelecionado, votoUsuario, lei, id, combinacoes, es
 function mostrarConbinacoes(combinacoes, escolhaUsuario){
     let section = document.getElementById('combinacoes')
     section.style.display = 'flex'
+    let h2 = document.createElement('h2')
+    h2.textContent = 'Votos Combinados'
+    section.appendChild(h2)
     let div = document.createElement('div')
     div.appendChild(mostrarCombinadoDeputados(combinacoes))
     div.appendChild(mostrarCombinadoPartidos(escolhaUsuario.partidos))
@@ -70,9 +73,9 @@ function mostrarVotos(votoUsuario, lei){
     let votosNao = lei.votosNao
     let votosAbstencao = lei.votosAbstencao
     let totalVotos = votosSim + votosNao + votosAbstencao 
-    let votosSimPorcentagem =  votosSim / totalVotos * 100
-    let votosNaoPorcentagem = votosNao / totalVotos * 100
-    let votosAbstencaoPorcentagem = votosAbstencao / totalVotos * 100
+    let votosSimPorcentagem =  valores(votosSim, totalVotos)
+    let votosNaoPorcentagem = valores(votosNao, totalVotos)
+    let votosAbstencaoPorcentagem = valores(votosAbstencao, totalVotos)
     let table = document.createElement('table')
     table.id = 'votos'
     let thead = document.createElement('thead')
@@ -119,7 +122,7 @@ function mostrarVotosDeputados(votoUsuario, deputados, arrays, id){
                     if(deputado.deputado.id == array.id){
                         if(votoUsuario == lei.votos.tipoVoto){
                             deputado.combinacao ++
-                            deputado.porcentagem = deputado.combinacao / deputado.totalLeis * 100
+                            deputado.porcentagem = valores(deputado.combinacao, deputado.totalLeis)
                         }
                     }
                 })
@@ -147,10 +150,10 @@ function mostrarVotosPartidos(votoUsuario, arrays, id){
                 let votosAbstencao = lei.votosAbstencao
                 let votosCombinacao = lei.lei.votosUsuario == 'Sim' ? lei.votosSim : lei.votosNao
                 let totalVotos = votosSim + votosNao + votosAbstencao 
-                let votosSimPorcentagem =  votosSim / totalVotos * 100
-                let votosNaoPorcentagem = votosNao / totalVotos * 100
-                let votosAbstencaoPorcentagem = votosAbstencao / totalVotos * 100
-                let votosCombinacaoPorcentagem = votosCombinacao / totalVotos * 100
+                let votosSimPorcentagem = valores(votosSim, totalVotos)
+                let votosNaoPorcentagem = valores(votosNao, totalVotos)
+                let votosAbstencaoPorcentagem = valores(votosAbstencao, totalVotos)
+                let votosCombinacaoPorcentagem = valores(votosCombinacao, totalVotos)
                 tr = document.createElement('tr')
                 tr.appendChild(criarTh(` ${array.nome} - ( ${array.sigla} )`, 1, 4))
                 tbody.appendChild(tr)
@@ -179,10 +182,10 @@ function mostrarVotosEstado(votoUsuario, arrays, id){
             let votosAbstencao = lei.votosAbstencao
             let votosCombinacao = lei.lei.votosUsuario == 'Sim' ? lei.votosSim : lei.votosNao
             let totalVotos = votosSim + votosNao + votosAbstencao 
-            let votosSimPorcentagem =  votosSim / totalVotos * 100
-            let votosNaoPorcentagem = votosNao / totalVotos * 100
-            let votosAbstencaoPorcentagem = votosAbstencao / totalVotos * 100
-            let votosCombinacaoPorcentagem = votosCombinacao / totalVotos * 100
+            let votosSimPorcentagem = valores(votosSim, totalVotos)
+            let votosNaoPorcentagem = valores(votosNao, totalVotos)
+            let votosAbstencaoPorcentagem = valores(votosAbstencao, totalVotos)
+            let votosCombinacaoPorcentagem = valores(votosCombinacao, totalVotos)
             tr = document.createElement('tr')
             tr.appendChild(criarTh(` ${arrays.nome} - ( ${arrays.sigla} )`, 1, 4))
             tbody.appendChild(tr)
@@ -208,7 +211,7 @@ function mostrarCombinadoDeputados(arrays){
         tr.appendChild(criarTh(`${array.deputado.nome} - Combinação  ${array.combinacao} voto${array.combinacao == 1 ? '' : 's'} ( ${array.porcentagem.toFixed(2)}% )`, 1, 6))
         tbody.appendChild(tr)
         tbody.appendChild(criarTr4td('Partido:', array.deputado.partido,'Estado:', array.deputado.estado))
-        tbody.appendChild(criarTr4td('Total votos', array.totalLeis, `Combinação`, `${array.combinacao} voto${array.combinacao == 1 ? '' : 's'} ( ${(array.combinacao / array.totalLeis * 100).toFixed(2)}% )`))
+        tbody.appendChild(criarTr4td('Total votos', array.totalLeis, `Combinação`, `${array.combinacao} voto${array.combinacao == 1 ? '' : 's'} ( ${(valores(array.combinacao, array.totalLeis)).toFixed(2)}% )`))
     })
     table.appendChild(tbody)
     return table
@@ -234,8 +237,7 @@ function mostrarCombinadoPartidos(arrays){
         tr = document.createElement('tr')
         tr.appendChild(criarTh(`${partido.nome} ( ${partido.sigla} )`, 1, 6))
         tbody.appendChild(tr)
-        
-        tbody.appendChild(criarTr4td('Total votos', total, `Combinação`, `${partido.combinacao} voto${partido.combinacao == 1 ? '' : 's'} ( ${(partido.combinacao / total * 100).toFixed(2)}% )`))
+        tbody.appendChild(criarTr4td('Total votos', total, `Combinação`, `${partido.combinacao} voto${partido.combinacao == 1 ? '' : 's'} ( ${(valores(partido.combinacao, total)).toFixed(2)}% )`))
     })
     table.appendChild(tbody)
     return table
@@ -260,7 +262,7 @@ function mostrarCombinadoEstado(arrays){
     tr = document.createElement('tr')
     tr.appendChild(criarTh(`${arrays.nome} ( ${arrays.sigla} )`, 1, 4))
     tbody.appendChild(tr)
-    tbody.appendChild(criarTr4td('Total votos', total, `Combinação`, `${arrays.combinacao} voto${arrays.combinacao == 1 ? '' : 's'} ( ${(arrays.combinacao / total * 100).toFixed(2)}% )`))
+    tbody.appendChild(criarTr4td('Total votos', total, `Combinação`, `${arrays.combinacao} voto${arrays.combinacao == 1 ? '' : 's'} ( ${(valores(arrays.combinacao, total)).toFixed(2)}% )`))
     table.appendChild(tbody)
     return table
 }
@@ -315,6 +317,11 @@ function criarTr4td(titulo, texto, voto, votoDeputado){
     tr.appendChild(criarTd(voto, 1))
     tr.appendChild(criarTd(votoDeputado, 1))
     return tr
+}
+
+function valores(votos, total) {
+    let valor = votos / total * 100;
+    return Number.isNaN(valor) ? 0 : valor;
 }
 
 

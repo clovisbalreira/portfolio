@@ -12,9 +12,9 @@
 }
 
 .partidos > div > div{ 
-    display: flex;
+    display: grid;
+    grid-template-columns: 90% 5% 5%;
     align-items: center;
-    justify-content: space-between;
     gap: 10px;
     padding-inline: 20px;
     padding-top: 20px;

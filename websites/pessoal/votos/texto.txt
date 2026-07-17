@@ -1,0 +1,109 @@
+🏆 A Copa do Mundo terminou e, mais uma vez, surgiram debates sobre possíveis soluções para melhorar o desempenho da Seleção Brasileira.
+
+Entre as propostas discutidas estão mudanças na formação de jogadores, regras para transferências internacionais e outras medidas. Mas, independentemente da opinião sobre essas ideias, elas mostram como decisões públicas podem impactar diferentes setores da sociedade.
+
+Isso me levou a desenvolver um projeto utilizando a **API Oficial de Dados Abertos da Câmara dos Deputados**, com o objetivo de facilitar a consulta e a análise das votações realizadas pelos parlamentares.
+
+🔗 **Acesse a aplicação:** **https://clovisbalreira.github.io/portfolio/websites/pessoal/votos/index.html**
+
+### 💻 Tecnologias utilizadas
+
+* HTML
+* CSS
+* JavaScript
+* API REST
+
+### 🚀 Principais funcionalidades
+
+⚙️ Interface totalmente configurável para análise de dados.
+
+É possível selecionar:
+
+* 👥 De 1 a 10 deputados;
+* 🏛️ De 1 a 10 partidos;
+* 📜 De 1 a 10 leis/votações;
+* 📍 Um estado para análise.
+
+Também é possível aplicar filtros por:
+
+* Estado;
+* Partido;
+* A opção **"Selecione"** remove os filtros aplicados.
+
+Após definir os filtros, a aplicação consulta automaticamente as votações mais recentes disponíveis na API.
+
+---
+
+### 📄 Informações das votações
+
+Cada votação apresenta:
+
+* 📅 Data;
+* 📝 Descrição;
+* 📌 Resumo da proposta.
+
+⏳ Tempo de carregamento: Após definir os filtros, a aplicação consulta automaticamente as votações mais recentes na API da Câmara dos Deputados. Dependendo da quantidade de deputados, partidos e votações selecionados, a busca pode levar alguns instantes. Durante esse processo, a interface informa que os dados estão sendo carregados.
+
+Como algumas descrições disponibilizadas pela API podem ser técnicas ou resumidas, a aplicação disponibiliza recursos para facilitar a compreensão da proposta.
+
+🔍 Pesquisar o tema diretamente em mecanismos de busca;
+🤖 Copiar, com um clique, um prompt pronto para utilizar em uma ferramenta de inteligência artificial, facilitando a obtenção de uma explicação mais detalhada da proposta antes de formar uma opinião.
+
+---
+
+### 📊 Análise detalhada dos resultados
+
+Após selecionar uma votação, a aplicação apresenta:
+
+* Resultado da votação;
+* Descrição completa;
+* Proposições relacionadas.
+
+Além disso, exibe diversas estatísticas:
+
+#### 👤 Voto do usuário
+
+Comparação entre a escolha do usuário e o resultado da votação.
+
+#### 🏛️ Resultado geral dos deputados
+
+* Total de votos;
+* Votos "Sim";
+* Votos "Não";
+* Abstenções;
+* Percentuais de cada opção.
+
+#### 👥 Deputados selecionados
+
+Mostra como cada deputado escolhido votou.
+
+#### 🏛️ Partidos selecionados
+
+Para cada partido escolhido são exibidos:
+
+* Voto informado pelo usuário;
+* Quantidade de votos "Sim";
+* Quantidade de votos "Não";
+* Abstenções da bancada;
+* Percentuais.
+
+#### 📍 Estado selecionado
+
+Mostra:
+
+* Resultado da bancada do estado;
+* Votos "Sim";
+* Votos "Não";
+* Abstenções;
+* Percentuais.
+
+#### 🔄 Comparação consolidada
+
+A aplicação reúne deputados, partidos e estado em uma única visualização, permitindo comparar os resultados de forma simples, sempre apresentando números absolutos e percentuais.
+
+---
+
+Este projeto foi desenvolvido para colocar em prática conceitos de consumo de APIs, manipulação de dados, filtros dinâmicos, processamento de informações e visualização de dados em JavaScript.
+
+🔗 **Código-fonte (GitHub): https://github.com/clovisbalreira**
+🌐 Portfólio: https://clovisbalreira.github.io/portfolio/

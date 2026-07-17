@@ -5,6 +5,7 @@ import { selecionar } from "../../utils/selecionar.js";
 import { escolhaUsuario } from "../controll/escolhaUsuario.js";
 import { configuracoes } from "../controll/configuracoes.js";
 import { liberarLeis } from "./mostrarLeis.js";
+import { removerAcentosImagem } from "../../utils/removerAcentosImagem.js";
 
 export async function inicializarPartidos(){
   await carregarDadosPartidos()
@@ -56,7 +57,7 @@ function criarTbody(partidos, escolhaUsuario){
       let tr = document.createElement('tr')
       tr.dataset.partido = partido.id
       tr.appendChild(criarTd(partido.nome))
-      tr.appendChild(criarTd(criarImg(`./img/partidos/${partido.foto}`, partido.nome)))
+      tr.appendChild(criarTd(criarImg(`./img/partidos/${removerAcentosImagem(partido.foto)}`, partido.nome)))
       tr.appendChild(criarTd(partido.sigla))
       tbody.appendChild(tr)
     }

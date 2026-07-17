@@ -44,7 +44,7 @@ function mostrarPartidos(data, id, condicao){
         
         /* adicionando imagem */
         img.setAttribute('alt', data.dados[i].sigla)
-        img.setAttribute('src', `./img/partidos/${data.dados[i].sigla == 'UNIÃO' ? 'uniao' : data.dados[i].sigla.toLowerCase()}.png`)
+        img.setAttribute('src', `./img/partidos/${data.dados[i].sigla.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")}.png`)
         
         /* adicionando acordion */
         acordion.innerHTML = '+'

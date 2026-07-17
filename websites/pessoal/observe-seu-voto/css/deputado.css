@@ -1,10 +1,10 @@
 /* section deputado */
 .deputados{
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     padding: 0 2%;
 }
+
 .deputados > div{
     background-color: white;
     display: grid;
@@ -12,16 +12,18 @@
     gap: 10px;
     padding: 10px;
     border-radius: 10px;
-    width: 300px;
+    width: 100%;
     height: 150px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.555);
 }
 
 .deputados > div > div:nth-child(1){
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 150px;
+    width: 100%;
     height: 100px;
+    padding-right: 1rem;
 }
 
 .deputados > div > div:nth-child(2){
@@ -37,7 +39,7 @@
 }
 
 .deputados > div > div:nth-child(2) div:nth-child(1) p{
-    width: 52px;
+    width: 70px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -46,3 +48,15 @@
 .deputados > div > p{
     grid-column: 1 / 3;
 } 
+
+@media (max-width: 970px) {
+    .deputados{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 730px) {
+    .deputados{
+        grid-template-columns: 1fr;
+    }
+}

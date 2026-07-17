@@ -1,6 +1,8 @@
 import { estados } from "../controll/estados.js";
 import { init } from "../../api//buscarEstados.js"
 import { escolhaUsuario } from "../controll/escolhaUsuario.js";
+import { configuracoes } from "../controll/configuracoes.js";
+import { liberarLeis } from "./mostrarLeis.js";
 
 export async function inicializarEstados(){
     let estado = await init()
@@ -33,6 +35,7 @@ function criarLabel(id){
 function criarSelect(id, nomeEstado){
     let select = document.createElement('select')
     select.id = id
+    select.appendChild(criarOption('Selecione', ''))
     estados.forEach( estado => {
         select.appendChild(criarOption(estado, nomeEstado))
     })
@@ -41,17 +44,20 @@ function criarSelect(id, nomeEstado){
 
 function criarOption(texto, nomeEstado){
     let option = document.createElement('option')
-    option.textContent = texto.sigla
+    option.textContent = texto == 'Selecione' ? texto : texto.sigla
+    option.value = nomeEstado == '' ? texto : texto.sigla
     if(texto.nome == nomeEstado) option.selected = true
     return option
 }
 
 function pegarEstado(){
     let localizacao = document.getElementById('localizacao')
-    
-    localizacao.addEventListener('click', (e) => {
+    localizacao.addEventListener('change', (e) => {
         estados.forEach( est => {
-            if(est.sigla == e.target.value) escolhaUsuario.estado = est
+            if(est.sigla == e.target.value) {
+                atribuirEstado(est)
+                liberarLeis()
+            }
         })
     })
 }
@@ -59,6 +65,12 @@ function pegarEstado(){
 function atualizarEscolha(estados, escolhaUsuario){
     let localizacao = document.getElementById('localizacao')
     estados.forEach( est => {
-        if(est.sigla == localizacao.value) escolhaUsuario.estado = est
+        if(est.sigla == localizacao.value) atribuirEstado(est)
     })
+}
+
+function atribuirEstado(est){
+    escolhaUsuario.estado.sigla = est.sigla
+    escolhaUsuario.estado.nome = est.nome
+    configuracoes.estado = est.sigla
 }

@@ -5,7 +5,7 @@ import { estatistica } from "./mostrarEstatisticas.js"
 import { styleLei } from "../../utils/styleLei.js"
 
 export function liberarLeis(){
-    if(escolhaUsuario.deputados.length == configuracoes.deputados && escolhaUsuario.partidos.length == configuracoes.partidos){
+    if(escolhaUsuario.deputados.length == configuracoes.deputados && escolhaUsuario.partidos.length == configuracoes.partidos && escolhaUsuario.estado.sigla == configuracoes.estado && escolhaUsuario.estado.sigla != '' && configuracoes.estado != ''){
         let sectionDeputadosPartidos = document.getElementById('deputados-partidos')
         sectionDeputadosPartidos.innerHTML = ''
         inicializarLeis()
