@@ -33,6 +33,12 @@ header > div > div{
     align-items: center;
 }
 
+header #configuracao{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 header > div > div a{
     color: black;
     text-decoration: none;
@@ -50,12 +56,6 @@ header #configuracao #configuracao-div{
 
 header #configuracao #configuracao-div p{
     font-size: 1.5rem;
-}
-
-header #configuracao{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
 }
 
 header #configuracao #div-inputs{
