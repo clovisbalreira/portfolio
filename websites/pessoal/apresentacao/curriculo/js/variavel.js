@@ -17,7 +17,7 @@ let curriculo = {
         espanhol : { titulo : 'Datos Personales' },   
         ingles : { titulo : 'Personal Data' },   
         dados : {
-            linkedin : { nome : 'Linkedin', dado : 'https://www.linkedin.com/in/clovis-balreira-rodrigues-dev/' },
+            linkedin : { nome : 'Linkedin', dado : 'https://www.linkedin.com/in/clovis-balreira-rodrigues/' },
             github : { nome : 'GitHub', dado : 'https://github.com/clovisbalreira' },
         },   
     },
@@ -2113,18 +2113,3 @@ let anos = cursos.map((instituicao) => {
         })
     }
 )
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

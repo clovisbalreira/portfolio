@@ -11,7 +11,7 @@ let redesSociais = [
     },
     {
         nome: 'LinkedIn',   
-        link: 'https://www.linkedin.com/in/clovis-balreira-rodrigues-dev/',
+        link: 'https://www.linkedin.com/in/clovis-balreira-rodrigues/',
         imagem: ['fa-brands', 'fa-linkedin']
     },
     {

@@ -17,10 +17,3 @@ Jogo de perguntas e respostas dinâmico que desafia seus conhecimentos com diver
 Link do projeto online: https://clovisbalreira.github.io/portfolio/websites/alura/quiz/index.html
 
 <!-- 📸 **Imagens** -->
-
-▶️ **Como rodar**
-1. Clone o repositório
-2. Abra o arquivo index.html
-
-📚 **Aprendizados**
-Manipulação avançada de arrays para embaralhamento e gerenciamento complexo de estado de jogo e ajudas.
