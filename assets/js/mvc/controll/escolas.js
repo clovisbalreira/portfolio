@@ -15,5 +15,6 @@ export let escolas = [
     new Escola('onebitcode','Onebitcode','',true),
     new Escola('rocketseat','Rocketseat','Rocketseat',true),
     new Escola('sujeito-programador','Sujeito Programador','sujeitoprogramador',true),
-    new Escola('varos','Varos','',false)
+    new Escola('varos','Varos','',false),
+    new Escola('Leticia Smirelli','Leticia Smirelli','',true)
 ]
