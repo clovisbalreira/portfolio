@@ -1304,6 +1304,8 @@ let dinheiros = [
   { mostrar : false, serie : '', nome : '10 Cruzados', ano : '1987', valor : '10', cotacao : { cotacaoMinimo : 0.50, cotacaoMaximo : 3.00}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-1003.png', imagem_verso : 'verso-1003.png', pacote : '1003'},
   { mostrar : false, serie : '', nome : '10 Cruzeiros', ano : '1986', valor : '10', cotacao : { cotacaoMinimo : 0.50, cotacaoMaximo : 3.00}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-1004.png', imagem_verso : 'verso-1004.png', pacote : '1004'},
   { mostrar : false, serie : '', nome : '10 Cruzeiros', ano : '1983', valor : '10', cotacao : { cotacaoMinimo : 0.50, cotacaoMaximo : 3.00}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-1005.png', imagem_verso : 'verso-1005.png', pacote : '1005'},
+  { mostrar : false, serie : '', nome : '5 Centavos (Cruzado)', ano : '1988', valor : '0.05', cotacao : { cotacaoMinimo : 0.50, cotacaoMaximo : 3.00}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-1006.png', imagem_verso : 'verso-1006.png', pacote : '1006'},
+  { mostrar : false, serie : '', nome : '1 Cruzeiro', ano : '1980', valor : '1', cotacao : { cotacaoMinimo : 1.00, cotacaoMaximo : 5.00}, pais : 'Brasil', tipo : 'Moeda', imagem_frente : 'frente-1007.png', imagem_verso : 'verso-1007.png', pacote : '1007'},
 ]
 /*
 1939 - Pesos - 5 - Cedula - Quantidade: 1
@@ -1334,7 +1336,7 @@ let dinheiros = [
 1978 - Nuevo Pesos - 1 - Moeda - Quantidade: 1
 1979 - Cruzeiros - 0.10 - Moeda - Quantidade: 1
 1979 - 1 Cruzeiro - 1 - Moeda - Quantidade: 4
-1980 - 1 Cruzeiro - 1 - Moeda - Quantidade: 4
+1980 - 1 Cruzeiro - 1 - Moeda - Quantidade: 5
 1980 - 5 Cruzeiros - 5 - Moeda - Quantidade: 17
 1981 - 1 Cruzeiro - 1 - Moeda - Quantidade: 7
 1981 - 5 Cruzeiros - 5 - Moeda - Quantidade: 2
