@@ -108,8 +108,52 @@ function criarCarrossel(titulo, dados) {
         divSection.appendChild(section)
         divSection.appendChild(criarButton('right', '▶'))
         div.appendChild(divSection)
+    }else{
+        let h2 = document.createElement('h2')
+        h2.innerHTML = titulo
+        div.appendChild(h2)
+        let divSection = document.createElement('div')
+        divSection.appendChild(criarButton('left', '◀'))
+        let section = document.createElement('section')
+        section.id = 'carrossel'
+        section.classList.add('carrossel')
+        let tops = dados.filter( dado => dado.top.top ).sort((a, b) => a.top.colocacao - b.top.colocacao)
+        tops.map((dado) => {
+            let button = document.createElement('button')
+            button.classList.add('card-colocacao')
+            button.setAttribute(titulo, dado.nome)
+            button.onclick = () => window.open(dado.site, "_blank")
+            let h3 = document.createElement('h3')
+            h3.innerHTML = dado.nome
+            button.appendChild(h3)
+            let span = document.createElement('span')
+            let colocacao = dado.top.colocacao
+            span.innerHTML = `${colocacao}º`
+            backgroundColocacao(colocacao, span)
+            button.appendChild(span)
+            section.appendChild(button)
+        })
+        divSection.appendChild(section)
+        divSection.appendChild(criarButton('right', '▶'))
+        div.appendChild(divSection)
     }
     return div
+}
+
+function backgroundColocacao(colocacao, span){
+    switch(colocacao){
+        case 1:
+            span.style.backgroundColor = '#FFD700'
+            break
+        case 2:
+            span.style.backgroundColor = '#C0C0C0'
+            break
+        case 3:
+            span.style.backgroundColor = '#CD7F32'
+            break
+        default:
+            span.style.backgroundColor = '#3498DB'
+    }
 }
 
 function pastasImagens(titulo, imagem) {
@@ -271,6 +315,7 @@ export function inicio() {
     footer()
     removerMain()
     let main = document.querySelector('main')
+    main.appendChild(criarCarrossel('Tops', webSites))
     main.appendChild(criarCarrossel('Linguagem', linguagens))
     main.appendChild(criarCarrossel('Escola', escolas))
     //main.appendChild(criarCarrossel('Instrutor', instrutores))

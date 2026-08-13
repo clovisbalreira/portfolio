@@ -11,6 +11,7 @@ const websites = [
   {nome: 'Poke Devs', caminho: 'pokedevs'},
   {nome: 'Dragon Ball', caminho: 'dragon-ball'},
   {nome: 'Magic AI', caminho: 'magickia'},
+  {nome: 'GTA VI', caminho: 'gta-vi'},
 ]
 
 const btnMostrarProjetos = document.querySelector('.btn-mostrar-projetos');

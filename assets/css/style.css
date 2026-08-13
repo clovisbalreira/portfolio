@@ -162,6 +162,38 @@ main h2{
     padding: 2rem 1rem;
 }
 
+.card-colocacao {
+    width: 200px;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    background: var(--azul);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    padding: 2rem 1rem 1.5rem;
+    box-sizing: border-box;
+}
+
+.card h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.15;
+}
+
+.card span {
+    font-size: 3rem;
+    line-height: 1;
+    color: white;
+}
+
 .card h3{
     font-size: 1.2rem;
 }
@@ -197,6 +229,13 @@ main h2{
 
 .carrossel-container:hover .btn {
     opacity: 1;
+}
+
+.card-colocacao span{
+    font-size: 3rem;
+    color: black;
+    border-radius: 50%;
+    padding: 1.5rem;
 }
 
 @media (max-width: 480px) {

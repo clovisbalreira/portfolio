@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#09090b">
+  <meta name="description" content="CNS Rádio — música, informação e companhia 24 horas.">
+  <title>CNS Rádio — Ao Vivo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">
+      <span class="brand-mark">CNS</span>
+      <span><b>CNS</b><small>RÁDIO ONLINE</small></span>
+    </a>
+    <nav>
+      <a href="#radio">Rádio</a>
+      <a href="#programacao">Programação</a>
+      <a href="#sobre">Sobre</a>
+      <a class="social" href="#" aria-label="Instagram">◎</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="radio">
+      <div class="hero-copy">
+        <div class="live-pill"><i></i> NO AR AGORA</div>
+        <h1>A sua rádio.<br><span>Do seu jeito.</span></h1>
+        <p>Uma experiência de rádio online moderna, leve e feita para ouvir onde você estiver.</p>
+        <button class="play-main" id="playButton">
+          <span class="play-icon">▶</span><span id="playLabel">OUVIR AO VIVO</span>
+        </button>
+        <div class="status" id="status">Pronto para transmitir</div>
+      </div>
+
+      <div class="player-card">
+        <div class="cover">
+          <div class="equalizer" id="equalizer">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="cover-logo">CNS</div>
+          <small>RÁDIO ONLINE</small>
+        </div>
+        <div class="track-info">
+          <div class="eyebrow">TOCANDO AGORA</div>
+          <h2 id="trackTitle">CNS Rádio</h2>
+          <p id="trackArtist">Ao vivo • 24 horas</p>
+        </div>
+        <div class="player-controls">
+          <button id="muteButton" class="round" aria-label="Silenciar">🔊</button>
+          <input id="volume" type="range" min="0" max="1" step=".01" value=".85" aria-label="Volume">
+          <span id="volumeValue">85%</span>
+        </div>
+        <audio id="radioAudio" preload="none" crossorigin="anonymous">
+          <source src="https://s18.maxcast.com.br:8702/live" type="audio/mpeg">
+        </audio>
+      </div>
+    </section>
+
+    <section class="features">
+      <article><span>◉</span><div><b>Ao vivo</b><p>Ouça a transmissão diretamente no navegador.</p></div></article>
+      <article><span>♫</span><div><b>Música sem complicação</b><p>Player simples, rápido e responsivo.</p></div></article>
+      <article><span>↗</span><div><b>Compartilhe</b><p>Leve a CNS para seus amigos e redes sociais.</p></div></article>
+    </section>
+
+    <section class="section" id="programacao">
+      <div class="section-head">
+        <div><span class="eyebrow">NA CNS</span><h2>Programação</h2></div>
+        <span class="today">PROGRAMAÇÃO DA RÁDIO</span>
+      </div>
+      <div class="schedule">
+        <div><time>06:00</time><div><b>CNS Manhã</b><span>Comece o dia com música e informação.</span></div></div>
+        <div><time>10:00</time><div><b>Hits CNS</b><span>Os sucessos que estão fazendo a diferença.</span></div></div>
+        <div><time>14:00</time><div><b>Conexão CNS</b><span>Música, entretenimento e companhia.</span></div></div>
+        <div><time>18:00</time><div><b>CNS Night</b><span>Uma seleção para fechar o dia.</span></div></div>
+      </div>
+    </section>
+
+    <section class="cta" id="sobre">
+      <div><span class="eyebrow">21 ANOS</span><h2>Uma história que continua<br>tocando.</h2><p>Uma identidade jovem para uma rádio com história.</p></div>
+      <button class="outline" id="shareButton">COMPARTILHAR RÁDIO ↗</button>
+    </section>
+  </main>
+
+  <footer><b>CNS RÁDIO</b><span>© 2026 • Rádio Online</span><span>Feito para ouvir.</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
