@@ -306,6 +306,31 @@ let curriculo = {
 
 let cursos = [
     {
+        instituicao : 'QI Faculdade e Escola Técnica Ltda',
+        cursos : [
+            { 
+                portugues : {
+                    nome : 'TÉCNICO EM INFORMÁTICA PARA INTERNET', 
+                    tipo : 'TÉCNICO',
+                },
+                ingles : {
+                    nome : '',
+                    tipo : '',
+                },
+                espanhol : {
+                    nome : '',
+                    tipo : '',
+                },
+                filtro : false,  
+                horas : 1000,
+                dataInicio : new Date('06/18/2024'),
+                dataFim : new Date('03/30/2026'),
+                imagens : ["./img/cursos/qi/qi-01.png","./img/cursos/qi/qi-01.png"],
+            }
+        ],
+        posicao : "horizontal",
+    },
+    {
         instituicao : 'Estudonauta',
         cursos : [
             { 

@@ -6,7 +6,7 @@ import { webSites } from '../controll/websites.js'
 let redesSociais = [
     {
         nome: 'Curriculo',   
-        link: 'https://clovisbalreira.github.io/portfolio/websites/pessoal/apresentacao/curriculo/curriculo.html',
+        link: 'https://clovisbalreira.github.io/portfolio/websites/pessoal/apresentacao/curriculo/index.html',
         imagem: ['fa-solid', 'fa-file']
     },
     {
