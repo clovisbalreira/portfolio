@@ -1,0 +1,10 @@
+[files]
+"./python/__init__.py" = "./python/__init__.py"
+"./python/amigo.py" = "./python/amigo.py"
+"./python/banco/__init__.py" = "./python/banco/__init__.py"
+"./python/banco/banco_amigos.py" = "./python/banco/banco_amigos.py"
+"./python/interface/__init__.py" = "./python/interface/__init__.py"
+"./python/interface/mensagens.py" = "./python/interface/mensagens.py"
+"./python/interface/resultados.py" = "./python/interface/resultados.py"
+"./python/interface/formulario.py" = "./python/interface/formulario.py"
+"./python/interface/modal.py" = "./python/interface/modal.py"

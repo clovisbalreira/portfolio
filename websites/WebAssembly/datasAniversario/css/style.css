@@ -1,0 +1,860 @@
+/* Configuração geral */
+
+[hidden] {
+    display: none !important;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    color: #1f2937;
+    background-color: #ffffff;
+}
+
+/* Busca e ordenação */
+
+.barra-busca {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.barra-busca input {
+    flex: 1;
+    min-width: 150px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.barra-busca select {
+    min-height: 40px;
+    max-width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: #ffffff;
+    font-size: 14px;
+}
+
+.barra-busca button {
+    white-space: nowrap;
+}
+
+/* Campos de entrada */
+
+input,
+select {
+    font-family: inherit;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #93c5fd;
+    outline-offset: 1px;
+    border-color: #2563eb;
+}
+
+/* Botões gerais */
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+/* Filtro por idade */
+
+.filtro-idade {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+    padding: 18px;
+    background-color: #f5f7fa;
+    border: 1px solid #e0e5eb;
+    border-radius: 10px;
+}
+
+.filtro-idade label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #374151;
+}
+
+.filtro-idade input {
+    flex: 1;
+    min-width: 90px;
+    width: 100px;
+    max-width: 130px;
+}
+
+.filtro-idade button {
+    width: auto;
+    min-height: 40px;
+    padding: 10px 16px;
+    border: none;
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.filtro-idade button:hover {
+    background-color: #1d4ed8;
+}
+
+.filtro-idade button[aria-label="Limpar filtros"] {
+    background-color: #64748b;
+    color: #ffffff;
+}
+
+.filtro-idade button[aria-label="Limpar filtros"]:hover {
+    background-color: #475569;
+}
+
+/* Resultados */
+
+.resultado {
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #e0e5eb;
+    border-radius: 8px;
+    background-color: #ffffff;
+    overflow-wrap: anywhere;
+}
+
+.resultado strong {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+/* Mensagens */
+
+.mensagem {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Cadastro */
+
+.cadastro {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #e0e5eb;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.cadastro h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.cadastro label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.cadastro input {
+    display: block;
+    width: 100%;
+}
+
+.cadastro button {
+    margin-top: 15px;
+}
+
+/* Botões com ícones */
+
+.barra-busca button,
+.cadastro button,
+.resultado button {
+    width: 45px;
+    height: 40px;
+    padding: 0;
+}
+
+.resultado button {
+    margin-top: 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+}
+
+/* Modal de exclusão */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-conteudo {
+    width: 90%;
+    max-width: 400px;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-conteudo h2 {
+    margin-top: 0;
+}
+
+.modal-botoes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.modal-botoes button {
+    width: 45px;
+    height: 40px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Destaque do portfólio multilíngue */
+
+.destaque {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #dbe3ed;
+    border-radius: 12px;
+    background-color: #f8fafc;
+}
+
+.destaque h2 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    color: #1e3a8a;
+}
+
+.destaque label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #374151;
+}
+
+#linguagem {
+    display: block;
+    width: 100%;
+    min-height: 42px;
+    margin-bottom: 18px;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: #ffffff;
+    font-size: 15px;
+}
+
+.abas-portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.aba-portfolio {
+    flex: 1;
+    min-width: 120px;
+    border: 1px solid #cbd5e1;
+    background-color: #ffffff;
+    color: #374151;
+}
+
+.aba-portfolio:hover {
+    background-color: #e2e8f0;
+}
+
+.aba-portfolio.ativa {
+    border-color: #2563eb;
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+#visualizador-codigo {
+    padding: 15px;
+    border: 1px solid #dbe3ed;
+    border-radius: 8px;
+    background-color: #ffffff;
+    overflow-wrap: anywhere;
+}
+
+#visualizador-codigo[hidden] {
+    display: none;
+}
+
+/* Visualizador de código-fonte */
+
+#visualizador-codigo {
+    min-width: 0;
+    margin-top: 15px;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #334155;
+    border-radius: 8px;
+    background-color: #0f172a;
+    color: #e2e8f0;
+}
+
+#visualizador-codigo .cabecalho-codigo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px 16px;
+    border-bottom: 1px solid #334155;
+    background-color: #1e293b;
+}
+
+#visualizador-codigo .nome-linguagem {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #f8fafc;
+}
+
+#visualizador-codigo pre {
+    margin: 0;
+    padding: 18px;
+    overflow-x: auto;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: pre;
+    tab-size: 4;
+}
+
+#visualizador-codigo code {
+    font-family: inherit;
+    color: inherit;
+}
+
+/* Mantém o painel oculto quando a aba não está selecionada */
+
+#visualizador-codigo[hidden],
+#painel-sistema[hidden] {
+    display: none;
+}
+
+#visualizador-codigo #status-codigo {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+#visualizador-codigo .nome-linguagem {
+    margin: 0;
+}
+
+/* Integração com Prism.js */
+
+#visualizador-codigo pre[class*="language-"],
+#visualizador-codigo code[class*="language-"] {
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    text-shadow: none;
+}
+
+#visualizador-codigo pre[class*="language-"] {
+    margin: 0;
+    padding: 18px;
+    background: #0f172a;
+    overflow-x: auto;
+}
+
+#visualizador-codigo code[class*="language-"] {
+    background: transparent;
+}
+
+/* Numeração das linhas do código */
+
+#visualizador-codigo pre.line-numbers {
+    padding-left: 3.8em;
+}
+
+#visualizador-codigo .line-numbers .line-numbers-rows {
+    border-right: 1px solid #334155;
+}
+
+#visualizador-codigo .line-numbers-rows > span:before {
+    color: #64748b;
+}
+
+#visualizador-codigo pre.line-numbers {
+    position: relative;
+}
+
+/* Cabeçalho e ações do visualizador */
+
+#visualizador-codigo .acoes-codigo {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#visualizador-codigo #botao-copiar-codigo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: auto;
+    min-height: 36px;
+    padding: 8px 12px;
+    border: 1px solid #475569;
+    background-color: #334155;
+    color: #f8fafc;
+}
+
+#visualizador-codigo #botao-copiar-codigo:hover {
+    background-color: #475569;
+}
+
+#visualizador-codigo #botao-copiar-codigo:disabled {
+    cursor: wait;
+    opacity: 0.7;
+}
+
+/* Identificação da linguagem ativa */
+
+#visualizador-codigo .identificacao-codigo {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#visualizador-codigo .indicador-codigo {
+    width: 10px;
+    height: 10px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: #38bdf8;
+}
+
+#visualizador-codigo .etiqueta-linguagem {
+    padding: 4px 8px;
+    border: 1px solid #475569;
+    border-radius: 4px;
+    background-color: #334155;
+    color: #e2e8f0;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* Ícones das linguagens no cabeçalho */
+
+#visualizador-codigo #icone-linguagem {
+    display: inline-block;
+    font-size: 28px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+#visualizador-codigo .identificacao-codigo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Botão de expansão */
+
+#visualizador-codigo #botao-expandir-codigo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: auto;
+    min-height: 36px;
+    padding: 8px 12px;
+    border: 1px solid #475569;
+    background-color: #334155;
+    color: #f8fafc;
+}
+
+#visualizador-codigo #botao-expandir-codigo:hover {
+    background-color: #475569;
+}
+
+/* Visualizador ampliado */
+
+#visualizador-codigo.expandido {
+    position: fixed;
+    inset: 12px;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: #0f172a;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+#visualizador-codigo.expandido .cabecalho-codigo {
+    flex-shrink: 0;
+}
+
+#visualizador-codigo.expandido pre {
+    flex: 1;
+    min-height: 0;
+    overflow: auto;
+}
+
+#visualizador-codigo.expandido[hidden] {
+    display: none;
+}
+
+/* Botão para alternar o tema do código */
+#visualizador-codigo #botao-tema-codigo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: auto;
+    min-height: 36px;
+    padding: 8px 12px;
+    border: 1px solid #475569;
+    background-color: #334155;
+    color: #f8fafc;
+}
+
+#visualizador-codigo #botao-tema-codigo:hover {
+    background-color: #475569;
+}
+
+/* Tema claro */
+#visualizador-codigo.tema-claro {
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+#visualizador-codigo.tema-claro .cabecalho-codigo {
+    background-color: #e2e8f0;
+    color: #1e293b;
+    border-bottom: 1px solid #cbd5e1;
+}
+
+#visualizador-codigo.tema-claro #status-codigo {
+    color: #475569;
+}
+
+#visualizador-codigo.tema-claro pre,
+#visualizador-codigo.tema-claro code {
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+#visualizador-codigo.tema-claro #botao-expandir-codigo,
+#visualizador-codigo.tema-claro #botao-copiar-codigo,
+#visualizador-codigo.tema-claro #botao-tema-codigo {
+    background-color: #ffffff;
+    color: #1e293b;
+    border-color: #cbd5e1;
+}
+
+#visualizador-codigo.tema-claro #botao-expandir-codigo:hover,
+#visualizador-codigo.tema-claro #botao-copiar-codigo:hover,
+#visualizador-codigo.tema-claro #botao-tema-codigo:hover {
+    background-color: #e2e8f0;
+}
+
+/* Cor do nome da linguagem conforme o tema */
+#visualizador-codigo .nome-linguagem {
+    color: #f8fafc;
+}
+
+#visualizador-codigo.tema-claro .nome-linguagem {
+    color: #000000;
+}
+
+/* Realce de sintaxe no tema claro */
+#visualizador-codigo.tema-claro pre[class*="language-"],
+#visualizador-codigo.tema-claro code[class*="language-"] {
+    background: #f8fafc;
+    color: #1e293b;
+    text-shadow: none;
+}
+
+/* Comentários */
+#visualizador-codigo.tema-claro .token.comment,
+#visualizador-codigo.tema-claro .token.prolog,
+#visualizador-codigo.tema-claro .token.doctype {
+    color: #64748b;
+}
+
+/* Palavras-chave: def, if, return, let, const */
+#visualizador-codigo.tema-claro .token.keyword {
+    color: #7c3aed;
+}
+
+/* Funções */
+#visualizador-codigo.tema-claro .token.function {
+    color: #0369a1;
+}
+
+/* Strings */
+#visualizador-codigo.tema-claro .token.string,
+#visualizador-codigo.tema-claro .token.char {
+    color: #15803d;
+}
+
+/* Números e booleanos */
+#visualizador-codigo.tema-claro .token.number,
+#visualizador-codigo.tema-claro .token.boolean {
+    color: #c2410c;
+}
+
+/* Operadores */
+#visualizador-codigo.tema-claro .token.operator,
+#visualizador-codigo.tema-claro .token.punctuation {
+    color: #475569;
+}
+
+/* Classes e tipos */
+#visualizador-codigo.tema-claro .token.class-name,
+#visualizador-codigo.tema-claro .token.builtin {
+    color: #0e7490;
+}
+
+/* Variáveis e identificadores */
+#visualizador-codigo.tema-claro .token.parameter {
+    color: #334155;
+}
+
+/* Números das linhas */
+#visualizador-codigo.tema-claro .line-numbers .line-numbers-rows {
+    border-right-color: #cbd5e1;
+}
+
+#visualizador-codigo.tema-claro .line-numbers-rows > span:before {
+    color: #64748b;
+}
+
+/* Seletor de arquivo do visualizador */
+
+#arquivo-codigo {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: #ffffff;
+    font-size: 14px;
+}
+
+/* Edição: botão de cancelar ao lado do botão de salvar */
+
+#botao-cancelar-edicao {
+    margin-left: 8px;
+}
+
+/* Seus dados: exportar, importar e restaurar */
+
+.dados {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #e0e5eb;
+    border-radius: 10px;
+    background-color: #f5f7fa;
+}
+
+.dados h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.dados .nota {
+    margin: 0 0 15px;
+    font-size: 14px;
+    color: #475569;
+}
+
+.acoes-dados {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.acoes-dados button,
+.botao-arquivo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #374151;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.acoes-dados button:hover,
+.botao-arquivo:hover {
+    background-color: #e2e8f0;
+}
+
+#botao-restaurar-banco {
+    border-color: #fca5a5;
+    color: #b91c1c;
+}
+
+#botao-restaurar-banco:hover {
+    background-color: #fee2e2;
+}
+
+/* Indicador do backend em uso */
+
+.backend-ativo {
+    margin: 0 0 20px;
+    padding: 10px 14px;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+    background-color: #eff6ff;
+    color: #1e3a8a;
+    font-size: 14px;
+}
+
+.backend-ativo .linha-backend {
+    display: block;
+}
+
+.backend-ativo .aviso-backend {
+    margin-top: 4px;
+    color: #92400e;
+}
+
+/* Adaptação para celulares */
+
+@media (max-width: 600px) {
+    body {
+        margin: 15px auto;
+        padding: 15px;
+    }
+
+    .barra-busca {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .barra-busca input,
+    .barra-busca select {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .barra-busca button {
+        width: 100%;
+    }
+
+    .filtro-idade {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .filtro-idade label {
+        grid-column: 1 / -1;
+    }
+
+    .filtro-idade input {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+    }
+
+    .filtro-idade button {
+        width: 100%;
+        grid-column: 1 / -1;
+    }
+
+    .cadastro,
+    .dados {
+        padding: 15px;
+    }
+
+    .acoes-dados button,
+    .botao-arquivo {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .modal-conteudo {
+        padding: 20px;
+    }
+
+    .destaque {
+        padding: 15px;
+    }
+
+    .abas-portfolio {
+        flex-direction: column;
+    }
+
+    .aba-portfolio {
+        width: 100%;
+    }
+    
+    #visualizador-codigo pre {
+        padding: 12px;
+        font-size: 12px;
+    }
+    
+    #visualizador-codigo pre[class*="language-"] {
+        padding: 12px;
+        font-size: 12px;
+    }
+    
+    #visualizador-codigo .cabecalho-codigo {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    #visualizador-codigo .acoes-codigo {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    #visualizador-codigo.expandido {
+        inset: 5px;
+    }
+}

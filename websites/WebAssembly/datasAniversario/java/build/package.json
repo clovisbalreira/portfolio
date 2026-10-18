@@ -1,0 +1,13 @@
+{
+  "name": "datas-aniversario-java-build",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Compila java/src para WebAssembly (java/app.wasm) com TeaVM.",
+  "scripts": {
+    "build": "node --stack-size=4000 build.mjs"
+  },
+  "devDependencies": {
+    "@wasm-oj/toolchain-java": "0.2.0"
+  }
+}

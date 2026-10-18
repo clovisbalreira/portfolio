@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Busca de Amigos</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Prism.js: realce de sintaxe (as linguagens são carregadas
+         sob demanda pelo plugin autoloader) -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.30.0/themes/prism-tomorrow.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.30.0/plugins/line-numbers/prism-line-numbers.min.css"
+    >
+
+    <script
+        defer
+        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.30.0/prism.min.js">
+    </script>
+
+    <script
+        defer
+        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.30.0/plugins/autoloader/prism-autoloader.min.js">
+    </script>
+
+    <script
+        defer
+        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.30.0/plugins/line-numbers/prism-line-numbers.min.js">
+    </script>
+
+    <!-- Font Awesome -->
+    <script
+        defer
+        src="https://kit.fontawesome.com/e02fa1058f.js"
+        crossorigin="anonymous">
+    </script>
+
+    <!-- Ícones das linguagens de programação -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/devicons/devicon@2.17.0/devicon.min.css"
+    >
+
+    <!-- PyScript -->
+    <link
+        rel="stylesheet"
+        href="https://pyscript.net/releases/2025.8.1/core.css"
+    >
+
+    <script
+        type="module"
+        src="https://pyscript.net/releases/2025.8.1/core.js">
+    </script>
+
+
+    <!-- SQLite -->
+    <script
+        defer
+        src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.13.0/sql-wasm.js">
+    </script>
+
+
+    <!-- Nosso JavaScript -->
+    <script type="module" src="./js/main.js"></script>
+
+</head>
+
+
+<body>
+
+    <main class="container">
+
+        <h1>Busca de Amigos</h1>
+
+        <!-- Destaque do portfólio multilíngue -->
+        <section class="destaque">
+
+            <h2>Sistema de gerenciamento de aniversários</h2>
+
+            <label for="linguagem">Linguagem de programação:</label>
+
+            <select id="linguagem">
+                <option value="javascript" selected>JavaScript</option>
+                <option value="python">Python</option>
+                <option value="c">C</option>
+                <option value="java">Java</option>
+            </select>
+
+            <div class="abas-portfolio">
+                <button
+                    type="button"
+                    id="aba-sistema"
+                    class="aba-portfolio ativa"
+                >
+                    Sistema
+                </button>
+
+                <button
+                    type="button"
+                    id="aba-codigo"
+                    class="aba-portfolio"
+                >
+                    Código-fonte
+                </button>
+            </div>
+            <div id="visualizador-codigo" hidden>
+
+                <div class="cabecalho-codigo">
+
+                    <div class="identificacao-codigo">
+                        <i
+                            id="icone-linguagem"
+                            class="devicon-python-plain colored"
+                            aria-hidden="true"
+                        ></i>
+
+                        <h3 class="nome-linguagem">
+                            Python
+                        </h3>
+
+                        <span id="etiqueta-linguagem" class="etiqueta-linguagem">
+                            PYTHON
+                        </span>
+                    </div>
+
+                    <div class="acoes-codigo">
+
+                        <span id="status-codigo"></span>
+
+                        <button
+                            type="button"
+                            id="botao-tema-codigo"
+                            aria-pressed="false"
+                            title="Ativar tema claro"
+                        >
+                            <i class="fa-solid fa-sun"></i>
+                            Tema claro
+                        </button>
+
+                        <button
+                            type="button"
+                            id="botao-expandir-codigo"
+                            aria-pressed="false"
+                            title="Expandir visualizador"
+                        >
+                            <i class="fa-solid fa-expand"></i>
+                            Expandir
+                        </button>
+
+                        <button
+                            type="button"
+                            id="botao-copiar-codigo"
+                            title="Copiar código-fonte"
+                        >
+                            <i class="fa-regular fa-copy"></i>
+                            Copiar código
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <select
+                    id="arquivo-codigo"
+                    aria-label="Arquivo do projeto"
+                    hidden
+                ></select>
+
+                <pre class="line-numbers"><code id="conteudo-codigo"></code></pre>
+
+            </div>
+
+        </section>
+
+        <section id="painel-sistema">
+
+            <p id="backend-ativo" class="backend-ativo" role="status"></p>
+
+            <div class="barra-busca">
+
+                <input
+                    type="text"
+                    id="busca"
+                    aria-label="Nome do amigo para buscar"
+                >
+
+                <button
+                    type="button"
+                    data-acao="buscar"
+                    title="Buscar"
+                    aria-label="Buscar"
+                >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+                <button
+                    type="button"
+                    data-acao="listar_todos"
+                    title="Listar todos"
+                    aria-label="Listar todos"
+                >
+                    <i class="fa-solid fa-list"></i>
+                </button>
+
+                <select
+                    id="ordem"
+                    aria-label="Ordenar resultados"
+                    data-acao-change="ordenar"
+                >
+                    <option value="nome_asc">
+                        Nome (A-Z)
+                    </option>
+
+                    <option value="nome_desc">
+                        Nome (Z-A)
+                    </option>
+
+                    <option value="idade_asc">
+                        Idade (menor para maior)
+                    </option>
+
+                    <option value="idade_desc">
+                        Idade (maior para menor)
+                    </option>
+                </select>
+
+            </div>
+            <div class="filtro-idade">
+                <label for="idade_minima">Idade mínima:</label>
+                <input
+                    type="number"
+                    id="idade_minima"
+                    min="0"
+                    placeholder="Ex.: 10"
+                >
+
+                <label for="idade_maxima">Idade máxima:</label>
+                <input
+                    type="number"
+                    id="idade_maxima"
+                    min="0"
+                    placeholder="Ex.: 18"
+                >
+
+                <button
+                    type="button"
+                    data-acao="buscar"
+                    aria-label="Filtrar por idade"
+                    title="Filtrar por idade"
+                >
+                    Filtrar
+                </button>
+            </div>
+
+            <button
+                type="button"
+                data-acao="limpar_filtros"
+                aria-label="Limpar filtros"
+                title="Limpar filtros"
+            >
+                Limpar filtros
+            </button>
+
+
+            <section class="cadastro">
+
+                <h2>Cadastrar amigo</h2>
+
+                <label for="nome">Nome:</label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Digite o nome"
+                    aria-label="Nome do amigo"
+                >
+
+                <label for="nascimento">Data de nascimento:</label>
+
+                <input
+                    type="date"
+                    id="nascimento"
+                >
+
+                <button
+                    type="button"
+                    id="botao-cadastrar"
+                    data-acao="cadastrar"
+                    title="Cadastrar"
+                    aria-label="Cadastrar"
+                >
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <button
+                    type="button"
+                    id="botao-cancelar-edicao"
+                    data-acao="cancelar_edicao"
+                    title="Cancelar edição"
+                    aria-label="Cancelar edição"
+                    hidden
+                >
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <div id="mensagem-cadastro"></div>
+
+            </section>
+
+            <div id="resultados"></div>
+
+            <section class="dados">
+
+                <h2>Seus dados</h2>
+
+                <p class="nota">
+                    Os amigos ficam salvos neste navegador. Exporte
+                    uma cópia para guardar ou levar para outro lugar.
+                </p>
+
+                <div class="acoes-dados">
+
+                    <button type="button" id="botao-exportar-banco">
+                        <i class="fa-solid fa-download"></i>
+                        Exportar
+                    </button>
+
+                    <label class="botao-arquivo">
+                        <i class="fa-solid fa-upload"></i>
+                        Importar
+                        <input
+                            type="file"
+                            id="arquivo-importar"
+                            accept=".db,.sqlite,.sqlite3"
+                            hidden
+                        >
+                    </label>
+
+                    <button type="button" id="botao-restaurar-banco">
+                        <i class="fa-solid fa-rotate-left"></i>
+                        Restaurar original
+                    </button>
+
+                </div>
+
+                <div id="mensagem-backup"></div>
+
+            </section>
+        </section>
+
+    </main>
+        <div
+        id="modal-exclusao"
+        class="modal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="modal-conteudo"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-titulo"
+        >
+
+            <h2 id="modal-titulo">
+                Confirmar exclusão
+            </h2>
+
+            <p id="modal-mensagem"></p>
+
+            <div class="modal-botoes">
+
+                <button
+                    type="button"
+                    id="botao-confirmar-exclusao"
+                    data-acao="confirmar_exclusao"
+                    title="Excluir"
+                    aria-label="Excluir"
+                >
+                    <i class="fa-solid fa-trash"></i>
+                </button>
+
+                <button
+                    type="button"
+                    id="botao-cancelar-exclusao"
+                    data-acao="cancelar_exclusao"
+                    title="Cancelar"
+                    aria-label="Cancelar"
+                >
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <py-script
+        src="python/app.py"
+        config="pyscript.toml">
+    </py-script>
+
+</body>
+
+</html>

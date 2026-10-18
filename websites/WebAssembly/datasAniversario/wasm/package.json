@@ -1,0 +1,12 @@
+{
+  "name": "datas-aniversario-wasm",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Módulo WebAssembly (AssemblyScript) que calcula a idade.",
+  "scripts": {
+    "build": "asc assembly/idade.ts --outFile idade.wasm --runtime stub --optimizeLevel 3 --shrinkLevel 2 --noAssert"
+  },
+  "devDependencies": {
+    "assemblyscript": "0.28.20"
+  }
+}
