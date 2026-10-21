@@ -9,6 +9,7 @@ seletor é quem executa o sistema** (busca, cadastro, edição e exclusão):
 | **JavaScript** | `js/backend/javascript/` rodando no próprio navegador    |
 | **C**          | `c/src/` compilado para WebAssembly (`c/app.wasm`)       |
 | **Java**       | `java/src/` compilado para WebAssembly (`java/app.wasm`) |
+| **PHP**        | `php/` rodando no navegador (php-wasm, WASM)             |
 
 O sistema começa em Python. Ao trocar, o backend antigo é desativado (edição e modal
 encerrados), o novo assume a tela e a lista é redesenhada com a mesma busca e os
@@ -35,9 +36,12 @@ uma única vez e repassa cada ação ao backend ativo. Cada backend se registra 
 - JavaScript: `registrar("javascript", backendJavaScript)` em `js/main.js`.
 - C e Java: `js/main.js` carrega `c/app.wasm` e `java/app.wasm` e registra cada backend
   quando fica pronto (se falhar, o indicador mostra o motivo).
+- PHP: o runtime (~12 MB) só é baixado quando o PHP é escolhido pela primeira vez
+  (`registrarSobDemanda`). Se o download falhar, o indicador mostra o motivo e escolher
+  PHP de novo tenta outra vez.
 - Python: `window.backends.registrar("python", ...)` no fim de `python/app.py`
   (quando o Pyodide termina de carregar; até lá o indicador mostra "Carregando...").
-- O Python acessa o banco pela ponte `js/backend/pontePython.js` (texto JSON).
+- Python e PHP acessam o banco pela ponte `js/backend/ponteJson.js` (texto JSON).
   O backend JavaScript chama `select/insert/update/delete` diretamente.
 
 ## Backend em C
@@ -96,6 +100,32 @@ O build usa o `javac` do JDK (que aceita as anotações) e depois o backend do T
 no fim confere se o módulo importa e exporta exatamente o contrato esperado.
 Veja `java/build/NOTICE.md` para os avisos de terceiros.
 
+## Backend em PHP
+
+O PHP roda no navegador compilado para WebAssembly pelo **php-wasm**
+(PHP 8.3, versão fixa `php-wasm@0.2.0` pelo jsDelivr). A lógica está nos arquivos
+`.php` reais de `php/`, que o carregador (`js/backend/php/app.js`) copia para o sistema
+de arquivos virtual do PHP e executa. É a mesma ideia do Python com PyScript:
+
+- O PHP acessa a página diretamente, pela ponte **Vrzno** do php-wasm: `new Vrzno`
+  representa o escopo global do JavaScript, então `$janela->document->getElementById(...)`,
+  `->value = ...`, `->addEventListener('click', fn)` etc. funcionam como em JavaScript
+  (`php/interface/dom.php`). Closures PHP viram ouvintes de clique.
+- Os dados vêm pela mesma ponte JSON do Python.
+- O estado (modo de edição, modal) persiste entre uma ação e outra.
+- Ao terminar de carregar, `php/app.php` cria o objeto de backend e o deixa em
+  `window.backendPhp`; o carregador o entrega ao roteador.
+
+Particularidades do PHP no navegador, tratadas no código:
+
+- Sem `mbstring`: os caracteres são contados com `preg_match_all('/./su')`.
+- O PHP usa UTC; a data de hoje vem do navegador (`vrzno_eval`).
+- É o backend mais lento: cada operação de DOM atravessa a ponte PHP↔JavaScript
+  (~2,5 s para desenhar 5.000 amigos; 13 amigos são instantâneos).
+
+Para hospedar o php-wasm por conta própria (sem CDN), copie os arquivos do pacote npm
+`php-wasm` e aponte `URL_RUNTIME` em `js/backend/php/app.js` para eles.
+
 ## Como rodar
 
 O navegador não carrega `.wasm`/`fetch` via `file://`; sirva a pasta por HTTP:
@@ -135,13 +165,15 @@ js/                   roteador, backend JavaScript, banco, visualizador de códi
   backend/javascript/        backend JavaScript completo
   backend/c/                 carregador do backend C
   backend/java/              carregador do backend Java e shim WASI
+  backend/php/               carregador do backend PHP (php-wasm)
   backend/wasm/host.js       host (DOM/banco) compartilhado por C e Java
-  backend/pontePython.js     funções JSON usadas pelo Python
+  backend/ponteJson.js       funções JSON usadas por Python e PHP
   conexao/                   carregamento do banco, IndexedDB, funções SQL, loader do wasm
   select|insert|update|delete/   operações no banco (compartilhadas)
 python/               backend Python completo (PyScript)
 c/                    backend C: fonte em src/, binário app.wasm, Makefile
 java/                 backend Java: fonte em src/amigos/, binário app.wasm, build/
+php/                  backend PHP: arquivos .php (carregados no php-wasm)
 wasm/                 fonte e binário do módulo WebAssembly que calcula a idade
 bancoDados/amigos.db  banco inicial
 ```

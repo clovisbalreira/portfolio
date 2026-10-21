@@ -6,7 +6,7 @@ from python.amigo import Amigo
 
 
 class BancoAmigos:
-    """Acesso ao banco pela ponte JSON (js/backend/pontePython.js)."""
+    """Acesso ao banco pela ponte JSON (js/backend/ponteJson.js)."""
 
     def buscar(
         self,

@@ -4,13 +4,15 @@ import {
     iniciarRoteador,
     registrar,
     registrarFalha,
+    registrarSobDemanda,
     bancoFicouPronto
 } from "./backend/roteador.js";
 
 import { backendJavaScript } from "./backend/javascript/app.js";
 import { carregarBackendC } from "./backend/c/app.js";
 import { carregarBackendJava } from "./backend/java/app.js";
-import { exporPontePython } from "./backend/pontePython.js";
+import { carregarBackendPhp } from "./backend/php/app.js";
+import { exporPonteJson } from "./backend/ponteJson.js";
 
 import { iniciarAbas } from "./abas.js";
 import { iniciarVisualizador } from "./visualizador.js";
@@ -19,13 +21,13 @@ import { iniciarBackup } from "./backup.js";
 // ========================================
 // Backends
 //
-// O sistema pode rodar em Python, JavaScript, C ou Java, conforme a
+// O sistema pode rodar em Python, JavaScript, C, Java ou PHP, conforme a
 // linguagem escolhida no seletor (veja backend/roteador.js).
 // ========================================
 
 // O Python (PyScript) chama a ponte por `window` e se registra sozinho
 // com window.backends.registrar("python", ...) quando terminar de carregar.
-exporPontePython();
+exporPonteJson();
 
 window.backends = { registrar };
 
@@ -47,6 +49,9 @@ function registrarAssincrono(nome, carregar) {
 
 registrarAssincrono("c", carregarBackendC);
 registrarAssincrono("java", carregarBackendJava);
+
+// O PHP (php-wasm) tem cerca de 12 MB: só é baixado se for escolhido.
+registrarSobDemanda("php", carregarBackendPhp);
 
 // ========================================
 // Interface do portfólio

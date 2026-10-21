@@ -3,7 +3,7 @@
 // ========================================
 
 // Linguagens em que o sistema realmente está implementado (javascript,
-// python, c e java são backends completos): o visualizador mostra os arquivos reais.
+// python, c, java e php são backends completos): o visualizador mostra os arquivos reais.
 export const arquivosReais = {
     javascript: [
         "js/backend/javascript/app.js",
@@ -14,10 +14,11 @@ export const arquivosReais = {
         "js/backend/javascript/modal.js",
         "js/backend/javascript/mensagens.js",
         "js/backend/roteador.js",
-        "js/backend/pontePython.js",
+        "js/backend/ponteJson.js",
         "js/backend/c/app.js",
         "js/backend/java/app.js",
         "js/backend/java/wasi.js",
+        "js/backend/php/app.js",
         "js/backend/wasm/host.js",
         "js/main.js",
         "js/conexao/database.js",
@@ -66,6 +67,17 @@ export const arquivosReais = {
         "java/src/amigos/Modal.java",
         "java/src/amigos/Mensagens.java",
         "java/src/amigos/Host.java"
+    ],
+
+    php: [
+        "php/app.php",
+        "php/amigo.php",
+        "php/banco_amigos.php",
+        "php/interface/resultados.php",
+        "php/interface/formulario.php",
+        "php/interface/modal.php",
+        "php/interface/mensagens.php",
+        "php/interface/dom.php"
     ],
 
     assemblyscript: [
@@ -201,15 +213,6 @@ pub fn main() void {
 buscarAmigo("Maria");`
     },
 
-    php: {
-        titulo: "PHP",
-        codigo: `<?php
-function buscarAmigo(string $nome): void {
-    echo "Buscando amigo: " . $nome . PHP_EOL;
-}
-
-buscarAmigo("Maria");`
-    },
 
     ruby: {
         titulo: "Ruby",

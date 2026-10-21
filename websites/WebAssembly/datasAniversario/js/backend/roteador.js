@@ -8,6 +8,7 @@
 //   javascript  -> js/backend/javascript/   (este navegador)
 //   c           -> c/src/ -> c/app.wasm     (C compilado para WebAssembly)
 //   java        -> java/src/ -> java/app.wasm (Java compilado pelo TeaVM)
+//   php         -> php/                     (php-wasm, baixado sob demanda)
 //
 // Cada backend se registra aqui com este formato:
 //
@@ -29,7 +30,8 @@ export const NOMES_BACKENDS = {
     python: "Python",
     javascript: "JavaScript",
     c: "C",
-    java: "Java"
+    java: "Java",
+    php: "PHP"
 };
 
 const backends = {};
@@ -41,6 +43,11 @@ let aviso = "";
 
 // Backends que não conseguiram carregar: nome -> motivo.
 const falhas = {};
+
+// Backends pesados, carregados só quando escolhidos: nome -> função assíncrona
+// que devolve o backend.
+const carregadores = {};
+const carregando = new Set();
 
 function elemento(id) {
     return document.getElementById(id);
@@ -132,7 +139,34 @@ function atualizarIndicador() {
 // Troca de backend
 // ----------------------------------------
 
+function iniciarCarregamentoSeNecessario() {
+
+    const nome = desejado;
+    const carregar = carregadores[nome];
+
+    if (!carregar || backends[nome] || carregando.has(nome) || falhas[nome]) {
+        return;
+    }
+
+    carregando.add(nome);
+
+    Promise.resolve()
+        .then(carregar)
+        .then(backend => registrar(nome, backend))
+        .catch(erro => {
+
+            console.error(`Erro ao carregar o backend ${nome}:`, erro);
+
+            // O usuário pode tentar de novo escolhendo a linguagem outra vez.
+            carregando.delete(nome);
+
+            registrarFalha(nome, erro.message);
+        });
+}
+
 function tentarAtivar() {
+
+    iniciarCarregamentoSeNecessario();
 
     if (bancoPronto && ativo !== desejado && backends[desejado]) {
 
@@ -172,6 +206,14 @@ export function registrarFalha(nome, motivo) {
     atualizarIndicador();
 }
 
+// Para backends pesados: o carregamento só começa quando a linguagem é escolhida.
+export function registrarSobDemanda(nome, carregar) {
+
+    carregadores[nome] = carregar;
+
+    tentarAtivar();
+}
+
 export function bancoFicouPronto() {
 
     bancoPronto = true;
@@ -208,6 +250,11 @@ export function escolherLinguagem(linguagem) {
 
         desejado = linguagem;
         aviso = "";
+
+        // Nova escolha depois de uma falha: tenta carregar de novo.
+        if (falhas[linguagem] && !backends[linguagem]) {
+            delete falhas[linguagem];
+        }
 
         tentarAtivar();
 
