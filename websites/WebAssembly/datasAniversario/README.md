@@ -10,6 +10,7 @@ seletor é quem executa o sistema** (busca, cadastro, edição e exclusão):
 | **C**          | `c/src/` compilado para WebAssembly (`c/app.wasm`)       |
 | **Java**       | `java/src/` compilado para WebAssembly (`java/app.wasm`) |
 | **PHP**        | `php/` rodando no navegador (php-wasm, WASM)             |
+| demais         | só exemplos de código; o sistema segue no backend atual  |
 
 O sistema começa em Python. Ao trocar, o backend antigo é desativado (edição e modal
 encerrados), o novo assume a tela e a lista é redesenhada com a mesma busca e os
@@ -143,6 +144,21 @@ Na seção **Seus dados** da página é possível **exportar** e **importar** um
 
 > Se for publicar o projeto (GitHub Pages, por exemplo), lembre que o
 > `bancoDados/amigos.db` fica público. Confira se não há dados de pessoas reais.
+
+## Publicar no GitHub Pages
+
+O projeto funciona em qualquer subcaminho (ex.: `usuario.github.io/portfolio/.../datasAniversario/`):
+todos os caminhos são relativos. Dois cuidados, já tratados:
+
+- **Nada de arquivo ou pasta que comece com `_`.** O GitHub Pages usa o Jekyll, que ignora
+  esses nomes (o site devolve 404). Por isso o Python **não tem `__init__.py`**: pacotes sem
+  ele (namespace packages) funcionam normalmente. Se um dia precisar de um nome com `_`,
+  crie um arquivo vazio `.nojekyll` na **raiz do repositório publicado** (não dentro desta pasta).
+- As maiúsculas/minúsculas dos nomes importam no Pages (no Windows não importam).
+
+Avisos como "Tracking Prevention blocked access to storage" (Edge) e
+"Unchecked runtime.lastError ... message port closed" vêm do navegador e de extensões,
+não do projeto.
 
 ## Recompilar o módulo WebAssembly
 

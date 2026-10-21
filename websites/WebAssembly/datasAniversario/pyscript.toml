@@ -1,9 +1,11 @@
+# Arquivos Python que o PyScript copia para o navegador.
+#
+# Não há __init__.py de propósito: o GitHub Pages (Jekyll) ignora arquivos e
+# pastas que começam com "_", então __init__.py daria 404. Pacotes sem
+# __init__.py (namespace packages) funcionam normalmente no Python 3.3+.
 [files]
-"./python/__init__.py" = "./python/__init__.py"
 "./python/amigo.py" = "./python/amigo.py"
-"./python/banco/__init__.py" = "./python/banco/__init__.py"
 "./python/banco/banco_amigos.py" = "./python/banco/banco_amigos.py"
-"./python/interface/__init__.py" = "./python/interface/__init__.py"
 "./python/interface/mensagens.py" = "./python/interface/mensagens.py"
 "./python/interface/resultados.py" = "./python/interface/resultados.py"
 "./python/interface/formulario.py" = "./python/interface/formulario.py"
