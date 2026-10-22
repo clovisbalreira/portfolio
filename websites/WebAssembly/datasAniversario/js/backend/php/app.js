@@ -3,7 +3,7 @@
 //
 // O PHP roda no navegador compilado para WebAssembly (projeto php-wasm, com a
 // ponte Vrzno que deixa o PHP chamar JavaScript e usar o DOM, como o PyScript
-// faz com o Python). O código-fonte do backend está em php/ e é copiado para o
+// faz com o Python). O código-fonte do backend está em linguagens/php/ e é copiado para o
 // sistema de arquivos virtual do PHP antes de rodar.
 //
 // O runtime tem cerca de 12 MB, então só é baixado quando o PHP é escolhido
@@ -16,7 +16,7 @@ const VERSAO_PHP = "8.3";
 // os arquivos do pacote npm `php-wasm` e aponte esta constante para eles.
 const URL_RUNTIME = "https://cdn.jsdelivr.net/npm/php-wasm@0.2.0/PhpWeb.mjs";
 
-// Arquivos de php/ que vão para o PHP, em ordem de dependência.
+// Arquivos de linguagens/php/ que vão para o PHP, em ordem de dependência.
 export const ARQUIVOS_PHP = [
     "interface/dom.php",
     "amigo.php",
@@ -61,10 +61,10 @@ export async function carregarBackendPhp({ criarPhp = criarPhpWeb } = {}) {
 
     for (const arquivo of ARQUIVOS_PHP) {
 
-        const resposta = await fetch(`./php/${arquivo}`);
+        const resposta = await fetch(`./linguagens/php/${arquivo}`);
 
         if (!resposta.ok) {
-            throw new Error(`Não foi possível carregar php/${arquivo}`);
+            throw new Error(`Não foi possível carregar linguagens/php/${arquivo}`);
         }
 
         await php.writeFile(`${RAIZ_VIRTUAL}/${arquivo}`, await resposta.text());

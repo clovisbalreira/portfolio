@@ -1,4 +1,4 @@
-# Compila o backend C para WebAssembly (c/app.wasm).
+# Compila o backend C para WebAssembly (linguagens/c/app.wasm).
 #
 # Requer um compilador C com alvo wasm32. Duas opções:
 #
@@ -8,7 +8,7 @@
 #   2) clang + wasm-ld:
 #         make WASMCC="clang --target=wasm32"
 #
-# O módulo não usa libc (-nostdlib): tudo está em c/src/mini.c.
+# O módulo não usa libc (-nostdlib): tudo está em linguagens/c/src/mini.c.
 
 ZIG ?= python3 -m ziglang
 WASMCC ?= $(ZIG) cc -target wasm32-freestanding

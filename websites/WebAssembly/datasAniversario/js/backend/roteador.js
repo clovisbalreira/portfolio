@@ -4,11 +4,11 @@
 // A tela (HTML) é uma só. Quem executa o sistema é o backend
 // escolhido no seletor de linguagem:
 //
-//   python      -> python/app.py            (PyScript)
-//   javascript  -> js/backend/javascript/   (este navegador)
-//   c           -> c/src/ -> c/app.wasm     (C compilado para WebAssembly)
-//   java        -> java/src/ -> java/app.wasm (Java compilado pelo TeaVM)
-//   php         -> php/                     (php-wasm, baixado sob demanda)
+//   python      -> linguagens/python/app.py              (PyScript)
+//   javascript  -> linguagens/javascript/                (este navegador)
+//   c           -> linguagens/c/src/    -> app.wasm      (C compilado para WebAssembly)
+//   java        -> linguagens/java/src/ -> app.wasm      (Java compilado pelo TeaVM)
+//   php         -> linguagens/php/                       (php-wasm, baixado sob demanda)
 //
 // Cada backend se registra aqui com este formato:
 //

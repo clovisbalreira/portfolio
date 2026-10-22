@@ -1,6 +1,6 @@
 # Avisos de terceiros (ferramenta de build do Java)
 
-Estes arquivos são usados **só para compilar** `java/src` em `java/app.wasm`.
+Estes arquivos são usados **só para compilar** `linguagens/java/src` em `linguagens/java/app.wasm`.
 Nada disso é executado pela página.
 
 - `java-compiler-runtime.mjs` e `java-compiler-bindings.mjs`: código de ligação
@@ -10,5 +10,5 @@ Nada disso é executado pela página.
 - `@wasm-oj/toolchain-java` (npm, instalado por `npm install`): traz o compilador
   TeaVM 0.13.1 compilado para WebAssembly e a biblioteca de classes Java.
   Veja `node_modules/@wasm-oj/toolchain-java/THIRD_PARTY_NOTICES.md`.
-- O `java/app.wasm` gerado contém partes da biblioteca de classes do TeaVM
+- O `linguagens/java/app.wasm` gerado contém partes da biblioteca de classes do TeaVM
   (Apache 2.0) necessárias ao programa.

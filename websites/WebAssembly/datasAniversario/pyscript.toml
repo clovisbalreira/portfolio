@@ -1,12 +1,15 @@
 # Arquivos Python que o PyScript copia para o navegador.
 #
+# "origem" = "destino": a origem fica em linguagens/python/, mas o destino no
+# navegador continua ./python/..., para os imports (python.amigo etc.) não mudarem.
+#
 # Não há __init__.py de propósito: o GitHub Pages (Jekyll) ignora arquivos e
 # pastas que começam com "_", então __init__.py daria 404. Pacotes sem
 # __init__.py (namespace packages) funcionam normalmente no Python 3.3+.
 [files]
-"./python/amigo.py" = "./python/amigo.py"
-"./python/banco/banco_amigos.py" = "./python/banco/banco_amigos.py"
-"./python/interface/mensagens.py" = "./python/interface/mensagens.py"
-"./python/interface/resultados.py" = "./python/interface/resultados.py"
-"./python/interface/formulario.py" = "./python/interface/formulario.py"
-"./python/interface/modal.py" = "./python/interface/modal.py"
+"./linguagens/python/amigo.py" = "./python/amigo.py"
+"./linguagens/python/banco/banco_amigos.py" = "./python/banco/banco_amigos.py"
+"./linguagens/python/interface/mensagens.py" = "./python/interface/mensagens.py"
+"./linguagens/python/interface/resultados.py" = "./python/interface/resultados.py"
+"./linguagens/python/interface/formulario.py" = "./python/interface/formulario.py"
+"./linguagens/python/interface/modal.py" = "./python/interface/modal.py"

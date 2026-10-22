@@ -13,8 +13,8 @@ require_once __DIR__ . '/interface/resultados.php';
 /**
  * Backend PHP.
  *
- * Mesma responsabilidade dos backends Python (python/app.py), JavaScript
- * (js/backend/javascript/app.js), C e Java: busca, cadastro, edição e
+ * Mesma responsabilidade dos backends Python (linguagens/python/app.py), JavaScript
+ * (linguagens/javascript/app.js), C e Java: busca, cadastro, edição e
  * exclusão. O roteador (js/backend/roteador.js) liga os botões da página
  * a estas ações quando PHP é a linguagem escolhida.
  *

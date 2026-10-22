@@ -3,16 +3,16 @@ import { criarHost } from "../wasm/host.js";
 // ========================================
 // Backend C
 //
-// Carrega c/app.wasm (código-fonte em c/src/, compilado com c/Makefile)
+// Carrega linguagens/c/app.wasm (código-fonte em linguagens/c/src/, compilado com linguagens/c/Makefile)
 // e o apresenta ao roteador no mesmo formato dos outros backends.
 // ========================================
 
 export async function carregarBackendC() {
 
-    const resposta = await fetch("./c/app.wasm");
+    const resposta = await fetch("./linguagens/c/app.wasm");
 
     if (!resposta.ok) {
-        throw new Error("Não foi possível carregar c/app.wasm");
+        throw new Error("Não foi possível carregar linguagens/c/app.wasm");
     }
 
     const bytes = await resposta.arrayBuffer();

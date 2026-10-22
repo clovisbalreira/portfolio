@@ -4,17 +4,17 @@ import { criarWasi } from "./wasi.js";
 // ========================================
 // Backend Java
 //
-// Carrega java/app.wasm (código-fonte em java/src/, compilado com o TeaVM
-// por java/build/) e o apresenta ao roteador no mesmo formato dos outros
+// Carrega linguagens/java/app.wasm (código-fonte em linguagens/java/src/, compilado com o TeaVM
+// por linguagens/java/build/) e o apresenta ao roteador no mesmo formato dos outros
 // backends.
 // ========================================
 
 export async function carregarBackendJava() {
 
-    const resposta = await fetch("./java/app.wasm");
+    const resposta = await fetch("./linguagens/java/app.wasm");
 
     if (!resposta.ok) {
-        throw new Error("Não foi possível carregar java/app.wasm");
+        throw new Error("Não foi possível carregar linguagens/java/app.wasm");
     }
 
     const bytes = await resposta.arrayBuffer();

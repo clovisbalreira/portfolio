@@ -7,12 +7,12 @@ import org.teavm.interop.Export;
 /**
  * Backend Java.
  *
- * Mesma responsabilidade dos backends Python (python/app.py), JavaScript
- * (js/backend/javascript/app.js) e C (c/src/app.c): busca, cadastro, edição e
+ * Mesma responsabilidade dos backends Python (linguagens/python/app.py), JavaScript
+ * (linguagens/javascript/app.js) e C (linguagens/c/src/app.c): busca, cadastro, edição e
  * exclusão. O roteador (js/backend/roteador.js) liga os botões da página às
  * funções @Export abaixo quando Java é a linguagem escolhida.
  *
- * O código é compilado para WebAssembly pelo TeaVM (veja java/build/).
+ * O código é compilado para WebAssembly pelo TeaVM (veja linguagens/java/build/).
  */
 public final class App {
 

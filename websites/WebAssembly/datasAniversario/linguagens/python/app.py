@@ -21,7 +21,7 @@ from python.interface.modal import (
 # Backend Python
 #
 # Mesma responsabilidade do backend JavaScript
-# (js/backend/javascript/app.js): busca, cadastro, edição e
+# (linguagens/javascript/app.js): busca, cadastro, edição e
 # exclusão. O roteador (js/backend/roteador.js) liga os botões da
 # tela a estas ações quando Python é a linguagem escolhida.
 # ========================================

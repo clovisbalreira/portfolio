@@ -1,7 +1,7 @@
-import { consultarAmigos } from "../../select/consultarAmigos.js";
-import { inserirAmigo } from "../../insert/inserirAmigo.js";
-import { atualizarAmigo } from "../../update/atualizarAmigo.js";
-import { excluirAmigo } from "../../delete/excluirAmigo.js";
+import { consultarAmigos } from "../../js/select/consultarAmigos.js";
+import { inserirAmigo } from "../../js/insert/inserirAmigo.js";
+import { atualizarAmigo } from "../../js/update/atualizarAmigo.js";
+import { excluirAmigo } from "../../js/delete/excluirAmigo.js";
 
 import { Amigo } from "./amigo.js";
 

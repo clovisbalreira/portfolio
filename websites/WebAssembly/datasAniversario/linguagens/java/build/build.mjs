@@ -1,15 +1,15 @@
 // ========================================================================
-// Compila java/src (Java) para java/app.wasm (WebAssembly) com o TeaVM.
+// Compila linguagens/java/src (Java) para linguagens/java/app.wasm (WebAssembly) com o TeaVM.
 //
-// Uso (dentro de java/build):
+// Uso (dentro de linguagens/java/build):
 //     npm install        # baixa o compilador TeaVM (em WebAssembly)
 //     npm run build
 //
 // Requisitos: Node 22+ (WasmGC) e um JDK 17+ com `javac` no PATH.
 //
 // Etapas:
-//   1. javac do JDK compila java/src -> .class (aceita as anotações do TeaVM);
-//   2. o backend do TeaVM transforma os .class em java/app.wasm;
+//   1. javac do JDK compila linguagens/java/src -> .class (aceita as anotações do TeaVM);
+//   2. o backend do TeaVM transforma os .class em linguagens/java/app.wasm;
 //   3. confere se o módulo importa/exporta exatamente o contrato esperado.
 // ========================================================================
 
@@ -81,7 +81,7 @@ function localizarAssets() {
         }
     }
 
-    falhar("compilador TeaVM não encontrado. Rode `npm install` em java/build " +
+    falhar("compilador TeaVM não encontrado. Rode `npm install` em linguagens/java/build " +
         "(ou defina JAVA_TOOLCHAIN_DIR).");
 }
 

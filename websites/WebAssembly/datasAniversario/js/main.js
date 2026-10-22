@@ -8,7 +8,7 @@ import {
     bancoFicouPronto
 } from "./backend/roteador.js";
 
-import { backendJavaScript } from "./backend/javascript/app.js";
+import { backendJavaScript } from "../linguagens/javascript/app.js";
 import { carregarBackendC } from "./backend/c/app.js";
 import { carregarBackendJava } from "./backend/java/app.js";
 import { carregarBackendPhp } from "./backend/php/app.js";

@@ -6,9 +6,9 @@ import { excluirAmigo } from "../../delete/excluirAmigo.js";
 // ========================================
 // Host dos backends WebAssembly (C e Java)
 //
-// Os módulos C (c/app.wasm) e Java (java/app.wasm) não enxergam a página nem
-// o banco. Estas são as funções que eles importam (contratos em c/src/host.h
-// e java/src/amigos/Host.java; o contrato é o mesmo). São primitivas: toda
+// Os módulos C (linguagens/c/app.wasm) e Java (linguagens/java/app.wasm) não enxergam a página nem
+// o banco. Estas são as funções que eles importam (contratos em linguagens/c/src/host.h
+// e linguagens/java/src/amigos/Host.java; o contrato é o mesmo). São primitivas: toda
 // decisão (validar, formatar, mensagens, edição, modal) fica na linguagem.
 // ========================================
 

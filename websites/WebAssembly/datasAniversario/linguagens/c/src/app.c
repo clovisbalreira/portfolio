@@ -7,12 +7,12 @@
 /* ========================================================================
  * Backend C
  *
- * Mesma responsabilidade dos backends Python (python/app.py) e JavaScript
- * (js/backend/javascript/app.js): busca, cadastro, edição e exclusão.
+ * Mesma responsabilidade dos backends Python (linguagens/python/app.py) e JavaScript
+ * (linguagens/javascript/app.js): busca, cadastro, edição e exclusão.
  * O roteador (js/backend/roteador.js) liga os botões da página a estas
  * ações quando C é a linguagem escolhida.
  *
- * Compilado para WebAssembly (c/Makefile) e carregado por
+ * Compilado para WebAssembly (linguagens/c/Makefile) e carregado por
  * js/backend/c/app.js.
  * ===================================================================== */
 

@@ -15,7 +15,7 @@ import {
 // ========================================
 // Backend JavaScript
 //
-// Mesma responsabilidade do backend Python (python/app.py):
+// Mesma responsabilidade do backend Python (linguagens/python/app.py):
 // busca, cadastro, edição e exclusão. O roteador
 // (js/backend/roteador.js) liga os botões da tela a estas ações
 // quando JavaScript é a linguagem escolhida.

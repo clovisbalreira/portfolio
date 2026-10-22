@@ -6,13 +6,13 @@
 // python, c, java e php são backends completos): o visualizador mostra os arquivos reais.
 export const arquivosReais = {
     javascript: [
-        "js/backend/javascript/app.js",
-        "js/backend/javascript/amigo.js",
-        "js/backend/javascript/bancoAmigos.js",
-        "js/backend/javascript/resultados.js",
-        "js/backend/javascript/formulario.js",
-        "js/backend/javascript/modal.js",
-        "js/backend/javascript/mensagens.js",
+        "linguagens/javascript/app.js",
+        "linguagens/javascript/amigo.js",
+        "linguagens/javascript/bancoAmigos.js",
+        "linguagens/javascript/resultados.js",
+        "linguagens/javascript/formulario.js",
+        "linguagens/javascript/modal.js",
+        "linguagens/javascript/mensagens.js",
         "js/backend/roteador.js",
         "js/backend/ponteJson.js",
         "js/backend/c/app.js",
@@ -36,48 +36,48 @@ export const arquivosReais = {
     ],
 
     python: [
-        "python/app.py",
-        "python/amigo.py",
-        "python/banco/banco_amigos.py",
-        "python/interface/resultados.py",
-        "python/interface/formulario.py",
-        "python/interface/modal.py",
-        "python/interface/mensagens.py"
+        "linguagens/python/app.py",
+        "linguagens/python/amigo.py",
+        "linguagens/python/banco/banco_amigos.py",
+        "linguagens/python/interface/resultados.py",
+        "linguagens/python/interface/formulario.py",
+        "linguagens/python/interface/modal.py",
+        "linguagens/python/interface/mensagens.py"
     ],
 
     c: [
-        "c/src/app.c",
-        "c/src/amigo.c",
-        "c/src/amigo.h",
-        "c/src/banco.c",
-        "c/src/banco.h",
-        "c/src/interface.c",
-        "c/src/interface.h",
-        "c/src/mini.c",
-        "c/src/mini.h",
-        "c/src/host.h"
+        "linguagens/c/src/app.c",
+        "linguagens/c/src/amigo.c",
+        "linguagens/c/src/amigo.h",
+        "linguagens/c/src/banco.c",
+        "linguagens/c/src/banco.h",
+        "linguagens/c/src/interface.c",
+        "linguagens/c/src/interface.h",
+        "linguagens/c/src/mini.c",
+        "linguagens/c/src/mini.h",
+        "linguagens/c/src/host.h"
     ],
 
     java: [
-        "java/src/amigos/App.java",
-        "java/src/amigos/Amigo.java",
-        "java/src/amigos/BancoAmigos.java",
-        "java/src/amigos/Resultados.java",
-        "java/src/amigos/Formulario.java",
-        "java/src/amigos/Modal.java",
-        "java/src/amigos/Mensagens.java",
-        "java/src/amigos/Host.java"
+        "linguagens/java/src/amigos/App.java",
+        "linguagens/java/src/amigos/Amigo.java",
+        "linguagens/java/src/amigos/BancoAmigos.java",
+        "linguagens/java/src/amigos/Resultados.java",
+        "linguagens/java/src/amigos/Formulario.java",
+        "linguagens/java/src/amigos/Modal.java",
+        "linguagens/java/src/amigos/Mensagens.java",
+        "linguagens/java/src/amigos/Host.java"
     ],
 
     php: [
-        "php/app.php",
-        "php/amigo.php",
-        "php/banco_amigos.php",
-        "php/interface/resultados.php",
-        "php/interface/formulario.php",
-        "php/interface/modal.php",
-        "php/interface/mensagens.php",
-        "php/interface/dom.php"
+        "linguagens/php/app.php",
+        "linguagens/php/amigo.php",
+        "linguagens/php/banco_amigos.php",
+        "linguagens/php/interface/resultados.php",
+        "linguagens/php/interface/formulario.php",
+        "linguagens/php/interface/modal.php",
+        "linguagens/php/interface/mensagens.php",
+        "linguagens/php/interface/dom.php"
     ],
 
     assemblyscript: [
